@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "Grace",
+    "slug": "grace",
+    "version": "1.0.0",
+    "sdkVersion": "54.0.0",
+    "platforms": ["ios", "android"],
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "scheme": "grace",
+    "splash": {
+      "backgroundColor": "#241a12",
+      "resizeMode": "contain"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.grace.app"
+    },
+    "android": { "package": "com.grace.app" }
+  }
+}

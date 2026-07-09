@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    html, body { margin: 0; }
+    .gm-dove { transform-box: fill-box; transform-origin: 50% 84%; }
+    .gm-head { transform-box: view-box; transform-origin: 220px 250px; }
+    .gm-tail { transform-box: view-box; transform-origin: 220px 360px; }
+    .gm-eye, .gm-eye-right { transform-box: fill-box; transform-origin: center; }
+    .gm-wing-left  { transform-box: view-box; transform-origin: 176px 302px; }
+    .gm-wing-right { transform-box: view-box; transform-origin: 264px 302px; }
+    .gm-halo-glint { opacity: 0; }
+    .gm-sparkles { opacity: 0; }
+    .gm-spark { transform-box: fill-box; transform-origin: center; opacity: 0; }
+
+    @keyframes gm-breathe { 0%,100% { transform: scale(1); } 50% { transform: scale(1.04); } }
+    @keyframes gm-float   { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+    @keyframes gm-blink   { 0%,90%,100% { transform: scaleY(1); } 95% { transform: scaleY(0.08); } }
+    @keyframes gm-wink    { 0%,86%,100% { transform: scaleY(1); } 93% { transform: scaleY(0.06); } }
+    @keyframes gm-glint   { 0% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -520; } }
+    @keyframes gm-celebrate {
+      0% { transform: translateY(0) scale(1); }
+      28% { transform: translateY(-22px) scale(1.07); }
+      52% { transform: translateY(2px) scale(0.97); }
+      70% { transform: translateY(-7px) scale(1.02); }
+      100% { transform: translateY(0) scale(1); }
+    }
+    @keyframes gm-sparkle { 0% { opacity: 0; transform: scale(0.3); } 22% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(0.5); } }
+    @keyframes gm-tap { 0%,100% { transform: scale(1); } 18% { transform: scale(0.9); } 44% { transform: scale(1.03); } 62% { transform: scale(1); } }
+    @keyframes gm-sway-l  { 0%,100% { transform: rotate(0deg); } 50% { transform: rotate(-4deg); } }
+    @keyframes gm-sway-r  { 0%,100% { transform: rotate(0deg); } 50% { transform: rotate(4deg); } }
+    @keyframes gm-flap-l  { 0%,100% { transform: rotate(-2deg); } 28% { transform: rotate(-16deg); } 60% { transform: rotate(-5deg); } }
+    @keyframes gm-flap-r  { 0%,100% { transform: rotate(2deg); } 28% { transform: rotate(16deg); } 60% { transform: rotate(5deg); } }
+    @keyframes gm-tuck-l  { 0%,100% { transform: rotate(0deg); } 18% { transform: rotate(7deg); } 55% { transform: rotate(-1deg); } }
+    @keyframes gm-tuck-r  { 0%,100% { transform: rotate(0deg); } 18% { transform: rotate(-7deg); } 55% { transform: rotate(1deg); } }
+    @keyframes gm-wag     { 0%,100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg); } }
+    @keyframes gm-tilt    { 0%,58%,100% { transform: rotate(0deg); } 26% { transform: rotate(8deg); } }
+    @keyframes gm-preen-l { 0%,100% { transform: rotate(-2deg); } 50% { transform: rotate(-15deg); } }
+    @keyframes gm-preen-r { 0%,100% { transform: rotate(2deg); } 50% { transform: rotate(15deg); } }
+    @keyframes gm-flybob  { 0%,100% { transform: translateY(2px) rotate(-2.5deg); } 50% { transform: translateY(-20px) rotate(2.5deg); } }
+
+    /* Idle */
+    svg[data-motion="breathe"] .gm-dove { animation: gm-breathe 3.4s ease-in-out infinite; }
+    svg[data-motion="breathe"] .gm-wing-left  { animation: gm-sway-l 4.2s ease-in-out infinite; }
+    svg[data-motion="breathe"] .gm-wing-right { animation: gm-sway-r 4.2s ease-in-out infinite; }
+
+    svg[data-motion="float"] .gm-dove { animation: gm-float 3.8s ease-in-out infinite; }
+    svg[data-motion="float"] .gm-wing-left  { animation: gm-sway-l 4.6s ease-in-out infinite; }
+    svg[data-motion="float"] .gm-wing-right { animation: gm-sway-r 4.6s ease-in-out infinite; }
+
+    /* Blink */
+    svg[data-motion="blink"] .gm-dove { animation: gm-float 4s ease-in-out infinite; }
+    svg[data-motion="blink"] .gm-eye  { animation: gm-blink 3.4s ease-in-out infinite; }
+    svg[data-motion="blink"] .gm-wing-left  { animation: gm-sway-l 4.8s ease-in-out infinite; }
+    svg[data-motion="blink"] .gm-wing-right { animation: gm-sway-r 4.8s ease-in-out infinite; }
+
+    /* Wink */
+    svg[data-motion="wink"] .gm-dove { animation: gm-float 4s ease-in-out infinite; }
+    svg[data-motion="wink"] .gm-eye-right { animation: gm-wink 2.6s ease-in-out infinite; }
+
+    /* Halo shimmer */
+    svg[data-motion="halo"] .gm-dove { animation: gm-float 4.4s ease-in-out infinite; }
+    svg[data-motion="halo"] .gm-halo-glint { opacity: 1; animation: gm-glint 2.4s linear infinite; }
+    svg[data-motion="halo"] .gm-eye { animation: gm-blink 4.6s ease-in-out infinite; }
+
+    /* Loading — halo revolves + eyes blink, nothing else */
+    svg[data-motion="loading"] .gm-halo-glint { opacity: 1; animation: gm-glint 2s linear infinite; }
+    svg[data-motion="loading"] .gm-eye { animation: gm-blink 2.6s ease-in-out infinite; }
+
+    /* Celebrate */
+    svg[data-motion="celebrate"] .gm-dove { animation: gm-celebrate 1.9s ease-in-out infinite; }
+    svg[data-motion="celebrate"] .gm-sparkles { opacity: 1; }
+    svg[data-motion="celebrate"] .gm-spark { animation: gm-sparkle 1.9s ease-in-out infinite; }
+    svg[data-motion="celebrate"] .gm-wing-left  { animation: gm-flap-l 1.9s ease-in-out infinite; }
+    svg[data-motion="celebrate"] .gm-wing-right { animation: gm-flap-r 1.9s ease-in-out infinite; }
+
+    /* Tap */
+    svg[data-motion="tap"] .gm-dove { animation: gm-tap 1.7s ease-in-out infinite; }
+    svg[data-motion="tap"] .gm-wing-left  { animation: gm-tuck-l 1.7s ease-in-out infinite; }
+    svg[data-motion="tap"] .gm-wing-right { animation: gm-tuck-r 1.7s ease-in-out infinite; }
+
+    /* Tail wag */
+    svg[data-motion="tail"] .gm-dove { animation: gm-float 4.4s ease-in-out infinite; }
+    svg[data-motion="tail"] .gm-tail { animation: gm-wag 2.2s ease-in-out infinite; }
+    svg[data-motion="tail"] .gm-eye  { animation: gm-blink 3.6s ease-in-out infinite; }
+
+    /* Flap / preen */
+    svg[data-motion="flap"] .gm-dove { animation: gm-float 4s ease-in-out infinite; }
+    svg[data-motion="flap"] .gm-wing-left  { animation: gm-preen-l 2.4s ease-in-out infinite; }
+    svg[data-motion="flap"] .gm-wing-right { animation: gm-preen-r 2.4s ease-in-out infinite; }
+    svg[data-motion="flap"] .gm-eye { animation: gm-blink 4s ease-in-out infinite; }
+
+    /* Fly */
+    svg[data-motion="fly"] .gm-dove { animation: gm-flybob 2.4s ease-in-out infinite; }
+    svg[data-motion="fly"] .gm-wing-left  { animation: gm-flap-l 0.9s ease-in-out infinite; }
+    svg[data-motion="fly"] .gm-wing-right { animation: gm-flap-r 0.9s ease-in-out infinite; }
+
+    /* Peek — head tilt */
+    svg[data-motion="peek"] .gm-dove { animation: gm-float 5s ease-in-out infinite; }
+    svg[data-motion="peek"] .gm-head { animation: gm-tilt 3s ease-in-out infinite; }
+    svg[data-motion="peek"] .gm-eye { animation: gm-blink 3.4s ease-in-out infinite; }
+  </style>
+</helmet>
+<svg viewBox="0 0 440 430" width="100%" height="100%" data-motion="{{ motion }}" xmlns="http://www.w3.org/2000/svg" style="overflow: visible; display: block;">
+  <defs>
+    <radialGradient id="gmBody" cx="42%" cy="30%" r="78%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="66%" stop-color="#f6f2ea"/>
+      <stop offset="100%" stop-color="#e7ddcd"/>
+    </radialGradient>
+    <radialGradient id="gmHead" cx="40%" cy="28%" r="76%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#f6f2ea"/>
+      <stop offset="100%" stop-color="#e7ddcd"/>
+    </radialGradient>
+    <linearGradient id="gmWing" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fffdf9"/>
+      <stop offset="100%" stop-color="#efe7d8"/>
+    </linearGradient>
+    <linearGradient id="gmHalo" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e6cf94"/>
+      <stop offset="45%" stop-color="#b58a3f"/>
+      <stop offset="100%" stop-color="#e6cf94"/>
+    </linearGradient>
+    <filter id="gmSoft" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#c9bfa8" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <g class="gm-dove">
+    <!-- Halo -->
+    <g class="gm-halo">
+      <ellipse cx="220" cy="118" rx="80" ry="16" fill="none" stroke="url(#gmHalo)" stroke-width="9"/>
+      <ellipse cx="220" cy="118" rx="80" ry="16" fill="none" stroke="#e6cf94" stroke-width="2.4" opacity="0.5"/>
+    </g>
+    <ellipse class="gm-halo-glint" cx="220" cy="118" rx="80" ry="16" fill="none" stroke="#fff6df" stroke-width="5" stroke-linecap="round" stroke-dasharray="26 500"/>
+
+    <!-- Open wings -->
+    <sc-if value="{{ wingsOpen }}" hint-placeholder-val="{{ true }}">
+      <g class="gm-wing-left">
+        <g filter="url(#gmSoft)">
+          <path d="M 172 245 C 118 218 52 214 28 236 C 6 256 8 316 36 344 C 66 372 132 366 176 336 Z" fill="url(#gmWing)"/>
+        </g>
+        <g stroke="#cbbfa8" stroke-width="4" stroke-linecap="round" opacity="0.7">
+          <line x1="54" y1="290" x2="140" y2="256"/>
+          <line x1="58" y1="308" x2="140" y2="274"/>
+          <line x1="64" y1="326" x2="138" y2="296"/>
+          <line x1="72" y1="344" x2="134" y2="318"/>
+        </g>
+      </g>
+      <g class="gm-wing-right">
+        <g filter="url(#gmSoft)">
+          <path d="M 268 245 C 322 218 388 214 412 236 C 434 256 432 316 404 344 C 374 372 308 366 264 336 Z" fill="url(#gmWing)"/>
+        </g>
+        <g stroke="#cbbfa8" stroke-width="4" stroke-linecap="round" opacity="0.7">
+          <line x1="386" y1="290" x2="300" y2="256"/>
+          <line x1="382" y1="308" x2="300" y2="274"/>
+          <line x1="376" y1="326" x2="302" y2="296"/>
+          <line x1="368" y1="344" x2="306" y2="318"/>
+        </g>
+      </g>
+    </sc-if>
+
+    <!-- Tail fan -->
+    <g class="gm-tail" filter="url(#gmSoft)">
+      <sc-for list="{{ tail }}" as="t" hint-placeholder-count="9">
+        <ellipse cx="220" cy="386" rx="7" ry="24" fill="url(#gmWing)" transform="{{ t.transform }}"/>
+      </sc-for>
+    </g>
+
+    <!-- Body -->
+    <ellipse cx="220" cy="292" rx="64" ry="68" fill="url(#gmBody)" filter="url(#gmSoft)"/>
+
+    <!-- Folded wings (tucked over body) -->
+    <sc-if value="{{ wingsFolded }}" hint-placeholder-val="{{ true }}">
+      <g>
+        <path d="M 206 250 C 178 258 160 300 176 344 C 182 360 200 360 206 347 C 200 314 200 280 214 256 Z" fill="url(#gmWing)"/>
+        <g stroke="#cbbfa8" stroke-width="3.4" stroke-linecap="round" opacity="0.65">
+          <line x1="182" y1="300" x2="200" y2="294"/>
+          <line x1="184" y1="320" x2="202" y2="314"/>
+        </g>
+      </g>
+      <g>
+        <path d="M 234 250 C 262 258 280 300 264 344 C 258 360 240 360 234 347 C 240 314 240 280 226 256 Z" fill="url(#gmWing)"/>
+        <g stroke="#cbbfa8" stroke-width="3.4" stroke-linecap="round" opacity="0.65">
+          <line x1="258" y1="300" x2="240" y2="294"/>
+          <line x1="256" y1="320" x2="238" y2="314"/>
+        </g>
+      </g>
+    </sc-if>
+
+    <!-- Head + face -->
+    <g class="gm-head">
+      <circle cx="220" cy="185" r="64" fill="url(#gmHead)" filter="url(#gmSoft)"/>
+      <g class="gm-eye">
+        <ellipse cx="194" cy="188" rx="10.5" ry="13.5" fill="#20211f"/>
+        <circle cx="191" cy="183" r="3.5" fill="#ffffff"/>
+        <circle cx="197" cy="193" r="1.8" fill="#ffffff" opacity="0.8"/>
+      </g>
+      <g class="gm-eye gm-eye-right">
+        <ellipse cx="246" cy="188" rx="10.5" ry="13.5" fill="#20211f"/>
+        <circle cx="243" cy="183" r="3.5" fill="#ffffff"/>
+        <circle cx="249" cy="193" r="1.8" fill="#ffffff" opacity="0.8"/>
+      </g>
+      <path d="M 220 205 C 210 205 206 214 212 221 C 216 225 224 225 228 221 C 234 214 230 205 220 205 Z" fill="#d99b4c"/>
+    </g>
+  </g>
+
+  <!-- Celebrate sparkles -->
+  <g class="gm-sparkles" fill="#c9a24b">
+    <path class="gm-spark" style="animation-delay: 0s"    d="M 118 120 L 126 138 L 118 156 L 110 138 Z"/>
+    <path class="gm-spark" style="animation-delay: 0.15s" d="M 322 108 L 329 124 L 322 140 L 315 124 Z"/>
+    <path class="gm-spark" style="animation-delay: 0.3s"  d="M 220 46 L 226 60 L 220 74 L 214 60 Z"/>
+    <path class="gm-spark" style="animation-delay: 0.45s" d="M 78 210 L 84 224 L 78 238 L 72 224 Z"/>
+    <path class="gm-spark" style="animation-delay: 0.6s"  d="M 362 200 L 368 214 L 362 228 L 356 214 Z"/>
+    <path class="gm-spark" style="animation-delay: 0.2s"  d="M 300 60 L 305 72 L 300 84 L 295 72 Z"/>
+    <path class="gm-spark" style="animation-delay: 0.5s"  d="M 150 66 L 155 78 L 150 90 L 145 78 Z"/>
+  </g>
+</svg>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: { &quot;width&quot;: 320, &quot;height&quot;: 312 },
+  &quot;motion&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;default&quot;: &quot;float&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;options&quot;: [&quot;none&quot;, &quot;breathe&quot;, &quot;float&quot;, &quot;blink&quot;, &quot;wink&quot;, &quot;halo&quot;, &quot;loading&quot;, &quot;celebrate&quot;, &quot;tap&quot;, &quot;tail&quot;, &quot;flap&quot;, &quot;fly&quot;, &quot;peek&quot;] },
+  &quot;wings&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;default&quot;: &quot;open&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;options&quot;: [&quot;open&quot;, &quot;folded&quot;] }
+}">
+class Component extends DCLogic {
+  renderVals() {
+    const pivotX = 220, pivotY = 360, count = 9, spread = 38;
+    const tail = [];
+    for (let i = 0; i < count; i++) {
+      const angle = -spread + (i * (2 * spread) / (count - 1));
+      tail.push({ transform: `rotate(${angle} ${pivotX} ${pivotY})` });
+    }
+    const wings = this.props.wings ?? 'open';
+    return {
+      tail,
+      motion: this.props.motion ?? 'breathe',
+      wingsOpen: wings !== 'folded',
+      wingsFolded: wings === 'folded',
+    };
+  }
+}
+</script>
+</body>
+</html>
