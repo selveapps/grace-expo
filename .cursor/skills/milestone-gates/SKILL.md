@@ -35,6 +35,15 @@ cd backend && npm run verify:phase2
 
 Checks: phase 1 prerequisite + 14 integration tests + live HTTP curls for scripture + guest auth + 401 gate.
 
+## Record (supplementary data)
+
+```bash
+cd backend && npm run record:phase2   # writes docs/runs/phase2-<timestamp>-<sha>.log
+cd backend && npm run record:staging  # staging health transcript
+```
+
+Commit the `.log` with the milestone. Link filename in `docs/LAB_NOTEBOOK.md` RUN-NNN.
+
 ## On failure
 
 1. Read failure output — do not retry blindly

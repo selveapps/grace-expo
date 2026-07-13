@@ -1,0 +1,34 @@
+══════════════════════════════════════════════════════════════
+Grace E2E Record
+══════════════════════════════════════════════════════════════
+phase:       staging
+recorded_at: 20260713T215020Z (UTC)
+git_branch:  backend-dev
+git_sha:     1df58525a76a15bd8e9bcd37a00fcf1ce64d3e5a
+git_sha_short: 1df5852
+git_tree:    dirty
+node:        v25.6.1
+platform:    Darwin 24.6.0 arm64
+cwd:         /Users/siddhant/Desktop/CS/grace-expo-sid/backend
+command:     npm run verify:staging
+DATABASE_URL: postgresql://grace:grace@localhost:5433/grace
+STAGING_API_URL: https://grace-api-production.up.railway.app
+JWT_SECRET:  <default test secret>
+──────────────────────────────────────────────────────────────
+
+
+> grace-api@0.1.0 verify:staging
+> bash scripts/verify-staging.sh
+
+=== Grace Staging Verification ===
+STAGING_API_URL=https://grace-api-production.up.railway.app
+
+GET /health → {"ok":true,"db":true}
+
+Staging verify: PASS
+
+──────────────────────────────────────────────────────────────
+exit_code: 0
+result:    PASS
+log_file:  docs/runs/staging-20260713T215020Z-1df5852.log
+══════════════════════════════════════════════════════════════

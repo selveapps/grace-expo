@@ -135,3 +135,25 @@ Update this file **during** work, not after — like a lab notebook, not a retro
 **Result:** PASS
 
 **Follow-up:** RUN-005 Phase 3 CRUD; wire Expo app (M8)
+
+---
+
+### RUN-005 | 2026-07-13 | Recorded E2E transcripts (infrastructure)
+
+**Objective:** Make E2E runs reproducible like supplementary data — full stdout + environment header.
+
+**Environment:**
+- Commit: `1df5852` (Phase 2)
+- Script: `backend/scripts/record-e2e.sh`
+
+**Procedure:**
+1. `cd backend && npm run record:phase2`
+2. `cd backend && npm run record:staging`
+
+**Observations:**
+- `docs/runs/phase2-20260713T214952Z-1df5852.log` → exit 0, 13/13 checks
+- `docs/runs/staging-20260713T215020Z-1df5852.log` → exit 0, health `db:true`
+
+**Result:** PASS — recording infrastructure validated
+
+**Follow-up:** RUN-006 Phase 3; always `record:phaseN` before milestone commit
