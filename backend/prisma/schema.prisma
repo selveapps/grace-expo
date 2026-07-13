@@ -1,0 +1,106 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              String   @id @default(uuid()) @db.Uuid
+  guestDeviceId   String?  @unique @map("guest_device_id")
+  appleSub        String?  @map("apple_sub")
+  googleSub       String?  @map("google_sub")
+  email           String?
+  name            String?
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt       DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  profile         Profile?
+  savedVerses     SavedVerse[]
+  reflections     Reflection[]
+  subscription    Subscription?
+  readingProgress ReadingProgress[]
+
+  @@map("user")
+}
+
+model Profile {
+  userId      String   @id @map("user_id") @db.Uuid
+  carrying    String[] @default([])
+  gentleness  String?
+  rhythm      String?
+  onboarded   Boolean  @default(false)
+  subscribed  Boolean  @default(false)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("profile")
+}
+
+model SavedVerse {
+  id        String   @id @default(uuid()) @db.Uuid
+  userId    String   @map("user_id") @db.Uuid
+  ref       String
+  text      String
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, ref])
+  @@map("saved_verse")
+}
+
+model Reflection {
+  id        String   @id @default(uuid()) @db.Uuid
+  userId    String   @map("user_id") @db.Uuid
+  word      String
+  note      String?
+  ref       String?
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("reflection")
+}
+
+model Subscription {
+  userId        String    @id @map("user_id") @db.Uuid
+  platform      String?
+  productId     String?   @map("product_id")
+  status        String    @default("free")
+  expiresAt     DateTime? @map("expires_at") @db.Timestamptz(6)
+  originalTxnId String?   @map("original_txn_id")
+  updatedAt     DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("subscription")
+}
+
+model ReadingProgress {
+  userId    String   @map("user_id") @db.Uuid
+  book      String
+  chapter   Int
+  position  Float    @default(0)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, book])
+  @@map("reading_progress")
+}
+
+model BibleVerse {
+  id        Int    @id @default(autoincrement())
+  book      String
+  chapter   Int
+  verse     Int
+  text      String
+  testament String
+
+  @@unique([book, chapter, verse])
+  @@index([book, chapter])
+  @@map("bible_verse")
+}
