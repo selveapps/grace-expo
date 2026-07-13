@@ -217,6 +217,4 @@ Update this file **during** work, not after — like a lab notebook, not a retro
 - Expired trial flips on next `GET /me`
 - verify: 5/5 pass
 
-**Result:** PASS → commit pending
-
-**Follow-up:** RUN-009 deploy Phase 4+5 to Railway; M8 mobile wiring
+**Result:** PASS → commit `36e5155`
