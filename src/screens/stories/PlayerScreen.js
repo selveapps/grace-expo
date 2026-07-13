@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, Pressable } from 'react-native';
+import { View, Text, StyleSheet, Pressable, Modal, ScrollView } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
 import GraceDove from '../../components/GraceDove';
@@ -15,6 +15,7 @@ export default function PlayerScreen({ route, navigation }) {
   const { id } = route.params || {};
   const [story, setStory] = useState(null);
   const [st, setSt] = useState(AudioService.getState());
+  const [showTranscript, setShowTranscript] = useState(false);
 
   useEffect(() => {
     StoryService.getStory(id).then(setStory);
@@ -76,8 +77,24 @@ export default function PlayerScreen({ route, navigation }) {
       <View style={styles.footer}>
         <Text style={styles.footerItem}>Save</Text>
         <Text style={styles.footerItem}>Share quote</Text>
-        <Text style={styles.footerItem}>Transcript</Text>
+        <Pressable onPress={() => setShowTranscript(true)} disabled={!st.narrative}>
+          <Text style={[styles.footerItem, !st.narrative && styles.footerDisabled]}>Transcript</Text>
+        </Pressable>
       </View>
+
+      <Modal visible={showTranscript} animationType="slide" transparent onRequestClose={() => setShowTranscript(false)}>
+        <View style={styles.modalBackdrop}>
+          <View style={styles.modalCard}>
+            <Text style={styles.modalTitle}>Transcript</Text>
+            <ScrollView style={styles.modalScroll}>
+              <Text style={styles.modalBody}>{st.narrative || 'No transcript yet.'}</Text>
+            </ScrollView>
+            <Pressable onPress={() => setShowTranscript(false)} style={styles.modalClose}>
+              <Text style={styles.modalCloseText}>Close</Text>
+            </Pressable>
+          </View>
+        </View>
+      </Modal>
     </Screen>
   );
 }
@@ -105,4 +122,12 @@ const styles = StyleSheet.create({
   playIcon: { fontSize: 22, color: colors.espresso },
   footer: { flexDirection: 'row', justifyContent: 'center', gap: 30, marginTop: 24 },
   footerItem: { fontFamily: fonts.sans, fontSize: 13, color: colors.textFaintOnDark },
+  footerDisabled: { opacity: 0.4 },
+  modalBackdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.55)', justifyContent: 'flex-end' },
+  modalCard: { backgroundColor: colors.ivory, borderTopLeftRadius: 20, borderTopRightRadius: 20, padding: 22, maxHeight: '70%' },
+  modalTitle: { fontFamily: fonts.serif, fontSize: 24, color: colors.ink, marginBottom: 12 },
+  modalScroll: { marginBottom: 16 },
+  modalBody: { fontFamily: fonts.sans, fontSize: 15, color: colors.textMuted, lineHeight: 23 },
+  modalClose: { alignItems: 'center', paddingVertical: 12 },
+  modalCloseText: { fontFamily: fonts.sansSemi, fontSize: 15, color: colors.brassDeep },
 });

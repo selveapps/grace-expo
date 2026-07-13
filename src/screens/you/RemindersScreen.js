@@ -12,20 +12,32 @@ const TYPES = [
 ];
 
 export default function RemindersScreen({ navigation }) {
-  const [pref, setPref] = useState({ type: 'morning', morningTime: '07:00', eveningTime: '21:00', enabled: false });
+  const [pref, setPref] = useState({ type: 'morning', morningTime: '07:00', eveningTime: '21:00', enabled: false, preview: null });
   const [perm, setPerm] = useState('undetermined');
+  const [loadingPreview, setLoadingPreview] = useState(false);
 
   useEffect(() => {
-    NotificationService.getPreference().then(setPref);
+    NotificationService.getPreference().then((p) => {
+      setPref(p);
+      if (p.enabled && p.type !== 'off') refreshPreview({ ...p, type: p.type });
+    });
     NotificationService.getPermissionStatus().then(setPerm);
   }, []);
+
+  const refreshPreview = async (next) => {
+    setLoadingPreview(true);
+    const copy = await NotificationService.previewMessage(next);
+    setPref((p) => ({ ...p, preview: copy.preview }));
+    setLoadingPreview(false);
+  };
 
   const choose = async (type) => {
     Haptics.selectionAsync();
     const next = { ...pref, type };
     setPref(next);
     if (perm !== 'granted' && NotificationService.available()) setPerm(await NotificationService.requestPermission());
-    NotificationService.scheduleReminder(next);
+    const res = await NotificationService.scheduleReminder(next);
+    setPref((p) => ({ ...p, preview: res.preview || p.preview }));
   };
 
   const togglePause = async (on) => {
@@ -58,6 +70,17 @@ export default function RemindersScreen({ navigation }) {
         <Text style={styles.timeSub}>{Number(h) < 12 ? 'AM' : 'PM'} · every day</Text>
       </View>
 
+      {(pref.preview || loadingPreview) && (
+        <View style={styles.previewCard}>
+          <Text style={styles.previewLabel}>TOMORROW'S MESSAGE</Text>
+          {loadingPreview ? (
+            <Text style={styles.previewText}>Grace is writing your reminder…</Text>
+          ) : (
+            <Text style={styles.previewText}>“{pref.preview}”</Text>
+          )}
+        </View>
+      )}
+
       <View style={styles.pauseRow}>
         <Text style={styles.pauseText}>Reminders on</Text>
         <Switch value={pref.enabled} onValueChange={togglePause} trackColor={{ true: colors.brass, false: colors.sand }} thumbColor={colors.white} />
@@ -86,6 +109,9 @@ const styles = StyleSheet.create({
   timeLabel: { fontFamily: fonts.sans, fontSize: 13, letterSpacing: 1, color: colors.textFaint },
   time: { fontFamily: fonts.serif, fontSize: 56, color: colors.ink, marginVertical: 4 },
   timeSub: { fontFamily: fonts.sans, fontSize: 14, color: colors.textFaint },
+  previewCard: { backgroundColor: colors.white, borderWidth: 1, borderColor: colors.sandLine, borderRadius: radius.md, padding: 18, marginTop: 16 },
+  previewLabel: { fontFamily: fonts.sansSemi, fontSize: 12, letterSpacing: 1, color: colors.brass, marginBottom: 8 },
+  previewText: { fontFamily: fonts.serifItalic, fontSize: 17, color: colors.ink, lineHeight: 24 },
   pauseRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', backgroundColor: colors.white, borderWidth: 1, borderColor: colors.sandLine, borderRadius: radius.md, paddingVertical: 12, paddingHorizontal: 18, marginTop: 16 },
   pauseText: { fontFamily: fonts.sans, fontSize: 15, color: colors.ink },
   denied: { fontFamily: fonts.sans, fontSize: 13, color: colors.danger, marginTop: 16, lineHeight: 19 },

@@ -9,11 +9,17 @@ export default function StoryDetailScreen({ route, navigation }) {
   const { id } = route.params || {};
   const [story, setStory] = useState(null);
   const [progress, setProgress] = useState(null);
+  const [narrative, setNarrative] = useState(null);
+  const [loadingNarrative, setLoadingNarrative] = useState(true);
 
   useEffect(() => {
     let alive = true;
     Promise.all([StoryService.getStory(id), StoryService.getProgress(id)])
       .then(([s, p]) => { if (alive) { setStory(s); setProgress(p); } });
+    StoryService.getNarrative(id, 1)
+      .then((res) => { if (alive) setNarrative(res.content); })
+      .catch(() => { if (alive) setNarrative(null); })
+      .finally(() => { if (alive) setLoadingNarrative(false); });
     return () => { alive = false; };
   }, [id]);
 
@@ -54,6 +60,17 @@ export default function StoryDetailScreen({ route, navigation }) {
             <Text style={styles.hook}>“{story.hook}”</Text>
           </View>
 
+          <View style={styles.card}>
+            <Text style={styles.hookLabel}>NARRATION PREVIEW</Text>
+            {loadingNarrative ? (
+              <ActivityIndicator color={colors.brass} style={{ marginTop: 8 }} />
+            ) : narrative ? (
+              <Text style={styles.preview} numberOfLines={6}>{narrative}</Text>
+            ) : (
+              <Text style={styles.previewMuted}>Grace is preparing this story for you. Tap Play to begin.</Text>
+            )}
+          </View>
+
           <View style={[styles.card, { backgroundColor: 'rgba(181,138,63,0.07)', borderColor: '#E6D9BF' }]}>
             <Text style={styles.hookLabel}>RELATED PASSAGE</Text>
             <Text style={styles.related}>{story.scriptureRange}</Text>
@@ -84,6 +101,8 @@ const styles = StyleSheet.create({
   card: { backgroundColor: colors.white, borderWidth: 1, borderColor: colors.sandLine, borderRadius: radius.md, padding: 18 },
   hookLabel: { fontFamily: fonts.sansSemi, fontSize: 12, letterSpacing: 1, color: colors.brass, marginBottom: 8 },
   hook: { fontFamily: fonts.serifItalic, fontSize: 21, color: colors.ink, lineHeight: 29 },
+  preview: { fontFamily: fonts.sans, fontSize: 15, color: colors.textMuted, lineHeight: 22 },
+  previewMuted: { fontFamily: fonts.sans, fontSize: 14, color: colors.textFaint, lineHeight: 20 },
   related: { fontFamily: fonts.serifSemi, fontSize: 21, color: colors.ink },
   relatedSub: { fontFamily: fonts.sans, fontSize: 14, color: colors.textMuted, marginTop: 4 },
   tags: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },

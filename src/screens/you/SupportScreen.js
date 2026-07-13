@@ -10,21 +10,25 @@ export default function SupportScreen({ navigation }) {
   const [category, setCategory] = useState('Billing');
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState('idle'); // idle | sending | sent | failed
+  const [reply, setReply] = useState('');
 
   const send = async () => {
     if (!message.trim()) { Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Soft); return; }
     setStatus('sending');
     const res = await SupportService.submitTicket({ category, message, email: 'you@email.com' });
-    if (res.ok) { Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success); setStatus('sent'); }
-    else { setStatus('failed'); }
+    if (res.ok) {
+      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+      setReply(res.reply || '');
+      setStatus('sent');
+    } else { setStatus('failed'); }
   };
 
   if (status === 'sent') {
     return (
       <Screen bg={colors.ivory} edges={['top']} style={styles.center}>
         <GraceDove size={150} wings="folded" motion="peek" />
-        <Text style={styles.sentTitle}>Message received.</Text>
-        <Text style={styles.sentSub}>I've passed it along. We reply within a day, to you@email.com.</Text>
+        <Text style={styles.sentTitle}>Grace replied.</Text>
+        <Text style={styles.sentSub}>{reply || "I've passed it along. We reply within a day, to you@email.com."}</Text>
         <Pressable style={styles.primary} onPress={() => navigation.goBack()}><Text style={styles.primaryText}>Back to You</Text></Pressable>
       </Screen>
     );
