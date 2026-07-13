@@ -7,7 +7,25 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Planned
-- Phase 5: Beta entitlement (GRACE-011 / SEL-16) — in progress
+- Mobile integration (GRACE-012+ / M8)
+
+---
+
+## [Phase 5] — 2026-07-13
+
+Tickets: GRACE-011 / SEL-16. Milestone M7.
+
+### Added
+- `POST /beta/redeem { code }` — beta entitlement without IAP
+- `subscriptionService.ts` — trial expiry on `GET /me`, redeem upsert
+- `GET /me` resolves expired `trialing` → `subscribed: false`
+- `test/phase5.integration.test.ts`, `verify:phase5`, `record:phase5`
+- `BETA_REDEEM_CODE` env (default `grace-beta`)
+
+### Verified
+- `npm test` → 24/24 pass
+- `npm run verify:phase5` → 5/5 pass
+- E2E log: `docs/runs/phase5-*-*.log`
 
 ---
 
