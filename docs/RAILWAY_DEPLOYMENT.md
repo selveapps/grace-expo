@@ -20,10 +20,14 @@
 ## Architecture on Railway
 
 ```
-Railway Project: grace-api-staging
-├── Service: grace-api     (Node 20 + Fastify, root: backend/)
-└── Plugin:  PostgreSQL    (DATABASE_URL → grace-api)
+Railway Project: grace-api-staging (id: d8bf7ae3-bdaf-4500-924c-9f5ef36e652a)
+├── Service: grace-api     → https://grace-api-production.up.railway.app
+└── Plugin:  PostgreSQL    (DATABASE_URL → grace-api via ${{Postgres.DATABASE_URL}})
 ```
+
+> Railway names the default environment `production` even for staging projects. Use project name `grace-api-staging` to distinguish.
+
+**Status (2026-07-13):** ✅ Provisioned. `curl /health` → `{"ok":true,"db":true}`. Sample KJV seeded (129 verses).
 
 Public URL → `EXPO_PUBLIC_API_BASE` in the Expo app.
 
@@ -98,14 +102,35 @@ curl http://localhost:3000/health
 
 | Trigger | How |
 |---------|-----|
-| Auto | Push to linked branch → Railway rebuilds |
-| Manual | `cd backend && railway up` (Railway CLI) |
-| Migrations | `npm run migrate` in deploy command or CI step (GRACE-005) |
+| Auto | Push to `backend-dev` → Railway rebuilds (GitHub-connected service) |
+| CLI setup | `cd backend && railway login && npm run setup:railway` |
+| Manual deploy | `cd backend && railway up --detach` |
+| Migrations | `preDeployCommand` in `railway.toml` runs `npm run migrate` |
 
-**Recommended deploy command** (once migrations exist):
+**Config-as-code:** `backend/railway.toml` — build, migrate, healthcheck on `/health`.
+
+**Recommended** (set in dashboard *or* via `railway.toml`):
 
 ```
-npm run build && npm run migrate && npm start
+buildCommand:  npm run build
+preDeploy:     npm run migrate
+startCommand:  npm start
+healthcheck:   GET /health
+```
+
+### CLI one-shot (after `railway login`)
+
+```bash
+cd backend
+npm run setup:railway          # init project + Postgres + vars + domain + deploy
+STAGING_API_URL=https://<domain> npm run verify:staging
+```
+
+### Verify staging
+
+```bash
+STAGING_API_URL=https://<your-railway-domain> npm run verify:staging
+# Expect: {"ok":true,"db":true}
 ```
 
 ---
@@ -133,13 +158,16 @@ Typical beta stack: **$5–12/mo** total.
 
 ---
 
-## Checklist (GRACE-019)
+## Checklist (GRACE-019 / SEL-6)
 
-- [ ] Railway Hobby plan active
-- [ ] GitHub repo connected, root `backend/`
-- [ ] Postgres plugin added
-- [ ] `DATABASE_URL`, `JWT_SECRET` set
-- [ ] Public domain generated
-- [ ] `curl /health` returns 200 from phone network (LTE)
-- [ ] `EXPO_PUBLIC_API_BASE` set in Expo app
-- [ ] Spending limit configured
+- [x] Railway project created (`grace-api-staging`)
+- [x] Postgres plugin added
+- [x] `DATABASE_URL`, `JWT_SECRET`, `CORS_ORIGINS` set on `grace-api`
+- [x] Public domain: `https://grace-api-production.up.railway.app`
+- [x] `curl /health` → `{"ok":true,"db":true}`
+- [x] Migrations applied on deploy (`railway.toml` preDeployCommand)
+- [x] Sample KJV seeded (129 verses)
+- [ ] Hobby plan upgrade (if not already on paid plan)
+- [ ] `EXPO_PUBLIC_API_BASE` set in Expo app (Phase 2+)
+- [ ] Spending limit configured in Railway dashboard
+- [ ] GitHub auto-deploy linked (optional; CLI deploy works today)
