@@ -1,7 +1,8 @@
 // Grace API client — fetch wrapper, JWT attach, 401 refresh, timeout.
 import { getSession, setSession } from './session';
 
-const BASE = (process.env.EXPO_PUBLIC_API_BASE || 'http://localhost:3000').replace(/\/$/, '');
+const STAGING_API = 'https://grace-api-production.up.railway.app';
+const BASE = (process.env.EXPO_PUBLIC_API_BASE || STAGING_API).replace(/\/$/, '');
 const TIMEOUT = 12000;
 
 async function refreshTokens() {

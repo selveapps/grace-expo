@@ -28,6 +28,13 @@ case "$PHASE" in
   phase3) VERIFY_CMD=(npm run verify:phase3) ;;
   phase4) VERIFY_CMD=(npm run verify:phase4) ;;
   phase5) VERIFY_CMD=(npm run verify:phase5) ;;
+  staging-full)
+    if [ -z "${STAGING_API_URL:-}" ]; then
+      STAGING_API_URL="https://grace-api-production.up.railway.app"
+      export STAGING_API_URL
+    fi
+    VERIFY_CMD=(npm run verify:staging:full)
+    ;;
   staging)
     if [ -z "${STAGING_API_URL:-}" ]; then
       STAGING_API_URL="https://grace-api-production.up.railway.app"

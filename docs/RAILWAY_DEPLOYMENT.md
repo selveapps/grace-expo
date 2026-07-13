@@ -167,7 +167,8 @@ Typical beta stack: **$5–12/mo** total.
 - [x] `curl /health` → `{"ok":true,"db":true}`
 - [x] Migrations applied on deploy (`railway.toml` preDeployCommand)
 - [x] Sample KJV seeded (129 verses)
-- [ ] Hobby plan upgrade (if not already on paid plan)
-- [ ] `EXPO_PUBLIC_API_BASE` set in Expo app (Phase 2+)
-- [ ] Spending limit configured in Railway dashboard
+- [x] `EXPO_PUBLIC_API_BASE` default → staging in `app.config.js`
+- [x] `verify:staging:full` — 15 endpoint checks
+- [x] `docs/BETA_DISTRIBUTION.md` + `docs/BETA_VERIFICATION.md`
+- [ ] Spending limit configured in Railway dashboard (manual)
 - [ ] GitHub auto-deploy linked (optional; CLI deploy works today)

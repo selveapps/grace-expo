@@ -239,3 +239,23 @@ Update this file **during** work, not after — like a lab notebook, not a retro
 - Playwright drives Expo web against local API (`localhost:3000`)
 
 **Result:** PASS → commit `899534c`
+
+**Follow-up:** RUN-010 M10 staging + beta distribution
+
+---
+
+### RUN-010 | 2026-07-13 | M10 staging & beta distribution (GRACE-019–022)
+
+**Objective:** Staging HTTPS verified; app defaults to Railway; beta playbook.
+
+**Procedure:**
+1. `verify:staging:full` → 15/15 on Railway
+2. App default API → staging; `start:tunnel`, `.env.staging.example`
+3. `docs/BETA_DISTRIBUTION.md`, `docs/BETA_VERIFICATION.md`
+4. `npm run record:staging:full`
+
+**Observations:**
+- Matrix 9/10 automated; remote tester QR = manual per playbook
+- M9 offline queue still partial
+
+**Result:** PASS → commit pending

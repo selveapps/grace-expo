@@ -30,9 +30,10 @@ Import these into Linear (or GitHub Issues). IDs are stable references for PRs a
 | GRACE-016 | [SEL-23](https://linear.app/selve-apps/issue/SEL-23) | Wire SubscriptionService to server | Done |
 | GRACE-017 | [SEL-20](https://linear.app/selve-apps/issue/SEL-20) | Wire ReadingService.search to API | Backlog |
 | GRACE-018 | [SEL-22](https://linear.app/selve-apps/issue/SEL-22) | Offline write queue & sync | Backlog |
-| GRACE-019 | [SEL-21](https://linear.app/selve-apps/issue/SEL-21) | Deploy API to staging HTTPS | Backlog |
-| GRACE-020 | [SEL-24](https://linear.app/selve-apps/issue/SEL-24) | Configure app for staging API | Backlog |
-| GRACE-021 | [SEL-25](https://linear.app/selve-apps/issue/SEL-25) | Beta distribution playbook | Backlog |
+| GRACE-019 | [SEL-21](https://linear.app/selve-apps/issue/SEL-21) | Deploy API to staging HTTPS | Done |
+| GRACE-020 | [SEL-24](https://linear.app/selve-apps/issue/SEL-24) | Configure app for staging API | Done |
+| GRACE-021 | [SEL-25](https://linear.app/selve-apps/issue/SEL-25) | Beta distribution playbook | Done |
+| GRACE-022 | — | Beta verification checklist run | Done |
 | GRACE-022 | [SEL-30](https://linear.app/selve-apps/issue/SEL-30) | Beta verification checklist run | Backlog |
 | GRACE-023 | [SEL-26](https://linear.app/selve-apps/issue/SEL-26) | Apple Sign-In server verification | Backlog |
 | GRACE-024 | [SEL-27](https://linear.app/selve-apps/issue/SEL-27) | Google Sign-In server verification | Backlog |

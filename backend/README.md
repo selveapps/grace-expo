@@ -39,7 +39,9 @@ npm run verify:phase1   # Docker + migrate + seed + tests + /health E2E
 | `npm test` | Integration tests (schema + seed) |
 | `npm run verify:phase1` | Full Phase 1 E2E gate |
 | `npm run verify:phase4` | Phase 4 search E2E gate |
-| `npm run verify:phase5` | Phase 5 beta entitlement E2E gate |
+| `npm run verify:staging` | Health check against Railway |
+| `npm run verify:staging:full` | Full M10 API gate (15 checks) |
+| `npm run record:staging:full` | Record staging verify to `docs/runs/` |
 
 ## Beta entitlement (Phase 5)
 
