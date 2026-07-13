@@ -36,7 +36,7 @@ Public URL → `EXPO_PUBLIC_API_BASE` in the Expo app.
 1. Sign up at [railway.app](https://railway.app) → upgrade to **Hobby** ($5/mo).
 2. **New Project** → **Deploy from GitHub repo** → `selveapps/grace-expo`.
 3. Set **Root Directory** to `backend` (after GRACE-003 lands on `main`).
-4. Set **Branch** to `sid` (staging) or `main` (production later).
+4. Set **Branch** to `backend-dev` (staging) or `main` (production later).
 
 ### 2. Add PostgreSQL
 
