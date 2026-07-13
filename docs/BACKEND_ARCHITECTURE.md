@@ -202,7 +202,7 @@ Each milestone is **independently testable**. "Done" includes a verification com
 | Verify | Expo Go: onboarding → save verse → kill app → relaunch → verse still on server (second device optional) |
 | Depends on | M3, M4, M5 (M6, M7 optional for first wire-up) |
 
-**Status:** ✅ Done on `backend-dev`. Playwright E2E 16/16 (API + Expo web wiring). Device testing with staging URL = next (M10).
+**Status:** ✅ Done on `backend-dev`. Playwright E2E 16/16 (API + Expo web wiring). Staging default in app config.
 
 ---
 
@@ -220,11 +220,13 @@ Each milestone is **independently testable**. "Done" includes a verification com
 
 | Item | Detail |
 |------|--------|
-| Deliverable | HTTPS API on Fly/Render/Railway; `EXPO_PUBLIC_API_BASE` in EAS/env; `npx expo start --tunnel` for remote testers |
-| Verify | Tester outside LAN opens Expo Go link → app loads → `GET /health` from device network succeeds |
+| Deliverable | HTTPS API on Railway; `EXPO_PUBLIC_API_BASE`; `npx expo start --tunnel` for remote testers |
+| Verify | `verify:staging:full` 15/15; [`BETA_DISTRIBUTION.md`](./BETA_DISTRIBUTION.md); [`BETA_VERIFICATION.md`](./BETA_VERIFICATION.md) |
 | Depends on | M1–M8 minimum |
 
-**Beta handoff artifact:** README section with QR instructions + known Expo Go limitations.
+**Status:** ✅ Done on `backend-dev`. API: `https://grace-api-production.up.railway.app`.
+
+**Beta handoff:** [`docs/BETA_DISTRIBUTION.md`](./BETA_DISTRIBUTION.md)
 
 ---
 

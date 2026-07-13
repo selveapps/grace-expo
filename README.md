@@ -62,6 +62,20 @@ Scan the QR with **Expo Go** (iOS/Android). The app boots into the Splash and ru
 whole flow: **Splash → Welcome → Name → Carry → Slider → Verse → Reflection → Stories
 preview → Rhythm → Sign in → Preparing → Paywall → Confirmation → the 4-tab app**.
 
+### Beta testers (staging API + tunnel)
+
+Grace now uses the **Grace API** on Railway (not bible-api.com alone). For remote testers:
+
+```bash
+cp .env.staging.example .env
+npm run start:tunnel          # share QR — works on LTE
+# or: npm run start:staging   # same API, LAN only
+```
+
+Default API (no `.env`): `https://grace-api-production.up.railway.app`
+
+Full playbook: [`docs/BETA_DISTRIBUTION.md`](docs/BETA_DISTRIBUTION.md)
+
 > Purchases & real auth need a dev build; here they're simulated (the paywall CTA advances
 > to the confirmation, "Maybe later" drops straight into the app). This matches the intended
 > Expo Go testing behaviour.

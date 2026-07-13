@@ -7,7 +7,24 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Planned
-- Expo Go device testing with staging URL (GRACE-019/020)
+- M9 offline sync queue
+- M11 real OAuth + IAP
+
+---
+
+## [M10 — Staging & beta distribution] — 2026-07-13
+
+Tickets: GRACE-019–022 (SEL-21,24,25). Milestone M10.
+
+### Added
+- Default app API → Railway staging (`app.config.js`, `client.js`)
+- `.env.staging.example`, `npm run start:staging` / `start:tunnel`
+- `verify:staging:full` (15 checks) + `record:staging:full`
+- `docs/BETA_DISTRIBUTION.md`, `docs/BETA_VERIFICATION.md`
+
+### Verified
+- Staging full verify → 15/15 pass
+- E2E log: `docs/runs/staging-full-*-3920ddd.log`
 
 ---
 
