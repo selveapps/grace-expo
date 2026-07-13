@@ -1,0 +1,41 @@
+---
+description: Use git worktrees for all feature branches — never develop on main in-place
+alwaysApply: true
+---
+
+# Git worktrees (required)
+
+Use **git worktrees** for every feature branch. Do not implement feature work directly on `main`.
+
+## Layout
+
+| Path | Branch | Purpose |
+|------|--------|---------|
+| `grace-expo/` | `main` | Stable; pull/merge only |
+| `grace-expo-sid/` | `sid` | Architecture + backend planning |
+| `grace-expo-<branch>/` | `<branch>` | Future feature worktrees |
+
+## Commands
+
+```bash
+# From main worktree (grace-expo/)
+git worktree add ../grace-expo-<branch> -b <branch>
+
+# List worktrees
+git worktree list
+
+# Remove when merged
+git worktree remove ../grace-expo-<branch>
+git branch -d <branch>
+```
+
+## Workflow rules
+
+1. **One branch per worktree** — never checkout a feature branch inside `grace-expo/` if a worktree exists for it.
+2. **Atomic commits** — each milestone doc or feature lands as focused commits on its branch.
+3. **Merge via PR** — `sid` → `main` when milestone is reviewed; delete worktree after merge.
+4. **Open the correct folder in Cursor** — match the worktree path to the branch being edited (`grace-expo-sid` for `sid`).
+
+## Current branches
+
+- `sid` — backend architecture doc (`docs/BACKEND_ARCHITECTURE.md`)
