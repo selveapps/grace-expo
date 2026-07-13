@@ -126,8 +126,7 @@ SUP=$(curl -sf -X POST "$URL/ai/support" \
 check "POST /ai/support" bash -c "echo '$SUP' | grep -q 'reply'"
 
 echo "[16/16] OpenAPI docs"
-DOCS=$(curl -sf "$URL/docs/json" || echo '{}')
-check "GET /docs/json (OpenAPI)" bash -c "echo '$DOCS' | grep -q '/health'"
+check "GET /docs/json (OpenAPI)" bash -c 'curl -sf "'"$URL"'/docs/json" | python3 -c "import sys,json; sys.exit(0 if \"/health\" in json.load(sys.stdin).get(\"paths\",{}) else 1)"'
 
 echo
 echo "=== Results: $PASS passed, $FAIL failed ==="
