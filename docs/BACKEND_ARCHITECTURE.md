@@ -56,7 +56,7 @@
 │                    │ + FTS idx │                          │
 │                    └───────────┘                          │
 └───────────────────────────────────────────────────────────┘
-         Deployed: Fly.io / Render / Railway (HTTPS URL)
+         Deployed: Railway Hobby (HTTPS, always-on, integrated Postgres)
 ```
 
 **Repo layout (proposed):**
@@ -96,10 +96,12 @@ Each milestone is **independently testable**. "Done" includes a verification com
 | Item | Detail |
 |------|--------|
 | Deliverable | `backend/` package: Fastify + TypeScript + `GET /health` |
-| Verify | `curl https://<host>/health` → `{ "ok": true }` locally and deployed |
+| Verify | `curl http://localhost:3000/health` → `{ "ok": true }`; Railway deploy per `RAILWAY_DEPLOYMENT.md` |
 | Depends on | M0 |
 
-**Parallel with:** M2 (schema can start once folder exists).
+**Status:** ✅ Scaffold landed on `sid`. Deploy guide: [`RAILWAY_DEPLOYMENT.md`](./RAILWAY_DEPLOYMENT.md).
+
+**Parallel with:** M2 (schema can start now).
 
 ---
 
@@ -276,18 +278,16 @@ Beta-ready = all rows ✅:
 
 ---
 
-## 6. Open decisions (needs product input)
+## 6. Locked decisions
 
-See interview questions — answers will update §2–§5 and narrow M4/M7/M10.
-
-| Decision | Options | Impact |
-|----------|---------|--------|
-| Backend host | Fly / Render / Railway / Vercel | M10 deploy scripts |
-| Auth for beta | Guest-only / guest + email / invite code | M4, M7 |
-| Premium for beta | All free / auto-trial / redeem codes | M7, paywall UX |
-| Translation | KJV only / KJV + WEB | M3 seed size |
-| Monorepo | `backend/` in grace-expo vs separate repo | M1 layout |
-| Search in v1 | Ship M6 before beta or defer | M6 vs M10 timeline |
+| Decision | Choice | Notes |
+|----------|--------|-------|
+| **Backend host** | **Railway Hobby** | ~$5/mo; always-on; no cold starts. See [`RAILWAY_DEPLOYMENT.md`](./RAILWAY_DEPLOYMENT.md) |
+| **Auth (beta)** | Guest + email magic link | Expo Go compatible; real OAuth deferred to M11 |
+| **Premium (beta)** | Beta redeem codes | `POST /beta/redeem`; no StoreKit in Expo Go |
+| **Search** | Required for beta | GRACE-010 on critical path |
+| **Translation** | KJV only | Public domain; WEB optional later |
+| **Monorepo** | `grace-expo/backend/` | Same repo, Railway root dir `backend/` |
 
 ---
 
@@ -305,6 +305,7 @@ M0 → M1 → M2 → M3 → M4 → M5 → M8 → M9 → M10
 
 ## 8. References
 
+- [`RAILWAY_DEPLOYMENT.md`](./RAILWAY_DEPLOYMENT.md) — Railway Hobby setup & env vars
 - [`BACKEND.md`](../BACKEND.md) — canonical HTTP contract
 - [`LINEAR_ISSUES.md`](./LINEAR_ISSUES.md) — Linear/GitHub issue backlog (GRACE-001–026)
 - [`src/services/index.js`](../src/services/index.js) — app integration seam
