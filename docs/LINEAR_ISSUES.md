@@ -4,9 +4,44 @@
 **Goal:** Real backend + app integration, distributable via Expo Go  
 **Parent doc:** [`BACKEND_ARCHITECTURE.md`](./BACKEND_ARCHITECTURE.md)
 
+**Linear project:** [Grace Expo Beta](https://linear.app/selve-apps/project/grace-expo-beta-8eb9cf365622) (team: **Selve**)
+
 Import these into Linear (or GitHub Issues). IDs are stable references for PRs and commits.
 
-**Legend**
+## Linear ID mapping (synced 2026-07-13)
+
+| GRACE ID | Linear | Title | Status |
+|----------|--------|-------|--------|
+| GRACE-001 | [SEL-5](https://linear.app/selve-apps/issue/SEL-5) | Architecture & worktree setup | Done |
+| GRACE-002 | [SEL-6](https://linear.app/selve-apps/issue/SEL-6) | Provision staging Postgres | Backlog |
+| GRACE-003 | [SEL-7](https://linear.app/selve-apps/issue/SEL-7) | Scaffold backend/ package | Backlog |
+| GRACE-004 | [SEL-8](https://linear.app/selve-apps/issue/SEL-8) | Source KJV seed dataset | Backlog |
+| GRACE-005 | [SEL-9](https://linear.app/selve-apps/issue/SEL-9) | Database schema & migrations | Backlog |
+| GRACE-006 | [SEL-11](https://linear.app/selve-apps/issue/SEL-11) | Seed bible into Postgres | Backlog |
+| GRACE-007 | [SEL-12](https://linear.app/selve-apps/issue/SEL-12) | Scripture HTTP endpoints | Backlog |
+| GRACE-008 | [SEL-10](https://linear.app/selve-apps/issue/SEL-10) | Guest JWT auth | Backlog |
+| GRACE-009 | [SEL-14](https://linear.app/selve-apps/issue/SEL-14) | Profile & library CRUD | Backlog |
+| GRACE-010 | [SEL-13](https://linear.app/selve-apps/issue/SEL-13) | Scripture search endpoint | Backlog |
+| GRACE-011 | [SEL-16](https://linear.app/selve-apps/issue/SEL-16) | Beta entitlement (no IAP) | Backlog |
+| GRACE-012 | [SEL-15](https://linear.app/selve-apps/issue/SEL-15) | API client module | Backlog |
+| GRACE-013 | [SEL-17](https://linear.app/selve-apps/issue/SEL-17) | Wire AuthService to guest API | Backlog |
+| GRACE-014 | [SEL-18](https://linear.app/selve-apps/issue/SEL-18) | Wire scripture layer to private API | Backlog |
+| GRACE-015 | [SEL-19](https://linear.app/selve-apps/issue/SEL-19) | Sync profile & library to server | Backlog |
+| GRACE-016 | [SEL-23](https://linear.app/selve-apps/issue/SEL-23) | Wire SubscriptionService to server | Backlog |
+| GRACE-017 | [SEL-20](https://linear.app/selve-apps/issue/SEL-20) | Wire ReadingService.search to API | Backlog |
+| GRACE-018 | [SEL-22](https://linear.app/selve-apps/issue/SEL-22) | Offline write queue & sync | Backlog |
+| GRACE-019 | [SEL-21](https://linear.app/selve-apps/issue/SEL-21) | Deploy API to staging HTTPS | Backlog |
+| GRACE-020 | [SEL-24](https://linear.app/selve-apps/issue/SEL-24) | Configure app for staging API | Backlog |
+| GRACE-021 | [SEL-25](https://linear.app/selve-apps/issue/SEL-25) | Beta distribution playbook | Backlog |
+| GRACE-022 | [SEL-30](https://linear.app/selve-apps/issue/SEL-30) | Beta verification checklist run | Backlog |
+| GRACE-023 | [SEL-26](https://linear.app/selve-apps/issue/SEL-26) | Apple Sign-In server verification | Backlog |
+| GRACE-024 | [SEL-27](https://linear.app/selve-apps/issue/SEL-27) | Google Sign-In server verification | Backlog |
+| GRACE-025 | [SEL-28](https://linear.app/selve-apps/issue/SEL-28) | IAP receipt validation & webhooks | Backlog |
+| GRACE-026 | [SEL-29](https://linear.app/selve-apps/issue/SEL-29) | EAS dev build for auth + IAP | Backlog |
+
+**GitHub mirror:** [issues #1–#27](https://github.com/selveapps/grace-expo/issues) (same GRACE IDs in titles)
+
+---
 
 | Field | Meaning |
 |-------|---------|
@@ -652,10 +687,6 @@ GRACE-001
 
 ## GitHub sync
 
-Run from `grace-expo-sid` after merging to main:
+Issues also mirrored on GitHub: https://github.com/selveapps/grace-expo/issues
 
-```bash
-./scripts/create-github-issues.sh   # optional — creates issues from this file
-```
-
-Or import CSV / use Linear GitHub integration.
+**Linear is source of truth** for blocking relations and project board. Use GRACE-XXX in branch names and PR titles; link both `SEL-XXX` and GitHub `#N` in PR descriptions.
