@@ -27,6 +27,14 @@ Checks (9 total):
 6. Built API `/health` → `{"ok":true,"db":true}`
 7. `tsc --noEmit`
 
+## Phase 2
+
+```bash
+cd backend && npm run verify:phase2
+```
+
+Checks: phase 1 prerequisite + 14 integration tests + live HTTP curls for scripture + guest auth + 401 gate.
+
 ## On failure
 
 1. Read failure output — do not retry blindly

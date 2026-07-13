@@ -35,7 +35,8 @@ npm run seed:prepare       # sample KJV from bible-api.com
 npm run seed:bible         # load into bible_verse
 npm run dev                # API on :3000
 npm test                   # integration tests
-npm run verify:phase1      # full Phase 1 E2E gate (run before claiming done)
+npm run verify:phase1      # Phase 1 E2E gate
+npm run verify:phase2      # Phase 2 E2E gate (includes phase 1)
 ```
 
 ## App commands (repo root)
@@ -47,6 +48,8 @@ npm install && npx expo start
 ## Agent docs (read when relevant)
 
 - Methodology: `docs/AGENTIC_CODING_METHODOLOGY.md`
+- Lab notebook: `docs/LAB_NOTEBOOK.md` (RUN-NNN session log — update during work)
+- Decisions: `DECISIONS.md` (DEC-NNN rationale archive)
 - Surprises log: `SURPRISES.md` (append on every correction loop)
 - Build log: `CHANGELOG.md`
 - Railway deploy: `docs/RAILWAY_DEPLOYMENT.md`
@@ -60,12 +63,17 @@ Load the matching skill before editing that stack:
 - `docker-postgres` — local DB
 - `railway` — staging deploy
 - `bible-api` — KJV seed fetch
+- `jose` — guest JWT auth
 
 ## Definition of done
 
 1. Acceptance criteria in `docs/LINEAR_ISSUES.md` met
 2. `npm run verify:phaseN` passes (or equivalent milestone verify)
-3. Surprise logged in `SURPRISES.md` if agent was corrected
+3. **Notebook updated in same commit as code:**
+   - `docs/LAB_NOTEBOOK.md` — RUN-NNN with procedure + observations
+   - `DECISIONS.md` — new DEC-NNN if architectural choice made
+   - `SURPRISES.md` — if agent was corrected
+   - `CHANGELOG.md` — milestone outcome + verify evidence
 4. Atomic commit; reference `SEL-XXX` / `GRACE-XXX` in message
 
 ## Avoid
