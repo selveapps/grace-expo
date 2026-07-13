@@ -156,4 +156,21 @@ Update this file **during** work, not after — like a lab notebook, not a retro
 
 **Result:** PASS — recording infrastructure validated
 
-**Follow-up:** RUN-006 Phase 3; always `record:phaseN` before milestone commit
+**Follow-up:** RUN-006 Phase 3 CRUD; always `record:phaseN` before milestone commit
+
+---
+
+### RUN-006 | 2026-07-13 | Phase 3 CRUD (SEL-14)
+
+**Objective:** GRACE-009 — authed profile + library routes.
+
+**Procedure:**
+1. Implement `libraryService` + expand `routes/me.ts`
+2. `npm test` → 18/18
+3. `npm run record:phase3`
+
+**Observations:**
+- DELETE uses `/saved/*` wildcard for refs containing `:`
+- verify: 6/6 pass
+
+**Result:** PASS → commit pending

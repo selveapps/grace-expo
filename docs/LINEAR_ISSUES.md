@@ -20,7 +20,7 @@ Import these into Linear (or GitHub Issues). IDs are stable references for PRs a
 | GRACE-006 | [SEL-11](https://linear.app/selve-apps/issue/SEL-11) | Seed bible into Postgres | Done (sample) |
 | GRACE-007 | [SEL-12](https://linear.app/selve-apps/issue/SEL-12) | Scripture HTTP endpoints | Done |
 | GRACE-008 | [SEL-10](https://linear.app/selve-apps/issue/SEL-10) | Guest JWT auth | Done |
-| GRACE-009 | [SEL-14](https://linear.app/selve-apps/issue/SEL-14) | Profile & library CRUD | Backlog |
+| GRACE-009 | [SEL-14](https://linear.app/selve-apps/issue/SEL-14) | Profile & library CRUD | Done |
 | GRACE-010 | [SEL-13](https://linear.app/selve-apps/issue/SEL-13) | Scripture search endpoint | Backlog |
 | GRACE-011 | [SEL-16](https://linear.app/selve-apps/issue/SEL-16) | Beta entitlement (no IAP) | Backlog |
 | GRACE-012 | [SEL-15](https://linear.app/selve-apps/issue/SEL-15) | API client module | Backlog |

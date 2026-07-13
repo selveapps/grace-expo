@@ -7,8 +7,21 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Planned
-- Phase 3: Profile & library CRUD (GRACE-009 / SEL-14)
-- Phase 3: Scripture search (GRACE-010 / SEL-13)
+- Phase 5: Beta entitlement (GRACE-011 / SEL-16)
+
+---
+
+## [Phase 3] — 2026-07-13
+
+Tickets: GRACE-009 / SEL-14. Milestone M5.
+
+### Added
+- `PATCH /me`, `GET/POST/DELETE /saved`, `GET/POST /reflections`, `GET/PUT /progress`
+- `libraryService.ts`, `test/phase3.integration.test.ts`, `verify:phase3`
+
+### Verified
+- `npm test` → 18/18 pass
+- `npm run verify:phase3` → 6/6 pass
 
 ---
 

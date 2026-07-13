@@ -22,6 +22,8 @@
     "record:phase1": "bash scripts/record-e2e.sh phase1",
     "record:phase2": "bash scripts/record-e2e.sh phase2",
     "record:staging": "bash scripts/record-e2e.sh staging",
+    "verify:phase3": "bash scripts/verify-phase3.sh",
+    "record:phase3": "bash scripts/record-e2e.sh phase3",
     "setup:railway": "bash scripts/setup-railway.sh"
   },
   "engines": {
