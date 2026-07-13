@@ -7,8 +7,32 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Planned
-- Phase 2: Scripture HTTP endpoints (GRACE-007 / SEL-12)
-- Phase 2: Guest JWT auth (GRACE-008 / SEL-10)
+- Phase 3: Profile & library CRUD (GRACE-009 / SEL-14)
+- Phase 3: Scripture search (GRACE-010 / SEL-13)
+
+---
+
+## [Phase 2] — 2026-07-13
+
+Milestones M3 (HTTP) + M4 (guest auth). Tickets: GRACE-007, GRACE-008 (SEL-12, SEL-10).
+
+### Added
+- Scripture routes: `/bible/:book/:chapter`, `/bible/passage`, `/today/verse`, `/verse/for-carrying`
+- Guest auth: `POST /auth/guest`, `POST /auth/refresh`, `GET /me` (read-only)
+- `jose` JWT (HS256, access 1h / refresh 30d)
+- `src/app.ts` extracted for `fastify.inject` tests
+- `test/phase2.integration.test.ts` (10 tests)
+- `npm run verify:phase2`
+- `DECISIONS.md`, `docs/LAB_NOTEBOOK.md` (scientific reproducibility protocol)
+
+### Verified
+- `npm test` → **14/14 pass**
+- `npm run verify:phase2` → **13/13 pass** (includes phase 1 prerequisite)
+- Staging: `curl https://grace-api-production.up.railway.app/bible/psalms/23` → 6 verses
+
+### Documentation
+- DEC-006 through DEC-008 recorded
+- RUN-003 completed in `docs/LAB_NOTEBOOK.md`
 
 ---
 

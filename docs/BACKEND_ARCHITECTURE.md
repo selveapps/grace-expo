@@ -115,6 +115,8 @@ Each milestone is **independently testable**. "Done" includes a verification com
 
 **Tables:** `user`, `profile`, `saved_verse`, `reflection`, `subscription`, `reading_progress`, `bible_verse` (for search).
 
+**Status:** ✅ Done. Migration `20260713204416_init`; integration tests pass.
+
 ---
 
 ### M3 — Scripture data layer
@@ -126,8 +128,10 @@ Each milestone is **independently testable**. "Done" includes a verification com
 | | `GET /bible/passage?ref=` |
 | | `GET /today/verse` |
 | | `GET /verse/for-carrying?tags=` |
-| Verify | `curl /bible/psalms/23` returns 23 verses; passage ref matches app shape `{ reference, verses: [{n,t}] }`; daily verse stable per UTC day |
+| Verify | `curl /bible/psalms/23` returns 6 verses; passage ref matches app shape `{ reference, verses: [{n,t}] }`; daily verse stable per UTC day |
 | Depends on | M2 |
+
+**Status:** ✅ HTTP routes done (sample seed). Full canon + search index still pending for beta search.
 
 **Parallel with:** M4, M5 (no auth required for public bible routes).
 
@@ -140,6 +144,8 @@ Each milestone is **independently testable**. "Done" includes a verification com
 | Deliverable | `POST /auth/guest { deviceId }` → JWT; `POST /auth/refresh`; middleware validates Bearer token |
 | Verify | Postman/curl: guest login → use JWT on `GET /me` → 401 without token |
 | Depends on | M1, M2 |
+
+**Status:** ✅ Done. `jose` HS256; `GET /me` read-only (full PATCH in M5).
 
 **Note:** `deviceId` = stable UUID generated on first launch (`expo-application` or stored UUID). No native auth modules.
 

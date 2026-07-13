@@ -59,6 +59,15 @@ Format: **Context → Assumed → Actual → Prevention**
 
 ---
 
+## 2026-07-13 — `curl -f` hides HTTP 401 status in verify scripts
+
+**Context:** `verify-phase2.sh` checking `GET /me` without token  
+**Assumed:** `curl -sf -w "%{http_code}"` returns `401`  
+**Actual:** `-f` (--fail) makes curl exit non-zero on 4xx; output empty → script saw `000`  
+**Prevention:** Use `curl -s` (no `-f`) when asserting HTTP status codes; documented in jose skill
+
+---
+
 ## 2026-07-13 — Git branch rename ≠ worktree folder rename
 
 **Context:** Renamed `sid` → `backend-dev`  

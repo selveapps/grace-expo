@@ -45,10 +45,12 @@ grace-expo/
 ├── AGENTS.md                      # Thin router (~80 lines max)
 ├── SURPRISES.md                   # Append-only: counter-intuitive discoveries
 ├── CHANGELOG.md                   # Milestone-level agentic build log
+├── DECISIONS.md                   # DEC-NNN rationale archive (methods section)
 ├── README.md                      # Human-facing (unchanged role)
 │
 ├── docs/
 │   ├── AGENTIC_CODING_METHODOLOGY.md   # This file — the "why"
+│   ├── LAB_NOTEBOOK.md                 # RUN-NNN session log (lab notebook)
 │   ├── BACKEND_ARCHITECTURE.md         # Milestones M0–M11 + verify matrix
 │   └── LINEAR_ISSUES.md                # Ticket ↔ milestone mapping
 │
@@ -78,6 +80,8 @@ grace-expo/
 | `AGENTS.md` | Agent + human | New verify command, layout change, new skill |
 | `SURPRISES.md` | Agent (append) | Any correction loop where agent assumed wrong |
 | `CHANGELOG.md` | Human or agent | Milestone merged / phase gate passed |
+| `DECISIONS.md` | Human or agent | Architectural/product choice with rationale |
+| `docs/LAB_NOTEBOOK.md` | Agent (during work) | Each implementation session (RUN-NNN) |
 
 **SURPRISES.md format** (append-only):
 
@@ -171,7 +175,7 @@ This is the operational methodology — repeat per milestone.
 | Skill | Dependency skills for Prisma, Fastify, Docker, bible-api (this commit) |
 | Implement | `backend/` — schema, seed, health, docker-compose |
 | Verify | `npm run verify:phase1` (9 checks: docker → migrate → seed → test → health → tsc) |
-| Capture | `SURPRISES.md` entries from E2E failures |
+| Capture | `LAB_NOTEBOOK.md` RUN-NNN + `DECISIONS.md` + `SURPRISES.md` + `CHANGELOG.md` |
 | Commit | `8a2541d` atomic Phase 1 commit |
 
 ### Definition of done (non-negotiable)
@@ -284,6 +288,7 @@ Never auto-loaded (human docs):
 | M2 Schema | `npm test` | prisma, docker-postgres |
 | M3 Scripture | `npm run seed:bible` | bible-api |
 | M1–M2 gate | `npm run verify:phase1` | milestone-gates |
+| M3–M4 gate | `npm run verify:phase2` | milestone-gates, jose, fastify |
 
 Future phases add: `verify-phase2.sh`, skills for JWT, FTS search, Railway deploy.
 

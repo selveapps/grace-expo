@@ -17,6 +17,7 @@
     "seed:bible": "tsx scripts/seed-bible.ts",
     "test": "tsx --test test/**/*.test.ts",
     "verify:phase1": "bash scripts/verify-phase1.sh",
+    "verify:phase2": "bash scripts/verify-phase2.sh",
     "verify:staging": "bash scripts/verify-staging.sh",
     "setup:railway": "bash scripts/setup-railway.sh"
   },
@@ -27,6 +28,7 @@
     "@fastify/cors": "^11.0.1",
     "@prisma/client": "^6.19.0",
     "fastify": "^5.2.1",
+    "jose": "^6.2.3",
     "prisma": "^6.19.0"
   },
   "devDependencies": {
