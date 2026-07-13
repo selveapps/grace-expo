@@ -39,6 +39,17 @@ npm run verify:phase1   # Docker + migrate + seed + tests + /health E2E
 | `npm test` | Integration tests (schema + seed) |
 | `npm run verify:phase1` | Full Phase 1 E2E gate |
 | `npm run verify:phase4` | Phase 4 search E2E gate |
+| `npm run verify:phase5` | Phase 5 beta entitlement E2E gate |
+
+## Beta entitlement (Phase 5)
+
+Expo Go beta uses server-side subscription state — no StoreKit.
+
+- `GET /me` → `profile.subscribed` (default `false` for new guests)
+- `POST /beta/redeem` `{ "code": "..." }` → sets `subscribed: true` + 3-day trial row
+- Set `BETA_REDEEM_CODE` in `.env` / Railway (default in dev: `grace-beta`)
+
+Trial expiry: `trialing` past `expiresAt` flips to `expired` and `subscribed: false` on next `GET /me`.
 
 ## Railway
 

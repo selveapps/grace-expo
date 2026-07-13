@@ -194,6 +194,29 @@ Update this file **during** work, not after — like a lab notebook, not a retro
 - Empty `?q=` → `{ ot: [], nt: [] }`
 - verify: 5/5 pass
 
-**Result:** PASS → commit pending
+**Result:** PASS → commit `98cf1b1`
 
 **Follow-up:** RUN-008 Phase 5 beta entitlement
+
+---
+
+### RUN-008 | 2026-07-13 | Phase 5 beta entitlement (SEL-16)
+
+**Objective:** GRACE-011 — server-side `subscribed` + `POST /beta/redeem`.
+
+**Procedure:**
+1. `subscriptionService.ts` + `routes/beta.ts` + auth `resolveSubscription` on `GET /me`
+2. `test/phase5.integration.test.ts`
+3. `npm test` → 24/24
+4. `npm run record:phase5`
+5. Set `BETA_REDEEM_CODE` on Railway; `railway up`
+
+**Observations:**
+- New guests: `profile.subscribed: false`
+- Redeem `grace-beta` → `trialing` + `subscribed: true`
+- Expired trial flips on next `GET /me`
+- verify: 5/5 pass
+
+**Result:** PASS → commit pending
+
+**Follow-up:** RUN-009 deploy Phase 4+5 to Railway; M8 mobile wiring

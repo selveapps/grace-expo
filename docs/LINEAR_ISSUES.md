@@ -22,7 +22,7 @@ Import these into Linear (or GitHub Issues). IDs are stable references for PRs a
 | GRACE-008 | [SEL-10](https://linear.app/selve-apps/issue/SEL-10) | Guest JWT auth | Done |
 | GRACE-009 | [SEL-14](https://linear.app/selve-apps/issue/SEL-14) | Profile & library CRUD | Done |
 | GRACE-010 | [SEL-13](https://linear.app/selve-apps/issue/SEL-13) | Scripture search endpoint | Done |
-| GRACE-011 | [SEL-16](https://linear.app/selve-apps/issue/SEL-16) | Beta entitlement (no IAP) | Backlog |
+| GRACE-011 | [SEL-16](https://linear.app/selve-apps/issue/SEL-16) | Beta entitlement (no IAP) | Done |
 | GRACE-012 | [SEL-15](https://linear.app/selve-apps/issue/SEL-15) | API client module | Backlog |
 | GRACE-013 | [SEL-17](https://linear.app/selve-apps/issue/SEL-17) | Wire AuthService to guest API | Backlog |
 | GRACE-014 | [SEL-18](https://linear.app/selve-apps/issue/SEL-18) | Wire scripture layer to private API | Backlog |
@@ -316,10 +316,10 @@ Authed routes per `BACKEND.md` §3: `/me`, `/saved`, `/reflections`, `/progress`
 Server-side subscription state for Expo Go beta. `GET /me` includes `profile.subscribed`. Optional `POST /beta/redeem { code }` or auto-grant beta cohort.
 
 **Acceptance criteria**
-- [ ] New users default to `subscribed: false` (or configurable beta default)
-- [ ] Redeem code (or admin flag) sets `subscribed: true`
-- [ ] Trial expiry logic mirrors `SubscriptionService` (3-day trialing → expired)
-- [ ] Document beta entitlement decision in `backend/README.md`
+- [x] New users default to `subscribed: false` (or configurable beta default)
+- [x] Redeem code (or admin flag) sets `subscribed: true`
+- [x] Trial expiry logic mirrors `SubscriptionService` (3-day trialing → expired)
+- [x] Document beta entitlement decision in `backend/README.md`
 
 **Verify**  
 `curl -H "Authorization: Bearer $JWT" localhost:3000/me | jq .profile.subscribed`

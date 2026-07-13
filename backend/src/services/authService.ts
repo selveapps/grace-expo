@@ -1,5 +1,6 @@
 import { prisma } from '../db.js';
 import { ACCESS_EXPIRES_IN, signAccessToken, signRefreshToken, verifyToken } from '../lib/jwt.js';
+import { resolveSubscription } from './subscriptionService.js';
 
 export async function guestLogin(deviceId: string) {
   if (!deviceId?.trim()) throw new Error('deviceId required');
@@ -51,9 +52,10 @@ export async function refreshSession(refresh: string) {
 }
 
 export async function getUserWithProfile(userId: string) {
+  await resolveSubscription(userId);
   return prisma.user.findUnique({
     where: { id: userId },
-    include: { profile: true },
+    include: { profile: true, subscription: true },
   });
 }
 

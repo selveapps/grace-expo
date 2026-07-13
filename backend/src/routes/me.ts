@@ -31,7 +31,8 @@ export async function registerMeRoutes(app: FastifyInstance) {
       rhythm?: string;
       onboarded?: boolean;
     };
-    const user = await library.patchMe(req.userId!, body);
+    await library.patchMe(req.userId!, body);
+    const user = await auth.getUserWithProfile(req.userId!);
     if (!user) return reply.code(404).send({ error: 'User not found' });
     return meResponse(user);
   });

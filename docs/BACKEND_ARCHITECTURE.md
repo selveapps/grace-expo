@@ -185,6 +185,8 @@ Each milestone is **independently testable**. "Done" includes a verification com
 | Verify | Redeem code → `subscribed: true`; expired trial flips to `expired`; paywall reads server state |
 | Depends on | M5 |
 
+**Status:** ✅ Done on `backend-dev`. `BETA_REDEEM_CODE` on Railway; 3-day `trialing` expiry on `GET /me`.
+
 **Expo Go:** Client calls redeem or server auto-grants beta cohort — no StoreKit.
 
 ---
