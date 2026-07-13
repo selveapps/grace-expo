@@ -35,6 +35,7 @@ git branch -d <branch>
 2. **Atomic commits** — each milestone doc or feature lands as focused commits on its branch.
 3. **Merge via PR** — `sid` → `main` when milestone is reviewed; delete worktree after merge.
 4. **Open the correct folder in Cursor** — match the worktree path to the branch being edited (`grace-expo-sid` for `sid`).
+5. **Track work in Linear** — project [Grace Expo Beta](https://linear.app/selve-apps/project/grace-expo-beta-8eb9cf365622); reference `SEL-XXX` / `GRACE-XXX` in commits and PRs.
 
 ## Current branches
 
