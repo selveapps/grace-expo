@@ -258,4 +258,4 @@ Update this file **during** work, not after — like a lab notebook, not a retro
 - Matrix 9/10 automated; remote tester QR = manual per playbook
 - M9 offline queue still partial
 
-**Result:** PASS → commit pending
+**Result:** PASS → commit `5258cf1`
