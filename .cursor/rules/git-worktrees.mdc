@@ -12,7 +12,7 @@ Use **git worktrees** for every feature branch. Do not implement feature work di
 | Path | Branch | Purpose |
 |------|--------|---------|
 | `grace-expo/` | `main` | Stable; pull/merge only |
-| `grace-expo-sid/` | `sid` | Architecture + backend planning |
+| `grace-expo-sid/` | `backend-dev` | Architecture + backend planning |
 | `grace-expo-<branch>/` | `<branch>` | Future feature worktrees |
 
 ## Commands
@@ -33,10 +33,10 @@ git branch -d <branch>
 
 1. **One branch per worktree** — never checkout a feature branch inside `grace-expo/` if a worktree exists for it.
 2. **Atomic commits** — each milestone doc or feature lands as focused commits on its branch.
-3. **Merge via PR** — `sid` → `main` when milestone is reviewed; delete worktree after merge.
-4. **Open the correct folder in Cursor** — match the worktree path to the branch being edited (`grace-expo-sid` for `sid`).
+3. **Merge via PR** — `backend-dev` → `main` when milestone is reviewed; delete worktree after merge.
+4. **Open the correct folder in Cursor** — match the worktree path to the branch being edited (`grace-expo-sid` for `backend-dev`).
 5. **Track work in Linear** — project [Grace Expo Beta](https://linear.app/selve-apps/project/grace-expo-beta-8eb9cf365622); reference `SEL-XXX` / `GRACE-XXX` in commits and PRs.
 
 ## Current branches
 
-- `sid` — backend architecture doc (`docs/BACKEND_ARCHITECTURE.md`)
+- `backend-dev` — backend architecture + Phase 1 API (`docs/BACKEND_ARCHITECTURE.md`)

@@ -61,7 +61,7 @@ Import these into Linear (or GitHub Issues). IDs are stable references for PRs a
 | **Milestone** | M0 |
 | **Priority** | P0 |
 | **Lane** | ops |
-| **Status** | ✅ Done (`sid` @ `b4288c6`) |
+| **Status** | ✅ Done (`backend-dev` @ `b4288c6`) |
 | **Blocked by** | — |
 | **Parallel** | — |
 
@@ -71,7 +71,7 @@ Publish milestone architecture doc and Cursor git-worktree rule.
 **Acceptance criteria**
 - [x] `docs/BACKEND_ARCHITECTURE.md` exists with milestones M0–M11
 - [x] `.cursor/rules/git-worktrees.mdc` committed
-- [x] `git worktree list` shows `grace-expo-sid` on branch `sid`
+- [x] `git worktree list` shows `grace-expo-sid` on branch `backend-dev`
 
 **Verify**  
 `git worktree list && test -f docs/BACKEND_ARCHITECTURE.md`

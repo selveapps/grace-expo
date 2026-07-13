@@ -85,9 +85,9 @@ Each milestone is **independently testable**. "Done" includes a verification com
 | Item | Detail |
 |------|--------|
 | Deliverable | This doc + git worktree rule |
-| Verify | `git worktree list` shows `sid`; doc reviewed |
+| Verify | `git worktree list` shows `backend-dev`; doc reviewed |
 
-**Status:** ✅ Done on branch `sid` (`b4288c6`). See [`LINEAR_ISSUES.md`](./LINEAR_ISSUES.md) GRACE-001.
+**Status:** ✅ Done on branch `backend-dev` (`b4288c6`). See [`LINEAR_ISSUES.md`](./LINEAR_ISSUES.md) GRACE-001.
 
 ---
 
@@ -99,7 +99,7 @@ Each milestone is **independently testable**. "Done" includes a verification com
 | Verify | `curl http://localhost:3000/health` → `{ "ok": true }`; Railway deploy per `RAILWAY_DEPLOYMENT.md` |
 | Depends on | M0 |
 
-**Status:** ✅ Scaffold landed on `sid`. Deploy guide: [`RAILWAY_DEPLOYMENT.md`](./RAILWAY_DEPLOYMENT.md).
+**Status:** ✅ Scaffold landed on `backend-dev`. Deploy guide: [`RAILWAY_DEPLOYMENT.md`](./RAILWAY_DEPLOYMENT.md).
 
 **Parallel with:** M2 (schema can start now).
 
