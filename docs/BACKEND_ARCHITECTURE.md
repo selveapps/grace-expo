@@ -87,7 +87,7 @@ Each milestone is **independently testable**. "Done" includes a verification com
 | Deliverable | This doc + git worktree rule |
 | Verify | `git worktree list` shows `sid`; doc reviewed |
 
-**Status:** In progress on branch `sid`.
+**Status:** ✅ Done on branch `sid` (`b4288c6`). See [`LINEAR_ISSUES.md`](./LINEAR_ISSUES.md) GRACE-001.
 
 ---
 
@@ -306,5 +306,6 @@ M0 → M1 → M2 → M3 → M4 → M5 → M8 → M9 → M10
 ## 8. References
 
 - [`BACKEND.md`](../BACKEND.md) — canonical HTTP contract
+- [`LINEAR_ISSUES.md`](./LINEAR_ISSUES.md) — Linear/GitHub issue backlog (GRACE-001–026)
 - [`src/services/index.js`](../src/services/index.js) — app integration seam
 - [`src/api/bible.js`](../src/api/bible.js) — current scripture client (to be replaced)
