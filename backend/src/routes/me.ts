@@ -2,6 +2,7 @@ import type { FastifyInstance } from 'fastify';
 import { requireAuth } from '../middleware/auth.js';
 import * as auth from '../services/authService.js';
 import * as library from '../services/libraryService.js';
+import { schemas } from '../lib/schemas.js';
 
 function meResponse(user: NonNullable<Awaited<ReturnType<typeof auth.getUserWithProfile>>>) {
   return {
@@ -17,13 +18,13 @@ function meResponse(user: NonNullable<Awaited<ReturnType<typeof auth.getUserWith
 }
 
 export async function registerMeRoutes(app: FastifyInstance) {
-  app.get('/me', { preHandler: requireAuth }, async (req, reply) => {
+  app.get('/me', { schema: schemas.getMe, preHandler: requireAuth }, async (req, reply) => {
     const user = await auth.getUserWithProfile(req.userId!);
     if (!user) return reply.code(404).send({ error: 'User not found' });
     return meResponse(user);
   });
 
-  app.patch('/me', { preHandler: requireAuth }, async (req, reply) => {
+  app.patch('/me', { schema: schemas.patchMe, preHandler: requireAuth }, async (req, reply) => {
     const body = req.body as {
       name?: string;
       carrying?: string[];
@@ -37,11 +38,11 @@ export async function registerMeRoutes(app: FastifyInstance) {
     return meResponse(user);
   });
 
-  app.get('/saved', { preHandler: requireAuth }, async (req) => {
+  app.get('/saved', { schema: schemas.listSaved, preHandler: requireAuth }, async (req) => {
     return library.listSaved(req.userId!);
   });
 
-  app.post('/saved', { preHandler: requireAuth }, async (req, reply) => {
+  app.post('/saved', { schema: schemas.addSaved, preHandler: requireAuth }, async (req, reply) => {
     const body = req.body as { ref?: string; text?: string };
     if (!body?.ref || !body?.text) {
       return reply.code(400).send({ error: 'ref and text required' });
@@ -50,7 +51,7 @@ export async function registerMeRoutes(app: FastifyInstance) {
     return reply.code(201).send({ ref: body.ref, text: body.text });
   });
 
-  app.delete('/saved/*', { preHandler: requireAuth }, async (req, reply) => {
+  app.delete('/saved/*', { schema: schemas.deleteSaved, preHandler: requireAuth }, async (req, reply) => {
     const ref = (req.params as { '*': string })['*'];
     if (!ref) return reply.code(400).send({ error: 'ref required' });
     const ok = await library.deleteSaved(req.userId!, decodeURIComponent(ref));
@@ -58,11 +59,11 @@ export async function registerMeRoutes(app: FastifyInstance) {
     return reply.code(204).send();
   });
 
-  app.get('/reflections', { preHandler: requireAuth }, async (req) => {
+  app.get('/reflections', { schema: schemas.listReflections, preHandler: requireAuth }, async (req) => {
     return library.listReflections(req.userId!);
   });
 
-  app.post('/reflections', { preHandler: requireAuth }, async (req, reply) => {
+  app.post('/reflections', { schema: schemas.addReflection, preHandler: requireAuth }, async (req, reply) => {
     const body = req.body as { word?: string; note?: string; ref?: string };
     if (!body?.word) return reply.code(400).send({ error: 'word required' });
     const row = await library.addReflection(req.userId!, {
@@ -79,11 +80,11 @@ export async function registerMeRoutes(app: FastifyInstance) {
     });
   });
 
-  app.get('/progress', { preHandler: requireAuth }, async (req) => {
+  app.get('/progress', { schema: schemas.listProgress, preHandler: requireAuth }, async (req) => {
     return library.listProgress(req.userId!);
   });
 
-  app.put('/progress', { preHandler: requireAuth }, async (req, reply) => {
+  app.put('/progress', { schema: schemas.upsertProgress, preHandler: requireAuth }, async (req, reply) => {
     const body = req.body as { book?: string; chapter?: number; position?: number };
     if (!body?.book || body.chapter == null || body.position == null) {
       return reply.code(400).send({ error: 'book, chapter, position required' });

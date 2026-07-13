@@ -148,4 +148,57 @@ test.describe('Backend API — all endpoints callable', () => {
     const body = await res.json();
     expect(body.session.accessToken).toBeTruthy();
   });
+
+  test('GET /stories', async ({ request }) => {
+    const res = await request.get(`${API}/stories`);
+    expect(res.ok()).toBeTruthy();
+    const body = await res.json();
+    expect(body.stories.length).toBeGreaterThan(0);
+    expect(body.featured.id).toBeTruthy();
+  });
+
+  test('POST /ai/stories/:id/narrative', async ({ request }) => {
+    const auth = await apiGuest(request);
+    const res = await request.post(`${API}/ai/stories/mary-annunciation/narrative`, {
+      headers: { Authorization: `Bearer ${auth.token}` },
+      data: { part: 1 },
+      timeout: 60000,
+    });
+    expect(res.ok()).toBeTruthy();
+    const body = await res.json();
+    expect(body.content.length).toBeGreaterThan(50);
+  });
+
+  test('POST /ai/reminder', async ({ request }) => {
+    const auth = await apiGuest(request);
+    const res = await request.post(`${API}/ai/reminder`, {
+      headers: { Authorization: `Bearer ${auth.token}` },
+      data: { type: 'morning', morningTime: '07:00' },
+      timeout: 60000,
+    });
+    expect(res.ok()).toBeTruthy();
+    const body = await res.json();
+    expect(body.notification.length).toBeGreaterThan(0);
+  });
+
+  test('POST /ai/support', async ({ request }) => {
+    const auth = await apiGuest(request);
+    const res = await request.post(`${API}/ai/support`, {
+      headers: { Authorization: `Bearer ${auth.token}` },
+      data: { category: 'Feedback', message: 'Love the app so far.' },
+      timeout: 60000,
+    });
+    expect(res.ok()).toBeTruthy();
+    const body = await res.json();
+    expect(body.reply.length).toBeGreaterThan(20);
+  });
+
+  test('GET /docs/json (OpenAPI)', async ({ request }) => {
+    const res = await request.get(`${API}/docs/json`);
+    expect(res.ok()).toBeTruthy();
+    const body = await res.json();
+    expect(body.openapi).toMatch(/^3\./);
+    expect(body.paths['/health']).toBeTruthy();
+    expect(body.paths['/ai/support']).toBeTruthy();
+  });
 });

@@ -3,14 +3,15 @@ import { getSession, setSession } from './session';
 
 const STAGING_API = 'https://grace-api-production.up.railway.app';
 const BASE = (process.env.EXPO_PUBLIC_API_BASE || STAGING_API).replace(/\/$/, '');
-const TIMEOUT = 12000;
+const DEFAULT_TIMEOUT = 12000;
+const LLM_TIMEOUT = 60000;
 
 async function refreshTokens() {
   const session = await getSession();
   if (!session?.refreshToken) return false;
 
   const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), TIMEOUT);
+  const timer = setTimeout(() => ctrl.abort(), DEFAULT_TIMEOUT);
   try {
     const res = await fetch(`${BASE}/auth/refresh`, {
       method: 'POST',
@@ -34,7 +35,7 @@ async function refreshTokens() {
   }
 }
 
-async function request(method, path, body, { auth = true, retry = true } = {}) {
+async function request(method, path, body, { auth = true, retry = true, timeout = DEFAULT_TIMEOUT } = {}) {
   const headers = { Accept: 'application/json' };
   if (body != null) headers['Content-Type'] = 'application/json';
 
@@ -44,7 +45,7 @@ async function request(method, path, body, { auth = true, retry = true } = {}) {
   }
 
   const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), TIMEOUT);
+  const timer = setTimeout(() => ctrl.abort(), timeout);
 
   try {
     const res = await fetch(`${BASE}${path}`, {
@@ -57,7 +58,7 @@ async function request(method, path, body, { auth = true, retry = true } = {}) {
 
     if (res.status === 401 && auth && retry) {
       const refreshed = await refreshTokens();
-      if (refreshed) return request(method, path, body, { auth, retry: false });
+      if (refreshed) return request(method, path, body, { auth, retry: false, timeout });
     }
 
     let data = null;
@@ -94,3 +95,5 @@ export const api = {
 export function getApiBase() {
   return BASE;
 }
+
+export const LLM_REQUEST_OPTS = { timeout: LLM_TIMEOUT };
