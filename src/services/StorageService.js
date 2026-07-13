@@ -38,4 +38,6 @@ export const KEYS = {
   reminders: 'reminders',
   subscription: 'subscription',
   auth: 'auth',
+  session: 'session.v1',
+  deviceId: 'deviceId',
 };

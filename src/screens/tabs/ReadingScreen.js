@@ -16,7 +16,9 @@ export default function ReadingScreen({ navigation }) {
         <Text style={styles.h1}>Reading</Text>
         <Text style={styles.sub}>Choose a place to begin. I'll keep it for you.</Text>
 
-        <View style={styles.search}><Icon name="search" size={20} color={colors.textFaint} /><Text style={styles.searchText}>Search scripture</Text></View>
+        <Pressable style={styles.search} onPress={() => go('Search')} testID="reading-search">
+          <Icon name="search" size={20} color={colors.textFaint} /><Text style={styles.searchText}>Search scripture</Text>
+        </Pressable>
 
         <Pressable style={styles.continue} onPress={() => go('Chapter', { book: 'Psalms', chapter: 23 })}>
           <View style={styles.continueThumb}><Text style={{ color: '#fff' }}>↳</Text></View>

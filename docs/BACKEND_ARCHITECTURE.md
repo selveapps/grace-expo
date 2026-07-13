@@ -202,6 +202,8 @@ Each milestone is **independently testable**. "Done" includes a verification com
 | Verify | Expo Go: onboarding → save verse → kill app → relaunch → verse still on server (second device optional) |
 | Depends on | M3, M4, M5 (M6, M7 optional for first wire-up) |
 
+**Status:** ✅ Done on `backend-dev`. Playwright E2E 16/16 (API + Expo web wiring). Device testing with staging URL = next (M10).
+
 ---
 
 ### M9 — Offline sync & conflict policy

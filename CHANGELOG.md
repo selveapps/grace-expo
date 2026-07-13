@@ -7,7 +7,24 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Planned
-- Mobile integration (GRACE-012+ / M8)
+- Expo Go device testing with staging URL (GRACE-019/020)
+
+---
+
+## [M8 — Mobile API wiring] — 2026-07-13
+
+Tickets: GRACE-012–016 (SEL-15,17,18,19,23). Milestone M8.
+
+### Added
+- `src/api/client.js` + `session.js` — JWT fetch wrapper, 401 refresh
+- `app.config.js`, `.env.example` — `EXPO_PUBLIC_API_BASE`, `EXPO_PUBLIC_BETA_REDEEM_CODE`
+- Wired `AuthService`, `bible.js`, `profile.js`, `SubscriptionService`, `ReadingService`
+- `SearchScreen` + interactive search on Reading tab
+- Expo web target + Playwright E2E (`e2e/api-endpoints.spec.js`, `e2e/app-wiring.spec.js`)
+
+### Verified
+- `npm run e2e` → **16/16 pass** (12 API + 4 FE wiring)
+- All backend endpoints callable from app flows
 
 ---
 

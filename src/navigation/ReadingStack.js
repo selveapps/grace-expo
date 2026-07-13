@@ -5,6 +5,7 @@ import OldTestamentScreen from '../screens/reading/OldTestamentScreen';
 import NewTestamentScreen from '../screens/reading/NewTestamentScreen';
 import BookScreen from '../screens/reading/BookScreen';
 import ChapterScreen from '../screens/reading/ChapterScreen';
+import SearchScreen from '../screens/reading/SearchScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +17,7 @@ export default function ReadingStack() {
       <Stack.Screen name="NewTestament" component={NewTestamentScreen} />
       <Stack.Screen name="Book" component={BookScreen} />
       <Stack.Screen name="Chapter" component={ChapterScreen} />
+      <Stack.Screen name="Search" component={SearchScreen} />
     </Stack.Navigator>
   );
 }

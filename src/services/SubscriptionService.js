@@ -1,6 +1,5 @@
-// SubscriptionService — mock RevenueCat/StoreKit surface. Persists a simulated
-// subscription so trial/active/expired states are real across restarts.
-// In a dev build, swap the bodies for react-native-iap / RevenueCat calls.
+// SubscriptionService — beta entitlement via Grace API (Expo Go). StoreKit = dev build.
+import { api } from '../api/client';
 import { StorageService, KEYS } from './StorageService';
 
 const OFFERINGS = [
@@ -8,42 +7,54 @@ const OFFERINGS = [
   { id: 'monthly', type: 'monthly', price: 12.99, displayPrice: '$12.99', period: 'month', trialDays: 3, badge: null, platformProductId: 'grace.plus.monthly' },
 ];
 
+const BETA_CODE = process.env.EXPO_PUBLIC_BETA_REDEEM_CODE || 'grace-beta';
+
 export const SubscriptionService = {
   getOfferings() { return OFFERINGS; },
 
   async getStatus() {
-    const sub = await StorageService.get(KEYS.subscription, { status: 'free', planId: null, trialEndsAt: null, renewsAt: null });
-    // derive expiry
-    if (sub.status === 'trialing' && sub.trialEndsAt && Date.now() > sub.trialEndsAt) {
-      sub.status = 'expired';
+    try {
+      const res = await api.get('/me');
+      const subscribed = !!res.data.profile?.subscribed;
+      const sub = {
+        status: subscribed ? 'trialing' : 'free',
+        planId: subscribed ? 'beta' : null,
+        trialEndsAt: subscribed ? Date.now() + 3 * 86400000 : null,
+        renewsAt: null,
+        platform: 'beta',
+      };
       await StorageService.set(KEYS.subscription, sub);
+      return sub;
+    } catch {
+      return StorageService.get(KEYS.subscription, { status: 'free', planId: null, trialEndsAt: null, renewsAt: null });
     }
-    return sub;
   },
 
-  // Simulated purchase: starts a 3-day trial. Returns the new status.
   async purchase(planId) {
     const plan = OFFERINGS.find((o) => o.id === planId) || OFFERINGS[0];
+    const res = await api.post('/beta/redeem', { code: BETA_CODE });
     const now = Date.now();
     const sub = {
-      status: 'trialing',
+      status: res.data.status || 'trialing',
       planId: plan.id,
-      trialEndsAt: now + plan.trialDays * 86400000,
-      renewsAt: now + plan.trialDays * 86400000,
-      platform: 'ios',
+      trialEndsAt: res.data.expiresAt ? new Date(res.data.expiresAt).getTime() : now + plan.trialDays * 86400000,
+      renewsAt: res.data.expiresAt ? new Date(res.data.expiresAt).getTime() : now + plan.trialDays * 86400000,
+      platform: 'beta',
     };
     await StorageService.set(KEYS.subscription, sub);
     return sub;
   },
 
   async restore() {
-    // No prior purchase in mock → nothing to restore.
-    return StorageService.get(KEYS.subscription, { status: 'free' });
+    return this.getStatus();
   },
 
   async cancel() {
     const sub = await StorageService.get(KEYS.subscription, { status: 'free' });
-    if (sub.status === 'trialing' || sub.status === 'active') { sub.status = 'canceled'; await StorageService.set(KEYS.subscription, sub); }
+    if (sub.status === 'trialing' || sub.status === 'active') {
+      sub.status = 'canceled';
+      await StorageService.set(KEYS.subscription, sub);
+    }
     return sub;
   },
 };

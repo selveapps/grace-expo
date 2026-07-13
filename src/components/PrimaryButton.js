@@ -4,7 +4,7 @@ import * as Haptics from 'expo-haptics';
 import { colors, fonts, radius } from '../theme';
 
 // Primary CTA button. variant: 'dark' | 'gold' | 'quiet'
-export default function PrimaryButton({ label, onPress, variant = 'dark', style }) {
+export default function PrimaryButton({ label, onPress, variant = 'dark', style, testID }) {
   const bg = variant === 'gold' ? colors.gold : variant === 'quiet' ? 'transparent' : colors.espresso;
   const fg = variant === 'gold' ? colors.espresso : variant === 'quiet' ? colors.textFaint : colors.onDark;
   const handle = () => {
@@ -15,6 +15,7 @@ export default function PrimaryButton({ label, onPress, variant = 'dark', style 
   };
   return (
     <Pressable
+      testID={testID}
       onPress={handle}
       style={({ pressed }) => [
         styles.btn,
