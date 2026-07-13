@@ -16,7 +16,9 @@
     "seed:prepare:full": "tsx scripts/prepare-kjv.ts --full",
     "seed:bible": "tsx scripts/seed-bible.ts",
     "test": "tsx --test test/**/*.test.ts",
-    "verify:phase1": "bash scripts/verify-phase1.sh"
+    "verify:phase1": "bash scripts/verify-phase1.sh",
+    "verify:staging": "bash scripts/verify-staging.sh",
+    "setup:railway": "bash scripts/setup-railway.sh"
   },
   "engines": {
     "node": ">=20"
@@ -24,11 +26,11 @@
   "dependencies": {
     "@fastify/cors": "^11.0.1",
     "@prisma/client": "^6.19.0",
-    "fastify": "^5.2.1"
+    "fastify": "^5.2.1",
+    "prisma": "^6.19.0"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
-    "prisma": "^6.19.0",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2"
   },

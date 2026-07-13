@@ -13,11 +13,11 @@ Import these into Linear (or GitHub Issues). IDs are stable references for PRs a
 | GRACE ID | Linear | Title | Status |
 |----------|--------|-------|--------|
 | GRACE-001 | [SEL-5](https://linear.app/selve-apps/issue/SEL-5) | Architecture & worktree setup | Done |
-| GRACE-002 | [SEL-6](https://linear.app/selve-apps/issue/SEL-6) | Provision staging Postgres | Backlog |
-| GRACE-003 | [SEL-7](https://linear.app/selve-apps/issue/SEL-7) | Scaffold backend/ package | Backlog |
-| GRACE-004 | [SEL-8](https://linear.app/selve-apps/issue/SEL-8) | Source KJV seed dataset | Backlog |
-| GRACE-005 | [SEL-9](https://linear.app/selve-apps/issue/SEL-9) | Database schema & migrations | Backlog |
-| GRACE-006 | [SEL-11](https://linear.app/selve-apps/issue/SEL-11) | Seed bible into Postgres | Backlog |
+| GRACE-002 | [SEL-6](https://linear.app/selve-apps/issue/SEL-6) | Provision staging Postgres | Done (Railway) |
+| GRACE-003 | [SEL-7](https://linear.app/selve-apps/issue/SEL-7) | Scaffold backend/ package | Done |
+| GRACE-004 | [SEL-8](https://linear.app/selve-apps/issue/SEL-8) | Source KJV seed dataset | Done (sample) |
+| GRACE-005 | [SEL-9](https://linear.app/selve-apps/issue/SEL-9) | Database schema & migrations | Done |
+| GRACE-006 | [SEL-11](https://linear.app/selve-apps/issue/SEL-11) | Seed bible into Postgres | Done (sample) |
 | GRACE-007 | [SEL-12](https://linear.app/selve-apps/issue/SEL-12) | Scripture HTTP endpoints | Backlog |
 | GRACE-008 | [SEL-10](https://linear.app/selve-apps/issue/SEL-10) | Guest JWT auth | Backlog |
 | GRACE-009 | [SEL-14](https://linear.app/selve-apps/issue/SEL-14) | Profile & library CRUD | Backlog |
