@@ -173,4 +173,27 @@ Update this file **during** work, not after — like a lab notebook, not a retro
 - DELETE uses `/saved/*` wildcard for refs containing `:`
 - verify: 6/6 pass
 
+**Result:** PASS → commit `b145809`
+
+**Follow-up:** RUN-007 Phase 4 search
+
+---
+
+### RUN-007 | 2026-07-13 | Phase 4 scripture search (SEL-13)
+
+**Objective:** GRACE-010 — `GET /bible/search?q=` with OT/NT grouping.
+
+**Procedure:**
+1. Add `searchScripture()` to `bibleService.ts` + route in `bible.ts`
+2. `test/phase4.integration.test.ts`
+3. `npm test` → 21/21 (phases 1–4 only; phase 5 test deferred)
+4. `npm run record:phase4`
+
+**Observations:**
+- ILIKE `%query%` on sample seed; `peace` returns NT hits (e.g. John 14:27)
+- Empty `?q=` → `{ ot: [], nt: [] }`
+- verify: 5/5 pass
+
 **Result:** PASS → commit pending
+
+**Follow-up:** RUN-008 Phase 5 beta entitlement

@@ -38,6 +38,7 @@ npm run verify:phase1   # Docker + migrate + seed + tests + /health E2E
 | `npm run seed:bible` | Load normalized JSON into `bible_verse` |
 | `npm test` | Integration tests (schema + seed) |
 | `npm run verify:phase1` | Full Phase 1 E2E gate |
+| `npm run verify:phase4` | Phase 4 search E2E gate |
 
 ## Railway
 

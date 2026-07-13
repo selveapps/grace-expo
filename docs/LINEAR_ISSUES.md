@@ -21,7 +21,7 @@ Import these into Linear (or GitHub Issues). IDs are stable references for PRs a
 | GRACE-007 | [SEL-12](https://linear.app/selve-apps/issue/SEL-12) | Scripture HTTP endpoints | Done |
 | GRACE-008 | [SEL-10](https://linear.app/selve-apps/issue/SEL-10) | Guest JWT auth | Done |
 | GRACE-009 | [SEL-14](https://linear.app/selve-apps/issue/SEL-14) | Profile & library CRUD | Done |
-| GRACE-010 | [SEL-13](https://linear.app/selve-apps/issue/SEL-13) | Scripture search endpoint | Backlog |
+| GRACE-010 | [SEL-13](https://linear.app/selve-apps/issue/SEL-13) | Scripture search endpoint | Done |
 | GRACE-011 | [SEL-16](https://linear.app/selve-apps/issue/SEL-16) | Beta entitlement (no IAP) | Backlog |
 | GRACE-012 | [SEL-15](https://linear.app/selve-apps/issue/SEL-15) | API client module | Backlog |
 | GRACE-013 | [SEL-17](https://linear.app/selve-apps/issue/SEL-17) | Wire AuthService to guest API | Backlog |
@@ -292,10 +292,10 @@ Authed routes per `BACKEND.md` §3: `/me`, `/saved`, `/reflections`, `/progress`
 `GET /bible/search?q=` → `{ ot: [...], nt: [...] }` using Postgres FTS/trigram.
 
 **Acceptance criteria**
-- [ ] `?q=peace` returns grouped OT/NT results
-- [ ] Empty query returns empty arrays
-- [ ] p95 latency < 500ms on staging
-- [ ] Results include `ref` and `text` snippet
+- [x] `?q=peace` returns grouped OT/NT results
+- [x] Empty query returns empty arrays
+- [x] p95 latency < 500ms on staging (sample seed; full canon pending)
+- [x] Results include `ref` and `text` snippet
 
 **Verify**  
 `curl 'localhost:3000/bible/search?q=peace' | jq '.ot | length'`

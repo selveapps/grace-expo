@@ -2,6 +2,11 @@ import type { FastifyInstance } from 'fastify';
 import * as bible from '../services/bibleService.js';
 
 export async function registerBibleRoutes(app: FastifyInstance) {
+  app.get('/bible/search', async (req) => {
+    const { q } = req.query as { q?: string };
+    return bible.searchScripture(q ?? '');
+  });
+
   app.get('/bible/:book/:chapter', async (req, reply) => {
     const { book, chapter } = req.params as { book: string; chapter: string };
     const ch = Number(chapter);

@@ -56,3 +56,28 @@ export async function getVerseForCarrying(tags: string[]) {
   if (passage) return passage;
   return getPassage(FALLBACK_REF);
 }
+
+export type SearchHit = { ref: string; text: string };
+
+export async function searchScripture(query: string): Promise<{ ot: SearchHit[]; nt: SearchHit[] }> {
+  const q = query.trim();
+  if (!q) return { ot: [], nt: [] };
+
+  const rows = await prisma.bibleVerse.findMany({
+    where: { text: { contains: q, mode: 'insensitive' } },
+    orderBy: [{ book: 'asc' }, { chapter: 'asc' }, { verse: 'asc' }],
+    take: 100,
+  });
+
+  const ot: SearchHit[] = [];
+  const nt: SearchHit[] = [];
+
+  for (const r of rows) {
+    const ref = formatReference(r.book, r.chapter, r.verse, r.verse);
+    const hit = { ref, text: r.text.trim() };
+    if (r.testament === 'new') nt.push(hit);
+    else ot.push(hit);
+  }
+
+  return { ot, nt };
+}
