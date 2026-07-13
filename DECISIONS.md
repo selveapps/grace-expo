@@ -270,3 +270,33 @@ Without synchronized docs, agents re-derive the same wrong assumptions; humans c
 
 ### Verification
 PR/commit diff includes both `backend/src/**` and root `*.md` changes.
+
+---
+
+## DEC-009 — Recorded E2E transcripts in `docs/runs/` (2026-07-13)
+
+**Tickets:** process (reproducibility)  
+**Status:** accepted
+
+### Context
+User requirement: E2E results as reproducible as a scientific paper — not just pass/fail in chat.
+
+### Decision
+`npm run record:phaseN` wraps `verify:phaseN` and writes immutable `.log` files to `docs/runs/` with:
+- UTC timestamp, git branch/SHA, dirty/clean, Node version, platform
+- Sanitized env (no secret values)
+- Full stdout/stderr + final exit code
+
+### Rationale
+Lab notebook RUN-NNN entries summarize; log files are **raw supplementary data** another researcher can diff against a re-run.
+
+### Consequences
+- Before milestone commit: `npm run record:phaseN` and commit the `.log`
+- Link log filename in `LAB_NOTEBOOK.md` Observations
+- Reproduce: `git checkout <sha>` → `npm run verify:phaseN` → diff against log
+
+### Verification
+```bash
+cd backend && npm run record:phase2
+ls docs/runs/phase2-*.log
+```

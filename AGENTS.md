@@ -37,6 +37,8 @@ npm run dev                # API on :3000
 npm test                   # integration tests
 npm run verify:phase1      # Phase 1 E2E gate
 npm run verify:phase2      # Phase 2 E2E gate (includes phase 1)
+npm run record:phase2      # same + save transcript to docs/runs/
+npm run record:staging     # record staging health check transcript
 ```
 
 ## App commands (repo root)

@@ -19,6 +19,9 @@
     "verify:phase1": "bash scripts/verify-phase1.sh",
     "verify:phase2": "bash scripts/verify-phase2.sh",
     "verify:staging": "bash scripts/verify-staging.sh",
+    "record:phase1": "bash scripts/record-e2e.sh phase1",
+    "record:phase2": "bash scripts/record-e2e.sh phase2",
+    "record:staging": "bash scripts/record-e2e.sh staging",
     "setup:railway": "bash scripts/setup-railway.sh"
   },
   "engines": {
