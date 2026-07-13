@@ -238,6 +238,4 @@ Update this file **during** work, not after — like a lab notebook, not a retro
 - `bible.js` uses Grace API first, bible-api.com fallback
 - Playwright drives Expo web against local API (`localhost:3000`)
 
-**Result:** PASS → commit pending
-
-**Follow-up:** RUN-010 device testing with `EXPO_PUBLIC_API_BASE` staging URL
+**Result:** PASS → commit `899534c`
