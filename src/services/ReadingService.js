@@ -1,11 +1,7 @@
-// ReadingService — the Bible reading data layer.
-// Structure (books/groups/counts) is bundled (data/bookMeta); verse TEXT is fetched
-// live from api/bible.js. Progress + saved verses persist via StorageService.
-// Every method returns the shape the real backend will return, so screens don't change
-// when a server is introduced.
-
+// ReadingService — Bible reading data layer. Verse text + search via Grace API.
 import { BOOKS, BOOK_BY_NAME, BOOK_INTROS, chapterCount } from '../data/bookMeta';
-import { getChapter as fetchChapter, getPassage } from '../api/bible';
+import { getChapter as fetchChapter, getPassage, searchScripture } from '../api/bible';
+import { api } from '../api/client';
 import { StorageService, KEYS } from './StorageService';
 
 export const ReadingService = {
@@ -16,7 +12,6 @@ export const ReadingService = {
     ];
   },
 
-  // Grouped books for a testament: [{ group, books: [BibleBook] }]
   getBooks(testament) {
     const inT = BOOKS.filter((b) => b.testament === testament);
     const order = [];
@@ -34,46 +29,65 @@ export const ReadingService = {
     return { ...b, intro: BOOK_INTROS[name] || null };
   },
 
-  // Live chapter text → { reference, verses:[{n,t}], online }
   async getChapter(book, chapter) {
     return fetchChapter(book, chapter);
   },
 
   chapterCount(book) { return chapterCount(book); },
 
-  // Naive client-side search across the live API for a few common books, grouped by testament.
-  // The real backend replaces this with a proper full-text index (see BACKEND.md /bible/search).
   async search(query) {
     const q = String(query || '').trim();
     if (!q) return { ot: [], nt: [] };
-    try {
-      const hit = await getPassage(q); // if the query is itself a reference, resolve it
-      if (hit && hit.online) {
-        const b = BOOK_BY_NAME[hit.ref.replace(/\s*\d+:.*$/, '').trim()];
-        const bucket = b && b.testament === 'new' ? 'nt' : 'ot';
-        return { ot: bucket === 'ot' ? [hit] : [], nt: bucket === 'nt' ? [hit] : [] };
-      }
-    } catch {}
-    return { ot: [], nt: [] };
+    return searchScripture(q);
   },
 
-  async getSavedVerses() { return StorageService.get(KEYS.savedVerses, []); },
+  async getSavedVerses() {
+    try {
+      const res = await api.get('/saved');
+      return res.data;
+    } catch {
+      return StorageService.get(KEYS.savedVerses, []);
+    }
+  },
+
   async saveVerse(v) {
+    try {
+      await api.post('/saved', { ref: v.ref, text: v.text });
+    } catch { /* offline — local cache updated by profile */ }
     const list = await StorageService.get(KEYS.savedVerses, []);
     if (list.some((x) => x.ref === v.ref)) return list;
     const next = [v, ...list];
     await StorageService.set(KEYS.savedVerses, next);
     return next;
   },
+
   async unsaveVerse(ref) {
+    try {
+      await api.delete(`/saved/${encodeURIComponent(ref)}`);
+    } catch { /* offline */ }
     const list = await StorageService.get(KEYS.savedVerses, []);
     const next = list.filter((x) => x.ref !== ref);
     await StorageService.set(KEYS.savedVerses, next);
     return next;
   },
 
-  async getReadingProgress() { return StorageService.get(KEYS.readingProgress, {}); },
+  async getReadingProgress() {
+    try {
+      const res = await api.get('/progress');
+      const rows = res.data || [];
+      const prog = {};
+      for (const r of rows) prog[r.book] = r;
+      if (rows.length) prog.__last = rows[0];
+      return prog;
+    } catch {
+      return StorageService.get(KEYS.readingProgress, {});
+    }
+  },
+
   async updateReadingProgress(book, chapter, verse = 1) {
+    try {
+      await api.put('/progress', { book, chapter, position: verse });
+    } catch { /* offline */ }
     const prog = await StorageService.get(KEYS.readingProgress, {});
     prog[book] = { book, chapter, verse, updatedAt: Date.now() };
     prog.__last = { book, chapter, verse };

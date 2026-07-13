@@ -23,11 +23,11 @@ Import these into Linear (or GitHub Issues). IDs are stable references for PRs a
 | GRACE-009 | [SEL-14](https://linear.app/selve-apps/issue/SEL-14) | Profile & library CRUD | Done |
 | GRACE-010 | [SEL-13](https://linear.app/selve-apps/issue/SEL-13) | Scripture search endpoint | Done |
 | GRACE-011 | [SEL-16](https://linear.app/selve-apps/issue/SEL-16) | Beta entitlement (no IAP) | Done |
-| GRACE-012 | [SEL-15](https://linear.app/selve-apps/issue/SEL-15) | API client module | Backlog |
-| GRACE-013 | [SEL-17](https://linear.app/selve-apps/issue/SEL-17) | Wire AuthService to guest API | Backlog |
-| GRACE-014 | [SEL-18](https://linear.app/selve-apps/issue/SEL-18) | Wire scripture layer to private API | Backlog |
-| GRACE-015 | [SEL-19](https://linear.app/selve-apps/issue/SEL-19) | Sync profile & library to server | Backlog |
-| GRACE-016 | [SEL-23](https://linear.app/selve-apps/issue/SEL-23) | Wire SubscriptionService to server | Backlog |
+| GRACE-012 | [SEL-15](https://linear.app/selve-apps/issue/SEL-15) | API client module | Done |
+| GRACE-013 | [SEL-17](https://linear.app/selve-apps/issue/SEL-17) | Wire AuthService to guest API | Done |
+| GRACE-014 | [SEL-18](https://linear.app/selve-apps/issue/SEL-18) | Wire scripture layer to private API | Done |
+| GRACE-015 | [SEL-19](https://linear.app/selve-apps/issue/SEL-19) | Sync profile & library to server | Done |
+| GRACE-016 | [SEL-23](https://linear.app/selve-apps/issue/SEL-23) | Wire SubscriptionService to server | Done |
 | GRACE-017 | [SEL-20](https://linear.app/selve-apps/issue/SEL-20) | Wire ReadingService.search to API | Backlog |
 | GRACE-018 | [SEL-22](https://linear.app/selve-apps/issue/SEL-22) | Offline write queue & sync | Backlog |
 | GRACE-019 | [SEL-21](https://linear.app/selve-apps/issue/SEL-21) | Deploy API to staging HTTPS | Backlog |

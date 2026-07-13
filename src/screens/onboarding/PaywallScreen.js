@@ -5,6 +5,7 @@ import Screen from '../../components/Screen';
 import GraceDove from '../../components/GraceDove';
 import PrimaryButton from '../../components/PrimaryButton';
 import { SubscriptionService } from '../../services';
+import { useProfile } from '../../state/profile';
 import { colors, fonts, radius } from '../../theme';
 
 const OFFERS = SubscriptionService.getOfferings();
@@ -17,6 +18,7 @@ const TRIAL = [
 ];
 
 export default function PaywallScreen({ navigation }) {
+  const { setProfile } = useProfile();
   const [plan, setPlan] = useState('annual');
   const [busy, setBusy] = useState(false);
   const veil = useRef(new Animated.Value(1)).current;   // light veil from Preparing → fades out
@@ -42,7 +44,8 @@ export default function PaywallScreen({ navigation }) {
     if (busy) return;
     setBusy(true);
     Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-    await SubscriptionService.purchase(plan); // persists a real 3-day trial
+    await SubscriptionService.purchase(plan);
+    setProfile((p) => ({ ...p, subscribed: true }));
     setBusy(false);
     navigation.navigate('Confirmation');
   };
@@ -98,7 +101,7 @@ export default function PaywallScreen({ navigation }) {
       </View>
 
       <View style={{ flex: 1 }} />
-      <PrimaryButton label={busy ? 'Preparing…' : 'Start 3-day free trial'} variant="gold" onPress={start} />
+      <PrimaryButton label={busy ? 'Preparing…' : 'Start 3-day free trial'} variant="gold" onPress={start} testID="paywall-start-trial" />
       <Pressable onPress={() => navigation.navigate('App')} style={{ paddingVertical: 14 }}>
         <Text style={styles.later}>Maybe later</Text>
       </Pressable>

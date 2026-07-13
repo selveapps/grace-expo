@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, ActivityIndicator } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
@@ -17,6 +17,7 @@ import {
 } from '@expo-google-fonts/hanken-grotesk';
 import RootNavigator from './src/navigation/RootNavigator';
 import { ProfileProvider } from './src/state/profile';
+import { AuthService } from './src/services/AuthService';
 import { colors } from './src/theme';
 
 export default function App() {
@@ -29,8 +30,15 @@ export default function App() {
     HankenGrotesk_600SemiBold,
     HankenGrotesk_700Bold,
   });
+  const [booted, setBooted] = useState(false);
 
-  if (!loaded) {
+  useEffect(() => {
+    AuthService.ensureGuest()
+      .then(() => setBooted(true))
+      .catch(() => setBooted(true));
+  }, []);
+
+  if (!loaded || !booted) {
     return (
       <View style={{ flex: 1, backgroundColor: colors.ivory, alignItems: 'center', justifyContent: 'center' }}>
         <ActivityIndicator color={colors.brass} />
@@ -40,7 +48,7 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-      <ProfileProvider>
+      <ProfileProvider booted={booted}>
         <NavigationContainer>
           <StatusBar style="dark" />
           <RootNavigator />

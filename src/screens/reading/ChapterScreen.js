@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, ScrollView, Pressable, ActivityIndicator, Modal
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
 import { getChapter } from '../../api/bible';
+import { ReadingService } from '../../services/ReadingService';
 import { useProfile } from '../../state/profile';
 import { colors, fonts, radius } from '../../theme';
 
@@ -74,8 +75,11 @@ export default function ChapterScreen({ route, navigation }) {
     setVerses(null); setFailed(false);
     getChapter(book, chapter).then((data) => {
       if (!alive) return;
-      if (data.verses) { setVerses(data.verses); setOnline(data.online); }
-      else { setFailed(true); }
+      if (data.verses) {
+        setVerses(data.verses);
+        setOnline(data.online);
+        ReadingService.updateReadingProgress(book, chapter, 1).catch(() => {});
+      } else { setFailed(true); }
     });
     return () => { alive = false; };
   }, [book, chapter]);

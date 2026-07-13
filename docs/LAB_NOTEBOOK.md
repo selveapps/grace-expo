@@ -218,3 +218,26 @@ Update this file **during** work, not after — like a lab notebook, not a retro
 - verify: 5/5 pass
 
 **Result:** PASS → commit `36e5155`
+
+**Follow-up:** RUN-009 mobile API wiring + Playwright E2E
+
+---
+
+### RUN-009 | 2026-07-13 | M8 mobile API wiring (GRACE-012–016)
+
+**Objective:** Wire Expo app to Grace API; E2E verify all endpoints from FE.
+
+**Procedure:**
+1. Add `src/api/client.js`, `session.js`, `app.config.js`
+2. Wire AuthService, bible.js, profile sync, SubscriptionService, ReadingService.search
+3. Add `SearchScreen`, Expo web, Playwright (`e2e/`)
+4. `npm run e2e` → 16/16
+
+**Observations:**
+- Profile sync preserves local `onboarded` until server confirms
+- `bible.js` uses Grace API first, bible-api.com fallback
+- Playwright drives Expo web against local API (`localhost:3000`)
+
+**Result:** PASS → commit pending
+
+**Follow-up:** RUN-010 device testing with `EXPO_PUBLIC_API_BASE` staging URL
