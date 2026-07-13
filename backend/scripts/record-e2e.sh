@@ -25,6 +25,7 @@ LOG="$RUNS_DIR/${PHASE}-${UTC_TS}-${SHA}.log"
 case "$PHASE" in
   phase1) VERIFY_CMD=(npm run verify:phase1) ;;
   phase2) VERIFY_CMD=(npm run verify:phase2) ;;
+  phase3) VERIFY_CMD=(npm run verify:phase3) ;;
   staging)
     if [ -z "${STAGING_API_URL:-}" ]; then
       STAGING_API_URL="https://grace-api-production.up.railway.app"
