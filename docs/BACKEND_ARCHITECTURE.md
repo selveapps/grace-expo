@@ -171,6 +171,8 @@ Each milestone is **independently testable**. "Done" includes a verification com
 | Verify | `?q=peace` returns grouped OT/NT hits; empty query returns `{ ot: [], nt: [] }`; latency < 500ms on seed data |
 | Depends on | M3 |
 
+**Status:** ✅ Done on `backend-dev`. ILIKE search on sample seed; full KJV + FTS index optional before production search scale.
+
 **Parallel with:** M5 after M4 is done.
 
 ---

@@ -1,0 +1,135 @@
+══════════════════════════════════════════════════════════════
+Grace E2E Record
+══════════════════════════════════════════════════════════════
+phase:       phase4
+recorded_at: 20260713T220126Z (UTC)
+git_branch:  backend-dev
+git_sha:     b145809acb319be7a115f3da827bef512eea2aa5
+git_sha_short: b145809
+git_tree:    dirty
+node:        v25.6.1
+platform:    Darwin 24.6.0 arm64
+cwd:         /Users/siddhant/Desktop/CS/grace-expo-sid/backend
+command:     npm run verify:phase4
+DATABASE_URL: postgresql://grace:grace@localhost:5433/grace
+STAGING_API_URL: <not set>
+JWT_SECRET:  <default test secret>
+──────────────────────────────────────────────────────────────
+
+
+> grace-api@0.1.0 verify:phase4
+> bash scripts/verify-phase4.sh
+
+=== Grace Phase 4 E2E Verification ===
+[1/4] Phase 3 prerequisite
+ Container backend-postgres-1  Running
+ Container backend-postgres-1  Waiting
+ Container backend-postgres-1  Healthy
+warn The configuration property `package.json#prisma` is deprecated and will be removed in Prisma 7. Please migrate to a Prisma config file (e.g., `prisma.config.ts`).
+For more information, see: https://pris.ly/prisma-config
+
+warn The configuration property `package.json#prisma` is deprecated and will be removed in Prisma 7. Please migrate to a Prisma config file (e.g., `prisma.config.ts`).
+For more information, see: https://pris.ly/prisma-config
+
+warn The configuration property `package.json#prisma` is deprecated and will be removed in Prisma 7. Please migrate to a Prisma config file (e.g., `prisma.config.ts`).
+For more information, see: https://pris.ly/prisma-config
+
+./scripts/verify-phase1.sh: line 12: 52147 Terminated: 15          node dist/index.js
+warn The configuration property `package.json#prisma` is deprecated and will be removed in Prisma 7. Please migrate to a Prisma config file (e.g., `prisma.config.ts`).
+For more information, see: https://pris.ly/prisma-config
+
+warn The configuration property `package.json#prisma` is deprecated and will be removed in Prisma 7. Please migrate to a Prisma config file (e.g., `prisma.config.ts`).
+For more information, see: https://pris.ly/prisma-config
+
+./scripts/verify-phase2.sh: line 12: 52303 Terminated: 15          node dist/index.js
+warn The configuration property `package.json#prisma` is deprecated and will be removed in Prisma 7. Please migrate to a Prisma config file (e.g., `prisma.config.ts`).
+For more information, see: https://pris.ly/prisma-config
+
+./scripts/verify-phase3.sh: line 12: 52793 Terminated: 15          node dist/index.js
+  ✅ phase3 prerequisite
+[2/4] Integration tests
+
+> grace-api@0.1.0 test
+> tsx --test test/**/*.test.ts
+
+▶ Phase 1 — database schema (SEL-9)
+  ✔ all required tables exist (15.728166ms)
+  ✔ user + profile roundtrip (11.309917ms)
+✔ Phase 1 — database schema (SEL-9) (50.353833ms)
+▶ Phase 1 — KJV seed (SEL-8 / SEL-11)
+  ✔ Psalms 23 has 6 verses (10.086458ms)
+  ✔ verse text matches known KJV opening (1.135459ms)
+✔ Phase 1 — KJV seed (SEL-8 / SEL-11) (11.59925ms)
+▶ Phase 2 — scripture HTTP (SEL-12)
+  ✔ GET /bible/psalms/23 returns 6 verses (11.684709ms)
+  ✔ GET /bible/passage?ref=John+3:16 returns text (2.264542ms)
+  ✔ GET /today/verse is stable for UTC day (2.235167ms)
+  ✔ GET /verse/for-carrying?tags=Worry maps to Philippians (1.389666ms)
+  ✔ GET /bible/unknown/99 returns 404 (0.415583ms)
+✔ Phase 2 — scripture HTTP (SEL-12) (86.346208ms)
+▶ Phase 2 — guest JWT auth (SEL-10)
+  ✔ POST /auth/guest creates session (10.41925ms)
+  ✔ same deviceId returns same user id (5.52725ms)
+  ✔ GET /me returns 401 without token (0.274334ms)
+  ✔ GET /me returns user with valid token (6.100833ms)
+  ✔ POST /auth/refresh returns new session (4.283291ms)
+✔ Phase 2 — guest JWT auth (SEL-10) (28.863833ms)
+▶ Phase 3 — profile & library CRUD (SEL-14)
+  ✔ PATCH /me updates name and profile fields (7.775667ms)
+  ✔ full guest → save → list → delete flow (6.121459ms)
+  ✔ POST /reflections and GET /reflections (2.910291ms)
+  ✔ PUT /progress and GET /progress (3.397792ms)
+✔ Phase 3 — profile & library CRUD (SEL-14) (108.710708ms)
+▶ Phase 4 — scripture search (SEL-13)
+  ✔ empty query returns empty arrays (8.581542ms)
+  ✔ ?q=peace returns OT and NT hits (5.183041ms)
+  ✔ search responds under 500ms on sample data (1.932667ms)
+✔ Phase 4 — scripture search (SEL-13) (87.260333ms)
+ℹ tests 21
+ℹ suites 6
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 312.987416
+  ✅ npm test
+[3/4] Search HTTP
+
+> grace-api@0.1.0 build
+> prisma generate && tsc
+
+warn The configuration property `package.json#prisma` is deprecated and will be removed in Prisma 7. Please migrate to a Prisma config file (e.g., `prisma.config.ts`).
+For more information, see: https://pris.ly/prisma-config
+
+Prisma schema loaded from prisma/schema.prisma
+
+✔ Generated Prisma Client (v6.19.3) to ./node_modules/@prisma/client in 40ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Want to turn off tips and other hints? https://pris.ly/tip-4-nohints
+
+{"level":30,"time":1783980112268,"pid":53006,"hostname":"Siddhants-MacBook-Pro.local","msg":"Server listening at http://127.0.0.1:3000"}
+{"level":30,"time":1783980112269,"pid":53006,"hostname":"Siddhants-MacBook-Pro.local","msg":"Server listening at http://192.168.1.156:3000"}
+{"level":30,"time":1783980113884,"pid":53006,"hostname":"Siddhants-MacBook-Pro.local","reqId":"req-1","req":{"method":"GET","url":"/bible/search?q=","host":"127.0.0.1:3000","remoteAddress":"127.0.0.1","remotePort":64298},"msg":"incoming request"}
+{"level":30,"time":1783980113889,"pid":53006,"hostname":"Siddhants-MacBook-Pro.local","reqId":"req-1","res":{"statusCode":200},"responseTime":4.716999999999871,"msg":"request completed"}
+  ✅ empty query
+{"level":30,"time":1783980113909,"pid":53006,"hostname":"Siddhants-MacBook-Pro.local","reqId":"req-2","req":{"method":"GET","url":"/bible/search?q=peace","host":"127.0.0.1:3000","remoteAddress":"127.0.0.1","remotePort":64299},"msg":"incoming request"}
+{"level":30,"time":1783980113939,"pid":53006,"hostname":"Siddhants-MacBook-Pro.local","reqId":"req-2","res":{"statusCode":200},"responseTime":29.98266599999988,"msg":"request completed"}
+  ✅ peace has NT hits
+[4/4] Typecheck
+
+> grace-api@0.1.0 typecheck
+> tsc --noEmit
+
+scripts/verify-phase4.sh: line 12: 53006 Terminated: 15          node dist/index.js
+  ✅ tsc --noEmit
+=== Results: 5 passed, 0 failed ===
+Phase 4 E2E: PASS
+
+──────────────────────────────────────────────────────────────
+exit_code: 0
+result:    PASS
+log_file:  docs/runs/phase4-20260713T220126Z-b145809.log
+══════════════════════════════════════════════════════════════

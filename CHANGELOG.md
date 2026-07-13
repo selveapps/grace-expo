@@ -7,7 +7,23 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Planned
-- Phase 5: Beta entitlement (GRACE-011 / SEL-16)
+- Phase 5: Beta entitlement (GRACE-011 / SEL-16) — in progress
+
+---
+
+## [Phase 4] — 2026-07-13
+
+Tickets: GRACE-010 / SEL-13. Milestone M6.
+
+### Added
+- `GET /bible/search?q=` → `{ ot: [...], nt: [...] }` (ILIKE on `bible_verse.text`)
+- `searchScripture()` in `bibleService.ts`
+- `test/phase4.integration.test.ts`, `verify:phase4`, `record:phase4`
+
+### Verified
+- `npm test` → 21/21 pass (phases 1–4)
+- `npm run verify:phase4` → 5/5 pass
+- E2E log: `docs/runs/phase4-*-*.log`
 
 ---
 
