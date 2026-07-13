@@ -7,8 +7,18 @@ Grace backend API (Node 20 + TypeScript + Fastify). Deployed on **Railway Hobby*
 ```bash
 npm install
 cp .env.example .env
+npm run db:up          # local Postgres on :5433
+npm run migrate:dev    # first-time schema
+npm run seed:prepare   # sample KJV chapters
+npm run seed:bible
 npm run dev
-curl http://localhost:3000/health
+curl http://localhost:3000/health   # → {"ok":true,"db":true}
+```
+
+## Phase 1 verification
+
+```bash
+npm run verify:phase1   # Docker + migrate + seed + tests + /health E2E
 ```
 
 ## Scripts
@@ -19,6 +29,15 @@ curl http://localhost:3000/health
 | `npm run build` | Compile TypeScript → `dist/` |
 | `npm start` | Run production build |
 | `npm run typecheck` | Typecheck without emit |
+| `npm run db:up` | Start local Postgres (`docker compose`) |
+| `npm run db:down` | Stop local Postgres |
+| `npm run migrate` | Apply migrations (staging/prod) |
+| `npm run migrate:dev` | Create/apply migrations in dev |
+| `npm run seed:prepare` | Fetch sample KJV from bible-api.com |
+| `npm run seed:prepare:full` | Fetch full KJV canon (~30 min) |
+| `npm run seed:bible` | Load normalized JSON into `bible_verse` |
+| `npm test` | Integration tests (schema + seed) |
+| `npm run verify:phase1` | Full Phase 1 E2E gate |
 
 ## Railway
 
