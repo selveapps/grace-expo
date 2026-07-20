@@ -4,7 +4,10 @@
     "slug": "grace",
     "version": "1.0.0",
     "sdkVersion": "54.0.0",
-    "platforms": ["ios", "android"],
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "scheme": "grace",
@@ -12,11 +15,24 @@
       "backgroundColor": "#241a12",
       "resizeMode": "contain"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.grace.app"
+      "bundleIdentifier": "com.selveapps.grace",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
-    "android": { "package": "com.grace.app" }
+    "android": {
+      "package": "com.selveapps.grace"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0683c24c-9b77-4f1e-a9ec-54d6105dcb0c"
+      }
+    },
+    "owner": "selveapps"
   }
 }
