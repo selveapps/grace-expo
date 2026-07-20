@@ -1,9 +1,10 @@
-import React from 'react';
-import { View, Text, Pressable, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, Pressable, StyleSheet, ActivityIndicator } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import Svg, { Path } from 'react-native-svg';
 import Screen from '../../components/Screen';
 import GraceDove from '../../components/GraceDove';
+import { AuthService } from '../../services';
 import { colors, fonts, radius } from '../../theme';
 
 const AppleMark = () => (
@@ -21,7 +22,23 @@ const GoogleMark = () => (
 );
 
 export default function SignInScreen({ navigation }) {
-  const go = () => { Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light); navigation.navigate('Preparing'); };
+  const [busy, setBusy] = useState(false);
+
+  const signIn = async (fn) => {
+    if (busy) return;
+    setBusy(true);
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    try {
+      await fn();
+      navigation.navigate('Preparing');
+    } catch {
+      // Still advance — guest session works offline; email sync retries later.
+      navigation.navigate('Preparing');
+    } finally {
+      setBusy(false);
+    }
+  };
+
   return (
     <Screen gradient={['#FDFBF6', '#F7F3EC']} style={styles.wrap}>
       <View style={{ alignItems: 'center' }}>
@@ -30,13 +47,13 @@ export default function SignInScreen({ navigation }) {
         <Text style={styles.sub}>Sign in so Grace remembers you across devices.</Text>
       </View>
       <View style={{ flex: 1 }} />
-      <Pressable onPress={go} style={[styles.btn, { backgroundColor: '#1C1C1E' }]}>
-        <AppleMark /><Text style={[styles.btnText, { color: '#fff' }]}>Continue with Apple</Text>
+      <Pressable onPress={() => signIn(() => AuthService.signInWithApple())} disabled={busy} style={[styles.btn, { backgroundColor: '#1C1C1E' }]}>
+        {busy ? <ActivityIndicator color="#fff" /> : <><AppleMark /><Text style={[styles.btnText, { color: '#fff' }]}>Continue with Apple</Text></>}
       </Pressable>
-      <Pressable onPress={go} style={[styles.btn, styles.btnLight]}>
-        <GoogleMark /><Text style={[styles.btnText, { color: colors.ink }]}>Continue with Google</Text>
+      <Pressable onPress={() => signIn(() => AuthService.signInWithGoogle())} disabled={busy} style={[styles.btn, styles.btnLight]}>
+        {busy ? <ActivityIndicator color={colors.ink} /> : <><GoogleMark /><Text style={[styles.btnText, { color: colors.ink }]}>Continue with Google</Text></>}
       </Pressable>
-      <Pressable onPress={go} style={{ paddingVertical: 12 }}>
+      <Pressable onPress={() => signIn(() => AuthService.signInWithEmail())} disabled={busy} style={{ paddingVertical: 12 }}>
         <Text style={styles.email}>Continue with email</Text>
       </Pressable>
       <Text style={styles.legal}>By continuing you agree to our Terms & Privacy Policy.</Text>

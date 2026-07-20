@@ -22,6 +22,8 @@ model User {
   reflections     Reflection[]
   subscription    Subscription?
   readingProgress ReadingProgress[]
+  storyProgress   StoryProgress[]
+  supportTickets  SupportTicket[]
 
   @@map("user")
 }
@@ -103,4 +105,31 @@ model BibleVerse {
   @@unique([book, chapter, verse])
   @@index([book, chapter])
   @@map("bible_verse")
+}
+
+model StoryProgress {
+  userId    String   @map("user_id") @db.Uuid
+  storyId   String   @map("story_id")
+  seconds   Int      @default(0)
+  completed Boolean  @default(false)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, storyId])
+  @@map("story_progress")
+}
+
+model SupportTicket {
+  id        String   @id @default(uuid()) @db.Uuid
+  userId    String   @map("user_id") @db.Uuid
+  category  String
+  message   String
+  email     String?
+  reply     String?
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("support_ticket")
 }

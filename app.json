@@ -15,8 +15,11 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.grace.app"
+      "bundleIdentifier": "com.selveapps.grace",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
-    "android": { "package": "com.grace.app" }
+    "android": { "package": "com.selveapps.grace" }
   }
 }

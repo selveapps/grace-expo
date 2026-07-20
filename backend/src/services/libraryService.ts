@@ -4,16 +4,23 @@ export async function patchMe(
   userId: string,
   data: {
     name?: string;
+    email?: string;
     carrying?: string[];
     gentleness?: string;
     rhythm?: string;
     onboarded?: boolean;
   },
 ) {
-  const { name, ...profileFields } = data;
+  const { name, email, ...profileFields } = data;
 
-  if (name !== undefined) {
-    await prisma.user.update({ where: { id: userId }, data: { name } });
+  if (name !== undefined || email !== undefined) {
+    await prisma.user.update({
+      where: { id: userId },
+      data: {
+        ...(name !== undefined ? { name } : {}),
+        ...(email !== undefined ? { email } : {}),
+      },
+    });
   }
 
   const profileUpdates = Object.fromEntries(
@@ -106,6 +113,53 @@ export async function upsertProgress(
     update: {
       chapter: data.chapter,
       position: data.position,
+    },
+  });
+}
+
+export async function listStoryProgress(userId: string) {
+  const rows = await prisma.storyProgress.findMany({
+    where: { userId },
+    orderBy: { updatedAt: 'desc' },
+  });
+  return rows.map((r) => ({
+    storyId: r.storyId,
+    seconds: r.seconds,
+    completed: r.completed,
+  }));
+}
+
+export async function upsertStoryProgress(
+  userId: string,
+  storyId: string,
+  data: { seconds: number; completed?: boolean },
+) {
+  return prisma.storyProgress.upsert({
+    where: { userId_storyId: { userId, storyId } },
+    create: {
+      userId,
+      storyId,
+      seconds: Math.max(0, Math.floor(data.seconds)),
+      completed: !!data.completed,
+    },
+    update: {
+      seconds: Math.max(0, Math.floor(data.seconds)),
+      ...(data.completed !== undefined ? { completed: data.completed } : {}),
+    },
+  });
+}
+
+export async function createSupportTicket(
+  userId: string,
+  data: { category: string; message: string; email?: string; reply?: string },
+) {
+  return prisma.supportTicket.create({
+    data: {
+      userId,
+      category: data.category,
+      message: data.message,
+      email: data.email ?? null,
+      reply: data.reply ?? null,
     },
   });
 }

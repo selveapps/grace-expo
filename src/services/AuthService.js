@@ -31,20 +31,18 @@ export const AuthService = {
     return res.data.user;
   },
 
-  // Mocked provider sign-in — upgrades local user record; backend Apple/Google = dev build.
-  async signInWithApple() { return this._mockSignIn('apple', 'you@icloud.com'); },
-  async signInWithGoogle() { return this._mockSignIn('google', 'you@gmail.com'); },
-  async signInWithEmail(email) { return this._mockSignIn('email', email); },
+  // Provider sign-in for Expo Go — links email to guest account on server until native OAuth (M11).
+  async signInWithApple() { return this._linkProvider('apple', 'you@icloud.com'); },
+  async signInWithGoogle() { return this._linkProvider('google', 'you@gmail.com'); },
+  async signInWithEmail(email) { return this._linkProvider('email', email || 'you@email.com'); },
 
-  async _mockSignIn(provider, email) {
-    await new Promise((r) => setTimeout(r, 700));
-    const prev = await StorageService.get(KEYS.auth, null);
+  async _linkProvider(provider, email) {
+    await this.ensureGuest();
+    await api.patch('/me', { email });
+    const me = await api.get('/me');
     const user = {
-      id: (prev && prev.id) || 'user_' + Date.now(),
-      name: (prev && prev.name) || '',
-      email,
+      ...me.data.user,
       authProvider: provider,
-      createdAt: (prev && prev.createdAt) || Date.now(),
     };
     await StorageService.set(KEYS.auth, user);
     return { ok: true, user };

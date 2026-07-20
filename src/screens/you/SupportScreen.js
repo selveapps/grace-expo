@@ -4,9 +4,12 @@ import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
 import GraceDove from '../../components/GraceDove';
 import { SupportService, SUPPORT_CATEGORIES } from '../../services';
+import { useProfile } from '../../state/profile';
 import { colors, fonts, radius } from '../../theme';
 
 export default function SupportScreen({ navigation }) {
+  const { profile } = useProfile();
+  const replyEmail = profile.email || 'your account email';
   const [category, setCategory] = useState('Billing');
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState('idle'); // idle | sending | sent | failed
@@ -15,7 +18,7 @@ export default function SupportScreen({ navigation }) {
   const send = async () => {
     if (!message.trim()) { Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Soft); return; }
     setStatus('sending');
-    const res = await SupportService.submitTicket({ category, message, email: 'you@email.com' });
+    const res = await SupportService.submitTicket({ category, message, email: profile.email || null });
     if (res.ok) {
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
       setReply(res.reply || '');
@@ -28,7 +31,7 @@ export default function SupportScreen({ navigation }) {
       <Screen bg={colors.ivory} edges={['top']} style={styles.center}>
         <GraceDove size={150} wings="folded" motion="peek" />
         <Text style={styles.sentTitle}>Grace replied.</Text>
-        <Text style={styles.sentSub}>{reply || "I've passed it along. We reply within a day, to you@email.com."}</Text>
+        <Text style={styles.sentSub}>{reply || `I've passed it along. We reply within a day${profile.email ? `, to ${profile.email}` : ''}.`}</Text>
         <Pressable style={styles.primary} onPress={() => navigation.goBack()}><Text style={styles.primaryText}>Back to You</Text></Pressable>
       </Screen>
     );
@@ -59,7 +62,7 @@ export default function SupportScreen({ navigation }) {
           style={styles.input}
         />
         {status === 'failed' && <Text style={styles.failed}>That didn't send. Your message is still here — try again.</Text>}
-        <Text style={styles.note}>Replies go to you@email.com</Text>
+        <Text style={styles.note}>Replies go to {replyEmail}</Text>
 
         <Pressable style={[styles.primary, { marginTop: 20 }]} onPress={send} disabled={status === 'sending'}>
           {status === 'sending' ? <ActivityIndicator color={colors.onDark} /> : <Text style={styles.primaryText}>Send</Text>}

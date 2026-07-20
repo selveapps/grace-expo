@@ -2,6 +2,7 @@ import type { FastifyInstance } from 'fastify';
 import { requireAuth } from '../middleware/auth.js';
 import { getStory } from '../lib/storyCatalog.js';
 import * as auth from '../services/authService.js';
+import * as library from '../services/libraryService.js';
 import {
   generateReminderMessage,
   generateStoryNarrative,
@@ -77,10 +78,17 @@ export async function registerAiRoutes(app: FastifyInstance) {
     const ctx = await loadUserContext(req.userId!);
     const replyText = await generateSupportReply(category, body.message.trim(), ctx, body.email);
 
-    req.log.info({ category, userId: req.userId, messageLen: body.message.length }, 'support ticket');
+    const ticket = await library.createSupportTicket(req.userId!, {
+      category,
+      message: body.message.trim(),
+      email: body.email?.trim() || undefined,
+      reply: replyText,
+    });
+
+    req.log.info({ ticketId: ticket.id, category, userId: req.userId }, 'support ticket');
 
     return {
-      id: `tkt_${Date.now()}`,
+      id: ticket.id,
       category,
       reply: replyText,
     };

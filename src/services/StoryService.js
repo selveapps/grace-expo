@@ -1,4 +1,4 @@
-// StoryService — catalog + LLM narratives from Grace API; progress stays local.
+// StoryService — catalog + LLM narratives from Grace API; progress syncs to server.
 import { api, LLM_REQUEST_OPTS } from '../api/client';
 import { StorageService, KEYS } from './StorageService';
 
@@ -20,6 +20,7 @@ const FALLBACK_COLLECTIONS = [
 ];
 
 let catalogCache = null;
+let progressHydrated = false;
 
 async function loadCatalog() {
   if (catalogCache) return catalogCache;
@@ -41,6 +42,29 @@ async function loadCatalog() {
   }
 }
 
+async function hydrateProgressFromServer() {
+  if (progressHydrated) return;
+  try {
+    const { data } = await api.get('/stories/progress');
+    const local = await StorageService.get(KEYS.storyProgress, {});
+    for (const row of data || []) {
+      const prev = local[row.storyId];
+      if (!prev || (row.updatedAt && row.updatedAt > (prev.updatedAt || 0))) {
+        local[row.storyId] = {
+          seconds: row.seconds,
+          completed: row.completed,
+          updatedAt: Date.now(),
+        };
+      }
+    }
+    await StorageService.set(KEYS.storyProgress, local);
+  } catch {
+    // offline — local cache only
+  } finally {
+    progressHydrated = true;
+  }
+}
+
 function estimateDurationFromText(text, fallback) {
   if (!text) return fallback;
   const words = text.trim().split(/\s+/).length;
@@ -48,7 +72,12 @@ function estimateDurationFromText(text, fallback) {
 }
 
 export const StoryService = {
+  async hydrateProgress() {
+    await hydrateProgressFromServer();
+  },
+
   async getFeatured() {
+    await hydrateProgressFromServer();
     const c = await loadCatalog();
     return c.featured;
   },
@@ -75,6 +104,7 @@ export const StoryService = {
   },
   estimateDurationFromText,
   async getContinue() {
+    await hydrateProgressFromServer();
     const prog = await StorageService.get(KEYS.storyProgress, {});
     const stories = (await loadCatalog()).stories;
     return stories
@@ -82,6 +112,7 @@ export const StoryService = {
       .map((s) => ({ ...s, progress: prog[s.id] }));
   },
   async getProgress(id) {
+    await hydrateProgressFromServer();
     const prog = await StorageService.get(KEYS.storyProgress, {});
     return prog[id] || { seconds: 0, completed: false };
   },
@@ -89,6 +120,7 @@ export const StoryService = {
     const prog = await StorageService.get(KEYS.storyProgress, {});
     prog[id] = { seconds, completed, updatedAt: Date.now() };
     await StorageService.set(KEYS.storyProgress, prog);
+    api.put(`/stories/progress/${encodeURIComponent(id)}`, { seconds, completed }).catch(() => {});
     return prog[id];
   },
 };

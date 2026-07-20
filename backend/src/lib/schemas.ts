@@ -9,6 +9,7 @@ export const tags = {
   beta: 'Beta',
   stories: 'Stories',
   ai: 'AI',
+  today: 'Today',
 } as const;
 
 export const errorResponse = {
@@ -211,6 +212,7 @@ export const schemas = {
       type: 'object',
       properties: {
         name: { type: 'string' },
+        email: { type: 'string', format: 'email' },
         carrying: { type: 'array', items: { type: 'string' } },
         gentleness: { type: 'string' },
         rhythm: { type: 'string' },
@@ -374,6 +376,51 @@ export const schemas = {
     response: {
       200: { type: 'object', additionalProperties: true },
       404: errorResponse,
+    },
+  },
+
+  listStoryProgress: {
+    tags: [tags.stories],
+    summary: 'List story listening progress for the current user',
+    security: bearerSecurity,
+    response: {
+      200: { type: 'array', items: { type: 'object', additionalProperties: true } },
+      401: errorResponse,
+    },
+  },
+
+  upsertStoryProgress: {
+    tags: [tags.stories],
+    summary: 'Upsert story listening progress',
+    security: bearerSecurity,
+    params: {
+      type: 'object',
+      properties: { storyId: { type: 'string', examples: ['ruth-stays'] } },
+      required: ['storyId'],
+    },
+    body: {
+      type: 'object',
+      properties: {
+        seconds: { type: 'integer', minimum: 0 },
+        completed: { type: 'boolean' },
+      },
+      required: ['seconds'],
+    },
+    response: {
+      200: { type: 'object', additionalProperties: true },
+      400: errorResponse,
+      401: errorResponse,
+      404: errorResponse,
+    },
+  },
+
+  getToday: {
+    tags: [tags.today],
+    summary: 'Aggregated Today tab payload',
+    security: bearerSecurity,
+    response: {
+      200: { type: 'object', additionalProperties: true },
+      401: errorResponse,
     },
   },
 

@@ -200,5 +200,35 @@ test.describe('Backend API — all endpoints callable', () => {
     expect(body.openapi).toMatch(/^3\./);
     expect(body.paths['/health']).toBeTruthy();
     expect(body.paths['/ai/support']).toBeTruthy();
+    expect(body.paths['/today']).toBeTruthy();
+    expect(body.paths['/stories/progress']).toBeTruthy();
+  });
+
+  test('GET /today', async ({ request }) => {
+    const auth = await apiGuest(request);
+    const res = await request.get(`${API}/today`, {
+      headers: { Authorization: `Bearer ${auth.token}` },
+    });
+    expect(res.ok()).toBeTruthy();
+    const body = await res.json();
+    expect(body.dailyVerse.ref).toBeTruthy();
+    expect(body.recommendedStory.id).toBeTruthy();
+  });
+
+  test('PUT/GET /stories/progress', async ({ request }) => {
+    const auth = await apiGuest(request);
+    const token = auth.token;
+    const put = await request.put(`${API}/stories/progress/mary-annunciation`, {
+      headers: { Authorization: `Bearer ${token}` },
+      data: { seconds: 120, completed: false },
+    });
+    expect(put.ok()).toBeTruthy();
+
+    const list = await request.get(`${API}/stories/progress`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    expect(list.ok()).toBeTruthy();
+    const prog = await list.json();
+    expect(prog.some((p) => p.storyId === 'mary-annunciation' && p.seconds === 120)).toBeTruthy();
   });
 });

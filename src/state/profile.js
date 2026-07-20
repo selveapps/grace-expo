@@ -3,6 +3,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { api } from '../api/client';
 import { AuthService } from '../services/AuthService';
 import { ReadingService } from '../services/ReadingService';
+import { StoryService } from '../services/StoryService';
 
 const KEY = 'grace.profile.v1';
 
@@ -19,6 +20,7 @@ const DEFAULT = {
   fontScale: 1,
   audioSpeed: 1,
   reducedMotion: false,
+  email: '',
 };
 
 const ProfileContext = createContext(null);
@@ -69,6 +71,7 @@ export function ProfileProvider({ children, booted = true }) {
     (async () => {
       try {
         await AuthService.ensureGuest();
+        await StoryService.hydrateProgress();
         const me = await api.get('/me');
         const saved = await ReadingService.getSavedVerses();
         let reflections = [];
@@ -82,6 +85,7 @@ export function ProfileProvider({ children, booted = true }) {
           const next = {
             ...prev,
             name: user.name ?? prev.name,
+            email: user.email ?? prev.email,
             carrying: p?.carrying?.length ? p.carrying : prev.carrying,
             gentleness: p?.gentleness ?? prev.gentleness,
             rhythm: p?.rhythm ?? prev.rhythm,
