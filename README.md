@@ -72,7 +72,134 @@ the `src/` code is SDK-agnostic.
 
 ---
 
-## 3. Fidelity
+## 3. TestFlight (iOS native beta)
+
+TestFlight distributes the **mobile app** (`.ipa`). The **API stays on Railway** — production builds call `EXPO_PUBLIC_API_BASE` at runtime (see `eas.json` → `build.production.env`).
+
+### Prerequisites
+
+| Item | Value / notes |
+|------|----------------|
+| Apple Developer team | Selve App Studio LLP (`KPNKS58Y7T`) |
+| Bundle ID | **`com.selveapps.grace`** in `app.json` — do **not** use `com.grace.app` (taken globally) |
+| App Store Connect | App record with the **same** bundle ID |
+| EAS CLI | `npm install -g eas-cli` · `eas login` · project linked (`extra.eas.projectId` in `app.json`) |
+| Backend | `https://grace-api-production.up.railway.app/health` → `{"ok":true,"db":true}` |
+
+**One-time Apple setup**
+
+1. [Developer → Identifiers](https://developer.apple.com/account/resources/identifiers/list) → **App ID** → Explicit → `com.selveapps.grace` (no extra capabilities needed for v1).
+2. [App Store Connect](https://appstoreconnect.apple.com) → **My Apps → +** → iOS app with bundle `com.selveapps.grace`. SKU is internal only (e.g. `selve-grace`).
+3. Confirm `eas.json` → `submit.production.ios.ascAppId` matches that App Store Connect app.
+
+### Step-by-step CLI
+
+Run these from the repo root (`grace-expo/`). First-time setup once; build/submit each release.
+
+```bash
+# 0. Clone & install (skip if you already have the repo)
+git clone https://github.com/selveapps/grace-expo.git
+cd grace-expo
+npm install
+
+# 1. Install EAS CLI & log in (once)
+npm install -g eas-cli
+eas login
+
+# 2. Confirm EAS project is linked (should print projectId 0683c24c-…)
+grep -A2 '"eas"' app.json
+
+# 3. Verify staging API is up before you ship
+curl -s https://grace-api-production.up.railway.app/health
+
+# 4. Build iOS production .ipa on EAS (~15–25 min)
+eas build --platform ios --profile production
+
+# 5. Submit the latest build to App Store Connect / TestFlight
+eas submit --platform ios --latest
+
+# --- OR combine steps 4 + 5 ---
+eas build --platform ios --profile production --auto-submit
+```
+
+**Monitor progress**
+
+```bash
+# List recent builds
+eas build:list --platform ios --limit 5
+
+# List recent submissions
+eas submit:list --platform ios --limit 5
+```
+
+**Optional: fix iOS credentials**
+
+```bash
+eas credentials -p ios
+```
+
+Then in [App Store Connect → TestFlight](https://appstoreconnect.apple.com), wait for **Ready to Test** and add internal or external testers.
+
+### Build
+
+From the repo root:
+
+```bash
+npm install
+eas build --platform ios --profile production
+```
+
+EAS builds in the cloud (~15–25 min). Distribution cert and provisioning profile are managed by EAS for `com.selveapps.grace`.
+
+**Build + submit in one step (optional):**
+
+```bash
+eas build --platform ios --profile production --auto-submit
+```
+
+### Submit to TestFlight
+
+If you built without `--auto-submit`:
+
+```bash
+eas submit --platform ios --latest
+```
+
+`waiting for an available submitter` is normal — Expo queues the upload to App Store Connect (often 1–15 min). You can Ctrl+C; track progress at [expo.dev](https://expo.dev) → **selveapps** → **grace** → **Submissions**.
+
+### After upload
+
+1. **App Store Connect → TestFlight** — wait for build **Processing** → **Ready to Test** (5–30+ min).
+2. **Internal testing** — add team members (instant, no review).
+3. **External testing** — add tester emails; first external build needs brief Beta App Review.
+4. Testers install via the **TestFlight** app on iPhone.
+
+### Smoke test (TestFlight build)
+
+- Onboarding completes; name persists after relaunch
+- **Today** — daily verse loads
+- **Reading** — chapter from API (e.g. Psalms 23)
+- **Stories** — story detail + narration (LLM)
+- **You → Reminders / Support** — API responses
+- Paywall / beta: code `grace-beta` (staging default in `eas.json`)
+
+### Troubleshooting
+
+| Problem | Fix |
+|---------|-----|
+| `com.grace.app` not available | Use `com.selveapps.grace` in `app.json`; rebuild |
+| Submit fails / wrong app | `ascAppId` in `eas.json` must match the App Store Connect app with bundle `com.selveapps.grace` |
+| App loads but API fails | Redeploy API from `backend/`: `cd backend && railway up --service grace-api --detach`. Set Railway service **Root Directory** = `backend` |
+| Stale credentials | `eas credentials -p ios` — remove old `com.grace.app` profile if present |
+
+### Related docs
+
+- Expo Go: see **§2** above — local dev with `npx expo start`; no TestFlight required
+- Backend API runs separately on Railway (`EXPO_PUBLIC_API_BASE` in `eas.json`)
+
+---
+
+## 4. Fidelity
 
 **High-fidelity.** Colors, typography, spacing, copy, motion and haptics are all final and
 specified. Recreate pixel-for-pixel using the tokens in `src/theme.js`. When a value isn't
@@ -80,7 +207,7 @@ in a screen file, read it off the matching board in `design-reference/`.
 
 ---
 
-## 4. Design tokens  (`src/theme.js` is the source — summary here)
+## 5. Design tokens  (`src/theme.js` is the source — summary here)
 
 **Colors**
 - Paper `#FBF9F4` · Ivory `#F7F3EC` · Ivory-warm `#FDF6E4` · Sand `#E7DDCD` · Card border `#E0D5C2`
@@ -97,7 +224,7 @@ Grotesk** (400 / 500 / 600 / 700). Loaded via `@expo-google-fonts/*` in `App.js`
 
 ---
 
-## 5. GraceDove — the emotional system
+## 6. GraceDove — the emotional system
 
 `<GraceDove size={} wings="open|folded" motion="..." />`
 
@@ -123,7 +250,7 @@ The exact keyframes are in `design-reference/Grace Mascot.dc.html` (the `@keyfra
 
 ---
 
-## 6. Screen inventory  — what's built vs. to build
+## 7. Screen inventory  — what's built vs. to build
 
 Legend: ✅ implemented in this package · ⬜ to build (spec + board reference given).
 
@@ -172,7 +299,7 @@ Every message is written in Grace's voice on the board — copy them verbatim.
 
 ---
 
-## 7. Interactions, state, haptics
+## 8. Interactions, state, haptics
 
 **Navigation.** Onboarding is one native-stack (`RootNavigator`); the last step
 `reset`s into the `App` tab navigator so back doesn't return to the paywall. Reading is its
@@ -228,14 +355,14 @@ Errors soften (dim halo), never shake. Loading is a slow halo, not a spinner. La
 
 ---
 
-## 8. Assets
+## 9. Assets
 No raster assets — GraceDove and all icons are vector (`react-native-svg`). Fonts come from
 `@expo-google-fonts`. Bible text in `data/content.js` is KJV (public domain) sample content;
 swap in your licensed translation + full text for production.
 
 ---
 
-## 9. Suggested build order for the rest
+## 10. Suggested build order for the rest
 1. Verse action sheet + Saved passages (completes the reading loop).
 2. Story detail + Audio player (the audio-first promise).
 3. You sub-screens (Reflections, Reminders, Settings).
