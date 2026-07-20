@@ -1,0 +1,55 @@
+{
+  "name": "grace-api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "prisma generate && tsc",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "db:up": "docker compose up -d --wait",
+    "db:down": "docker compose down",
+    "migrate": "prisma migrate deploy",
+    "migrate:dev": "prisma migrate dev",
+    "seed:prepare": "tsx scripts/prepare-kjv.ts",
+    "seed:prepare:full": "tsx scripts/prepare-kjv.ts --full",
+    "seed:bible": "tsx scripts/seed-bible.ts",
+    "test": "tsx --test test/**/*.test.ts",
+    "verify:phase1": "bash scripts/verify-phase1.sh",
+    "verify:phase2": "bash scripts/verify-phase2.sh",
+    "verify:staging": "bash scripts/verify-staging.sh",
+    "verify:staging:full": "bash scripts/verify-staging-full.sh",
+    "record:phase1": "bash scripts/record-e2e.sh phase1",
+    "record:phase2": "bash scripts/record-e2e.sh phase2",
+    "record:staging": "bash scripts/record-e2e.sh staging",
+    "record:staging:full": "bash scripts/record-e2e.sh staging-full",
+    "verify:phase3": "bash scripts/verify-phase3.sh",
+    "record:phase3": "bash scripts/record-e2e.sh phase3",
+    "verify:phase4": "bash scripts/verify-phase4.sh",
+    "record:phase4": "bash scripts/record-e2e.sh phase4",
+    "verify:phase5": "bash scripts/verify-phase5.sh",
+    "record:phase5": "bash scripts/record-e2e.sh phase5",
+    "setup:railway": "bash scripts/setup-railway.sh"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.0.1",
+    "@fastify/swagger": "^9.8.1",
+    "@fastify/swagger-ui": "^6.1.0",
+    "@prisma/client": "^6.19.0",
+    "fastify": "^5.2.1",
+    "jose": "^6.2.3",
+    "prisma": "^6.19.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "prisma": {
+    "seed": "tsx scripts/seed-bible.ts"
+  }
+}

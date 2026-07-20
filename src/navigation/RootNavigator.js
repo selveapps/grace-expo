@@ -27,6 +27,7 @@ export default function RootNavigator() {
   if (!hydrated) return null; // wait for AsyncStorage so we don't flash onboarding
   return (
     <Stack.Navigator
+      key={profile.onboarded ? 'app' : 'onboarding'}
       screenOptions={{ headerShown: false, animation: 'fade', contentStyle: { backgroundColor: '#F7F3EC' } }}
       initialRouteName={profile.onboarded ? 'App' : 'Splash'}
     >

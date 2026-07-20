@@ -1,0 +1,905 @@
+[
+  {
+    "book": "Psalms",
+    "chapter": 23,
+    "verse": 1,
+    "text": "The LORD\nis my shepherd; I shall not want.",
+    "testament": "old"
+  },
+  {
+    "book": "Psalms",
+    "chapter": 23,
+    "verse": 2,
+    "text": "He maketh me to lie down in green pastures: he leadeth me beside the still waters.",
+    "testament": "old"
+  },
+  {
+    "book": "Psalms",
+    "chapter": 23,
+    "verse": 3,
+    "text": "He restoreth my soul: he leadeth me in the paths of righteousness for his name’s sake.",
+    "testament": "old"
+  },
+  {
+    "book": "Psalms",
+    "chapter": 23,
+    "verse": 4,
+    "text": "Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou\nart with me; thy rod and thy staff they comfort me.",
+    "testament": "old"
+  },
+  {
+    "book": "Psalms",
+    "chapter": 23,
+    "verse": 5,
+    "text": "Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth over.",
+    "testament": "old"
+  },
+  {
+    "book": "Psalms",
+    "chapter": 23,
+    "verse": 6,
+    "text": "Surely goodness and mercy shall follow me all the days of my life: and I will dwell in the house of the LORD for ever.",
+    "testament": "old"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 1,
+    "text": "There was a man of the Pharisees, named Nicodemus, a ruler of the Jews:",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 2,
+    "text": "The same came to Jesus by night, and said unto him, Rabbi, we know that thou art a teacher come from God: for no man can do these miracles that thou doest, except God be with him.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 3,
+    "text": "Jesus answered and said unto him,\nVerily, verily, I say unto thee, Except a man be born again, he cannot see the kingdom of God.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 4,
+    "text": "Nicodemus saith unto him, How can a man be born when he is old? can he enter the second time into his mother’s womb, and be born?",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 5,
+    "text": "Jesus answered,\nVerily, verily, I say unto thee, Except a man be born of water and\nof the Spirit, he cannot enter into the kingdom of God.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 6,
+    "text": "That which is born of the flesh is flesh; and that which is born of the Spirit is spirit.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 7,
+    "text": "Marvel not that I said unto thee, Ye must be born again.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 8,
+    "text": "The wind bloweth where it listeth, and thou hearest the sound thereof, but canst not tell whence it cometh, and whither it goeth: so is every one that is born of the Spirit.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 9,
+    "text": "Nicodemus answered and said unto him, How can these things be?",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 10,
+    "text": "Jesus answered and said unto him,\nArt thou a master of Israel, and knowest not these things?",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 11,
+    "text": "Verily, verily, I say unto thee, We speak that we do know, and testify that we have seen; and ye receive not our witness.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 12,
+    "text": "If I have told you earthly things, and ye believe not, how shall ye believe, if I tell you\nof heavenly things?",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 13,
+    "text": "And no man hath ascended up to heaven, but he that came down from heaven,\neven the Son of man which is in heaven.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 14,
+    "text": "And as Moses lifted up the serpent in the wilderness, even so must the Son of man be lifted up:",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 15,
+    "text": "That whosoever believeth in him should not perish, but have eternal life.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 16,
+    "text": "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 17,
+    "text": "For God sent not his Son into the world to condemn the world; but that the world through him might be saved.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 18,
+    "text": "He that believeth on him is not condemned: but he that believeth not is condemned already, because he hath not believed in the name of the only begotten Son of God.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 19,
+    "text": "And this is the condemnation, that light is come into the world, and men loved darkness rather than light, because their deeds were evil.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 20,
+    "text": "For every one that doeth evil hateth the light, neither cometh to the light, lest his deeds should be reproved.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 21,
+    "text": "But he that doeth truth cometh to the light, that his deeds may be made manifest, that they are wrought in God.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 22,
+    "text": "After these things came Jesus and his disciples into the land of Judaea; and there he tarried with them, and baptized.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 23,
+    "text": "And John also was baptizing in Aenon near to Salim, because there was much water there: and they came, and were baptized.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 24,
+    "text": "For John was not yet cast into prison.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 25,
+    "text": "Then there arose a question between\nsome of John’s disciples and the Jews about purifying.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 26,
+    "text": "And they came unto John, and said unto him, Rabbi, he that was with thee beyond Jordan, to whom thou barest witness, behold, the same baptizeth, and all\nmen come to him.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 27,
+    "text": "John answered and said, A man can receive nothing, except it be given him from heaven.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 28,
+    "text": "Ye yourselves bear me witness, that I said, I am not the Christ, but that I am sent before him.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 29,
+    "text": "He that hath the bride is the bridegroom: but the friend of the bridegroom, which standeth and heareth him, rejoiceth greatly because of the bridegroom’s voice: this my joy therefore is fulfilled.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 30,
+    "text": "He must increase, but I\nmust decrease.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 31,
+    "text": "He that cometh from above is above all: he that is of the earth is earthly, and speaketh of the earth: he that cometh from heaven is above all.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 32,
+    "text": "And what he hath seen and heard, that he testifieth; and no man receiveth his testimony.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 33,
+    "text": "He that hath received his testimony hath set to his seal that God is true.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 34,
+    "text": "For he whom God hath sent speaketh the words of God: for God giveth not the Spirit by measure\nunto him.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 35,
+    "text": "The Father loveth the Son, and hath given all things into his hand.",
+    "testament": "new"
+  },
+  {
+    "book": "John",
+    "chapter": 3,
+    "verse": 36,
+    "text": "He that believeth on the Son hath everlasting life: and he that believeth not the Son shall not see life; but the wrath of God abideth on him.",
+    "testament": "new"
+  },
+  {
+    "book": "Philippians",
+    "chapter": 4,
+    "verse": 1,
+    "text": "Therefore, my brethren dearly beloved and longed for, my joy and crown, so stand fast in the Lord,\nmy dearly beloved.",
+    "testament": "new"
+  },
+  {
+    "book": "Philippians",
+    "chapter": 4,
+    "verse": 2,
+    "text": "I beseech Euodias, and beseech Syntyche, that they be of the same mind in the Lord.",
+    "testament": "new"
+  },
+  {
+    "book": "Philippians",
+    "chapter": 4,
+    "verse": 3,
+    "text": "And I intreat thee also, true yokefellow, help those women which laboured with me in the gospel, with Clement also, and\nwith other my fellowlabourers, whose names\nare in the book of life.",
+    "testament": "new"
+  },
+  {
+    "book": "Philippians",
+    "chapter": 4,
+    "verse": 4,
+    "text": "Rejoice in the Lord alway:\nand again I say, Rejoice.",
+    "testament": "new"
+  },
+  {
+    "book": "Philippians",
+    "chapter": 4,
+    "verse": 5,
+    "text": "Let your moderation be known unto all men. The Lord\nis at hand.",
+    "testament": "new"
+  },
+  {
+    "book": "Philippians",
+    "chapter": 4,
+    "verse": 6,
+    "text": "Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God.",
+    "testament": "new"
+  },
+  {
+    "book": "Philippians",
+    "chapter": 4,
+    "verse": 7,
+    "text": "And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.",
+    "testament": "new"
+  },
+  {
+    "book": "Philippians",
+    "chapter": 4,
+    "verse": 8,
+    "text": "Finally, brethren, whatsoever things are true, whatsoever things\nare honest, whatsoever things\nare just, whatsoever things\nare pure, whatsoever things\nare lovely, whatsoever things\nare of good report; if\nthere be any virtue, and if\nthere be any praise, think on these things.",
+    "testament": "new"
+  },
+  {
+    "book": "Philippians",
+    "chapter": 4,
+    "verse": 9,
+    "text": "Those things, which ye have both learned, and received, and heard, and seen in me, do: and the God of peace shall be with you.",
+    "testament": "new"
+  },
+  {
+    "book": "Philippians",
+    "chapter": 4,
+    "verse": 10,
+    "text": "But I rejoiced in the Lord greatly, that now at the last your care of me hath flourished again; wherein ye were also careful, but ye lacked opportunity.",
+    "testament": "new"
+  },
+  {
+    "book": "Philippians",
+    "chapter": 4,
+    "verse": 11,
+    "text": "Not that I speak in respect of want: for I have learned, in whatsoever state I am,\ntherewith to be content.",
+    "testament": "new"
+  },
+  {
+    "book": "Philippians",
+    "chapter": 4,
+    "verse": 12,
+    "text": "I know both how to be abased, and I know how to abound: every where and in all things I am instructed both to be full and to be hungry, both to abound and to suffer need.",
+    "testament": "new"
+  },
+  {
+    "book": "Philippians",
+    "chapter": 4,
+    "verse": 13,
+    "text": "I can do all things through Christ which strengtheneth me.",
+    "testament": "new"
+  },
+  {
+    "book": "Philippians",
+    "chapter": 4,
+    "verse": 14,
+    "text": "Notwithstanding ye have well done, that ye did communicate with my affliction.",
+    "testament": "new"
+  },
+  {
+    "book": "Philippians",
+    "chapter": 4,
+    "verse": 15,
+    "text": "Now ye Philippians know also, that in the beginning of the gospel, when I departed from Macedonia, no church communicated with me as concerning giving and receiving, but ye only.",
+    "testament": "new"
+  },
+  {
+    "book": "Philippians",
+    "chapter": 4,
+    "verse": 16,
+    "text": "For even in Thessalonica ye sent once and again unto my necessity.",
+    "testament": "new"
+  },
+  {
+    "book": "Philippians",
+    "chapter": 4,
+    "verse": 17,
+    "text": "Not because I desire a gift: but I desire fruit that may abound to your account.",
+    "testament": "new"
+  },
+  {
+    "book": "Philippians",
+    "chapter": 4,
+    "verse": 18,
+    "text": "But I have all, and abound: I am full, having received of Epaphroditus the things\nwhich were sent from you, an odour of a sweet smell, a sacrifice acceptable, wellpleasing to God.",
+    "testament": "new"
+  },
+  {
+    "book": "Philippians",
+    "chapter": 4,
+    "verse": 19,
+    "text": "But my God shall supply all your need according to his riches in glory by Christ Jesus.",
+    "testament": "new"
+  },
+  {
+    "book": "Philippians",
+    "chapter": 4,
+    "verse": 20,
+    "text": "Now unto God and our Father\nbe glory for ever and ever. Amen.",
+    "testament": "new"
+  },
+  {
+    "book": "Philippians",
+    "chapter": 4,
+    "verse": 21,
+    "text": "Salute every saint in Christ Jesus. The brethren which are with me greet you.",
+    "testament": "new"
+  },
+  {
+    "book": "Philippians",
+    "chapter": 4,
+    "verse": 22,
+    "text": "All the saints salute you, chiefly they that are of Caesar’s household.",
+    "testament": "new"
+  },
+  {
+    "book": "Philippians",
+    "chapter": 4,
+    "verse": 23,
+    "text": "The grace of our Lord Jesus Christ\nbe with you all. Amen.",
+    "testament": "new"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 1,
+    "text": "Comfort ye, comfort ye my people, saith your God.",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 2,
+    "text": "Speak ye comfortably to Jerusalem, and cry unto her, that her warfare is accomplished, that her iniquity is pardoned: for she hath received of the LORD’S hand double for all her sins.",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 3,
+    "text": "The voice of him that crieth in the wilderness, Prepare ye the way of the LORD, make straight in the desert a highway for our God.",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 4,
+    "text": "Every valley shall be exalted, and every mountain and hill shall be made low: and the crooked shall be made straight, and the rough places plain:",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 5,
+    "text": "And the glory of the LORD shall be revealed, and all flesh shall see\nit together: for the mouth of the LORD hath spoken\nit.",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 6,
+    "text": "The voice said, Cry. And he said, What shall I cry? All flesh\nis\n grass, and all the goodliness thereof\nis as the flower of the field:",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 7,
+    "text": "The grass withereth, the flower fadeth: because the spirit of the LORD bloweth upon it: surely the people\nis grass.",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 8,
+    "text": "The grass withereth, the flower fadeth: but the word of our God shall stand for ever.",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 9,
+    "text": "O Zion, that bringest good tidings, get thee up into the high mountain; O Jerusalem, that bringest good tidings, lift up thy voice with strength; lift\nit up, be not afraid; say unto the cities of Judah, Behold your God!",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 10,
+    "text": "Behold, the Lord GOD will come with strong\nhand, and his arm shall rule for him: behold, his reward\nis with him, and his work before him.",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 11,
+    "text": "He shall feed his flock like a shepherd: he shall gather the lambs with his arm, and carry\nthem in his bosom,\nand shall gently lead those that are with young.",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 12,
+    "text": "Who hath measured the waters in the hollow of his hand, and meted out heaven with the span, and comprehended the dust of the earth in a measure, and weighed the mountains in scales, and the hills in a balance?",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 13,
+    "text": "Who hath directed the Spirit of the LORD, or\nbeing his counsellor hath taught him?",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 14,
+    "text": "With whom took he counsel, and\nwho instructed him, and taught him in the path of judgment, and taught him knowledge, and shewed to him the way of understanding?",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 15,
+    "text": "Behold, the nations\nare as a drop of a bucket, and are counted as the small dust of the balance: behold, he taketh up the isles as a very little thing.",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 16,
+    "text": "And Lebanon\nis not sufficient to burn, nor the beasts thereof sufficient for a burnt offering.",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 17,
+    "text": "All nations before him\nare as nothing; and they are counted to him less than nothing, and vanity.",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 18,
+    "text": "To whom then will ye liken God? or what likeness will ye compare unto him?",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 19,
+    "text": "The workman melteth a graven image, and the goldsmith spreadeth it over with gold, and casteth silver chains.",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 20,
+    "text": "He that\nis so impoverished that he hath no oblation chooseth a tree\nthat will not rot; he seeketh unto him a cunning workman to prepare a graven image,\nthat shall not be moved.",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 21,
+    "text": "Have ye not known? have ye not heard? hath it not been told you from the beginning? have ye not understood from the foundations of the earth?",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 22,
+    "text": "It is he that sitteth upon the circle of the earth, and the inhabitants thereof\nare as grasshoppers; that stretcheth out the heavens as a curtain, and spreadeth them out as a tent to dwell in:",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 23,
+    "text": "That bringeth the princes to nothing; he maketh the judges of the earth as vanity.",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 24,
+    "text": "Yea, they shall not be planted; yea, they shall not be sown: yea, their stock shall not take root in the earth: and he shall also blow upon them, and they shall wither, and the whirlwind shall take them away as stubble.",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 25,
+    "text": "To whom then will ye liken me, or shall I be equal? saith the Holy One.",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 26,
+    "text": "Lift up your eyes on high, and behold who hath created these\nthings,\n that bringeth out their host by number: he calleth them all by names by the greatness of his might, for that\nhe is strong in power; not one faileth.",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 27,
+    "text": "Why sayest thou, O Jacob, and speakest, O Israel, My way is hid from the LORD, and my judgment is passed over from my God?",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 28,
+    "text": "Hast thou not known? hast thou not heard,\nthat the everlasting God, the LORD, the Creator of the ends of the earth, fainteth not, neither is weary?\nthere is no searching of his understanding.",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 29,
+    "text": "He giveth power to the faint; and to\nthem that have no might he increaseth strength.",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 30,
+    "text": "Even the youths shall faint and be weary, and the young men shall utterly fall:",
+    "testament": "old"
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "verse": 31,
+    "text": "But they that wait upon the LORD shall renew\ntheir strength; they shall mount up with wings as eagles; they shall run, and not be weary;\nand they shall walk, and not faint.",
+    "testament": "old"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 1,
+    "text": "We then that are strong ought to bear the infirmities of the weak, and not to please ourselves.",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 2,
+    "text": "Let every one of us please\nhis neighbour for\nhis\n good to edification.",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 3,
+    "text": "For even Christ pleased not himself; but, as it is written, The reproaches of them that reproached thee fell on me.",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 4,
+    "text": "For whatsoever things were written aforetime were written for our learning, that we through patience and comfort of the scriptures might have hope.",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 5,
+    "text": "Now the God of patience and consolation grant you to be likeminded one toward another according to Christ Jesus:",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 6,
+    "text": "That ye may with one mind\nand one mouth glorify God, even the Father of our Lord Jesus Christ.",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 7,
+    "text": "Wherefore receive ye one another, as Christ also received us to the glory of God.",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 8,
+    "text": "Now I say that Jesus Christ was a minister of the circumcision for the truth of God, to confirm the promises\nmade unto the fathers:",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 9,
+    "text": "And that the Gentiles might glorify God for\nhis mercy; as it is written, For this cause I will confess to thee among the Gentiles, and sing unto thy name.",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 10,
+    "text": "And again he saith, Rejoice, ye Gentiles, with his people.",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 11,
+    "text": "And again, Praise the Lord, all ye Gentiles; and laud him, all ye people.",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 12,
+    "text": "And again, Esaias saith, There shall be a root of Jesse, and he that shall rise to reign over the Gentiles; in him shall the Gentiles trust.",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 13,
+    "text": "Now the God of hope fill you with all joy and peace in believing, that ye may abound in hope, through the power of the Holy Ghost.",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 14,
+    "text": "And I myself also am persuaded of you, my brethren, that ye also are full of goodness, filled with all knowledge, able also to admonish one another.",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 15,
+    "text": "Nevertheless, brethren, I have written the more boldly unto you in some sort, as putting you in mind, because of the grace that is given to me of God,",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 16,
+    "text": "That I should be the minister of Jesus Christ to the Gentiles, ministering the gospel of God, that the offering up of the Gentiles might be acceptable, being sanctified by the Holy Ghost.",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 17,
+    "text": "I have therefore whereof I may glory through Jesus Christ in those things which pertain to God.",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 18,
+    "text": "For I will not dare to speak of any of those things which Christ hath not wrought by me, to make the Gentiles obedient, by word and deed,",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 19,
+    "text": "Through mighty signs and wonders, by the power of the Spirit of God; so that from Jerusalem, and round about unto Illyricum, I have fully preached the gospel of Christ.",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 20,
+    "text": "Yea, so have I strived to preach the gospel, not where Christ was named, lest I should build upon another man’s foundation:",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 21,
+    "text": "But as it is written, To whom he was not spoken of, they shall see: and they that have not heard shall understand.",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 22,
+    "text": "For which cause also I have been much hindered from coming to you.",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 23,
+    "text": "But now having no more place in these parts, and having a great desire these many years to come unto you;",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 24,
+    "text": "Whensoever I take my journey into Spain, I will come to you: for I trust to see you in my journey, and to be brought on my way thitherward by you, if first I be somewhat filled with your\ncompany.",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 25,
+    "text": "But now I go unto Jerusalem to minister unto the saints.",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 26,
+    "text": "For it hath pleased them of Macedonia and Achaia to make a certain contribution for the poor saints which are at Jerusalem.",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 27,
+    "text": "It hath pleased them verily; and their debtors they are. For if the Gentiles have been made partakers of their spiritual things, their duty is also to minister unto them in carnal things.",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 28,
+    "text": "When therefore I have performed this, and have sealed to them this fruit, I will come by you into Spain.",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 29,
+    "text": "And I am sure that, when I come unto you, I shall come in the fulness of the blessing of the gospel of Christ.",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 30,
+    "text": "Now I beseech you, brethren, for the Lord Jesus Christ’s sake, and for the love of the Spirit, that ye strive together with me in\nyour\n prayers to God for me;",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 31,
+    "text": "That I may be delivered from them that do not believe in Judaea; and that my service which\nI have for Jerusalem may be accepted of the saints;",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 32,
+    "text": "That I may come unto you with joy by the will of God, and may with you be refreshed.",
+    "testament": "new"
+  },
+  {
+    "book": "Romans",
+    "chapter": 15,
+    "verse": 33,
+    "text": "Now the God of peace\nbe with you all. Amen.",
+    "testament": "new"
+  }
+]

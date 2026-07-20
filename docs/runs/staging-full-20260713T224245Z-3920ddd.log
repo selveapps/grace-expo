@@ -1,0 +1,61 @@
+══════════════════════════════════════════════════════════════
+Grace E2E Record
+══════════════════════════════════════════════════════════════
+phase:       staging-full
+recorded_at: 20260713T224245Z (UTC)
+git_branch:  backend-dev
+git_sha:     3920ddd727f441f8e3f5f98d2f9e6d0549a5bb97
+git_sha_short: 3920ddd
+git_tree:    dirty
+node:        v25.6.1
+platform:    Darwin 24.6.0 arm64
+cwd:         /Users/siddhant/Desktop/CS/grace-expo-sid/backend
+command:     npm run verify:staging:full
+DATABASE_URL: postgresql://grace:grace@localhost:5433/grace
+STAGING_API_URL: https://grace-api-production.up.railway.app
+JWT_SECRET:  <default test secret>
+──────────────────────────────────────────────────────────────
+
+
+> grace-api@0.1.0 verify:staging:full
+> bash scripts/verify-staging-full.sh
+
+=== Grace Staging Full Verification ===
+STAGING_API_URL=https://grace-api-production.up.railway.app
+
+[1/12] Health
+  ✅ GET /health ok+db
+[2/12] Scripture — chapter
+  ✅ GET /bible/psalms/23
+[3/12] Scripture — passage
+  ✅ GET /bible/passage
+[4/12] Scripture — today
+  ✅ GET /today/verse
+[5/12] Scripture — carrying
+  ✅ GET /verse/for-carrying
+[6/12] Scripture — search
+  ✅ GET /bible/search
+[7/12] Auth — guest
+  ✅ POST /auth/guest
+[8/12] Profile — GET/PATCH /me
+  ✅ GET /me
+  ✅ PATCH /me
+[9/12] Library — saved
+  ✅ POST+GET /saved
+  ✅ DELETE /saved
+[10/12] Library — reflections
+  ✅ POST+GET /reflections
+[11/12] Progress + beta redeem
+  ✅ PUT+GET /progress
+  ✅ POST /beta/redeem
+[12/12] Auth refresh
+  ✅ POST /auth/refresh
+
+=== Results: 15 passed, 0 failed ===
+Staging full verify: PASS
+
+──────────────────────────────────────────────────────────────
+exit_code: 0
+result:    PASS
+log_file:  docs/runs/staging-full-20260713T224245Z-3920ddd.log
+══════════════════════════════════════════════════════════════

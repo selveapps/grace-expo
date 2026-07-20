@@ -1,0 +1,16 @@
+# Local Postgres for Phase 1 E2E verification (mirrors Railway Postgres shape).
+# Production/staging: Railway plugin injects DATABASE_URL automatically.
+services:
+  postgres:
+    image: postgres:16-alpine
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: grace
+      POSTGRES_PASSWORD: grace
+      POSTGRES_DB: grace
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U grace -d grace"]
+      interval: 2s
+      timeout: 5s
+      retries: 10
