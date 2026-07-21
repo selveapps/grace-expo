@@ -15,9 +15,7 @@ export async function clearSession() {
 export async function getDeviceId() {
   let id = await StorageService.get(KEYS.deviceId, null);
   if (!id) {
-    id = typeof crypto !== 'undefined' && crypto.randomUUID
-      ? crypto.randomUUID()
-      : `device_${Date.now()}`;
+    id = `device_${Date.now()}_${Math.random().toString(36).slice(2, 11)}`;
     await StorageService.set(KEYS.deviceId, id);
   }
   return id;

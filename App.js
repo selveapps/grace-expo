@@ -33,9 +33,11 @@ export default function App() {
   const [booted, setBooted] = useState(false);
 
   useEffect(() => {
+    let cancelled = false;
     AuthService.ensureGuest()
-      .then(() => setBooted(true))
-      .catch(() => setBooted(true));
+      .catch(() => {})
+      .finally(() => { if (!cancelled) setBooted(true); });
+    return () => { cancelled = true; };
   }, []);
 
   if (!loaded || !booted) {

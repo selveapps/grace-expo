@@ -61,8 +61,11 @@ export function ProfileProvider({ children, booted = true }) {
 
   const patchServer = useCallback((fields) => {
     clearTimeout(syncTimer.current);
-    syncTimer.current = setTimeout(() => {
-      api.patch('/me', fields).catch(() => {});
+    syncTimer.current = setTimeout(async () => {
+      try {
+        await AuthService.ensureGuest();
+        await api.patch('/me', fields);
+      } catch { /* offline — local profile kept */ }
     }, 400);
   }, []);
 
@@ -84,7 +87,7 @@ export function ProfileProvider({ children, booted = true }) {
         setProfileState((prev) => {
           const next = {
             ...prev,
-            name: user.name ?? prev.name,
+            name: (prev.name && prev.name.trim()) ? prev.name : (user.name || ''),
             email: user.email ?? prev.email,
             carrying: p?.carrying?.length ? p.carrying : prev.carrying,
             gentleness: p?.gentleness ?? prev.gentleness,

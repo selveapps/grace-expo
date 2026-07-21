@@ -22,39 +22,43 @@ const GoogleMark = () => (
 );
 
 export default function SignInScreen({ navigation }) {
-  const [busy, setBusy] = useState(false);
+  const [busy, setBusy] = useState(null); // 'apple' | 'google' | 'email' | 'skip' | null
 
-  const signIn = async (fn) => {
+  const advance = () => navigation.navigate('Preparing');
+
+  const signIn = (provider, fn) => {
     if (busy) return;
-    setBusy(true);
+    setBusy(provider);
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    try {
-      await fn();
-      navigation.navigate('Preparing');
-    } catch {
-      // Still advance — guest session works offline; email sync retries later.
-      navigation.navigate('Preparing');
-    } finally {
-      setBusy(false);
-    }
+    advance();
+    fn().catch(() => {}).finally(() => setBusy(null));
   };
+
+  const Btn = ({ id, style, light, children, onPress }) => (
+    <Pressable onPress={onPress} disabled={!!busy} style={[styles.btn, light && styles.btnLight, style, busy && busy !== id && styles.btnDim]}>
+      {busy === id ? <ActivityIndicator color={light ? colors.ink : '#fff'} /> : children}
+    </Pressable>
+  );
 
   return (
     <Screen gradient={['#FDFBF6', '#F7F3EC']} style={styles.wrap}>
       <View style={{ alignItems: 'center' }}>
         <GraceDove size={120} wings="folded" motion="breathe" />
         <Text style={styles.title}>Keep your place,{'\n'}always.</Text>
-        <Text style={styles.sub}>Sign in so Grace remembers you across devices.</Text>
+        <Text style={styles.sub}>Sign in so Grace remembers you across devices — or skip and continue on this device.</Text>
       </View>
       <View style={{ flex: 1 }} />
-      <Pressable onPress={() => signIn(() => AuthService.signInWithApple())} disabled={busy} style={[styles.btn, { backgroundColor: '#1C1C1E' }]}>
-        {busy ? <ActivityIndicator color="#fff" /> : <><AppleMark /><Text style={[styles.btnText, { color: '#fff' }]}>Continue with Apple</Text></>}
-      </Pressable>
-      <Pressable onPress={() => signIn(() => AuthService.signInWithGoogle())} disabled={busy} style={[styles.btn, styles.btnLight]}>
-        {busy ? <ActivityIndicator color={colors.ink} /> : <><GoogleMark /><Text style={[styles.btnText, { color: colors.ink }]}>Continue with Google</Text></>}
-      </Pressable>
-      <Pressable onPress={() => signIn(() => AuthService.signInWithEmail())} disabled={busy} style={{ paddingVertical: 12 }}>
+      <Btn id="apple" style={{ backgroundColor: '#1C1C1E' }} onPress={() => signIn('apple', () => AuthService.signInWithApple())}>
+        <AppleMark /><Text style={[styles.btnText, { color: '#fff' }]}>Continue with Apple</Text>
+      </Btn>
+      <Btn id="google" light onPress={() => signIn('google', () => AuthService.signInWithGoogle())}>
+        <GoogleMark /><Text style={[styles.btnText, { color: colors.ink }]}>Continue with Google</Text>
+      </Btn>
+      <Pressable onPress={() => signIn('email', () => AuthService.signInWithEmail())} disabled={!!busy} style={{ paddingVertical: 12 }}>
         <Text style={styles.email}>Continue with email</Text>
+      </Pressable>
+      <Pressable onPress={() => signIn('skip', () => AuthService.continueAsGuest())} disabled={!!busy} style={{ paddingVertical: 8 }}>
+        <Text style={styles.skip}>Skip for now</Text>
       </Pressable>
       <Text style={styles.legal}>By continuing you agree to our Terms & Privacy Policy.</Text>
     </Screen>
@@ -64,10 +68,12 @@ export default function SignInScreen({ navigation }) {
 const styles = StyleSheet.create({
   wrap: { paddingHorizontal: 28, paddingTop: 30, paddingBottom: 24 },
   title: { fontFamily: fonts.serif, fontSize: 36, color: colors.ink, textAlign: 'center', marginTop: 18, lineHeight: 40 },
-  sub: { fontFamily: fonts.sans, fontSize: 15, color: colors.textMuted, textAlign: 'center', marginTop: 10, paddingHorizontal: 20 },
+  sub: { fontFamily: fonts.sans, fontSize: 15, color: colors.textMuted, textAlign: 'center', marginTop: 10, paddingHorizontal: 12, lineHeight: 22 },
   btn: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 12, paddingVertical: 17, borderRadius: radius.md, marginBottom: 12 },
   btnLight: { backgroundColor: colors.white, borderWidth: 1.5, borderColor: colors.cardBorder },
+  btnDim: { opacity: 0.55 },
   btnText: { fontFamily: fonts.sansSemi, fontSize: 17 },
   email: { fontFamily: fonts.sansSemi, fontSize: 15, color: colors.textFaint, textAlign: 'center' },
-  legal: { fontFamily: fonts.sans, fontSize: 12, color: '#B3A690', textAlign: 'center', marginTop: 12, lineHeight: 18 },
+  skip: { fontFamily: fonts.sansSemi, fontSize: 15, color: colors.brassDeep, textAlign: 'center' },
+  legal: { fontFamily: fonts.sans, fontSize: 12, color: '#B3A690', textAlign: 'center', marginTop: 8, lineHeight: 18 },
 });

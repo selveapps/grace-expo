@@ -36,16 +36,22 @@ export const AuthService = {
   async signInWithGoogle() { return this._linkProvider('google', 'you@gmail.com'); },
   async signInWithEmail(email) { return this._linkProvider('email', email || 'you@email.com'); },
 
+  async continueAsGuest() {
+    await this.ensureGuest().catch(() => {});
+    return { ok: true };
+  },
+
   async _linkProvider(provider, email) {
-    await this.ensureGuest();
-    await api.patch('/me', { email });
-    const me = await api.get('/me');
-    const user = {
-      ...me.data.user,
-      authProvider: provider,
-    };
-    await StorageService.set(KEYS.auth, user);
-    return { ok: true, user };
+    try {
+      await this.ensureGuest();
+      await api.patch('/me', { email });
+      const me = await api.get('/me');
+      const user = { ...me.data.user, authProvider: provider };
+      await StorageService.set(KEYS.auth, user);
+      return { ok: true, user };
+    } catch {
+      return { ok: false };
+    }
   },
 
   async linkGuestAccount(provider) {

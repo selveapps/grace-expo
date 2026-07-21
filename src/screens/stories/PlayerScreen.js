@@ -18,14 +18,27 @@ export default function PlayerScreen({ route, navigation }) {
   const [showTranscript, setShowTranscript] = useState(false);
 
   useEffect(() => {
-    StoryService.getStory(id).then(setStory);
+    let alive = true;
+    StoryService.getStory(id).then((s) => { if (alive) setStory(s); });
+    const current = AudioService.getState();
+    if (current.storyId !== id) {
+      AudioService.loadStory(id).catch(() => {});
+    }
     const unsub = AudioService.subscribe(setSt);
-    return unsub;
+    return () => {
+      alive = false;
+      unsub();
+      AudioService.pause();
+    };
   }, [id]);
 
-  const toggle = () => {
+  const loading = st.status === 'loading';
+  const errored = st.status === 'error';
+
+  const toggle = async () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Soft);
-    st.playing ? AudioService.pause() : AudioService.play();
+    if (st.playing) await AudioService.pause();
+    else await AudioService.play();
   };
   const skip = (delta) => { Haptics.selectionAsync(); AudioService.seek(st.position + delta); };
   const cycleSpeed = () => {
@@ -42,6 +55,15 @@ export default function PlayerScreen({ route, navigation }) {
   const done = st.status === 'completed';
   const progress = st.duration ? st.position / st.duration : 0;
 
+  if (loading) {
+    return (
+      <Screen gradient={['#3A2C22', '#2B2015']} edges={['top', 'bottom']} style={[styles.wrap, styles.center]}>
+        <GraceDove size={120} motion="loading" wings="folded" />
+        <Text style={styles.sub}>Preparing audio…</Text>
+      </Screen>
+    );
+  }
+
   return (
     <Screen gradient={['#3A2C22', '#2B2015']} edges={['top', 'bottom']} style={styles.wrap}>
       <View style={styles.topBar}>
@@ -54,6 +76,7 @@ export default function PlayerScreen({ route, navigation }) {
         <GraceDove size={168} motion={done ? 'bless' : st.playing ? 'loading' : 'breathe'} wings={done ? 'open' : 'folded'} />
         <Text style={styles.title}>{story ? story.title : ''}</Text>
         <Text style={styles.sub}>{story ? story.scriptureRange : ''}</Text>
+        {errored && <Text style={styles.error}>{st.error || 'Audio unavailable'}</Text>}
         {done && <Text style={styles.blessing}>“Well done.” — Grace kept this for you.</Text>}
       </View>
 
@@ -107,6 +130,7 @@ const styles = StyleSheet.create({
   center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
   title: { fontFamily: fonts.serif, fontSize: 30, color: colors.onDark, marginTop: 16, textAlign: 'center' },
   sub: { fontFamily: fonts.sans, fontSize: 14, color: colors.textFaintOnDark, marginTop: 4 },
+  error: { fontFamily: fonts.sans, fontSize: 13, color: '#E8A598', marginTop: 10, textAlign: 'center', paddingHorizontal: 24 },
   blessing: { fontFamily: fonts.serifItalic, fontSize: 18, color: colors.gold, marginTop: 16, textAlign: 'center', paddingHorizontal: 20 },
   waveWrap: { alignItems: 'center', marginBottom: 14 },
   trackWrap: { paddingVertical: 10 },

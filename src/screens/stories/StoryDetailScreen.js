@@ -12,6 +12,8 @@ export default function StoryDetailScreen({ route, navigation }) {
   const [narrative, setNarrative] = useState(null);
   const [loadingNarrative, setLoadingNarrative] = useState(true);
 
+  const [loadingAudio, setLoadingAudio] = useState(false);
+
   useEffect(() => {
     let alive = true;
     Promise.all([StoryService.getStory(id), StoryService.getProgress(id)])
@@ -25,9 +27,16 @@ export default function StoryDetailScreen({ route, navigation }) {
 
   const play = async () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Soft);
-    await AudioService.loadStory(id);
-    AudioService.play();
-    navigation.navigate('Player', { id });
+    setLoadingAudio(true);
+    try {
+      await AudioService.loadStory(id);
+      await AudioService.play();
+      navigation.navigate('Player', { id });
+    } catch {
+      navigation.navigate('Player', { id });
+    } finally {
+      setLoadingAudio(false);
+    }
   };
 
   if (!story) return <Screen bg={colors.ivory}><View style={styles.loading}><ActivityIndicator color={colors.brass} /></View></Screen>;
@@ -51,8 +60,12 @@ export default function StoryDetailScreen({ route, navigation }) {
         </View>
 
         <View style={styles.body}>
-          <Pressable style={styles.playBtn} onPress={play}>
-            <Text style={styles.playText}>{pct > 0 ? `▶  Resume · ${pct}%` : '▶  Play'}</Text>
+          <Pressable style={styles.playBtn} onPress={play} disabled={loadingAudio}>
+            {loadingAudio ? (
+              <ActivityIndicator color={colors.onDark} />
+            ) : (
+              <Text style={styles.playText}>{pct > 0 ? `▶  Resume · ${pct}%` : '▶  Play'}</Text>
+            )}
           </Pressable>
 
           <View style={styles.card}>

@@ -1,18 +1,10 @@
 import type { FastifyInstance } from 'fastify';
 import { requireAuth } from '../middleware/auth.js';
-import { getStory } from '../lib/storyCatalog.js';
-import * as auth from '../services/authService.js';
 import * as library from '../services/libraryService.js';
-import {
-  generateReminderMessage,
-  generateStoryNarrative,
-  generateSupportReply,
-  type UserContext,
-} from '../services/llmService.js';
+import { generateReminderMessage, generateSupportReply, type UserContext } from '../services/llmService.js';
+import { getStoryNarrative, getStoryAudioMp3 } from '../services/storyContentService.js';
+import * as auth from '../services/authService.js';
 import { schemas } from '../lib/schemas.js';
-
-const narrativeCache = new Map<string, { content: string; part: number; cachedAt: number }>();
-const CACHE_TTL_MS = 1000 * 60 * 60 * 24;
 
 async function loadUserContext(userId: string): Promise<UserContext> {
   const user = await auth.getUserWithProfile(userId);
@@ -31,21 +23,33 @@ export async function registerAiRoutes(app: FastifyInstance) {
     const body = (req.body as { part?: number }) ?? {};
     const part = body.part && body.part > 0 ? Math.floor(body.part) : 1;
 
-    const story = getStory(id);
-    if (!story) return reply.code(404).send({ error: 'Story not found' });
-    if (part > story.parts) return reply.code(400).send({ error: `part must be 1–${story.parts}` });
-
-    const cacheKey = `${req.userId}:${id}:${part}`;
-    const cached = narrativeCache.get(cacheKey);
-    if (cached && Date.now() - cached.cachedAt < CACHE_TTL_MS) {
-      return { storyId: id, part, content: cached.content, cached: true };
+    try {
+      const result = await getStoryNarrative(req.userId!, id, part);
+      if (!result) return reply.code(404).send({ error: 'Story not found' });
+      return { storyId: id, part, content: result.content, cached: result.cached };
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : 'Invalid part';
+      return reply.code(400).send({ error: msg });
     }
+  });
 
-    const ctx = await loadUserContext(req.userId!);
-    const content = await generateStoryNarrative(story, ctx, part);
-    narrativeCache.set(cacheKey, { content, part, cachedAt: Date.now() });
+  app.get('/ai/stories/:id/audio', { schema: schemas.storyAudio, preHandler: requireAuth }, async (req, reply) => {
+    const { id } = req.params as { id: string };
+    const { part: partQ } = req.query as { part?: string };
+    const part = partQ && Number(partQ) > 0 ? Math.floor(Number(partQ)) : 1;
 
-    return { storyId: id, part, content, cached: false };
+    try {
+      const buffer = await getStoryAudioMp3(req.userId!, id, part);
+      if (!buffer) return reply.code(404).send({ error: 'Story not found' });
+      return reply
+        .header('Content-Type', 'audio/mpeg')
+        .header('Cache-Control', 'private, max-age=86400')
+        .send(buffer);
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : 'Audio generation failed';
+      req.log.error({ err: msg, storyId: id, part }, 'story audio failed');
+      return reply.code(503).send({ error: msg });
+    }
   });
 
   app.post('/ai/reminder', { schema: schemas.aiReminder, preHandler: requireAuth }, async (req, reply) => {

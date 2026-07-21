@@ -453,6 +453,27 @@ export const schemas = {
     },
   },
 
+  storyAudio: {
+    tags: [tags.ai],
+    summary: 'Stream story narration audio (MP3, OpenAI TTS)',
+    security: bearerSecurity,
+    params: {
+      type: 'object',
+      properties: { id: { type: 'string' } },
+      required: ['id'],
+    },
+    querystring: {
+      type: 'object',
+      properties: { part: { type: 'integer', minimum: 1, default: 1 } },
+    },
+    response: {
+      200: { type: 'string', contentMediaType: 'audio/mpeg' },
+      401: errorResponse,
+      404: errorResponse,
+      503: errorResponse,
+    },
+  },
+
   aiReminder: {
     tags: [tags.ai],
     summary: 'Generate LLM reminder notification copy',
