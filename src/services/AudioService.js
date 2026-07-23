@@ -116,7 +116,7 @@ export const AudioService = {
     await unloadSound();
     await Audio.setAudioModeAsync({
       playsInSilentModeIOS: true,
-      staysActiveInBackground: false,
+      staysActiveInBackground: true, // lock-screen playback (native build; no-op in Expo Go)
       shouldDuckAndroid: true,
     });
 
