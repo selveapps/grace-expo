@@ -24,6 +24,7 @@ model User {
   readingProgress ReadingProgress[]
   storyProgress   StoryProgress[]
   supportTickets  SupportTicket[]
+  teaEngagements  TeaEngagement[]
 
   @@map("user")
 }
@@ -118,6 +119,19 @@ model StoryProgress {
 
   @@id([userId, storyId])
   @@map("story_progress")
+}
+
+model TeaEngagement {
+  userId    String   @map("user_id") @db.Uuid
+  teaId     String   @map("tea_id")
+  liked     Boolean  @default(false)
+  saved     Boolean  @default(false)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, teaId])
+  @@map("tea_engagement")
 }
 
 model SupportTicket {

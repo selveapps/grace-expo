@@ -24,6 +24,22 @@ const PATHS = {
     <Circle cx="11" cy="11" r="7" stroke={c} strokeWidth={w} />
     <Path d="M20 20l-3.5-3.5" stroke={c} strokeWidth={w} strokeLinecap="round" />
   </>),
+  download: (c, w) => (<>
+    <Path d="M12 4v11M12 15l-4-4M12 15l4-4" stroke={c} strokeWidth={w} strokeLinecap="round" strokeLinejoin="round" />
+    <Path d="M5 19h14" stroke={c} strokeWidth={w} strokeLinecap="round" />
+  </>),
+  check: (c, w) => (
+    <Path d="M5 12.5l4.5 4.5L19 6.5" stroke={c} strokeWidth={w} strokeLinecap="round" strokeLinejoin="round" />
+  ),
+  share: (c, w) => (<>
+    <Circle cx="6" cy="12" r="2.4" stroke={c} strokeWidth={w} />
+    <Circle cx="17.5" cy="6" r="2.4" stroke={c} strokeWidth={w} />
+    <Circle cx="17.5" cy="18" r="2.4" stroke={c} strokeWidth={w} />
+    <Path d="M8.1 10.9l7.3-3.8M8.1 13.1l7.3 3.8" stroke={c} strokeWidth={w} strokeLinecap="round" />
+  </>),
+  text: (c, w) => (
+    <Path d="M5 7h14M5 12h14M5 17h9" stroke={c} strokeWidth={w} strokeLinecap="round" />
+  ),
 };
 
 export default function Icon({ name, size = 24, color = colors.brass, active = false }) {

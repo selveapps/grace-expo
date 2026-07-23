@@ -300,3 +300,51 @@ Lab notebook RUN-NNN entries summarize; log files are **raw supplementary data**
 cd backend && npm run record:phase2
 ls docs/runs/phase2-*.log
 ```
+
+---
+
+## DEC-010 — Pre-rendered CDN audio over per-request TTS (2026-07-22)
+
+**Tickets:** SEL feedback #5,#8,#10a
+**Status:** accepted
+
+### Context
+Story audio 503'd for every story on TestFlight. Root cause: `synthesizeSpeech` hard-throws when no key is set, and `OPENAI_API_KEY` is unset in production, so `GET /ai/stories/:id/audio` returned 503 for 100% of plays (see SURPRISES 2026-07-22).
+
+### Decision
+Ship **pre-rendered static MP3s** as the primary audio path, live TTS only as a personalization fallback:
+- Every story carries `audioUrl` (`/audio/{storyId}-part-{part}.mp3`); `storyForClient.hasAudio = Boolean(audioUrl)`.
+- `scripts/generate-audio.ts` renders all story parts + all Teas once, locally, with a key.
+- `GET /ai/stories/:id/audio` degrades gracefully: on TTS failure it 302-redirects to the static MP3 instead of surfacing a raw 503.
+- `ttsService` is provider-switchable (`TTS_PROVIDER=elevenlabs|openai`) with data-driven voice/style via `voiceProfiles.pickVoice`.
+
+### Rationale
+Instant, key-independent, edge-cacheable playback; zero per-play cost; works with **no OpenAI/ElevenLabs key in production** once MP3s are hosted. For real-user launch, host MP3s on Cloudflare R2 and point `audioUrl` at the absolute CDN URL (01b).
+
+### Consequences
+- The MP3 assets must be generated once with a key (`npm run generate:audio`) and committed or synced to CDN — this is a release step, not a code step.
+- `staysActiveInBackground: true` + `UIBackgroundModes: ["audio"]` enable lock-screen playback (native build only, not Expo Go).
+
+### Addendum (2026-07-22) — key-free placeholder narration
+To make audio testable end-to-end before a keyed render, `scripts/generate-placeholder-audio.ts` (`npm run generate:audio:placeholder`, macOS only) renders real *spoken* narration with `say` + `afconvert` to **`.m4a`** (AAC) — a distinct voice per character (Moira/Karen/Daniel/Samantha) and a brisk/bright voice per Tea mood. macOS ships no MP3 encoder, hence AAC. To keep the `.mp3` contract intact and let a real render supersede placeholders automatically:
+- `/audio/:filename` serves `.mp3` / `.m4a` / `.wav` with the right content type.
+- The app resolves audio via `resolveStaticAudioUrl()` which tries `.mp3` first, then the `.m4a` placeholder (both `AudioService` and `TeaDetailScreen`).
+So dropping in real `.mp3`s later (via `generate:audio` + the key) wins with no code change. Placeholders are committed and ~1.1 MB total. Note: the app defaults to staging — placeholders only serve where the branch is deployed or against `npm run start:local`.
+
+---
+
+## DEC-011 — "Tea" feature: static catalog + grid, not a reel (2026-07-22)
+
+**Tickets:** SEL feedback #9
+**Status:** accepted
+
+### Context
+Feedback asked for short, sassy-but-reverent Bible takes. The 08 brief called it "Steeped"; the detailed spec (02) renamed it **"Tea" ("keep it literal — the user's call")** — the later, explicit decision wins.
+
+### Decision
+Ship **Tea** as a simple 2-column grid of 10 placeholder cards under a `Stories | Tea` segmented control (not a vertical paging feed — too few creatives yet). Backend: `teaCatalog.ts` (10 cards), public `/tea` + `/tea/:id`, auth'd `/tea/:id/like`, `/tea/:id/save`, `/tea/saved`, and a `TeaEngagement` Prisma model. App: `TeaService`, `TeaScreen` (grid), `TeaDetailScreen` (hook + tea + scripture chip deep-linking Reading + Grace narration + like/save/share).
+
+### Consequences
+- Copy is a draft — needs product/theology review before ship.
+- Tea audio uses the same pre-rendered-MP3 contract (`/audio/{teaId}.mp3`); narration renders via `generate-audio.ts` with `pickVoice({ kind: 'tea' })`.
+- Share uses React Native's built-in `Share` (text), avoiding a new native `expo-sharing` dependency so Expo Go keeps working.

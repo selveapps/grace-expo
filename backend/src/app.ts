@@ -6,6 +6,7 @@ import { registerAuthRoutes } from './routes/auth.js';
 import { registerMeRoutes } from './routes/me.js';
 import { registerBetaRoutes } from './routes/beta.js';
 import { registerStoryRoutes } from './routes/stories.js';
+import { registerTeaRoutes } from './routes/tea.js';
 import { registerAiRoutes } from './routes/ai.js';
 import { registerTodayRoutes } from './routes/today.js';
 import { registerAudioRoutes } from './routes/audio.js';
@@ -24,6 +25,7 @@ export async function buildApp(options: { logger?: boolean } = {}) {
   await registerMeRoutes(app);
   await registerBetaRoutes(app);
   await registerStoryRoutes(app);
+  await registerTeaRoutes(app);
   await registerAiRoutes(app);
   await registerTodayRoutes(app);
   await registerAudioRoutes(app);

@@ -30,14 +30,14 @@ export default function TodayScreen() {
   }, [kept && kept.ref]);
 
   return (
-    <Screen bg={colors.ivory} edges={['top']} style={{ paddingHorizontal: 0 }}>
+    <Screen bg={colors.ivory} edges={['top']} style={{ paddingHorizontal: 0 }} ambient>
       <ScrollView contentContainerStyle={styles.body} showsVerticalScrollIndicator={false}>
         <View style={styles.headRow}>
           <View>
             <Text style={styles.greeting}>{greeting()},{'\n'}{name}.</Text>
             <Text style={styles.kept}>I kept our place.</Text>
           </View>
-          <GraceDove size={58} wings="folded" motion="peek" />
+          <GraceDove size={72} crop="head" motion="peek" />
         </View>
 
         <View style={styles.verseCard}>

@@ -149,6 +149,40 @@ export async function upsertStoryProgress(
   });
 }
 
+export async function toggleTeaLike(userId: string, teaId: string) {
+  const existing = await prisma.teaEngagement.findUnique({
+    where: { userId_teaId: { userId, teaId } },
+  });
+  const liked = !existing?.liked;
+  const row = await prisma.teaEngagement.upsert({
+    where: { userId_teaId: { userId, teaId } },
+    create: { userId, teaId, liked },
+    update: { liked },
+  });
+  return { teaId, liked: row.liked, saved: row.saved };
+}
+
+export async function saveTea(userId: string, teaId: string) {
+  const existing = await prisma.teaEngagement.findUnique({
+    where: { userId_teaId: { userId, teaId } },
+  });
+  const saved = !existing?.saved;
+  const row = await prisma.teaEngagement.upsert({
+    where: { userId_teaId: { userId, teaId } },
+    create: { userId, teaId, saved },
+    update: { saved },
+  });
+  return { teaId, liked: row.liked, saved: row.saved };
+}
+
+export async function listSavedTea(userId: string) {
+  const rows = await prisma.teaEngagement.findMany({
+    where: { userId, saved: true },
+    orderBy: { updatedAt: 'desc' },
+  });
+  return rows.map((r) => ({ teaId: r.teaId, liked: r.liked, saved: r.saved }));
+}
+
 export async function createSupportTicket(
   userId: string,
   data: { category: string; message: string; email?: string; reply?: string },

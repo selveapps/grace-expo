@@ -41,11 +41,11 @@ export default function SignInScreen({ navigation }) {
   );
 
   return (
-    <Screen gradient={['#FDFBF6', '#F7F3EC']} style={styles.wrap}>
+    <Screen gradient={['#FDFBF6', '#F7F3EC']} style={styles.wrap} ambient>
       <View style={{ alignItems: 'center' }}>
         <GraceDove size={120} wings="folded" motion="breathe" />
         <Text style={styles.title}>Keep your place,{'\n'}always.</Text>
-        <Text style={styles.sub}>Sign in so Grace remembers you across devices — or skip and continue on this device.</Text>
+        <Text style={styles.sub}>Sign in so Grace remembers you across devices, or skip and continue on this device.</Text>
       </View>
       <View style={{ flex: 1 }} />
       <Btn id="apple" style={{ backgroundColor: '#1C1C1E' }} onPress={() => signIn('apple', () => AuthService.signInWithApple())}>

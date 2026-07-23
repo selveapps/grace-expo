@@ -12,6 +12,36 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 
 ---
 
+## [TestFlight V1 feedback — audio, Tea, motion, polish] — 2026-07-22
+
+Branch: `feat/tf-v1-feedback`. Covers the 14 TestFlight feedback items (`grace-branch-spec/`).
+
+### Fixed
+- **Story audio 503'd for every story** (#5,#8,#10a): every story now has a static `audioUrl`; TTS route 302-redirects to the pre-rendered MP3 on failure instead of returning a raw 503. Works with no key in production once MP3s are hosted. (DEC-010, SURPRISES 2026-07-22)
+- **Real ElevenLabs narration** rendered for all 16 story parts + 10 Teas (`npm run generate:audio`), committed as `.mp3`. Per-persona voices — Ruth/Sarah, Esther/Lily, David/George, Hannah/Bella, Mary/Jessica — with mood-matched delivery (tender/steady/bold) and a weightier read for David. Tea is faster + sassier (Laura for dark, Jessica for light) with per-card speed/style variation (`speed` 1.12–1.18). Voices/settings are data-driven in `voiceProfiles.ts` + `storyCatalog.ts`; render is idempotent (skips existing, `FORCE=1` to redo).
+- Key-free spoken placeholder path retained as a fallback (`npm run generate:audio:placeholder`, macOS `say` → `.m4a`); the app tries `.mp3` first, then `.m4a`. Audio route serves mp3/m4a/wav; `resolveStaticAudioUrl` handles the fallback. Player has a "Try again"; Tea detail has not-found + audio-retry states.
+
+### Added
+- **Tea feature** (#9): `Stories | Tea` segmented control → 2-column grid of 10 cards → detail (hook, tea, scripture chip deep-link, Grace narration, like/save/share). Backend `/tea` routes + `TeaEngagement` model + migration. (DEC-011)
+- Pre-render script `npm run generate:audio` (stories + Teas) and provider-switchable `ttsService` (elevenlabs/openai) with `voiceProfiles.pickVoice`.
+- `AmbientBackdrop` drifting motes behind all non-reading screens (honors `reducedMotion`).
+- `GraceDove` eye-blink (every screen) + wing-flap (`motion="flap"`).
+- Grace dove app icon + splash; background/lock-screen audio (`UIBackgroundModes:["audio"]`, `staysActiveInBackground`).
+
+### Changed
+- Onboarding (#2,#3,#4): ValueAdd women-first copy + subhead; stray em-dashes removed; Verse keeps + advances in one tap, no overflow, full-width CTA.
+- Paywall (#7): removed "Maybe later"; tap anywhere off the plan cards/CTA enters Home; `onboarded` set on both paths.
+- Player (#10b): Save / Share quote / Transcript are real 44pt buttons with icons, haptics, and active/disabled states.
+- Reading (#11): chapter-number grid uses exact computed cell widths + `includeFontPadding:false` so numbers center on iOS + Android.
+- Tab bar (#12): active brass pill + subtle lift + selection-tick haptics on tab press.
+- Motion (#13,#14): You/settings dove folded (no open-wing look); Today header shows an enlarged blinking head crop; arrival screen flaps.
+
+### Verified
+- Backend `npm run typecheck` → clean; `npx expo export -p ios` → full bundle, no resolution errors.
+- Deferred (needs Docker + keys): `npm test`, `verify:phase2`, `prisma migrate dev`, `eas build`.
+
+---
+
 ## [M10 — Staging & beta distribution] — 2026-07-13
 
 Tickets: GRACE-019–022 (SEL-21,24,25). Milestone M10.

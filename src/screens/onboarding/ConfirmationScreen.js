@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
 import GraceDove from '../../components/GraceDove';
 import PrimaryButton from '../../components/PrimaryButton';
@@ -10,16 +11,17 @@ const UNLOCKED = ['All stories', 'Full Bible', 'Evening rest'];
 
 export default function ConfirmationScreen({ navigation }) {
   const { profile, setProfile } = useProfile();
+  useEffect(() => { Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Soft); }, []);
   const enter = () => {
     setProfile((p) => ({ ...p, onboarded: true, subscribed: true }));
     navigation.reset({ index: 0, routes: [{ name: 'App' }] });
   };
   return (
-    <Screen gradient={['#FDF6E4', '#F7F3EC', '#F1EBE0']} style={styles.wrap}>
+    <Screen gradient={['#FDF6E4', '#F7F3EC', '#F1EBE0']} style={styles.wrap} ambient>
       <View style={styles.center}>
-        <GraceDove size={210} motion="celebrate" />
+        <GraceDove size={210} wings="open" motion="flap" />
         <Text style={styles.title}>Your place is ready,{'\n'}{profile.name || 'friend'}.</Text>
-        <Text style={styles.sub}>Three days, on us — then continue if it feels right.</Text>
+        <Text style={styles.sub}>Three days, on us. Then continue if it feels right.</Text>
         <View style={styles.row}>
           {UNLOCKED.map((u) => (
             <View key={u} style={styles.item}>

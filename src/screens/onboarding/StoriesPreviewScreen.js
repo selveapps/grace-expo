@@ -13,7 +13,7 @@ const PEEK = [
 
 export default function StoriesPreviewScreen({ navigation }) {
   return (
-    <Screen bg={colors.ivory} style={styles.wrap}>
+    <Screen bg={colors.ivory} style={styles.wrap} ambient>
       <View style={styles.head}>
         <GraceDove size={62} wings="folded" motion="loading" />
         <Text style={styles.title}>Want to hear a true story from the Bible?</Text>
