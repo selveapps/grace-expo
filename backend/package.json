@@ -15,6 +15,7 @@
     "seed:prepare": "tsx scripts/prepare-kjv.ts",
     "seed:prepare:full": "tsx scripts/prepare-kjv.ts --full",
     "seed:bible": "tsx scripts/seed-bible.ts",
+    "generate:audio": "tsx scripts/generate-audio.ts",
     "test": "tsx --test test/**/*.test.ts",
     "verify:phase1": "bash scripts/verify-phase1.sh",
     "verify:phase2": "bash scripts/verify-phase2.sh",

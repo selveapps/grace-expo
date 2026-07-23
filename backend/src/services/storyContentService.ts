@@ -1,4 +1,5 @@
 import { getStory } from '../lib/storyCatalog.js';
+import { pickVoice } from '../lib/voiceProfiles.js';
 import * as auth from './authService.js';
 import { generateStoryNarrative, type UserContext } from './llmService.js';
 import { synthesizeSpeech } from './ttsService.js';
@@ -45,7 +46,16 @@ export async function getStoryAudioMp3(userId: string, storyId: string, part = 1
   const narrative = await getStoryNarrative(userId, storyId, part);
   if (!narrative) return null;
 
-  const buffer = await synthesizeSpeech(narrative.content);
+  const ctx = await loadUserContext(userId);
+  const { voice, style } = pickVoice({
+    kind: 'story',
+    mood: narrative.story.testament === 'new' ? 'light' : 'dark',
+    gentleness: ctx.gentleness ?? undefined,
+  });
+  const buffer = await synthesizeSpeech(narrative.content, {
+    voice: narrative.story.voice ?? voice,
+    style,
+  });
   audioCache.set(cacheKey, { buffer, cachedAt: Date.now() });
   return buffer;
 }
