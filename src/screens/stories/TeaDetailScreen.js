@@ -6,7 +6,7 @@ import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
 import GraceDove from '../../components/GraceDove';
 import { TeaService } from '../../services';
-import { getApiBase } from '../../api/client';
+import { resolveStaticAudioUrl } from '../../api/audio';
 import { colors, fonts, radius, shadow } from '../../theme';
 
 const GRAD = {
@@ -17,6 +17,7 @@ const GRAD = {
 export default function TeaDetailScreen({ route, navigation }) {
   const { id } = route.params || {};
   const [tea, setTea] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [teas, setTeas] = useState([]);
   const [eng, setEng] = useState({ liked: false, saved: false });
   const [audio, setAudio] = useState('idle'); // idle | loading | playing | error
@@ -24,7 +25,11 @@ export default function TeaDetailScreen({ route, navigation }) {
 
   useEffect(() => {
     let alive = true;
-    TeaService.getOne(id).then((t) => { if (alive) setTea(t); });
+    setLoading(true);
+    setAudio('idle');
+    TeaService.getOne(id)
+      .then((t) => { if (alive) setTea(t); })
+      .finally(() => { if (alive) setLoading(false); });
     TeaService.getEngagement(id).then((e) => { if (alive) setEng(e); });
     TeaService.getAll().then((all) => { if (alive) setTeas(all); });
     return () => {
@@ -47,10 +52,11 @@ export default function TeaDetailScreen({ route, navigation }) {
     setAudio('loading');
     try {
       await Audio.setAudioModeAsync({ playsInSilentModeIOS: true, staysActiveInBackground: true });
-      const path = tea.audioUrl || `/audio/${tea.id}.mp3`;
-      const uri = path.startsWith('http') ? path : `${getApiBase()}${path}`;
+      const uri = await resolveStaticAudioUrl(tea.audioUrl || `/audio/${tea.id}.mp3`);
+      if (!uri) { setAudio('error'); return; }
       const { sound } = await Audio.Sound.createAsync({ uri }, { shouldPlay: true }, (s) => {
-        if (s.isLoaded && s.didJustFinish) setAudio('idle');
+        if (!s.isLoaded) { if (s.error) setAudio('error'); return; }
+        if (s.didJustFinish) setAudio('idle');
       });
       soundRef.current = sound;
       setAudio('playing');
@@ -79,8 +85,20 @@ export default function TeaDetailScreen({ route, navigation }) {
     navigation.replace('TeaDetail', { id: next.id });
   };
 
-  if (!tea) {
+  if (loading) {
     return <Screen bg={colors.ivory}><View style={styles.loading}><ActivityIndicator color={colors.brass} /></View></Screen>;
+  }
+  if (!tea) {
+    return (
+      <Screen bg={colors.ivory} edges={['top', 'bottom']} style={styles.scroll}>
+        <Pressable onPress={() => navigation.goBack()} hitSlop={12}><Text style={styles.back}>‹ Tea</Text></Pressable>
+        <View style={styles.loading}>
+          <GraceDove size={90} crop="head" motion="peek" />
+          <Text style={styles.emptyTitle}>This tea has gone cold.</Text>
+          <Text style={styles.emptyText}>We couldn’t find that one. Try another from the grid.</Text>
+        </View>
+      </Screen>
+    );
   }
 
   return (
@@ -112,7 +130,7 @@ export default function TeaDetailScreen({ route, navigation }) {
                 : <Text style={styles.playIcon}>{audio === 'playing' ? '❚❚' : '▶'}</Text>}
             </Pressable>
           </View>
-          {audio === 'error' && <Text style={styles.err}>Audio isn't ready yet.</Text>}
+          {audio === 'error' && <Text style={styles.err}>Audio isn’t ready yet — tap play to try again.</Text>}
         </LinearGradient>
 
         <View style={styles.actions}>
@@ -139,7 +157,9 @@ export default function TeaDetailScreen({ route, navigation }) {
 }
 
 const styles = StyleSheet.create({
-  loading: { flex: 1, alignItems: 'center', justifyContent: 'center' },
+  loading: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: 12, paddingHorizontal: 30 },
+  emptyTitle: { fontFamily: fonts.serif, fontSize: 26, color: colors.ink, textAlign: 'center', marginTop: 8 },
+  emptyText: { fontFamily: fonts.sans, fontSize: 15, color: colors.textMuted, textAlign: 'center' },
   scroll: { paddingHorizontal: 22, paddingTop: 8, paddingBottom: 30 },
   topBar: { marginBottom: 12 },
   back: { fontFamily: fonts.sans, fontSize: 14 },

@@ -69,6 +69,11 @@ export default function PlayerScreen({ route, navigation }) {
     Haptics.selectionAsync();
   };
 
+  const retry = () => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Soft);
+    AudioService.loadStory(id, st.part || 1).then(() => AudioService.play()).catch(() => {});
+  };
+
   const saveThis = () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     StoryService.save(id);
@@ -106,7 +111,12 @@ export default function PlayerScreen({ route, navigation }) {
         <GraceDove size={168} motion={done ? 'bless' : st.playing ? 'loading' : 'breathe'} wings={done ? 'open' : 'folded'} />
         <Text style={styles.title}>{story ? story.title : ''}</Text>
         <Text style={styles.sub}>{story ? story.scriptureRange : ''}</Text>
-        {errored && <Text style={styles.error}>{st.error || 'Audio unavailable'}</Text>}
+        {errored && (
+          <>
+            <Text style={styles.error}>{st.error || 'Audio unavailable'}</Text>
+            <Pressable onPress={retry} style={styles.retry} hitSlop={8}><Text style={styles.retryText}>Try again</Text></Pressable>
+          </>
+        )}
         {done && <Text style={styles.blessing}>“Well done.” — Grace kept this for you.</Text>}
       </View>
 
@@ -159,6 +169,8 @@ const styles = StyleSheet.create({
   title: { fontFamily: fonts.serif, fontSize: 30, color: colors.onDark, marginTop: 16, textAlign: 'center' },
   sub: { fontFamily: fonts.sans, fontSize: 14, color: colors.textFaintOnDark, marginTop: 4 },
   error: { fontFamily: fonts.sans, fontSize: 13, color: '#E8A598', marginTop: 10, textAlign: 'center', paddingHorizontal: 24 },
+  retry: { marginTop: 14, paddingHorizontal: 22, paddingVertical: 10, borderRadius: radius.pill, backgroundColor: 'rgba(230,207,148,0.18)' },
+  retryText: { fontFamily: fonts.sansSemi, fontSize: 14, color: colors.gold },
   blessing: { fontFamily: fonts.serifItalic, fontSize: 18, color: colors.gold, marginTop: 16, textAlign: 'center', paddingHorizontal: 20 },
   waveWrap: { alignItems: 'center', marginBottom: 14 },
   trackWrap: { paddingVertical: 10 },
