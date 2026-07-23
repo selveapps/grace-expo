@@ -11,10 +11,15 @@ export const VOICE_STYLE: Record<string, VoiceSettings> = {
   bold: { stability: 0.35, similarity_boost: 0.7, style: 0.6 }, // Directly / Tea sass
 };
 
-// Optional named voices, chosen by content. Fill ids from YOUR ElevenLabs library.
+// Named voices, chosen by content. Defaults are ElevenLabs premade voices (stable
+// public ids) so narration works out of the box; override per env for a custom
+// brand voice. "Grace" = gentle US narrator; "Domi" = strong/confident for Tea sass.
+const GRACE_VOICE = 'oWAxZDx7w5VEj9dCyTzz'; // premade "Grace"
+const TEA_VOICE = 'AZnzlk1XvdvUeBnXmlld'; // premade "Domi"
+
 export const VOICES: Record<string, string | undefined> = {
-  grace: process.env.ELEVENLABS_DEFAULT_VOICE, // warm primary narrator
-  tea: process.env.ELEVENLABS_TEA_VOICE, // slightly brighter/sassier for Tea (optional)
+  grace: process.env.ELEVENLABS_DEFAULT_VOICE || GRACE_VOICE, // warm primary narrator
+  tea: process.env.ELEVENLABS_TEA_VOICE || TEA_VOICE, // brighter/sassier for Tea
 };
 
 export function pickVoice({
