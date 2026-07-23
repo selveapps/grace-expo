@@ -1,15 +1,39 @@
 import React, { useState, useCallback } from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
+import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
 import Waveform from '../../components/Waveform';
 import PlayIcon from '../../components/PlayIcon';
+import TeaScreen from '../stories/TeaScreen';
 import { StoryService } from '../../services';
 import { colors, fonts, radius, shadow } from '../../theme';
 
 function fmt(sec) { const m = Math.floor(sec / 60); return `${m} min`; }
 
+const TABS = ['Stories', 'Tea'];
+
+function Segmented({ value, onChange }) {
+  return (
+    <View style={styles.segment}>
+      {TABS.map((t) => {
+        const on = value === t;
+        return (
+          <Pressable
+            key={t}
+            style={[styles.segmentItem, on && styles.segmentItemOn]}
+            onPress={() => { if (!on) { Haptics.selectionAsync(); onChange(t); } }}
+          >
+            <Text style={[styles.segmentText, on && styles.segmentTextOn]}>{t}</Text>
+          </Pressable>
+        );
+      })}
+    </View>
+  );
+}
+
 export default function StoriesScreen({ navigation }) {
+  const [tab, setTab] = useState('Stories');
   const [featured, setFeatured] = useState(null);
   const [collections, setCollections] = useState([]);
   const [cont, setCont] = useState([]);
@@ -25,9 +49,19 @@ export default function StoriesScreen({ navigation }) {
 
   const open = (id) => navigation.navigate('StoryDetail', { id });
 
+  if (tab === 'Tea') {
+    return (
+      <Screen bg={colors.ivory} edges={['top']} style={{ paddingHorizontal: 0 }} ambient>
+        <View style={styles.segmentWrap}><Segmented value={tab} onChange={setTab} /></View>
+        <TeaScreen navigation={navigation} />
+      </Screen>
+    );
+  }
+
   return (
-    <Screen bg={colors.ivory} edges={['top']} style={{ paddingHorizontal: 0 }}>
+    <Screen bg={colors.ivory} edges={['top']} style={{ paddingHorizontal: 0 }} ambient>
       <ScrollView contentContainerStyle={styles.body} showsVerticalScrollIndicator={false}>
+        <View style={styles.segmentWrap}><Segmented value={tab} onChange={setTab} /></View>
         <Text style={styles.h1}>Stories</Text>
         <Text style={styles.sub}>Real people. Real struggle. Real faith.</Text>
 
@@ -86,6 +120,12 @@ export default function StoriesScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   body: { paddingHorizontal: 22, paddingTop: 12, paddingBottom: 30 },
+  segmentWrap: { paddingHorizontal: 22, paddingTop: 4, marginBottom: 14 },
+  segment: { flexDirection: 'row', backgroundColor: colors.sand, borderRadius: radius.pill, padding: 4 },
+  segmentItem: { flex: 1, alignItems: 'center', paddingVertical: 9, borderRadius: radius.pill },
+  segmentItemOn: { backgroundColor: colors.white, ...shadow.card },
+  segmentText: { fontFamily: fonts.sansMed, fontSize: 14, color: colors.textMuted },
+  segmentTextOn: { fontFamily: fonts.sansSemi, color: colors.ink },
   h1: { fontFamily: fonts.serif, fontSize: 38, color: colors.ink },
   sub: { fontFamily: fonts.sans, fontSize: 14, color: colors.textFaint, marginBottom: 20 },
   feature: { backgroundColor: colors.espressoSoft, borderRadius: radius.xl, padding: 22, ...shadow.lift },
