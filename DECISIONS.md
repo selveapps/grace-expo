@@ -325,6 +325,12 @@ Instant, key-independent, edge-cacheable playback; zero per-play cost; works wit
 - The MP3 assets must be generated once with a key (`npm run generate:audio`) and committed or synced to CDN — this is a release step, not a code step.
 - `staysActiveInBackground: true` + `UIBackgroundModes: ["audio"]` enable lock-screen playback (native build only, not Expo Go).
 
+### Addendum (2026-07-22) — key-free placeholder narration
+To make audio testable end-to-end before a keyed render, `scripts/generate-placeholder-audio.ts` (`npm run generate:audio:placeholder`, macOS only) renders real *spoken* narration with `say` + `afconvert` to **`.m4a`** (AAC) — a distinct voice per character (Moira/Karen/Daniel/Samantha) and a brisk/bright voice per Tea mood. macOS ships no MP3 encoder, hence AAC. To keep the `.mp3` contract intact and let a real render supersede placeholders automatically:
+- `/audio/:filename` serves `.mp3` / `.m4a` / `.wav` with the right content type.
+- The app resolves audio via `resolveStaticAudioUrl()` which tries `.mp3` first, then the `.m4a` placeholder (both `AudioService` and `TeaDetailScreen`).
+So dropping in real `.mp3`s later (via `generate:audio` + the key) wins with no code change. Placeholders are committed and ~1.1 MB total. Note: the app defaults to staging — placeholders only serve where the branch is deployed or against `npm run start:local`.
+
 ---
 
 ## DEC-011 — "Tea" feature: static catalog + grid, not a reel (2026-07-22)
