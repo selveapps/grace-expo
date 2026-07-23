@@ -52,10 +52,11 @@ export default function ValueAddScreen({ navigation }) {
   }, []);
 
   return (
-    <Screen gradient={['#FDF6E4', '#F7F3EC']} style={styles.wrap}>
+    <Screen gradient={['#FDF6E4', '#F7F3EC']} style={styles.wrap} ambient>
       <View style={styles.progress}><View style={[styles.progressFill, { width: '55%' }]} /></View>
       <View style={{ alignItems: 'center' }}><GraceDove size={90} crop="head" motion="peek" /></View>
-      <Text style={styles.title}>Here's what I'll{'\n'}keep for you.</Text>
+      <Text style={styles.title}>Your Bible,{'\n'}made for you.</Text>
+      <Text style={styles.subhead}>A quiet, audio-first companion for women.</Text>
       <View style={styles.list}>
         {ITEMS.map((it, i) => <Row key={it.key} item={it} av={avs[i]} />)}
       </View>
@@ -71,7 +72,8 @@ const styles = StyleSheet.create({
   wrap: { paddingHorizontal: 26, paddingTop: 20, paddingBottom: 30 },
   progress: { height: 4, borderRadius: 4, backgroundColor: colors.sand, overflow: 'hidden', marginBottom: 26 },
   progressFill: { height: '100%', backgroundColor: colors.brass },
-  title: { fontFamily: fonts.serif, fontSize: 36, color: colors.ink, textAlign: 'center', marginTop: 14, lineHeight: 40, marginBottom: 26 },
+  title: { fontFamily: fonts.serif, fontSize: 36, color: colors.ink, textAlign: 'center', marginTop: 14, lineHeight: 40 },
+  subhead: { fontFamily: fonts.sans, fontSize: 15, color: colors.textMuted, textAlign: 'center', marginTop: 8, marginBottom: 26 },
   list: { gap: 12 },
   card: { flexDirection: 'row', alignItems: 'center', gap: 16, backgroundColor: colors.white, borderWidth: 1, borderColor: colors.sandLine, borderRadius: radius.lg, padding: 18, ...shadow.card },
   icon: { width: 46, height: 46, borderRadius: 14, alignItems: 'center', justifyContent: 'center' },
