@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, Pressable } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Pressable, Dimensions } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
 import { colors, fonts, radius } from '../../theme';
+
+// 6 columns, 8px gaps, 22px horizontal body padding — compute exact cell width so
+// every cell sits flush and the number stays centered on iOS + Android.
+const COLS = 6;
+const GAP = 8;
+const BODY_PAD = 22;
+const CELL = (Dimensions.get('window').width - BODY_PAD * 2 - GAP * (COLS - 1)) / COLS;
 
 // Chapter counts for common books; default 30 for demo. Extend as needed.
 const CHAPTERS = { Psalms: 150, Genesis: 50, Isaiah: 66, Ruth: 4, Esther: 10, John: 21, Romans: 16 };
@@ -74,8 +81,8 @@ const styles = StyleSheet.create({
   rangeOn: { backgroundColor: colors.espresso, borderColor: colors.espresso },
   rangeText: { fontFamily: fonts.sansSemi, fontSize: 13, color: colors.textMuted },
   rangeTextOn: { color: colors.ivory },
-  grid: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
-  cell: { width: '15%', aspectRatio: 1, borderRadius: radius.sm, backgroundColor: colors.white, borderWidth: 1, borderColor: colors.sandLine, alignItems: 'center', justifyContent: 'center' },
-  cellText: { fontFamily: fonts.sansMed, fontSize: 15, color: '#4A3D30' },
+  grid: { flexDirection: 'row', flexWrap: 'wrap', gap: GAP },
+  cell: { width: CELL, height: CELL, borderRadius: radius.sm, backgroundColor: colors.white, borderWidth: 1, borderColor: colors.sandLine, alignItems: 'center', justifyContent: 'center' },
+  cellText: { fontFamily: fonts.sansMed, fontSize: 15, color: '#4A3D30', textAlign: 'center', includeFontPadding: false, lineHeight: 15 },
   more: { fontFamily: fonts.sans, fontSize: 13, color: colors.textFaint, textAlign: 'center', marginTop: 12 },
 });

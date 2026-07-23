@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, Pressable, Modal, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, Pressable, Modal, ScrollView, Share } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
 import GraceDove from '../../components/GraceDove';
 import Waveform from '../../components/Waveform';
+import Icon from '../../components/Icon';
 import { AudioService, StoryService } from '../../services';
 import { colors, fonts, radius } from '../../theme';
 
@@ -11,15 +12,31 @@ const TRACK = 320;
 const fmt = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
 const SPEEDS = [1, 1.25, 1.5, 0.75];
 
+function FooterButton({ icon, label, onPress, active, disabled }) {
+  return (
+    <Pressable
+      onPress={disabled ? undefined : onPress}
+      disabled={disabled}
+      hitSlop={8}
+      style={[styles.footerBtn, active && styles.footerBtnActive, disabled && styles.footerDisabled]}
+    >
+      <Icon name={icon} size={20} color={active ? colors.gold : colors.onDarkMuted} active={active} />
+      <Text style={[styles.footerLabel, active && styles.footerLabelActive]}>{label}</Text>
+    </Pressable>
+  );
+}
+
 export default function PlayerScreen({ route, navigation }) {
   const { id } = route.params || {};
   const [story, setStory] = useState(null);
   const [st, setSt] = useState(AudioService.getState());
   const [showTranscript, setShowTranscript] = useState(false);
+  const [savedThis, setSavedThis] = useState(false);
 
   useEffect(() => {
     let alive = true;
     StoryService.getStory(id).then((s) => { if (alive) setStory(s); });
+    StoryService.isSaved(id).then((v) => { if (alive) setSavedThis(v); });
     const current = AudioService.getState();
     if (current.storyId !== id) {
       AudioService.loadStory(id).catch(() => {});
@@ -50,6 +67,19 @@ export default function PlayerScreen({ route, navigation }) {
     const x = e.nativeEvent.locationX;
     AudioService.seek(Math.max(0, Math.min(1, x / TRACK)) * st.duration);
     Haptics.selectionAsync();
+  };
+
+  const saveThis = () => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    StoryService.save(id);
+    setSavedThis(true);
+  };
+  const shareQuote = async () => {
+    Haptics.selectionAsync();
+    if (!story) return;
+    try {
+      await Share.share({ message: `“${story.hook}”\n\n${story.title} · ${story.scriptureRange}\nvia Grace` });
+    } catch { /* dismissed */ }
   };
 
   const done = st.status === 'completed';
@@ -98,11 +128,9 @@ export default function PlayerScreen({ route, navigation }) {
       </View>
 
       <View style={styles.footer}>
-        <Text style={styles.footerItem}>Save</Text>
-        <Text style={styles.footerItem}>Share quote</Text>
-        <Pressable onPress={() => setShowTranscript(true)} disabled={!st.narrative}>
-          <Text style={[styles.footerItem, !st.narrative && styles.footerDisabled]}>Transcript</Text>
-        </Pressable>
+        <FooterButton icon={savedThis ? 'check' : 'download'} label={savedThis ? 'Saved' : 'Save'} active={savedThis} onPress={saveThis} />
+        <FooterButton icon="share" label="Share quote" onPress={shareQuote} />
+        <FooterButton icon="text" label="Transcript" disabled={!st.narrative} onPress={() => { Haptics.selectionAsync(); setShowTranscript(true); }} />
       </View>
 
       <Modal visible={showTranscript} animationType="slide" transparent onRequestClose={() => setShowTranscript(false)}>
@@ -144,8 +172,11 @@ const styles = StyleSheet.create({
   skip: { fontFamily: fonts.sans, fontSize: 20, color: colors.onDarkMuted },
   playBtn: { width: 66, height: 66, borderRadius: 33, backgroundColor: colors.gold, alignItems: 'center', justifyContent: 'center' },
   playIcon: { fontSize: 22, color: colors.espresso },
-  footer: { flexDirection: 'row', justifyContent: 'center', gap: 30, marginTop: 24 },
-  footerItem: { fontFamily: fonts.sans, fontSize: 13, color: colors.textFaintOnDark },
+  footer: { flexDirection: 'row', justifyContent: 'center', gap: 14, marginTop: 24 },
+  footerBtn: { minWidth: 92, minHeight: 44, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, paddingHorizontal: 14, paddingVertical: 10, borderRadius: radius.pill, backgroundColor: 'rgba(255,255,255,0.08)' },
+  footerBtnActive: { backgroundColor: 'rgba(230,207,148,0.18)' },
+  footerLabel: { fontFamily: fonts.sansMed, fontSize: 13, color: colors.textFaintOnDark },
+  footerLabelActive: { color: colors.gold },
   footerDisabled: { opacity: 0.4 },
   modalBackdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.55)', justifyContent: 'flex-end' },
   modalCard: { backgroundColor: colors.ivory, borderTopLeftRadius: 20, borderTopRightRadius: 20, padding: 22, maxHeight: '70%' },

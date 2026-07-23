@@ -123,4 +123,14 @@ export const StoryService = {
     api.put(`/stories/progress/${encodeURIComponent(id)}`, { seconds, completed }).catch(() => {});
     return prog[id];
   },
+  async save(id) {
+    const saved = await StorageService.get(KEYS.savedStories, {});
+    saved[id] = true;
+    await StorageService.set(KEYS.savedStories, saved);
+    return true;
+  },
+  async isSaved(id) {
+    const saved = await StorageService.get(KEYS.savedStories, {});
+    return !!saved[id];
+  },
 };
