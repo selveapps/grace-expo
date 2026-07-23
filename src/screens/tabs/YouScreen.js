@@ -21,10 +21,10 @@ export default function YouScreen({ navigation }) {
   const carrying = (profile.carrying && profile.carrying[0]) || '—';
   const kept = profile.savedVerses ? profile.savedVerses.length : 0;
   return (
-    <Screen gradient={['#2B2740', '#3A2C22']} edges={['top']} style={{ paddingHorizontal: 0 }}>
+    <Screen gradient={['#2B2740', '#3A2C22']} edges={['top']} style={{ paddingHorizontal: 0 }} ambient>
       <ScrollView contentContainerStyle={styles.body} showsVerticalScrollIndicator={false}>
         <View style={styles.head}>
-          <GraceDove size={72} motion="halo" />
+          <GraceDove size={72} wings="folded" motion="breathe" />
           <View><Text style={styles.name}>{name}</Text><Text style={styles.meeting}>{RHYTHM_LABEL[profile.rhythm] || RHYTHM_LABEL.morning}</Text></View>
         </View>
         <View style={styles.stats}>

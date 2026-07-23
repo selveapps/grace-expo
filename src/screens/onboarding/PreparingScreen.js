@@ -44,7 +44,7 @@ export default function PreparingScreen({ navigation }) {
   }, []);
 
   return (
-    <Screen gradient={['#FDF6E4', '#EFE6D4']} style={styles.wrap}>
+    <Screen gradient={['#FDF6E4', '#EFE6D4']} style={styles.wrap} ambient>
       <View style={styles.ring}>
         <GraceDove size={176} motion="loading" />
       </View>

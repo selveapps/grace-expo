@@ -51,7 +51,7 @@ export default function RemindersScreen({ navigation }) {
   const [h, m] = time.split(':');
 
   return (
-    <Screen bg={colors.ivory} edges={['top']} style={{ paddingHorizontal: 22, paddingTop: 6 }}>
+    <Screen bg={colors.ivory} edges={['top']} style={{ paddingHorizontal: 22, paddingTop: 6 }} ambient>
       <Pressable onPress={() => navigation.goBack()}><Text style={styles.back}>‹ You</Text></Pressable>
       <Text style={styles.h1}>Reminders</Text>
       <Text style={styles.sub}>I'll meet you when it's time. No guilt if you're late.</Text>

@@ -12,7 +12,7 @@ export default function RhythmScreen({ navigation }) {
   const [choice, setChoice] = useState('morning');
   const pick = (k) => { Haptics.selectionAsync(); setChoice(k); };
   return (
-    <Screen gradient={['#FDF3DF', '#F7F3EC']} style={styles.wrap}>
+    <Screen gradient={['#FDF3DF', '#F7F3EC']} style={styles.wrap} ambient>
       <Text style={styles.title}>When should we meet?</Text>
       <Text style={styles.sub}>No goals, no streaks. Just a gentle time.</Text>
       <View style={{ gap: 12, marginTop: 30 }}>

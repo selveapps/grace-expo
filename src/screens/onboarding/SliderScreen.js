@@ -51,7 +51,7 @@ export default function SliderScreen({ navigation }) {
   };
 
   return (
-    <Screen gradient={s.grad} style={styles.wrap}>
+    <Screen gradient={s.grad} style={styles.wrap} ambient>
       <View style={styles.progress}><View style={[styles.progressFill, { width: '42%' }]} /></View>
       <View style={{ alignItems: 'center' }}><GraceDove size={92} crop="head" motion={s.motion === 'halo' ? 'peek' : s.motion} /></View>
       <Text style={styles.title}>How gently should{'\n'}Grace meet you?</Text>
