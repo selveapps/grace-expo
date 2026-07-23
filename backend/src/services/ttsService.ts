@@ -1,6 +1,6 @@
-import { VOICE_STYLE } from '../lib/voiceProfiles.js';
+import { VOICE_STYLE, type VoiceSettings } from '../lib/voiceProfiles.js';
 
-export type TtsOpts = { voice?: string; style?: string };
+export type TtsOpts = { voice?: string; style?: string; settings?: VoiceSettings };
 
 // Provider-switchable TTS. Same synthesizeSpeech(text) signature so nothing
 // downstream changes; TTS_PROVIDER selects elevenlabs (default) or openai.
@@ -17,7 +17,7 @@ async function elevenLabsTts(text: string, opts: TtsOpts): Promise<Buffer> {
   const voice = opts.voice || process.env.ELEVENLABS_DEFAULT_VOICE;
   if (!voice) throw new Error('ELEVENLABS_DEFAULT_VOICE not configured');
   const modelId = process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2';
-  const settings = VOICE_STYLE[opts.style || 'default'] ?? VOICE_STYLE.default;
+  const settings = opts.settings ?? VOICE_STYLE[opts.style || 'default'] ?? VOICE_STYLE.default;
 
   const res = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voice}`, {
     method: 'POST',

@@ -29,12 +29,22 @@ export const STORY_COLLECTIONS = [
   { id: 'prayer', name: 'Prayer Stories', tint: '#EAE4D3' },
 ];
 
+// Persona narrator voices (ElevenLabs premade ids on the account) — matched to
+// each character's age/tone. Used by the pre-render + live-TTS fallback.
+export const STORY_VOICE: Record<string, string> = {
+  'ruth-stays': 'EXAVITQu4vr4xnSDxMaL', // Sarah — young, reassuring, devoted
+  'esther-uninvited': 'pFZP5JQG7iQjIQuC4Bku', // Lily — British, confident, regal
+  'davids-rooftop': 'JBFqnCBsd6RMkjVDRZzb', // George — British male, weighty storyteller
+  'hannah-prayer': 'hpp4J3VqNfWAUOO0d1Us', // Bella — warm, tender
+  'mary-annunciation': 'cgSgspJ2msm6clMCkdW9', // Jessica — young, bright, gentle
+};
+
 export const STORIES: StoryMeta[] = [
-  { id: 'ruth-stays', title: 'Ruth stays', subtitle: 'Loyalty in the harvest', hook: 'She had every reason to leave. She stayed.', scriptureRange: 'Ruth 1–4', testament: 'old', books: ['Ruth'], durationSeconds: 540, coverTint: '#6B5D4E', tags: ['Women of the Bible', 'Loyalty'], isPremium: true, parts: 4, audioUrl: STORY_AUDIO_URL },
-  { id: 'esther-uninvited', title: 'Esther walks in uninvited', subtitle: 'Courage in the palace', hook: 'For such a time as this.', scriptureRange: 'Esther 4–5', testament: 'old', books: ['Esther'], durationSeconds: 540, coverTint: '#5A4632', tags: ['Women of the Bible', 'Courage'], isPremium: true, parts: 4, audioUrl: STORY_AUDIO_URL },
-  { id: 'davids-rooftop', title: "David's rooftop era", subtitle: 'A king, a mistake, a mercy', hook: 'Power looked away. Grace did not.', scriptureRange: '2 Samuel 11–12', testament: 'old', books: ['2 Samuel'], durationSeconds: 620, coverTint: '#4A382C', tags: ['Kings', 'Mercy'], isPremium: true, parts: 3, audioUrl: STORY_AUDIO_URL },
-  { id: 'hannah-prayer', title: 'Hannah', subtitle: 'A prayer answered', hook: 'She prayed so hard they thought her drunk.', scriptureRange: '1 Samuel 1–2', testament: 'old', books: ['1 Samuel'], durationSeconds: 480, coverTint: '#6B5D4E', tags: ['Women of the Bible', 'Prayer'], isPremium: true, parts: 2, audioUrl: STORY_AUDIO_URL },
-  { id: 'mary-annunciation', title: 'Mary', subtitle: 'The annunciation', hook: 'A teenager said yes to the impossible.', scriptureRange: 'Luke 1', testament: 'new', books: ['Luke'], durationSeconds: 500, coverTint: '#5A4632', tags: ['Women of the Bible', 'Faith'], isPremium: false, parts: 3, audioUrl: STORY_AUDIO_URL },
+  { id: 'ruth-stays', title: 'Ruth stays', subtitle: 'Loyalty in the harvest', hook: 'She had every reason to leave. She stayed.', scriptureRange: 'Ruth 1–4', testament: 'old', books: ['Ruth'], durationSeconds: 540, coverTint: '#6B5D4E', tags: ['Women of the Bible', 'Loyalty'], isPremium: true, parts: 4, audioUrl: STORY_AUDIO_URL, voice: STORY_VOICE['ruth-stays'] },
+  { id: 'esther-uninvited', title: 'Esther walks in uninvited', subtitle: 'Courage in the palace', hook: 'For such a time as this.', scriptureRange: 'Esther 4–5', testament: 'old', books: ['Esther'], durationSeconds: 540, coverTint: '#5A4632', tags: ['Women of the Bible', 'Courage'], isPremium: true, parts: 4, audioUrl: STORY_AUDIO_URL, voice: STORY_VOICE['esther-uninvited'] },
+  { id: 'davids-rooftop', title: "David's rooftop era", subtitle: 'A king, a mistake, a mercy', hook: 'Power looked away. Grace did not.', scriptureRange: '2 Samuel 11–12', testament: 'old', books: ['2 Samuel'], durationSeconds: 620, coverTint: '#4A382C', tags: ['Kings', 'Mercy'], isPremium: true, parts: 3, audioUrl: STORY_AUDIO_URL, voice: STORY_VOICE['davids-rooftop'] },
+  { id: 'hannah-prayer', title: 'Hannah', subtitle: 'A prayer answered', hook: 'She prayed so hard they thought her drunk.', scriptureRange: '1 Samuel 1–2', testament: 'old', books: ['1 Samuel'], durationSeconds: 480, coverTint: '#6B5D4E', tags: ['Women of the Bible', 'Prayer'], isPremium: true, parts: 2, audioUrl: STORY_AUDIO_URL, voice: STORY_VOICE['hannah-prayer'] },
+  { id: 'mary-annunciation', title: 'Mary', subtitle: 'The annunciation', hook: 'A teenager said yes to the impossible.', scriptureRange: 'Luke 1', testament: 'new', books: ['Luke'], durationSeconds: 500, coverTint: '#5A4632', tags: ['Women of the Bible', 'Faith'], isPremium: false, parts: 3, audioUrl: STORY_AUDIO_URL, voice: STORY_VOICE['mary-annunciation'] },
 ];
 
 export function getStory(id: string) {

@@ -18,7 +18,8 @@ Branch: `feat/tf-v1-feedback`. Covers the 14 TestFlight feedback items (`grace-b
 
 ### Fixed
 - **Story audio 503'd for every story** (#5,#8,#10a): every story now has a static `audioUrl`; TTS route 302-redirects to the pre-rendered MP3 on failure instead of returning a raw 503. Works with no key in production once MP3s are hosted. (DEC-010, SURPRISES 2026-07-22)
-- Key-free spoken placeholder narration (`npm run generate:audio:placeholder`) so all 5 stories (16 parts) + 10 Teas play immediately — distinct voice per character, brisk/bright for Tea. Committed as `.m4a`; the app tries `.mp3` first so a real keyed render supersedes them automatically. Audio route serves mp3/m4a/wav; `resolveStaticAudioUrl` handles the fallback. Player has a "Try again"; Tea detail has not-found + audio-retry states.
+- **Real ElevenLabs narration** rendered for all 16 story parts + 10 Teas (`npm run generate:audio`), committed as `.mp3`. Per-persona voices — Ruth/Sarah, Esther/Lily, David/George, Hannah/Bella, Mary/Jessica — with mood-matched delivery (tender/steady/bold) and a weightier read for David. Tea is faster + sassier (Laura for dark, Jessica for light) with per-card speed/style variation (`speed` 1.12–1.18). Voices/settings are data-driven in `voiceProfiles.ts` + `storyCatalog.ts`; render is idempotent (skips existing, `FORCE=1` to redo).
+- Key-free spoken placeholder path retained as a fallback (`npm run generate:audio:placeholder`, macOS `say` → `.m4a`); the app tries `.mp3` first, then `.m4a`. Audio route serves mp3/m4a/wav; `resolveStaticAudioUrl` handles the fallback. Player has a "Try again"; Tea detail has not-found + audio-retry states.
 
 ### Added
 - **Tea feature** (#9): `Stories | Tea` segmented control → 2-column grid of 10 cards → detail (hook, tea, scripture chip deep-link, Grace narration, like/save/share). Backend `/tea` routes + `TeaEngagement` model + migration. (DEC-011)
