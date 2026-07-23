@@ -259,3 +259,26 @@ Update this file **during** work, not after — like a lab notebook, not a retro
 - M9 offline queue still partial
 
 **Result:** PASS → commit `5258cf1`
+
+---
+
+### RUN-011 | 2026-07-22 | TestFlight V1 feedback (14 items) — audio, Tea, motion, onboarding, paywall, polish
+
+**Objective:** Execute the `grace-branch-spec/` execution brief on `feat/tf-v1-feedback`: fix story audio, add the Tea feature, motion, onboarding polish, fake paywall, and UI polish; verify; prep TestFlight.
+
+**Procedure:**
+1. **Audio (01/01b/02b):** every story gets `audioUrl`; `storyForClient.hasAudio = Boolean(audioUrl)`; TTS route 302→static on failure; `ttsService` provider switch (elevenlabs/openai) + `voiceProfiles.pickVoice`; `scripts/generate-audio.ts` (`npm run generate:audio`) renders stories + Teas; `staysActiveInBackground` + `UIBackgroundModes:["audio"]`.
+2. **Tea (02):** `teaCatalog.ts`, `/tea` routes, `TeaEngagement` model + migration `20260722000000_tea_engagement`, `libraryService.toggleTeaLike/saveTea/listSavedTea`, `TeaService`, `TeaScreen` (grid), `TeaDetailScreen`, `Stories | Tea` segmented control.
+3. **Icon + rename (03):** `assets/icon.png` (Grace dove) → `app.json` icon/splash; build name stays "Grace" (App Store listing name set at submit).
+4. **Motion (04):** `GraceDove` eye-blink (always) + wing-flap (`motion="flap"`); ConfirmationScreen flaps + haptic; You/settings dove folded+breathe; `AmbientBackdrop` + `Screen ambient` prop on all non-reading screens (excl. Chapter/Book); Today header head-crop.
+5. **Onboarding (05):** ValueAdd women-first copy; stray em-dashes removed across onboarding; Verse = keep+advance one tap, overflow fixed (`adjustsFontSizeToFit`, `maxHeight`), full-width CTA. Slider already matched the corrected geometry — no change.
+6. **Paywall (06):** removed "Maybe later"; whole screen wrapped in `Pressable` → tap-off enters Home; `onboarded` set on both paths.
+7. **Polish (07):** Player Save/Share/Transcript are real `FooterButton`s (icons, haptics, states); BookScreen chapter grid computes exact cell width from `Dimensions` + `includeFontPadding:false`; tab bar active brass pill + lift shadow + `tabPress` haptics.
+
+**Observations:**
+- Backend `npm run typecheck` → clean.
+- `npx expo export -p ios` → bundles the full module graph (2.87 MB hbc), no import/resolution errors — validates all new screens/components compile.
+- Docker not available in this env → DB-backed `npm test` / `verify:phase2` and `prisma migrate dev` were **not run here**; the migration SQL is hand-written to match Prisma format and `prisma generate` succeeded.
+- Audio MP3 asset generation, R2/CDN hosting, and `eas build`/`submit` are external release steps requiring keys/accounts (see DEC-010).
+
+**Result:** Code complete + typecheck/bundle green. DB tests + EAS build deferred to an environment with Docker + keys.

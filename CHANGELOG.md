@@ -12,6 +12,34 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 
 ---
 
+## [TestFlight V1 feedback — audio, Tea, motion, polish] — 2026-07-22
+
+Branch: `feat/tf-v1-feedback`. Covers the 14 TestFlight feedback items (`grace-branch-spec/`).
+
+### Fixed
+- **Story audio 503'd for every story** (#5,#8,#10a): every story now has a static `audioUrl`; TTS route 302-redirects to the pre-rendered MP3 on failure instead of returning a raw 503. Works with no key in production once MP3s are hosted. (DEC-010, SURPRISES 2026-07-22)
+
+### Added
+- **Tea feature** (#9): `Stories | Tea` segmented control → 2-column grid of 10 cards → detail (hook, tea, scripture chip deep-link, Grace narration, like/save/share). Backend `/tea` routes + `TeaEngagement` model + migration. (DEC-011)
+- Pre-render script `npm run generate:audio` (stories + Teas) and provider-switchable `ttsService` (elevenlabs/openai) with `voiceProfiles.pickVoice`.
+- `AmbientBackdrop` drifting motes behind all non-reading screens (honors `reducedMotion`).
+- `GraceDove` eye-blink (every screen) + wing-flap (`motion="flap"`).
+- Grace dove app icon + splash; background/lock-screen audio (`UIBackgroundModes:["audio"]`, `staysActiveInBackground`).
+
+### Changed
+- Onboarding (#2,#3,#4): ValueAdd women-first copy + subhead; stray em-dashes removed; Verse keeps + advances in one tap, no overflow, full-width CTA.
+- Paywall (#7): removed "Maybe later"; tap anywhere off the plan cards/CTA enters Home; `onboarded` set on both paths.
+- Player (#10b): Save / Share quote / Transcript are real 44pt buttons with icons, haptics, and active/disabled states.
+- Reading (#11): chapter-number grid uses exact computed cell widths + `includeFontPadding:false` so numbers center on iOS + Android.
+- Tab bar (#12): active brass pill + subtle lift + selection-tick haptics on tab press.
+- Motion (#13,#14): You/settings dove folded (no open-wing look); Today header shows an enlarged blinking head crop; arrival screen flaps.
+
+### Verified
+- Backend `npm run typecheck` → clean; `npx expo export -p ios` → full bundle, no resolution errors.
+- Deferred (needs Docker + keys): `npm test`, `verify:phase2`, `prisma migrate dev`, `eas build`.
+
+---
+
 ## [M10 — Staging & beta distribution] — 2026-07-13
 
 Tickets: GRACE-019–022 (SEL-21,24,25). Milestone M10.
