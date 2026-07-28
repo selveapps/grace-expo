@@ -10,7 +10,7 @@ export default function ReflectionsScreen({ navigation }) {
   const reflections = profile.reflections || [];
 
   return (
-    <Screen bg={colors.ivory} edges={['top']} style={{ paddingHorizontal: 0 }}>
+    <Screen bg={colors.ivory} edges={['top']} style={{ paddingHorizontal: 0 }} ambient>
       <View style={styles.header}>
         <Pressable onPress={() => navigation.goBack()}><Text style={styles.back}>‹ You</Text></Pressable>
         <Text style={styles.h1}>Reflections</Text>

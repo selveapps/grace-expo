@@ -27,7 +27,7 @@ export default function CarryScreen({ navigation }) {
   };
 
   return (
-    <Screen bg={colors.ivory} style={styles.wrap}>
+    <Screen bg={colors.ivory} style={styles.wrap} ambient>
       <View style={styles.progress}><View style={[styles.progressFill, { width: '30%' }]} /></View>
       <View style={{ marginBottom: 4 }}><GraceDove size={78} crop="head" motion="peek" /></View>
       <Text style={styles.title}>What are you carrying today?</Text>

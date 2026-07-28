@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, Pressable, Modal, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, Pressable, Modal, ScrollView, Share } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
 import GraceDove from '../../components/GraceDove';
 import Waveform from '../../components/Waveform';
+import Icon from '../../components/Icon';
 import { AudioService, StoryService } from '../../services';
 import { colors, fonts, radius } from '../../theme';
 
@@ -11,15 +12,31 @@ const TRACK = 320;
 const fmt = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
 const SPEEDS = [1, 1.25, 1.5, 0.75];
 
+function FooterButton({ icon, label, onPress, active, disabled }) {
+  return (
+    <Pressable
+      onPress={disabled ? undefined : onPress}
+      disabled={disabled}
+      hitSlop={8}
+      style={[styles.footerBtn, active && styles.footerBtnActive, disabled && styles.footerDisabled]}
+    >
+      <Icon name={icon} size={20} color={active ? colors.gold : colors.onDarkMuted} active={active} />
+      <Text style={[styles.footerLabel, active && styles.footerLabelActive]}>{label}</Text>
+    </Pressable>
+  );
+}
+
 export default function PlayerScreen({ route, navigation }) {
   const { id } = route.params || {};
   const [story, setStory] = useState(null);
   const [st, setSt] = useState(AudioService.getState());
   const [showTranscript, setShowTranscript] = useState(false);
+  const [savedThis, setSavedThis] = useState(false);
 
   useEffect(() => {
     let alive = true;
     StoryService.getStory(id).then((s) => { if (alive) setStory(s); });
+    StoryService.isSaved(id).then((v) => { if (alive) setSavedThis(v); });
     const current = AudioService.getState();
     if (current.storyId !== id) {
       AudioService.loadStory(id).catch(() => {});
@@ -52,6 +69,24 @@ export default function PlayerScreen({ route, navigation }) {
     Haptics.selectionAsync();
   };
 
+  const retry = () => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Soft);
+    AudioService.loadStory(id, st.part || 1).then(() => AudioService.play()).catch(() => {});
+  };
+
+  const saveThis = () => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    StoryService.save(id);
+    setSavedThis(true);
+  };
+  const shareQuote = async () => {
+    Haptics.selectionAsync();
+    if (!story) return;
+    try {
+      await Share.share({ message: `“${story.hook}”\n\n${story.title} · ${story.scriptureRange}\nvia Grace` });
+    } catch { /* dismissed */ }
+  };
+
   const done = st.status === 'completed';
   const progress = st.duration ? st.position / st.duration : 0;
 
@@ -76,7 +111,12 @@ export default function PlayerScreen({ route, navigation }) {
         <GraceDove size={168} motion={done ? 'bless' : st.playing ? 'loading' : 'breathe'} wings={done ? 'open' : 'folded'} />
         <Text style={styles.title}>{story ? story.title : ''}</Text>
         <Text style={styles.sub}>{story ? story.scriptureRange : ''}</Text>
-        {errored && <Text style={styles.error}>{st.error || 'Audio unavailable'}</Text>}
+        {errored && (
+          <>
+            <Text style={styles.error}>{st.error || 'Audio unavailable'}</Text>
+            <Pressable onPress={retry} style={styles.retry} hitSlop={8}><Text style={styles.retryText}>Try again</Text></Pressable>
+          </>
+        )}
         {done && <Text style={styles.blessing}>“Well done.” — Grace kept this for you.</Text>}
       </View>
 
@@ -98,11 +138,9 @@ export default function PlayerScreen({ route, navigation }) {
       </View>
 
       <View style={styles.footer}>
-        <Text style={styles.footerItem}>Save</Text>
-        <Text style={styles.footerItem}>Share quote</Text>
-        <Pressable onPress={() => setShowTranscript(true)} disabled={!st.narrative}>
-          <Text style={[styles.footerItem, !st.narrative && styles.footerDisabled]}>Transcript</Text>
-        </Pressable>
+        <FooterButton icon={savedThis ? 'check' : 'download'} label={savedThis ? 'Saved' : 'Save'} active={savedThis} onPress={saveThis} />
+        <FooterButton icon="share" label="Share quote" onPress={shareQuote} />
+        <FooterButton icon="text" label="Transcript" disabled={!st.narrative} onPress={() => { Haptics.selectionAsync(); setShowTranscript(true); }} />
       </View>
 
       <Modal visible={showTranscript} animationType="slide" transparent onRequestClose={() => setShowTranscript(false)}>
@@ -131,6 +169,8 @@ const styles = StyleSheet.create({
   title: { fontFamily: fonts.serif, fontSize: 30, color: colors.onDark, marginTop: 16, textAlign: 'center' },
   sub: { fontFamily: fonts.sans, fontSize: 14, color: colors.textFaintOnDark, marginTop: 4 },
   error: { fontFamily: fonts.sans, fontSize: 13, color: '#E8A598', marginTop: 10, textAlign: 'center', paddingHorizontal: 24 },
+  retry: { marginTop: 14, paddingHorizontal: 22, paddingVertical: 10, borderRadius: radius.pill, backgroundColor: 'rgba(230,207,148,0.18)' },
+  retryText: { fontFamily: fonts.sansSemi, fontSize: 14, color: colors.gold },
   blessing: { fontFamily: fonts.serifItalic, fontSize: 18, color: colors.gold, marginTop: 16, textAlign: 'center', paddingHorizontal: 20 },
   waveWrap: { alignItems: 'center', marginBottom: 14 },
   trackWrap: { paddingVertical: 10 },
@@ -144,8 +184,11 @@ const styles = StyleSheet.create({
   skip: { fontFamily: fonts.sans, fontSize: 20, color: colors.onDarkMuted },
   playBtn: { width: 66, height: 66, borderRadius: 33, backgroundColor: colors.gold, alignItems: 'center', justifyContent: 'center' },
   playIcon: { fontSize: 22, color: colors.espresso },
-  footer: { flexDirection: 'row', justifyContent: 'center', gap: 30, marginTop: 24 },
-  footerItem: { fontFamily: fonts.sans, fontSize: 13, color: colors.textFaintOnDark },
+  footer: { flexDirection: 'row', justifyContent: 'center', gap: 14, marginTop: 24 },
+  footerBtn: { minWidth: 92, minHeight: 44, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, paddingHorizontal: 14, paddingVertical: 10, borderRadius: radius.pill, backgroundColor: 'rgba(255,255,255,0.08)' },
+  footerBtnActive: { backgroundColor: 'rgba(230,207,148,0.18)' },
+  footerLabel: { fontFamily: fonts.sansMed, fontSize: 13, color: colors.textFaintOnDark },
+  footerLabelActive: { color: colors.gold },
   footerDisabled: { opacity: 0.4 },
   modalBackdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.55)', justifyContent: 'flex-end' },
   modalCard: { backgroundColor: colors.ivory, borderTopLeftRadius: 20, borderTopRightRadius: 20, padding: 22, maxHeight: '70%' },

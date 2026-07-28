@@ -38,7 +38,7 @@ export default function SupportScreen({ navigation }) {
   }
 
   return (
-    <Screen bg={colors.ivory} edges={['top']} style={{ paddingHorizontal: 22, paddingTop: 6 }}>
+    <Screen bg={colors.ivory} edges={['top']} style={{ paddingHorizontal: 22, paddingTop: 6 }} ambient>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Pressable onPress={() => navigation.goBack()}><Text style={styles.back}>‹ You</Text></Pressable>
         <Text style={styles.h1}>Tell me what's wrong.</Text>

@@ -6,6 +6,7 @@ export { AuthService } from './AuthService';
 export { ReadingService } from './ReadingService';
 export { VerseService } from './VerseService';
 export { StoryService } from './StoryService';
+export { TeaService } from './TeaService';
 export { AudioService } from './AudioService';
 export { SubscriptionService } from './SubscriptionService';
 export { NotificationService } from './NotificationService';

@@ -2,8 +2,7 @@
 import { Audio } from 'expo-av';
 import { AuthService } from './AuthService';
 import { StoryService } from './StoryService';
-import { getStoryAudioUri } from '../api/audio';
-import { getApiBase } from '../api/client';
+import { getStoryAudioUri, resolveStaticAudioUrl } from '../api/audio';
 
 let sound = null;
 let saveTimer = null;
@@ -77,14 +76,11 @@ function onPlaybackStatusUpdate(status) {
 async function resolveAudioUri(story, part) {
   if (story?.audioUrl) {
     const path = story.audioUrl.replace('{part}', String(part));
-    const url = path.startsWith('http') ? path : `${getApiBase()}${path}`;
-    try {
-      const res = await fetch(url, { method: 'HEAD' });
-      if (res.ok) return url;
-    } catch {
-      // fall through to TTS
-    }
+    // Prefer the pre-rendered static file (real .mp3, else .m4a placeholder).
+    const staticUrl = await resolveStaticAudioUrl(path);
+    if (staticUrl) return staticUrl;
   }
+  // No static file — fall back to on-demand TTS (requires a key server-side).
   await AuthService.ensureGuest();
   return getStoryAudioUri(story.id, part);
 }
@@ -116,7 +112,7 @@ export const AudioService = {
     await unloadSound();
     await Audio.setAudioModeAsync({
       playsInSilentModeIOS: true,
-      staysActiveInBackground: false,
+      staysActiveInBackground: true, // lock-screen playback (native build; no-op in Expo Go)
       shouldDuckAndroid: true,
     });
 

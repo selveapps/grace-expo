@@ -74,3 +74,12 @@ Format: **Context → Assumed → Actual → Prevention**
 **Assumed:** Worktree path `grace-expo-sid/` would rename too  
 **Actual:** Only branch name changes; folder name is independent  
 **Prevention:** git-worktrees rule documents path/branch mapping explicitly
+
+---
+
+## 2026-07-22 — TTS hard-throws without a key, so all story audio 503'd
+
+**Context:** TestFlight reported story audio failing for every story (feedback #5,#8,#10a)
+**Assumed:** `synthesizeSpeech` would degrade like `llmService.completeChat` (which has a no-key fallback)
+**Actual:** `ttsService.synthesizeSpeech` throws `OPENAI_API_KEY not configured` when the key is unset. `OPENAI_API_KEY` is not set on Railway, and only `mary-annunciation` had an `audioUrl` (pointing at MP3s that weren't in the repo), so **100%** of plays fell through to TTS and returned 503.
+**Prevention:** Ship pre-rendered static MP3s as the primary path (every story gets an `audioUrl`), make the TTS route 302-redirect to the static file on failure instead of 503, and never assume a synth/LLM helper degrades gracefully — check for a no-key branch. See DEC-010.

@@ -37,7 +37,7 @@ export default function NameScreen({ navigation }) {
   const translateY = tilt.interpolate({ inputRange: [0, 1], outputRange: [0, 6] });
 
   return (
-    <Screen bg={colors.ivory} edges={['top', 'bottom']} style={styles.fill}>
+    <Screen bg={colors.ivory} edges={['top', 'bottom']} style={styles.fill} ambient>
       <KeyboardAvoidingView
         style={styles.fill}
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}

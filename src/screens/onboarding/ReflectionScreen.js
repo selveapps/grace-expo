@@ -18,7 +18,7 @@ export default function ReflectionScreen({ navigation }) {
     navigation.navigate('StoriesPreview');
   };
   return (
-    <Screen bg={colors.ivory} style={styles.wrap}>
+    <Screen bg={colors.ivory} style={styles.wrap} ambient>
       <Text style={styles.title}>One word to carry with you?</Text>
       <Text style={styles.sub}>Just one. You can change it anytime.</Text>
       <View style={{ gap: 12, marginTop: 30 }}>

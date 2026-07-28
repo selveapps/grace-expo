@@ -35,6 +35,8 @@ export const KEYS = {
   reflections: 'reflections',
   readingProgress: 'readingProgress',
   storyProgress: 'storyProgress',
+  savedStories: 'savedStories',
+  teaEngagement: 'teaEngagement',
   reminders: 'reminders',
   subscription: 'subscription',
   auth: 'auth',

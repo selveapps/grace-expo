@@ -12,7 +12,7 @@ const OFFERS = SubscriptionService.getOfferings();
 const PRICE = Object.fromEntries(OFFERS.map((o) => [o.id, `${o.displayPrice} / ${o.period}`]));
 
 const TRIAL = [
-  { when: 'Today', text: 'Full access begins — free.' },
+  { when: 'Today', text: 'Full access begins, free.' },
   { when: 'Day 2', text: "We'll send a gentle reminder." },
   { when: 'Day 3', text: 'Trial ends. Cancel anytime.' },
 ];
@@ -45,13 +45,21 @@ export default function PaywallScreen({ navigation }) {
     setBusy(true);
     Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
     await SubscriptionService.purchase(plan);
-    setProfile((p) => ({ ...p, subscribed: true }));
+    setProfile((p) => ({ ...p, subscribed: true, onboarded: true }));
     setBusy(false);
     navigation.navigate('Confirmation');
   };
 
+  // Soft fake paywall: a tap on any empty area (not a plan card or the CTA)
+  // quietly enters the app. Mark onboarded so RootNavigator won't bounce back.
+  const enterHome = () => {
+    setProfile((p) => ({ ...p, onboarded: true }));
+    navigation.reset({ index: 0, routes: [{ name: 'App' }] });
+  };
+
   return (
-    <Screen gradient={['#5A4632', '#3A2C22', '#2B2015']} style={styles.wrap}>
+    <Pressable style={{ flex: 1 }} onPress={enterHome}>
+    <Screen gradient={['#5A4632', '#3A2C22', '#2B2015']} style={styles.wrap} ambient>
       <Animated.View style={{ alignItems: 'center', height: 168, justifyContent: 'center' }}>
         <Animated.View style={{
           position: 'absolute', width: 260, height: 260, borderRadius: 260, backgroundColor: colors.gold,
@@ -101,15 +109,16 @@ export default function PaywallScreen({ navigation }) {
       </View>
 
       <View style={{ flex: 1 }} />
-      <PrimaryButton label={busy ? 'Preparing…' : 'Start 3-day free trial'} variant="gold" onPress={start} testID="paywall-start-trial" />
-      <Pressable onPress={() => navigation.navigate('App')} style={{ paddingVertical: 14 }}>
-        <Text style={styles.later}>Maybe later</Text>
-      </Pressable>
+      {/* CTA island — swallow taps so the fake-paywall enterHome doesn't fire here */}
+      <View onStartShouldSetResponder={() => true}>
+        <PrimaryButton label={busy ? 'Preparing…' : 'Start 3-day free trial'} variant="gold" onPress={start} testID="paywall-start-trial" />
+      </View>
       </Animated.View>
 
       {/* light veil carried over from Preparing — fades to reveal the blessing */}
       <Animated.View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: '#FDF6E4', opacity: veil }]} />
     </Screen>
+    </Pressable>
   );
 }
 
@@ -134,5 +143,4 @@ const styles = StyleSheet.create({
   tLine: { width: 2, flex: 1, backgroundColor: 'rgba(230,207,148,0.4)' },
   tWhen: { fontFamily: fonts.sansBold, fontSize: 14, color: colors.onDark },
   tText: { fontFamily: fonts.sans, fontSize: 13, color: colors.textFaintOnDark },
-  later: { fontFamily: fonts.sansSemi, fontSize: 15, color: colors.textFaintOnDark, textAlign: 'center' },
 });

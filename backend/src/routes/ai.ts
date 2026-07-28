@@ -3,6 +3,7 @@ import { requireAuth } from '../middleware/auth.js';
 import * as library from '../services/libraryService.js';
 import { generateReminderMessage, generateSupportReply, type UserContext } from '../services/llmService.js';
 import { getStoryNarrative, getStoryAudioMp3 } from '../services/storyContentService.js';
+import { getStory, resolveStoryAudioUrl } from '../lib/storyCatalog.js';
 import * as auth from '../services/authService.js';
 import { schemas } from '../lib/schemas.js';
 
@@ -46,9 +47,14 @@ export async function registerAiRoutes(app: FastifyInstance) {
         .header('Cache-Control', 'private, max-age=86400')
         .send(buffer);
     } catch (e) {
+      // Live TTS failed (e.g. no key in production). Fall back to the pre-rendered
+      // static MP3 if one exists instead of surfacing a raw 503 as "broken".
+      const story = getStory(id);
+      const staticUrl = story ? resolveStoryAudioUrl(story, part) : null;
+      if (staticUrl) return reply.redirect(staticUrl, 302);
       const msg = e instanceof Error ? e.message : 'Audio generation failed';
       req.log.error({ err: msg, storyId: id, part }, 'story audio failed');
-      return reply.code(503).send({ error: msg });
+      return reply.code(503).send({ error: 'Audio temporarily unavailable', retryable: true });
     }
   });
 

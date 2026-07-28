@@ -18,10 +18,38 @@ import Svg, {
  * react-native-svg AnimatedProps or moti/reanimated if you want the full set.
  */
 const AG = Animated.createAnimatedComponent(G);
+const AEllipse = Animated.createAnimatedComponent(Ellipse);
 
 export default function GraceDove({ size = 200, wings = 'open', motion = 'float', crop = 'none' }) {
   const t = useRef(new Animated.Value(0)).current;      // 0..1 loop
   const halo = useRef(new Animated.Value(0)).current;    // halo glint rotation 0..1
+  const blink = useRef(new Animated.Value(1)).current;   // eye scaleY: 1 open, ~0.1 shut
+  const flap = useRef(new Animated.Value(0)).current;    // open-wing flap 0..1
+
+  // Eye-blink runs on every screen Grace appears — staggered, ~every 3s.
+  useEffect(() => {
+    const loop = Animated.loop(Animated.sequence([
+      Animated.delay(2600 + Math.random() * 1400),
+      Animated.timing(blink, { toValue: 0.1, duration: 90, useNativeDriver: true }),
+      Animated.timing(blink, { toValue: 1, duration: 110, useNativeDriver: true }),
+    ]));
+    loop.start();
+    return () => loop.stop();
+  }, []);
+
+  // Wing-flap — pages of the open "Bible" wings turning (keep-place / arrival).
+  useEffect(() => {
+    if (motion !== 'flap') return;
+    const loop = Animated.loop(Animated.sequence([
+      Animated.timing(flap, { toValue: 1, duration: 700, easing: Easing.inOut(Easing.ease), useNativeDriver: true }),
+      Animated.timing(flap, { toValue: 0, duration: 700, easing: Easing.inOut(Easing.ease), useNativeDriver: true }),
+    ]));
+    loop.start();
+    return () => loop.stop();
+  }, [motion]);
+
+  const flapL = flap.interpolate({ inputRange: [0, 1], outputRange: ['0deg', '-16deg'] });
+  const flapR = flap.interpolate({ inputRange: [0, 1], outputRange: ['0deg', '16deg'] });
 
   useEffect(() => {
     let anim;
@@ -63,6 +91,8 @@ export default function GraceDove({ size = 200, wings = 'open', motion = 'float'
     ];
   } else if (motion === 'dim') {
     transform = [{ scale: t.interpolate({ inputRange: [0, 1], outputRange: [1, 1.03] }) }];
+  } else if (motion === 'flap') {
+    transform = [{ translateY: flap.interpolate({ inputRange: [0, 1], outputRange: [0, -8] }) }];
   }
 
   const haloBaseOpacity = motion === 'dim' ? 0.45 : 1;
@@ -73,6 +103,7 @@ export default function GraceDove({ size = 200, wings = 'open', motion = 'float'
   const isLoading = motion === 'loading';
 
   const cropHead = crop === 'head';
+  const openWings = wings === 'open' || motion === 'flap'; // flap implies open wings
   const viewBox = cropHead ? '128 96 184 166' : '0 0 440 430';
   const height = cropHead ? Math.round(size * 0.902) : Math.round(size * 0.977);
 
@@ -114,21 +145,21 @@ export default function GraceDove({ size = 200, wings = 'open', motion = 'float'
           </AG>
         ) : null}
 
-        {/* Wings */}
-        {!cropHead && wings === 'open' ? (
+        {/* Wings (open) — each flaps about its shoulder joint when motion="flap" */}
+        {!cropHead && openWings ? (
           <>
-            <G>
+            <AG origin="172, 245" style={{ transform: [{ rotate: flapL }] }}>
               <Path d="M 172 245 C 118 218 52 214 28 236 C 6 256 8 316 36 344 C 66 372 132 366 176 336 Z" fill="url(#wing)" />
               <Line x1="54" y1="290" x2="140" y2="256" stroke="#cbbfa8" strokeWidth="4" strokeLinecap="round" opacity="0.7" />
               <Line x1="58" y1="308" x2="140" y2="274" stroke="#cbbfa8" strokeWidth="4" strokeLinecap="round" opacity="0.7" />
               <Line x1="64" y1="326" x2="138" y2="296" stroke="#cbbfa8" strokeWidth="4" strokeLinecap="round" opacity="0.7" />
-            </G>
-            <G>
+            </AG>
+            <AG origin="268, 245" style={{ transform: [{ rotate: flapR }] }}>
               <Path d="M 268 245 C 322 218 388 214 412 236 C 434 256 432 316 404 344 C 374 372 308 366 264 336 Z" fill="url(#wing)" />
               <Line x1="386" y1="290" x2="300" y2="256" stroke="#cbbfa8" strokeWidth="4" strokeLinecap="round" opacity="0.7" />
               <Line x1="382" y1="308" x2="300" y2="274" stroke="#cbbfa8" strokeWidth="4" strokeLinecap="round" opacity="0.7" />
               <Line x1="376" y1="326" x2="302" y2="296" stroke="#cbbfa8" strokeWidth="4" strokeLinecap="round" opacity="0.7" />
-            </G>
+            </AG>
           </>
         ) : null}
 
@@ -156,9 +187,9 @@ export default function GraceDove({ size = 200, wings = 'open', motion = 'float'
 
         {/* Head + face */}
         <Circle cx="220" cy="185" r="64" fill="url(#head)" />
-        <Ellipse cx="194" cy="188" rx="10.5" ry="13.5" fill="#20211f" />
+        <AEllipse cx="194" cy="188" rx="10.5" ry="13.5" fill="#20211f" origin="194, 188" style={{ transform: [{ scaleY: blink }] }} />
         <Circle cx="191" cy="183" r="3.5" fill="#fff" />
-        <Ellipse cx="246" cy="188" rx="10.5" ry="13.5" fill="#20211f" />
+        <AEllipse cx="246" cy="188" rx="10.5" ry="13.5" fill="#20211f" origin="246, 188" style={{ transform: [{ scaleY: blink }] }} />
         <Circle cx="243" cy="183" r="3.5" fill="#fff" />
         <Path d="M 220 205 C 210 205 206 214 212 221 C 216 225 224 225 228 221 C 234 214 230 205 220 205 Z" fill="#d99b4c" />
       </Svg>

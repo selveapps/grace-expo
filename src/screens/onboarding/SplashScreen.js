@@ -60,7 +60,7 @@ export default function SplashScreen({ navigation }) {
   const rise = (v, from = 16) => ({ opacity: v, transform: [{ translateY: v.interpolate({ inputRange: [0, 1], outputRange: [from, 0] }) }] });
 
   return (
-    <Screen gradient={['#FFFDF9', '#FDF6E4', '#F4E8CE']} style={styles.wrap}>
+    <Screen gradient={['#FFFDF9', '#FDF6E4', '#F4E8CE']} style={styles.wrap} ambient>
       <Dust x={50} size={5} delay={0} drift={6200} />
       <Dust x={120} size={4} delay={1500} drift={7400} />
       <Dust x={210} size={7} delay={800} drift={6800} />

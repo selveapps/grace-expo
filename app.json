@@ -12,9 +12,11 @@
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "scheme": "grace",
+    "icon": "./assets/icon.png",
     "splash": {
-      "backgroundColor": "#241a12",
-      "resizeMode": "contain"
+      "backgroundColor": "#3a2c22",
+      "resizeMode": "contain",
+      "image": "./assets/icon.png"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -22,8 +24,12 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.selveapps.grace",
+      "icon": "./assets/icon.png",
       "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "UIBackgroundModes": [
+          "audio"
+        ]
       }
     },
     "android": {

@@ -25,13 +25,13 @@ export default function WelcomeScreen({ navigation }) {
   const rise = (v, from = 16) => ({ opacity: v, transform: [{ translateY: v.interpolate({ inputRange: [0, 1], outputRange: [from, 0] }) }] });
 
   return (
-    <Screen bg={colors.ivory} style={styles.wrap}>
+    <Screen bg={colors.ivory} style={styles.wrap} ambient>
       <Animated.View style={[styles.center, { opacity: dove }]}>
         <Animated.View style={{ transform: [{ scale: dove.interpolate({ inputRange: [0, 1], outputRange: [1.12, 1] }) }] }}>
           <GraceDove size={150} wings="folded" motion="breathe" />
         </Animated.View>
         <Animated.Text style={[styles.title, rise(text)]}>Welcome. I'm Grace.</Animated.Text>
-        <Animated.Text style={[styles.sub, rise(text, 12)]}>I'll keep your place — every day, right where you left it.</Animated.Text>
+        <Animated.Text style={[styles.sub, rise(text, 12)]}>I'll keep your place, every day, right where you left it.</Animated.Text>
       </Animated.View>
       <Animated.View style={rise(cta, 22)}>
         <PrimaryButton label="Continue" onPress={() => navigation.navigate('Name')} />

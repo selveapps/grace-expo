@@ -40,7 +40,7 @@ export default function ManageSubscriptionScreen({ navigation }) {
   const active = sub.status === 'trialing' || sub.status === 'active' || sub.status === 'canceled';
 
   return (
-    <Screen bg={colors.ivory} edges={['top']} style={{ paddingHorizontal: 22, paddingTop: 6 }}>
+    <Screen bg={colors.ivory} edges={['top']} style={{ paddingHorizontal: 22, paddingTop: 6 }} ambient>
       <Pressable onPress={() => navigation.goBack()}><Text style={styles.back}>‹ You</Text></Pressable>
       <Text style={styles.h1}>Subscription</Text>
 

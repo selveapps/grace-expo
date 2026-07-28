@@ -43,7 +43,7 @@ export default function PreferencesScreen({ navigation }) {
   const sampleInk = profile.readingTheme === 'night' ? '#F3E9D6' : colors.ink;
 
   return (
-    <Screen bg={colors.ivory} edges={['top']} style={{ paddingHorizontal: 22, paddingTop: 6 }}>
+    <Screen bg={colors.ivory} edges={['top']} style={{ paddingHorizontal: 22, paddingTop: 6 }} ambient>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Pressable onPress={() => navigation.goBack()}><Text style={styles.back}>‹ Settings</Text></Pressable>
         <Text style={styles.h1}>Preferences</Text>
