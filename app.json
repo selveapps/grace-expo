@@ -25,6 +25,7 @@
       "supportsTablet": true,
       "bundleIdentifier": "com.selveapps.grace",
       "icon": "./assets/icon.png",
+      "usesAppleSignIn": true,
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
         "UIBackgroundModes": [
@@ -35,6 +36,9 @@
     "android": {
       "package": "com.selveapps.grace"
     },
+    "plugins": [
+      "expo-apple-authentication"
+    ],
     "extra": {
       "eas": {
         "projectId": "0683c24c-9b77-4f1e-a9ec-54d6105dcb0c"

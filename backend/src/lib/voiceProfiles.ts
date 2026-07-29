@@ -23,9 +23,19 @@ export const VOICE_STYLE: Record<string, VoiceSettings> = {
 const GRACE_VOICE = 'pFZP5JQG7iQjIQuC4Bku'; // "Lily" — British, warm, velvety narrator
 const TEA_VOICE = 'FGY2WhTYpPnrIDTdsKH5'; // "Laura" — young, sassy (social-media energy)
 
+/**
+ * Voice ids are pasted into .env with trailing "# which voice this is" notes.
+ * Node's --env-file strips those, but Railway/other loaders may not, and a voice
+ * id with a comment glued on 404s at the API. Take the first token, always.
+ */
+function voiceId(raw: string | undefined, fallback: string): string {
+  const cleaned = raw?.split('#')[0].trim();
+  return cleaned || fallback;
+}
+
 export const VOICES: Record<string, string | undefined> = {
-  grace: process.env.ELEVENLABS_DEFAULT_VOICE || GRACE_VOICE,
-  tea: process.env.ELEVENLABS_TEA_VOICE || TEA_VOICE,
+  grace: voiceId(process.env.ELEVENLABS_DEFAULT_VOICE, GRACE_VOICE),
+  tea: voiceId(process.env.ELEVENLABS_TEA_VOICE, TEA_VOICE),
 };
 
 export function pickVoice({
