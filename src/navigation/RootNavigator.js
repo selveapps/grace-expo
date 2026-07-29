@@ -12,6 +12,7 @@ import VerseScreen from '../screens/onboarding/VerseScreen';
 import ReflectionScreen from '../screens/onboarding/ReflectionScreen';
 import StoriesPreviewScreen from '../screens/onboarding/StoriesPreviewScreen';
 import RhythmScreen from '../screens/onboarding/RhythmScreen';
+import ReviewScreen from '../screens/onboarding/ReviewScreen';
 import SignInScreen from '../screens/onboarding/SignInScreen';
 import PreparingScreen from '../screens/onboarding/PreparingScreen';
 import PaywallScreen from '../screens/onboarding/PaywallScreen';
@@ -40,12 +41,14 @@ export default function RootNavigator() {
       <Stack.Screen name="Verse" component={VerseScreen} />
       <Stack.Screen name="Reflection" component={ReflectionScreen} />
       <Stack.Screen name="StoriesPreview" component={StoriesPreviewScreen} />
+      <Stack.Screen name="Review" component={ReviewScreen} />
+      {/* Rhythm is out of the onboarding flow but still reachable from You -> Reminders */}
       <Stack.Screen name="Rhythm" component={RhythmScreen} />
       <Stack.Screen name="SignIn" component={SignInScreen} />
       <Stack.Screen name="Preparing" component={PreparingScreen} />
       <Stack.Screen name="Paywall" component={PaywallScreen} />
-      <Stack.Screen name="Confirmation" component={ConfirmationScreen} />
-      <Stack.Screen name="App" component={Tabs} />
+      <Stack.Screen name="Confirmation" component={ConfirmationScreen} options={{ animation: 'fade', animationDuration: 420 }} />
+      <Stack.Screen name="App" component={Tabs} options={{ animation: 'fade', animationDuration: 520 }} />
     </Stack.Navigator>
   );
 }
