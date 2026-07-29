@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { View, Text, StyleSheet, Pressable, Modal, ScrollView, Share } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
 import GraceDove from '../../components/GraceDove';
 import Waveform from '../../components/Waveform';
-import Icon from '../../components/Icon';
+import GIcon from '../../components/GIcon';
 import { AudioService, StoryService } from '../../services';
 import { colors, fonts, radius } from '../../theme';
 
@@ -12,17 +12,90 @@ const TRACK = 320;
 const fmt = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
 const SPEEDS = [1, 1.25, 1.5, 0.75];
 
-function FooterButton({ icon, label, onPress, active, disabled }) {
+function FooterButton({ icon, label, onPress, active, disabled, filled }) {
   return (
     <Pressable
       onPress={disabled ? undefined : onPress}
       disabled={disabled}
       hitSlop={8}
+      accessibilityRole="button"
+      accessibilityLabel={label}
       style={[styles.footerBtn, active && styles.footerBtnActive, disabled && styles.footerDisabled]}
     >
-      <Icon name={icon} size={20} color={active ? colors.gold : colors.onDarkMuted} active={active} />
+      <GIcon name={icon} size={20} color={active ? colors.gold : colors.onDarkMuted} filled={filled} />
       <Text style={[styles.footerLabel, active && styles.footerLabelActive]}>{label}</Text>
     </Pressable>
+  );
+}
+
+/**
+ * The transcript sheet. `tr.text` is the render's own text, so it is what the
+ * audio actually says. When the render captured word timings we highlight the
+ * current line and let her tap one to seek there, which is what makes a
+ * transcript feel accurate rather than decorative.
+ */
+function TranscriptSheet({ visible, onClose, tr, position, onSeek }) {
+  const scrollRef = useRef(null);
+  const offsets = useRef({});
+
+  // Split into sentences so a "line" is a tappable unit with a known start time.
+  const lines = useMemo(() => {
+    if (!tr?.text) return [];
+    const sentences = tr.text.match(/[^.!?]+[.!?]*\s*/g) || [tr.text];
+    if (!tr.words?.length) return sentences.map((t) => ({ text: t.trim(), start: null, end: null }));
+
+    let cursor = 0;
+    return sentences.map((sentence) => {
+      const count = sentence.trim().split(/\s+/).filter(Boolean).length;
+      const slice = tr.words.slice(cursor, cursor + count);
+      cursor += count;
+      return {
+        text: sentence.trim(),
+        start: slice.length ? slice[0].start : null,
+        end: slice.length ? slice[slice.length - 1].end : null,
+      };
+    });
+  }, [tr]);
+
+  const activeLine = lines.findIndex((l) => l.start != null && position >= l.start && position < l.end);
+
+  // Keep the active line in view without scrollIntoView: measure each line.
+  useEffect(() => {
+    if (!visible || activeLine < 0) return;
+    const y = offsets.current[activeLine];
+    if (y != null) scrollRef.current?.scrollTo({ y: Math.max(0, y - 80), animated: true });
+  }, [activeLine, visible]);
+
+  return (
+    <Modal visible={visible} animationType="slide" transparent onRequestClose={onClose}>
+      <View style={styles.modalBackdrop}>
+        <View style={styles.modalCard}>
+          <Text style={styles.modalTitle}>Transcript</Text>
+          {tr?.ref ? <Text style={styles.modalRef}>Retold from {tr.ref}</Text> : null}
+          <ScrollView ref={scrollRef} style={styles.modalScroll}>
+            {lines.length === 0 ? (
+              <Text style={styles.modalEmpty}>The transcript isn’t ready for this story yet.</Text>
+            ) : (
+              lines.map((line, i) => (
+                <Pressable
+                  key={i}
+                  onLayout={(e) => { offsets.current[i] = e.nativeEvent.layout.y; }}
+                  onPress={line.start != null ? () => { Haptics.selectionAsync(); onSeek(line.start); } : undefined}
+                  disabled={line.start == null}
+                >
+                  <Text style={[styles.modalLine, i === activeLine && styles.modalLineActive]}>
+                    {line.text}
+                  </Text>
+                </Pressable>
+              ))
+            )}
+          </ScrollView>
+          <Pressable onPress={onClose} style={styles.modalClose} hitSlop={8}>
+            <Text style={styles.modalCloseText}>Close</Text>
+          </Pressable>
+        </View>
+      </View>
+    </Modal>
   );
 }
 
@@ -32,6 +105,7 @@ export default function PlayerScreen({ route, navigation }) {
   const [st, setSt] = useState(AudioService.getState());
   const [showTranscript, setShowTranscript] = useState(false);
   const [savedThis, setSavedThis] = useState(false);
+  const [tr, setTr] = useState(null);
 
   useEffect(() => {
     let alive = true;
@@ -48,6 +122,14 @@ export default function PlayerScreen({ route, navigation }) {
       AudioService.pause();
     };
   }, [id]);
+
+  const part = st.part || 1;
+  useEffect(() => {
+    let alive = true;
+    setTr(null);
+    StoryService.getTranscript(id, part).then((t) => { if (alive) setTr(t); });
+    return () => { alive = false; };
+  }, [id, part]);
 
   const loading = st.status === 'loading';
   const errored = st.status === 'error';
@@ -89,6 +171,11 @@ export default function PlayerScreen({ route, navigation }) {
 
   const done = st.status === 'completed';
   const progress = st.duration ? st.position / st.duration : 0;
+  const remaining = Math.max(0, st.duration - st.position);
+  // The clock she will actually finish at. Quietly premium, and useful at night.
+  const endsAt = st.duration
+    ? new Date(Date.now() + remaining * 1000).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })
+    : null;
 
   if (loading) {
     return (
@@ -102,7 +189,9 @@ export default function PlayerScreen({ route, navigation }) {
   return (
     <Screen gradient={['#3A2C22', '#2B2015']} edges={['top', 'bottom']} style={styles.wrap}>
       <View style={styles.topBar}>
-        <Pressable onPress={() => navigation.goBack()}><Text style={styles.chev}>▾</Text></Pressable>
+        <Pressable onPress={() => navigation.goBack()} hitSlop={10} accessibilityRole="button" accessibilityLabel="Close player">
+          <GIcon name="chevronDown" size={22} color={colors.onDarkMuted} />
+        </Pressable>
         <Text style={styles.nowPlaying}>{done ? 'FINISHED' : 'NOW PLAYING'}</Text>
         <View style={{ width: 24 }} />
       </View>
@@ -117,45 +206,53 @@ export default function PlayerScreen({ route, navigation }) {
             <Pressable onPress={retry} style={styles.retry} hitSlop={8}><Text style={styles.retryText}>Try again</Text></Pressable>
           </>
         )}
-        {done && <Text style={styles.blessing}>“Well done.” — Grace kept this for you.</Text>}
+        {done && <Text style={styles.blessing}>“Well done.” Grace kept this for you.</Text>}
       </View>
 
       {!done && (
-        <View style={styles.waveWrap}><Waveform width={TRACK} color={colors.gold} height={34} bars={30} /></View>
+        <View style={styles.waveWrap}>
+          <Waveform width={TRACK} color={colors.gold} height={34} bars={30} animate={st.playing} />
+        </View>
       )}
 
       <Pressable onPress={scrub} style={styles.trackWrap}>
         <View style={styles.track}><View style={[styles.fill, { width: progress * TRACK }]} /><View style={[styles.knob, { left: progress * TRACK - 8 }]} /></View>
       </Pressable>
-      <View style={styles.times}><Text style={styles.time}>{fmt(st.position)}</Text><Text style={styles.time}>{fmt(st.duration)}</Text></View>
+      <View style={styles.times}>
+        <Text style={styles.time}>{fmt(st.position)}</Text>
+        <Text style={styles.time}>-{fmt(remaining)}</Text>
+      </View>
+      {endsAt && !done ? <Text style={styles.endsAt}>Ends at {endsAt}</Text> : null}
 
       <View style={styles.controls}>
-        <Pressable onPress={cycleSpeed}><Text style={styles.speed}>{st.rate}×</Text></Pressable>
-        <Pressable onPress={() => skip(-15)}><Text style={styles.skip}>↺15</Text></Pressable>
-        <Pressable onPress={toggle} style={styles.playBtn}><Text style={styles.playIcon}>{st.playing ? '❚❚' : '▶'}</Text></Pressable>
-        <Pressable onPress={() => skip(15)}><Text style={styles.skip}>15↻</Text></Pressable>
+        <Pressable onPress={cycleSpeed} hitSlop={10} accessibilityRole="button" accessibilityLabel={`Playback speed ${st.rate} times`}>
+          <Text style={styles.speed}>{st.rate}×</Text>
+        </Pressable>
+        <Pressable onPress={() => skip(-15)} hitSlop={10} accessibilityRole="button" accessibilityLabel="Back 15 seconds">
+          <GIcon name="back15" size={26} color={colors.onDarkMuted} label="15" />
+        </Pressable>
+        <Pressable onPress={toggle} style={styles.playBtn} accessibilityRole="button" accessibilityLabel={st.playing ? 'Pause' : 'Play'}>
+          <GIcon name={st.playing ? 'pause' : 'play'} size={24} color={colors.espresso} filled={!st.playing} strokeWidth={2.2} />
+        </Pressable>
+        <Pressable onPress={() => skip(15)} hitSlop={10} accessibilityRole="button" accessibilityLabel="Forward 15 seconds">
+          <GIcon name="fwd15" size={26} color={colors.onDarkMuted} label="15" />
+        </Pressable>
         <View style={{ width: 34 }} />
       </View>
 
       <View style={styles.footer}>
         <FooterButton icon={savedThis ? 'check' : 'download'} label={savedThis ? 'Saved' : 'Save'} active={savedThis} onPress={saveThis} />
         <FooterButton icon="share" label="Share quote" onPress={shareQuote} />
-        <FooterButton icon="text" label="Transcript" disabled={!st.narrative} onPress={() => { Haptics.selectionAsync(); setShowTranscript(true); }} />
+        <FooterButton icon="transcript" label="Transcript" disabled={!tr?.text} onPress={() => { Haptics.selectionAsync(); setShowTranscript(true); }} />
       </View>
 
-      <Modal visible={showTranscript} animationType="slide" transparent onRequestClose={() => setShowTranscript(false)}>
-        <View style={styles.modalBackdrop}>
-          <View style={styles.modalCard}>
-            <Text style={styles.modalTitle}>Transcript</Text>
-            <ScrollView style={styles.modalScroll}>
-              <Text style={styles.modalBody}>{st.narrative || 'No transcript yet.'}</Text>
-            </ScrollView>
-            <Pressable onPress={() => setShowTranscript(false)} style={styles.modalClose}>
-              <Text style={styles.modalCloseText}>Close</Text>
-            </Pressable>
-          </View>
-        </View>
-      </Modal>
+      <TranscriptSheet
+        visible={showTranscript}
+        onClose={() => setShowTranscript(false)}
+        tr={tr}
+        position={st.position}
+        onSeek={(t) => AudioService.seek(t)}
+      />
     </Screen>
   );
 }
@@ -163,27 +260,25 @@ export default function PlayerScreen({ route, navigation }) {
 const styles = StyleSheet.create({
   wrap: { paddingHorizontal: 26, paddingTop: 8, paddingBottom: 20 },
   topBar: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
-  chev: { fontSize: 22, color: colors.onDarkMuted },
   nowPlaying: { fontFamily: fonts.sansSemi, fontSize: 12, letterSpacing: 2, color: colors.textFaintOnDark },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
   title: { fontFamily: fonts.serif, fontSize: 30, color: colors.onDark, marginTop: 16, textAlign: 'center' },
-  sub: { fontFamily: fonts.sans, fontSize: 14, color: colors.textFaintOnDark, marginTop: 4 },
-  error: { fontFamily: fonts.sans, fontSize: 13, color: '#E8A598', marginTop: 10, textAlign: 'center', paddingHorizontal: 24 },
-  retry: { marginTop: 14, paddingHorizontal: 22, paddingVertical: 10, borderRadius: radius.pill, backgroundColor: 'rgba(230,207,148,0.18)' },
-  retryText: { fontFamily: fonts.sansSemi, fontSize: 14, color: colors.gold },
+  sub: { fontFamily: fonts.sans, fontSize: 16, lineHeight: 24, color: colors.textFaintOnDark, marginTop: 4 },
+  error: { fontFamily: fonts.sans, fontSize: 14, lineHeight: 21, color: '#E8A598', marginTop: 10, textAlign: 'center', paddingHorizontal: 24 },
+  retry: { marginTop: 14, minHeight: 44, justifyContent: 'center', paddingHorizontal: 22, borderRadius: radius.pill, backgroundColor: 'rgba(230,207,148,0.18)' },
+  retryText: { fontFamily: fonts.sansSemi, fontSize: 16, color: colors.gold },
   blessing: { fontFamily: fonts.serifItalic, fontSize: 18, color: colors.gold, marginTop: 16, textAlign: 'center', paddingHorizontal: 20 },
   waveWrap: { alignItems: 'center', marginBottom: 14 },
   trackWrap: { paddingVertical: 10 },
   track: { height: 5, borderRadius: 5, backgroundColor: 'rgba(255,255,255,0.18)', justifyContent: 'center' },
   fill: { position: 'absolute', height: 5, borderRadius: 5, backgroundColor: colors.gold },
   knob: { position: 'absolute', width: 16, height: 16, borderRadius: 8, backgroundColor: colors.gold, top: -6 },
-  times: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 12 },
+  times: { flexDirection: 'row', justifyContent: 'space-between' },
   time: { fontFamily: fonts.sans, fontSize: 12, color: colors.textFaintOnDark },
-  controls: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 8 },
+  endsAt: { fontFamily: fonts.sans, fontSize: 12, color: colors.textFaintOnDark, textAlign: 'center', marginTop: 6, opacity: 0.85 },
+  controls: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 14 },
   speed: { fontFamily: fonts.sansSemi, fontSize: 14, color: colors.textFaintOnDark, width: 34 },
-  skip: { fontFamily: fonts.sans, fontSize: 20, color: colors.onDarkMuted },
   playBtn: { width: 66, height: 66, borderRadius: 33, backgroundColor: colors.gold, alignItems: 'center', justifyContent: 'center' },
-  playIcon: { fontSize: 22, color: colors.espresso },
   footer: { flexDirection: 'row', justifyContent: 'center', gap: 14, marginTop: 24 },
   footerBtn: { minWidth: 92, minHeight: 44, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, paddingHorizontal: 14, paddingVertical: 10, borderRadius: radius.pill, backgroundColor: 'rgba(255,255,255,0.08)' },
   footerBtnActive: { backgroundColor: 'rgba(230,207,148,0.18)' },
@@ -191,10 +286,13 @@ const styles = StyleSheet.create({
   footerLabelActive: { color: colors.gold },
   footerDisabled: { opacity: 0.4 },
   modalBackdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.55)', justifyContent: 'flex-end' },
-  modalCard: { backgroundColor: colors.ivory, borderTopLeftRadius: 20, borderTopRightRadius: 20, padding: 22, maxHeight: '70%' },
-  modalTitle: { fontFamily: fonts.serif, fontSize: 24, color: colors.ink, marginBottom: 12 },
+  modalCard: { backgroundColor: colors.sepia, borderTopLeftRadius: 20, borderTopRightRadius: 20, padding: 22, maxHeight: '72%' },
+  modalTitle: { fontFamily: fonts.serif, fontSize: 24, color: colors.ink, marginBottom: 4 },
+  modalRef: { fontFamily: fonts.sansMed, fontSize: 13, color: colors.brassDeep, marginBottom: 12 },
   modalScroll: { marginBottom: 16 },
-  modalBody: { fontFamily: fonts.sans, fontSize: 15, color: colors.textMuted, lineHeight: 23 },
-  modalClose: { alignItems: 'center', paddingVertical: 12 },
-  modalCloseText: { fontFamily: fonts.sansSemi, fontSize: 15, color: colors.brassDeep },
+  modalEmpty: { fontFamily: fonts.sans, fontSize: 16, lineHeight: 24, color: colors.textMuted },
+  modalLine: { fontFamily: fonts.serif, fontSize: 20, lineHeight: 30, color: colors.textMuted, marginBottom: 10 },
+  modalLineActive: { color: colors.ink, backgroundColor: 'rgba(230,207,148,0.35)', borderRadius: 6 },
+  modalClose: { alignItems: 'center', minHeight: 44, justifyContent: 'center' },
+  modalCloseText: { fontFamily: fonts.sansSemi, fontSize: 16, color: colors.brassDeep },
 });
