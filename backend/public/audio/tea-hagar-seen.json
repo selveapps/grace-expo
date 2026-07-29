@@ -1,0 +1,996 @@
+{
+  "kind": "tea",
+  "teaId": "hagar-seen",
+  "mood": "dark",
+  "heat": 2,
+  "text": "Hagar named God herself, out loud, in the desert. Genesis sixteen. Hagar is Sarai's Egyptian handmaid, and she is given to Abram, and when she conceives, the text says her mistress was despised in her eyes, and Sarai deals harshly with her. So Hagar runs. Pregnant, alone, into the wilderness. And the angel of the Lord finds her by a fountain of water in the wilderness, by the way to Shur. And he calls her by name and by station. Hagar, Sarai's maid, whence camest thou? And whither wilt thou go? Two questions. Where have you come from, and where are you going. She answers only the first one, because she does not have an answer to the second. Then she is told she will bear a son, and to call his name Ishmael, because the Lord hath heard thy affliction. And then she does something that, as far as the text shows us, nobody in Scripture had done before her. She calls the name of the Lord that spake unto her, Thou God seest me. She names God. A runaway foreign slave woman in a desert, and she is the one who gets to say it.",
+  "voice": "FGY2WhTYpPnrIDTdsKH5",
+  "words": [
+    {
+      "w": "Hagar",
+      "start": 0,
+      "end": 0.348
+    },
+    {
+      "w": "named",
+      "start": 0.395,
+      "end": 0.592
+    },
+    {
+      "w": "God",
+      "start": 0.639,
+      "end": 0.824
+    },
+    {
+      "w": "herself,",
+      "start": 0.871,
+      "end": 1.451
+    },
+    {
+      "w": "out",
+      "start": 1.498,
+      "end": 1.683
+    },
+    {
+      "w": "loud,",
+      "start": 1.718,
+      "end": 2.101
+    },
+    {
+      "w": "in",
+      "start": 2.206,
+      "end": 2.299
+    },
+    {
+      "w": "the",
+      "start": 2.334,
+      "end": 2.403
+    },
+    {
+      "w": "desert.",
+      "start": 2.438,
+      "end": 2.914
+    },
+    {
+      "w": "Genesis",
+      "start": 3.251,
+      "end": 3.657
+    },
+    {
+      "w": "sixteen.",
+      "start": 3.692,
+      "end": 4.296
+    },
+    {
+      "w": "Hagar",
+      "start": 4.574,
+      "end": 4.876
+    },
+    {
+      "w": "is",
+      "start": 4.923,
+      "end": 4.981
+    },
+    {
+      "w": "Sarai's",
+      "start": 5.016,
+      "end": 5.352
+    },
+    {
+      "w": "Egyptian",
+      "start": 5.41,
+      "end": 5.735
+    },
+    {
+      "w": "handmaid,",
+      "start": 5.782,
+      "end": 6.2
+    },
+    {
+      "w": "and",
+      "start": 6.235,
+      "end": 6.351
+    },
+    {
+      "w": "she",
+      "start": 6.397,
+      "end": 6.49
+    },
+    {
+      "w": "is",
+      "start": 6.536,
+      "end": 6.618
+    },
+    {
+      "w": "given",
+      "start": 6.664,
+      "end": 6.861
+    },
+    {
+      "w": "to",
+      "start": 6.908,
+      "end": 6.978
+    },
+    {
+      "w": "Abram,",
+      "start": 7.059,
+      "end": 7.535
+    },
+    {
+      "w": "and",
+      "start": 7.663,
+      "end": 7.779
+    },
+    {
+      "w": "when",
+      "start": 7.814,
+      "end": 7.953
+    },
+    {
+      "w": "she",
+      "start": 7.988,
+      "end": 8.092
+    },
+    {
+      "w": "conceives,",
+      "start": 8.139,
+      "end": 8.789
+    },
+    {
+      "w": "the",
+      "start": 8.94,
+      "end": 9.044
+    },
+    {
+      "w": "text",
+      "start": 9.079,
+      "end": 9.288
+    },
+    {
+      "w": "says",
+      "start": 9.311,
+      "end": 9.462
+    },
+    {
+      "w": "her",
+      "start": 9.52,
+      "end": 9.601
+    },
+    {
+      "w": "mistress",
+      "start": 9.648,
+      "end": 9.961
+    },
+    {
+      "w": "was",
+      "start": 9.996,
+      "end": 10.101
+    },
+    {
+      "w": "despised",
+      "start": 10.147,
+      "end": 10.577
+    },
+    {
+      "w": "in",
+      "start": 10.612,
+      "end": 10.67
+    },
+    {
+      "w": "her",
+      "start": 10.716,
+      "end": 10.809
+    },
+    {
+      "w": "eyes,",
+      "start": 10.867,
+      "end": 11.262
+    },
+    {
+      "w": "and",
+      "start": 11.447,
+      "end": 11.575
+    },
+    {
+      "w": "Sarai",
+      "start": 11.622,
+      "end": 11.865
+    },
+    {
+      "w": "deals",
+      "start": 11.912,
+      "end": 12.074
+    },
+    {
+      "w": "harshly",
+      "start": 12.12,
+      "end": 12.411
+    },
+    {
+      "w": "with",
+      "start": 12.446,
+      "end": 12.562
+    },
+    {
+      "w": "her.",
+      "start": 12.596,
+      "end": 12.863
+    },
+    {
+      "w": "So",
+      "start": 13.107,
+      "end": 13.235
+    },
+    {
+      "w": "Hagar",
+      "start": 13.293,
+      "end": 13.583
+    },
+    {
+      "w": "runs.",
+      "start": 13.641,
+      "end": 14.129
+    },
+    {
+      "w": "Pregnant,",
+      "start": 14.512,
+      "end": 15
+    },
+    {
+      "w": "alone,",
+      "start": 15.035,
+      "end": 15.464
+    },
+    {
+      "w": "into",
+      "start": 15.499,
+      "end": 15.696
+    },
+    {
+      "w": "the",
+      "start": 15.743,
+      "end": 15.812
+    },
+    {
+      "w": "wilderness.",
+      "start": 15.847,
+      "end": 16.474
+    },
+    {
+      "w": "And",
+      "start": 16.59,
+      "end": 16.695
+    },
+    {
+      "w": "the",
+      "start": 16.73,
+      "end": 16.811
+    },
+    {
+      "w": "angel",
+      "start": 16.881,
+      "end": 17.113
+    },
+    {
+      "w": "of",
+      "start": 17.148,
+      "end": 17.206
+    },
+    {
+      "w": "the",
+      "start": 17.24,
+      "end": 17.31
+    },
+    {
+      "w": "Lord",
+      "start": 17.357,
+      "end": 17.566
+    },
+    {
+      "w": "finds",
+      "start": 17.624,
+      "end": 17.902
+    },
+    {
+      "w": "her",
+      "start": 17.937,
+      "end": 18.03
+    },
+    {
+      "w": "by",
+      "start": 18.076,
+      "end": 18.158
+    },
+    {
+      "w": "a",
+      "start": 18.204,
+      "end": 18.227
+    },
+    {
+      "w": "fountain",
+      "start": 18.297,
+      "end": 18.576
+    },
+    {
+      "w": "of",
+      "start": 18.61,
+      "end": 18.657
+    },
+    {
+      "w": "water",
+      "start": 18.727,
+      "end": 18.935
+    },
+    {
+      "w": "in",
+      "start": 18.959,
+      "end": 19.017
+    },
+    {
+      "w": "the",
+      "start": 19.04,
+      "end": 19.11
+    },
+    {
+      "w": "wilderness,",
+      "start": 19.144,
+      "end": 19.748
+    },
+    {
+      "w": "by",
+      "start": 19.934,
+      "end": 20.05
+    },
+    {
+      "w": "the",
+      "start": 20.096,
+      "end": 20.166
+    },
+    {
+      "w": "way",
+      "start": 20.213,
+      "end": 20.352
+    },
+    {
+      "w": "to",
+      "start": 20.41,
+      "end": 20.48
+    },
+    {
+      "w": "Shur.",
+      "start": 20.538,
+      "end": 20.921
+    },
+    {
+      "w": "And",
+      "start": 21.107,
+      "end": 21.234
+    },
+    {
+      "w": "he",
+      "start": 21.281,
+      "end": 21.327
+    },
+    {
+      "w": "calls",
+      "start": 21.374,
+      "end": 21.583
+    },
+    {
+      "w": "her",
+      "start": 21.617,
+      "end": 21.687
+    },
+    {
+      "w": "by",
+      "start": 21.722,
+      "end": 21.792
+    },
+    {
+      "w": "name",
+      "start": 21.861,
+      "end": 22.059
+    },
+    {
+      "w": "and",
+      "start": 22.093,
+      "end": 22.186
+    },
+    {
+      "w": "by",
+      "start": 22.221,
+      "end": 22.302
+    },
+    {
+      "w": "station.",
+      "start": 22.36,
+      "end": 22.86
+    },
+    {
+      "w": "Hagar,",
+      "start": 23.196,
+      "end": 23.533
+    },
+    {
+      "w": "Sarai's",
+      "start": 23.556,
+      "end": 23.858
+    },
+    {
+      "w": "maid,",
+      "start": 23.904,
+      "end": 24.253
+    },
+    {
+      "w": "whence",
+      "start": 24.369,
+      "end": 24.589
+    },
+    {
+      "w": "camest",
+      "start": 24.624,
+      "end": 24.903
+    },
+    {
+      "w": "thou?",
+      "start": 24.938,
+      "end": 25.309
+    },
+    {
+      "w": "And",
+      "start": 25.437,
+      "end": 25.576
+    },
+    {
+      "w": "whither",
+      "start": 25.657,
+      "end": 25.913
+    },
+    {
+      "w": "wilt",
+      "start": 25.959,
+      "end": 26.11
+    },
+    {
+      "w": "thou",
+      "start": 26.145,
+      "end": 26.273
+    },
+    {
+      "w": "go?",
+      "start": 26.331,
+      "end": 26.76
+    },
+    {
+      "w": "Two",
+      "start": 27.283,
+      "end": 27.422
+    },
+    {
+      "w": "questions.",
+      "start": 27.469,
+      "end": 28.084
+    },
+    {
+      "w": "Where",
+      "start": 28.235,
+      "end": 28.432
+    },
+    {
+      "w": "have",
+      "start": 28.467,
+      "end": 28.595
+    },
+    {
+      "w": "you",
+      "start": 28.641,
+      "end": 28.734
+    },
+    {
+      "w": "come",
+      "start": 28.792,
+      "end": 28.943
+    },
+    {
+      "w": "from,",
+      "start": 28.978,
+      "end": 29.175
+    },
+    {
+      "w": "and",
+      "start": 29.21,
+      "end": 29.315
+    },
+    {
+      "w": "where",
+      "start": 29.384,
+      "end": 29.616
+    },
+    {
+      "w": "are",
+      "start": 29.651,
+      "end": 29.767
+    },
+    {
+      "w": "you",
+      "start": 29.802,
+      "end": 29.883
+    },
+    {
+      "w": "going.",
+      "start": 29.93,
+      "end": 30.383
+    },
+    {
+      "w": "She",
+      "start": 30.661,
+      "end": 30.766
+    },
+    {
+      "w": "answers",
+      "start": 30.812,
+      "end": 31.091
+    },
+    {
+      "w": "only",
+      "start": 31.126,
+      "end": 31.3
+    },
+    {
+      "w": "the",
+      "start": 31.346,
+      "end": 31.416
+    },
+    {
+      "w": "first",
+      "start": 31.451,
+      "end": 31.66
+    },
+    {
+      "w": "one,",
+      "start": 31.718,
+      "end": 31.927
+    },
+    {
+      "w": "because",
+      "start": 31.985,
+      "end": 32.24
+    },
+    {
+      "w": "she",
+      "start": 32.263,
+      "end": 32.345
+    },
+    {
+      "w": "does",
+      "start": 32.38,
+      "end": 32.496
+    },
+    {
+      "w": "not",
+      "start": 32.53,
+      "end": 32.647
+    },
+    {
+      "w": "have",
+      "start": 32.693,
+      "end": 32.844
+    },
+    {
+      "w": "an",
+      "start": 32.867,
+      "end": 32.914
+    },
+    {
+      "w": "answer",
+      "start": 32.948,
+      "end": 33.169
+    },
+    {
+      "w": "to",
+      "start": 33.215,
+      "end": 33.262
+    },
+    {
+      "w": "the",
+      "start": 33.32,
+      "end": 33.39
+    },
+    {
+      "w": "second.",
+      "start": 33.424,
+      "end": 33.912
+    },
+    {
+      "w": "Then",
+      "start": 34.353,
+      "end": 34.516
+    },
+    {
+      "w": "she",
+      "start": 34.574,
+      "end": 34.667
+    },
+    {
+      "w": "is",
+      "start": 34.713,
+      "end": 34.783
+    },
+    {
+      "w": "told",
+      "start": 34.829,
+      "end": 35.05
+    },
+    {
+      "w": "she",
+      "start": 35.085,
+      "end": 35.178
+    },
+    {
+      "w": "will",
+      "start": 35.212,
+      "end": 35.34
+    },
+    {
+      "w": "bear",
+      "start": 35.375,
+      "end": 35.514
+    },
+    {
+      "w": "a",
+      "start": 35.549,
+      "end": 35.572
+    },
+    {
+      "w": "son,",
+      "start": 35.619,
+      "end": 35.92
+    },
+    {
+      "w": "and",
+      "start": 35.955,
+      "end": 36.06
+    },
+    {
+      "w": "to",
+      "start": 36.106,
+      "end": 36.164
+    },
+    {
+      "w": "call",
+      "start": 36.222,
+      "end": 36.42
+    },
+    {
+      "w": "his",
+      "start": 36.478,
+      "end": 36.594
+    },
+    {
+      "w": "name",
+      "start": 36.664,
+      "end": 36.838
+    },
+    {
+      "w": "Ishmael,",
+      "start": 36.873,
+      "end": 37.256
+    },
+    {
+      "w": "because",
+      "start": 37.29,
+      "end": 37.569
+    },
+    {
+      "w": "the",
+      "start": 37.604,
+      "end": 37.674
+    },
+    {
+      "w": "Lord",
+      "start": 37.72,
+      "end": 37.906
+    },
+    {
+      "w": "hath",
+      "start": 37.952,
+      "end": 38.092
+    },
+    {
+      "w": "heard",
+      "start": 38.126,
+      "end": 38.289
+    },
+    {
+      "w": "thy",
+      "start": 38.324,
+      "end": 38.428
+    },
+    {
+      "w": "affliction.",
+      "start": 38.463,
+      "end": 39.009
+    },
+    {
+      "w": "And",
+      "start": 39.287,
+      "end": 39.403
+    },
+    {
+      "w": "then",
+      "start": 39.438,
+      "end": 39.554
+    },
+    {
+      "w": "she",
+      "start": 39.589,
+      "end": 39.682
+    },
+    {
+      "w": "does",
+      "start": 39.729,
+      "end": 39.88
+    },
+    {
+      "w": "something",
+      "start": 39.914,
+      "end": 40.239
+    },
+    {
+      "w": "that,",
+      "start": 40.286,
+      "end": 40.564
+    },
+    {
+      "w": "as",
+      "start": 40.599,
+      "end": 40.739
+    },
+    {
+      "w": "far",
+      "start": 40.808,
+      "end": 40.948
+    },
+    {
+      "w": "as",
+      "start": 40.982,
+      "end": 41.052
+    },
+    {
+      "w": "the",
+      "start": 41.087,
+      "end": 41.157
+    },
+    {
+      "w": "text",
+      "start": 41.191,
+      "end": 41.412
+    },
+    {
+      "w": "shows",
+      "start": 41.435,
+      "end": 41.644
+    },
+    {
+      "w": "us,",
+      "start": 41.714,
+      "end": 42.027
+    },
+    {
+      "w": "nobody",
+      "start": 42.236,
+      "end": 42.527
+    },
+    {
+      "w": "in",
+      "start": 42.561,
+      "end": 42.619
+    },
+    {
+      "w": "Scripture",
+      "start": 42.654,
+      "end": 42.979
+    },
+    {
+      "w": "had",
+      "start": 43.014,
+      "end": 43.119
+    },
+    {
+      "w": "done",
+      "start": 43.154,
+      "end": 43.304
+    },
+    {
+      "w": "before",
+      "start": 43.339,
+      "end": 43.595
+    },
+    {
+      "w": "her.",
+      "start": 43.63,
+      "end": 43.92
+    },
+    {
+      "w": "She",
+      "start": 44.256,
+      "end": 44.373
+    },
+    {
+      "w": "calls",
+      "start": 44.419,
+      "end": 44.64
+    },
+    {
+      "w": "the",
+      "start": 44.686,
+      "end": 44.756
+    },
+    {
+      "w": "name",
+      "start": 44.802,
+      "end": 44.941
+    },
+    {
+      "w": "of",
+      "start": 44.965,
+      "end": 45.023
+    },
+    {
+      "w": "the",
+      "start": 45.069,
+      "end": 45.139
+    },
+    {
+      "w": "Lord",
+      "start": 45.174,
+      "end": 45.336
+    },
+    {
+      "w": "that",
+      "start": 45.371,
+      "end": 45.499
+    },
+    {
+      "w": "spake",
+      "start": 45.545,
+      "end": 45.801
+    },
+    {
+      "w": "unto",
+      "start": 45.836,
+      "end": 45.975
+    },
+    {
+      "w": "her,",
+      "start": 46.021,
+      "end": 46.253
+    },
+    {
+      "w": "Thou",
+      "start": 46.288,
+      "end": 46.486
+    },
+    {
+      "w": "God",
+      "start": 46.567,
+      "end": 46.753
+    },
+    {
+      "w": "seest",
+      "start": 46.799,
+      "end": 47.066
+    },
+    {
+      "w": "me.",
+      "start": 47.124,
+      "end": 47.333
+    },
+    {
+      "w": "She",
+      "start": 47.461,
+      "end": 47.589
+    },
+    {
+      "w": "names",
+      "start": 47.647,
+      "end": 47.844
+    },
+    {
+      "w": "God.",
+      "start": 47.879,
+      "end": 48.227
+    },
+    {
+      "w": "A",
+      "start": 48.471,
+      "end": 48.541
+    },
+    {
+      "w": "runaway",
+      "start": 48.61,
+      "end": 48.889
+    },
+    {
+      "w": "foreign",
+      "start": 48.959,
+      "end": 49.214
+    },
+    {
+      "w": "slave",
+      "start": 49.249,
+      "end": 49.481
+    },
+    {
+      "w": "woman",
+      "start": 49.516,
+      "end": 49.713
+    },
+    {
+      "w": "in",
+      "start": 49.748,
+      "end": 49.806
+    },
+    {
+      "w": "a",
+      "start": 49.841,
+      "end": 49.876
+    },
+    {
+      "w": "desert,",
+      "start": 49.911,
+      "end": 50.247
+    },
+    {
+      "w": "and",
+      "start": 50.282,
+      "end": 50.398
+    },
+    {
+      "w": "she",
+      "start": 50.468,
+      "end": 50.607
+    },
+    {
+      "w": "is",
+      "start": 50.654,
+      "end": 50.723
+    },
+    {
+      "w": "the",
+      "start": 50.77,
+      "end": 50.839
+    },
+    {
+      "w": "one",
+      "start": 50.897,
+      "end": 51.014
+    },
+    {
+      "w": "who",
+      "start": 51.037,
+      "end": 51.13
+    },
+    {
+      "w": "gets",
+      "start": 51.164,
+      "end": 51.304
+    },
+    {
+      "w": "to",
+      "start": 51.339,
+      "end": 51.408
+    },
+    {
+      "w": "say",
+      "start": 51.466,
+      "end": 51.606
+    },
+    {
+      "w": "it.",
+      "start": 51.641,
+      "end": 52.058
+    }
+  ],
+  "renderedAt": 1785313320715
+}

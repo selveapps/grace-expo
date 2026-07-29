@@ -1,0 +1,414 @@
+{
+  "kind": "onboarding",
+  "title": "Esther walks in uninvited",
+  "text": "A decree went out across the empire. Every Jew, marked for death. And a young queen sat safe behind the palace walls, saying nothing. Mordecai sent word. Who knows but that you have come to your royal place for such a time as this. To approach the king uninvited meant death. Esther fasted three days, fixed her crown, and stepped into the throne room anyway. The king raised his golden scepter. She lived. This is Grace. Come and hear the rest.",
+  "voice": "pFZP5JQG7iQjIQuC4Bku",
+  "words": [
+    {
+      "w": "A",
+      "start": 0,
+      "end": 0.093
+    },
+    {
+      "w": "decree",
+      "start": 0.197,
+      "end": 0.697
+    },
+    {
+      "w": "went",
+      "start": 0.743,
+      "end": 0.952
+    },
+    {
+      "w": "out",
+      "start": 1.022,
+      "end": 1.335
+    },
+    {
+      "w": "across",
+      "start": 1.498,
+      "end": 2.125
+    },
+    {
+      "w": "the",
+      "start": 2.194,
+      "end": 2.299
+    },
+    {
+      "w": "empire.",
+      "start": 2.368,
+      "end": 3.03
+    },
+    {
+      "w": "Every",
+      "start": 3.692,
+      "end": 4.075
+    },
+    {
+      "w": "Jew,",
+      "start": 4.156,
+      "end": 4.586
+    },
+    {
+      "w": "marked",
+      "start": 4.783,
+      "end": 5.224
+    },
+    {
+      "w": "for",
+      "start": 5.306,
+      "end": 5.433
+    },
+    {
+      "w": "death.",
+      "start": 5.492,
+      "end": 6.002
+    },
+    {
+      "w": "And",
+      "start": 6.42,
+      "end": 6.583
+    },
+    {
+      "w": "a",
+      "start": 6.653,
+      "end": 6.687
+    },
+    {
+      "w": "young",
+      "start": 6.769,
+      "end": 7.001
+    },
+    {
+      "w": "queen",
+      "start": 7.105,
+      "end": 7.523
+    },
+    {
+      "w": "sat",
+      "start": 7.628,
+      "end": 7.848
+    },
+    {
+      "w": "safe",
+      "start": 7.941,
+      "end": 8.231
+    },
+    {
+      "w": "behind",
+      "start": 8.266,
+      "end": 8.545
+    },
+    {
+      "w": "the",
+      "start": 8.591,
+      "end": 8.661
+    },
+    {
+      "w": "palace",
+      "start": 8.696,
+      "end": 9.021
+    },
+    {
+      "w": "walls,",
+      "start": 9.056,
+      "end": 9.613
+    },
+    {
+      "w": "saying",
+      "start": 9.81,
+      "end": 10.228
+    },
+    {
+      "w": "nothing.",
+      "start": 10.31,
+      "end": 10.844
+    },
+    {
+      "w": "Mordecai",
+      "start": 11.413,
+      "end": 11.947
+    },
+    {
+      "w": "sent",
+      "start": 12.028,
+      "end": 12.26
+    },
+    {
+      "w": "word.",
+      "start": 12.33,
+      "end": 12.875
+    },
+    {
+      "w": "Who",
+      "start": 13.444,
+      "end": 13.618
+    },
+    {
+      "w": "knows",
+      "start": 13.677,
+      "end": 13.978
+    },
+    {
+      "w": "but",
+      "start": 14.036,
+      "end": 14.141
+    },
+    {
+      "w": "that",
+      "start": 14.164,
+      "end": 14.269
+    },
+    {
+      "w": "you",
+      "start": 14.303,
+      "end": 14.385
+    },
+    {
+      "w": "have",
+      "start": 14.431,
+      "end": 14.547
+    },
+    {
+      "w": "come",
+      "start": 14.571,
+      "end": 14.768
+    },
+    {
+      "w": "to",
+      "start": 14.803,
+      "end": 14.861
+    },
+    {
+      "w": "your",
+      "start": 14.93,
+      "end": 15.07
+    },
+    {
+      "w": "royal",
+      "start": 15.139,
+      "end": 15.383
+    },
+    {
+      "w": "place",
+      "start": 15.441,
+      "end": 15.813
+    },
+    {
+      "w": "for",
+      "start": 15.848,
+      "end": 15.975
+    },
+    {
+      "w": "such",
+      "start": 16.022,
+      "end": 16.277
+    },
+    {
+      "w": "a",
+      "start": 16.312,
+      "end": 16.335
+    },
+    {
+      "w": "time",
+      "start": 16.393,
+      "end": 16.602
+    },
+    {
+      "w": "as",
+      "start": 16.637,
+      "end": 16.718
+    },
+    {
+      "w": "this.",
+      "start": 16.776,
+      "end": 17.275
+    },
+    {
+      "w": "To",
+      "start": 17.763,
+      "end": 17.879
+    },
+    {
+      "w": "approach",
+      "start": 17.937,
+      "end": 18.32
+    },
+    {
+      "w": "the",
+      "start": 18.378,
+      "end": 18.448
+    },
+    {
+      "w": "king",
+      "start": 18.494,
+      "end": 18.75
+    },
+    {
+      "w": "uninvited",
+      "start": 18.854,
+      "end": 19.528
+    },
+    {
+      "w": "meant",
+      "start": 19.632,
+      "end": 19.922
+    },
+    {
+      "w": "death.",
+      "start": 20.027,
+      "end": 20.549
+    },
+    {
+      "w": "Esther",
+      "start": 21.443,
+      "end": 21.803
+    },
+    {
+      "w": "fasted",
+      "start": 21.861,
+      "end": 22.291
+    },
+    {
+      "w": "three",
+      "start": 22.349,
+      "end": 22.593
+    },
+    {
+      "w": "days,",
+      "start": 22.651,
+      "end": 23.196
+    },
+    {
+      "w": "fixed",
+      "start": 23.429,
+      "end": 23.742
+    },
+    {
+      "w": "her",
+      "start": 23.8,
+      "end": 23.893
+    },
+    {
+      "w": "crown,",
+      "start": 23.951,
+      "end": 24.497
+    },
+    {
+      "w": "and",
+      "start": 24.601,
+      "end": 24.764
+    },
+    {
+      "w": "stepped",
+      "start": 24.845,
+      "end": 25.24
+    },
+    {
+      "w": "into",
+      "start": 25.309,
+      "end": 25.484
+    },
+    {
+      "w": "the",
+      "start": 25.542,
+      "end": 25.623
+    },
+    {
+      "w": "throne",
+      "start": 25.681,
+      "end": 25.994
+    },
+    {
+      "w": "room",
+      "start": 26.029,
+      "end": 26.215
+    },
+    {
+      "w": "anyway.",
+      "start": 26.296,
+      "end": 26.981
+    },
+    {
+      "w": "The",
+      "start": 27.399,
+      "end": 27.515
+    },
+    {
+      "w": "king",
+      "start": 27.573,
+      "end": 27.794
+    },
+    {
+      "w": "raised",
+      "start": 27.875,
+      "end": 28.235
+    },
+    {
+      "w": "his",
+      "start": 28.282,
+      "end": 28.386
+    },
+    {
+      "w": "golden",
+      "start": 28.456,
+      "end": 28.816
+    },
+    {
+      "w": "scepter.",
+      "start": 28.885,
+      "end": 29.559
+    },
+    {
+      "w": "She",
+      "start": 29.86,
+      "end": 30.035
+    },
+    {
+      "w": "lived.",
+      "start": 30.128,
+      "end": 30.72
+    },
+    {
+      "w": "This",
+      "start": 31.207,
+      "end": 31.381
+    },
+    {
+      "w": "is",
+      "start": 31.439,
+      "end": 31.521
+    },
+    {
+      "w": "Grace.",
+      "start": 31.602,
+      "end": 32.287
+    },
+    {
+      "w": "Come",
+      "start": 32.589,
+      "end": 32.809
+    },
+    {
+      "w": "and",
+      "start": 32.833,
+      "end": 32.914
+    },
+    {
+      "w": "hear",
+      "start": 32.984,
+      "end": 33.135
+    },
+    {
+      "w": "the",
+      "start": 33.181,
+      "end": 33.251
+    },
+    {
+      "w": "rest.",
+      "start": 33.309,
+      "end": 34.04
+    }
+  ],
+  "renderedAt": 1785312674011
+}

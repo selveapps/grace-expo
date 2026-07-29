@@ -1,0 +1,951 @@
+{
+  "kind": "tea",
+  "teaId": "widow-oil",
+  "mood": "light",
+  "heat": 1,
+  "text": "A widow with one jar of oil out-earned her debt. Second Kings four, opening scene. A woman comes to Elisha crying, and her situation is this. Her husband is dead, he feared the Lord, and the creditor is coming to take her two sons to be bondmen. Not the furniture. The children. That is the debt system she is trapped in. Elisha asks her, what shall I do for thee? Tell me, what hast thou in the house? And she says, thine handmaid hath not any thing in the house, save a pot of oil. One pot. That is the whole inventory. And he tells her, go borrow thee vessels abroad of all thy neighbours, even empty vessels. Borrow not a few. Then shut the door on yourself and your sons, and start pouring. So she does. And the oil keeps coming. Vessel after vessel, until she says to her son, bring me yet a vessel, and he says, there is not a vessel more. And the oil stayed. She sells it, pays the debt, and lives on the rest. The supply stopped exactly when the containers did.",
+  "voice": "cgSgspJ2msm6clMCkdW9",
+  "words": [
+    {
+      "w": "A",
+      "start": 0,
+      "end": 0.081
+    },
+    {
+      "w": "widow",
+      "start": 0.139,
+      "end": 0.383
+    },
+    {
+      "w": "with",
+      "start": 0.43,
+      "end": 0.58
+    },
+    {
+      "w": "one",
+      "start": 0.639,
+      "end": 0.801
+    },
+    {
+      "w": "jar",
+      "start": 0.848,
+      "end": 1.033
+    },
+    {
+      "w": "of",
+      "start": 1.08,
+      "end": 1.126
+    },
+    {
+      "w": "oil",
+      "start": 1.196,
+      "end": 1.463
+    },
+    {
+      "w": "out-earned",
+      "start": 1.579,
+      "end": 2.055
+    },
+    {
+      "w": "her",
+      "start": 2.101,
+      "end": 2.206
+    },
+    {
+      "w": "debt.",
+      "start": 2.252,
+      "end": 2.612
+    },
+    {
+      "w": "Second",
+      "start": 3.146,
+      "end": 3.413
+    },
+    {
+      "w": "Kings",
+      "start": 3.46,
+      "end": 3.669
+    },
+    {
+      "w": "four,",
+      "start": 3.715,
+      "end": 4.214
+    },
+    {
+      "w": "opening",
+      "start": 4.505,
+      "end": 4.841
+    },
+    {
+      "w": "scene.",
+      "start": 4.911,
+      "end": 5.445
+    },
+    {
+      "w": "A",
+      "start": 6.165,
+      "end": 6.246
+    },
+    {
+      "w": "woman",
+      "start": 6.316,
+      "end": 6.548
+    },
+    {
+      "w": "comes",
+      "start": 6.594,
+      "end": 6.815
+    },
+    {
+      "w": "to",
+      "start": 6.861,
+      "end": 6.908
+    },
+    {
+      "w": "Elisha",
+      "start": 6.966,
+      "end": 7.268
+    },
+    {
+      "w": "crying,",
+      "start": 7.314,
+      "end": 7.895
+    },
+    {
+      "w": "and",
+      "start": 8.231,
+      "end": 8.382
+    },
+    {
+      "w": "her",
+      "start": 8.429,
+      "end": 8.51
+    },
+    {
+      "w": "situation",
+      "start": 8.557,
+      "end": 9.021
+    },
+    {
+      "w": "is",
+      "start": 9.067,
+      "end": 9.149
+    },
+    {
+      "w": "this.",
+      "start": 9.195,
+      "end": 9.671
+    },
+    {
+      "w": "Her",
+      "start": 9.961,
+      "end": 10.077
+    },
+    {
+      "w": "husband",
+      "start": 10.124,
+      "end": 10.414
+    },
+    {
+      "w": "is",
+      "start": 10.461,
+      "end": 10.53
+    },
+    {
+      "w": "dead,",
+      "start": 10.577,
+      "end": 11.006
+    },
+    {
+      "w": "he",
+      "start": 11.296,
+      "end": 11.378
+    },
+    {
+      "w": "feared",
+      "start": 11.447,
+      "end": 11.691
+    },
+    {
+      "w": "the",
+      "start": 11.726,
+      "end": 11.796
+    },
+    {
+      "w": "Lord,",
+      "start": 11.842,
+      "end": 12.144
+    },
+    {
+      "w": "and",
+      "start": 12.167,
+      "end": 12.237
+    },
+    {
+      "w": "the",
+      "start": 12.272,
+      "end": 12.341
+    },
+    {
+      "w": "creditor",
+      "start": 12.388,
+      "end": 12.759
+    },
+    {
+      "w": "is",
+      "start": 12.817,
+      "end": 12.887
+    },
+    {
+      "w": "coming",
+      "start": 12.933,
+      "end": 13.142
+    },
+    {
+      "w": "to",
+      "start": 13.177,
+      "end": 13.235
+    },
+    {
+      "w": "take",
+      "start": 13.27,
+      "end": 13.444
+    },
+    {
+      "w": "her",
+      "start": 13.468,
+      "end": 13.549
+    },
+    {
+      "w": "two",
+      "start": 13.595,
+      "end": 13.734
+    },
+    {
+      "w": "sons",
+      "start": 13.792,
+      "end": 14.06
+    },
+    {
+      "w": "to",
+      "start": 14.106,
+      "end": 14.164
+    },
+    {
+      "w": "be",
+      "start": 14.21,
+      "end": 14.292
+    },
+    {
+      "w": "bondmen.",
+      "start": 14.338,
+      "end": 14.849
+    },
+    {
+      "w": "Not",
+      "start": 15.569,
+      "end": 15.731
+    },
+    {
+      "w": "the",
+      "start": 15.766,
+      "end": 15.836
+    },
+    {
+      "w": "furniture.",
+      "start": 15.882,
+      "end": 16.44
+    },
+    {
+      "w": "The",
+      "start": 16.834,
+      "end": 16.962
+    },
+    {
+      "w": "children.",
+      "start": 17.008,
+      "end": 17.508
+    },
+    {
+      "w": "That",
+      "start": 17.693,
+      "end": 17.844
+    },
+    {
+      "w": "is",
+      "start": 17.879,
+      "end": 17.949
+    },
+    {
+      "w": "the",
+      "start": 17.995,
+      "end": 18.065
+    },
+    {
+      "w": "debt",
+      "start": 18.111,
+      "end": 18.297
+    },
+    {
+      "w": "system",
+      "start": 18.344,
+      "end": 18.622
+    },
+    {
+      "w": "she",
+      "start": 18.669,
+      "end": 18.75
+    },
+    {
+      "w": "is",
+      "start": 18.796,
+      "end": 18.866
+    },
+    {
+      "w": "trapped",
+      "start": 18.912,
+      "end": 19.191
+    },
+    {
+      "w": "in.",
+      "start": 19.238,
+      "end": 19.574
+    },
+    {
+      "w": "Elisha",
+      "start": 20.573,
+      "end": 20.909
+    },
+    {
+      "w": "asks",
+      "start": 20.967,
+      "end": 21.153
+    },
+    {
+      "w": "her,",
+      "start": 21.2,
+      "end": 21.606
+    },
+    {
+      "w": "what",
+      "start": 21.896,
+      "end": 22.059
+    },
+    {
+      "w": "shall",
+      "start": 22.094,
+      "end": 22.256
+    },
+    {
+      "w": "I",
+      "start": 22.303,
+      "end": 22.326
+    },
+    {
+      "w": "do",
+      "start": 22.372,
+      "end": 22.454
+    },
+    {
+      "w": "for",
+      "start": 22.5,
+      "end": 22.604
+    },
+    {
+      "w": "thee?",
+      "start": 22.639,
+      "end": 23.022
+    },
+    {
+      "w": "Tell",
+      "start": 23.742,
+      "end": 23.928
+    },
+    {
+      "w": "me,",
+      "start": 23.974,
+      "end": 24.195
+    },
+    {
+      "w": "what",
+      "start": 24.265,
+      "end": 24.427
+    },
+    {
+      "w": "hast",
+      "start": 24.474,
+      "end": 24.613
+    },
+    {
+      "w": "thou",
+      "start": 24.636,
+      "end": 24.752
+    },
+    {
+      "w": "in",
+      "start": 24.799,
+      "end": 24.857
+    },
+    {
+      "w": "the",
+      "start": 24.892,
+      "end": 24.961
+    },
+    {
+      "w": "house?",
+      "start": 24.996,
+      "end": 25.449
+    },
+    {
+      "w": "And",
+      "start": 26.169,
+      "end": 26.32
+    },
+    {
+      "w": "she",
+      "start": 26.366,
+      "end": 26.447
+    },
+    {
+      "w": "says,",
+      "start": 26.494,
+      "end": 26.958
+    },
+    {
+      "w": "thine",
+      "start": 27.411,
+      "end": 27.666
+    },
+    {
+      "w": "handmaid",
+      "start": 27.713,
+      "end": 28.108
+    },
+    {
+      "w": "hath",
+      "start": 28.154,
+      "end": 28.293
+    },
+    {
+      "w": "not",
+      "start": 28.34,
+      "end": 28.479
+    },
+    {
+      "w": "any",
+      "start": 28.537,
+      "end": 28.735
+    },
+    {
+      "w": "thing",
+      "start": 28.781,
+      "end": 28.943
+    },
+    {
+      "w": "in",
+      "start": 28.99,
+      "end": 29.036
+    },
+    {
+      "w": "the",
+      "start": 29.071,
+      "end": 29.141
+    },
+    {
+      "w": "house,",
+      "start": 29.187,
+      "end": 29.501
+    },
+    {
+      "w": "save",
+      "start": 29.559,
+      "end": 29.744
+    },
+    {
+      "w": "a",
+      "start": 29.768,
+      "end": 29.791
+    },
+    {
+      "w": "pot",
+      "start": 29.837,
+      "end": 29.988
+    },
+    {
+      "w": "of",
+      "start": 30.023,
+      "end": 30.07
+    },
+    {
+      "w": "oil.",
+      "start": 30.116,
+      "end": 30.534
+    },
+    {
+      "w": "One",
+      "start": 30.929,
+      "end": 31.114
+    },
+    {
+      "w": "pot.",
+      "start": 31.149,
+      "end": 31.556
+    },
+    {
+      "w": "That",
+      "start": 32.275,
+      "end": 32.519
+    },
+    {
+      "w": "is",
+      "start": 32.577,
+      "end": 32.67
+    },
+    {
+      "w": "the",
+      "start": 32.705,
+      "end": 32.775
+    },
+    {
+      "w": "whole",
+      "start": 32.809,
+      "end": 32.972
+    },
+    {
+      "w": "inventory.",
+      "start": 33.007,
+      "end": 33.715
+    },
+    {
+      "w": "And",
+      "start": 34.168,
+      "end": 34.307
+    },
+    {
+      "w": "he",
+      "start": 34.354,
+      "end": 34.4
+    },
+    {
+      "w": "tells",
+      "start": 34.435,
+      "end": 34.632
+    },
+    {
+      "w": "her,",
+      "start": 34.679,
+      "end": 35.097
+    },
+    {
+      "w": "go",
+      "start": 35.317,
+      "end": 35.445
+    },
+    {
+      "w": "borrow",
+      "start": 35.503,
+      "end": 35.758
+    },
+    {
+      "w": "thee",
+      "start": 35.816,
+      "end": 35.933
+    },
+    {
+      "w": "vessels",
+      "start": 35.979,
+      "end": 36.304
+    },
+    {
+      "w": "abroad",
+      "start": 36.351,
+      "end": 36.676
+    },
+    {
+      "w": "of",
+      "start": 36.722,
+      "end": 36.768
+    },
+    {
+      "w": "all",
+      "start": 36.815,
+      "end": 36.931
+    },
+    {
+      "w": "thy",
+      "start": 36.977,
+      "end": 37.07
+    },
+    {
+      "w": "neighbours,",
+      "start": 37.117,
+      "end": 37.651
+    },
+    {
+      "w": "even",
+      "start": 37.697,
+      "end": 37.929
+    },
+    {
+      "w": "empty",
+      "start": 37.964,
+      "end": 38.162
+    },
+    {
+      "w": "vessels.",
+      "start": 38.208,
+      "end": 38.823
+    },
+    {
+      "w": "Borrow",
+      "start": 39.276,
+      "end": 39.532
+    },
+    {
+      "w": "not",
+      "start": 39.59,
+      "end": 39.717
+    },
+    {
+      "w": "a",
+      "start": 39.752,
+      "end": 39.775
+    },
+    {
+      "w": "few.",
+      "start": 39.822,
+      "end": 40.286
+    },
+    {
+      "w": "Then",
+      "start": 40.623,
+      "end": 40.797
+    },
+    {
+      "w": "shut",
+      "start": 40.844,
+      "end": 40.983
+    },
+    {
+      "w": "the",
+      "start": 41.018,
+      "end": 41.087
+    },
+    {
+      "w": "door",
+      "start": 41.122,
+      "end": 41.296
+    },
+    {
+      "w": "on",
+      "start": 41.343,
+      "end": 41.401
+    },
+    {
+      "w": "yourself",
+      "start": 41.447,
+      "end": 41.749
+    },
+    {
+      "w": "and",
+      "start": 41.796,
+      "end": 41.865
+    },
+    {
+      "w": "your",
+      "start": 41.912,
+      "end": 42.028
+    },
+    {
+      "w": "sons,",
+      "start": 42.074,
+      "end": 42.411
+    },
+    {
+      "w": "and",
+      "start": 42.434,
+      "end": 42.515
+    },
+    {
+      "w": "start",
+      "start": 42.562,
+      "end": 42.782
+    },
+    {
+      "w": "pouring.",
+      "start": 42.829,
+      "end": 43.316
+    },
+    {
+      "w": "So",
+      "start": 44.164,
+      "end": 44.268
+    },
+    {
+      "w": "she",
+      "start": 44.315,
+      "end": 44.408
+    },
+    {
+      "w": "does.",
+      "start": 44.454,
+      "end": 44.988
+    },
+    {
+      "w": "And",
+      "start": 45.522,
+      "end": 45.65
+    },
+    {
+      "w": "the",
+      "start": 45.685,
+      "end": 45.754
+    },
+    {
+      "w": "oil",
+      "start": 45.789,
+      "end": 45.929
+    },
+    {
+      "w": "keeps",
+      "start": 45.987,
+      "end": 46.219
+    },
+    {
+      "w": "coming.",
+      "start": 46.265,
+      "end": 46.66
+    },
+    {
+      "w": "Vessel",
+      "start": 47.38,
+      "end": 47.658
+    },
+    {
+      "w": "after",
+      "start": 47.705,
+      "end": 47.902
+    },
+    {
+      "w": "vessel,",
+      "start": 47.949,
+      "end": 48.262
+    },
+    {
+      "w": "until",
+      "start": 48.297,
+      "end": 48.506
+    },
+    {
+      "w": "she",
+      "start": 48.552,
+      "end": 48.657
+    },
+    {
+      "w": "says",
+      "start": 48.715,
+      "end": 48.901
+    },
+    {
+      "w": "to",
+      "start": 48.947,
+      "end": 49.005
+    },
+    {
+      "w": "her",
+      "start": 49.063,
+      "end": 49.156
+    },
+    {
+      "w": "son,",
+      "start": 49.203,
+      "end": 49.679
+    },
+    {
+      "w": "bring",
+      "start": 49.899,
+      "end": 50.085
+    },
+    {
+      "w": "me",
+      "start": 50.131,
+      "end": 50.189
+    },
+    {
+      "w": "yet",
+      "start": 50.224,
+      "end": 50.34
+    },
+    {
+      "w": "a",
+      "start": 50.375,
+      "end": 50.398
+    },
+    {
+      "w": "vessel,",
+      "start": 50.445,
+      "end": 50.909
+    },
+    {
+      "w": "and",
+      "start": 51.049,
+      "end": 51.188
+    },
+    {
+      "w": "he",
+      "start": 51.234,
+      "end": 51.292
+    },
+    {
+      "w": "says,",
+      "start": 51.35,
+      "end": 51.815
+    },
+    {
+      "w": "there",
+      "start": 52.105,
+      "end": 52.268
+    },
+    {
+      "w": "is",
+      "start": 52.291,
+      "end": 52.349
+    },
+    {
+      "w": "not",
+      "start": 52.384,
+      "end": 52.488
+    },
+    {
+      "w": "a",
+      "start": 52.523,
+      "end": 52.546
+    },
+    {
+      "w": "vessel",
+      "start": 52.593,
+      "end": 52.848
+    },
+    {
+      "w": "more.",
+      "start": 52.895,
+      "end": 53.278
+    },
+    {
+      "w": "And",
+      "start": 53.905,
+      "end": 54.056
+    },
+    {
+      "w": "the",
+      "start": 54.09,
+      "end": 54.16
+    },
+    {
+      "w": "oil",
+      "start": 54.218,
+      "end": 54.381
+    },
+    {
+      "w": "stayed.",
+      "start": 54.45,
+      "end": 54.915
+    },
+    {
+      "w": "She",
+      "start": 55.251,
+      "end": 55.367
+    },
+    {
+      "w": "sells",
+      "start": 55.414,
+      "end": 55.669
+    },
+    {
+      "w": "it,",
+      "start": 55.727,
+      "end": 55.867
+    },
+    {
+      "w": "pays",
+      "start": 55.913,
+      "end": 56.11
+    },
+    {
+      "w": "the",
+      "start": 56.157,
+      "end": 56.227
+    },
+    {
+      "w": "debt,",
+      "start": 56.273,
+      "end": 56.517
+    },
+    {
+      "w": "and",
+      "start": 56.552,
+      "end": 56.668
+    },
+    {
+      "w": "lives",
+      "start": 56.714,
+      "end": 56.9
+    },
+    {
+      "w": "on",
+      "start": 56.935,
+      "end": 56.993
+    },
+    {
+      "w": "the",
+      "start": 57.028,
+      "end": 57.097
+    },
+    {
+      "w": "rest.",
+      "start": 57.132,
+      "end": 57.597
+    },
+    {
+      "w": "The",
+      "start": 58.316,
+      "end": 58.432
+    },
+    {
+      "w": "supply",
+      "start": 58.479,
+      "end": 58.769
+    },
+    {
+      "w": "stopped",
+      "start": 58.839,
+      "end": 59.141
+    },
+    {
+      "w": "exactly",
+      "start": 59.176,
+      "end": 59.582
+    },
+    {
+      "w": "when",
+      "start": 59.617,
+      "end": 59.733
+    },
+    {
+      "w": "the",
+      "start": 59.756,
+      "end": 59.826
+    },
+    {
+      "w": "containers",
+      "start": 59.849,
+      "end": 60.29
+    },
+    {
+      "w": "did.",
+      "start": 60.337,
+      "end": 60.836
+    }
+  ],
+  "renderedAt": 1785313260626
+}

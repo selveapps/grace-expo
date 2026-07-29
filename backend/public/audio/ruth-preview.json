@@ -1,0 +1,280 @@
+{
+  "kind": "onboarding",
+  "title": "Ruth stays",
+  "excerptOf": "ruth-stays",
+  "text": "Two women on a road out of Moab. One of them just did the sensible thing. The other one would not let go. Intreat me not to leave thee, or to return from following after thee. For whither thou goest, I will go. Thy people shall be my people, and thy God my God.",
+  "voice": "EXAVITQu4vr4xnSDxMaL",
+  "words": [
+    {
+      "w": "Two",
+      "start": 0,
+      "end": 0.279
+    },
+    {
+      "w": "women",
+      "start": 0.348,
+      "end": 0.639
+    },
+    {
+      "w": "on",
+      "start": 0.72,
+      "end": 0.836
+    },
+    {
+      "w": "a",
+      "start": 0.882,
+      "end": 0.906
+    },
+    {
+      "w": "road",
+      "start": 0.975,
+      "end": 1.231
+    },
+    {
+      "w": "out",
+      "start": 1.289,
+      "end": 1.416
+    },
+    {
+      "w": "of",
+      "start": 1.451,
+      "end": 1.498
+    },
+    {
+      "w": "Moab.",
+      "start": 1.556,
+      "end": 2.113
+    },
+    {
+      "w": "One",
+      "start": 2.392,
+      "end": 2.577
+    },
+    {
+      "w": "of",
+      "start": 2.612,
+      "end": 2.67
+    },
+    {
+      "w": "them",
+      "start": 2.717,
+      "end": 2.879
+    },
+    {
+      "w": "just",
+      "start": 2.961,
+      "end": 3.158
+    },
+    {
+      "w": "did",
+      "start": 3.204,
+      "end": 3.367
+    },
+    {
+      "w": "the",
+      "start": 3.413,
+      "end": 3.483
+    },
+    {
+      "w": "sensible",
+      "start": 3.541,
+      "end": 3.982
+    },
+    {
+      "w": "thing.",
+      "start": 4.017,
+      "end": 4.423
+    },
+    {
+      "w": "The",
+      "start": 4.702,
+      "end": 4.83
+    },
+    {
+      "w": "other",
+      "start": 4.911,
+      "end": 5.12
+    },
+    {
+      "w": "one",
+      "start": 5.19,
+      "end": 5.375
+    },
+    {
+      "w": "would",
+      "start": 5.422,
+      "end": 5.608
+    },
+    {
+      "w": "not",
+      "start": 5.666,
+      "end": 5.851
+    },
+    {
+      "w": "let",
+      "start": 5.909,
+      "end": 6.06
+    },
+    {
+      "w": "go.",
+      "start": 6.118,
+      "end": 6.583
+    },
+    {
+      "w": "Intreat",
+      "start": 6.827,
+      "end": 7.256
+    },
+    {
+      "w": "me",
+      "start": 7.303,
+      "end": 7.396
+    },
+    {
+      "w": "not",
+      "start": 7.454,
+      "end": 7.639
+    },
+    {
+      "w": "to",
+      "start": 7.674,
+      "end": 7.744
+    },
+    {
+      "w": "leave",
+      "start": 7.825,
+      "end": 8.057
+    },
+    {
+      "w": "thee,",
+      "start": 8.092,
+      "end": 8.301
+    },
+    {
+      "w": "or",
+      "start": 8.336,
+      "end": 8.464
+    },
+    {
+      "w": "to",
+      "start": 8.533,
+      "end": 8.603
+    },
+    {
+      "w": "return",
+      "start": 8.684,
+      "end": 9.067
+    },
+    {
+      "w": "from",
+      "start": 9.125,
+      "end": 9.276
+    },
+    {
+      "w": "following",
+      "start": 9.369,
+      "end": 9.81
+    },
+    {
+      "w": "after",
+      "start": 9.868,
+      "end": 10.124
+    },
+    {
+      "w": "thee.",
+      "start": 10.17,
+      "end": 10.542
+    },
+    {
+      "w": "For",
+      "start": 10.786,
+      "end": 10.937
+    },
+    {
+      "w": "whither",
+      "start": 10.983,
+      "end": 11.227
+    },
+    {
+      "w": "thou",
+      "start": 11.285,
+      "end": 11.436
+    },
+    {
+      "w": "goest,",
+      "start": 11.517,
+      "end": 12.074
+    },
+    {
+      "w": "I",
+      "start": 12.249,
+      "end": 12.33
+    },
+    {
+      "w": "will",
+      "start": 12.411,
+      "end": 12.574
+    },
+    {
+      "w": "go.",
+      "start": 12.62,
+      "end": 13.05
+    },
+    {
+      "w": "Thy",
+      "start": 13.375,
+      "end": 13.572
+    },
+    {
+      "w": "people",
+      "start": 13.642,
+      "end": 13.99
+    },
+    {
+      "w": "shall",
+      "start": 14.036,
+      "end": 14.222
+    },
+    {
+      "w": "be",
+      "start": 14.269,
+      "end": 14.362
+    },
+    {
+      "w": "my",
+      "start": 14.408,
+      "end": 14.559
+    },
+    {
+      "w": "people,",
+      "start": 14.629,
+      "end": 15.023
+    },
+    {
+      "w": "and",
+      "start": 15.07,
+      "end": 15.232
+    },
+    {
+      "w": "thy",
+      "start": 15.29,
+      "end": 15.441
+    },
+    {
+      "w": "God",
+      "start": 15.523,
+      "end": 15.813
+    },
+    {
+      "w": "my",
+      "start": 15.882,
+      "end": 15.999
+    },
+    {
+      "w": "God.",
+      "start": 16.068,
+      "end": 16.718
+    }
+  ],
+  "renderedAt": 1785313725878
+}

@@ -1,0 +1,936 @@
+{
+  "kind": "tea",
+  "teaId": "deborah-palm",
+  "mood": "dark",
+  "heat": 2,
+  "text": "Deborah ran a nation from under a palm tree. Judges chapter four. Deborah is a prophetess, and she is judging Israel at the time, and she holds court under a palm tree between Ramah and Bethel. The children of Israel come up to her for judgement. That is her office. That is her authority, written down, no hedging. So she summons Barak and gives him God's orders. Take ten thousand men to mount Tabor. I will draw out Sisera and his chariots to the river Kishon and deliver him into thine hand. And Barak, the military commander, says, if thou wilt go with me, then I will go. But if thou wilt not go with me, then I will not go. He will not move without her. So she goes. And she tells him plainly, the journey that thou takest shall not be for thine honour, for the Lord shall sell Sisera into the hand of a woman. She called the ending before it happened, and it landed exactly the way she said. She held court under a tree, and the nation came to her.",
+  "voice": "FGY2WhTYpPnrIDTdsKH5",
+  "words": [
+    {
+      "w": "Deborah",
+      "start": 0,
+      "end": 0.337
+    },
+    {
+      "w": "ran",
+      "start": 0.372,
+      "end": 0.534
+    },
+    {
+      "w": "a",
+      "start": 0.569,
+      "end": 0.592
+    },
+    {
+      "w": "nation",
+      "start": 0.639,
+      "end": 0.929
+    },
+    {
+      "w": "from",
+      "start": 0.998,
+      "end": 1.138
+    },
+    {
+      "w": "under",
+      "start": 1.184,
+      "end": 1.324
+    },
+    {
+      "w": "a",
+      "start": 1.37,
+      "end": 1.393
+    },
+    {
+      "w": "palm",
+      "start": 1.428,
+      "end": 1.625
+    },
+    {
+      "w": "tree.",
+      "start": 1.672,
+      "end": 2.009
+    },
+    {
+      "w": "Judges",
+      "start": 2.287,
+      "end": 2.601
+    },
+    {
+      "w": "chapter",
+      "start": 2.647,
+      "end": 2.914
+    },
+    {
+      "w": "four.",
+      "start": 2.961,
+      "end": 3.297
+    },
+    {
+      "w": "Deborah",
+      "start": 3.471,
+      "end": 3.831
+    },
+    {
+      "w": "is",
+      "start": 3.866,
+      "end": 3.947
+    },
+    {
+      "w": "a",
+      "start": 3.982,
+      "end": 4.005
+    },
+    {
+      "w": "prophetess,",
+      "start": 4.052,
+      "end": 4.702
+    },
+    {
+      "w": "and",
+      "start": 4.725,
+      "end": 4.853
+    },
+    {
+      "w": "she",
+      "start": 4.899,
+      "end": 4.992
+    },
+    {
+      "w": "is",
+      "start": 5.039,
+      "end": 5.108
+    },
+    {
+      "w": "judging",
+      "start": 5.155,
+      "end": 5.422
+    },
+    {
+      "w": "Israel",
+      "start": 5.468,
+      "end": 5.724
+    },
+    {
+      "w": "at",
+      "start": 5.759,
+      "end": 5.828
+    },
+    {
+      "w": "the",
+      "start": 5.863,
+      "end": 5.933
+    },
+    {
+      "w": "time,",
+      "start": 5.968,
+      "end": 6.351
+    },
+    {
+      "w": "and",
+      "start": 6.525,
+      "end": 6.653
+    },
+    {
+      "w": "she",
+      "start": 6.699,
+      "end": 6.803
+    },
+    {
+      "w": "holds",
+      "start": 6.861,
+      "end": 7.047
+    },
+    {
+      "w": "court",
+      "start": 7.105,
+      "end": 7.303
+    },
+    {
+      "w": "under",
+      "start": 7.349,
+      "end": 7.512
+    },
+    {
+      "w": "a",
+      "start": 7.558,
+      "end": 7.581
+    },
+    {
+      "w": "palm",
+      "start": 7.628,
+      "end": 7.814
+    },
+    {
+      "w": "tree",
+      "start": 7.872,
+      "end": 8.046
+    },
+    {
+      "w": "between",
+      "start": 8.092,
+      "end": 8.348
+    },
+    {
+      "w": "Ramah",
+      "start": 8.406,
+      "end": 8.731
+    },
+    {
+      "w": "and",
+      "start": 8.777,
+      "end": 8.882
+    },
+    {
+      "w": "Bethel.",
+      "start": 8.928,
+      "end": 9.404
+    },
+    {
+      "w": "The",
+      "start": 9.683,
+      "end": 9.787
+    },
+    {
+      "w": "children",
+      "start": 9.834,
+      "end": 10.136
+    },
+    {
+      "w": "of",
+      "start": 10.17,
+      "end": 10.217
+    },
+    {
+      "w": "Israel",
+      "start": 10.275,
+      "end": 10.553
+    },
+    {
+      "w": "come",
+      "start": 10.623,
+      "end": 10.774
+    },
+    {
+      "w": "up",
+      "start": 10.809,
+      "end": 10.879
+    },
+    {
+      "w": "to",
+      "start": 10.913,
+      "end": 10.96
+    },
+    {
+      "w": "her",
+      "start": 11.018,
+      "end": 11.123
+    },
+    {
+      "w": "for",
+      "start": 11.204,
+      "end": 11.308
+    },
+    {
+      "w": "judgement.",
+      "start": 11.355,
+      "end": 11.854
+    },
+    {
+      "w": "That",
+      "start": 12.086,
+      "end": 12.342
+    },
+    {
+      "w": "is",
+      "start": 12.4,
+      "end": 12.504
+    },
+    {
+      "w": "her",
+      "start": 12.562,
+      "end": 12.655
+    },
+    {
+      "w": "office.",
+      "start": 12.701,
+      "end": 13.166
+    },
+    {
+      "w": "That",
+      "start": 13.375,
+      "end": 13.595
+    },
+    {
+      "w": "is",
+      "start": 13.642,
+      "end": 13.735
+    },
+    {
+      "w": "her",
+      "start": 13.781,
+      "end": 13.874
+    },
+    {
+      "w": "authority,",
+      "start": 13.909,
+      "end": 14.362
+    },
+    {
+      "w": "written",
+      "start": 14.42,
+      "end": 14.675
+    },
+    {
+      "w": "down,",
+      "start": 14.71,
+      "end": 15.035
+    },
+    {
+      "w": "no",
+      "start": 15.244,
+      "end": 15.36
+    },
+    {
+      "w": "hedging.",
+      "start": 15.43,
+      "end": 15.801
+    },
+    {
+      "w": "So",
+      "start": 16.126,
+      "end": 16.266
+    },
+    {
+      "w": "she",
+      "start": 16.312,
+      "end": 16.405
+    },
+    {
+      "w": "summons",
+      "start": 16.463,
+      "end": 16.719
+    },
+    {
+      "w": "Barak",
+      "start": 16.777,
+      "end": 17.09
+    },
+    {
+      "w": "and",
+      "start": 17.125,
+      "end": 17.195
+    },
+    {
+      "w": "gives",
+      "start": 17.229,
+      "end": 17.392
+    },
+    {
+      "w": "him",
+      "start": 17.427,
+      "end": 17.52
+    },
+    {
+      "w": "God's",
+      "start": 17.566,
+      "end": 17.787
+    },
+    {
+      "w": "orders.",
+      "start": 17.81,
+      "end": 18.263
+    },
+    {
+      "w": "Take",
+      "start": 18.472,
+      "end": 18.669
+    },
+    {
+      "w": "ten",
+      "start": 18.704,
+      "end": 18.866
+    },
+    {
+      "w": "thousand",
+      "start": 18.913,
+      "end": 19.226
+    },
+    {
+      "w": "men",
+      "start": 19.273,
+      "end": 19.412
+    },
+    {
+      "w": "to",
+      "start": 19.459,
+      "end": 19.528
+    },
+    {
+      "w": "mount",
+      "start": 19.575,
+      "end": 19.737
+    },
+    {
+      "w": "Tabor.",
+      "start": 19.772,
+      "end": 20.155
+    },
+    {
+      "w": "I",
+      "start": 20.283,
+      "end": 20.341
+    },
+    {
+      "w": "will",
+      "start": 20.411,
+      "end": 20.538
+    },
+    {
+      "w": "draw",
+      "start": 20.573,
+      "end": 20.736
+    },
+    {
+      "w": "out",
+      "start": 20.77,
+      "end": 20.875
+    },
+    {
+      "w": "Sisera",
+      "start": 20.921,
+      "end": 21.316
+    },
+    {
+      "w": "and",
+      "start": 21.374,
+      "end": 21.479
+    },
+    {
+      "w": "his",
+      "start": 21.525,
+      "end": 21.63
+    },
+    {
+      "w": "chariots",
+      "start": 21.664,
+      "end": 22.048
+    },
+    {
+      "w": "to",
+      "start": 22.082,
+      "end": 22.152
+    },
+    {
+      "w": "the",
+      "start": 22.21,
+      "end": 22.28
+    },
+    {
+      "w": "river",
+      "start": 22.326,
+      "end": 22.512
+    },
+    {
+      "w": "Kishon",
+      "start": 22.582,
+      "end": 22.976
+    },
+    {
+      "w": "and",
+      "start": 23.127,
+      "end": 23.29
+    },
+    {
+      "w": "deliver",
+      "start": 23.336,
+      "end": 23.615
+    },
+    {
+      "w": "him",
+      "start": 23.661,
+      "end": 23.754
+    },
+    {
+      "w": "into",
+      "start": 23.789,
+      "end": 23.905
+    },
+    {
+      "w": "thine",
+      "start": 23.952,
+      "end": 24.114
+    },
+    {
+      "w": "hand.",
+      "start": 24.149,
+      "end": 24.486
+    },
+    {
+      "w": "And",
+      "start": 24.59,
+      "end": 24.718
+    },
+    {
+      "w": "Barak,",
+      "start": 24.753,
+      "end": 25.066
+    },
+    {
+      "w": "the",
+      "start": 25.089,
+      "end": 25.159
+    },
+    {
+      "w": "military",
+      "start": 25.194,
+      "end": 25.507
+    },
+    {
+      "w": "commander,",
+      "start": 25.542,
+      "end": 25.902
+    },
+    {
+      "w": "says,",
+      "start": 25.925,
+      "end": 26.367
+    },
+    {
+      "w": "if",
+      "start": 26.541,
+      "end": 26.645
+    },
+    {
+      "w": "thou",
+      "start": 26.68,
+      "end": 26.808
+    },
+    {
+      "w": "wilt",
+      "start": 26.854,
+      "end": 27.005
+    },
+    {
+      "w": "go",
+      "start": 27.04,
+      "end": 27.121
+    },
+    {
+      "w": "with",
+      "start": 27.168,
+      "end": 27.307
+    },
+    {
+      "w": "me,",
+      "start": 27.342,
+      "end": 27.62
+    },
+    {
+      "w": "then",
+      "start": 27.771,
+      "end": 27.887
+    },
+    {
+      "w": "I",
+      "start": 27.934,
+      "end": 27.957
+    },
+    {
+      "w": "will",
+      "start": 27.992,
+      "end": 28.12
+    },
+    {
+      "w": "go.",
+      "start": 28.154,
+      "end": 28.503
+    },
+    {
+      "w": "But",
+      "start": 28.932,
+      "end": 29.141
+    },
+    {
+      "w": "if",
+      "start": 29.188,
+      "end": 29.281
+    },
+    {
+      "w": "thou",
+      "start": 29.315,
+      "end": 29.443
+    },
+    {
+      "w": "wilt",
+      "start": 29.478,
+      "end": 29.617
+    },
+    {
+      "w": "not",
+      "start": 29.652,
+      "end": 29.745
+    },
+    {
+      "w": "go",
+      "start": 29.78,
+      "end": 29.85
+    },
+    {
+      "w": "with",
+      "start": 29.884,
+      "end": 30.012
+    },
+    {
+      "w": "me,",
+      "start": 30.047,
+      "end": 30.372
+    },
+    {
+      "w": "then",
+      "start": 30.5,
+      "end": 30.639
+    },
+    {
+      "w": "I",
+      "start": 30.674,
+      "end": 30.697
+    },
+    {
+      "w": "will",
+      "start": 30.732,
+      "end": 30.871
+    },
+    {
+      "w": "not",
+      "start": 30.906,
+      "end": 31.022
+    },
+    {
+      "w": "go.",
+      "start": 31.069,
+      "end": 31.429
+    },
+    {
+      "w": "He",
+      "start": 31.637,
+      "end": 31.742
+    },
+    {
+      "w": "will",
+      "start": 31.788,
+      "end": 31.939
+    },
+    {
+      "w": "not",
+      "start": 31.986,
+      "end": 32.102
+    },
+    {
+      "w": "move",
+      "start": 32.137,
+      "end": 32.334
+    },
+    {
+      "w": "without",
+      "start": 32.357,
+      "end": 32.624
+    },
+    {
+      "w": "her.",
+      "start": 32.659,
+      "end": 32.984
+    },
+    {
+      "w": "So",
+      "start": 33.669,
+      "end": 33.809
+    },
+    {
+      "w": "she",
+      "start": 33.855,
+      "end": 33.948
+    },
+    {
+      "w": "goes.",
+      "start": 33.994,
+      "end": 34.482
+    },
+    {
+      "w": "And",
+      "start": 34.912,
+      "end": 35.051
+    },
+    {
+      "w": "she",
+      "start": 35.097,
+      "end": 35.19
+    },
+    {
+      "w": "tells",
+      "start": 35.236,
+      "end": 35.434
+    },
+    {
+      "w": "him",
+      "start": 35.48,
+      "end": 35.573
+    },
+    {
+      "w": "plainly,",
+      "start": 35.608,
+      "end": 36.084
+    },
+    {
+      "w": "the",
+      "start": 36.177,
+      "end": 36.27
+    },
+    {
+      "w": "journey",
+      "start": 36.328,
+      "end": 36.56
+    },
+    {
+      "w": "that",
+      "start": 36.595,
+      "end": 36.699
+    },
+    {
+      "w": "thou",
+      "start": 36.734,
+      "end": 36.85
+    },
+    {
+      "w": "takest",
+      "start": 36.908,
+      "end": 37.233
+    },
+    {
+      "w": "shall",
+      "start": 37.268,
+      "end": 37.419
+    },
+    {
+      "w": "not",
+      "start": 37.454,
+      "end": 37.57
+    },
+    {
+      "w": "be",
+      "start": 37.605,
+      "end": 37.686
+    },
+    {
+      "w": "for",
+      "start": 37.721,
+      "end": 37.825
+    },
+    {
+      "w": "thine",
+      "start": 37.86,
+      "end": 38.046
+    },
+    {
+      "w": "honour,",
+      "start": 38.069,
+      "end": 38.406
+    },
+    {
+      "w": "for",
+      "start": 38.534,
+      "end": 38.65
+    },
+    {
+      "w": "the",
+      "start": 38.684,
+      "end": 38.754
+    },
+    {
+      "w": "Lord",
+      "start": 38.789,
+      "end": 38.951
+    },
+    {
+      "w": "shall",
+      "start": 38.986,
+      "end": 39.149
+    },
+    {
+      "w": "sell",
+      "start": 39.195,
+      "end": 39.346
+    },
+    {
+      "w": "Sisera",
+      "start": 39.427,
+      "end": 39.753
+    },
+    {
+      "w": "into",
+      "start": 39.787,
+      "end": 39.892
+    },
+    {
+      "w": "the",
+      "start": 39.927,
+      "end": 39.996
+    },
+    {
+      "w": "hand",
+      "start": 40.043,
+      "end": 40.217
+    },
+    {
+      "w": "of",
+      "start": 40.252,
+      "end": 40.298
+    },
+    {
+      "w": "a",
+      "start": 40.333,
+      "end": 40.356
+    },
+    {
+      "w": "woman.",
+      "start": 40.391,
+      "end": 40.763
+    },
+    {
+      "w": "She",
+      "start": 41.134,
+      "end": 41.227
+    },
+    {
+      "w": "called",
+      "start": 41.273,
+      "end": 41.471
+    },
+    {
+      "w": "the",
+      "start": 41.494,
+      "end": 41.564
+    },
+    {
+      "w": "ending",
+      "start": 41.61,
+      "end": 41.854
+    },
+    {
+      "w": "before",
+      "start": 41.912,
+      "end": 42.144
+    },
+    {
+      "w": "it",
+      "start": 42.179,
+      "end": 42.237
+    },
+    {
+      "w": "happened,",
+      "start": 42.272,
+      "end": 42.701
+    },
+    {
+      "w": "and",
+      "start": 42.852,
+      "end": 42.969
+    },
+    {
+      "w": "it",
+      "start": 43.015,
+      "end": 43.073
+    },
+    {
+      "w": "landed",
+      "start": 43.108,
+      "end": 43.375
+    },
+    {
+      "w": "exactly",
+      "start": 43.41,
+      "end": 43.816
+    },
+    {
+      "w": "the",
+      "start": 43.851,
+      "end": 43.921
+    },
+    {
+      "w": "way",
+      "start": 43.955,
+      "end": 44.06
+    },
+    {
+      "w": "she",
+      "start": 44.095,
+      "end": 44.199
+    },
+    {
+      "w": "said.",
+      "start": 44.257,
+      "end": 44.664
+    },
+    {
+      "w": "She",
+      "start": 45.174,
+      "end": 45.291
+    },
+    {
+      "w": "held",
+      "start": 45.349,
+      "end": 45.499
+    },
+    {
+      "w": "court",
+      "start": 45.546,
+      "end": 45.732
+    },
+    {
+      "w": "under",
+      "start": 45.767,
+      "end": 45.929
+    },
+    {
+      "w": "a",
+      "start": 45.975,
+      "end": 46.01
+    },
+    {
+      "w": "tree,",
+      "start": 46.045,
+      "end": 46.347
+    },
+    {
+      "w": "and",
+      "start": 46.405,
+      "end": 46.51
+    },
+    {
+      "w": "the",
+      "start": 46.544,
+      "end": 46.614
+    },
+    {
+      "w": "nation",
+      "start": 46.649,
+      "end": 46.881
+    },
+    {
+      "w": "came",
+      "start": 46.928,
+      "end": 47.102
+    },
+    {
+      "w": "to",
+      "start": 47.136,
+      "end": 47.195
+    },
+    {
+      "w": "her.",
+      "start": 47.253,
+      "end": 47.694
+    }
+  ],
+  "renderedAt": 1785313148080
+}

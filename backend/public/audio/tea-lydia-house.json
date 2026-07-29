@@ -1,0 +1,946 @@
+{
+  "kind": "tea",
+  "teaId": "lydia-house",
+  "mood": "light",
+  "heat": 2,
+  "text": "Lydia heard one sermon by a river and bankrolled the mission. Acts sixteen. Paul and his companions arrive in Philippi, and on the sabbath they go out of the city by a river side, where prayer was customarily made. They sit down and speak to the women who gathered there. And a certain woman named Lydia heard them. She is a seller of purple from the city of Thyatira, which is the luxury goods trade of the ancient world, and she worshipped God. And the text says the Lord opened her heart, that she attended unto the things which were spoken of Paul. She is baptized, and her household with her. And then she makes an offer that is really not an offer. If ye have judged me to be faithful to the Lord, come into my house, and abide there. And the text adds four words. And she constrained us. She talked them into it. Later in the chapter, after Paul and Silas get out of prison, where do they go? They entered into the house of Lydia. Her house was the base. Not asked. Told.",
+  "voice": "cgSgspJ2msm6clMCkdW9",
+  "words": [
+    {
+      "w": "Lydia",
+      "start": 0,
+      "end": 0.29
+    },
+    {
+      "w": "heard",
+      "start": 0.348,
+      "end": 0.522
+    },
+    {
+      "w": "one",
+      "start": 0.569,
+      "end": 0.708
+    },
+    {
+      "w": "sermon",
+      "start": 0.743,
+      "end": 1.045
+    },
+    {
+      "w": "by",
+      "start": 1.091,
+      "end": 1.184
+    },
+    {
+      "w": "a",
+      "start": 1.231,
+      "end": 1.254
+    },
+    {
+      "w": "river",
+      "start": 1.3,
+      "end": 1.533
+    },
+    {
+      "w": "and",
+      "start": 1.602,
+      "end": 1.695
+    },
+    {
+      "w": "bankrolled",
+      "start": 1.741,
+      "end": 2.125
+    },
+    {
+      "w": "the",
+      "start": 2.148,
+      "end": 2.218
+    },
+    {
+      "w": "mission.",
+      "start": 2.252,
+      "end": 2.728
+    },
+    {
+      "w": "Acts",
+      "start": 3.251,
+      "end": 3.483
+    },
+    {
+      "w": "sixteen.",
+      "start": 3.518,
+      "end": 4.226
+    },
+    {
+      "w": "Paul",
+      "start": 4.563,
+      "end": 4.76
+    },
+    {
+      "w": "and",
+      "start": 4.795,
+      "end": 4.865
+    },
+    {
+      "w": "his",
+      "start": 4.899,
+      "end": 4.981
+    },
+    {
+      "w": "companions",
+      "start": 5.016,
+      "end": 5.457
+    },
+    {
+      "w": "arrive",
+      "start": 5.492,
+      "end": 5.735
+    },
+    {
+      "w": "in",
+      "start": 5.77,
+      "end": 5.817
+    },
+    {
+      "w": "Philippi,",
+      "start": 5.851,
+      "end": 6.536
+    },
+    {
+      "w": "and",
+      "start": 6.664,
+      "end": 6.803
+    },
+    {
+      "w": "on",
+      "start": 6.861,
+      "end": 6.931
+    },
+    {
+      "w": "the",
+      "start": 6.966,
+      "end": 7.036
+    },
+    {
+      "w": "sabbath",
+      "start": 7.082,
+      "end": 7.419
+    },
+    {
+      "w": "they",
+      "start": 7.454,
+      "end": 7.57
+    },
+    {
+      "w": "go",
+      "start": 7.616,
+      "end": 7.697
+    },
+    {
+      "w": "out",
+      "start": 7.755,
+      "end": 7.86
+    },
+    {
+      "w": "of",
+      "start": 7.895,
+      "end": 7.953
+    },
+    {
+      "w": "the",
+      "start": 7.988,
+      "end": 8.057
+    },
+    {
+      "w": "city",
+      "start": 8.104,
+      "end": 8.313
+    },
+    {
+      "w": "by",
+      "start": 8.382,
+      "end": 8.475
+    },
+    {
+      "w": "a",
+      "start": 8.522,
+      "end": 8.545
+    },
+    {
+      "w": "river",
+      "start": 8.603,
+      "end": 8.777
+    },
+    {
+      "w": "side,",
+      "start": 8.824,
+      "end": 9.253
+    },
+    {
+      "w": "where",
+      "start": 9.323,
+      "end": 9.497
+    },
+    {
+      "w": "prayer",
+      "start": 9.532,
+      "end": 9.741
+    },
+    {
+      "w": "was",
+      "start": 9.776,
+      "end": 9.868
+    },
+    {
+      "w": "customarily",
+      "start": 9.915,
+      "end": 10.414
+    },
+    {
+      "w": "made.",
+      "start": 10.449,
+      "end": 10.948
+    },
+    {
+      "w": "They",
+      "start": 11.331,
+      "end": 11.471
+    },
+    {
+      "w": "sit",
+      "start": 11.505,
+      "end": 11.633
+    },
+    {
+      "w": "down",
+      "start": 11.668,
+      "end": 11.819
+    },
+    {
+      "w": "and",
+      "start": 11.854,
+      "end": 11.935
+    },
+    {
+      "w": "speak",
+      "start": 11.97,
+      "end": 12.156
+    },
+    {
+      "w": "to",
+      "start": 12.19,
+      "end": 12.237
+    },
+    {
+      "w": "the",
+      "start": 12.272,
+      "end": 12.341
+    },
+    {
+      "w": "women",
+      "start": 12.376,
+      "end": 12.573
+    },
+    {
+      "w": "who",
+      "start": 12.597,
+      "end": 12.69
+    },
+    {
+      "w": "gathered",
+      "start": 12.724,
+      "end": 12.991
+    },
+    {
+      "w": "there.",
+      "start": 13.015,
+      "end": 13.421
+    },
+    {
+      "w": "And",
+      "start": 14.129,
+      "end": 14.257
+    },
+    {
+      "w": "a",
+      "start": 14.303,
+      "end": 14.327
+    },
+    {
+      "w": "certain",
+      "start": 14.373,
+      "end": 14.617
+    },
+    {
+      "w": "woman",
+      "start": 14.652,
+      "end": 14.849
+    },
+    {
+      "w": "named",
+      "start": 14.884,
+      "end": 15.046
+    },
+    {
+      "w": "Lydia",
+      "start": 15.081,
+      "end": 15.337
+    },
+    {
+      "w": "heard",
+      "start": 15.395,
+      "end": 15.546
+    },
+    {
+      "w": "them.",
+      "start": 15.58,
+      "end": 15.987
+    },
+    {
+      "w": "She",
+      "start": 16.509,
+      "end": 16.614
+    },
+    {
+      "w": "is",
+      "start": 16.649,
+      "end": 16.718
+    },
+    {
+      "w": "a",
+      "start": 16.753,
+      "end": 16.788
+    },
+    {
+      "w": "seller",
+      "start": 16.823,
+      "end": 17.043
+    },
+    {
+      "w": "of",
+      "start": 17.09,
+      "end": 17.148
+    },
+    {
+      "w": "purple",
+      "start": 17.194,
+      "end": 17.45
+    },
+    {
+      "w": "from",
+      "start": 17.473,
+      "end": 17.589
+    },
+    {
+      "w": "the",
+      "start": 17.624,
+      "end": 17.693
+    },
+    {
+      "w": "city",
+      "start": 17.728,
+      "end": 17.902
+    },
+    {
+      "w": "of",
+      "start": 17.937,
+      "end": 17.984
+    },
+    {
+      "w": "Thyatira,",
+      "start": 18.019,
+      "end": 18.808
+    },
+    {
+      "w": "which",
+      "start": 18.959,
+      "end": 19.145
+    },
+    {
+      "w": "is",
+      "start": 19.191,
+      "end": 19.272
+    },
+    {
+      "w": "the",
+      "start": 19.33,
+      "end": 19.4
+    },
+    {
+      "w": "luxury",
+      "start": 19.458,
+      "end": 19.783
+    },
+    {
+      "w": "goods",
+      "start": 19.83,
+      "end": 20.015
+    },
+    {
+      "w": "trade",
+      "start": 20.05,
+      "end": 20.283
+    },
+    {
+      "w": "of",
+      "start": 20.317,
+      "end": 20.364
+    },
+    {
+      "w": "the",
+      "start": 20.399,
+      "end": 20.468
+    },
+    {
+      "w": "ancient",
+      "start": 20.526,
+      "end": 20.782
+    },
+    {
+      "w": "world,",
+      "start": 20.817,
+      "end": 21.269
+    },
+    {
+      "w": "and",
+      "start": 21.606,
+      "end": 21.769
+    },
+    {
+      "w": "she",
+      "start": 21.803,
+      "end": 21.896
+    },
+    {
+      "w": "worshipped",
+      "start": 21.931,
+      "end": 22.245
+    },
+    {
+      "w": "God.",
+      "start": 22.279,
+      "end": 22.674
+    },
+    {
+      "w": "And",
+      "start": 23.498,
+      "end": 23.615
+    },
+    {
+      "w": "the",
+      "start": 23.649,
+      "end": 23.719
+    },
+    {
+      "w": "text",
+      "start": 23.754,
+      "end": 23.94
+    },
+    {
+      "w": "says",
+      "start": 23.963,
+      "end": 24.184
+    },
+    {
+      "w": "the",
+      "start": 24.253,
+      "end": 24.346
+    },
+    {
+      "w": "Lord",
+      "start": 24.416,
+      "end": 24.66
+    },
+    {
+      "w": "opened",
+      "start": 24.706,
+      "end": 24.938
+    },
+    {
+      "w": "her",
+      "start": 24.962,
+      "end": 25.043
+    },
+    {
+      "w": "heart,",
+      "start": 25.078,
+      "end": 25.414
+    },
+    {
+      "w": "that",
+      "start": 25.856,
+      "end": 25.995
+    },
+    {
+      "w": "she",
+      "start": 26.03,
+      "end": 26.111
+    },
+    {
+      "w": "attended",
+      "start": 26.158,
+      "end": 26.517
+    },
+    {
+      "w": "unto",
+      "start": 26.552,
+      "end": 26.703
+    },
+    {
+      "w": "the",
+      "start": 26.75,
+      "end": 26.819
+    },
+    {
+      "w": "things",
+      "start": 26.854,
+      "end": 27.098
+    },
+    {
+      "w": "which",
+      "start": 27.133,
+      "end": 27.26
+    },
+    {
+      "w": "were",
+      "start": 27.295,
+      "end": 27.4
+    },
+    {
+      "w": "spoken",
+      "start": 27.435,
+      "end": 27.702
+    },
+    {
+      "w": "of",
+      "start": 27.736,
+      "end": 27.783
+    },
+    {
+      "w": "Paul.",
+      "start": 27.829,
+      "end": 28.224
+    },
+    {
+      "w": "She",
+      "start": 28.665,
+      "end": 28.77
+    },
+    {
+      "w": "is",
+      "start": 28.805,
+      "end": 28.863
+    },
+    {
+      "w": "baptized,",
+      "start": 28.909,
+      "end": 29.582
+    },
+    {
+      "w": "and",
+      "start": 29.791,
+      "end": 29.931
+    },
+    {
+      "w": "her",
+      "start": 29.966,
+      "end": 30.047
+    },
+    {
+      "w": "household",
+      "start": 30.082,
+      "end": 30.395
+    },
+    {
+      "w": "with",
+      "start": 30.43,
+      "end": 30.558
+    },
+    {
+      "w": "her.",
+      "start": 30.593,
+      "end": 30.929
+    },
+    {
+      "w": "And",
+      "start": 32.055,
+      "end": 32.183
+    },
+    {
+      "w": "then",
+      "start": 32.218,
+      "end": 32.357
+    },
+    {
+      "w": "she",
+      "start": 32.415,
+      "end": 32.497
+    },
+    {
+      "w": "makes",
+      "start": 32.543,
+      "end": 32.717
+    },
+    {
+      "w": "an",
+      "start": 32.752,
+      "end": 32.822
+    },
+    {
+      "w": "offer",
+      "start": 32.856,
+      "end": 33.065
+    },
+    {
+      "w": "that",
+      "start": 33.112,
+      "end": 33.228
+    },
+    {
+      "w": "is",
+      "start": 33.263,
+      "end": 33.321
+    },
+    {
+      "w": "really",
+      "start": 33.425,
+      "end": 33.623
+    },
+    {
+      "w": "not",
+      "start": 33.669,
+      "end": 33.785
+    },
+    {
+      "w": "an",
+      "start": 33.82,
+      "end": 33.878
+    },
+    {
+      "w": "offer.",
+      "start": 33.913,
+      "end": 34.377
+    },
+    {
+      "w": "If",
+      "start": 35.086,
+      "end": 35.19
+    },
+    {
+      "w": "ye",
+      "start": 35.225,
+      "end": 35.271
+    },
+    {
+      "w": "have",
+      "start": 35.318,
+      "end": 35.422
+    },
+    {
+      "w": "judged",
+      "start": 35.457,
+      "end": 35.666
+    },
+    {
+      "w": "me",
+      "start": 35.701,
+      "end": 35.771
+    },
+    {
+      "w": "to",
+      "start": 35.805,
+      "end": 35.852
+    },
+    {
+      "w": "be",
+      "start": 35.887,
+      "end": 35.957
+    },
+    {
+      "w": "faithful",
+      "start": 35.992,
+      "end": 36.27
+    },
+    {
+      "w": "to",
+      "start": 36.317,
+      "end": 36.375
+    },
+    {
+      "w": "the",
+      "start": 36.433,
+      "end": 36.502
+    },
+    {
+      "w": "Lord,",
+      "start": 36.537,
+      "end": 36.816
+    },
+    {
+      "w": "come",
+      "start": 36.851,
+      "end": 36.99
+    },
+    {
+      "w": "into",
+      "start": 37.025,
+      "end": 37.141
+    },
+    {
+      "w": "my",
+      "start": 37.187,
+      "end": 37.257
+    },
+    {
+      "w": "house,",
+      "start": 37.292,
+      "end": 37.687
+    },
+    {
+      "w": "and",
+      "start": 37.896,
+      "end": 38.012
+    },
+    {
+      "w": "abide",
+      "start": 38.047,
+      "end": 38.267
+    },
+    {
+      "w": "there.",
+      "start": 38.29,
+      "end": 38.685
+    },
+    {
+      "w": "And",
+      "start": 39.811,
+      "end": 39.939
+    },
+    {
+      "w": "the",
+      "start": 39.974,
+      "end": 40.044
+    },
+    {
+      "w": "text",
+      "start": 40.078,
+      "end": 40.334
+    },
+    {
+      "w": "adds",
+      "start": 40.369,
+      "end": 40.52
+    },
+    {
+      "w": "four",
+      "start": 40.566,
+      "end": 40.717
+    },
+    {
+      "w": "words.",
+      "start": 40.763,
+      "end": 41.297
+    },
+    {
+      "w": "And",
+      "start": 41.576,
+      "end": 41.692
+    },
+    {
+      "w": "she",
+      "start": 41.727,
+      "end": 41.808
+    },
+    {
+      "w": "constrained",
+      "start": 41.843,
+      "end": 42.226
+    },
+    {
+      "w": "us.",
+      "start": 42.273,
+      "end": 42.644
+    },
+    {
+      "w": "She",
+      "start": 42.888,
+      "end": 43.004
+    },
+    {
+      "w": "talked",
+      "start": 43.039,
+      "end": 43.236
+    },
+    {
+      "w": "them",
+      "start": 43.271,
+      "end": 43.376
+    },
+    {
+      "w": "into",
+      "start": 43.41,
+      "end": 43.573
+    },
+    {
+      "w": "it.",
+      "start": 43.677,
+      "end": 43.944
+    },
+    {
+      "w": "Later",
+      "start": 44.653,
+      "end": 44.873
+    },
+    {
+      "w": "in",
+      "start": 44.908,
+      "end": 44.955
+    },
+    {
+      "w": "the",
+      "start": 44.989,
+      "end": 45.059
+    },
+    {
+      "w": "chapter,",
+      "start": 45.094,
+      "end": 45.616
+    },
+    {
+      "w": "after",
+      "start": 45.721,
+      "end": 45.953
+    },
+    {
+      "w": "Paul",
+      "start": 45.988,
+      "end": 46.162
+    },
+    {
+      "w": "and",
+      "start": 46.197,
+      "end": 46.278
+    },
+    {
+      "w": "Silas",
+      "start": 46.336,
+      "end": 46.661
+    },
+    {
+      "w": "get",
+      "start": 46.708,
+      "end": 46.812
+    },
+    {
+      "w": "out",
+      "start": 46.835,
+      "end": 46.928
+    },
+    {
+      "w": "of",
+      "start": 46.951,
+      "end": 46.998
+    },
+    {
+      "w": "prison,",
+      "start": 47.033,
+      "end": 47.497
+    },
+    {
+      "w": "where",
+      "start": 47.88,
+      "end": 48.031
+    },
+    {
+      "w": "do",
+      "start": 48.066,
+      "end": 48.124
+    },
+    {
+      "w": "they",
+      "start": 48.159,
+      "end": 48.263
+    },
+    {
+      "w": "go?",
+      "start": 48.298,
+      "end": 48.647
+    },
+    {
+      "w": "They",
+      "start": 49.61,
+      "end": 49.761
+    },
+    {
+      "w": "entered",
+      "start": 49.796,
+      "end": 50.016
+    },
+    {
+      "w": "into",
+      "start": 50.039,
+      "end": 50.167
+    },
+    {
+      "w": "the",
+      "start": 50.214,
+      "end": 50.283
+    },
+    {
+      "w": "house",
+      "start": 50.318,
+      "end": 50.504
+    },
+    {
+      "w": "of",
+      "start": 50.539,
+      "end": 50.585
+    },
+    {
+      "w": "Lydia.",
+      "start": 50.632,
+      "end": 51.166
+    },
+    {
+      "w": "Her",
+      "start": 51.607,
+      "end": 51.735
+    },
+    {
+      "w": "house",
+      "start": 51.769,
+      "end": 51.944
+    },
+    {
+      "w": "was",
+      "start": 51.978,
+      "end": 52.071
+    },
+    {
+      "w": "the",
+      "start": 52.106,
+      "end": 52.176
+    },
+    {
+      "w": "base.",
+      "start": 52.211,
+      "end": 52.559
+    },
+    {
+      "w": "Not",
+      "start": 52.594,
+      "end": 52.745
+    },
+    {
+      "w": "asked.",
+      "start": 52.779,
+      "end": 53.197
+    },
+    {
+      "w": "Told.",
+      "start": 53.255,
+      "end": 53.917
+    }
+  ],
+  "renderedAt": 1785313294094
+}

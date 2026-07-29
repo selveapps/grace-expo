@@ -1,0 +1,1006 @@
+{
+  "kind": "tea",
+  "teaId": "mary-yes",
+  "mood": "dark",
+  "heat": 1,
+  "text": "She said yes to the impossible, and the world turned. Luke chapter one. Gabriel is sent to Nazareth, to a virgin espoused to a man named Joseph, and her name is Mary. Note what Luke tells us and what he does not. He gives us the town, the man she is promised to, his royal line. He never gives us her age. So when you hear her called a teenager, that is tradition talking, not the text. The angel says, Hail, thou that art highly favoured, the Lord is with thee. And she is troubled. Not by the angel. By the greeting. She is turning the words over, wondering what kind of salutation this is. Then the news. You will conceive and bear a son, and call his name Jesus, and his kingdom will have no end. She asks one practical question. How shall this be, seeing I know not a man? She is not asking for proof. She is asking how. And when the answer comes, she says, Behold the handmaid of the Lord, be it unto me according to thy word. She said yes to a plan she could not verify, in a village that could count.",
+  "voice": "FGY2WhTYpPnrIDTdsKH5",
+  "words": [
+    {
+      "w": "She",
+      "start": 0,
+      "end": 0.151
+    },
+    {
+      "w": "said",
+      "start": 0.197,
+      "end": 0.348
+    },
+    {
+      "w": "yes",
+      "start": 0.395,
+      "end": 0.604
+    },
+    {
+      "w": "to",
+      "start": 0.65,
+      "end": 0.72
+    },
+    {
+      "w": "the",
+      "start": 0.778,
+      "end": 0.848
+    },
+    {
+      "w": "impossible,",
+      "start": 0.894,
+      "end": 1.521
+    },
+    {
+      "w": "and",
+      "start": 1.591,
+      "end": 1.707
+    },
+    {
+      "w": "the",
+      "start": 1.741,
+      "end": 1.811
+    },
+    {
+      "w": "world",
+      "start": 1.858,
+      "end": 2.113
+    },
+    {
+      "w": "turned.",
+      "start": 2.148,
+      "end": 2.728
+    },
+    {
+      "w": "Luke",
+      "start": 3.553,
+      "end": 3.796
+    },
+    {
+      "w": "chapter",
+      "start": 3.831,
+      "end": 4.087
+    },
+    {
+      "w": "one.",
+      "start": 4.156,
+      "end": 4.481
+    },
+    {
+      "w": "Gabriel",
+      "start": 4.667,
+      "end": 5.039
+    },
+    {
+      "w": "is",
+      "start": 5.097,
+      "end": 5.155
+    },
+    {
+      "w": "sent",
+      "start": 5.19,
+      "end": 5.352
+    },
+    {
+      "w": "to",
+      "start": 5.387,
+      "end": 5.445
+    },
+    {
+      "w": "Nazareth,",
+      "start": 5.503,
+      "end": 6.072
+    },
+    {
+      "w": "to",
+      "start": 6.107,
+      "end": 6.2
+    },
+    {
+      "w": "a",
+      "start": 6.269,
+      "end": 6.293
+    },
+    {
+      "w": "virgin",
+      "start": 6.339,
+      "end": 6.641
+    },
+    {
+      "w": "espoused",
+      "start": 6.676,
+      "end": 7.105
+    },
+    {
+      "w": "to",
+      "start": 7.14,
+      "end": 7.21
+    },
+    {
+      "w": "a",
+      "start": 7.279,
+      "end": 7.314
+    },
+    {
+      "w": "man",
+      "start": 7.349,
+      "end": 7.523
+    },
+    {
+      "w": "named",
+      "start": 7.57,
+      "end": 7.755
+    },
+    {
+      "w": "Joseph,",
+      "start": 7.825,
+      "end": 8.359
+    },
+    {
+      "w": "and",
+      "start": 8.417,
+      "end": 8.545
+    },
+    {
+      "w": "her",
+      "start": 8.615,
+      "end": 8.707
+    },
+    {
+      "w": "name",
+      "start": 8.754,
+      "end": 8.893
+    },
+    {
+      "w": "is",
+      "start": 8.928,
+      "end": 8.986
+    },
+    {
+      "w": "Mary.",
+      "start": 9.056,
+      "end": 9.497
+    },
+    {
+      "w": "Note",
+      "start": 9.706,
+      "end": 9.903
+    },
+    {
+      "w": "what",
+      "start": 9.927,
+      "end": 10.043
+    },
+    {
+      "w": "Luke",
+      "start": 10.089,
+      "end": 10.263
+    },
+    {
+      "w": "tells",
+      "start": 10.286,
+      "end": 10.507
+    },
+    {
+      "w": "us",
+      "start": 10.565,
+      "end": 10.704
+    },
+    {
+      "w": "and",
+      "start": 10.762,
+      "end": 10.867
+    },
+    {
+      "w": "what",
+      "start": 10.913,
+      "end": 11.053
+    },
+    {
+      "w": "he",
+      "start": 11.088,
+      "end": 11.146
+    },
+    {
+      "w": "does",
+      "start": 11.192,
+      "end": 11.331
+    },
+    {
+      "w": "not.",
+      "start": 11.378,
+      "end": 11.819
+    },
+    {
+      "w": "He",
+      "start": 12.063,
+      "end": 12.156
+    },
+    {
+      "w": "gives",
+      "start": 12.202,
+      "end": 12.376
+    },
+    {
+      "w": "us",
+      "start": 12.423,
+      "end": 12.504
+    },
+    {
+      "w": "the",
+      "start": 12.55,
+      "end": 12.632
+    },
+    {
+      "w": "town,",
+      "start": 12.678,
+      "end": 13.096
+    },
+    {
+      "w": "the",
+      "start": 13.201,
+      "end": 13.282
+    },
+    {
+      "w": "man",
+      "start": 13.34,
+      "end": 13.514
+    },
+    {
+      "w": "she",
+      "start": 13.572,
+      "end": 13.677
+    },
+    {
+      "w": "is",
+      "start": 13.712,
+      "end": 13.77
+    },
+    {
+      "w": "promised",
+      "start": 13.816,
+      "end": 14.118
+    },
+    {
+      "w": "to,",
+      "start": 14.141,
+      "end": 14.408
+    },
+    {
+      "w": "his",
+      "start": 14.455,
+      "end": 14.571
+    },
+    {
+      "w": "royal",
+      "start": 14.617,
+      "end": 14.803
+    },
+    {
+      "w": "line.",
+      "start": 14.838,
+      "end": 15.256
+    },
+    {
+      "w": "He",
+      "start": 15.778,
+      "end": 15.871
+    },
+    {
+      "w": "never",
+      "start": 15.929,
+      "end": 16.103
+    },
+    {
+      "w": "gives",
+      "start": 16.138,
+      "end": 16.278
+    },
+    {
+      "w": "us",
+      "start": 16.312,
+      "end": 16.382
+    },
+    {
+      "w": "her",
+      "start": 16.428,
+      "end": 16.51
+    },
+    {
+      "w": "age.",
+      "start": 16.579,
+      "end": 16.963
+    },
+    {
+      "w": "So",
+      "start": 17.09,
+      "end": 17.183
+    },
+    {
+      "w": "when",
+      "start": 17.218,
+      "end": 17.322
+    },
+    {
+      "w": "you",
+      "start": 17.357,
+      "end": 17.427
+    },
+    {
+      "w": "hear",
+      "start": 17.485,
+      "end": 17.613
+    },
+    {
+      "w": "her",
+      "start": 17.671,
+      "end": 17.74
+    },
+    {
+      "w": "called",
+      "start": 17.775,
+      "end": 17.984
+    },
+    {
+      "w": "a",
+      "start": 18.019,
+      "end": 18.042
+    },
+    {
+      "w": "teenager,",
+      "start": 18.077,
+      "end": 18.623
+    },
+    {
+      "w": "that",
+      "start": 18.75,
+      "end": 18.913
+    },
+    {
+      "w": "is",
+      "start": 18.948,
+      "end": 19.017
+    },
+    {
+      "w": "tradition",
+      "start": 19.052,
+      "end": 19.377
+    },
+    {
+      "w": "talking,",
+      "start": 19.412,
+      "end": 19.877
+    },
+    {
+      "w": "not",
+      "start": 20.028,
+      "end": 20.178
+    },
+    {
+      "w": "the",
+      "start": 20.213,
+      "end": 20.283
+    },
+    {
+      "w": "text.",
+      "start": 20.318,
+      "end": 20.805
+    },
+    {
+      "w": "The",
+      "start": 21.189,
+      "end": 21.293
+    },
+    {
+      "w": "angel",
+      "start": 21.328,
+      "end": 21.514
+    },
+    {
+      "w": "says,",
+      "start": 21.56,
+      "end": 21.723
+    },
+    {
+      "w": "Hail,",
+      "start": 21.746,
+      "end": 22.129
+    },
+    {
+      "w": "thou",
+      "start": 22.257,
+      "end": 22.442
+    },
+    {
+      "w": "that",
+      "start": 22.5,
+      "end": 22.617
+    },
+    {
+      "w": "art",
+      "start": 22.64,
+      "end": 22.756
+    },
+    {
+      "w": "highly",
+      "start": 22.791,
+      "end": 23.035
+    },
+    {
+      "w": "favoured,",
+      "start": 23.081,
+      "end": 23.545
+    },
+    {
+      "w": "the",
+      "start": 23.731,
+      "end": 23.836
+    },
+    {
+      "w": "Lord",
+      "start": 23.894,
+      "end": 24.172
+    },
+    {
+      "w": "is",
+      "start": 24.219,
+      "end": 24.323
+    },
+    {
+      "w": "with",
+      "start": 24.37,
+      "end": 24.509
+    },
+    {
+      "w": "thee.",
+      "start": 24.532,
+      "end": 24.834
+    },
+    {
+      "w": "And",
+      "start": 25.171,
+      "end": 25.298
+    },
+    {
+      "w": "she",
+      "start": 25.333,
+      "end": 25.426
+    },
+    {
+      "w": "is",
+      "start": 25.461,
+      "end": 25.531
+    },
+    {
+      "w": "troubled.",
+      "start": 25.565,
+      "end": 26.041
+    },
+    {
+      "w": "Not",
+      "start": 26.32,
+      "end": 26.494
+    },
+    {
+      "w": "by",
+      "start": 26.529,
+      "end": 26.599
+    },
+    {
+      "w": "the",
+      "start": 26.633,
+      "end": 26.703
+    },
+    {
+      "w": "angel.",
+      "start": 26.738,
+      "end": 27.121
+    },
+    {
+      "w": "By",
+      "start": 27.249,
+      "end": 27.353
+    },
+    {
+      "w": "the",
+      "start": 27.388,
+      "end": 27.458
+    },
+    {
+      "w": "greeting.",
+      "start": 27.493,
+      "end": 27.934
+    },
+    {
+      "w": "She",
+      "start": 28.12,
+      "end": 28.224
+    },
+    {
+      "w": "is",
+      "start": 28.259,
+      "end": 28.329
+    },
+    {
+      "w": "turning",
+      "start": 28.375,
+      "end": 28.607
+    },
+    {
+      "w": "the",
+      "start": 28.642,
+      "end": 28.712
+    },
+    {
+      "w": "words",
+      "start": 28.746,
+      "end": 28.944
+    },
+    {
+      "w": "over,",
+      "start": 28.979,
+      "end": 29.362
+    },
+    {
+      "w": "wondering",
+      "start": 29.606,
+      "end": 29.919
+    },
+    {
+      "w": "what",
+      "start": 29.966,
+      "end": 30.093
+    },
+    {
+      "w": "kind",
+      "start": 30.14,
+      "end": 30.291
+    },
+    {
+      "w": "of",
+      "start": 30.325,
+      "end": 30.383
+    },
+    {
+      "w": "salutation",
+      "start": 30.418,
+      "end": 30.952
+    },
+    {
+      "w": "this",
+      "start": 30.987,
+      "end": 31.115
+    },
+    {
+      "w": "is.",
+      "start": 31.173,
+      "end": 31.579
+    },
+    {
+      "w": "Then",
+      "start": 31.73,
+      "end": 31.904
+    },
+    {
+      "w": "the",
+      "start": 31.939,
+      "end": 32.009
+    },
+    {
+      "w": "news.",
+      "start": 32.044,
+      "end": 32.508
+    },
+    {
+      "w": "You",
+      "start": 32.752,
+      "end": 32.856
+    },
+    {
+      "w": "will",
+      "start": 32.88,
+      "end": 33.007
+    },
+    {
+      "w": "conceive",
+      "start": 33.042,
+      "end": 33.402
+    },
+    {
+      "w": "and",
+      "start": 33.425,
+      "end": 33.495
+    },
+    {
+      "w": "bear",
+      "start": 33.53,
+      "end": 33.657
+    },
+    {
+      "w": "a",
+      "start": 33.692,
+      "end": 33.716
+    },
+    {
+      "w": "son,",
+      "start": 33.762,
+      "end": 34.168
+    },
+    {
+      "w": "and",
+      "start": 34.273,
+      "end": 34.377
+    },
+    {
+      "w": "call",
+      "start": 34.435,
+      "end": 34.61
+    },
+    {
+      "w": "his",
+      "start": 34.656,
+      "end": 34.749
+    },
+    {
+      "w": "name",
+      "start": 34.795,
+      "end": 34.946
+    },
+    {
+      "w": "Jesus,",
+      "start": 34.981,
+      "end": 35.585
+    },
+    {
+      "w": "and",
+      "start": 35.829,
+      "end": 35.945
+    },
+    {
+      "w": "his",
+      "start": 35.979,
+      "end": 36.072
+    },
+    {
+      "w": "kingdom",
+      "start": 36.13,
+      "end": 36.432
+    },
+    {
+      "w": "will",
+      "start": 36.478,
+      "end": 36.606
+    },
+    {
+      "w": "have",
+      "start": 36.641,
+      "end": 36.769
+    },
+    {
+      "w": "no",
+      "start": 36.803,
+      "end": 36.885
+    },
+    {
+      "w": "end.",
+      "start": 36.954,
+      "end": 37.314
+    },
+    {
+      "w": "She",
+      "start": 38.138,
+      "end": 38.243
+    },
+    {
+      "w": "asks",
+      "start": 38.301,
+      "end": 38.452
+    },
+    {
+      "w": "one",
+      "start": 38.498,
+      "end": 38.649
+    },
+    {
+      "w": "practical",
+      "start": 38.684,
+      "end": 39.021
+    },
+    {
+      "w": "question.",
+      "start": 39.067,
+      "end": 39.636
+    },
+    {
+      "w": "How",
+      "start": 39.88,
+      "end": 40.031
+    },
+    {
+      "w": "shall",
+      "start": 40.077,
+      "end": 40.228
+    },
+    {
+      "w": "this",
+      "start": 40.263,
+      "end": 40.391
+    },
+    {
+      "w": "be,",
+      "start": 40.449,
+      "end": 40.797
+    },
+    {
+      "w": "seeing",
+      "start": 40.913,
+      "end": 41.145
+    },
+    {
+      "w": "I",
+      "start": 41.204,
+      "end": 41.227
+    },
+    {
+      "w": "know",
+      "start": 41.285,
+      "end": 41.401
+    },
+    {
+      "w": "not",
+      "start": 41.447,
+      "end": 41.563
+    },
+    {
+      "w": "a",
+      "start": 41.598,
+      "end": 41.633
+    },
+    {
+      "w": "man?",
+      "start": 41.668,
+      "end": 42.121
+    },
+    {
+      "w": "She",
+      "start": 42.457,
+      "end": 42.55
+    },
+    {
+      "w": "is",
+      "start": 42.585,
+      "end": 42.643
+    },
+    {
+      "w": "not",
+      "start": 42.69,
+      "end": 42.806
+    },
+    {
+      "w": "asking",
+      "start": 42.841,
+      "end": 43.096
+    },
+    {
+      "w": "for",
+      "start": 43.131,
+      "end": 43.235
+    },
+    {
+      "w": "proof.",
+      "start": 43.282,
+      "end": 43.688
+    },
+    {
+      "w": "She",
+      "start": 43.804,
+      "end": 43.909
+    },
+    {
+      "w": "is",
+      "start": 43.955,
+      "end": 44.025
+    },
+    {
+      "w": "asking",
+      "start": 44.071,
+      "end": 44.361
+    },
+    {
+      "w": "how.",
+      "start": 44.408,
+      "end": 44.756
+    },
+    {
+      "w": "And",
+      "start": 45,
+      "end": 45.116
+    },
+    {
+      "w": "when",
+      "start": 45.151,
+      "end": 45.279
+    },
+    {
+      "w": "the",
+      "start": 45.302,
+      "end": 45.372
+    },
+    {
+      "w": "answer",
+      "start": 45.418,
+      "end": 45.65
+    },
+    {
+      "w": "comes,",
+      "start": 45.697,
+      "end": 46.045
+    },
+    {
+      "w": "she",
+      "start": 46.08,
+      "end": 46.184
+    },
+    {
+      "w": "says,",
+      "start": 46.242,
+      "end": 46.695
+    },
+    {
+      "w": "Behold",
+      "start": 46.939,
+      "end": 47.276
+    },
+    {
+      "w": "the",
+      "start": 47.31,
+      "end": 47.38
+    },
+    {
+      "w": "handmaid",
+      "start": 47.426,
+      "end": 47.763
+    },
+    {
+      "w": "of",
+      "start": 47.798,
+      "end": 47.844
+    },
+    {
+      "w": "the",
+      "start": 47.879,
+      "end": 47.949
+    },
+    {
+      "w": "Lord,",
+      "start": 47.995,
+      "end": 48.425
+    },
+    {
+      "w": "be",
+      "start": 48.553,
+      "end": 48.669
+    },
+    {
+      "w": "it",
+      "start": 48.704,
+      "end": 48.762
+    },
+    {
+      "w": "unto",
+      "start": 48.808,
+      "end": 48.982
+    },
+    {
+      "w": "me",
+      "start": 49.04,
+      "end": 49.203
+    },
+    {
+      "w": "according",
+      "start": 49.238,
+      "end": 49.551
+    },
+    {
+      "w": "to",
+      "start": 49.586,
+      "end": 49.644
+    },
+    {
+      "w": "thy",
+      "start": 49.69,
+      "end": 49.795
+    },
+    {
+      "w": "word.",
+      "start": 49.853,
+      "end": 50.224
+    },
+    {
+      "w": "She",
+      "start": 50.34,
+      "end": 50.445
+    },
+    {
+      "w": "said",
+      "start": 50.503,
+      "end": 50.654
+    },
+    {
+      "w": "yes",
+      "start": 50.689,
+      "end": 50.828
+    },
+    {
+      "w": "to",
+      "start": 50.875,
+      "end": 50.933
+    },
+    {
+      "w": "a",
+      "start": 51.014,
+      "end": 51.037
+    },
+    {
+      "w": "plan",
+      "start": 51.072,
+      "end": 51.293
+    },
+    {
+      "w": "she",
+      "start": 51.339,
+      "end": 51.432
+    },
+    {
+      "w": "could",
+      "start": 51.467,
+      "end": 51.618
+    },
+    {
+      "w": "not",
+      "start": 51.652,
+      "end": 51.745
+    },
+    {
+      "w": "verify,",
+      "start": 51.78,
+      "end": 52.268
+    },
+    {
+      "w": "in",
+      "start": 52.303,
+      "end": 52.407
+    },
+    {
+      "w": "a",
+      "start": 52.442,
+      "end": 52.465
+    },
+    {
+      "w": "village",
+      "start": 52.512,
+      "end": 52.755
+    },
+    {
+      "w": "that",
+      "start": 52.79,
+      "end": 52.895
+    },
+    {
+      "w": "could",
+      "start": 52.93,
+      "end": 53.069
+    },
+    {
+      "w": "count.",
+      "start": 53.104,
+      "end": 53.684
+    }
+  ],
+  "renderedAt": 1785313166306
+}

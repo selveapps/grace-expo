@@ -1,0 +1,2421 @@
+{
+  "kind": "story",
+  "storyId": "mary-annunciation",
+  "part": 1,
+  "style": "tender",
+  "text": "In the sixth month, the angel Gabriel was sent from God unto a city of Galilee, named Nazareth.\n\nStart with the address, because Luke did.\n\nNot Jerusalem. Not the temple. Nazareth, a small town in the north. Gabriel, who elsewhere in Scripture stands in the presence of God, is sent to a village.\n\nTo a virgin espoused to a man whose name was Joseph, of the house of David. And the virgin's name was Mary.\n\nEspoused means legally bound, but not yet living together. The commitment was real and binding, and breaking it required a divorce.\n\nLuke tells us she was a virgin. He tells us the town, the man she was promised to, and his royal line. He does not tell us her age. Popular retellings often assign her one. The text does not, and I am not going to hand you a number Scripture never gave.\n\nAnd the angel came in unto her, and said, Hail, thou that art highly favoured, the Lord is with thee. Blessed art thou among women.\n\nAnd when she saw him, she was troubled at his saying.\n\nNotice what troubled her. Not the angel. The greeting. She cast in her mind what manner of salutation this should be. She is turning the words over, trying to work out what on earth someone means by talking to her like that.\n\nShe is not frightened of the messenger. She is thrown by being called favoured.\n\nAnd the angel said unto her, Fear not, Mary. For thou hast found favour with God.\n\nHe uses her name.\n\nThen he tells her what favour is going to cost.\n\nAnd, behold, thou shalt conceive in thy womb, and bring forth a son, and shalt call his name Jesus.\n\nSit in the gap between those two sentences. The angel has just told an engaged, unmarried woman that she is going to be pregnant. In her village, in her century, that news does not read as a blessing. It puts her marriage and her reputation at risk, and under the law of the time, potentially far more than that.\n\nGabriel says favoured. And favoured looks like this.\n\nThen he keeps going, and the promise gets enormous.\n\nHe shall be great, and shall be called the Son of the Highest. And the Lord God shall give unto him the throne of his father David. And he shall reign over the house of Jacob for ever. And of his kingdom there shall be no end.\n\nThe throne of his father David. That is the promise Israel had been holding onto for a thousand years, handed to a young woman standing in a house in Nazareth with no witnesses.\n\nThere is no crowd. No temple. No priest. No one to confirm this later.\n\nJust Mary, and an angel, and a sentence that ends with the words no end.\n\nAnd she has not said a word yet.",
+  "voice": "cgSgspJ2msm6clMCkdW9",
+  "words": [
+    {
+      "w": "In",
+      "start": 0,
+      "end": 0.139
+    },
+    {
+      "w": "the",
+      "start": 0.174,
+      "end": 0.244
+    },
+    {
+      "w": "sixth",
+      "start": 0.29,
+      "end": 0.546
+    },
+    {
+      "w": "month,",
+      "start": 0.604,
+      "end": 0.929
+    },
+    {
+      "w": "the",
+      "start": 0.964,
+      "end": 1.068
+    },
+    {
+      "w": "angel",
+      "start": 1.149,
+      "end": 1.428
+    },
+    {
+      "w": "Gabriel",
+      "start": 1.486,
+      "end": 1.95
+    },
+    {
+      "w": "was",
+      "start": 2.02,
+      "end": 2.136
+    },
+    {
+      "w": "sent",
+      "start": 2.183,
+      "end": 2.368
+    },
+    {
+      "w": "from",
+      "start": 2.403,
+      "end": 2.531
+    },
+    {
+      "w": "God",
+      "start": 2.601,
+      "end": 2.902
+    },
+    {
+      "w": "unto",
+      "start": 2.961,
+      "end": 3.135
+    },
+    {
+      "w": "a",
+      "start": 3.216,
+      "end": 3.239
+    },
+    {
+      "w": "city",
+      "start": 3.309,
+      "end": 3.553
+    },
+    {
+      "w": "of",
+      "start": 3.599,
+      "end": 3.646
+    },
+    {
+      "w": "Galilee,",
+      "start": 3.704,
+      "end": 4.435
+    },
+    {
+      "w": "named",
+      "start": 4.621,
+      "end": 4.865
+    },
+    {
+      "w": "Nazareth.",
+      "start": 4.899,
+      "end": 5.7
+    },
+    {
+      "w": "Start",
+      "start": 6.246,
+      "end": 6.513
+    },
+    {
+      "w": "with",
+      "start": 6.536,
+      "end": 6.641
+    },
+    {
+      "w": "the",
+      "start": 6.676,
+      "end": 6.745
+    },
+    {
+      "w": "address,",
+      "start": 6.78,
+      "end": 7.314
+    },
+    {
+      "w": "because",
+      "start": 7.361,
+      "end": 7.651
+    },
+    {
+      "w": "Luke",
+      "start": 7.697,
+      "end": 7.93
+    },
+    {
+      "w": "did.",
+      "start": 7.964,
+      "end": 8.44
+    },
+    {
+      "w": "Not",
+      "start": 8.905,
+      "end": 9.091
+    },
+    {
+      "w": "Jerusalem.",
+      "start": 9.137,
+      "end": 9.903
+    },
+    {
+      "w": "Not",
+      "start": 10.368,
+      "end": 10.542
+    },
+    {
+      "w": "the",
+      "start": 10.577,
+      "end": 10.646
+    },
+    {
+      "w": "temple.",
+      "start": 10.681,
+      "end": 11.297
+    },
+    {
+      "w": "Nazareth,",
+      "start": 12.307,
+      "end": 13.177
+    },
+    {
+      "w": "a",
+      "start": 13.247,
+      "end": 13.317
+    },
+    {
+      "w": "small",
+      "start": 13.386,
+      "end": 13.653
+    },
+    {
+      "w": "town",
+      "start": 13.7,
+      "end": 13.944
+    },
+    {
+      "w": "in",
+      "start": 13.99,
+      "end": 14.048
+    },
+    {
+      "w": "the",
+      "start": 14.083,
+      "end": 14.153
+    },
+    {
+      "w": "north.",
+      "start": 14.199,
+      "end": 14.756
+    },
+    {
+      "w": "Gabriel,",
+      "start": 15.395,
+      "end": 16.022
+    },
+    {
+      "w": "who",
+      "start": 16.057,
+      "end": 16.208
+    },
+    {
+      "w": "elsewhere",
+      "start": 16.312,
+      "end": 16.73
+    },
+    {
+      "w": "in",
+      "start": 16.765,
+      "end": 16.834
+    },
+    {
+      "w": "Scripture",
+      "start": 16.881,
+      "end": 17.345
+    },
+    {
+      "w": "stands",
+      "start": 17.415,
+      "end": 17.821
+    },
+    {
+      "w": "in",
+      "start": 17.856,
+      "end": 17.914
+    },
+    {
+      "w": "the",
+      "start": 17.937,
+      "end": 18.007
+    },
+    {
+      "w": "presence",
+      "start": 18.042,
+      "end": 18.402
+    },
+    {
+      "w": "of",
+      "start": 18.425,
+      "end": 18.483
+    },
+    {
+      "w": "God,",
+      "start": 18.541,
+      "end": 19.063
+    },
+    {
+      "w": "is",
+      "start": 19.226,
+      "end": 19.4
+    },
+    {
+      "w": "sent",
+      "start": 19.447,
+      "end": 19.656
+    },
+    {
+      "w": "to",
+      "start": 19.69,
+      "end": 19.748
+    },
+    {
+      "w": "a",
+      "start": 19.818,
+      "end": 19.841
+    },
+    {
+      "w": "village.",
+      "start": 19.888,
+      "end": 20.619
+    },
+    {
+      "w": "To",
+      "start": 21.165,
+      "end": 21.293
+    },
+    {
+      "w": "a",
+      "start": 21.374,
+      "end": 21.397
+    },
+    {
+      "w": "virgin",
+      "start": 21.455,
+      "end": 21.815
+    },
+    {
+      "w": "espoused",
+      "start": 21.885,
+      "end": 22.349
+    },
+    {
+      "w": "to",
+      "start": 22.372,
+      "end": 22.442
+    },
+    {
+      "w": "a",
+      "start": 22.523,
+      "end": 22.546
+    },
+    {
+      "w": "man",
+      "start": 22.604,
+      "end": 22.825
+    },
+    {
+      "w": "whose",
+      "start": 22.872,
+      "end": 23.069
+    },
+    {
+      "w": "name",
+      "start": 23.104,
+      "end": 23.324
+    },
+    {
+      "w": "was",
+      "start": 23.359,
+      "end": 23.487
+    },
+    {
+      "w": "Joseph,",
+      "start": 23.556,
+      "end": 24.311
+    },
+    {
+      "w": "of",
+      "start": 24.392,
+      "end": 24.509
+    },
+    {
+      "w": "the",
+      "start": 24.555,
+      "end": 24.625
+    },
+    {
+      "w": "house",
+      "start": 24.671,
+      "end": 24.903
+    },
+    {
+      "w": "of",
+      "start": 24.938,
+      "end": 24.985
+    },
+    {
+      "w": "David.",
+      "start": 25.043,
+      "end": 25.646
+    },
+    {
+      "w": "And",
+      "start": 26.389,
+      "end": 26.54
+    },
+    {
+      "w": "the",
+      "start": 26.587,
+      "end": 26.656
+    },
+    {
+      "w": "virgin's",
+      "start": 26.691,
+      "end": 27.098
+    },
+    {
+      "w": "name",
+      "start": 27.144,
+      "end": 27.353
+    },
+    {
+      "w": "was",
+      "start": 27.388,
+      "end": 27.504
+    },
+    {
+      "w": "Mary.",
+      "start": 27.574,
+      "end": 28.224
+    },
+    {
+      "w": "Espoused",
+      "start": 28.862,
+      "end": 29.605
+    },
+    {
+      "w": "means",
+      "start": 29.675,
+      "end": 29.93
+    },
+    {
+      "w": "legally",
+      "start": 30,
+      "end": 30.348
+    },
+    {
+      "w": "bound,",
+      "start": 30.406,
+      "end": 30.929
+    },
+    {
+      "w": "but",
+      "start": 30.975,
+      "end": 31.149
+    },
+    {
+      "w": "not",
+      "start": 31.207,
+      "end": 31.382
+    },
+    {
+      "w": "yet",
+      "start": 31.428,
+      "end": 31.567
+    },
+    {
+      "w": "living",
+      "start": 31.614,
+      "end": 31.858
+    },
+    {
+      "w": "together.",
+      "start": 31.916,
+      "end": 32.601
+    },
+    {
+      "w": "The",
+      "start": 33.46,
+      "end": 33.576
+    },
+    {
+      "w": "commitment",
+      "start": 33.623,
+      "end": 34.052
+    },
+    {
+      "w": "was",
+      "start": 34.087,
+      "end": 34.192
+    },
+    {
+      "w": "real",
+      "start": 34.296,
+      "end": 34.621
+    },
+    {
+      "w": "and",
+      "start": 34.691,
+      "end": 34.807
+    },
+    {
+      "w": "binding,",
+      "start": 34.877,
+      "end": 35.445
+    },
+    {
+      "w": "and",
+      "start": 35.48,
+      "end": 35.585
+    },
+    {
+      "w": "breaking",
+      "start": 35.643,
+      "end": 36.003
+    },
+    {
+      "w": "it",
+      "start": 36.061,
+      "end": 36.154
+    },
+    {
+      "w": "required",
+      "start": 36.212,
+      "end": 36.665
+    },
+    {
+      "w": "a",
+      "start": 36.699,
+      "end": 36.723
+    },
+    {
+      "w": "divorce.",
+      "start": 36.769,
+      "end": 37.535
+    },
+    {
+      "w": "Luke",
+      "start": 38.371,
+      "end": 38.638
+    },
+    {
+      "w": "tells",
+      "start": 38.673,
+      "end": 38.928
+    },
+    {
+      "w": "us",
+      "start": 38.987,
+      "end": 39.091
+    },
+    {
+      "w": "she",
+      "start": 39.149,
+      "end": 39.242
+    },
+    {
+      "w": "was",
+      "start": 39.288,
+      "end": 39.381
+    },
+    {
+      "w": "a",
+      "start": 39.428,
+      "end": 39.451
+    },
+    {
+      "w": "virgin.",
+      "start": 39.497,
+      "end": 40.194
+    },
+    {
+      "w": "He",
+      "start": 41.03,
+      "end": 41.158
+    },
+    {
+      "w": "tells",
+      "start": 41.204,
+      "end": 41.39
+    },
+    {
+      "w": "us",
+      "start": 41.436,
+      "end": 41.517
+    },
+    {
+      "w": "the",
+      "start": 41.576,
+      "end": 41.645
+    },
+    {
+      "w": "town,",
+      "start": 41.692,
+      "end": 42.33
+    },
+    {
+      "w": "the",
+      "start": 42.539,
+      "end": 42.644
+    },
+    {
+      "w": "man",
+      "start": 42.702,
+      "end": 42.899
+    },
+    {
+      "w": "she",
+      "start": 42.957,
+      "end": 43.05
+    },
+    {
+      "w": "was",
+      "start": 43.096,
+      "end": 43.178
+    },
+    {
+      "w": "promised",
+      "start": 43.236,
+      "end": 43.584
+    },
+    {
+      "w": "to,",
+      "start": 43.619,
+      "end": 44.072
+    },
+    {
+      "w": "and",
+      "start": 44.606,
+      "end": 44.803
+    },
+    {
+      "w": "his",
+      "start": 44.838,
+      "end": 44.931
+    },
+    {
+      "w": "royal",
+      "start": 44.989,
+      "end": 45.221
+    },
+    {
+      "w": "line.",
+      "start": 45.268,
+      "end": 45.848
+    },
+    {
+      "w": "He",
+      "start": 46.684,
+      "end": 46.777
+    },
+    {
+      "w": "does",
+      "start": 46.823,
+      "end": 46.951
+    },
+    {
+      "w": "not",
+      "start": 46.997,
+      "end": 47.148
+    },
+    {
+      "w": "tell",
+      "start": 47.183,
+      "end": 47.334
+    },
+    {
+      "w": "us",
+      "start": 47.392,
+      "end": 47.473
+    },
+    {
+      "w": "her",
+      "start": 47.52,
+      "end": 47.613
+    },
+    {
+      "w": "age.",
+      "start": 47.671,
+      "end": 48.274
+    },
+    {
+      "w": "Popular",
+      "start": 49.25,
+      "end": 49.691
+    },
+    {
+      "w": "retellings",
+      "start": 49.737,
+      "end": 50.283
+    },
+    {
+      "w": "often",
+      "start": 50.353,
+      "end": 50.631
+    },
+    {
+      "w": "assign",
+      "start": 50.666,
+      "end": 50.945
+    },
+    {
+      "w": "her",
+      "start": 50.991,
+      "end": 51.061
+    },
+    {
+      "w": "one.",
+      "start": 51.131,
+      "end": 51.607
+    },
+    {
+      "w": "The",
+      "start": 52.466,
+      "end": 52.582
+    },
+    {
+      "w": "text",
+      "start": 52.64,
+      "end": 52.953
+    },
+    {
+      "w": "does",
+      "start": 53,
+      "end": 53.151
+    },
+    {
+      "w": "not,",
+      "start": 53.22,
+      "end": 53.65
+    },
+    {
+      "w": "and",
+      "start": 53.836,
+      "end": 53.987
+    },
+    {
+      "w": "I",
+      "start": 54.056,
+      "end": 54.08
+    },
+    {
+      "w": "am",
+      "start": 54.138,
+      "end": 54.219
+    },
+    {
+      "w": "not",
+      "start": 54.277,
+      "end": 54.428
+    },
+    {
+      "w": "going",
+      "start": 54.474,
+      "end": 54.648
+    },
+    {
+      "w": "to",
+      "start": 54.695,
+      "end": 54.741
+    },
+    {
+      "w": "hand",
+      "start": 54.799,
+      "end": 54.962
+    },
+    {
+      "w": "you",
+      "start": 55.008,
+      "end": 55.078
+    },
+    {
+      "w": "a",
+      "start": 55.124,
+      "end": 55.148
+    },
+    {
+      "w": "number",
+      "start": 55.206,
+      "end": 55.45
+    },
+    {
+      "w": "Scripture",
+      "start": 55.519,
+      "end": 55.891
+    },
+    {
+      "w": "never",
+      "start": 55.937,
+      "end": 56.146
+    },
+    {
+      "w": "gave.",
+      "start": 56.204,
+      "end": 56.796
+    },
+    {
+      "w": "And",
+      "start": 57.655,
+      "end": 57.806
+    },
+    {
+      "w": "the",
+      "start": 57.841,
+      "end": 57.911
+    },
+    {
+      "w": "angel",
+      "start": 57.981,
+      "end": 58.259
+    },
+    {
+      "w": "came",
+      "start": 58.317,
+      "end": 58.515
+    },
+    {
+      "w": "in",
+      "start": 58.549,
+      "end": 58.631
+    },
+    {
+      "w": "unto",
+      "start": 58.689,
+      "end": 58.863
+    },
+    {
+      "w": "her,",
+      "start": 58.944,
+      "end": 59.35
+    },
+    {
+      "w": "and",
+      "start": 59.571,
+      "end": 59.734
+    },
+    {
+      "w": "said,",
+      "start": 59.803,
+      "end": 60.303
+    },
+    {
+      "w": "Hail,",
+      "start": 60.767,
+      "end": 61.301
+    },
+    {
+      "w": "thou",
+      "start": 61.347,
+      "end": 61.545
+    },
+    {
+      "w": "that",
+      "start": 61.603,
+      "end": 61.731
+    },
+    {
+      "w": "art",
+      "start": 61.777,
+      "end": 61.963
+    },
+    {
+      "w": "highly",
+      "start": 62.009,
+      "end": 62.299
+    },
+    {
+      "w": "favoured,",
+      "start": 62.369,
+      "end": 62.799
+    },
+    {
+      "w": "the",
+      "start": 62.822,
+      "end": 62.892
+    },
+    {
+      "w": "Lord",
+      "start": 62.961,
+      "end": 63.193
+    },
+    {
+      "w": "is",
+      "start": 63.24,
+      "end": 63.309
+    },
+    {
+      "w": "with",
+      "start": 63.356,
+      "end": 63.484
+    },
+    {
+      "w": "thee.",
+      "start": 63.518,
+      "end": 64.029
+    },
+    {
+      "w": "Blessed",
+      "start": 64.575,
+      "end": 64.947
+    },
+    {
+      "w": "art",
+      "start": 64.981,
+      "end": 65.144
+    },
+    {
+      "w": "thou",
+      "start": 65.179,
+      "end": 65.353
+    },
+    {
+      "w": "among",
+      "start": 65.423,
+      "end": 65.632
+    },
+    {
+      "w": "women.",
+      "start": 65.69,
+      "end": 66.235
+    },
+    {
+      "w": "And",
+      "start": 67.095,
+      "end": 67.234
+    },
+    {
+      "w": "when",
+      "start": 67.269,
+      "end": 67.385
+    },
+    {
+      "w": "she",
+      "start": 67.431,
+      "end": 67.524
+    },
+    {
+      "w": "saw",
+      "start": 67.594,
+      "end": 67.826
+    },
+    {
+      "w": "him,",
+      "start": 67.896,
+      "end": 68.128
+    },
+    {
+      "w": "she",
+      "start": 68.163,
+      "end": 68.279
+    },
+    {
+      "w": "was",
+      "start": 68.325,
+      "end": 68.43
+    },
+    {
+      "w": "troubled",
+      "start": 68.488,
+      "end": 68.824
+    },
+    {
+      "w": "at",
+      "start": 68.859,
+      "end": 68.929
+    },
+    {
+      "w": "his",
+      "start": 68.964,
+      "end": 69.068
+    },
+    {
+      "w": "saying.",
+      "start": 69.103,
+      "end": 69.742
+    },
+    {
+      "w": "Notice",
+      "start": 70.287,
+      "end": 70.601
+    },
+    {
+      "w": "what",
+      "start": 70.624,
+      "end": 70.728
+    },
+    {
+      "w": "troubled",
+      "start": 70.752,
+      "end": 71.054
+    },
+    {
+      "w": "her.",
+      "start": 71.088,
+      "end": 71.518
+    },
+    {
+      "w": "Not",
+      "start": 72.064,
+      "end": 72.226
+    },
+    {
+      "w": "the",
+      "start": 72.261,
+      "end": 72.331
+    },
+    {
+      "w": "angel.",
+      "start": 72.4,
+      "end": 73.004
+    },
+    {
+      "w": "The",
+      "start": 73.468,
+      "end": 73.596
+    },
+    {
+      "w": "greeting.",
+      "start": 73.643,
+      "end": 74.235
+    },
+    {
+      "w": "She",
+      "start": 75.094,
+      "end": 75.222
+    },
+    {
+      "w": "cast",
+      "start": 75.28,
+      "end": 75.593
+    },
+    {
+      "w": "in",
+      "start": 75.639,
+      "end": 75.698
+    },
+    {
+      "w": "her",
+      "start": 75.756,
+      "end": 75.825
+    },
+    {
+      "w": "mind",
+      "start": 75.883,
+      "end": 76.15
+    },
+    {
+      "w": "what",
+      "start": 76.197,
+      "end": 76.324
+    },
+    {
+      "w": "manner",
+      "start": 76.382,
+      "end": 76.615
+    },
+    {
+      "w": "of",
+      "start": 76.661,
+      "end": 76.708
+    },
+    {
+      "w": "salutation",
+      "start": 76.754,
+      "end": 77.416
+    },
+    {
+      "w": "this",
+      "start": 77.474,
+      "end": 77.59
+    },
+    {
+      "w": "should",
+      "start": 77.613,
+      "end": 77.787
+    },
+    {
+      "w": "be.",
+      "start": 77.822,
+      "end": 78.333
+    },
+    {
+      "w": "She",
+      "start": 78.879,
+      "end": 79.006
+    },
+    {
+      "w": "is",
+      "start": 79.064,
+      "end": 79.146
+    },
+    {
+      "w": "turning",
+      "start": 79.192,
+      "end": 79.471
+    },
+    {
+      "w": "the",
+      "start": 79.506,
+      "end": 79.575
+    },
+    {
+      "w": "words",
+      "start": 79.61,
+      "end": 79.865
+    },
+    {
+      "w": "over,",
+      "start": 79.924,
+      "end": 80.492
+    },
+    {
+      "w": "trying",
+      "start": 80.748,
+      "end": 81.015
+    },
+    {
+      "w": "to",
+      "start": 81.05,
+      "end": 81.096
+    },
+    {
+      "w": "work",
+      "start": 81.143,
+      "end": 81.329
+    },
+    {
+      "w": "out",
+      "start": 81.398,
+      "end": 81.526
+    },
+    {
+      "w": "what",
+      "start": 81.572,
+      "end": 81.747
+    },
+    {
+      "w": "on",
+      "start": 81.805,
+      "end": 81.886
+    },
+    {
+      "w": "earth",
+      "start": 81.956,
+      "end": 82.176
+    },
+    {
+      "w": "someone",
+      "start": 82.246,
+      "end": 82.548
+    },
+    {
+      "w": "means",
+      "start": 82.594,
+      "end": 82.896
+    },
+    {
+      "w": "by",
+      "start": 82.954,
+      "end": 83.07
+    },
+    {
+      "w": "talking",
+      "start": 83.128,
+      "end": 83.465
+    },
+    {
+      "w": "to",
+      "start": 83.523,
+      "end": 83.569
+    },
+    {
+      "w": "her",
+      "start": 83.627,
+      "end": 83.709
+    },
+    {
+      "w": "like",
+      "start": 83.767,
+      "end": 83.929
+    },
+    {
+      "w": "that.",
+      "start": 83.964,
+      "end": 84.498
+    },
+    {
+      "w": "She",
+      "start": 85.508,
+      "end": 85.636
+    },
+    {
+      "w": "is",
+      "start": 85.682,
+      "end": 85.752
+    },
+    {
+      "w": "not",
+      "start": 85.799,
+      "end": 85.949
+    },
+    {
+      "w": "frightened",
+      "start": 85.996,
+      "end": 86.344
+    },
+    {
+      "w": "of",
+      "start": 86.367,
+      "end": 86.414
+    },
+    {
+      "w": "the",
+      "start": 86.449,
+      "end": 86.518
+    },
+    {
+      "w": "messenger.",
+      "start": 86.553,
+      "end": 87.319
+    },
+    {
+      "w": "She",
+      "start": 87.726,
+      "end": 87.853
+    },
+    {
+      "w": "is",
+      "start": 87.9,
+      "end": 87.981
+    },
+    {
+      "w": "thrown",
+      "start": 88.028,
+      "end": 88.33
+    },
+    {
+      "w": "by",
+      "start": 88.376,
+      "end": 88.457
+    },
+    {
+      "w": "being",
+      "start": 88.515,
+      "end": 88.689
+    },
+    {
+      "w": "called",
+      "start": 88.736,
+      "end": 88.956
+    },
+    {
+      "w": "favoured.",
+      "start": 89.003,
+      "end": 89.618
+    },
+    {
+      "w": "And",
+      "start": 90.164,
+      "end": 90.303
+    },
+    {
+      "w": "the",
+      "start": 90.35,
+      "end": 90.419
+    },
+    {
+      "w": "angel",
+      "start": 90.477,
+      "end": 90.768
+    },
+    {
+      "w": "said",
+      "start": 90.814,
+      "end": 90.953
+    },
+    {
+      "w": "unto",
+      "start": 91,
+      "end": 91.162
+    },
+    {
+      "w": "her,",
+      "start": 91.232,
+      "end": 91.754
+    },
+    {
+      "w": "Fear",
+      "start": 92.614,
+      "end": 92.846
+    },
+    {
+      "w": "not,",
+      "start": 92.927,
+      "end": 93.171
+    },
+    {
+      "w": "Mary.",
+      "start": 93.206,
+      "end": 93.809
+    },
+    {
+      "w": "For",
+      "start": 94.274,
+      "end": 94.413
+    },
+    {
+      "w": "thou",
+      "start": 94.448,
+      "end": 94.587
+    },
+    {
+      "w": "hast",
+      "start": 94.645,
+      "end": 94.785
+    },
+    {
+      "w": "found",
+      "start": 94.819,
+      "end": 94.994
+    },
+    {
+      "w": "favour",
+      "start": 95.052,
+      "end": 95.342
+    },
+    {
+      "w": "with",
+      "start": 95.377,
+      "end": 95.505
+    },
+    {
+      "w": "God.",
+      "start": 95.551,
+      "end": 96.109
+    },
+    {
+      "w": "He",
+      "start": 96.968,
+      "end": 97.084
+    },
+    {
+      "w": "uses",
+      "start": 97.153,
+      "end": 97.432
+    },
+    {
+      "w": "her",
+      "start": 97.479,
+      "end": 97.571
+    },
+    {
+      "w": "name.",
+      "start": 97.618,
+      "end": 98.129
+    },
+    {
+      "w": "Then",
+      "start": 98.988,
+      "end": 99.162
+    },
+    {
+      "w": "he",
+      "start": 99.208,
+      "end": 99.266
+    },
+    {
+      "w": "tells",
+      "start": 99.325,
+      "end": 99.533
+    },
+    {
+      "w": "her",
+      "start": 99.58,
+      "end": 99.65
+    },
+    {
+      "w": "what",
+      "start": 99.684,
+      "end": 99.801
+    },
+    {
+      "w": "favour",
+      "start": 99.847,
+      "end": 100.137
+    },
+    {
+      "w": "is",
+      "start": 100.195,
+      "end": 100.265
+    },
+    {
+      "w": "going",
+      "start": 100.311,
+      "end": 100.497
+    },
+    {
+      "w": "to",
+      "start": 100.532,
+      "end": 100.578
+    },
+    {
+      "w": "cost.",
+      "start": 100.636,
+      "end": 101.356
+    },
+    {
+      "w": "And,",
+      "start": 101.995,
+      "end": 102.181
+    },
+    {
+      "w": "behold,",
+      "start": 102.204,
+      "end": 102.831
+    },
+    {
+      "w": "thou",
+      "start": 102.866,
+      "end": 103.028
+    },
+    {
+      "w": "shalt",
+      "start": 103.075,
+      "end": 103.26
+    },
+    {
+      "w": "conceive",
+      "start": 103.295,
+      "end": 103.725
+    },
+    {
+      "w": "in",
+      "start": 103.76,
+      "end": 103.806
+    },
+    {
+      "w": "thy",
+      "start": 103.841,
+      "end": 103.957
+    },
+    {
+      "w": "womb,",
+      "start": 104.015,
+      "end": 104.584
+    },
+    {
+      "w": "and",
+      "start": 104.932,
+      "end": 105.083
+    },
+    {
+      "w": "bring",
+      "start": 105.13,
+      "end": 105.315
+    },
+    {
+      "w": "forth",
+      "start": 105.385,
+      "end": 105.617
+    },
+    {
+      "w": "a",
+      "start": 105.652,
+      "end": 105.687
+    },
+    {
+      "w": "son,",
+      "start": 105.756,
+      "end": 106.349
+    },
+    {
+      "w": "and",
+      "start": 106.697,
+      "end": 106.859
+    },
+    {
+      "w": "shalt",
+      "start": 106.906,
+      "end": 107.103
+    },
+    {
+      "w": "call",
+      "start": 107.15,
+      "end": 107.347
+    },
+    {
+      "w": "his",
+      "start": 107.405,
+      "end": 107.51
+    },
+    {
+      "w": "name",
+      "start": 107.568,
+      "end": 107.777
+    },
+    {
+      "w": "Jesus.",
+      "start": 107.835,
+      "end": 108.682
+    },
+    {
+      "w": "Sit",
+      "start": 109.692,
+      "end": 109.89
+    },
+    {
+      "w": "in",
+      "start": 109.936,
+      "end": 109.982
+    },
+    {
+      "w": "the",
+      "start": 110.017,
+      "end": 110.087
+    },
+    {
+      "w": "gap",
+      "start": 110.122,
+      "end": 110.354
+    },
+    {
+      "w": "between",
+      "start": 110.4,
+      "end": 110.667
+    },
+    {
+      "w": "those",
+      "start": 110.691,
+      "end": 110.865
+    },
+    {
+      "w": "two",
+      "start": 110.9,
+      "end": 111.016
+    },
+    {
+      "w": "sentences.",
+      "start": 111.074,
+      "end": 111.979
+    },
+    {
+      "w": "The",
+      "start": 112.722,
+      "end": 112.85
+    },
+    {
+      "w": "angel",
+      "start": 112.931,
+      "end": 113.245
+    },
+    {
+      "w": "has",
+      "start": 113.303,
+      "end": 113.407
+    },
+    {
+      "w": "just",
+      "start": 113.465,
+      "end": 113.639
+    },
+    {
+      "w": "told",
+      "start": 113.674,
+      "end": 113.929
+    },
+    {
+      "w": "an",
+      "start": 113.976,
+      "end": 114.046
+    },
+    {
+      "w": "engaged,",
+      "start": 114.104,
+      "end": 114.719
+    },
+    {
+      "w": "unmarried",
+      "start": 114.777,
+      "end": 115.23
+    },
+    {
+      "w": "woman",
+      "start": 115.265,
+      "end": 115.555
+    },
+    {
+      "w": "that",
+      "start": 115.601,
+      "end": 115.741
+    },
+    {
+      "w": "she",
+      "start": 115.775,
+      "end": 115.88
+    },
+    {
+      "w": "is",
+      "start": 115.938,
+      "end": 116.008
+    },
+    {
+      "w": "going",
+      "start": 116.066,
+      "end": 116.275
+    },
+    {
+      "w": "to",
+      "start": 116.321,
+      "end": 116.368
+    },
+    {
+      "w": "be",
+      "start": 116.414,
+      "end": 116.495
+    },
+    {
+      "w": "pregnant.",
+      "start": 116.53,
+      "end": 117.203
+    },
+    {
+      "w": "In",
+      "start": 117.749,
+      "end": 117.888
+    },
+    {
+      "w": "her",
+      "start": 117.935,
+      "end": 118.016
+    },
+    {
+      "w": "village,",
+      "start": 118.063,
+      "end": 118.492
+    },
+    {
+      "w": "in",
+      "start": 118.515,
+      "end": 118.585
+    },
+    {
+      "w": "her",
+      "start": 118.631,
+      "end": 118.701
+    },
+    {
+      "w": "century,",
+      "start": 118.759,
+      "end": 119.514
+    },
+    {
+      "w": "that",
+      "start": 119.7,
+      "end": 119.874
+    },
+    {
+      "w": "news",
+      "start": 119.932,
+      "end": 120.187
+    },
+    {
+      "w": "does",
+      "start": 120.245,
+      "end": 120.396
+    },
+    {
+      "w": "not",
+      "start": 120.431,
+      "end": 120.57
+    },
+    {
+      "w": "read",
+      "start": 120.628,
+      "end": 120.791
+    },
+    {
+      "w": "as",
+      "start": 120.837,
+      "end": 120.907
+    },
+    {
+      "w": "a",
+      "start": 120.953,
+      "end": 120.977
+    },
+    {
+      "w": "blessing.",
+      "start": 121.012,
+      "end": 121.72
+    },
+    {
+      "w": "It",
+      "start": 122.358,
+      "end": 122.498
+    },
+    {
+      "w": "puts",
+      "start": 122.532,
+      "end": 122.718
+    },
+    {
+      "w": "her",
+      "start": 122.753,
+      "end": 122.834
+    },
+    {
+      "w": "marriage",
+      "start": 122.881,
+      "end": 123.241
+    },
+    {
+      "w": "and",
+      "start": 123.275,
+      "end": 123.345
+    },
+    {
+      "w": "her",
+      "start": 123.392,
+      "end": 123.473
+    },
+    {
+      "w": "reputation",
+      "start": 123.531,
+      "end": 124.158
+    },
+    {
+      "w": "at",
+      "start": 124.204,
+      "end": 124.274
+    },
+    {
+      "w": "risk,",
+      "start": 124.32,
+      "end": 124.912
+    },
+    {
+      "w": "and",
+      "start": 125.133,
+      "end": 125.33
+    },
+    {
+      "w": "under",
+      "start": 125.4,
+      "end": 125.574
+    },
+    {
+      "w": "the",
+      "start": 125.621,
+      "end": 125.69
+    },
+    {
+      "w": "law",
+      "start": 125.737,
+      "end": 125.934
+    },
+    {
+      "w": "of",
+      "start": 125.969,
+      "end": 126.015
+    },
+    {
+      "w": "the",
+      "start": 126.062,
+      "end": 126.132
+    },
+    {
+      "w": "time,",
+      "start": 126.178,
+      "end": 126.712
+    },
+    {
+      "w": "potentially",
+      "start": 126.84,
+      "end": 127.386
+    },
+    {
+      "w": "far",
+      "start": 127.455,
+      "end": 127.664
+    },
+    {
+      "w": "more",
+      "start": 127.734,
+      "end": 127.908
+    },
+    {
+      "w": "than",
+      "start": 127.943,
+      "end": 128.071
+    },
+    {
+      "w": "that.",
+      "start": 128.106,
+      "end": 128.605
+    },
+    {
+      "w": "Gabriel",
+      "start": 129.615,
+      "end": 130.091
+    },
+    {
+      "w": "says",
+      "start": 130.172,
+      "end": 130.439
+    },
+    {
+      "w": "favoured.",
+      "start": 130.521,
+      "end": 131.229
+    },
+    {
+      "w": "And",
+      "start": 131.693,
+      "end": 131.867
+    },
+    {
+      "w": "favoured",
+      "start": 131.972,
+      "end": 132.425
+    },
+    {
+      "w": "looks",
+      "start": 132.471,
+      "end": 132.668
+    },
+    {
+      "w": "like",
+      "start": 132.703,
+      "end": 132.877
+    },
+    {
+      "w": "this.",
+      "start": 132.912,
+      "end": 133.504
+    },
+    {
+      "w": "Then",
+      "start": 134.363,
+      "end": 134.7
+    },
+    {
+      "w": "he",
+      "start": 134.828,
+      "end": 134.932
+    },
+    {
+      "w": "keeps",
+      "start": 134.979,
+      "end": 135.223
+    },
+    {
+      "w": "going,",
+      "start": 135.281,
+      "end": 135.861
+    },
+    {
+      "w": "and",
+      "start": 136.163,
+      "end": 136.302
+    },
+    {
+      "w": "the",
+      "start": 136.349,
+      "end": 136.418
+    },
+    {
+      "w": "promise",
+      "start": 136.465,
+      "end": 136.894
+    },
+    {
+      "w": "gets",
+      "start": 136.941,
+      "end": 137.138
+    },
+    {
+      "w": "enormous.",
+      "start": 137.196,
+      "end": 138.09
+    },
+    {
+      "w": "He",
+      "start": 138.555,
+      "end": 138.671
+    },
+    {
+      "w": "shall",
+      "start": 138.706,
+      "end": 138.88
+    },
+    {
+      "w": "be",
+      "start": 138.926,
+      "end": 138.996
+    },
+    {
+      "w": "great,",
+      "start": 139.042,
+      "end": 139.588
+    },
+    {
+      "w": "and",
+      "start": 139.774,
+      "end": 139.913
+    },
+    {
+      "w": "shall",
+      "start": 139.948,
+      "end": 140.087
+    },
+    {
+      "w": "be",
+      "start": 140.134,
+      "end": 140.192
+    },
+    {
+      "w": "called",
+      "start": 140.238,
+      "end": 140.633
+    },
+    {
+      "w": "the",
+      "start": 140.702,
+      "end": 140.819
+    },
+    {
+      "w": "Son",
+      "start": 140.9,
+      "end": 141.248
+    },
+    {
+      "w": "of",
+      "start": 141.329,
+      "end": 141.399
+    },
+    {
+      "w": "the",
+      "start": 141.445,
+      "end": 141.515
+    },
+    {
+      "w": "Highest.",
+      "start": 141.573,
+      "end": 142.339
+    },
+    {
+      "w": "And",
+      "start": 143.083,
+      "end": 143.222
+    },
+    {
+      "w": "the",
+      "start": 143.257,
+      "end": 143.326
+    },
+    {
+      "w": "Lord",
+      "start": 143.373,
+      "end": 143.605
+    },
+    {
+      "w": "God",
+      "start": 143.663,
+      "end": 143.953
+    },
+    {
+      "w": "shall",
+      "start": 144,
+      "end": 144.162
+    },
+    {
+      "w": "give",
+      "start": 144.197,
+      "end": 144.336
+    },
+    {
+      "w": "unto",
+      "start": 144.371,
+      "end": 144.533
+    },
+    {
+      "w": "him",
+      "start": 144.615,
+      "end": 144.766
+    },
+    {
+      "w": "the",
+      "start": 144.835,
+      "end": 144.916
+    },
+    {
+      "w": "throne",
+      "start": 144.975,
+      "end": 145.346
+    },
+    {
+      "w": "of",
+      "start": 145.369,
+      "end": 145.427
+    },
+    {
+      "w": "his",
+      "start": 145.485,
+      "end": 145.578
+    },
+    {
+      "w": "father",
+      "start": 145.636,
+      "end": 145.973
+    },
+    {
+      "w": "David.",
+      "start": 146.054,
+      "end": 146.728
+    },
+    {
+      "w": "And",
+      "start": 147.471,
+      "end": 147.633
+    },
+    {
+      "w": "he",
+      "start": 147.691,
+      "end": 147.761
+    },
+    {
+      "w": "shall",
+      "start": 147.807,
+      "end": 147.982
+    },
+    {
+      "w": "reign",
+      "start": 148.04,
+      "end": 148.272
+    },
+    {
+      "w": "over",
+      "start": 148.318,
+      "end": 148.469
+    },
+    {
+      "w": "the",
+      "start": 148.516,
+      "end": 148.585
+    },
+    {
+      "w": "house",
+      "start": 148.643,
+      "end": 148.876
+    },
+    {
+      "w": "of",
+      "start": 148.91,
+      "end": 148.957
+    },
+    {
+      "w": "Jacob",
+      "start": 149.026,
+      "end": 149.386
+    },
+    {
+      "w": "for",
+      "start": 149.444,
+      "end": 149.56
+    },
+    {
+      "w": "ever.",
+      "start": 149.63,
+      "end": 150.129
+    },
+    {
+      "w": "And",
+      "start": 150.594,
+      "end": 150.745
+    },
+    {
+      "w": "of",
+      "start": 150.803,
+      "end": 150.872
+    },
+    {
+      "w": "his",
+      "start": 150.919,
+      "end": 151.023
+    },
+    {
+      "w": "kingdom",
+      "start": 151.093,
+      "end": 151.488
+    },
+    {
+      "w": "there",
+      "start": 151.557,
+      "end": 151.743
+    },
+    {
+      "w": "shall",
+      "start": 151.766,
+      "end": 151.917
+    },
+    {
+      "w": "be",
+      "start": 151.964,
+      "end": 152.045
+    },
+    {
+      "w": "no",
+      "start": 152.103,
+      "end": 152.231
+    },
+    {
+      "w": "end.",
+      "start": 152.312,
+      "end": 152.869
+    },
+    {
+      "w": "The",
+      "start": 153.334,
+      "end": 153.461
+    },
+    {
+      "w": "throne",
+      "start": 153.519,
+      "end": 153.961
+    },
+    {
+      "w": "of",
+      "start": 153.996,
+      "end": 154.054
+    },
+    {
+      "w": "his",
+      "start": 154.1,
+      "end": 154.193
+    },
+    {
+      "w": "father",
+      "start": 154.239,
+      "end": 154.518
+    },
+    {
+      "w": "David.",
+      "start": 154.576,
+      "end": 155.203
+    },
+    {
+      "w": "That",
+      "start": 156.213,
+      "end": 156.41
+    },
+    {
+      "w": "is",
+      "start": 156.445,
+      "end": 156.515
+    },
+    {
+      "w": "the",
+      "start": 156.561,
+      "end": 156.631
+    },
+    {
+      "w": "promise",
+      "start": 156.666,
+      "end": 157.049
+    },
+    {
+      "w": "Israel",
+      "start": 157.095,
+      "end": 157.386
+    },
+    {
+      "w": "had",
+      "start": 157.432,
+      "end": 157.513
+    },
+    {
+      "w": "been",
+      "start": 157.548,
+      "end": 157.676
+    },
+    {
+      "w": "holding",
+      "start": 157.711,
+      "end": 157.978
+    },
+    {
+      "w": "onto",
+      "start": 158.036,
+      "end": 158.338
+    },
+    {
+      "w": "for",
+      "start": 158.442,
+      "end": 158.558
+    },
+    {
+      "w": "a",
+      "start": 158.604,
+      "end": 158.628
+    },
+    {
+      "w": "thousand",
+      "start": 158.686,
+      "end": 159.069
+    },
+    {
+      "w": "years,",
+      "start": 159.115,
+      "end": 159.765
+    },
+    {
+      "w": "handed",
+      "start": 160.067,
+      "end": 160.392
+    },
+    {
+      "w": "to",
+      "start": 160.427,
+      "end": 160.485
+    },
+    {
+      "w": "a",
+      "start": 160.567,
+      "end": 160.59
+    },
+    {
+      "w": "young",
+      "start": 160.659,
+      "end": 160.822
+    },
+    {
+      "w": "woman",
+      "start": 160.868,
+      "end": 161.159
+    },
+    {
+      "w": "standing",
+      "start": 161.263,
+      "end": 161.646
+    },
+    {
+      "w": "in",
+      "start": 161.681,
+      "end": 161.728
+    },
+    {
+      "w": "a",
+      "start": 161.762,
+      "end": 161.797
+    },
+    {
+      "w": "house",
+      "start": 161.844,
+      "end": 162.087
+    },
+    {
+      "w": "in",
+      "start": 162.122,
+      "end": 162.18
+    },
+    {
+      "w": "Nazareth",
+      "start": 162.238,
+      "end": 162.761
+    },
+    {
+      "w": "with",
+      "start": 162.796,
+      "end": 162.935
+    },
+    {
+      "w": "no",
+      "start": 163.005,
+      "end": 163.144
+    },
+    {
+      "w": "witnesses.",
+      "start": 163.202,
+      "end": 164.166
+    },
+    {
+      "w": "There",
+      "start": 164.711,
+      "end": 164.897
+    },
+    {
+      "w": "is",
+      "start": 164.932,
+      "end": 165.002
+    },
+    {
+      "w": "no",
+      "start": 165.048,
+      "end": 165.118
+    },
+    {
+      "w": "crowd.",
+      "start": 165.187,
+      "end": 165.779
+    },
+    {
+      "w": "No",
+      "start": 166.418,
+      "end": 166.546
+    },
+    {
+      "w": "temple.",
+      "start": 166.615,
+      "end": 167.207
+    },
+    {
+      "w": "No",
+      "start": 167.846,
+      "end": 167.974
+    },
+    {
+      "w": "priest.",
+      "start": 168.043,
+      "end": 168.752
+    },
+    {
+      "w": "No",
+      "start": 169.611,
+      "end": 169.75
+    },
+    {
+      "w": "one",
+      "start": 169.831,
+      "end": 169.947
+    },
+    {
+      "w": "to",
+      "start": 169.982,
+      "end": 170.029
+    },
+    {
+      "w": "confirm",
+      "start": 170.087,
+      "end": 170.412
+    },
+    {
+      "w": "this",
+      "start": 170.447,
+      "end": 170.586
+    },
+    {
+      "w": "later.",
+      "start": 170.644,
+      "end": 171.19
+    },
+    {
+      "w": "Just",
+      "start": 171.933,
+      "end": 172.153
+    },
+    {
+      "w": "Mary,",
+      "start": 172.211,
+      "end": 172.908
+    },
+    {
+      "w": "and",
+      "start": 173.256,
+      "end": 173.488
+    },
+    {
+      "w": "an",
+      "start": 173.546,
+      "end": 173.616
+    },
+    {
+      "w": "angel,",
+      "start": 173.674,
+      "end": 174.348
+    },
+    {
+      "w": "and",
+      "start": 174.812,
+      "end": 174.975
+    },
+    {
+      "w": "a",
+      "start": 175.033,
+      "end": 175.056
+    },
+    {
+      "w": "sentence",
+      "start": 175.114,
+      "end": 175.532
+    },
+    {
+      "w": "that",
+      "start": 175.567,
+      "end": 175.694
+    },
+    {
+      "w": "ends",
+      "start": 175.752,
+      "end": 176.066
+    },
+    {
+      "w": "with",
+      "start": 176.101,
+      "end": 176.217
+    },
+    {
+      "w": "the",
+      "start": 176.252,
+      "end": 176.321
+    },
+    {
+      "w": "words",
+      "start": 176.368,
+      "end": 176.821
+    },
+    {
+      "w": "no",
+      "start": 177.564,
+      "end": 177.714
+    },
+    {
+      "w": "end.",
+      "start": 177.796,
+      "end": 178.307
+    },
+    {
+      "w": "And",
+      "start": 179.166,
+      "end": 179.317
+    },
+    {
+      "w": "she",
+      "start": 179.363,
+      "end": 179.456
+    },
+    {
+      "w": "has",
+      "start": 179.502,
+      "end": 179.595
+    },
+    {
+      "w": "not",
+      "start": 179.653,
+      "end": 179.816
+    },
+    {
+      "w": "said",
+      "start": 179.862,
+      "end": 180.025
+    },
+    {
+      "w": "a",
+      "start": 180.048,
+      "end": 180.083
+    },
+    {
+      "w": "word",
+      "start": 180.118,
+      "end": 180.315
+    },
+    {
+      "w": "yet.",
+      "start": 180.362,
+      "end": 180.977
+    }
+  ],
+  "renderedAt": 1785313063734
+}

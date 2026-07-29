@@ -1,0 +1,1021 @@
+{
+  "kind": "tea",
+  "teaId": "bleeding-woman",
+  "mood": "dark",
+  "heat": 2,
+  "text": "She touched his coat in a crowd and stopped the whole procession. Mark chapter five. Twelve years of bleeding. And Mark, who was not gentle about it, says she had suffered many things of many physicians, and had spent all that she had, and was nothing bettered, but rather grew worse. Every doctor paid. Every option gone. Worse than when she started. Then she hears about Jesus. And she does not go to the front and ask. She comes up behind him in the press of the crowd, because she says within herself, if I may touch but his clothes, I shall be whole. And she does. And straightway the fountain of her blood was dried up. And here is the part that always gets me. He stops. In a crowd pressing in on him from every side, he turns around and asks who touched my clothes. His disciples think that is an absurd question. But he keeps looking. And she comes fearing and trembling, and falls down, and tells him all the truth. Not a summary. All of it. And he says, daughter, thy faith hath made thee whole. Go in peace. He would not let her leave as a secret.",
+  "voice": "FGY2WhTYpPnrIDTdsKH5",
+  "words": [
+    {
+      "w": "She",
+      "start": 0,
+      "end": 0.128
+    },
+    {
+      "w": "touched",
+      "start": 0.186,
+      "end": 0.418
+    },
+    {
+      "w": "his",
+      "start": 0.453,
+      "end": 0.534
+    },
+    {
+      "w": "coat",
+      "start": 0.592,
+      "end": 0.766
+    },
+    {
+      "w": "in",
+      "start": 0.801,
+      "end": 0.848
+    },
+    {
+      "w": "a",
+      "start": 0.882,
+      "end": 0.906
+    },
+    {
+      "w": "crowd",
+      "start": 0.94,
+      "end": 1.173
+    },
+    {
+      "w": "and",
+      "start": 1.207,
+      "end": 1.277
+    },
+    {
+      "w": "stopped",
+      "start": 1.335,
+      "end": 1.625
+    },
+    {
+      "w": "the",
+      "start": 1.672,
+      "end": 1.741
+    },
+    {
+      "w": "whole",
+      "start": 1.788,
+      "end": 1.974
+    },
+    {
+      "w": "procession.",
+      "start": 2.009,
+      "end": 2.635
+    },
+    {
+      "w": "Mark",
+      "start": 2.972,
+      "end": 3.204
+    },
+    {
+      "w": "chapter",
+      "start": 3.274,
+      "end": 3.553
+    },
+    {
+      "w": "five.",
+      "start": 3.611,
+      "end": 4.18
+    },
+    {
+      "w": "Twelve",
+      "start": 4.702,
+      "end": 4.981
+    },
+    {
+      "w": "years",
+      "start": 5.004,
+      "end": 5.201
+    },
+    {
+      "w": "of",
+      "start": 5.236,
+      "end": 5.294
+    },
+    {
+      "w": "bleeding.",
+      "start": 5.329,
+      "end": 5.898
+    },
+    {
+      "w": "And",
+      "start": 6.142,
+      "end": 6.269
+    },
+    {
+      "w": "Mark,",
+      "start": 6.327,
+      "end": 6.548
+    },
+    {
+      "w": "who",
+      "start": 6.571,
+      "end": 6.664
+    },
+    {
+      "w": "was",
+      "start": 6.699,
+      "end": 6.803
+    },
+    {
+      "w": "not",
+      "start": 6.85,
+      "end": 6.989
+    },
+    {
+      "w": "gentle",
+      "start": 7.036,
+      "end": 7.314
+    },
+    {
+      "w": "about",
+      "start": 7.349,
+      "end": 7.535
+    },
+    {
+      "w": "it,",
+      "start": 7.57,
+      "end": 7.697
+    },
+    {
+      "w": "says",
+      "start": 7.744,
+      "end": 7.93
+    },
+    {
+      "w": "she",
+      "start": 7.964,
+      "end": 8.057
+    },
+    {
+      "w": "had",
+      "start": 8.092,
+      "end": 8.173
+    },
+    {
+      "w": "suffered",
+      "start": 8.208,
+      "end": 8.487
+    },
+    {
+      "w": "many",
+      "start": 8.522,
+      "end": 8.661
+    },
+    {
+      "w": "things",
+      "start": 8.707,
+      "end": 8.963
+    },
+    {
+      "w": "of",
+      "start": 8.998,
+      "end": 9.067
+    },
+    {
+      "w": "many",
+      "start": 9.172,
+      "end": 9.346
+    },
+    {
+      "w": "physicians,",
+      "start": 9.392,
+      "end": 10.066
+    },
+    {
+      "w": "and",
+      "start": 10.217,
+      "end": 10.333
+    },
+    {
+      "w": "had",
+      "start": 10.368,
+      "end": 10.461
+    },
+    {
+      "w": "spent",
+      "start": 10.495,
+      "end": 10.728
+    },
+    {
+      "w": "all",
+      "start": 10.774,
+      "end": 10.902
+    },
+    {
+      "w": "that",
+      "start": 10.937,
+      "end": 11.053
+    },
+    {
+      "w": "she",
+      "start": 11.088,
+      "end": 11.169
+    },
+    {
+      "w": "had,",
+      "start": 11.239,
+      "end": 11.633
+    },
+    {
+      "w": "and",
+      "start": 11.819,
+      "end": 11.935
+    },
+    {
+      "w": "was",
+      "start": 11.993,
+      "end": 12.098
+    },
+    {
+      "w": "nothing",
+      "start": 12.202,
+      "end": 12.481
+    },
+    {
+      "w": "bettered,",
+      "start": 12.527,
+      "end": 12.818
+    },
+    {
+      "w": "but",
+      "start": 12.841,
+      "end": 13.05
+    },
+    {
+      "w": "rather",
+      "start": 13.201,
+      "end": 13.479
+    },
+    {
+      "w": "grew",
+      "start": 13.584,
+      "end": 13.77
+    },
+    {
+      "w": "worse.",
+      "start": 13.805,
+      "end": 14.223
+    },
+    {
+      "w": "Every",
+      "start": 14.559,
+      "end": 14.803
+    },
+    {
+      "w": "doctor",
+      "start": 14.838,
+      "end": 15.093
+    },
+    {
+      "w": "paid.",
+      "start": 15.151,
+      "end": 15.488
+    },
+    {
+      "w": "Every",
+      "start": 15.593,
+      "end": 15.836
+    },
+    {
+      "w": "option",
+      "start": 15.894,
+      "end": 16.208
+    },
+    {
+      "w": "gone.",
+      "start": 16.243,
+      "end": 16.579
+    },
+    {
+      "w": "Worse",
+      "start": 16.858,
+      "end": 17.113
+    },
+    {
+      "w": "than",
+      "start": 17.148,
+      "end": 17.276
+    },
+    {
+      "w": "when",
+      "start": 17.311,
+      "end": 17.427
+    },
+    {
+      "w": "she",
+      "start": 17.462,
+      "end": 17.555
+    },
+    {
+      "w": "started.",
+      "start": 17.589,
+      "end": 17.984
+    },
+    {
+      "w": "Then",
+      "start": 18.228,
+      "end": 18.391
+    },
+    {
+      "w": "she",
+      "start": 18.437,
+      "end": 18.541
+    },
+    {
+      "w": "hears",
+      "start": 18.588,
+      "end": 18.774
+    },
+    {
+      "w": "about",
+      "start": 18.808,
+      "end": 18.994
+    },
+    {
+      "w": "Jesus.",
+      "start": 19.029,
+      "end": 19.517
+    },
+    {
+      "w": "And",
+      "start": 19.668,
+      "end": 19.784
+    },
+    {
+      "w": "she",
+      "start": 19.83,
+      "end": 19.923
+    },
+    {
+      "w": "does",
+      "start": 19.958,
+      "end": 20.086
+    },
+    {
+      "w": "not",
+      "start": 20.12,
+      "end": 20.225
+    },
+    {
+      "w": "go",
+      "start": 20.26,
+      "end": 20.318
+    },
+    {
+      "w": "to",
+      "start": 20.353,
+      "end": 20.399
+    },
+    {
+      "w": "the",
+      "start": 20.434,
+      "end": 20.504
+    },
+    {
+      "w": "front",
+      "start": 20.538,
+      "end": 20.747
+    },
+    {
+      "w": "and",
+      "start": 20.805,
+      "end": 20.921
+    },
+    {
+      "w": "ask.",
+      "start": 20.991,
+      "end": 21.363
+    },
+    {
+      "w": "She",
+      "start": 21.49,
+      "end": 21.606
+    },
+    {
+      "w": "comes",
+      "start": 21.653,
+      "end": 21.839
+    },
+    {
+      "w": "up",
+      "start": 21.874,
+      "end": 21.943
+    },
+    {
+      "w": "behind",
+      "start": 21.978,
+      "end": 22.21
+    },
+    {
+      "w": "him",
+      "start": 22.257,
+      "end": 22.35
+    },
+    {
+      "w": "in",
+      "start": 22.373,
+      "end": 22.419
+    },
+    {
+      "w": "the",
+      "start": 22.442,
+      "end": 22.512
+    },
+    {
+      "w": "press",
+      "start": 22.547,
+      "end": 22.733
+    },
+    {
+      "w": "of",
+      "start": 22.768,
+      "end": 22.826
+    },
+    {
+      "w": "the",
+      "start": 22.861,
+      "end": 22.93
+    },
+    {
+      "w": "crowd,",
+      "start": 22.965,
+      "end": 23.395
+    },
+    {
+      "w": "because",
+      "start": 23.604,
+      "end": 23.859
+    },
+    {
+      "w": "she",
+      "start": 23.882,
+      "end": 23.975
+    },
+    {
+      "w": "says",
+      "start": 24.033,
+      "end": 24.173
+    },
+    {
+      "w": "within",
+      "start": 24.207,
+      "end": 24.405
+    },
+    {
+      "w": "herself,",
+      "start": 24.463,
+      "end": 25.043
+    },
+    {
+      "w": "if",
+      "start": 25.287,
+      "end": 25.392
+    },
+    {
+      "w": "I",
+      "start": 25.438,
+      "end": 25.461
+    },
+    {
+      "w": "may",
+      "start": 25.543,
+      "end": 25.647
+    },
+    {
+      "w": "touch",
+      "start": 25.694,
+      "end": 25.879
+    },
+    {
+      "w": "but",
+      "start": 25.914,
+      "end": 26.019
+    },
+    {
+      "w": "his",
+      "start": 26.053,
+      "end": 26.135
+    },
+    {
+      "w": "clothes,",
+      "start": 26.17,
+      "end": 26.773
+    },
+    {
+      "w": "I",
+      "start": 26.982,
+      "end": 27.017
+    },
+    {
+      "w": "shall",
+      "start": 27.075,
+      "end": 27.238
+    },
+    {
+      "w": "be",
+      "start": 27.273,
+      "end": 27.342
+    },
+    {
+      "w": "whole.",
+      "start": 27.377,
+      "end": 27.841
+    },
+    {
+      "w": "And",
+      "start": 28.968,
+      "end": 29.072
+    },
+    {
+      "w": "she",
+      "start": 29.107,
+      "end": 29.2
+    },
+    {
+      "w": "does.",
+      "start": 29.246,
+      "end": 29.722
+    },
+    {
+      "w": "And",
+      "start": 29.931,
+      "end": 30.059
+    },
+    {
+      "w": "straightway",
+      "start": 30.105,
+      "end": 30.465
+    },
+    {
+      "w": "the",
+      "start": 30.523,
+      "end": 30.605
+    },
+    {
+      "w": "fountain",
+      "start": 30.663,
+      "end": 30.93
+    },
+    {
+      "w": "of",
+      "start": 30.965,
+      "end": 31.011
+    },
+    {
+      "w": "her",
+      "start": 31.057,
+      "end": 31.139
+    },
+    {
+      "w": "blood",
+      "start": 31.173,
+      "end": 31.348
+    },
+    {
+      "w": "was",
+      "start": 31.382,
+      "end": 31.487
+    },
+    {
+      "w": "dried",
+      "start": 31.522,
+      "end": 31.719
+    },
+    {
+      "w": "up.",
+      "start": 31.766,
+      "end": 32.009
+    },
+    {
+      "w": "And",
+      "start": 32.195,
+      "end": 32.311
+    },
+    {
+      "w": "here",
+      "start": 32.369,
+      "end": 32.509
+    },
+    {
+      "w": "is",
+      "start": 32.543,
+      "end": 32.613
+    },
+    {
+      "w": "the",
+      "start": 32.66,
+      "end": 32.729
+    },
+    {
+      "w": "part",
+      "start": 32.764,
+      "end": 32.961
+    },
+    {
+      "w": "that",
+      "start": 32.996,
+      "end": 33.124
+    },
+    {
+      "w": "always",
+      "start": 33.159,
+      "end": 33.403
+    },
+    {
+      "w": "gets",
+      "start": 33.437,
+      "end": 33.6
+    },
+    {
+      "w": "me.",
+      "start": 33.646,
+      "end": 33.983
+    },
+    {
+      "w": "He",
+      "start": 34.587,
+      "end": 34.691
+    },
+    {
+      "w": "stops.",
+      "start": 34.738,
+      "end": 35.26
+    },
+    {
+      "w": "In",
+      "start": 35.469,
+      "end": 35.574
+    },
+    {
+      "w": "a",
+      "start": 35.609,
+      "end": 35.644
+    },
+    {
+      "w": "crowd",
+      "start": 35.678,
+      "end": 35.887
+    },
+    {
+      "w": "pressing",
+      "start": 35.934,
+      "end": 36.224
+    },
+    {
+      "w": "in",
+      "start": 36.271,
+      "end": 36.329
+    },
+    {
+      "w": "on",
+      "start": 36.375,
+      "end": 36.445
+    },
+    {
+      "w": "him",
+      "start": 36.491,
+      "end": 36.584
+    },
+    {
+      "w": "from",
+      "start": 36.631,
+      "end": 36.77
+    },
+    {
+      "w": "every",
+      "start": 36.805,
+      "end": 36.967
+    },
+    {
+      "w": "side,",
+      "start": 37.014,
+      "end": 37.408
+    },
+    {
+      "w": "he",
+      "start": 37.536,
+      "end": 37.629
+    },
+    {
+      "w": "turns",
+      "start": 37.675,
+      "end": 37.896
+    },
+    {
+      "w": "around",
+      "start": 37.931,
+      "end": 38.163
+    },
+    {
+      "w": "and",
+      "start": 38.198,
+      "end": 38.291
+    },
+    {
+      "w": "asks",
+      "start": 38.349,
+      "end": 38.685
+    },
+    {
+      "w": "who",
+      "start": 38.72,
+      "end": 38.86
+    },
+    {
+      "w": "touched",
+      "start": 38.906,
+      "end": 39.15
+    },
+    {
+      "w": "my",
+      "start": 39.185,
+      "end": 39.266
+    },
+    {
+      "w": "clothes.",
+      "start": 39.336,
+      "end": 39.765
+    },
+    {
+      "w": "His",
+      "start": 39.893,
+      "end": 40.032
+    },
+    {
+      "w": "disciples",
+      "start": 40.079,
+      "end": 40.531
+    },
+    {
+      "w": "think",
+      "start": 40.578,
+      "end": 40.775
+    },
+    {
+      "w": "that",
+      "start": 40.822,
+      "end": 40.961
+    },
+    {
+      "w": "is",
+      "start": 40.996,
+      "end": 41.066
+    },
+    {
+      "w": "an",
+      "start": 41.1,
+      "end": 41.158
+    },
+    {
+      "w": "absurd",
+      "start": 41.182,
+      "end": 41.425
+    },
+    {
+      "w": "question.",
+      "start": 41.46,
+      "end": 41.971
+    },
+    {
+      "w": "But",
+      "start": 42.099,
+      "end": 42.285
+    },
+    {
+      "w": "he",
+      "start": 42.343,
+      "end": 42.401
+    },
+    {
+      "w": "keeps",
+      "start": 42.447,
+      "end": 42.621
+    },
+    {
+      "w": "looking.",
+      "start": 42.656,
+      "end": 43.062
+    },
+    {
+      "w": "And",
+      "start": 43.213,
+      "end": 43.353
+    },
+    {
+      "w": "she",
+      "start": 43.399,
+      "end": 43.504
+    },
+    {
+      "w": "comes",
+      "start": 43.55,
+      "end": 43.724
+    },
+    {
+      "w": "fearing",
+      "start": 43.782,
+      "end": 44.107
+    },
+    {
+      "w": "and",
+      "start": 44.165,
+      "end": 44.281
+    },
+    {
+      "w": "trembling,",
+      "start": 44.328,
+      "end": 44.804
+    },
+    {
+      "w": "and",
+      "start": 44.839,
+      "end": 44.966
+    },
+    {
+      "w": "falls",
+      "start": 45.036,
+      "end": 45.245
+    },
+    {
+      "w": "down,",
+      "start": 45.292,
+      "end": 45.57
+    },
+    {
+      "w": "and",
+      "start": 45.605,
+      "end": 45.721
+    },
+    {
+      "w": "tells",
+      "start": 45.768,
+      "end": 45.942
+    },
+    {
+      "w": "him",
+      "start": 45.977,
+      "end": 46.058
+    },
+    {
+      "w": "all",
+      "start": 46.093,
+      "end": 46.197
+    },
+    {
+      "w": "the",
+      "start": 46.244,
+      "end": 46.313
+    },
+    {
+      "w": "truth.",
+      "start": 46.348,
+      "end": 46.847
+    },
+    {
+      "w": "Not",
+      "start": 47.231,
+      "end": 47.428
+    },
+    {
+      "w": "a",
+      "start": 47.463,
+      "end": 47.498
+    },
+    {
+      "w": "summary.",
+      "start": 47.532,
+      "end": 48.008
+    },
+    {
+      "w": "All",
+      "start": 48.043,
+      "end": 48.241
+    },
+    {
+      "w": "of",
+      "start": 48.287,
+      "end": 48.345
+    },
+    {
+      "w": "it.",
+      "start": 48.403,
+      "end": 48.519
+    },
+    {
+      "w": "And",
+      "start": 48.554,
+      "end": 48.67
+    },
+    {
+      "w": "he",
+      "start": 48.717,
+      "end": 48.786
+    },
+    {
+      "w": "says,",
+      "start": 48.844,
+      "end": 49.065
+    },
+    {
+      "w": "daughter,",
+      "start": 49.1,
+      "end": 49.564
+    },
+    {
+      "w": "thy",
+      "start": 49.75,
+      "end": 49.901
+    },
+    {
+      "w": "faith",
+      "start": 49.97,
+      "end": 50.156
+    },
+    {
+      "w": "hath",
+      "start": 50.191,
+      "end": 50.33
+    },
+    {
+      "w": "made",
+      "start": 50.388,
+      "end": 50.551
+    },
+    {
+      "w": "thee",
+      "start": 50.574,
+      "end": 50.702
+    },
+    {
+      "w": "whole.",
+      "start": 50.737,
+      "end": 51.131
+    },
+    {
+      "w": "Go",
+      "start": 51.317,
+      "end": 51.433
+    },
+    {
+      "w": "in",
+      "start": 51.503,
+      "end": 51.561
+    },
+    {
+      "w": "peace.",
+      "start": 51.619,
+      "end": 52.002
+    },
+    {
+      "w": "He",
+      "start": 52.107,
+      "end": 52.2
+    },
+    {
+      "w": "would",
+      "start": 52.234,
+      "end": 52.374
+    },
+    {
+      "w": "not",
+      "start": 52.409,
+      "end": 52.513
+    },
+    {
+      "w": "let",
+      "start": 52.548,
+      "end": 52.652
+    },
+    {
+      "w": "her",
+      "start": 52.687,
+      "end": 52.757
+    },
+    {
+      "w": "leave",
+      "start": 52.803,
+      "end": 53.001
+    },
+    {
+      "w": "as",
+      "start": 53.036,
+      "end": 53.117
+    },
+    {
+      "w": "a",
+      "start": 53.152,
+      "end": 53.186
+    },
+    {
+      "w": "secret.",
+      "start": 53.221,
+      "end": 53.825
+    }
+  ],
+  "renderedAt": 1785313268899
+}

@@ -1,0 +1,961 @@
+{
+  "kind": "tea",
+  "teaId": "huldah-scroll",
+  "mood": "dark",
+  "heat": 2,
+  "text": "When a lost scroll turned up, the king sent for Huldah. Second Kings twenty two. They are renovating the temple, paying the carpenters and the builders, and during the works Hilkiah the high priest finds the book of the law. Shaphan the scribe reads it to King Josiah, and the king tears his clothes, because he realises how far the nation has drifted from what is written in it. So he needs a ruling. Enquire of the Lord for me, he says, and for the people, and for all Judah, concerning the words of this book that is found. Now think about who is available. He has a high priest. He has a scribe. He has a whole religious establishment on payroll. And they go to Huldah the prophetess, who lived in Jerusalem in the college. Five men, sent by a king, to a woman, for the authoritative reading. And she does not soften it. She sends back judgement on the nation, and mercy for Josiah personally, because his heart was tender. Her reading became national policy. The reformation that follows in the next chapter runs on what she said.",
+  "voice": "FGY2WhTYpPnrIDTdsKH5",
+  "words": [
+    {
+      "w": "When",
+      "start": 0,
+      "end": 0.186
+    },
+    {
+      "w": "a",
+      "start": 0.221,
+      "end": 0.244
+    },
+    {
+      "w": "lost",
+      "start": 0.29,
+      "end": 0.511
+    },
+    {
+      "w": "scroll",
+      "start": 0.534,
+      "end": 0.789
+    },
+    {
+      "w": "turned",
+      "start": 0.836,
+      "end": 1.068
+    },
+    {
+      "w": "up,",
+      "start": 1.126,
+      "end": 1.312
+    },
+    {
+      "w": "the",
+      "start": 1.37,
+      "end": 1.474
+    },
+    {
+      "w": "king",
+      "start": 1.521,
+      "end": 1.753
+    },
+    {
+      "w": "sent",
+      "start": 1.858,
+      "end": 2.055
+    },
+    {
+      "w": "for",
+      "start": 2.101,
+      "end": 2.183
+    },
+    {
+      "w": "Huldah.",
+      "start": 2.229,
+      "end": 2.717
+    },
+    {
+      "w": "Second",
+      "start": 2.961,
+      "end": 3.228
+    },
+    {
+      "w": "Kings",
+      "start": 3.274,
+      "end": 3.541
+    },
+    {
+      "w": "twenty",
+      "start": 3.587,
+      "end": 3.843
+    },
+    {
+      "w": "two.",
+      "start": 3.878,
+      "end": 4.284
+    },
+    {
+      "w": "They",
+      "start": 4.574,
+      "end": 4.725
+    },
+    {
+      "w": "are",
+      "start": 4.748,
+      "end": 4.841
+    },
+    {
+      "w": "renovating",
+      "start": 4.876,
+      "end": 5.294
+    },
+    {
+      "w": "the",
+      "start": 5.341,
+      "end": 5.41
+    },
+    {
+      "w": "temple,",
+      "start": 5.457,
+      "end": 5.991
+    },
+    {
+      "w": "paying",
+      "start": 6.13,
+      "end": 6.374
+    },
+    {
+      "w": "the",
+      "start": 6.409,
+      "end": 6.478
+    },
+    {
+      "w": "carpenters",
+      "start": 6.525,
+      "end": 7.036
+    },
+    {
+      "w": "and",
+      "start": 7.082,
+      "end": 7.152
+    },
+    {
+      "w": "the",
+      "start": 7.187,
+      "end": 7.256
+    },
+    {
+      "w": "builders,",
+      "start": 7.291,
+      "end": 7.767
+    },
+    {
+      "w": "and",
+      "start": 7.79,
+      "end": 7.906
+    },
+    {
+      "w": "during",
+      "start": 7.941,
+      "end": 8.162
+    },
+    {
+      "w": "the",
+      "start": 8.197,
+      "end": 8.266
+    },
+    {
+      "w": "works",
+      "start": 8.313,
+      "end": 8.591
+    },
+    {
+      "w": "Hilkiah",
+      "start": 8.638,
+      "end": 9.102
+    },
+    {
+      "w": "the",
+      "start": 9.137,
+      "end": 9.207
+    },
+    {
+      "w": "high",
+      "start": 9.253,
+      "end": 9.416
+    },
+    {
+      "w": "priest",
+      "start": 9.462,
+      "end": 9.729
+    },
+    {
+      "w": "finds",
+      "start": 9.787,
+      "end": 10.066
+    },
+    {
+      "w": "the",
+      "start": 10.112,
+      "end": 10.182
+    },
+    {
+      "w": "book",
+      "start": 10.228,
+      "end": 10.391
+    },
+    {
+      "w": "of",
+      "start": 10.437,
+      "end": 10.495
+    },
+    {
+      "w": "the",
+      "start": 10.542,
+      "end": 10.612
+    },
+    {
+      "w": "law.",
+      "start": 10.658,
+      "end": 11.111
+    },
+    {
+      "w": "Shaphan",
+      "start": 11.447,
+      "end": 11.807
+    },
+    {
+      "w": "the",
+      "start": 11.854,
+      "end": 11.923
+    },
+    {
+      "w": "scribe",
+      "start": 11.958,
+      "end": 12.318
+    },
+    {
+      "w": "reads",
+      "start": 12.365,
+      "end": 12.585
+    },
+    {
+      "w": "it",
+      "start": 12.632,
+      "end": 12.713
+    },
+    {
+      "w": "to",
+      "start": 12.759,
+      "end": 12.817
+    },
+    {
+      "w": "King",
+      "start": 12.875,
+      "end": 13.05
+    },
+    {
+      "w": "Josiah,",
+      "start": 13.108,
+      "end": 13.7
+    },
+    {
+      "w": "and",
+      "start": 13.746,
+      "end": 13.862
+    },
+    {
+      "w": "the",
+      "start": 13.909,
+      "end": 13.978
+    },
+    {
+      "w": "king",
+      "start": 14.013,
+      "end": 14.199
+    },
+    {
+      "w": "tears",
+      "start": 14.245,
+      "end": 14.501
+    },
+    {
+      "w": "his",
+      "start": 14.547,
+      "end": 14.652
+    },
+    {
+      "w": "clothes,",
+      "start": 14.698,
+      "end": 15.256
+    },
+    {
+      "w": "because",
+      "start": 15.441,
+      "end": 15.708
+    },
+    {
+      "w": "he",
+      "start": 15.743,
+      "end": 15.79
+    },
+    {
+      "w": "realises",
+      "start": 15.859,
+      "end": 16.347
+    },
+    {
+      "w": "how",
+      "start": 16.393,
+      "end": 16.509
+    },
+    {
+      "w": "far",
+      "start": 16.567,
+      "end": 16.742
+    },
+    {
+      "w": "the",
+      "start": 16.788,
+      "end": 16.858
+    },
+    {
+      "w": "nation",
+      "start": 16.904,
+      "end": 17.218
+    },
+    {
+      "w": "has",
+      "start": 17.264,
+      "end": 17.392
+    },
+    {
+      "w": "drifted",
+      "start": 17.461,
+      "end": 17.821
+    },
+    {
+      "w": "from",
+      "start": 17.879,
+      "end": 18.042
+    },
+    {
+      "w": "what",
+      "start": 18.088,
+      "end": 18.204
+    },
+    {
+      "w": "is",
+      "start": 18.251,
+      "end": 18.321
+    },
+    {
+      "w": "written",
+      "start": 18.367,
+      "end": 18.599
+    },
+    {
+      "w": "in",
+      "start": 18.634,
+      "end": 18.704
+    },
+    {
+      "w": "it.",
+      "start": 18.75,
+      "end": 18.959
+    },
+    {
+      "w": "So",
+      "start": 19.249,
+      "end": 19.47
+    },
+    {
+      "w": "he",
+      "start": 19.54,
+      "end": 19.598
+    },
+    {
+      "w": "needs",
+      "start": 19.656,
+      "end": 19.865
+    },
+    {
+      "w": "a",
+      "start": 19.9,
+      "end": 19.934
+    },
+    {
+      "w": "ruling.",
+      "start": 19.981,
+      "end": 20.457
+    },
+    {
+      "w": "Enquire",
+      "start": 21.455,
+      "end": 21.885
+    },
+    {
+      "w": "of",
+      "start": 21.908,
+      "end": 21.966
+    },
+    {
+      "w": "the",
+      "start": 22.013,
+      "end": 22.082
+    },
+    {
+      "w": "Lord",
+      "start": 22.129,
+      "end": 22.326
+    },
+    {
+      "w": "for",
+      "start": 22.372,
+      "end": 22.489
+    },
+    {
+      "w": "me,",
+      "start": 22.535,
+      "end": 22.79
+    },
+    {
+      "w": "he",
+      "start": 22.895,
+      "end": 22.965
+    },
+    {
+      "w": "says,",
+      "start": 23.023,
+      "end": 23.522
+    },
+    {
+      "w": "and",
+      "start": 23.568,
+      "end": 23.789
+    },
+    {
+      "w": "for",
+      "start": 23.859,
+      "end": 23.963
+    },
+    {
+      "w": "the",
+      "start": 24.009,
+      "end": 24.079
+    },
+    {
+      "w": "people,",
+      "start": 24.114,
+      "end": 24.636
+    },
+    {
+      "w": "and",
+      "start": 24.787,
+      "end": 24.973
+    },
+    {
+      "w": "for",
+      "start": 25.043,
+      "end": 25.171
+    },
+    {
+      "w": "all",
+      "start": 25.217,
+      "end": 25.345
+    },
+    {
+      "w": "Judah,",
+      "start": 25.414,
+      "end": 25.844
+    },
+    {
+      "w": "concerning",
+      "start": 25.995,
+      "end": 26.413
+    },
+    {
+      "w": "the",
+      "start": 26.459,
+      "end": 26.529
+    },
+    {
+      "w": "words",
+      "start": 26.575,
+      "end": 26.796
+    },
+    {
+      "w": "of",
+      "start": 26.831,
+      "end": 26.889
+    },
+    {
+      "w": "this",
+      "start": 26.935,
+      "end": 27.063
+    },
+    {
+      "w": "book",
+      "start": 27.109,
+      "end": 27.284
+    },
+    {
+      "w": "that",
+      "start": 27.318,
+      "end": 27.435
+    },
+    {
+      "w": "is",
+      "start": 27.481,
+      "end": 27.551
+    },
+    {
+      "w": "found.",
+      "start": 27.597,
+      "end": 28.119
+    },
+    {
+      "w": "Now",
+      "start": 28.572,
+      "end": 28.712
+    },
+    {
+      "w": "think",
+      "start": 28.758,
+      "end": 28.921
+    },
+    {
+      "w": "about",
+      "start": 28.955,
+      "end": 29.188
+    },
+    {
+      "w": "who",
+      "start": 29.222,
+      "end": 29.373
+    },
+    {
+      "w": "is",
+      "start": 29.443,
+      "end": 29.524
+    },
+    {
+      "w": "available.",
+      "start": 29.571,
+      "end": 30.163
+    },
+    {
+      "w": "He",
+      "start": 30.314,
+      "end": 30.441
+    },
+    {
+      "w": "has",
+      "start": 30.5,
+      "end": 30.65
+    },
+    {
+      "w": "a",
+      "start": 30.697,
+      "end": 30.72
+    },
+    {
+      "w": "high",
+      "start": 30.778,
+      "end": 30.941
+    },
+    {
+      "w": "priest.",
+      "start": 30.987,
+      "end": 31.417
+    },
+    {
+      "w": "He",
+      "start": 31.452,
+      "end": 31.556
+    },
+    {
+      "w": "has",
+      "start": 31.614,
+      "end": 31.742
+    },
+    {
+      "w": "a",
+      "start": 31.788,
+      "end": 31.811
+    },
+    {
+      "w": "scribe.",
+      "start": 31.858,
+      "end": 32.404
+    },
+    {
+      "w": "He",
+      "start": 32.624,
+      "end": 32.74
+    },
+    {
+      "w": "has",
+      "start": 32.787,
+      "end": 32.903
+    },
+    {
+      "w": "a",
+      "start": 32.949,
+      "end": 32.972
+    },
+    {
+      "w": "whole",
+      "start": 33.019,
+      "end": 33.239
+    },
+    {
+      "w": "religious",
+      "start": 33.286,
+      "end": 33.657
+    },
+    {
+      "w": "establishment",
+      "start": 33.715,
+      "end": 34.296
+    },
+    {
+      "w": "on",
+      "start": 34.331,
+      "end": 34.4
+    },
+    {
+      "w": "payroll.",
+      "start": 34.459,
+      "end": 35.004
+    },
+    {
+      "w": "And",
+      "start": 35.225,
+      "end": 35.353
+    },
+    {
+      "w": "they",
+      "start": 35.387,
+      "end": 35.492
+    },
+    {
+      "w": "go",
+      "start": 35.538,
+      "end": 35.643
+    },
+    {
+      "w": "to",
+      "start": 35.689,
+      "end": 35.736
+    },
+    {
+      "w": "Huldah",
+      "start": 35.782,
+      "end": 36.119
+    },
+    {
+      "w": "the",
+      "start": 36.154,
+      "end": 36.223
+    },
+    {
+      "w": "prophetess,",
+      "start": 36.269,
+      "end": 36.989
+    },
+    {
+      "w": "who",
+      "start": 37.094,
+      "end": 37.233
+    },
+    {
+      "w": "lived",
+      "start": 37.28,
+      "end": 37.477
+    },
+    {
+      "w": "in",
+      "start": 37.512,
+      "end": 37.57
+    },
+    {
+      "w": "Jerusalem",
+      "start": 37.628,
+      "end": 38.104
+    },
+    {
+      "w": "in",
+      "start": 38.139,
+      "end": 38.185
+    },
+    {
+      "w": "the",
+      "start": 38.22,
+      "end": 38.29
+    },
+    {
+      "w": "college.",
+      "start": 38.324,
+      "end": 38.8
+    },
+    {
+      "w": "Five",
+      "start": 39.091,
+      "end": 39.346
+    },
+    {
+      "w": "men,",
+      "start": 39.393,
+      "end": 39.718
+    },
+    {
+      "w": "sent",
+      "start": 39.857,
+      "end": 40.054
+    },
+    {
+      "w": "by",
+      "start": 40.101,
+      "end": 40.194
+    },
+    {
+      "w": "a",
+      "start": 40.24,
+      "end": 40.263
+    },
+    {
+      "w": "king,",
+      "start": 40.31,
+      "end": 40.67
+    },
+    {
+      "w": "to",
+      "start": 40.809,
+      "end": 40.902
+    },
+    {
+      "w": "a",
+      "start": 40.971,
+      "end": 40.995
+    },
+    {
+      "w": "woman,",
+      "start": 41.041,
+      "end": 41.413
+    },
+    {
+      "w": "for",
+      "start": 41.517,
+      "end": 41.633
+    },
+    {
+      "w": "the",
+      "start": 41.668,
+      "end": 41.738
+    },
+    {
+      "w": "authoritative",
+      "start": 41.784,
+      "end": 42.341
+    },
+    {
+      "w": "reading.",
+      "start": 42.388,
+      "end": 42.864
+    },
+    {
+      "w": "And",
+      "start": 43.154,
+      "end": 43.293
+    },
+    {
+      "w": "she",
+      "start": 43.363,
+      "end": 43.491
+    },
+    {
+      "w": "does",
+      "start": 43.549,
+      "end": 43.688
+    },
+    {
+      "w": "not",
+      "start": 43.735,
+      "end": 43.874
+    },
+    {
+      "w": "soften",
+      "start": 43.92,
+      "end": 44.211
+    },
+    {
+      "w": "it.",
+      "start": 44.257,
+      "end": 44.454
+    },
+    {
+      "w": "She",
+      "start": 44.594,
+      "end": 44.71
+    },
+    {
+      "w": "sends",
+      "start": 44.756,
+      "end": 44.977
+    },
+    {
+      "w": "back",
+      "start": 45.023,
+      "end": 45.186
+    },
+    {
+      "w": "judgement",
+      "start": 45.244,
+      "end": 45.592
+    },
+    {
+      "w": "on",
+      "start": 45.627,
+      "end": 45.685
+    },
+    {
+      "w": "the",
+      "start": 45.732,
+      "end": 45.801
+    },
+    {
+      "w": "nation,",
+      "start": 45.836,
+      "end": 46.196
+    },
+    {
+      "w": "and",
+      "start": 46.219,
+      "end": 46.347
+    },
+    {
+      "w": "mercy",
+      "start": 46.393,
+      "end": 46.66
+    },
+    {
+      "w": "for",
+      "start": 46.718,
+      "end": 46.823
+    },
+    {
+      "w": "Josiah",
+      "start": 46.881,
+      "end": 47.299
+    },
+    {
+      "w": "personally,",
+      "start": 47.334,
+      "end": 47.914
+    },
+    {
+      "w": "because",
+      "start": 47.961,
+      "end": 48.227
+    },
+    {
+      "w": "his",
+      "start": 48.262,
+      "end": 48.367
+    },
+    {
+      "w": "heart",
+      "start": 48.413,
+      "end": 48.61
+    },
+    {
+      "w": "was",
+      "start": 48.657,
+      "end": 48.773
+    },
+    {
+      "w": "tender.",
+      "start": 48.819,
+      "end": 49.33
+    },
+    {
+      "w": "Her",
+      "start": 50.178,
+      "end": 50.305
+    },
+    {
+      "w": "reading",
+      "start": 50.352,
+      "end": 50.607
+    },
+    {
+      "w": "became",
+      "start": 50.654,
+      "end": 51.048
+    },
+    {
+      "w": "national",
+      "start": 51.153,
+      "end": 51.548
+    },
+    {
+      "w": "policy.",
+      "start": 51.594,
+      "end": 52.128
+    },
+    {
+      "w": "The",
+      "start": 52.233,
+      "end": 52.349
+    },
+    {
+      "w": "reformation",
+      "start": 52.395,
+      "end": 52.86
+    },
+    {
+      "w": "that",
+      "start": 52.906,
+      "end": 53.011
+    },
+    {
+      "w": "follows",
+      "start": 53.057,
+      "end": 53.382
+    },
+    {
+      "w": "in",
+      "start": 53.428,
+      "end": 53.487
+    },
+    {
+      "w": "the",
+      "start": 53.521,
+      "end": 53.591
+    },
+    {
+      "w": "next",
+      "start": 53.626,
+      "end": 53.8
+    },
+    {
+      "w": "chapter",
+      "start": 53.835,
+      "end": 54.183
+    },
+    {
+      "w": "runs",
+      "start": 54.369,
+      "end": 54.636
+    },
+    {
+      "w": "on",
+      "start": 54.706,
+      "end": 54.857
+    },
+    {
+      "w": "what",
+      "start": 54.903,
+      "end": 55.065
+    },
+    {
+      "w": "she",
+      "start": 55.112,
+      "end": 55.24
+    },
+    {
+      "w": "said.",
+      "start": 55.309,
+      "end": 55.867
+    }
+  ],
+  "renderedAt": 1785313338897
+}
