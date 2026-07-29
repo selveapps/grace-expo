@@ -12,6 +12,47 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 
 ---
 
+## [Feedback v3 — submission readiness] — 2026-07-29
+
+Branch: `feat/tf-v1-feedback`. Covers the 15 v3 feedback items (`grace-branch-spec 2/v3/`).
+
+### Fixed
+- **Grace's eyes flew out of her head on every screen** (#2): the blink animated `style.transform:[{scaleY}]`, which `react-native-svg` applies as a *view* transform about the viewBox origin `(0,0)`, ignoring `origin`. Now animates the ellipse `ry` so the centre cannot move. Honours `reducedMotion`. (DEC-012)
+- **Slider never reached "Directly"** (#3): `onPanResponderMove` read `e.nativeEvent.locationX`, which becomes child-relative once the knob captures the touch (0…34), collapsing the index mid-track. Now measures the track with `measureInWindow` and works in absolute `pageX`, with `hitSlop` on both ends.
+- **Onboarding audio didn't work** (#5): it resolved through `AudioService` → TTS and 503'd with no key in production. It now plays a **bundled** asset with `playsInSilentModeIOS: true`, so it works offline, on a fresh install, on silent, with no keys.
+- **Transcripts didn't match the audio** (#8): the shown text was an LLM narrative regenerated per request. `GET /stories/:id/transcript` now serves the render's own sidecar. (DEC-013)
+- **Non-payers got the paid celebration** (#6): the paywall pushed `Confirmation` on both the CTA and the tap-anywhere path. It now branches on the real purchase status; `Confirmation` also guards on `profile.subscribed`.
+- `tsx` never auto-loaded `backend/.env`, so `generate:audio` had been running without the TTS keys; two voice ids in `.env` also carried trailing `# comments`. Scripts now use `--env-file-if-exists=.env` and `voiceProfiles` strips anything after a `#`.
+
+### Added
+- **Tea as a daily sermon** (#9,#10,#11): 30 entries, `heat` 1/2/3, stable `teaOfDay()` pick, `GET /tea/today`, `GET /img/tea/:filename`. Today's-Tea hero + scrollable archive with pull-to-refresh; `TeaImage` full-bleed art over a scrim with a deterministic gradient fallback. (DEC-014)
+- **Review prompt in onboarding** (#1) replaces the notification-reminder screen: `ReviewScreen` (expo-store-review) + `ReviewPrompt` model + `POST /review/event` + `GET /review/should-ask` (90-day cooldown). `Rhythm` stays reachable via You → Reminders.
+- **Sign in with Apple** + **in-app account deletion** (#14): `POST /auth/apple` verifies the identityToken against Apple's JWKS with `jose`; `DELETE /me` hard-deletes by cascade. The guest to migrate comes from the caller's bearer token, not the request body. (DEC-015)
+- **Word timings + tap-to-seek**: `generate-audio.ts` writes a `.json` sidecar per MP3 (exact text + ElevenLabs word spans); the transcript sheet highlights the active line and seeks on tap. **Rendered:** 30 Tea clips + the onboarding cut, all 31 with word timings, sidecar text verified byte-identical to the catalog.
+- **Real onboarding narration** bundled at `assets/audio/onboarding-preview.mp3` (ElevenLabs "Lily", 31.3s), byte-identical to the backend copy. The macOS `say` placeholder is gone.
+- Player shows elapsed, remaining and **"Ends at HH:MM"**; `Waveform` animates only during real playback.
+- Legal: `docs/legal/PRIVACY.md` + `TERMS.md`, URLs in `src/legal.js`, linked in Settings and under the paywall CTA with the subscription disclosure (3.1.2); KJV attribution in Settings → About.
+- `backend/test/v3.unit.test.ts` — 8 DB-free tests (Tea invariants, day-cycle stability, story durations, word-timing collapse).
+
+### Changed
+- **Tab bar** (#12): absolute + `BlurView`, `borderTopWidth: 0`, 6%-opacity hairline and a top gradient fade; active state is ink weight + a 4px brass dot, not a pill. Scroll containers padded to 110.
+- **All emoji/text-glyph icons replaced** (#13) by `GIcon` (24 grid, stroke 1.7) across Player, Stories, Tea, Chapter, Reading, Today, Saved and StoryDetail. `PlayIcon` retired.
+- **Type** (#4): no body copy below 16px, line-height 1.5, `textFaint` → `textMuted` for read-me paragraphs, verse card 27/38, `adjustsFontSizeToFit` on headlines that take names.
+- Story `durationSeconds` retargeted from 480–620s to **200–235s** (3:20–3:55) per part (#7).
+- **No em-dashes** in user-facing copy, app and backend.
+- App icon replaced with the locked v3 icon, flattened RGBA → RGB (alpha was uniformly 255, so no visual change) for the App Store no-alpha rule.
+
+### Not done here
+- **DB-backed tests** (`npm test` phase1–5, `verify:phase2`) and `prisma migrate dev` — Docker is unavailable in this environment. Migration SQL is hand-written to Prisma's format; `prisma generate` and `typecheck` pass.
+- **Story audio + transcripts**: the 16 story-part MP3s were rendered before the sidecar change and `generate-audio.ts` skips existing files, so **no story has a transcript sidecar** and `GET /stories/:id/transcript` 404s for all of them. The Transcript button correctly disables itself. Fix with `FORCE=1 ONLY=stories npm run generate:audio` — best done together with the narration-length work below.
+- **Durations are not honest yet**: `durationSeconds` claims 200-235s per story part and 62s per Tea, but the rendered audio is **7-11s** and **12-15s** respectively, because `narrationScripts.ts` and the Tea bodies are only 40-55 words. Cards therefore say "4 min" over a 10-second clip. Needs longer narration copy, then a re-render — a content decision, not a metadata one.
+- **Tea card stills** (30) not licensed; deterministic gradients ship in their place.
+- **IAP**: not wired — `expo-in-app-purchases` is not supported on SDK 54. (DEC-015)
+- **Google sign-in** still links by email; native Google OAuth remains M11.
+- EAS build/submit, ASC setup, Paid Apps agreement and publishing the legal URLs are external release steps.
+
+---
+
 ## [TestFlight V1 feedback — audio, Tea, motion, polish] — 2026-07-22
 
 Branch: `feat/tf-v1-feedback`. Covers the 14 TestFlight feedback items (`grace-branch-spec/`).

@@ -83,3 +83,45 @@ Format: **Context → Assumed → Actual → Prevention**
 **Assumed:** `synthesizeSpeech` would degrade like `llmService.completeChat` (which has a no-key fallback)
 **Actual:** `ttsService.synthesizeSpeech` throws `OPENAI_API_KEY not configured` when the key is unset. `OPENAI_API_KEY` is not set on Railway, and only `mary-annunciation` had an `audioUrl` (pointing at MP3s that weren't in the repo), so **100%** of plays fell through to TTS and returned 503.
 **Prevention:** Ship pre-rendered static MP3s as the primary path (every story gets an `audioUrl`), make the TTS route 302-redirect to the static file on failure instead of 503, and never assume a synth/LLM helper degrades gracefully — check for a no-key branch. See DEC-010.
+
+---
+
+## 2026-07-29 — `tsx` does not auto-load `.env`, so the TTS keys were never in scope
+
+**Expected:** `npm run generate:audio` (`tsx scripts/generate-audio.ts`) would pick up
+`backend/.env` the way `prisma` and most Node tooling do.
+
+**Actual:** it does not. A probe (`console.log(!!process.env.ELEVENLABS_API_KEY)` via
+`npx tsx`) printed `false` for every TTS variable. The documented render command could only ever
+have worked when the vars were exported into the shell by hand — the recorded "key lacks the
+`text_to_speech` scope" 401 may well have been a *missing key*, not a scope problem.
+
+**Corrected:** every `tsx` script now runs with `--env-file-if-exists=.env` (safe when the file is
+absent, as on Railway and CI). Re-probed: the key loads.
+
+**Second surprise, found by the same probe:** `ELEVENLABS_DEFAULT_VOICE` and `ELEVENLABS_TEA_VOICE`
+are written with trailing `# which voice this is` notes. Node's `--env-file` strips those (20-char
+ids resolve cleanly), but not every loader does, and a voice id with a comment glued on 404s at the
+API. `voiceProfiles.voiceId()` now takes the first `#`-delimited token defensively.
+
+**Lesson:** verify that config is actually *in scope*, not merely *on disk*. "The key is in `.env`"
+and "the process can see the key" are different claims.
+
+---
+
+## 2026-07-29 — `origin` on `react-native-svg` does not apply to `style.transform`
+
+**Expected:** `<AEllipse origin="194, 188" style={{ transform: [{ scaleY }] }} />` would scale the
+eye about its own centre, the way `origin` implies.
+
+**Actual:** `origin` governs `react-native-svg`'s own `scale`/`rotation` **props**. A
+`style.transform` is applied as a *view* transform, which ignores it and scales about the viewBox
+origin `(0,0)` — so every blink translated the eye up and off the head. This shipped to TestFlight
+and was the most-reported visual bug.
+
+**Corrected:** animate the `ry` attribute instead. The centre is fixed by construction, so no
+combination of props can make it drift. (DEC-012)
+
+**Lesson:** a prop that *looks* like it configures a transform may only configure one of two
+different transform pipelines. When a fix must hold under composition, prefer the formulation with
+no degree of freedom to get wrong.
