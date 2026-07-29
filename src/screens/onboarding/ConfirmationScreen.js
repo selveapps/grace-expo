@@ -7,11 +7,21 @@ import PrimaryButton from '../../components/PrimaryButton';
 import { useProfile } from '../../state/profile';
 import { colors, fonts } from '../../theme';
 
-const UNLOCKED = ['All stories', 'Full Bible', 'Evening rest'];
+const UNLOCKED = ['Your verse', 'Your rhythm', 'Your stories'];
 
 export default function ConfirmationScreen({ navigation }) {
   const { profile, setProfile } = useProfile();
-  useEffect(() => { Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Soft); }, []);
+
+  // Belt and braces: the celebration is the reward for paying, so a non-payer
+  // who somehow lands here (deep link, back stack) goes straight to the app.
+  useEffect(() => {
+    if (!profile.subscribed) {
+      navigation.replace('App');
+      return;
+    }
+    Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+  }, [profile.subscribed]);
+
   const enter = () => {
     setProfile((p) => ({ ...p, onboarded: true, subscribed: true }));
     navigation.reset({ index: 0, routes: [{ name: 'App' }] });
@@ -19,9 +29,11 @@ export default function ConfirmationScreen({ navigation }) {
   return (
     <Screen gradient={['#FDF6E4', '#F7F3EC', '#F1EBE0']} style={styles.wrap} ambient>
       <View style={styles.center}>
-        <GraceDove size={210} wings="open" motion="flap" />
-        <Text style={styles.title}>Your place is ready,{'\n'}{profile.name || 'friend'}.</Text>
-        <Text style={styles.sub}>Three days, on us. Then continue if it feels right.</Text>
+        <GraceDove size={210} wings="open" motion="bless" />
+        <Text style={styles.title} adjustsFontSizeToFit numberOfLines={2}>
+          Your place is ready,{'\n'}{profile.name || 'friend'}.
+        </Text>
+        <Text style={styles.sub}>Three days on us, then continue if it feels right.</Text>
         <View style={styles.row}>
           {UNLOCKED.map((u) => (
             <View key={u} style={styles.item}>
@@ -44,5 +56,5 @@ const styles = StyleSheet.create({
   row: { flexDirection: 'row', gap: 22, marginTop: 30 },
   item: { alignItems: 'center', gap: 6 },
   check: { width: 20, height: 20, borderRadius: 10, backgroundColor: colors.brass, alignItems: 'center', justifyContent: 'center' },
-  itemText: { fontFamily: fonts.sans, fontSize: 13, color: colors.textFaint },
+  itemText: { fontFamily: fonts.sans, fontSize: 13, color: colors.textMuted },
 });

@@ -1,15 +1,27 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { View, Text, Pressable, StyleSheet, Animated, Easing } from 'react-native';
+import { View, Text, Pressable, StyleSheet, Animated, Easing, Linking } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
 import GraceDove from '../../components/GraceDove';
 import PrimaryButton from '../../components/PrimaryButton';
 import { SubscriptionService } from '../../services';
 import { useProfile } from '../../state/profile';
+import { LEGAL } from '../../legal';
 import { colors, fonts, radius } from '../../theme';
 
 const OFFERS = SubscriptionService.getOfferings();
 const PRICE = Object.fromEntries(OFFERS.map((o) => [o.id, `${o.displayPrice} / ${o.period}`]));
+
+// Guideline 3.1.2 wants the subscription's name, length and price per period
+// stated on the purchase screen itself, not only inside the store sheet.
+const DISCLOSURE = Object.fromEntries(OFFERS.map((o) => [
+  o.id,
+  `Grace Plus, ${o.type === 'annual' ? '1 year' : '1 month'}, ${o.displayPrice} per ${o.period}. `
+  + `${o.trialDays}-day free trial, then it renews automatically until cancelled. `
+  + 'Cancel any time in your App Store account settings.',
+]));
+
+const openLegal = (url) => Linking.openURL(url).catch(() => {});
 
 const TRIAL = [
   { when: 'Today', text: 'Full access begins, free.' },
@@ -21,7 +33,9 @@ export default function PaywallScreen({ navigation }) {
   const { setProfile } = useProfile();
   const [plan, setPlan] = useState('annual');
   const [busy, setBusy] = useState(false);
+  const [error, setError] = useState(null);
   const veil = useRef(new Animated.Value(1)).current;   // light veil from Preparing → fades out
+  const outro = useRef(new Animated.Value(0)).current;  // ivory bloom on the way out
   const dove = useRef(new Animated.Value(0)).current;   // Grace blooms in
   const body = useRef(new Animated.Value(0)).current;   // content rises
   const bloom = useRef(new Animated.Value(0)).current;  // halo glow
@@ -40,21 +54,40 @@ export default function PaywallScreen({ navigation }) {
   }, []);
 
   const pick = (p) => { Haptics.selectionAsync(); setPlan(p); };
+
+  // Hand off the light: bloom the dark paywall out to ivory before navigating, so
+  // Confirmation/Home fade in from the same colour and it reads as one screen.
+  const leave = (fn) => {
+    Animated.timing(outro, {
+      toValue: 1, duration: 420, easing: Easing.out(Easing.ease), useNativeDriver: true,
+    }).start(fn);
+  };
+
   const start = async () => {
     if (busy) return;
     setBusy(true);
-    Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-    await SubscriptionService.purchase(plan);
-    setProfile((p) => ({ ...p, subscribed: true, onboarded: true }));
+    setError(null);
+    const res = await SubscriptionService.purchase(plan).catch(() => null);
     setBusy(false);
-    navigation.navigate('Confirmation');
+
+    // Only a real trialing/active result earns the celebration.
+    if (res && (res.status === 'trialing' || res.status === 'active')) {
+      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+      setProfile((p) => ({ ...p, onboarded: true, subscribed: true }));
+      leave(() => navigation.replace('Confirmation'));
+    } else if (res && res.status === 'cancelled') {
+      // She backed out of the sheet. Stay put, no scolding.
+    } else {
+      setError("Something didn't go through. You haven't been charged.");
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Soft);
+    }
   };
 
   // Soft fake paywall: a tap on any empty area (not a plan card or the CTA)
-  // quietly enters the app. Mark onboarded so RootNavigator won't bounce back.
+  // quietly enters the app. Not a payer, so no confirmation screen.
   const enterHome = () => {
     setProfile((p) => ({ ...p, onboarded: true }));
-    navigation.reset({ index: 0, routes: [{ name: 'App' }] });
+    leave(() => navigation.reset({ index: 0, routes: [{ name: 'App' }] }));
   };
 
   return (
@@ -111,12 +144,29 @@ export default function PaywallScreen({ navigation }) {
       <View style={{ flex: 1 }} />
       {/* CTA island — swallow taps so the fake-paywall enterHome doesn't fire here */}
       <View onStartShouldSetResponder={() => true}>
+        {error && <Text style={styles.error}>{error}</Text>}
         <PrimaryButton label={busy ? 'Preparing…' : 'Start 3-day free trial'} variant="gold" onPress={start} testID="paywall-start-trial" />
+        {/* Guideline 3.1.2: title, length and price per period beside the CTA,
+            with the Privacy Policy and Terms both linked. */}
+        <Text style={styles.disclosure}>
+          {DISCLOSURE[plan]}
+        </Text>
+        <View style={styles.legalRow}>
+          <Pressable onPress={() => openLegal(LEGAL.termsUrl)} hitSlop={10}>
+            <Text style={styles.legalLink}>Terms of Service</Text>
+          </Pressable>
+          <Text style={styles.legalDot}>·</Text>
+          <Pressable onPress={() => openLegal(LEGAL.privacyUrl)} hitSlop={10}>
+            <Text style={styles.legalLink}>Privacy Policy</Text>
+          </Pressable>
+        </View>
       </View>
       </Animated.View>
 
       {/* light veil carried over from Preparing — fades to reveal the blessing */}
       <Animated.View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: '#FDF6E4', opacity: veil }]} />
+      {/* outro bloom — carries the eye out of the dark screen into ivory */}
+      <Animated.View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: '#FDF6E4', opacity: outro }]} />
     </Screen>
     </Pressable>
   );
@@ -143,4 +193,9 @@ const styles = StyleSheet.create({
   tLine: { width: 2, flex: 1, backgroundColor: 'rgba(230,207,148,0.4)' },
   tWhen: { fontFamily: fonts.sansBold, fontSize: 14, color: colors.onDark },
   tText: { fontFamily: fonts.sans, fontSize: 13, color: colors.textFaintOnDark },
+  error: { fontFamily: fonts.sans, fontSize: 14, lineHeight: 20, color: '#E8A598', textAlign: 'center', marginBottom: 12 },
+  disclosure: { fontFamily: fonts.sans, fontSize: 12, lineHeight: 17, color: colors.textFaintOnDark, textAlign: 'center', marginTop: 12, paddingHorizontal: 6 },
+  legalRow: { flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: 8, marginTop: 8, minHeight: 44 },
+  legalLink: { fontFamily: fonts.sansMed, fontSize: 12, color: colors.gold, textDecorationLine: 'underline' },
+  legalDot: { color: colors.textFaintOnDark, fontSize: 12 },
 });
