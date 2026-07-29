@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
   input: { flex: 1, fontFamily: fonts.sans, fontSize: 15, color: colors.ink, paddingVertical: 4 },
   goBtn: { backgroundColor: colors.brass, borderRadius: radius.pill, paddingHorizontal: 14, paddingVertical: 6 },
   goText: { fontFamily: fonts.sansSemi, fontSize: 13, color: colors.white },
-  body: { paddingHorizontal: 22, paddingTop: 16, paddingBottom: 30 },
+  body: { paddingHorizontal: 22, paddingTop: 16, paddingBottom: 110 },
   group: { marginBottom: 20 },
   groupTitle: { fontFamily: fonts.sansSemi, fontSize: 12, letterSpacing: 1, color: colors.textFaint, marginBottom: 8 },
   hit: { backgroundColor: colors.white, borderWidth: 1, borderColor: colors.sandLine, borderRadius: radius.md, padding: 14, marginBottom: 8 },

@@ -61,7 +61,7 @@ export default function SupportScreen({ navigation }) {
           multiline
           style={styles.input}
         />
-        {status === 'failed' && <Text style={styles.failed}>That didn't send. Your message is still here — try again.</Text>}
+        {status === 'failed' && <Text style={styles.failed}>That didn't send. Your message is still here. Try again.</Text>}
         <Text style={styles.note}>Replies go to {replyEmail}</Text>
 
         <Pressable style={[styles.primary, { marginTop: 20 }]} onPress={send} disabled={status === 'sending'}>

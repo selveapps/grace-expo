@@ -4,7 +4,7 @@ import { useFocusEffect } from '@react-navigation/native';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
 import Waveform from '../../components/Waveform';
-import PlayIcon from '../../components/PlayIcon';
+import GIcon from '../../components/GIcon';
 import TeaScreen from '../stories/TeaScreen';
 import { StoryService } from '../../services';
 import { colors, fonts, radius, shadow } from '../../theme';
@@ -71,7 +71,7 @@ export default function StoriesScreen({ navigation }) {
             <Text style={styles.featTitle}>{featured.title}</Text>
             <Text style={styles.featSub}>{featured.subtitle} · {featured.parts} parts</Text>
             <View style={styles.featRow}>
-              <View style={styles.play}><PlayIcon size={18} color={colors.espresso} /></View>
+              <View style={styles.play}><GIcon name="play" size={18} color={colors.espresso} filled /></View>
               <Waveform width={200} color={colors.gold} height={30} />
             </View>
           </Pressable>
@@ -90,7 +90,7 @@ export default function StoriesScreen({ navigation }) {
             <View style={{ gap: 12 }}>
               {cont.map((s) => (
                 <Pressable key={s.id} style={styles.row} onPress={() => open(s.id)}>
-                  <View style={styles.rowThumb}><PlayIcon size={16} color={colors.brass} /></View>
+                  <View style={styles.rowThumb}><GIcon name="play" size={16} color={colors.brass} filled /></View>
                   <View style={{ flex: 1 }}>
                     <Text style={styles.rowTitle}>{s.title}</Text>
                     <Text style={styles.rowSub}>{s.subtitle} · {Math.round((s.progress.seconds / s.durationSeconds) * 100)}%</Text>
@@ -105,7 +105,7 @@ export default function StoriesScreen({ navigation }) {
         <View style={{ gap: 12 }}>
           {all.map((s) => (
             <Pressable key={s.id} style={styles.row} onPress={() => open(s.id)}>
-              <View style={[styles.rowThumb, { backgroundColor: s.coverTint }]}><PlayIcon size={16} color={colors.gold} /></View>
+              <View style={[styles.rowThumb, { backgroundColor: s.coverTint }]}><GIcon name="play" size={16} color={colors.gold} filled /></View>
               <View style={{ flex: 1 }}>
                 <Text style={styles.rowTitle}>{s.title}</Text>
                 <Text style={styles.rowSub}>{s.scriptureRange} · {fmt(s.durationSeconds)}{s.isPremium ? ' · Plus' : ''}</Text>
@@ -119,7 +119,8 @@ export default function StoriesScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  body: { paddingHorizontal: 22, paddingTop: 12, paddingBottom: 30 },
+  // the tab bar floats over the content, so leave room for it
+  body: { paddingHorizontal: 22, paddingTop: 12, paddingBottom: 110 },
   segmentWrap: { paddingHorizontal: 22, paddingTop: 4, marginBottom: 14 },
   segment: { flexDirection: 'row', backgroundColor: colors.sand, borderRadius: radius.pill, padding: 4 },
   segmentItem: { flex: 1, alignItems: 'center', paddingVertical: 9, borderRadius: radius.pill },

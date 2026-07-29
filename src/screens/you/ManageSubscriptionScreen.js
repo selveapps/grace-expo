@@ -51,7 +51,7 @@ export default function ManageSubscriptionScreen({ navigation }) {
         </View>
         {sub.status === 'trialing' && <Text style={styles.cardSub}>Free until {fmtDate(sub.trialEndsAt)} · then $69.99 / year</Text>}
         {sub.status === 'active' && <Text style={styles.cardSub}>Renews {fmtDate(sub.renewsAt)}</Text>}
-        {sub.status === 'canceled' && <Text style={styles.cardSub}>Canceled — you keep access until {fmtDate(sub.trialEndsAt || sub.renewsAt)}</Text>}
+        {sub.status === 'canceled' && <Text style={styles.cardSub}>Canceled. You keep access until {fmtDate(sub.trialEndsAt || sub.renewsAt)}</Text>}
         {sub.status === 'expired' && <Text style={styles.cardSub}>Your trial has ended. You can keep reading free, or continue with Plus.</Text>}
         {sub.status === 'free' && <Text style={styles.cardSub}>You're on the free plan.</Text>}
       </View>
@@ -66,7 +66,7 @@ export default function ManageSubscriptionScreen({ navigation }) {
         {active && <Pressable style={styles.row} onPress={cancel}><Text style={[styles.rowText, { color: colors.danger }]}>Cancel subscription</Text><Text style={styles.chev}>›</Text></Pressable>}
       </View>
 
-      <Text style={styles.note}>Billed through the App Store. Cancel anytime — you keep access until your period ends.</Text>
+      <Text style={styles.note}>Billed through the App Store. Cancel anytime, and you keep access until your period ends.</Text>
       <View style={styles.dove}><GraceDove size={90} wings="folded" motion="breathe" /></View>
     </Screen>
   );

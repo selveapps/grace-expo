@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
+import GIcon from '../../components/GIcon';
 import GraceDove from '../../components/GraceDove';
 import { useProfile } from '../../state/profile';
 import { colors, fonts, radius } from '../../theme';
@@ -32,7 +33,7 @@ export default function SavedScreen({ navigation }) {
             <View key={v.ref} style={styles.card}>
               <View style={styles.cardHead}>
                 <Text style={styles.ref}>{v.ref.toUpperCase()}</Text>
-                <Pressable onPress={() => remove(v.ref)} hitSlop={10}><Text style={styles.remove}>✦</Text></Pressable>
+                <Pressable onPress={() => remove(v.ref)} hitSlop={10} accessibilityRole="button" accessibilityLabel="Remove saved verse"><GIcon name="bookmark" size={18} color={colors.brass} filled /></Pressable>
               </View>
               <Text style={styles.verse}>{v.text}</Text>
             </View>
@@ -48,7 +49,7 @@ const styles = StyleSheet.create({
   back: { fontFamily: fonts.sans, fontSize: 13, color: colors.textFaint },
   h1: { fontFamily: fonts.serif, fontSize: 34, color: colors.ink, marginTop: 6 },
   sub: { fontFamily: fonts.sans, fontSize: 14, color: colors.textFaint, marginTop: 2 },
-  body: { paddingHorizontal: 22, paddingTop: 14, paddingBottom: 30, gap: 12 },
+  body: { paddingHorizontal: 22, paddingTop: 14, paddingBottom: 110, gap: 12 },
   card: { backgroundColor: colors.white, borderWidth: 1, borderColor: colors.sandLine, borderRadius: radius.md, padding: 18 },
   cardHead: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 },
   ref: { fontFamily: fonts.sansSemi, fontSize: 12, letterSpacing: 1, color: colors.brass },

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable, ActivityIndicator, Modal, Share } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
+import GIcon from '../../components/GIcon';
 import { getChapter } from '../../api/bible';
 import { ReadingService } from '../../services/ReadingService';
 import { useProfile } from '../../state/profile';
@@ -13,12 +14,12 @@ try { Clipboard = require('expo-clipboard'); } catch { Clipboard = null; }
 // Verse action sheet — Save / Highlight / Copy / Share / Reflect / Listen.
 function ActionSheet({ verse, refStr, saved, highlighted, onClose, onAction }) {
   const ACTIONS = [
-    { key: 'save', label: saved ? 'Saved' : 'Save', glyph: '✦' },
-    { key: 'highlight', label: highlighted ? 'Unhighlight' : 'Highlight', glyph: '﹅' },
-    { key: 'copy', label: 'Copy', glyph: '⧉' },
-    { key: 'share', label: 'Share', glyph: '↑' },
-    { key: 'reflect', label: 'Reflect', glyph: '✎' },
-    { key: 'listen', label: 'Listen from here', glyph: '▶' },
+    { key: 'save', label: saved ? 'Saved' : 'Save', icon: 'bookmark', filled: saved },
+    { key: 'highlight', label: highlighted ? 'Unhighlight' : 'Highlight', icon: 'highlight' },
+    { key: 'copy', label: 'Copy', icon: 'copy' },
+    { key: 'share', label: 'Share', icon: 'share' },
+    { key: 'reflect', label: 'Reflect', icon: 'pen' },
+    { key: 'listen', label: 'Listen from here', icon: 'play', filled: true },
   ];
   return (
     <Modal visible={!!verse} transparent animationType="slide" onRequestClose={onClose}>
@@ -29,9 +30,9 @@ function ActionSheet({ verse, refStr, saved, highlighted, onClose, onAction }) {
         {verse ? <Text style={styles.sheetVerse} numberOfLines={3}>“{verse.t}”</Text> : null}
         <View style={styles.grid}>
           {ACTIONS.map((a) => (
-            <Pressable key={a.key} style={styles.action} onPress={() => onAction(a.key)}>
+            <Pressable key={a.key} style={styles.action} onPress={() => onAction(a.key)} accessibilityRole="button" accessibilityLabel={a.label}>
               <View style={[styles.actionIcon, (a.key === 'save' && saved) || (a.key === 'highlight' && highlighted) ? styles.actionIconOn : null]}>
-                <Text style={styles.actionGlyph}>{a.glyph}</Text>
+                <GIcon name={a.icon} size={20} color={colors.brassDeep} filled={a.filled} />
               </View>
               <Text style={styles.actionLabel}>{a.label}</Text>
             </Pressable>
@@ -99,11 +100,11 @@ export default function ChapterScreen({ route, navigation }) {
       setHighlights((h) => ({ ...h, [refStr]: !h[refStr] }));
       Haptics.selectionAsync();
     } else if (key === 'copy') {
-      if (Clipboard) await Clipboard.setStringAsync(`"${v.t}" — ${refStr}`);
+      if (Clipboard) await Clipboard.setStringAsync(`"${v.t}" · ${refStr}`);
       Haptics.selectionAsync();
     } else if (key === 'share') {
       setActive(null);
-      try { await Share.share({ message: `"${v.t}" — ${refStr}\n\nvia Grace` }); } catch {}
+      try { await Share.share({ message: `"${v.t}" · ${refStr}\n\nvia Grace` }); } catch {}
       return;
     } else if (key === 'reflect') {
       addReflection({ word: 'Reflection', note: `On ${refStr}: “${v.t}”`, ref: refStr });
@@ -124,8 +125,8 @@ export default function ChapterScreen({ route, navigation }) {
         </View>
         <View style={{ flexDirection: 'row', gap: 16 }}>
           <Text style={[styles.barIcon, { color: THEME.bar }]}>Aa</Text>
-          <Text style={styles.barIcon}>🌙</Text>
-          <Text style={[styles.barIcon, { color: colors.brass }]}>▶</Text>
+          <GIcon name={theme === 'night' ? 'sun' : 'moon'} size={20} color={THEME.bar} />
+          <GIcon name="play" size={20} color={colors.brass} filled />
         </View>
       </View>
 
@@ -138,18 +139,18 @@ export default function ChapterScreen({ route, navigation }) {
               <Pressable key={v.n} onLongPress={() => openSheet(v)} delayLongPress={220}>
                 <Text style={[styles.verse, { fontSize: fs, lineHeight: fs * 1.62, color: THEME.ink }, hl && styles.verseHl]}>
                   <Text style={styles.vnum}>{v.n} </Text>{v.t}
-                  {isSaved(refStr) ? <Text style={styles.mark}>  ✦</Text> : null}
+                  {isSaved(refStr) ? <Text style={styles.mark}>  ·</Text> : null}
                 </Text>
               </Pressable>
             );
           })}
-          <Text style={styles.bloom}>✦</Text>
+          <View style={styles.bloom}><GIcon name="sparkle" size={18} color={colors.brass} filled /></View>
           <Text style={styles.hint}>Press & hold a verse for options.</Text>
         </ScrollView>
       ) : failed ? (
         <View style={styles.loading}>
           <Text style={[styles.failTitle, { color: THEME.ink }]}>I couldn't load this chapter.</Text>
-          <Text style={[styles.failSub, { color: THEME.sub }]}>Check your connection — your saved verses are still here.</Text>
+          <Text style={[styles.failSub, { color: THEME.sub }]}>Check your connection. Your saved verses are still here.</Text>
           <Pressable onPress={load} style={styles.retry}><Text style={styles.retryText}>Try again</Text></Pressable>
         </View>
       ) : (
@@ -187,7 +188,7 @@ const styles = StyleSheet.create({
   verseHl: { backgroundColor: 'rgba(230,207,148,0.4)', borderRadius: 6 },
   vnum: { fontFamily: fonts.sansBold, fontSize: 11, color: colors.brass },
   mark: { color: colors.brass },
-  bloom: { textAlign: 'center', color: colors.brass, fontSize: 18, marginVertical: 12 },
+  bloom: { alignItems: 'center', marginVertical: 12 },
   hint: { textAlign: 'center', fontFamily: fonts.sans, fontSize: 13, color: colors.textFaint, marginBottom: 8 },
   loading: { flex: 1, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 40 },
   failTitle: { fontFamily: fonts.serif, fontSize: 26, textAlign: 'center' },

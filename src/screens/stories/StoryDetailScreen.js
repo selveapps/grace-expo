@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable, ActivityIndicator } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
+import GIcon from '../../components/GIcon';
 import { StoryService, AudioService } from '../../services';
 import { colors, fonts, radius } from '../../theme';
 
@@ -64,7 +65,10 @@ export default function StoryDetailScreen({ route, navigation }) {
             {loadingAudio ? (
               <ActivityIndicator color={colors.onDark} />
             ) : (
-              <Text style={styles.playText}>{pct > 0 ? `▶  Resume · ${pct}%` : '▶  Play'}</Text>
+              <View style={styles.playRow}>
+                <GIcon name="play" size={18} color={colors.onDark} filled />
+                <Text style={styles.playText}>{pct > 0 ? `Resume · ${pct}%` : 'Play'}</Text>
+              </View>
             )}
           </Pressable>
 
@@ -72,6 +76,17 @@ export default function StoryDetailScreen({ route, navigation }) {
             <Text style={styles.hookLabel}>THE HOOK</Text>
             <Text style={styles.hook}>“{story.hook}”</Text>
           </View>
+
+          {story.scriptureRefs?.length ? (
+            <View style={styles.card}>
+              <Text style={styles.hookLabel}>RETOLD FROM</Text>
+              {story.scriptureRefs.map((r, i) => (
+                <Text key={i} style={styles.refLine}>
+                  Part {i + 1} · {r}
+                </Text>
+              ))}
+            </View>
+          ) : null}
 
           <View style={styles.card}>
             <Text style={styles.hookLabel}>NARRATION PREVIEW</Text>
@@ -110,6 +125,8 @@ const styles = StyleSheet.create({
   metaDot: { color: colors.onDarkMuted },
   body: { padding: 22, gap: 14 },
   playBtn: { backgroundColor: colors.espresso, borderRadius: radius.pill, paddingVertical: 16, alignItems: 'center' },
+  playRow: { flexDirection: 'row', alignItems: 'center', gap: 10 },
+  refLine: { fontFamily: fonts.sans, fontSize: 14, lineHeight: 22, color: colors.textMuted, marginTop: 4 },
   playText: { fontFamily: fonts.sansSemi, fontSize: 16, color: colors.onDark },
   card: { backgroundColor: colors.white, borderWidth: 1, borderColor: colors.sandLine, borderRadius: radius.md, padding: 18 },
   hookLabel: { fontFamily: fonts.sansSemi, fontSize: 12, letterSpacing: 1, color: colors.brass, marginBottom: 8 },

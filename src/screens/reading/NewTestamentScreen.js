@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   h1: { fontFamily: fonts.serif, fontSize: 34, color: colors.ink, marginTop: 8 },
   search: { flexDirection: 'row', alignItems: 'center', gap: 10, backgroundColor: colors.white, borderWidth: 1, borderColor: colors.cardBorder, borderRadius: radius.pill, paddingVertical: 10, paddingHorizontal: 16, marginTop: 12 },
   searchText: { fontFamily: fonts.sans, fontSize: 14, color: colors.textFaint },
-  body: { paddingHorizontal: 22, paddingBottom: 30, paddingTop: 4 },
+  body: { paddingHorizontal: 22, paddingBottom: 110, paddingTop: 4 },
   group: { fontFamily: fonts.sansSemi, fontSize: 12, letterSpacing: 1, color: colors.brass, marginBottom: 8 },
   books: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
   book: { paddingVertical: 9, paddingHorizontal: 14, borderRadius: radius.sm, backgroundColor: colors.white, borderWidth: 1, borderColor: colors.sandLine },

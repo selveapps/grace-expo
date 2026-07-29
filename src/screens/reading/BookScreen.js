@@ -14,7 +14,7 @@ const CELL = (Dimensions.get('window').width - BODY_PAD * 2 - GAP * (COLS - 1)) 
 // Chapter counts for common books; default 30 for demo. Extend as needed.
 const CHAPTERS = { Psalms: 150, Genesis: 50, Isaiah: 66, Ruth: 4, Esther: 10, John: 21, Romans: 16 };
 const INTROS = {
-  Psalms: '150 songs of lament, praise and trust — the prayer book of the Bible.',
+  Psalms: '150 songs of lament, praise and trust, the prayer book of the Bible.',
 };
 const RANGE = 25; // chapters per range page
 
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
   back: { fontFamily: fonts.sans, fontSize: 13, color: colors.textFaintOnDark },
   title: { fontFamily: fonts.serif, fontSize: 40, color: colors.onDark, marginTop: 14 },
   intro: { fontFamily: fonts.sans, fontSize: 14, color: colors.onDarkMuted, marginTop: 6, lineHeight: 21 },
-  body: { paddingHorizontal: 22, paddingTop: 22, paddingBottom: 30 },
+  body: { paddingHorizontal: 22, paddingTop: 22, paddingBottom: 110 },
   continue: { backgroundColor: colors.brass, borderRadius: radius.pill, paddingVertical: 15, alignItems: 'center' },
   continueText: { fontFamily: fonts.sansSemi, fontSize: 16, color: colors.white },
   section: { fontFamily: fonts.sansSemi, fontSize: 12, letterSpacing: 1, color: colors.textFaint, marginTop: 20, marginBottom: 12 },

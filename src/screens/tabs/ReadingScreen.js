@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
+import GIcon from '../../components/GIcon';
 import Icon from '../../components/Icon';
 import { THEMES } from '../../data/content';
 import { colors, fonts, radius } from '../../theme';
@@ -21,7 +22,7 @@ export default function ReadingScreen({ navigation }) {
         </Pressable>
 
         <Pressable style={styles.continue} onPress={() => go('Chapter', { book: 'Psalms', chapter: 23 })}>
-          <View style={styles.continueThumb}><Text style={{ color: '#fff' }}>↳</Text></View>
+          <View style={styles.continueThumb}><GIcon name="chevronRight" size={16} color="#fff" /></View>
           <View><Text style={styles.continueLabel}>CONTINUE READING</Text><Text style={styles.continueRef}>Psalm 23 · verse 1</Text></View>
         </Pressable>
 
@@ -44,7 +45,8 @@ export default function ReadingScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  body: { paddingHorizontal: 22, paddingTop: 12, paddingBottom: 30 },
+  // the tab bar floats over the content, so leave room for it
+  body: { paddingHorizontal: 22, paddingTop: 12, paddingBottom: 110 },
   h1: { fontFamily: fonts.serif, fontSize: 38, color: colors.ink },
   sub: { fontFamily: fonts.sans, fontSize: 14, color: colors.textFaint, marginBottom: 16 },
   search: { flexDirection: 'row', alignItems: 'center', gap: 10, backgroundColor: colors.white, borderWidth: 1, borderColor: colors.cardBorder, borderRadius: radius.pill, paddingVertical: 12, paddingHorizontal: 18, marginBottom: 16 },

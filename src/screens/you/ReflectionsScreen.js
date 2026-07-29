@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   back: { fontFamily: fonts.sans, fontSize: 13, color: colors.textFaint },
   h1: { fontFamily: fonts.serif, fontSize: 34, color: colors.ink, marginTop: 6 },
   sub: { fontFamily: fonts.sans, fontSize: 14, color: colors.textFaint, marginTop: 2 },
-  body: { paddingHorizontal: 22, paddingTop: 14, paddingBottom: 30, gap: 12 },
+  body: { paddingHorizontal: 22, paddingTop: 14, paddingBottom: 110, gap: 12 },
   card: { backgroundColor: colors.white, borderWidth: 1, borderColor: colors.sandLine, borderRadius: radius.md, padding: 18 },
   cardHead: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 },
   word: { fontFamily: fonts.serifSemi, fontSize: 22, color: colors.brass },

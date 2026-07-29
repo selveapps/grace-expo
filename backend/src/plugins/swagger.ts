@@ -9,7 +9,7 @@ export async function registerSwagger(app: FastifyInstance) {
       info: {
         title: 'Grace API',
         description:
-          'Backend for the Grace Bible companion app — scripture, profile, library, stories, and LLM-powered reminders/support.',
+          'Backend for the Grace Bible companion app: scripture, profile, library, stories, and LLM-powered reminders/support.',
         version: '0.1.0',
         contact: { name: 'Grace' },
       },

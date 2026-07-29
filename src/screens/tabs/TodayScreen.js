@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
+import GIcon from '../../components/GIcon';
 import GraceDove from '../../components/GraceDove';
 import { useProfile } from '../../state/profile';
 import { todaysVerse } from '../../api/bible';
@@ -47,7 +48,7 @@ export default function TodayScreen() {
         </View>
 
         <View style={styles.listen}>
-          <View style={styles.listenPlay}><Text style={{ color: colors.espresso, fontSize: 17 }}>▶</Text></View>
+          <View style={styles.listenPlay}><GIcon name="play" size={17} color={colors.espresso} filled /></View>
           <View>
             <Text style={styles.listenTitle}>Listen to today's reading</Text>
             <Text style={styles.listenSub}>6 min · Psalm 23</Text>
@@ -55,7 +56,7 @@ export default function TodayScreen() {
         </View>
 
         <View style={styles.rowCard}>
-          <View style={styles.rowThumb}><Text style={{ color: colors.brass }}>▶</Text></View>
+          <View style={styles.rowThumb}><GIcon name="play" size={14} color={colors.brass} filled /></View>
           <View style={{ flex: 1 }}>
             <Text style={styles.rowTitle}>Continue · Esther</Text>
             <Text style={styles.rowSub}>Chapter 2 of 4</Text>
@@ -73,7 +74,8 @@ export default function TodayScreen() {
 }
 
 const styles = StyleSheet.create({
-  body: { paddingHorizontal: 22, paddingTop: 12, paddingBottom: 30 },
+  // the tab bar floats over the content, so leave room for it
+  body: { paddingHorizontal: 22, paddingTop: 12, paddingBottom: 110 },
   headRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start' },
   greeting: { fontFamily: fonts.serif, fontSize: 34, color: colors.ink, lineHeight: 38 },
   kept: { fontFamily: fonts.serifItalic, fontSize: 18, color: colors.brass, marginTop: 4 },
