@@ -1,5 +1,5 @@
 import type { FastifyInstance } from 'fastify';
-import { TEAS, getTea, teaForClient } from '../lib/teaCatalog.js';
+import { TEAS, getTea, teaForClient, teaOfDay } from '../lib/teaCatalog.js';
 import { requireAuth } from '../middleware/auth.js';
 import * as library from '../services/libraryService.js';
 
@@ -7,6 +7,13 @@ export async function registerTeaRoutes(app: FastifyInstance) {
   app.get('/tea', async () => ({
     tea: [...TEAS].sort((a, b) => a.order - b.order).map(teaForClient),
   }));
+
+  // The daily sermon. Stable for the whole calendar day, so the hero card does
+  // not change under her while she is reading it.
+  app.get('/tea/today', async (_req, reply) => {
+    reply.header('Cache-Control', 'public, max-age=900');
+    return { tea: teaForClient(teaOfDay()) };
+  });
 
   app.get('/tea/saved', { preHandler: requireAuth }, async (req) => library.listSavedTea(req.userId!));
 
