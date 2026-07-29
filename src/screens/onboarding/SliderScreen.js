@@ -27,12 +27,35 @@ export default function SliderScreen({ navigation }) {
     Animated.timing(anim, { toValue: clamped, duration: 240, easing: Easing.out(Easing.ease), useNativeDriver: false }).start();
   };
 
+  // Mid-drag the touch target becomes a child view (knob or fill), so
+  // `locationX` is measured against that child (0…34) instead of the track and
+  // the index collapses toward the middle. Measure the track once and work in
+  // absolute `pageX` so the knob can actually reach both ends.
+  const wrapRef = useRef(null);
+  const trackX = useRef(0);
+  const trackW = useRef(TRACK);
+
+  const posToIndex = (pageX) => {
+    const KNOB_W = 34;
+    const usable = Math.max(1, trackW.current - KNOB_W);
+    const p = (pageX - trackX.current - KNOB_W / 2) / usable;   // 0…1 across knob-centre travel
+    return Math.round(Math.max(0, Math.min(1, p)) * 2);
+  };
+
+  const measureTrack = () => {
+    wrapRef.current?.measureInWindow?.((x, y, w) => {
+      trackX.current = x;
+      if (w) trackW.current = w;
+    });
+  };
+
   const pan = useRef(
     PanResponder.create({
       onStartShouldSetPanResponder: () => true,
       onMoveShouldSetPanResponder: () => true,
-      onPanResponderGrant: (e) => select(Math.round((e.nativeEvent.locationX / TRACK) * 2)),
-      onPanResponderMove: (e) => select(Math.round((e.nativeEvent.locationX / TRACK) * 2)),
+      onPanResponderTerminationRequest: () => false,   // keep the gesture once it starts
+      onPanResponderGrant: (e) => select(posToIndex(e.nativeEvent.pageX)),
+      onPanResponderMove: (e) => select(posToIndex(e.nativeEvent.pageX)),
     })
   ).current;
 
@@ -60,7 +83,13 @@ export default function SliderScreen({ navigation }) {
       <View style={styles.mid}>
         <Text style={styles.word}>{s.word}</Text>
         <Text style={styles.blurb}>{s.blurb}</Text>
-        <View style={styles.trackWrap} {...pan.panHandlers}>
+        <View
+          ref={wrapRef}
+          style={styles.trackWrap}
+          onLayout={measureTrack}
+          hitSlop={{ top: 16, bottom: 16, left: 12, right: 12 }}
+          {...pan.panHandlers}
+        >
           <View style={styles.track}>
             <Animated.View style={[styles.fill, { width: fillW }]} />
             {[0, 1, 2].map((i) => (
@@ -85,11 +114,11 @@ const styles = StyleSheet.create({
   wrap: { paddingHorizontal: 26, paddingTop: 20, paddingBottom: 30 },
   progress: { height: 4, borderRadius: 4, backgroundColor: colors.sand, overflow: 'hidden', marginBottom: 26 },
   progressFill: { height: '100%', backgroundColor: colors.brass },
-  title: { fontFamily: fonts.serif, fontSize: 36, color: colors.ink, textAlign: 'center', marginTop: 14, lineHeight: 40 },
-  sub: { fontFamily: fonts.sans, fontSize: 15, color: colors.textMuted, textAlign: 'center', marginTop: 8 },
+  title: { fontFamily: fonts.serif, fontSize: 38, color: colors.ink, textAlign: 'center', marginTop: 14, lineHeight: 42 },
+  sub: { fontFamily: fonts.sans, fontSize: 16, lineHeight: 24, color: colors.textMuted, textAlign: 'center', marginTop: 8 },
   mid: { flex: 1, justifyContent: 'center' },
   word: { fontFamily: fonts.serifItalic, fontSize: 36, color: colors.brass, textAlign: 'center' },
-  blurb: { fontFamily: fonts.sans, fontSize: 15, color: colors.textFaint, textAlign: 'center', marginTop: 4, marginBottom: 28 },
+  blurb: { fontFamily: fonts.sans, fontSize: 16, lineHeight: 24, color: colors.textMuted, textAlign: 'center', marginTop: 4, marginBottom: 28 },
   trackWrap: { paddingVertical: 16, alignSelf: 'center', width: TRACK },
   track: { height: 10, borderRadius: 10, backgroundColor: colors.sand, justifyContent: 'center' },
   fill: { position: 'absolute', left: 0, height: 10, borderRadius: 10, backgroundColor: colors.brass },
