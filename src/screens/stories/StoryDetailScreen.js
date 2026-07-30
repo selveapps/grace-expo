@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, ScrollView, Pressable, ActivityIndicator } from
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
 import GIcon from '../../components/GIcon';
+import StoryArt from '../../components/StoryArt';
 import { StoryService, AudioService } from '../../services';
 import { colors, fonts, radius } from '../../theme';
 
@@ -19,8 +20,10 @@ export default function StoryDetailScreen({ route, navigation }) {
     let alive = true;
     Promise.all([StoryService.getStory(id), StoryService.getProgress(id)])
       .then(([s, p]) => { if (alive) { setStory(s); setProgress(p); } });
-    StoryService.getNarrative(id, 1)
-      .then((res) => { if (alive) setNarrative(res.content); })
+    // Preview text is the opening of the real narration (the render's own
+    // sidecar), not a fresh LLM generation. Falls back to the hook offline.
+    StoryService.getTranscript(id, 1)
+      .then((res) => { if (alive) setNarrative(res?.text ?? null); })
       .catch(() => { if (alive) setNarrative(null); })
       .finally(() => { if (alive) setLoadingNarrative(false); });
     return () => { alive = false; };
@@ -47,8 +50,13 @@ export default function StoryDetailScreen({ route, navigation }) {
   return (
     <Screen bg={colors.ivory} edges={[]} style={{ paddingHorizontal: 0 }}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <View style={[styles.hero, { backgroundColor: story.coverTint }]}>
-          <Pressable onPress={() => navigation.goBack()}><Text style={styles.back}>‹ Stories</Text></Pressable>
+        <View style={styles.hero}>
+          {/* Cover art rather than a flat coverTint fill. */}
+          <StoryArt story={story} ratio={1.1} />
+          <View style={styles.heroScrim} />
+          <Pressable onPress={() => navigation.goBack()} hitSlop={10} style={styles.backHit}>
+            <Text style={styles.back}>‹ Stories</Text>
+          </Pressable>
           <Text style={styles.title}>{story.title}</Text>
           <Text style={styles.subtitle}>{story.subtitle}</Text>
           <View style={styles.meta}>
@@ -116,7 +124,9 @@ export default function StoryDetailScreen({ route, navigation }) {
 
 const styles = StyleSheet.create({
   loading: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-  hero: { paddingTop: 74, paddingHorizontal: 24, paddingBottom: 28 },
+  hero: { paddingTop: 74, paddingHorizontal: 24, paddingBottom: 28, overflow: 'hidden' },
+  heroScrim: { ...StyleSheet.absoluteFillObject, backgroundColor: 'rgba(35,26,17,0.44)' },
+  backHit: { minHeight: 40, justifyContent: 'center', alignSelf: 'flex-start' },
   back: { fontFamily: fonts.sans, fontSize: 13, color: colors.onDarkMuted },
   title: { fontFamily: fonts.serif, fontSize: 36, color: colors.onDark, marginTop: 20, lineHeight: 40 },
   subtitle: { fontFamily: fonts.serifItalic, fontSize: 18, color: colors.gold, marginTop: 6 },

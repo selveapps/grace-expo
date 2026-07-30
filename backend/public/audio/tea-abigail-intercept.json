@@ -1,1006 +1,1434 @@
 {
   "kind": "tea",
   "teaId": "abigail-intercept",
-  "mood": "light",
-  "heat": 2,
-  "text": "Abigail stopped a war with supplies and a speech. First Samuel twenty five. David's men had protected Nabal's shepherds, and when David sends ten young men to ask for provision, Nabal insults him and sends them away with nothing. David straps on his sword and takes four hundred men. He is riding out to wipe out a household. A servant runs to Abigail and tells her everything. And she does not call a meeting. The text says she made haste. Two hundred loaves, two bottles of wine, five dressed sheep, roasted grain, a hundred clusters of raisins, two hundred cakes of figs. She loads it all onto donkeys and rides out to intercept an armed column, without telling her husband. Then she gets down off the donkey, falls on her face, and talks. She takes the blame on herself, tells David that shedding this blood would be a grief and an offence of heart to him later, and asks him to remember her when God has done him good. And David says, blessed be thy advice, and blessed be thou, which hast kept me this day from coming to shed blood. She talked a future king off the ledge.",
-  "voice": "cgSgspJ2msm6clMCkdW9",
+  "text": "Okay this one has a man so awful that Scripture literally says his name means fool.\n\nNabal. Three thousand sheep, a thousand goats, shearing season, rolling in it. And David, before he's king, has been out in the wilderness guarding this man's shepherds. For free. The servants say it themselves: they were a wall unto us, night and day.\n\nSo David sends ten men to ask, politely, for provisions.\n\nAnd Nabal goes, \"Who is David? Who is the son of Jesse?\" Then, \"Shall I take my bread and my water and my meat, and give it to men I know not whence they be?\"\n\nSir. You know exactly who he is.\n\nDavid's reply is two words. \"Gird ye on every man his sword.\" Four hundred men. He is riding out to erase an entire household over a dinner request.\n\nNow. A servant runs to Nabal's wife, because the staff know you cannot talk to this man.\n\nEnter Abigail. And she does not panic, she does inventory. Two hundred loaves. Two skins of wine. Five dressed sheep. Roasted grain. A hundred raisin cakes. Two hundred fig cakes. Loaded on donkeys, sent ahead.\n\nAnd she tells her husband nothing.\n\nShe rides straight at four hundred armed men, gets off the donkey, falls on her face, and takes the blame herself. Then she tells David: do not let this blood be on you, because God is going to build you a sure house, and you do not want this on the record.\n\nAnd David says, \"Blessed be thy advice, and blessed be thou, which hast kept me this day from coming to shed blood.\"\n\nShe talked a future king out of a massacre. With groceries and a speech.",
+  "voice": "FGY2WhTYpPnrIDTdsKH5",
   "words": [
     {
-      "w": "Abigail",
+      "w": "Okay",
       "start": 0,
-      "end": 0.383
-    },
-    {
-      "w": "stopped",
-      "start": 0.43,
-      "end": 0.708
-    },
-    {
-      "w": "a",
-      "start": 0.743,
-      "end": 0.766
-    },
-    {
-      "w": "war",
-      "start": 0.813,
-      "end": 1.01
-    },
-    {
-      "w": "with",
-      "start": 1.057,
-      "end": 1.184
-    },
-    {
-      "w": "supplies",
-      "start": 1.231,
-      "end": 1.73
-    },
-    {
-      "w": "and",
-      "start": 1.776,
-      "end": 1.858
-    },
-    {
-      "w": "a",
-      "start": 1.904,
-      "end": 1.927
-    },
-    {
-      "w": "speech.",
-      "start": 1.974,
-      "end": 2.566
-    },
-    {
-      "w": "First",
-      "start": 3.019,
-      "end": 3.32
-    },
-    {
-      "w": "Samuel",
-      "start": 3.39,
-      "end": 3.785
-    },
-    {
-      "w": "twenty",
-      "start": 3.831,
-      "end": 4.075
-    },
-    {
-      "w": "five.",
-      "start": 4.122,
-      "end": 4.702
-    },
-    {
-      "w": "David's",
-      "start": 5.422,
-      "end": 5.77
-    },
-    {
-      "w": "men",
-      "start": 5.828,
-      "end": 6.026
-    },
-    {
-      "w": "had",
-      "start": 6.084,
-      "end": 6.177
-    },
-    {
-      "w": "protected",
-      "start": 6.211,
-      "end": 6.618
-    },
-    {
-      "w": "Nabal's",
-      "start": 6.664,
-      "end": 6.989
-    },
-    {
-      "w": "shepherds,",
-      "start": 7.024,
-      "end": 7.697
-    },
-    {
-      "w": "and",
-      "start": 7.802,
-      "end": 7.93
-    },
-    {
-      "w": "when",
-      "start": 7.976,
-      "end": 8.104
-    },
-    {
-      "w": "David",
-      "start": 8.15,
-      "end": 8.429
-    },
-    {
-      "w": "sends",
-      "start": 8.475,
-      "end": 8.707
-    },
-    {
-      "w": "ten",
-      "start": 8.766,
-      "end": 8.928
-    },
-    {
-      "w": "young",
-      "start": 8.975,
-      "end": 9.137
-    },
-    {
-      "w": "men",
-      "start": 9.183,
-      "end": 9.346
-    },
-    {
-      "w": "to",
-      "start": 9.404,
-      "end": 9.462
-    },
-    {
-      "w": "ask",
-      "start": 9.52,
-      "end": 9.671
-    },
-    {
-      "w": "for",
-      "start": 9.718,
-      "end": 9.81
-    },
-    {
-      "w": "provision,",
-      "start": 9.857,
-      "end": 10.495
-    },
-    {
-      "w": "Nabal",
-      "start": 10.646,
-      "end": 10.913
-    },
-    {
-      "w": "insults",
-      "start": 10.971,
-      "end": 11.401
-    },
-    {
-      "w": "him",
-      "start": 11.447,
-      "end": 11.575
-    },
-    {
-      "w": "and",
-      "start": 11.622,
-      "end": 11.714
-    },
-    {
-      "w": "sends",
-      "start": 11.773,
-      "end": 12.016
-    },
-    {
-      "w": "them",
-      "start": 12.051,
-      "end": 12.167
-    },
-    {
-      "w": "away",
-      "start": 12.214,
-      "end": 12.411
-    },
-    {
-      "w": "with",
-      "start": 12.446,
-      "end": 12.585
-    },
-    {
-      "w": "nothing.",
-      "start": 12.643,
-      "end": 13.177
-    },
-    {
-      "w": "David",
-      "start": 13.804,
-      "end": 14.129
-    },
-    {
-      "w": "straps",
-      "start": 14.176,
-      "end": 14.443
-    },
-    {
-      "w": "on",
-      "start": 14.477,
-      "end": 14.547
-    },
-    {
-      "w": "his",
-      "start": 14.594,
-      "end": 14.675
-    },
-    {
-      "w": "sword",
-      "start": 14.698,
-      "end": 14.977
-    },
-    {
-      "w": "and",
-      "start": 15.011,
-      "end": 15.081
-    },
-    {
-      "w": "takes",
-      "start": 15.116,
-      "end": 15.337
-    },
-    {
-      "w": "four",
-      "start": 15.395,
-      "end": 15.58
-    },
-    {
-      "w": "hundred",
-      "start": 15.627,
-      "end": 15.894
-    },
-    {
-      "w": "men.",
-      "start": 15.94,
-      "end": 16.393
-    },
-    {
-      "w": "He",
-      "start": 16.73,
-      "end": 16.846
-    },
-    {
-      "w": "is",
-      "start": 16.892,
-      "end": 16.974
-    },
-    {
-      "w": "riding",
-      "start": 17.032,
-      "end": 17.264
-    },
-    {
-      "w": "out",
-      "start": 17.31,
-      "end": 17.438
-    },
-    {
-      "w": "to",
-      "start": 17.484,
-      "end": 17.531
-    },
-    {
-      "w": "wipe",
-      "start": 17.577,
-      "end": 17.74
-    },
-    {
-      "w": "out",
-      "start": 17.763,
-      "end": 17.844
-    },
-    {
-      "w": "a",
-      "start": 17.879,
-      "end": 17.902
-    },
-    {
-      "w": "household.",
-      "start": 17.949,
-      "end": 18.576
-    },
-    {
-      "w": "A",
-      "start": 19.296,
-      "end": 19.365
-    },
-    {
-      "w": "servant",
-      "start": 19.435,
-      "end": 19.76
-    },
-    {
-      "w": "runs",
-      "start": 19.806,
-      "end": 19.981
-    },
-    {
-      "w": "to",
-      "start": 20.027,
-      "end": 20.073
-    },
-    {
-      "w": "Abigail",
-      "start": 20.12,
-      "end": 20.503
-    },
-    {
-      "w": "and",
-      "start": 20.549,
-      "end": 20.619
-    },
-    {
-      "w": "tells",
-      "start": 20.666,
-      "end": 20.84
-    },
-    {
-      "w": "her",
-      "start": 20.886,
-      "end": 20.956
-    },
-    {
-      "w": "everything.",
-      "start": 21.002,
-      "end": 21.629
-    },
-    {
-      "w": "And",
-      "start": 22.256,
-      "end": 22.395
-    },
-    {
-      "w": "she",
-      "start": 22.43,
-      "end": 22.523
-    },
-    {
-      "w": "does",
-      "start": 22.558,
-      "end": 22.686
-    },
-    {
-      "w": "not",
-      "start": 22.732,
-      "end": 22.918
-    },
-    {
-      "w": "call",
-      "start": 22.964,
-      "end": 23.115
-    },
-    {
-      "w": "a",
-      "start": 23.162,
-      "end": 23.185
-    },
-    {
-      "w": "meeting.",
-      "start": 23.231,
-      "end": 23.742
-    },
-    {
-      "w": "The",
-      "start": 24.462,
-      "end": 24.59
-    },
-    {
-      "w": "text",
-      "start": 24.636,
-      "end": 24.857
-    },
-    {
-      "w": "says",
-      "start": 24.88,
-      "end": 25.182
-    },
-    {
-      "w": "she",
-      "start": 25.426,
-      "end": 25.553
-    },
-    {
-      "w": "made",
-      "start": 25.6,
-      "end": 25.762
-    },
-    {
-      "w": "haste.",
-      "start": 25.797,
-      "end": 26.412
-    },
-    {
-      "w": "Two",
-      "start": 26.865,
-      "end": 27.016
-    },
-    {
-      "w": "hundred",
-      "start": 27.062,
-      "end": 27.283
-    },
-    {
-      "w": "loaves,",
-      "start": 27.329,
-      "end": 27.724
-    },
-    {
-      "w": "two",
-      "start": 27.747,
-      "end": 27.863
-    },
-    {
-      "w": "bottles",
-      "start": 27.91,
-      "end": 28.188
-    },
-    {
-      "w": "of",
-      "start": 28.223,
-      "end": 28.27
-    },
-    {
-      "w": "wine,",
-      "start": 28.316,
-      "end": 28.757
-    },
-    {
-      "w": "five",
-      "start": 28.943,
-      "end": 29.164
-    },
-    {
-      "w": "dressed",
-      "start": 29.199,
-      "end": 29.442
-    },
-    {
-      "w": "sheep,",
-      "start": 29.466,
-      "end": 29.849
-    },
-    {
-      "w": "roasted",
-      "start": 29.953,
-      "end": 30.278
-    },
-    {
-      "w": "grain,",
-      "start": 30.325,
-      "end": 30.824
-    },
-    {
-      "w": "a",
-      "start": 31.068,
-      "end": 31.114
-    },
-    {
-      "w": "hundred",
-      "start": 31.172,
-      "end": 31.416
-    },
-    {
-      "w": "clusters",
-      "start": 31.451,
-      "end": 31.811
-    },
-    {
-      "w": "of",
-      "start": 31.857,
-      "end": 31.904
-    },
-    {
-      "w": "raisins,",
-      "start": 31.962,
-      "end": 32.565
-    },
-    {
-      "w": "two",
-      "start": 32.612,
-      "end": 32.74
-    },
-    {
-      "w": "hundred",
-      "start": 32.786,
-      "end": 33.03
-    },
-    {
-      "w": "cakes",
-      "start": 33.076,
-      "end": 33.343
-    },
-    {
-      "w": "of",
-      "start": 33.39,
-      "end": 33.448
-    },
-    {
-      "w": "figs.",
-      "start": 33.494,
-      "end": 34.063
-    },
-    {
-      "w": "She",
-      "start": 34.69,
-      "end": 34.806
-    },
-    {
-      "w": "loads",
-      "start": 34.864,
-      "end": 35.073
-    },
-    {
-      "w": "it",
-      "start": 35.096,
-      "end": 35.166
-    },
-    {
-      "w": "all",
-      "start": 35.189,
-      "end": 35.282
-    },
-    {
-      "w": "onto",
-      "start": 35.329,
-      "end": 35.48
-    },
-    {
-      "w": "donkeys",
-      "start": 35.526,
-      "end": 35.921
-    },
-    {
-      "w": "and",
-      "start": 35.967,
-      "end": 36.048
-    },
-    {
-      "w": "rides",
-      "start": 36.095,
-      "end": 36.327
-    },
-    {
-      "w": "out",
-      "start": 36.373,
-      "end": 36.513
-    },
-    {
-      "w": "to",
-      "start": 36.548,
-      "end": 36.606
-    },
-    {
-      "w": "intercept",
-      "start": 36.652,
-      "end": 37.047
-    },
-    {
-      "w": "an",
-      "start": 37.082,
-      "end": 37.151
-    },
-    {
-      "w": "armed",
-      "start": 37.198,
-      "end": 37.442
-    },
-    {
-      "w": "column,",
-      "start": 37.488,
-      "end": 37.964
-    },
-    {
-      "w": "without",
-      "start": 38.185,
-      "end": 38.486
-    },
-    {
-      "w": "telling",
-      "start": 38.51,
-      "end": 38.765
-    },
-    {
-      "w": "her",
-      "start": 38.812,
-      "end": 38.893
-    },
-    {
-      "w": "husband.",
-      "start": 38.94,
-      "end": 39.509
-    },
-    {
-      "w": "Then",
-      "start": 40.356,
-      "end": 40.519
-    },
-    {
-      "w": "she",
-      "start": 40.553,
-      "end": 40.635
-    },
-    {
-      "w": "gets",
-      "start": 40.681,
-      "end": 40.855
-    },
-    {
-      "w": "down",
-      "start": 40.902,
-      "end": 41.076
-    },
-    {
-      "w": "off",
-      "start": 41.111,
-      "end": 41.215
-    },
-    {
-      "w": "the",
-      "start": 41.262,
-      "end": 41.331
-    },
-    {
-      "w": "donkey,",
-      "start": 41.366,
-      "end": 41.889
-    },
-    {
-      "w": "falls",
-      "start": 42.283,
-      "end": 42.504
-    },
-    {
-      "w": "on",
-      "start": 42.55,
-      "end": 42.62
-    },
-    {
-      "w": "her",
-      "start": 42.655,
-      "end": 42.725
-    },
-    {
-      "w": "face,",
-      "start": 42.771,
-      "end": 43.328
-    },
-    {
-      "w": "and",
-      "start": 43.549,
-      "end": 43.711
-    },
-    {
-      "w": "talks.",
-      "start": 43.758,
-      "end": 44.303
-    },
-    {
-      "w": "She",
-      "start": 45.023,
-      "end": 45.139
-    },
-    {
-      "w": "takes",
-      "start": 45.186,
-      "end": 45.395
-    },
-    {
-      "w": "the",
-      "start": 45.43,
-      "end": 45.499
-    },
-    {
-      "w": "blame",
-      "start": 45.534,
-      "end": 45.743
-    },
-    {
-      "w": "on",
-      "start": 45.778,
-      "end": 45.836
-    },
-    {
-      "w": "herself,",
-      "start": 45.882,
-      "end": 46.486
-    },
-    {
-      "w": "tells",
-      "start": 46.823,
-      "end": 47.078
-    },
-    {
-      "w": "David",
-      "start": 47.125,
-      "end": 47.392
-    },
-    {
-      "w": "that",
-      "start": 47.427,
-      "end": 47.554
-    },
-    {
-      "w": "shedding",
-      "start": 47.601,
-      "end": 47.891
+      "end": 0.267
     },
     {
       "w": "this",
-      "start": 47.926,
-      "end": 48.053
+      "start": 0.302,
+      "end": 0.418
     },
     {
-      "w": "blood",
-      "start": 48.1,
-      "end": 48.332
-    },
-    {
-      "w": "would",
-      "start": 48.367,
-      "end": 48.495
-    },
-    {
-      "w": "be",
-      "start": 48.529,
-      "end": 48.599
-    },
-    {
-      "w": "a",
-      "start": 48.634,
-      "end": 48.669
-    },
-    {
-      "w": "grief",
-      "start": 48.715,
-      "end": 48.994
-    },
-    {
-      "w": "and",
-      "start": 49.064,
-      "end": 49.168
-    },
-    {
-      "w": "an",
-      "start": 49.214,
-      "end": 49.273
-    },
-    {
-      "w": "offence",
-      "start": 49.307,
-      "end": 49.609
-    },
-    {
-      "w": "of",
-      "start": 49.644,
-      "end": 49.702
-    },
-    {
-      "w": "heart",
-      "start": 49.749,
-      "end": 49.923
-    },
-    {
-      "w": "to",
-      "start": 49.958,
-      "end": 50.016
-    },
-    {
-      "w": "him",
-      "start": 50.062,
-      "end": 50.166
-    },
-    {
-      "w": "later,",
-      "start": 50.225,
-      "end": 50.654
-    },
-    {
-      "w": "and",
-      "start": 50.805,
-      "end": 50.944
-    },
-    {
-      "w": "asks",
-      "start": 50.991,
-      "end": 51.235
-    },
-    {
-      "w": "him",
-      "start": 51.269,
-      "end": 51.362
-    },
-    {
-      "w": "to",
-      "start": 51.409,
-      "end": 51.455
-    },
-    {
-      "w": "remember",
-      "start": 51.513,
-      "end": 51.862
-    },
-    {
-      "w": "her",
-      "start": 51.92,
-      "end": 52.024
-    },
-    {
-      "w": "when",
-      "start": 52.082,
-      "end": 52.221
-    },
-    {
-      "w": "God",
-      "start": 52.268,
-      "end": 52.453
+      "w": "one",
+      "start": 0.453,
+      "end": 0.546
     },
     {
       "w": "has",
-      "start": 52.488,
-      "end": 52.569
-    },
-    {
-      "w": "done",
-      "start": 52.604,
-      "end": 52.732
-    },
-    {
-      "w": "him",
-      "start": 52.755,
-      "end": 52.837
-    },
-    {
-      "w": "good.",
-      "start": 52.883,
-      "end": 53.278
-    },
-    {
-      "w": "And",
-      "start": 53.998,
-      "end": 54.137
-    },
-    {
-      "w": "David",
-      "start": 54.183,
-      "end": 54.427
-    },
-    {
-      "w": "says,",
-      "start": 54.474,
-      "end": 54.961
-    },
-    {
-      "w": "blessed",
-      "start": 55.356,
-      "end": 55.681
-    },
-    {
-      "w": "be",
-      "start": 55.727,
-      "end": 55.809
-    },
-    {
-      "w": "thy",
-      "start": 55.855,
-      "end": 55.983
-    },
-    {
-      "w": "advice,",
-      "start": 56.029,
-      "end": 56.598
-    },
-    {
-      "w": "and",
-      "start": 56.714,
-      "end": 56.865
-    },
-    {
-      "w": "blessed",
-      "start": 56.912,
-      "end": 57.225
-    },
-    {
-      "w": "be",
-      "start": 57.272,
-      "end": 57.364
-    },
-    {
-      "w": "thou,",
-      "start": 57.399,
-      "end": 57.829
-    },
-    {
-      "w": "which",
-      "start": 58.224,
-      "end": 58.398
-    },
-    {
-      "w": "hast",
-      "start": 58.433,
-      "end": 58.537
-    },
-    {
-      "w": "kept",
-      "start": 58.583,
-      "end": 58.758
-    },
-    {
-      "w": "me",
-      "start": 58.804,
-      "end": 58.885
-    },
-    {
-      "w": "this",
-      "start": 58.932,
-      "end": 59.083
-    },
-    {
-      "w": "day",
-      "start": 59.141,
-      "end": 59.303
-    },
-    {
-      "w": "from",
-      "start": 59.35,
-      "end": 59.489
-    },
-    {
-      "w": "coming",
-      "start": 59.547,
-      "end": 59.779
-    },
-    {
-      "w": "to",
-      "start": 59.826,
-      "end": 59.884
-    },
-    {
-      "w": "shed",
-      "start": 59.93,
-      "end": 60.081
-    },
-    {
-      "w": "blood.",
-      "start": 60.128,
-      "end": 60.557
-    },
-    {
-      "w": "She",
-      "start": 61.277,
-      "end": 61.393
-    },
-    {
-      "w": "talked",
-      "start": 61.44,
-      "end": 61.637
+      "start": 0.58,
+      "end": 0.685
     },
     {
       "w": "a",
-      "start": 61.66,
-      "end": 61.683
+      "start": 0.731,
+      "end": 0.755
     },
     {
-      "w": "future",
-      "start": 61.73,
-      "end": 61.997
+      "w": "man",
+      "start": 0.813,
+      "end": 0.987
     },
     {
-      "w": "king",
-      "start": 62.043,
-      "end": 62.217
+      "w": "so",
+      "start": 1.057,
+      "end": 1.219
     },
     {
-      "w": "off",
-      "start": 62.264,
-      "end": 62.38
+      "w": "awful",
+      "start": 1.324,
+      "end": 1.683
+    },
+    {
+      "w": "that",
+      "start": 1.73,
+      "end": 1.858
+    },
+    {
+      "w": "Scripture",
+      "start": 1.904,
+      "end": 2.241
+    },
+    {
+      "w": "literally",
+      "start": 2.299,
+      "end": 2.624
+    },
+    {
+      "w": "says",
+      "start": 2.682,
+      "end": 2.856
+    },
+    {
+      "w": "his",
+      "start": 2.891,
+      "end": 3.007
+    },
+    {
+      "w": "name",
+      "start": 3.088,
+      "end": 3.274
+    },
+    {
+      "w": "means",
+      "start": 3.309,
+      "end": 3.483
+    },
+    {
+      "w": "fool.",
+      "start": 3.541,
+      "end": 3.982
+    },
+    {
+      "w": "Nabal.",
+      "start": 4.307,
+      "end": 4.783
+    },
+    {
+      "w": "Three",
+      "start": 4.818,
+      "end": 5.016
+    },
+    {
+      "w": "thousand",
+      "start": 5.039,
+      "end": 5.294
+    },
+    {
+      "w": "sheep,",
+      "start": 5.329,
+      "end": 5.584
+    },
+    {
+      "w": "a",
+      "start": 5.608,
+      "end": 5.631
+    },
+    {
+      "w": "thousand",
+      "start": 5.7,
+      "end": 6.002
+    },
+    {
+      "w": "goats,",
+      "start": 6.049,
+      "end": 6.374
+    },
+    {
+      "w": "shearing",
+      "start": 6.432,
+      "end": 6.711
+    },
+    {
+      "w": "season,",
+      "start": 6.757,
+      "end": 7.07
+    },
+    {
+      "w": "rolling",
+      "start": 7.105,
+      "end": 7.372
+    },
+    {
+      "w": "in",
+      "start": 7.419,
+      "end": 7.477
+    },
+    {
+      "w": "it.",
+      "start": 7.535,
+      "end": 7.79
+    },
+    {
+      "w": "And",
+      "start": 8.034,
+      "end": 8.15
+    },
+    {
+      "w": "David,",
+      "start": 8.185,
+      "end": 8.44
+    },
+    {
+      "w": "before",
+      "start": 8.464,
+      "end": 8.673
+    },
+    {
+      "w": "he's",
+      "start": 8.707,
+      "end": 8.835
+    },
+    {
+      "w": "king,",
+      "start": 8.882,
+      "end": 9.207
+    },
+    {
+      "w": "has",
+      "start": 9.23,
+      "end": 9.334
+    },
+    {
+      "w": "been",
+      "start": 9.369,
+      "end": 9.509
+    },
+    {
+      "w": "out",
+      "start": 9.532,
+      "end": 9.625
+    },
+    {
+      "w": "in",
+      "start": 9.659,
+      "end": 9.706
     },
     {
       "w": "the",
-      "start": 62.426,
-      "end": 62.496
+      "start": 9.729,
+      "end": 9.799
     },
     {
-      "w": "ledge.",
-      "start": 62.542,
-      "end": 63.158
+      "w": "wilderness",
+      "start": 9.834,
+      "end": 10.263
+    },
+    {
+      "w": "guarding",
+      "start": 10.344,
+      "end": 10.6
+    },
+    {
+      "w": "this",
+      "start": 10.635,
+      "end": 10.762
+    },
+    {
+      "w": "man's",
+      "start": 10.82,
+      "end": 11.006
+    },
+    {
+      "w": "shepherds.",
+      "start": 11.029,
+      "end": 11.668
+    },
+    {
+      "w": "For",
+      "start": 11.726,
+      "end": 11.854
+    },
+    {
+      "w": "free.",
+      "start": 11.9,
+      "end": 12.248
+    },
+    {
+      "w": "The",
+      "start": 12.457,
+      "end": 12.55
+    },
+    {
+      "w": "servants",
+      "start": 12.597,
+      "end": 12.898
+    },
+    {
+      "w": "say",
+      "start": 12.933,
+      "end": 13.049
+    },
+    {
+      "w": "it",
+      "start": 13.084,
+      "end": 13.131
+    },
+    {
+      "w": "themselves:",
+      "start": 13.165,
+      "end": 13.769
+    },
+    {
+      "w": "they",
+      "start": 13.804,
+      "end": 13.932
+    },
+    {
+      "w": "were",
+      "start": 13.967,
+      "end": 14.094
+    },
+    {
+      "w": "a",
+      "start": 14.129,
+      "end": 14.152
+    },
+    {
+      "w": "wall",
+      "start": 14.187,
+      "end": 14.408
+    },
+    {
+      "w": "unto",
+      "start": 14.454,
+      "end": 14.605
+    },
+    {
+      "w": "us,",
+      "start": 14.71,
+      "end": 14.895
+    },
+    {
+      "w": "night",
+      "start": 14.93,
+      "end": 15.104
+    },
+    {
+      "w": "and",
+      "start": 15.128,
+      "end": 15.197
+    },
+    {
+      "w": "day.",
+      "start": 15.232,
+      "end": 15.534
+    },
+    {
+      "w": "So",
+      "start": 15.662,
+      "end": 15.929
+    },
+    {
+      "w": "David",
+      "start": 16.033,
+      "end": 16.277
+    },
+    {
+      "w": "sends",
+      "start": 16.323,
+      "end": 16.556
+    },
+    {
+      "w": "ten",
+      "start": 16.602,
+      "end": 16.765
+    },
+    {
+      "w": "men",
+      "start": 16.811,
+      "end": 16.939
+    },
+    {
+      "w": "to",
+      "start": 16.974,
+      "end": 17.032
+    },
+    {
+      "w": "ask,",
+      "start": 17.09,
+      "end": 17.357
+    },
+    {
+      "w": "politely,",
+      "start": 17.392,
+      "end": 17.751
+    },
+    {
+      "w": "for",
+      "start": 17.786,
+      "end": 17.891
+    },
+    {
+      "w": "provisions.",
+      "start": 17.949,
+      "end": 18.553
+    },
+    {
+      "w": "And",
+      "start": 18.657,
+      "end": 18.785
+    },
+    {
+      "w": "Nabal",
+      "start": 18.82,
+      "end": 19.005
+    },
+    {
+      "w": "goes,",
+      "start": 19.052,
+      "end": 19.493
+    },
+    {
+      "w": "\"Who",
+      "start": 19.644,
+      "end": 19.864
+    },
+    {
+      "w": "is",
+      "start": 19.899,
+      "end": 19.969
+    },
+    {
+      "w": "David?",
+      "start": 20.004,
+      "end": 20.457
+    },
+    {
+      "w": "Who",
+      "start": 20.561,
+      "end": 20.677
+    },
+    {
+      "w": "is",
+      "start": 20.724,
+      "end": 20.793
+    },
+    {
+      "w": "the",
+      "start": 20.828,
+      "end": 20.898
+    },
+    {
+      "w": "son",
+      "start": 20.933,
+      "end": 21.06
+    },
+    {
+      "w": "of",
+      "start": 21.107,
+      "end": 21.153
+    },
+    {
+      "w": "Jesse?\"",
+      "start": 21.188,
+      "end": 21.746
+    },
+    {
+      "w": "Then,",
+      "start": 22.071,
+      "end": 22.384
+    },
+    {
+      "w": "\"Shall",
+      "start": 22.709,
+      "end": 22.93
+    },
+    {
+      "w": "I",
+      "start": 22.965,
+      "end": 22.988
+    },
+    {
+      "w": "take",
+      "start": 23.023,
+      "end": 23.174
+    },
+    {
+      "w": "my",
+      "start": 23.209,
+      "end": 23.278
+    },
+    {
+      "w": "bread",
+      "start": 23.336,
+      "end": 23.58
+    },
+    {
+      "w": "and",
+      "start": 23.638,
+      "end": 23.731
+    },
+    {
+      "w": "my",
+      "start": 23.777,
+      "end": 23.847
+    },
+    {
+      "w": "water",
+      "start": 23.894,
+      "end": 24.126
+    },
+    {
+      "w": "and",
+      "start": 24.161,
+      "end": 24.23
+    },
+    {
+      "w": "my",
+      "start": 24.265,
+      "end": 24.335
+    },
+    {
+      "w": "meat,",
+      "start": 24.381,
+      "end": 24.671
+    },
+    {
+      "w": "and",
+      "start": 24.706,
+      "end": 24.846
+    },
+    {
+      "w": "give",
+      "start": 24.892,
+      "end": 25.008
+    },
+    {
+      "w": "it",
+      "start": 25.031,
+      "end": 25.089
+    },
+    {
+      "w": "to",
+      "start": 25.124,
+      "end": 25.171
+    },
+    {
+      "w": "men",
+      "start": 25.205,
+      "end": 25.31
+    },
+    {
+      "w": "I",
+      "start": 25.345,
+      "end": 25.368
+    },
+    {
+      "w": "know",
+      "start": 25.414,
+      "end": 25.531
+    },
+    {
+      "w": "not",
+      "start": 25.577,
+      "end": 25.74
+    },
+    {
+      "w": "whence",
+      "start": 25.774,
+      "end": 25.972
+    },
+    {
+      "w": "they",
+      "start": 25.995,
+      "end": 26.111
+    },
+    {
+      "w": "be?\"",
+      "start": 26.146,
+      "end": 26.471
+    },
+    {
+      "w": "Sir.",
+      "start": 26.68,
+      "end": 26.935
+    },
+    {
+      "w": "You",
+      "start": 26.97,
+      "end": 27.051
+    },
+    {
+      "w": "know",
+      "start": 27.086,
+      "end": 27.191
+    },
+    {
+      "w": "exactly",
+      "start": 27.226,
+      "end": 27.551
+    },
+    {
+      "w": "who",
+      "start": 27.586,
+      "end": 27.678
+    },
+    {
+      "w": "he",
+      "start": 27.713,
+      "end": 27.76
+    },
+    {
+      "w": "is.",
+      "start": 27.818,
+      "end": 28.096
+    },
+    {
+      "w": "David's",
+      "start": 28.305,
+      "end": 28.596
+    },
+    {
+      "w": "reply",
+      "start": 28.619,
+      "end": 28.828
+    },
+    {
+      "w": "is",
+      "start": 28.874,
+      "end": 28.944
+    },
+    {
+      "w": "two",
+      "start": 28.979,
+      "end": 29.095
+    },
+    {
+      "w": "words.",
+      "start": 29.13,
+      "end": 29.594
+    },
+    {
+      "w": "\"Gird",
+      "start": 29.745,
+      "end": 29.966
+    },
+    {
+      "w": "ye",
+      "start": 29.989,
+      "end": 30.058
+    },
+    {
+      "w": "on",
+      "start": 30.117,
+      "end": 30.198
+    },
+    {
+      "w": "every",
+      "start": 30.233,
+      "end": 30.407
+    },
+    {
+      "w": "man",
+      "start": 30.442,
+      "end": 30.569
+    },
+    {
+      "w": "his",
+      "start": 30.627,
+      "end": 30.732
+    },
+    {
+      "w": "sword.\"",
+      "start": 30.767,
+      "end": 31.138
+    },
+    {
+      "w": "Four",
+      "start": 31.463,
+      "end": 31.614
+    },
+    {
+      "w": "hundred",
+      "start": 31.649,
+      "end": 31.858
+    },
+    {
+      "w": "men.",
+      "start": 31.893,
+      "end": 32.171
+    },
+    {
+      "w": "He",
+      "start": 32.23,
+      "end": 32.334
+    },
+    {
+      "w": "is",
+      "start": 32.38,
+      "end": 32.45
+    },
+    {
+      "w": "riding",
+      "start": 32.508,
+      "end": 32.752
+    },
+    {
+      "w": "out",
+      "start": 32.787,
+      "end": 32.892
+    },
+    {
+      "w": "to",
+      "start": 32.926,
+      "end": 32.984
+    },
+    {
+      "w": "erase",
+      "start": 33.031,
+      "end": 33.263
+    },
+    {
+      "w": "an",
+      "start": 33.298,
+      "end": 33.344
+    },
+    {
+      "w": "entire",
+      "start": 33.391,
+      "end": 33.716
+    },
+    {
+      "w": "household",
+      "start": 33.751,
+      "end": 34.111
+    },
+    {
+      "w": "over",
+      "start": 34.145,
+      "end": 34.273
+    },
+    {
+      "w": "a",
+      "start": 34.308,
+      "end": 34.331
+    },
+    {
+      "w": "dinner",
+      "start": 34.366,
+      "end": 34.552
+    },
+    {
+      "w": "request.",
+      "start": 34.587,
+      "end": 35.144
+    },
+    {
+      "w": "Now.",
+      "start": 35.353,
+      "end": 35.701
+    },
+    {
+      "w": "A",
+      "start": 35.806,
+      "end": 35.875
+    },
+    {
+      "w": "servant",
+      "start": 35.933,
+      "end": 36.189
+    },
+    {
+      "w": "runs",
+      "start": 36.224,
+      "end": 36.363
+    },
+    {
+      "w": "to",
+      "start": 36.398,
+      "end": 36.467
+    },
+    {
+      "w": "Nabal's",
+      "start": 36.514,
+      "end": 36.792
+    },
+    {
+      "w": "wife,",
+      "start": 36.827,
+      "end": 37.071
+    },
+    {
+      "w": "because",
+      "start": 37.094,
+      "end": 37.327
+    },
+    {
+      "w": "the",
+      "start": 37.35,
+      "end": 37.419
+    },
+    {
+      "w": "staff",
+      "start": 37.454,
+      "end": 37.675
+    },
+    {
+      "w": "know",
+      "start": 37.71,
+      "end": 37.826
+    },
+    {
+      "w": "you",
+      "start": 37.872,
+      "end": 37.942
+    },
+    {
+      "w": "cannot",
+      "start": 37.977,
+      "end": 38.221
+    },
+    {
+      "w": "talk",
+      "start": 38.255,
+      "end": 38.418
+    },
+    {
+      "w": "to",
+      "start": 38.453,
+      "end": 38.499
+    },
+    {
+      "w": "this",
+      "start": 38.546,
+      "end": 38.65
+    },
+    {
+      "w": "man.",
+      "start": 38.708,
+      "end": 39.022
+    },
+    {
+      "w": "Enter",
+      "start": 39.207,
+      "end": 39.393
+    },
+    {
+      "w": "Abigail.",
+      "start": 39.451,
+      "end": 39.939
+    },
+    {
+      "w": "And",
+      "start": 40.264,
+      "end": 40.368
+    },
+    {
+      "w": "she",
+      "start": 40.403,
+      "end": 40.484
+    },
+    {
+      "w": "does",
+      "start": 40.519,
+      "end": 40.635
+    },
+    {
+      "w": "not",
+      "start": 40.67,
+      "end": 40.775
+    },
+    {
+      "w": "panic,",
+      "start": 40.81,
+      "end": 41.181
+    },
+    {
+      "w": "she",
+      "start": 41.251,
+      "end": 41.355
+    },
+    {
+      "w": "does",
+      "start": 41.413,
+      "end": 41.576
+    },
+    {
+      "w": "inventory.",
+      "start": 41.611,
+      "end": 42.238
+    },
+    {
+      "w": "Two",
+      "start": 42.365,
+      "end": 42.505
+    },
+    {
+      "w": "hundred",
+      "start": 42.563,
+      "end": 42.772
+    },
+    {
+      "w": "loaves.",
+      "start": 42.806,
+      "end": 43.294
+    },
+    {
+      "w": "Two",
+      "start": 43.375,
+      "end": 43.537
+    },
+    {
+      "w": "skins",
+      "start": 43.584,
+      "end": 43.804
+    },
+    {
+      "w": "of",
+      "start": 43.839,
+      "end": 43.886
+    },
+    {
+      "w": "wine.",
+      "start": 43.944,
+      "end": 44.292
+    },
+    {
+      "w": "Five",
+      "start": 44.397,
+      "end": 44.652
+    },
+    {
+      "w": "dressed",
+      "start": 44.687,
+      "end": 44.931
+    },
+    {
+      "w": "sheep.",
+      "start": 44.977,
+      "end": 45.267
+    },
+    {
+      "w": "Roasted",
+      "start": 45.418,
+      "end": 45.709
+    },
+    {
+      "w": "grain.",
+      "start": 45.743,
+      "end": 46.068
+    },
+    {
+      "w": "A",
+      "start": 46.092,
+      "end": 46.161
+    },
+    {
+      "w": "hundred",
+      "start": 46.243,
+      "end": 46.475
+    },
+    {
+      "w": "raisin",
+      "start": 46.51,
+      "end": 46.742
+    },
+    {
+      "w": "cakes.",
+      "start": 46.8,
+      "end": 47.113
+    },
+    {
+      "w": "Two",
+      "start": 47.137,
+      "end": 47.287
+    },
+    {
+      "w": "hundred",
+      "start": 47.334,
+      "end": 47.543
+    },
+    {
+      "w": "fig",
+      "start": 47.578,
+      "end": 47.717
+    },
+    {
+      "w": "cakes.",
+      "start": 47.752,
+      "end": 48.17
+    },
+    {
+      "w": "Loaded",
+      "start": 48.228,
+      "end": 48.472
+    },
+    {
+      "w": "on",
+      "start": 48.507,
+      "end": 48.576
+    },
+    {
+      "w": "donkeys,",
+      "start": 48.611,
+      "end": 48.959
+    },
+    {
+      "w": "sent",
+      "start": 48.983,
+      "end": 49.122
+    },
+    {
+      "w": "ahead.",
+      "start": 49.157,
+      "end": 49.517
+    },
+    {
+      "w": "And",
+      "start": 49.702,
+      "end": 49.818
+    },
+    {
+      "w": "she",
+      "start": 49.853,
+      "end": 49.935
+    },
+    {
+      "w": "tells",
+      "start": 49.969,
+      "end": 50.144
+    },
+    {
+      "w": "her",
+      "start": 50.178,
+      "end": 50.248
+    },
+    {
+      "w": "husband",
+      "start": 50.283,
+      "end": 50.55
+    },
+    {
+      "w": "nothing.",
+      "start": 50.596,
+      "end": 51.003
+    },
+    {
+      "w": "She",
+      "start": 51.13,
+      "end": 51.235
+    },
+    {
+      "w": "rides",
+      "start": 51.293,
+      "end": 51.49
+    },
+    {
+      "w": "straight",
+      "start": 51.525,
+      "end": 51.769
+    },
+    {
+      "w": "at",
+      "start": 51.792,
+      "end": 51.85
+    },
+    {
+      "w": "four",
+      "start": 51.897,
+      "end": 52.048
+    },
+    {
+      "w": "hundred",
+      "start": 52.082,
+      "end": 52.291
+    },
+    {
+      "w": "armed",
+      "start": 52.315,
+      "end": 52.5
+    },
+    {
+      "w": "men,",
+      "start": 52.535,
+      "end": 52.756
+    },
+    {
+      "w": "gets",
+      "start": 52.791,
+      "end": 52.965
+    },
+    {
+      "w": "off",
+      "start": 53,
+      "end": 53.116
+    },
+    {
+      "w": "the",
+      "start": 53.15,
+      "end": 53.22
+    },
+    {
+      "w": "donkey,",
+      "start": 53.255,
+      "end": 53.65
+    },
+    {
+      "w": "falls",
+      "start": 53.708,
+      "end": 53.94
+    },
+    {
+      "w": "on",
+      "start": 53.975,
+      "end": 54.044
+    },
+    {
+      "w": "her",
+      "start": 54.079,
+      "end": 54.149
+    },
+    {
+      "w": "face,",
+      "start": 54.184,
+      "end": 54.509
+    },
+    {
+      "w": "and",
+      "start": 54.532,
+      "end": 54.648
+    },
+    {
+      "w": "takes",
+      "start": 54.694,
+      "end": 54.88
+    },
+    {
+      "w": "the",
+      "start": 54.915,
+      "end": 54.985
+    },
+    {
+      "w": "blame",
+      "start": 55.02,
+      "end": 55.182
+    },
+    {
+      "w": "herself.",
+      "start": 55.205,
+      "end": 55.705
+    },
+    {
+      "w": "Then",
+      "start": 55.89,
+      "end": 56.018
+    },
+    {
+      "w": "she",
+      "start": 56.053,
+      "end": 56.134
+    },
+    {
+      "w": "tells",
+      "start": 56.181,
+      "end": 56.366
+    },
+    {
+      "w": "David:",
+      "start": 56.413,
+      "end": 56.784
+    },
+    {
+      "w": "do",
+      "start": 56.935,
+      "end": 57.016
+    },
+    {
+      "w": "not",
+      "start": 57.075,
+      "end": 57.179
+    },
+    {
+      "w": "let",
+      "start": 57.214,
+      "end": 57.33
+    },
+    {
+      "w": "this",
+      "start": 57.365,
+      "end": 57.481
+    },
+    {
+      "w": "blood",
+      "start": 57.539,
+      "end": 57.748
+    },
+    {
+      "w": "be",
+      "start": 57.783,
+      "end": 57.852
+    },
+    {
+      "w": "on",
+      "start": 57.887,
+      "end": 57.957
+    },
+    {
+      "w": "you,",
+      "start": 58.003,
+      "end": 58.143
+    },
+    {
+      "w": "because",
+      "start": 58.166,
+      "end": 58.398
+    },
+    {
+      "w": "God",
+      "start": 58.433,
+      "end": 58.584
+    },
+    {
+      "w": "is",
+      "start": 58.619,
+      "end": 58.688
+    },
+    {
+      "w": "going",
+      "start": 58.723,
+      "end": 58.874
+    },
+    {
+      "w": "to",
+      "start": 58.897,
+      "end": 58.944
+    },
+    {
+      "w": "build",
+      "start": 58.979,
+      "end": 59.141
+    },
+    {
+      "w": "you",
+      "start": 59.176,
+      "end": 59.246
+    },
+    {
+      "w": "a",
+      "start": 59.292,
+      "end": 59.315
+    },
+    {
+      "w": "sure",
+      "start": 59.35,
+      "end": 59.524
+    },
+    {
+      "w": "house,",
+      "start": 59.559,
+      "end": 59.838
+    },
+    {
+      "w": "and",
+      "start": 59.873,
+      "end": 59.989
+    },
+    {
+      "w": "you",
+      "start": 60.035,
+      "end": 60.105
+    },
+    {
+      "w": "do",
+      "start": 60.14,
+      "end": 60.198
+    },
+    {
+      "w": "not",
+      "start": 60.256,
+      "end": 60.372
+    },
+    {
+      "w": "want",
+      "start": 60.407,
+      "end": 60.534
+    },
+    {
+      "w": "this",
+      "start": 60.558,
+      "end": 60.674
+    },
+    {
+      "w": "on",
+      "start": 60.708,
+      "end": 60.778
+    },
+    {
+      "w": "the",
+      "start": 60.813,
+      "end": 60.883
+    },
+    {
+      "w": "record.",
+      "start": 60.917,
+      "end": 61.289
+    },
+    {
+      "w": "And",
+      "start": 61.44,
+      "end": 61.556
+    },
+    {
+      "w": "David",
+      "start": 61.591,
+      "end": 61.8
+    },
+    {
+      "w": "says,",
+      "start": 61.835,
+      "end": 62.218
+    },
+    {
+      "w": "\"Blessed",
+      "start": 62.264,
+      "end": 62.659
+    },
+    {
+      "w": "be",
+      "start": 62.694,
+      "end": 62.775
+    },
+    {
+      "w": "thy",
+      "start": 62.822,
+      "end": 62.95
+    },
+    {
+      "w": "advice,",
+      "start": 62.984,
+      "end": 63.368
+    },
+    {
+      "w": "and",
+      "start": 63.391,
+      "end": 63.495
+    },
+    {
+      "w": "blessed",
+      "start": 63.53,
+      "end": 63.832
+    },
+    {
+      "w": "be",
+      "start": 63.867,
+      "end": 63.96
+    },
+    {
+      "w": "thou,",
+      "start": 63.994,
+      "end": 64.331
+    },
+    {
+      "w": "which",
+      "start": 64.366,
+      "end": 64.54
+    },
+    {
+      "w": "hast",
+      "start": 64.575,
+      "end": 64.691
+    },
+    {
+      "w": "kept",
+      "start": 64.726,
+      "end": 64.877
+    },
+    {
+      "w": "me",
+      "start": 64.912,
+      "end": 64.97
+    },
+    {
+      "w": "this",
+      "start": 65.005,
+      "end": 65.132
+    },
+    {
+      "w": "day",
+      "start": 65.167,
+      "end": 65.295
+    },
+    {
+      "w": "from",
+      "start": 65.341,
+      "end": 65.469
+    },
+    {
+      "w": "coming",
+      "start": 65.527,
+      "end": 65.736
+    },
+    {
+      "w": "to",
+      "start": 65.759,
+      "end": 65.806
+    },
+    {
+      "w": "shed",
+      "start": 65.84,
+      "end": 65.991
+    },
+    {
+      "w": "blood.\"",
+      "start": 66.026,
+      "end": 66.514
+    },
+    {
+      "w": "She",
+      "start": 66.792,
+      "end": 66.897
+    },
+    {
+      "w": "talked",
+      "start": 66.955,
+      "end": 67.176
+    },
+    {
+      "w": "a",
+      "start": 67.21,
+      "end": 67.234
+    },
+    {
+      "w": "future",
+      "start": 67.28,
+      "end": 67.524
+    },
+    {
+      "w": "king",
+      "start": 67.559,
+      "end": 67.733
+    },
+    {
+      "w": "out",
+      "start": 67.768,
+      "end": 67.861
+    },
+    {
+      "w": "of",
+      "start": 67.884,
+      "end": 67.93
+    },
+    {
+      "w": "a",
+      "start": 67.965,
+      "end": 67.988
+    },
+    {
+      "w": "massacre.",
+      "start": 68.035,
+      "end": 68.534
+    },
+    {
+      "w": "With",
+      "start": 68.592,
+      "end": 68.743
+    },
+    {
+      "w": "groceries",
+      "start": 68.789,
+      "end": 69.196
+    },
+    {
+      "w": "and",
+      "start": 69.231,
+      "end": 69.312
+    },
+    {
+      "w": "a",
+      "start": 69.347,
+      "end": 69.37
+    },
+    {
+      "w": "speech.",
+      "start": 69.405,
+      "end": 70.078
     }
   ],
-  "renderedAt": 1785313157616
+  "renderedAt": 1785321759389
 }

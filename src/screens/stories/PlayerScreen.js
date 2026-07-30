@@ -8,7 +8,10 @@ import GIcon from '../../components/GIcon';
 import { AudioService, StoryService } from '../../services';
 import { colors, fonts, radius } from '../../theme';
 
-const TRACK = 320;
+// The scrubber used a hardcoded 320pt inside a container of screenWidth-52,
+// so on any modern iPhone it sat left-aligned with dead space on the right.
+// Measured at layout instead, so it fills the column like everything else.
+const TRACK_FALLBACK = 320;
 const fmt = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
 const SPEEDS = [1, 1.25, 1.5, 0.75];
 
@@ -100,20 +103,28 @@ function TranscriptSheet({ visible, onClose, tr, position, onSeek }) {
 }
 
 export default function PlayerScreen({ route, navigation }) {
-  const { id } = route.params || {};
+  const { id, autoplay = false } = route.params || {};
   const [story, setStory] = useState(null);
   const [st, setSt] = useState(AudioService.getState());
   const [showTranscript, setShowTranscript] = useState(false);
   const [savedThis, setSavedThis] = useState(false);
   const [tr, setTr] = useState(null);
+  const [trackW, setTrackW] = useState(TRACK_FALLBACK);
 
   useEffect(() => {
     let alive = true;
     StoryService.getStory(id).then((s) => { if (alive) setStory(s); });
     StoryService.isSaved(id).then((v) => { if (alive) setSavedThis(v); });
+    // `autoplay` is how Home's listen card behaves like a play button: we open
+    // the player immediately rather than making her wait on the load, then start
+    // as soon as the track is ready.
     const current = AudioService.getState();
     if (current.storyId !== id) {
-      AudioService.loadStory(id).catch(() => {});
+      const load = AudioService.loadStory(id);
+      if (autoplay) load.then(() => { if (alive) AudioService.play().catch(() => {}); }).catch(() => {});
+      else load.catch(() => {});
+    } else if (autoplay && !current.playing) {
+      AudioService.play().catch(() => {});
     }
     const unsub = AudioService.subscribe(setSt);
     return () => {
@@ -121,7 +132,7 @@ export default function PlayerScreen({ route, navigation }) {
       unsub();
       AudioService.pause();
     };
-  }, [id]);
+  }, [id, autoplay]);
 
   const part = st.part || 1;
   useEffect(() => {
@@ -146,8 +157,12 @@ export default function PlayerScreen({ route, navigation }) {
     AudioService.setSpeed(next);
   };
   const scrub = (e) => {
+    // Without a duration there is no position to scrub to, and the old maths
+    // resolved to 0, so a tap anywhere on the track threw playback back to the
+    // start. Leave it alone until we know how long the track is.
+    if (!st.duration) return;
     const x = e.nativeEvent.locationX;
-    AudioService.seek(Math.max(0, Math.min(1, x / TRACK)) * st.duration);
+    AudioService.seek(Math.max(0, Math.min(1, x / trackW)) * st.duration);
     Haptics.selectionAsync();
   };
 
@@ -211,16 +226,26 @@ export default function PlayerScreen({ route, navigation }) {
 
       {!done && (
         <View style={styles.waveWrap}>
-          <Waveform width={TRACK} color={colors.gold} height={34} bars={30} animate={st.playing} />
+          <Waveform width={trackW} color={colors.gold} height={34} fill animate={st.playing} />
         </View>
       )}
 
-      <Pressable onPress={scrub} style={styles.trackWrap}>
-        <View style={styles.track}><View style={[styles.fill, { width: progress * TRACK }]} /><View style={[styles.knob, { left: progress * TRACK - 8 }]} /></View>
+      <Pressable
+        onPress={scrub}
+        style={styles.trackWrap}
+        onLayout={(e) => setTrackW(e.nativeEvent.layout.width)}
+      >
+        <View style={styles.track}>
+          <View style={[styles.fill, { width: progress * trackW }]} />
+          <View style={[styles.knob, { left: Math.min(trackW - 16, Math.max(0, progress * trackW - 8)) }]} />
+        </View>
       </Pressable>
       <View style={styles.times}>
         <Text style={styles.time}>{fmt(st.position)}</Text>
-        <Text style={styles.time}>-{fmt(remaining)}</Text>
+        {/* Only claim a remaining time when the duration is real. A track whose
+            length we genuinely do not know shows an honest placeholder instead
+            of counting down from -0:00. */}
+        <Text style={styles.time}>{st.duration > 0 ? `-${fmt(remaining)}` : '--:--'}</Text>
       </View>
       {endsAt && !done ? <Text style={styles.endsAt}>Ends at {endsAt}</Text> : null}
 
@@ -268,7 +293,7 @@ const styles = StyleSheet.create({
   retry: { marginTop: 14, minHeight: 44, justifyContent: 'center', paddingHorizontal: 22, borderRadius: radius.pill, backgroundColor: 'rgba(230,207,148,0.18)' },
   retryText: { fontFamily: fonts.sansSemi, fontSize: 16, color: colors.gold },
   blessing: { fontFamily: fonts.serifItalic, fontSize: 18, color: colors.gold, marginTop: 16, textAlign: 'center', paddingHorizontal: 20 },
-  waveWrap: { alignItems: 'center', marginBottom: 14 },
+  waveWrap: { alignItems: 'stretch', marginBottom: 14 },
   trackWrap: { paddingVertical: 10 },
   track: { height: 5, borderRadius: 5, backgroundColor: 'rgba(255,255,255,0.18)', justifyContent: 'center' },
   fill: { position: 'absolute', height: 5, borderRadius: 5, backgroundColor: colors.gold },

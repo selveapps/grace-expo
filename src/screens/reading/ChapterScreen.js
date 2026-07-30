@@ -8,6 +8,8 @@ import { ReadingService } from '../../services/ReadingService';
 import { useProfile } from '../../state/profile';
 import { colors, fonts, radius } from '../../theme';
 
+const FONT_LABEL = { 0.9: 'S', 1: 'M', 1.15: 'L', 1.3: 'XL' };
+
 let Clipboard = null;
 try { Clipboard = require('expo-clipboard'); } catch { Clipboard = null; }
 
@@ -46,7 +48,7 @@ function ActionSheet({ verse, refStr, saved, highlighted, onClose, onAction }) {
 export default function ChapterScreen({ route, navigation }) {
   const book = route.params?.book || 'Psalms';
   const chapter = route.params?.chapter || 23;
-  const { saveVerse, removeVerse, isSaved, addReflection, profile } = useProfile();
+  const { saveVerse, removeVerse, isSaved, addReflection, profile, setProfile } = useProfile();
 
   // Reader theme + font size from preferences
   const theme = profile.readingTheme || 'sepia';
@@ -55,7 +57,24 @@ export default function ChapterScreen({ route, navigation }) {
     : theme === 'night'
     ? { bg: '#241B12', line: '#3A2C1F', ink: '#F0E7D6', sub: '#9A8C76', bar: '#B9AC9A' }
     : { bg: colors.sepia, line: colors.sepiaLine, ink: colors.ink, sub: colors.textFaint, bar: '#8A7C68' };
-  const fs = 21 * (profile.fontScale || 1);
+  const fontScale = profile.fontScale || 1;
+  const fs = 21 * fontScale;
+
+  const cycleTheme = () => {
+    Haptics.selectionAsync();
+    const order = ['light', 'sepia', 'night'];
+    setProfile((p) => ({ ...p, readingTheme: order[(order.indexOf(theme) + 1) % order.length] }));
+  };
+  const cycleFont = () => {
+    Haptics.selectionAsync();
+    const order = [0.9, 1, 1.15, 1.3];
+    const i = order.indexOf(fontScale);
+    setProfile((p) => ({ ...p, fontScale: order[(i < 0 ? 1 : i + 1) % order.length] }));
+  };
+  const listenFromTop = () => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Soft);
+    if (verses?.length) openSheet(verses[0]);
+  };
 
   const [verses, setVerses] = useState(null);
   const [online, setOnline] = useState(true);
@@ -123,10 +142,29 @@ export default function ChapterScreen({ route, navigation }) {
           <Text style={[styles.barTitle, { color: THEME.ink }]}>{book} {chapter}</Text>
           <Text style={[styles.barSub, { color: THEME.sub }]}>KJV{online ? '' : ' · offline'}</Text>
         </View>
-        <View style={{ flexDirection: 'row', gap: 16 }}>
-          <Text style={[styles.barIcon, { color: THEME.bar }]}>Aa</Text>
-          <GIcon name={theme === 'night' ? 'sun' : 'moon'} size={20} color={THEME.bar} />
-          <GIcon name="play" size={20} color={colors.brass} filled />
+        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
+          <Pressable
+            onPress={cycleFont}
+            hitSlop={10}
+            style={styles.barBtn}
+            accessibilityRole="button"
+            accessibilityLabel={`Text size ${FONT_LABEL[fontScale] ?? 'medium'}. Tap to change.`}
+          >
+            <Text style={[styles.barIcon, { color: THEME.bar }]}>Aa</Text>
+            <Text style={[styles.barBtnTag, { color: THEME.sub }]}>{FONT_LABEL[fontScale] ?? 'M'}</Text>
+          </Pressable>
+          <Pressable
+            onPress={cycleTheme}
+            hitSlop={10}
+            style={styles.barBtn}
+            accessibilityRole="button"
+            accessibilityLabel={`Reading theme ${theme}. Tap to change.`}
+          >
+            <GIcon name={theme === 'night' ? 'sun' : 'moon'} size={20} color={THEME.bar} />
+          </Pressable>
+          <Pressable onPress={listenFromTop} hitSlop={10} style={styles.barBtn} accessibilityRole="button" accessibilityLabel="Listen to this chapter">
+            <GIcon name="play" size={20} color={colors.brass} filled />
+          </Pressable>
         </View>
       </View>
 
@@ -189,6 +227,8 @@ const styles = StyleSheet.create({
   vnum: { fontFamily: fonts.sansBold, fontSize: 11, color: colors.brass },
   mark: { color: colors.brass },
   bloom: { alignItems: 'center', marginVertical: 12 },
+  barBtn: { minWidth: 44, minHeight: 44, alignItems: 'center', justifyContent: 'center', flexDirection: 'row', gap: 3 },
+  barBtnTag: { fontFamily: fonts.sansSemi, fontSize: 10, marginTop: 4 },
   hint: { textAlign: 'center', fontFamily: fonts.sans, fontSize: 13, color: colors.textFaint, marginBottom: 8 },
   loading: { flex: 1, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 40 },
   failTitle: { fontFamily: fonts.serif, fontSize: 26, textAlign: 'center' },

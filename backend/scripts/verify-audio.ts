@@ -48,6 +48,13 @@ async function duration(file: string): Promise<number | null> {
   }
 }
 
+/**
+ * The sidecar holds the exact TTS input, which carries prosody line breaks; the
+ * catalogue stores the same copy on one line. Whitespace is the only legitimate
+ * difference, so compare normalised. Any word difference still fails.
+ */
+const norm = (s: string) => s.replace(/\s+/g, ' ').trim();
+
 async function inspect(base: string, kind: string, expectedText: string, declared: number | null): Promise<Row> {
   const mp3Path = path.join(dir, `${base}.mp3`);
   const jsonPath = path.join(dir, `${base}.json`);
@@ -59,7 +66,7 @@ async function inspect(base: string, kind: string, expectedText: string, declare
   };
   if (row.sidecar) {
     const s = JSON.parse(await readFile(jsonPath, 'utf8')) as { text?: string; words?: unknown[] };
-    row.textMatch = s.text === expectedText;
+    row.textMatch = norm(s.text ?? '') === norm(expectedText);
     row.words = s.words?.length ?? 0;
   }
   if (row.mp3) row.actual = await duration(mp3Path);

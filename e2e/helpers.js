@@ -46,4 +46,31 @@ async function apiGuest(request) {
   };
 }
 
-module.exports = { skipOnboarding, waitForApp, apiGuest, ONBOARDED_PROFILE };
+/**
+ * Make the auth endpoints succeed. Onboarding cannot be skipped past the
+ * sign-in step any more, so a test that needs to reach the paywall has to
+ * actually authenticate, and this harness has no database behind /auth.
+ *
+ * Tests that are asserting the GATE deliberately do not call this.
+ *
+ * @param {import('@playwright/test').Page} page
+ */
+async function mockAuth(page) {
+  const user = { id: 'e2e-user', name: 'Sam', email: 'sam@example.com' };
+  const session = { accessToken: 'e2e-access', refreshToken: 'e2e-refresh', expiresIn: 3600 };
+  await page.route('**/auth/guest', (r) => r.fulfill({
+    status: 200, contentType: 'application/json', body: JSON.stringify({ session, user }),
+  }));
+  await page.route('**/me', (r) => {
+    if (r.request().method() === 'GET') {
+      return r.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({ user, profile: { onboarded: false, subscribed: false, carrying: [] } }),
+      });
+    }
+    return r.fulfill({ status: 200, contentType: 'application/json', body: '{}' });
+  });
+}
+
+module.exports = { skipOnboarding, waitForApp, apiGuest, mockAuth, ONBOARDED_PROFILE };

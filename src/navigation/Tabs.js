@@ -18,8 +18,8 @@ const tapTick = { tabPress: () => Haptics.selectionAsync() };
 
 // The old bar had a hard 1px top line plus a brass pill behind the active icon,
 // which is the "clear demarcation" the feedback flagged. Now the bar reads as
-// the same surface as the content: frosted, no line, weight carried by ink plus
-// a small brass dot. Screens add paddingBottom so nothing hides underneath.
+// the same surface as the content: frosted, no line, weight carried by
+// ink weight alone. Screens add paddingBottom so nothing hides underneath.
 export default function Tabs() {
   return (
     <Tab.Navigator
@@ -44,7 +44,6 @@ export default function Tabs() {
         tabBarIcon: ({ color, focused }) => (
           <View style={styles.iconWrap}>
             <Icon name={ICONS[route.name]} color={color} active={focused} size={25} />
-            {focused ? <View style={styles.dot} /> : null}
           </View>
         ),
       })}
@@ -77,5 +76,4 @@ const styles = StyleSheet.create({
   hairline: { position: 'absolute', left: 0, right: 0, top: 0, height: StyleSheet.hairlineWidth, backgroundColor: 'rgba(58,44,34,0.06)' },
   label: { fontFamily: fonts.sansMed, fontSize: 11, letterSpacing: 0.2, marginTop: 2 },
   iconWrap: { alignItems: 'center', justifyContent: 'center', height: 30 },
-  dot: { position: 'absolute', bottom: -6, width: 4, height: 4, borderRadius: 4, backgroundColor: colors.brass },
 });

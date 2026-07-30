@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, ActivityIndicator } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
+import VerseCard from '../../components/VerseCard';
 import GraceDove from '../../components/GraceDove';
 import PrimaryButton from '../../components/PrimaryButton';
 import { useProfile } from '../../state/profile';
@@ -36,16 +37,16 @@ export default function VerseScreen({ navigation }) {
         <GraceDove size={78} motion="halo" />
         <Text style={styles.kicker}>A verse for today, {profile.name || 'friend'}.</Text>
       </View>
-      <View style={styles.card}>
-        {verse ? (
-          <>
-            <Text style={styles.verse} adjustsFontSizeToFit numberOfLines={6}>{verse.text}</Text>
-            <Text style={styles.ref}>{verse.ref.toUpperCase()}</Text>
-          </>
-        ) : (
-          <View style={{ paddingVertical: 30 }}><ActivityIndicator color={colors.brass} /></View>
-        )}
-      </View>
+      {verse ? (
+        <VerseCard
+          size="hero"
+          verse={verse.text}
+          reference={verse.ref.toUpperCase()}
+          style={styles.cardSpacing}
+        />
+      ) : (
+        <View style={[styles.cardSpacing, styles.cardLoading]}><ActivityIndicator color={colors.brass} /></View>
+      )}
       <View style={{ flex: 1 }} />
       <PrimaryButton label="Keep this verse" onPress={keep} />
       <Text style={styles.amen} onPress={() => navigation.navigate('Reflection')}>Amen, continue without keeping</Text>
@@ -56,6 +57,8 @@ export default function VerseScreen({ navigation }) {
 const styles = StyleSheet.create({
   wrap: { paddingHorizontal: 26, paddingTop: 20, paddingBottom: 30 },
   kicker: { fontFamily: fonts.serifItalic, fontSize: 22, color: colors.brass, marginTop: 10 },
+  cardSpacing: { marginTop: 34, marginBottom: 20, maxHeight: '58%' },
+  cardLoading: { width: '100%', alignItems: 'center', justifyContent: 'center', paddingVertical: 60 },
   card: { width: '100%', backgroundColor: colors.white, borderWidth: 1, borderColor: colors.sandLine, borderRadius: radius.xl, padding: 34, alignItems: 'center', marginTop: 34, marginBottom: 20, maxHeight: '58%', justifyContent: 'center', ...shadow.card },
   verse: { fontFamily: fonts.serif, fontSize: 27, color: colors.ink, textAlign: 'center', lineHeight: 38, letterSpacing: 0.2 },
   ref: { fontFamily: fonts.sans, fontSize: 13, letterSpacing: 1.2, color: colors.textMuted, marginTop: 20 },

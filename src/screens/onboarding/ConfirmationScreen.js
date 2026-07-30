@@ -1,39 +1,67 @@
-import React, { useEffect } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React, { useEffect, useRef, useState } from 'react';
+import { View, Text, StyleSheet, Animated, Easing, StatusBar } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
 import GraceDove from '../../components/GraceDove';
 import PrimaryButton from '../../components/PrimaryButton';
+import { TodayService } from '../../services';
 import { useProfile } from '../../state/profile';
 import { colors, fonts } from '../../theme';
 
 const UNLOCKED = ['Your verse', 'Your rhythm', 'Your stories'];
 
-export default function ConfirmationScreen({ navigation }) {
+export default function ConfirmationScreen({ navigation, route }) {
   const { profile, setProfile } = useProfile();
+  const [leaving, setLeaving] = useState(false);
+  const handoff = useRef(new Animated.Value(0)).current;
 
-  // Belt and braces: the celebration is the reward for paying, so a non-payer
-  // who somehow lands here (deep link, back stack) goes straight to the app.
+  // The paywall says so explicitly. Reading entitlement off profile.subscribed
+  // alone was a race: the context write that grants it has not necessarily
+  // re-rendered by the time this screen mounts, so a genuine payer could be
+  // bounced straight back out of her own celebration.
+  const celebrate = route?.params?.celebrate === true;
+
+  // Run once. Re-running on every profile change is what turned a slow context
+  // write into a redirect.
   useEffect(() => {
-    if (!profile.subscribed) {
-      navigation.replace('App');
+    if (!celebrate && !profile.subscribed) {
+      // No entitlement and no completed purchase behind us. Stay gated rather
+      // than falling through into the app.
+      navigation.replace('Paywall');
       return;
     }
     Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-  }, [profile.subscribed]);
+    // Enter Grace flips `onboarded`, which changes the navigator key and
+    // remounts the whole tree. Fetch what that tree needs now, while she is
+    // reading, so the tap lands on a Home that is already populated.
+    TodayService.prime(profile);
+  }, []);
 
   const enter = () => {
-    setProfile((p) => ({ ...p, onboarded: true, subscribed: true }));
-    navigation.reset({ index: 0, routes: [{ name: 'App' }] });
+    if (leaving) return;
+    setLeaving(true);
+    // Cover the remount with the ivory the next screen opens on, so the rebuild
+    // reads as one continuous surface instead of a stalled button.
+    Animated.timing(handoff, {
+      toValue: 1, duration: 260, easing: Easing.out(Easing.ease), useNativeDriver: true,
+    }).start(() => {
+      // Persist for the next cold start, then actually navigate. Flipping
+      // `onboarded` alone does not move anywhere: RootNavigator explains why the
+      // old key-remount restored the current screen rather than opening the app.
+      setProfile((p) => ({ ...p, onboarded: true }));
+      navigation.reset({ index: 0, routes: [{ name: 'App' }] });
+    });
   };
+
   return (
     <Screen gradient={['#FDF6E4', '#F7F3EC', '#F1EBE0']} style={styles.wrap} ambient>
+      <StatusBar barStyle="dark-content" />
       <View style={styles.center}>
         <GraceDove size={210} wings="open" motion="bless" />
         <Text style={styles.title} adjustsFontSizeToFit numberOfLines={2}>
-          Your place is ready,{'\n'}{profile.name || 'friend'}.
+          Your place is ready,{'\n'}{profile.name?.trim() || 'friend'}.
         </Text>
-        <Text style={styles.sub}>Three days on us, then continue if it feels right.</Text>
+        <Text style={styles.sub}>Everything is open for the next three days. Let's begin.</Text>
         <View style={styles.row}>
           {UNLOCKED.map((u) => (
             <View key={u} style={styles.item}>
@@ -43,7 +71,13 @@ export default function ConfirmationScreen({ navigation }) {
           ))}
         </View>
       </View>
-      <PrimaryButton label="Enter Grace" onPress={enter} />
+      <PrimaryButton label="Enter Grace" onPress={enter} testID="confirmation-enter" />
+
+      {/* Handoff veil — held over the navigator remount that Enter Grace causes. */}
+      <Animated.View
+        pointerEvents={leaving ? 'auto' : 'none'}
+        style={[StyleSheet.absoluteFill, { backgroundColor: colors.ivory, opacity: handoff }]}
+      />
     </Screen>
   );
 }

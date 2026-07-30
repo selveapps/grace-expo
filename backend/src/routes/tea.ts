@@ -1,9 +1,36 @@
 import type { FastifyInstance } from 'fastify';
+import { readFile } from 'fs/promises';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { TEAS, getTea, teaForClient, teaOfDay } from '../lib/teaCatalog.js';
 import { requireAuth } from '../middleware/auth.js';
 import * as library from '../services/libraryService.js';
 
+const audioDir = path.join(path.dirname(fileURLToPath(import.meta.url)), '../../public/audio');
+
+type Sidecar = { text?: string; words?: { w: string; start: number; end: number }[] | null };
+
 export async function registerTeaRoutes(app: FastifyInstance) {
+  /**
+   * The render's own transcript for a Tea clip, with word timings. Drives the
+   * Reel-style captions, which key off these real timings rather than guessing
+   * from a timer. 404 when the clip has not been rendered, so the client can
+   * fall back to static text instead of showing captions that drift.
+   */
+  app.get('/tea/:id/transcript', async (req, reply) => {
+    const { id } = req.params as { id: string };
+    if (!getTea(id)) return reply.code(404).send({ error: 'Not found' });
+    try {
+      const raw = await readFile(path.join(audioDir, `tea-${id}.json`), 'utf8');
+      const data = JSON.parse(raw) as Sidecar;
+      if (!data.text) return reply.code(404).send({ error: 'No transcript' });
+      reply.header('Cache-Control', 'public, max-age=86400');
+      return { teaId: id, text: data.text, words: data.words ?? null };
+    } catch {
+      return reply.code(404).send({ error: 'No transcript' });
+    }
+  });
+
   app.get('/tea', async () => ({
     tea: [...TEAS].sort((a, b) => a.order - b.order).map(teaForClient),
   }));

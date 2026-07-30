@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable, TextInput, ActivityIndicator } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
+import { useProfile } from '../../state/profile';
 import Icon from '../../components/Icon';
 import { ReadingService } from '../../services/ReadingService';
 import { colors, fonts, radius } from '../../theme';
+import { readingTheme } from '../../readingTheme';
 
 export default function SearchScreen({ navigation }) {
+  const { profile } = useProfile();
+  const RT = readingTheme(profile);
   const [query, setQuery] = useState('');
   const [results, setResults] = useState(null);
   const [busy, setBusy] = useState(false);
@@ -46,10 +50,10 @@ export default function SearchScreen({ navigation }) {
   );
 
   return (
-    <Screen bg={colors.ivory} edges={['top']} style={{ paddingHorizontal: 0 }}>
+    <Screen bg={RT.bg} edges={['top']} style={{ paddingHorizontal: 0 }}>
       <View style={styles.header}>
         <Pressable onPress={() => navigation.goBack()}><Text style={styles.back}>‹ Reading</Text></Pressable>
-        <Text style={styles.h1}>Search scripture</Text>
+        <Text style={[styles.h1, { color: RT.ink }]}>Search scripture</Text>
       </View>
       <View style={styles.searchRow}>
         <Icon name="search" size={18} color={colors.textFaint} />

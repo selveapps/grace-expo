@@ -130,14 +130,11 @@ function wants(group: 'stories' | 'tea' | 'onboarding', id?: string) {
   return ONLY === group || (id != null && ONLY === id);
 }
 
-function teaSettings(order: number): VoiceSettings {
-  const base = VOICE_STYLE.sassy;
-  const jitter = ((order - 1) % 3) * 0.03; // 0, .03, .06 across cards
-  return {
-    ...base,
-    speed: Math.min(1.2, (base.speed ?? 1.12) + jitter),
-    style: Math.min(1, base.style + ((order % 2) ? 0.05 : 0)),
-  };
+// One approved direction across all 30. The old per-card speed/style jitter was
+// added when cards sounded samey; with the V7 preset it just pulls some cards
+// off the approved delivery, so it is gone.
+function teaSettings(_order: number): VoiceSettings {
+  return { ...VOICE_STYLE.sassy };
 }
 
 /** Write the MP3 plus its transcript sidecar. Returns false when skipped. */

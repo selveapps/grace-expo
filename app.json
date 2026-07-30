@@ -12,11 +12,10 @@
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "scheme": "grace",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/GraceIconV4.png",
     "splash": {
-      "backgroundColor": "#3a2c22",
-      "resizeMode": "contain",
-      "image": "./assets/icon.png"
+      "backgroundColor": "#FFFDF9",
+      "resizeMode": "contain"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -24,7 +23,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.selveapps.grace",
-      "icon": "./assets/icon.png",
+      "icon": "./assets/GraceIconV4.png",
       "usesAppleSignIn": true,
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
@@ -37,7 +36,8 @@
       "package": "com.selveapps.grace"
     },
     "plugins": [
-      "expo-apple-authentication"
+      "expo-apple-authentication",
+      "expo-splash-screen"
     ],
     "extra": {
       "eas": {

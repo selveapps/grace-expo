@@ -16,7 +16,13 @@ export const VOICE_STYLE: Record<string, VoiceSettings> = {
   tender: { stability: 0.62, similarity_boost: 0.8, style: 0.12, use_speaker_boost: true, speed: 0.94 }, // Softly / grief / comfort
   steady: { stability: 0.5, similarity_boost: 0.78, style: 0.35, use_speaker_boost: true, speed: 1.0 }, // Steadily
   bold: { stability: 0.4, similarity_boost: 0.72, style: 0.55, use_speaker_boost: true, speed: 1.06 }, // Directly
-  sassy: { stability: 0.3, similarity_boost: 0.7, style: 0.7, use_speaker_boost: true, speed: 1.12 }, // Tea — brisk + playful
+  // Tea, approved V7 direction. Measured against a creator reference clip:
+  // Laura holds 14.1 st of pitch movement at ~200 wpm, which matches the
+  // reference; Hope tested flatter (10.2 st) and 27% slower despite a
+  // "gossipy" label. Low stability + high style is the swing; the rewritten
+  // conversational copy supplies the personality. Duration is allowed to run
+  // past 70s rather than compromise the delivery.
+  sassy: { stability: 0.14, similarity_boost: 0.65, style: 0.92, use_speaker_boost: true, speed: 1.16 },
 };
 
 // Named voices (premade ids available on the account). Env overrides win.

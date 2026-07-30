@@ -1,17 +1,21 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable } from 'react-native';
 import Screen from '../../components/Screen';
+import { useProfile } from '../../state/profile';
 import Icon from '../../components/Icon';
 import BookAccordion from '../../components/BookAccordion';
 import { OT_GROUPS } from '../../data/content';
 import { colors, fonts, radius } from '../../theme';
+import { readingTheme } from '../../readingTheme';
 
 export default function OldTestamentScreen({ navigation }) {
+  const { profile } = useProfile();
+  const RT = readingTheme(profile);
   return (
-    <Screen bg={colors.ivory} edges={['top']} style={{ paddingHorizontal: 0 }}>
+    <Screen bg={RT.bg} edges={['top']} style={{ paddingHorizontal: 0 }}>
       <View style={styles.header}>
-        <Pressable onPress={() => navigation.goBack()}><Text style={styles.back}>‹ Reading</Text></Pressable>
-        <Text style={styles.h1}>Old Testament</Text>
+        <Pressable onPress={() => navigation.goBack()}><Text style={[styles.back, { color: RT.sub }]}>‹ Reading</Text></Pressable>
+        <Text style={[styles.h1, { color: RT.ink }]}>Old Testament</Text>
         <View style={styles.search}><Icon name="search" size={18} color={colors.textFaint} /><Text style={styles.searchText}>Filter books</Text></View>
       </View>
       <ScrollView contentContainerStyle={styles.body} showsVerticalScrollIndicator={false}>

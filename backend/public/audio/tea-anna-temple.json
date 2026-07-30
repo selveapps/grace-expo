@@ -1,921 +1,959 @@
 {
   "kind": "tea",
   "teaId": "anna-temple",
-  "mood": "dark",
-  "heat": 1,
-  "text": "Anna waited decades in the temple for one look. Luke chapter two. Anna is a prophetess, daughter of Phanuel, of the tribe of Aser. Luke says she was of a great age, and had lived with a husband seven years from her virginity, and was a widow of about fourscore and four years. Translators split on that last phrase. It either means she was eighty four years old, or that she had been a widow for eighty four years. Either reading is a very long wait, and honest teachers say so rather than picking whichever number preaches better. What is not ambiguous is how she spent it. She departed not from the temple, but served God with fastings and prayers night and day. And then a poor couple walks in with a newborn to do what the law required, and Anna comes in that instant. She gives thanks to God, and she spake of him to all them that looked for redemption in Jerusalem. Decades of showing up, and she recognised him immediately, and she started telling everybody. Patience is not passivity.",
+  "text": "She waited decades in the temple and recognised him the second he walked through the door.\n\nLuke two. Anna. Prophetess. Daughter of Phanuel, tribe of Aser. Luke says she was of a great age, married seven years, and then a widow of about fourscore and four years.\n\nQuick honesty note. Translators split on that. It either means she was eighty-four, or she'd been widowed for eighty-four years. Both readings are a very long wait, and anybody who picks the one that preaches better is doing you dirty.\n\nWhat is not ambiguous is how she spent it. She departed not from the temple, but served God with fastings and prayers night and day.\n\nNight and day. For decades. In a building, waiting.\n\nAnd then one ordinary morning a poor couple carries a newborn in to do what the law required. Nothing about it looks special.\n\nAnd Anna comes in that instant.\n\nShe gives thanks to God, and she spake of him to all them that looked for redemption in Jerusalem.\n\nDecades of showing up. And she knew him immediately, and she started telling everybody who would listen.\n\nPatience is not passivity.",
   "voice": "FGY2WhTYpPnrIDTdsKH5",
   "words": [
     {
-      "w": "Anna",
+      "w": "She",
       "start": 0,
-      "end": 0.255
+      "end": 0.151
     },
     {
       "w": "waited",
-      "start": 0.302,
-      "end": 0.534
+      "start": 0.197,
+      "end": 0.406
     },
     {
       "w": "decades",
-      "start": 0.592,
-      "end": 0.987
+      "start": 0.441,
+      "end": 0.766
     },
     {
       "w": "in",
-      "start": 1.022,
-      "end": 1.091
+      "start": 0.789,
+      "end": 0.848
     },
     {
       "w": "the",
-      "start": 1.138,
-      "end": 1.207
+      "start": 0.882,
+      "end": 0.952
     },
     {
       "w": "temple",
-      "start": 1.242,
-      "end": 1.567
-    },
-    {
-      "w": "for",
-      "start": 1.614,
-      "end": 1.753
-    },
-    {
-      "w": "one",
-      "start": 1.834,
-      "end": 2.009
-    },
-    {
-      "w": "look.",
-      "start": 2.043,
-      "end": 2.473
-    },
-    {
-      "w": "Luke",
-      "start": 3.32,
-      "end": 3.529
-    },
-    {
-      "w": "chapter",
-      "start": 3.553,
-      "end": 3.843
-    },
-    {
-      "w": "two.",
-      "start": 3.889,
-      "end": 4.377
-    },
-    {
-      "w": "Anna",
-      "start": 4.772,
-      "end": 5.085
-    },
-    {
-      "w": "is",
-      "start": 5.132,
-      "end": 5.236
-    },
-    {
-      "w": "a",
-      "start": 5.283,
-      "end": 5.306
-    },
-    {
-      "w": "prophetess,",
-      "start": 5.352,
-      "end": 6.165
-    },
-    {
-      "w": "daughter",
-      "start": 6.2,
-      "end": 6.49
-    },
-    {
-      "w": "of",
-      "start": 6.536,
-      "end": 6.583
-    },
-    {
-      "w": "Phanuel,",
-      "start": 6.629,
-      "end": 7.163
-    },
-    {
-      "w": "of",
-      "start": 7.21,
-      "end": 7.303
-    },
-    {
-      "w": "the",
-      "start": 7.349,
-      "end": 7.419
-    },
-    {
-      "w": "tribe",
-      "start": 7.465,
-      "end": 7.732
-    },
-    {
-      "w": "of",
-      "start": 7.755,
-      "end": 7.814
-    },
-    {
-      "w": "Aser.",
-      "start": 7.883,
-      "end": 8.464
-    },
-    {
-      "w": "Luke",
-      "start": 8.754,
-      "end": 8.975
-    },
-    {
-      "w": "says",
-      "start": 8.998,
-      "end": 9.16
-    },
-    {
-      "w": "she",
-      "start": 9.207,
-      "end": 9.3
-    },
-    {
-      "w": "was",
-      "start": 9.346,
-      "end": 9.462
-    },
-    {
-      "w": "of",
-      "start": 9.509,
-      "end": 9.578
-    },
-    {
-      "w": "a",
-      "start": 9.625,
-      "end": 9.648
-    },
-    {
-      "w": "great",
-      "start": 9.694,
-      "end": 9.927
-    },
-    {
-      "w": "age,",
-      "start": 9.973,
-      "end": 10.321
+      "start": 0.987,
+      "end": 1.312
     },
     {
       "w": "and",
-      "start": 10.356,
-      "end": 10.472
-    },
-    {
-      "w": "had",
-      "start": 10.519,
-      "end": 10.612
-    },
-    {
-      "w": "lived",
-      "start": 10.67,
-      "end": 10.855
-    },
-    {
-      "w": "with",
-      "start": 10.89,
-      "end": 11.018
-    },
-    {
-      "w": "a",
-      "start": 11.053,
-      "end": 11.088
-    },
-    {
-      "w": "husband",
-      "start": 11.134,
-      "end": 11.482
-    },
-    {
-      "w": "seven",
-      "start": 11.54,
-      "end": 11.796
-    },
-    {
-      "w": "years",
-      "start": 11.842,
-      "end": 12.051
-    },
-    {
-      "w": "from",
-      "start": 12.098,
-      "end": 12.237
-    },
-    {
-      "w": "her",
-      "start": 12.283,
-      "end": 12.353
-    },
-    {
-      "w": "virginity,",
-      "start": 12.399,
-      "end": 13.026
-    },
-    {
-      "w": "and",
-      "start": 13.13,
-      "end": 13.247
-    },
-    {
-      "w": "was",
-      "start": 13.293,
-      "end": 13.409
-    },
-    {
-      "w": "a",
-      "start": 13.455,
-      "end": 13.479
-    },
-    {
-      "w": "widow",
-      "start": 13.537,
-      "end": 13.792
-    },
-    {
-      "w": "of",
-      "start": 13.873,
-      "end": 13.955
-    },
-    {
-      "w": "about",
-      "start": 14.001,
-      "end": 14.233
-    },
-    {
-      "w": "fourscore",
-      "start": 14.28,
-      "end": 14.86
-    },
-    {
-      "w": "and",
-      "start": 14.895,
-      "end": 14.965
-    },
-    {
-      "w": "four",
-      "start": 15.011,
-      "end": 15.185
-    },
-    {
-      "w": "years.",
-      "start": 15.243,
-      "end": 15.789
-    },
-    {
-      "w": "Translators",
-      "start": 16.079,
-      "end": 16.613
-    },
-    {
-      "w": "split",
-      "start": 16.648,
-      "end": 16.904
-    },
-    {
-      "w": "on",
-      "start": 16.938,
-      "end": 16.997
-    },
-    {
-      "w": "that",
-      "start": 17.031,
-      "end": 17.147
-    },
-    {
-      "w": "last",
-      "start": 17.194,
-      "end": 17.403
-    },
-    {
-      "w": "phrase.",
-      "start": 17.449,
-      "end": 17.937
-    },
-    {
-      "w": "It",
-      "start": 18.041,
-      "end": 18.146
-    },
-    {
-      "w": "either",
-      "start": 18.192,
-      "end": 18.39
-    },
-    {
-      "w": "means",
-      "start": 18.448,
-      "end": 18.68
-    },
-    {
-      "w": "she",
-      "start": 18.726,
-      "end": 18.831
-    },
-    {
-      "w": "was",
-      "start": 18.877,
-      "end": 18.993
-    },
-    {
-      "w": "eighty",
-      "start": 19.063,
-      "end": 19.272
-    },
-    {
-      "w": "four",
-      "start": 19.33,
-      "end": 19.493
-    },
-    {
-      "w": "years",
-      "start": 19.539,
-      "end": 19.713
-    },
-    {
-      "w": "old,",
-      "start": 19.76,
-      "end": 20.073
-    },
-    {
-      "w": "or",
-      "start": 20.12,
-      "end": 20.236
-    },
-    {
-      "w": "that",
-      "start": 20.282,
-      "end": 20.41
-    },
-    {
-      "w": "she",
-      "start": 20.456,
-      "end": 20.572
-    },
-    {
-      "w": "had",
-      "start": 20.619,
-      "end": 20.7
-    },
-    {
-      "w": "been",
-      "start": 20.735,
-      "end": 20.874
-    },
-    {
-      "w": "a",
-      "start": 20.897,
-      "end": 20.921
-    },
-    {
-      "w": "widow",
-      "start": 20.967,
-      "end": 21.223
-    },
-    {
-      "w": "for",
-      "start": 21.304,
-      "end": 21.443
-    },
-    {
-      "w": "eighty",
-      "start": 21.501,
-      "end": 21.733
-    },
-    {
-      "w": "four",
-      "start": 21.78,
-      "end": 21.966
-    },
-    {
-      "w": "years.",
-      "start": 22.035,
-      "end": 22.558
-    },
-    {
-      "w": "Either",
-      "start": 23.011,
-      "end": 23.266
-    },
-    {
-      "w": "reading",
-      "start": 23.336,
-      "end": 23.614
-    },
-    {
-      "w": "is",
-      "start": 23.661,
-      "end": 23.742
-    },
-    {
-      "w": "a",
-      "start": 23.788,
-      "end": 23.812
-    },
-    {
-      "w": "very",
-      "start": 23.858,
-      "end": 24.055
-    },
-    {
-      "w": "long",
-      "start": 24.102,
-      "end": 24.264
-    },
-    {
-      "w": "wait,",
-      "start": 24.311,
-      "end": 24.613
-    },
-    {
-      "w": "and",
-      "start": 24.648,
-      "end": 24.74
-    },
-    {
-      "w": "honest",
-      "start": 24.786,
-      "end": 25.042
-    },
-    {
-      "w": "teachers",
-      "start": 25.077,
-      "end": 25.437
-    },
-    {
-      "w": "say",
-      "start": 25.471,
-      "end": 25.634
-    },
-    {
-      "w": "so",
-      "start": 25.68,
-      "end": 25.831
-    },
-    {
-      "w": "rather",
-      "start": 25.901,
-      "end": 26.156
-    },
-    {
-      "w": "than",
-      "start": 26.203,
-      "end": 26.354
-    },
-    {
-      "w": "picking",
-      "start": 26.435,
-      "end": 26.714
-    },
-    {
-      "w": "whichever",
-      "start": 26.76,
-      "end": 27.097
-    },
-    {
-      "w": "number",
-      "start": 27.143,
-      "end": 27.352
-    },
-    {
-      "w": "preaches",
-      "start": 27.422,
-      "end": 27.77
-    },
-    {
-      "w": "better.",
-      "start": 27.817,
-      "end": 28.2
-    },
-    {
-      "w": "What",
-      "start": 28.316,
-      "end": 28.478
-    },
-    {
-      "w": "is",
-      "start": 28.513,
-      "end": 28.595
-    },
-    {
-      "w": "not",
-      "start": 28.653,
-      "end": 28.815
-    },
-    {
-      "w": "ambiguous",
-      "start": 28.862,
-      "end": 29.349
-    },
-    {
-      "w": "is",
-      "start": 29.407,
-      "end": 29.535
-    },
-    {
-      "w": "how",
-      "start": 29.605,
-      "end": 29.779
-    },
-    {
-      "w": "she",
-      "start": 29.848,
-      "end": 29.965
-    },
-    {
-      "w": "spent",
-      "start": 30.011,
-      "end": 30.255
-    },
-    {
-      "w": "it.",
-      "start": 30.313,
-      "end": 30.51
-    },
-    {
-      "w": "She",
-      "start": 30.591,
-      "end": 30.719
-    },
-    {
-      "w": "departed",
-      "start": 30.777,
-      "end": 31.137
-    },
-    {
-      "w": "not",
-      "start": 31.184,
-      "end": 31.346
-    },
-    {
-      "w": "from",
-      "start": 31.381,
-      "end": 31.509
-    },
-    {
-      "w": "the",
-      "start": 31.555,
-      "end": 31.625
-    },
-    {
-      "w": "temple,",
-      "start": 31.671,
-      "end": 32.112
-    },
-    {
-      "w": "but",
-      "start": 32.159,
-      "end": 32.391
-    },
-    {
-      "w": "served",
-      "start": 32.496,
-      "end": 32.797
-    },
-    {
-      "w": "God",
-      "start": 32.844,
-      "end": 33.088
-    },
-    {
-      "w": "with",
-      "start": 33.134,
-      "end": 33.273
-    },
-    {
-      "w": "fastings",
-      "start": 33.32,
-      "end": 33.831
-    },
-    {
-      "w": "and",
-      "start": 33.889,
-      "end": 34.063
-    },
-    {
-      "w": "prayers",
-      "start": 34.133,
-      "end": 34.481
-    },
-    {
-      "w": "night",
-      "start": 34.55,
-      "end": 34.748
-    },
-    {
-      "w": "and",
-      "start": 34.783,
-      "end": 34.852
-    },
-    {
-      "w": "day.",
-      "start": 34.899,
-      "end": 35.247
-    },
-    {
-      "w": "And",
-      "start": 35.584,
-      "end": 35.7
-    },
-    {
-      "w": "then",
-      "start": 35.746,
-      "end": 35.874
-    },
-    {
-      "w": "a",
-      "start": 35.92,
-      "end": 35.955
-    },
-    {
-      "w": "poor",
-      "start": 36.002,
-      "end": 36.176
-    },
-    {
-      "w": "couple",
-      "start": 36.222,
-      "end": 36.478
-    },
-    {
-      "w": "walks",
-      "start": 36.513,
-      "end": 36.768
-    },
-    {
-      "w": "in",
-      "start": 36.815,
-      "end": 36.907
-    },
-    {
-      "w": "with",
-      "start": 36.954,
-      "end": 37.07
-    },
-    {
-      "w": "a",
-      "start": 37.116,
-      "end": 37.151
-    },
-    {
-      "w": "newborn",
-      "start": 37.198,
-      "end": 37.592
-    },
-    {
-      "w": "to",
-      "start": 37.65,
-      "end": 37.743
-    },
-    {
-      "w": "do",
-      "start": 37.813,
-      "end": 37.906
-    },
-    {
-      "w": "what",
-      "start": 37.929,
-      "end": 38.034
-    },
-    {
-      "w": "the",
-      "start": 38.057,
-      "end": 38.126
-    },
-    {
-      "w": "law",
-      "start": 38.173,
-      "end": 38.335
-    },
-    {
-      "w": "required,",
-      "start": 38.382,
-      "end": 38.881
-    },
-    {
-      "w": "and",
-      "start": 39.067,
-      "end": 39.218
-    },
-    {
-      "w": "Anna",
-      "start": 39.287,
-      "end": 39.52
-    },
-    {
-      "w": "comes",
-      "start": 39.566,
-      "end": 39.787
-    },
-    {
-      "w": "in",
-      "start": 39.833,
-      "end": 39.891
-    },
-    {
-      "w": "that",
-      "start": 39.938,
-      "end": 40.077
-    },
-    {
-      "w": "instant.",
-      "start": 40.123,
-      "end": 40.623
-    },
-    {
-      "w": "She",
-      "start": 40.774,
-      "end": 40.89
-    },
-    {
-      "w": "gives",
-      "start": 40.936,
-      "end": 41.133
-    },
-    {
-      "w": "thanks",
-      "start": 41.18,
-      "end": 41.447
-    },
-    {
-      "w": "to",
-      "start": 41.493,
-      "end": 41.551
-    },
-    {
-      "w": "God,",
-      "start": 41.598,
-      "end": 41.946
-    },
-    {
-      "w": "and",
-      "start": 41.993,
-      "end": 42.109
-    },
-    {
-      "w": "she",
-      "start": 42.155,
-      "end": 42.26
-    },
-    {
-      "w": "spake",
-      "start": 42.329,
-      "end": 42.596
-    },
-    {
-      "w": "of",
-      "start": 42.62,
-      "end": 42.678
-    },
-    {
-      "w": "him",
-      "start": 42.724,
-      "end": 42.829
-    },
-    {
-      "w": "to",
-      "start": 42.875,
-      "end": 42.945
-    },
-    {
-      "w": "all",
-      "start": 43.049,
-      "end": 43.258
-    },
-    {
-      "w": "them",
-      "start": 43.316,
-      "end": 43.455
-    },
-    {
-      "w": "that",
-      "start": 43.502,
-      "end": 43.618
-    },
-    {
-      "w": "looked",
-      "start": 43.676,
-      "end": 43.908
-    },
-    {
-      "w": "for",
-      "start": 43.943,
-      "end": 44.071
-    },
-    {
-      "w": "redemption",
-      "start": 44.117,
-      "end": 44.535
-    },
-    {
-      "w": "in",
-      "start": 44.57,
-      "end": 44.628
-    },
-    {
-      "w": "Jerusalem.",
-      "start": 44.675,
-      "end": 45.313
-    },
-    {
-      "w": "Decades",
-      "start": 45.65,
-      "end": 46.044
-    },
-    {
-      "w": "of",
-      "start": 46.079,
-      "end": 46.137
-    },
-    {
-      "w": "showing",
-      "start": 46.184,
-      "end": 46.439
-    },
-    {
-      "w": "up,",
-      "start": 46.497,
-      "end": 46.683
-    },
-    {
-      "w": "and",
-      "start": 46.706,
-      "end": 46.834
-    },
-    {
-      "w": "she",
-      "start": 46.88,
-      "end": 46.985
+      "start": 1.347,
+      "end": 1.463
     },
     {
       "w": "recognised",
-      "start": 47.054,
-      "end": 47.507
+      "start": 1.533,
+      "end": 1.962
     },
     {
       "w": "him",
-      "start": 47.53,
-      "end": 47.623
+      "start": 1.997,
+      "end": 2.09
     },
     {
-      "w": "immediately,",
-      "start": 47.67,
-      "end": 48.297
+      "w": "the",
+      "start": 2.136,
+      "end": 2.218
     },
     {
-      "w": "and",
-      "start": 48.331,
-      "end": 48.459
+      "w": "second",
+      "start": 2.276,
+      "end": 2.531
+    },
+    {
+      "w": "he",
+      "start": 2.577,
+      "end": 2.647
+    },
+    {
+      "w": "walked",
+      "start": 2.694,
+      "end": 2.902
+    },
+    {
+      "w": "through",
+      "start": 2.926,
+      "end": 3.088
+    },
+    {
+      "w": "the",
+      "start": 3.111,
+      "end": 3.181
+    },
+    {
+      "w": "door.",
+      "start": 3.204,
+      "end": 3.587
+    },
+    {
+      "w": "Luke",
+      "start": 3.866,
+      "end": 4.075
+    },
+    {
+      "w": "two.",
+      "start": 4.11,
+      "end": 4.435
+    },
+    {
+      "w": "Anna.",
+      "start": 4.714,
+      "end": 5.108
+    },
+    {
+      "w": "Prophetess.",
+      "start": 5.352,
+      "end": 6.037
+    },
+    {
+      "w": "Daughter",
+      "start": 6.188,
+      "end": 6.444
+    },
+    {
+      "w": "of",
+      "start": 6.478,
+      "end": 6.536
+    },
+    {
+      "w": "Phanuel,",
+      "start": 6.571,
+      "end": 7.105
+    },
+    {
+      "w": "tribe",
+      "start": 7.21,
+      "end": 7.454
+    },
+    {
+      "w": "of",
+      "start": 7.477,
+      "end": 7.523
+    },
+    {
+      "w": "Aser.",
+      "start": 7.581,
+      "end": 7.964
+    },
+    {
+      "w": "Luke",
+      "start": 8.15,
+      "end": 8.348
+    },
+    {
+      "w": "says",
+      "start": 8.371,
+      "end": 8.51
     },
     {
       "w": "she",
-      "start": 48.506,
-      "end": 48.61
+      "start": 8.545,
+      "end": 8.638
     },
     {
-      "w": "started",
-      "start": 48.656,
-      "end": 48.947
+      "w": "was",
+      "start": 8.673,
+      "end": 8.777
     },
     {
-      "w": "telling",
-      "start": 48.982,
-      "end": 49.249
+      "w": "of",
+      "start": 8.812,
+      "end": 8.858
     },
     {
-      "w": "everybody.",
-      "start": 49.295,
-      "end": 49.794
+      "w": "a",
+      "start": 8.893,
+      "end": 8.916
     },
     {
-      "w": "Patience",
-      "start": 50.085,
-      "end": 50.549
+      "w": "great",
+      "start": 8.951,
+      "end": 9.149
+    },
+    {
+      "w": "age,",
+      "start": 9.195,
+      "end": 9.52
+    },
+    {
+      "w": "married",
+      "start": 9.625,
+      "end": 9.892
+    },
+    {
+      "w": "seven",
+      "start": 9.927,
+      "end": 10.147
+    },
+    {
+      "w": "years,",
+      "start": 10.182,
+      "end": 10.484
+    },
+    {
+      "w": "and",
+      "start": 10.507,
+      "end": 10.577
+    },
+    {
+      "w": "then",
+      "start": 10.612,
+      "end": 10.728
+    },
+    {
+      "w": "a",
+      "start": 10.762,
+      "end": 10.786
+    },
+    {
+      "w": "widow",
+      "start": 10.832,
+      "end": 11.064
+    },
+    {
+      "w": "of",
+      "start": 11.146,
+      "end": 11.215
+    },
+    {
+      "w": "about",
+      "start": 11.273,
+      "end": 11.482
+    },
+    {
+      "w": "fourscore",
+      "start": 11.552,
+      "end": 12.051
+    },
+    {
+      "w": "and",
+      "start": 12.086,
+      "end": 12.179
+    },
+    {
+      "w": "four",
+      "start": 12.237,
+      "end": 12.4
+    },
+    {
+      "w": "years.",
+      "start": 12.458,
+      "end": 12.957
+    },
+    {
+      "w": "Quick",
+      "start": 13.282,
+      "end": 13.456
+    },
+    {
+      "w": "honesty",
+      "start": 13.491,
+      "end": 13.77
+    },
+    {
+      "w": "note.",
+      "start": 13.816,
+      "end": 14.048
+    },
+    {
+      "w": "Translators",
+      "start": 14.257,
+      "end": 14.756
+    },
+    {
+      "w": "split",
+      "start": 14.791,
+      "end": 15
+    },
+    {
+      "w": "on",
+      "start": 15.035,
+      "end": 15.105
+    },
+    {
+      "w": "that.",
+      "start": 15.14,
+      "end": 15.36
+    },
+    {
+      "w": "It",
+      "start": 15.441,
+      "end": 15.534
+    },
+    {
+      "w": "either",
+      "start": 15.569,
+      "end": 15.755
+    },
+    {
+      "w": "means",
+      "start": 15.79,
+      "end": 15.964
+    },
+    {
+      "w": "she",
+      "start": 15.999,
+      "end": 16.08
+    },
+    {
+      "w": "was",
+      "start": 16.115,
+      "end": 16.219
+    },
+    {
+      "w": "eighty-four,",
+      "start": 16.254,
+      "end": 16.753
+    },
+    {
+      "w": "or",
+      "start": 16.811,
+      "end": 16.927
+    },
+    {
+      "w": "she'd",
+      "start": 16.997,
+      "end": 17.171
+    },
+    {
+      "w": "been",
+      "start": 17.195,
+      "end": 17.334
+    },
+    {
+      "w": "widowed",
+      "start": 17.38,
+      "end": 17.705
+    },
+    {
+      "w": "for",
+      "start": 17.763,
+      "end": 17.868
+    },
+    {
+      "w": "eighty-four",
+      "start": 17.903,
+      "end": 18.239
+    },
+    {
+      "w": "years.",
+      "start": 18.297,
+      "end": 18.762
+    },
+    {
+      "w": "Both",
+      "start": 19.145,
+      "end": 19.342
+    },
+    {
+      "w": "readings",
+      "start": 19.389,
+      "end": 19.656
+    },
+    {
+      "w": "are",
+      "start": 19.691,
+      "end": 19.784
+    },
+    {
+      "w": "a",
+      "start": 19.818,
+      "end": 19.853
+    },
+    {
+      "w": "very",
+      "start": 19.911,
+      "end": 20.097
+    },
+    {
+      "w": "long",
+      "start": 20.155,
+      "end": 20.329
+    },
+    {
+      "w": "wait,",
+      "start": 20.376,
+      "end": 20.654
+    },
+    {
+      "w": "and",
+      "start": 20.724,
+      "end": 20.852
+    },
+    {
+      "w": "anybody",
+      "start": 20.91,
+      "end": 21.246
+    },
+    {
+      "w": "who",
+      "start": 21.281,
+      "end": 21.362
+    },
+    {
+      "w": "picks",
+      "start": 21.409,
+      "end": 21.606
+    },
+    {
+      "w": "the",
+      "start": 21.641,
+      "end": 21.711
+    },
+    {
+      "w": "one",
+      "start": 21.758,
+      "end": 21.862
+    },
+    {
+      "w": "that",
+      "start": 21.897,
+      "end": 22.001
+    },
+    {
+      "w": "preaches",
+      "start": 22.036,
+      "end": 22.338
+    },
+    {
+      "w": "better",
+      "start": 22.373,
+      "end": 22.582
     },
     {
       "w": "is",
-      "start": 50.584,
-      "end": 50.677
+      "start": 22.663,
+      "end": 22.779
+    },
+    {
+      "w": "doing",
+      "start": 22.837,
+      "end": 23.035
+    },
+    {
+      "w": "you",
+      "start": 23.07,
+      "end": 23.139
+    },
+    {
+      "w": "dirty.",
+      "start": 23.174,
+      "end": 23.557
+    },
+    {
+      "w": "What",
+      "start": 23.662,
+      "end": 23.801
+    },
+    {
+      "w": "is",
+      "start": 23.836,
+      "end": 23.894
     },
     {
       "w": "not",
-      "start": 50.735,
-      "end": 50.874
+      "start": 23.929,
+      "end": 24.068
+    },
+    {
+      "w": "ambiguous",
+      "start": 24.103,
+      "end": 24.59
+    },
+    {
+      "w": "is",
+      "start": 24.649,
+      "end": 24.741
+    },
+    {
+      "w": "how",
+      "start": 24.776,
+      "end": 24.869
+    },
+    {
+      "w": "she",
+      "start": 24.916,
+      "end": 25.02
+    },
+    {
+      "w": "spent",
+      "start": 25.055,
+      "end": 25.241
+    },
+    {
+      "w": "it.",
+      "start": 25.275,
+      "end": 25.496
+    },
+    {
+      "w": "She",
+      "start": 25.821,
+      "end": 25.926
+    },
+    {
+      "w": "departed",
+      "start": 25.972,
+      "end": 26.297
+    },
+    {
+      "w": "not",
+      "start": 26.344,
+      "end": 26.471
+    },
+    {
+      "w": "from",
+      "start": 26.506,
+      "end": 26.645
+    },
+    {
+      "w": "the",
+      "start": 26.68,
+      "end": 26.75
+    },
+    {
+      "w": "temple,",
+      "start": 26.773,
+      "end": 27.087
+    },
+    {
+      "w": "but",
+      "start": 27.121,
+      "end": 27.226
+    },
+    {
+      "w": "served",
+      "start": 27.272,
+      "end": 27.516
+    },
+    {
+      "w": "God",
+      "start": 27.563,
+      "end": 27.795
+    },
+    {
+      "w": "with",
+      "start": 27.83,
+      "end": 27.969
+    },
+    {
+      "w": "fastings",
+      "start": 28.015,
+      "end": 28.445
+    },
+    {
+      "w": "and",
+      "start": 28.48,
+      "end": 28.549
+    },
+    {
+      "w": "prayers",
+      "start": 28.596,
+      "end": 28.921
+    },
+    {
+      "w": "night",
+      "start": 28.991,
+      "end": 29.176
+    },
+    {
+      "w": "and",
+      "start": 29.2,
+      "end": 29.269
+    },
+    {
+      "w": "day.",
+      "start": 29.304,
+      "end": 29.606
+    },
+    {
+      "w": "Night",
+      "start": 29.885,
+      "end": 30.175
+    },
+    {
+      "w": "and",
+      "start": 30.256,
+      "end": 30.419
+    },
+    {
+      "w": "day.",
+      "start": 30.477,
+      "end": 30.837
+    },
+    {
+      "w": "For",
+      "start": 31.08,
+      "end": 31.208
+    },
+    {
+      "w": "decades.",
+      "start": 31.243,
+      "end": 31.824
+    },
+    {
+      "w": "In",
+      "start": 32.102,
+      "end": 32.207
+    },
+    {
+      "w": "a",
+      "start": 32.241,
+      "end": 32.265
+    },
+    {
+      "w": "building,",
+      "start": 32.3,
+      "end": 32.729
+    },
+    {
+      "w": "waiting.",
+      "start": 32.834,
+      "end": 33.252
+    },
+    {
+      "w": "And",
+      "start": 33.577,
+      "end": 33.716
+    },
+    {
+      "w": "then",
+      "start": 33.763,
+      "end": 33.925
+    },
+    {
+      "w": "one",
+      "start": 33.983,
+      "end": 34.181
+    },
+    {
+      "w": "ordinary",
+      "start": 34.227,
+      "end": 34.575
+    },
+    {
+      "w": "morning",
+      "start": 34.622,
+      "end": 34.843
+    },
+    {
+      "w": "a",
+      "start": 34.877,
+      "end": 34.901
+    },
+    {
+      "w": "poor",
+      "start": 34.935,
+      "end": 35.075
+    },
+    {
+      "w": "couple",
+      "start": 35.133,
+      "end": 35.353
+    },
+    {
+      "w": "carries",
+      "start": 35.388,
+      "end": 35.655
+    },
+    {
+      "w": "a",
+      "start": 35.69,
+      "end": 35.725
+    },
+    {
+      "w": "newborn",
+      "start": 35.771,
+      "end": 36.062
+    },
+    {
+      "w": "in",
+      "start": 36.108,
+      "end": 36.178
+    },
+    {
+      "w": "to",
+      "start": 36.224,
+      "end": 36.294
+    },
+    {
+      "w": "do",
+      "start": 36.352,
+      "end": 36.41
+    },
+    {
+      "w": "what",
+      "start": 36.433,
+      "end": 36.538
+    },
+    {
+      "w": "the",
+      "start": 36.572,
+      "end": 36.642
+    },
+    {
+      "w": "law",
+      "start": 36.677,
+      "end": 36.805
+    },
+    {
+      "w": "required.",
+      "start": 36.863,
+      "end": 37.339
+    },
+    {
+      "w": "Nothing",
+      "start": 37.49,
+      "end": 37.78
+    },
+    {
+      "w": "about",
+      "start": 37.826,
+      "end": 38.024
+    },
+    {
+      "w": "it",
+      "start": 38.058,
+      "end": 38.117
+    },
+    {
+      "w": "looks",
+      "start": 38.14,
+      "end": 38.302
+    },
+    {
+      "w": "special.",
+      "start": 38.325,
+      "end": 38.802
+    },
+    {
+      "w": "And",
+      "start": 39.08,
+      "end": 39.208
+    },
+    {
+      "w": "Anna",
+      "start": 39.266,
+      "end": 39.452
+    },
+    {
+      "w": "comes",
+      "start": 39.498,
+      "end": 39.684
+    },
+    {
+      "w": "in",
+      "start": 39.719,
+      "end": 39.788
+    },
+    {
+      "w": "that",
+      "start": 39.823,
+      "end": 39.951
+    },
+    {
+      "w": "instant.",
+      "start": 39.997,
+      "end": 40.427
+    },
+    {
+      "w": "She",
+      "start": 40.578,
+      "end": 40.682
+    },
+    {
+      "w": "gives",
+      "start": 40.717,
+      "end": 40.88
+    },
+    {
+      "w": "thanks",
+      "start": 40.915,
+      "end": 41.124
+    },
+    {
+      "w": "to",
+      "start": 41.158,
+      "end": 41.216
+    },
+    {
+      "w": "God,",
+      "start": 41.263,
+      "end": 41.553
+    },
+    {
+      "w": "and",
+      "start": 41.588,
+      "end": 41.681
+    },
+    {
+      "w": "she",
+      "start": 41.727,
+      "end": 41.82
+    },
+    {
+      "w": "spake",
+      "start": 41.89,
+      "end": 42.157
+    },
+    {
+      "w": "of",
+      "start": 42.192,
+      "end": 42.238
+    },
+    {
+      "w": "him",
+      "start": 42.296,
+      "end": 42.401
+    },
+    {
+      "w": "to",
+      "start": 42.447,
+      "end": 42.505
+    },
+    {
+      "w": "all",
+      "start": 42.575,
+      "end": 42.691
+    },
+    {
+      "w": "them",
+      "start": 42.737,
+      "end": 42.876
+    },
+    {
+      "w": "that",
+      "start": 42.981,
+      "end": 43.143
+    },
+    {
+      "w": "looked",
+      "start": 43.19,
+      "end": 43.387
+    },
+    {
+      "w": "for",
+      "start": 43.422,
+      "end": 43.527
+    },
+    {
+      "w": "redemption",
+      "start": 43.573,
+      "end": 43.945
+    },
+    {
+      "w": "in",
+      "start": 43.979,
+      "end": 44.026
+    },
+    {
+      "w": "Jerusalem.",
+      "start": 44.072,
+      "end": 44.606
+    },
+    {
+      "w": "Decades",
+      "start": 44.711,
+      "end": 45.094
+    },
+    {
+      "w": "of",
+      "start": 45.129,
+      "end": 45.187
+    },
+    {
+      "w": "showing",
+      "start": 45.233,
+      "end": 45.477
+    },
+    {
+      "w": "up.",
+      "start": 45.535,
+      "end": 45.837
+    },
+    {
+      "w": "And",
+      "start": 46.278,
+      "end": 46.406
+    },
+    {
+      "w": "she",
+      "start": 46.452,
+      "end": 46.557
+    },
+    {
+      "w": "knew",
+      "start": 46.615,
+      "end": 46.743
+    },
+    {
+      "w": "him",
+      "start": 46.789,
+      "end": 46.87
+    },
+    {
+      "w": "immediately,",
+      "start": 46.905,
+      "end": 47.393
+    },
+    {
+      "w": "and",
+      "start": 47.428,
+      "end": 47.532
+    },
+    {
+      "w": "she",
+      "start": 47.567,
+      "end": 47.66
+    },
+    {
+      "w": "started",
+      "start": 47.695,
+      "end": 47.95
+    },
+    {
+      "w": "telling",
+      "start": 47.973,
+      "end": 48.194
+    },
+    {
+      "w": "everybody",
+      "start": 48.229,
+      "end": 48.531
+    },
+    {
+      "w": "who",
+      "start": 48.565,
+      "end": 48.658
+    },
+    {
+      "w": "would",
+      "start": 48.693,
+      "end": 48.821
+    },
+    {
+      "w": "listen.",
+      "start": 48.856,
+      "end": 49.25
+    },
+    {
+      "w": "Patience",
+      "start": 49.436,
+      "end": 49.866
+    },
+    {
+      "w": "is",
+      "start": 49.9,
+      "end": 49.97
+    },
+    {
+      "w": "not",
+      "start": 50.017,
+      "end": 50.144
     },
     {
       "w": "passivity.",
-      "start": 50.92,
-      "end": 51.594
+      "start": 50.179,
+      "end": 50.945
     }
   ],
-  "renderedAt": 1785313285615
+  "renderedAt": 1785322269159
 }

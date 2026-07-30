@@ -34,7 +34,8 @@
     "record:phase5": "bash scripts/record-e2e.sh phase5",
     "setup:railway": "bash scripts/setup-railway.sh",
     "verify:audio": "tsx --env-file-if-exists=.env scripts/verify-audio.ts",
-    "sync:durations": "tsx --env-file-if-exists=.env scripts/sync-durations.ts"
+    "sync:durations": "tsx --env-file-if-exists=.env scripts/sync-durations.ts",
+    "tea:ab": "tsx --env-file-if-exists=.env scripts/tea-voice-ab.ts"
   },
   "engines": {
     "node": ">=20"

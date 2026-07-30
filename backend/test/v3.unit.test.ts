@@ -21,8 +21,32 @@ describe('Tea catalog (v3)', () => {
     for (const t of TEAS) {
       assert.ok(t.image?.startsWith('/img/tea/'), `${t.id} image`);
       assert.ok(t.audioUrl?.includes('{teaId}') || t.audioUrl?.includes(t.id), `${t.id} audio`);
-      assert.ok(t.durationSeconds! >= 45 && t.durationSeconds! <= 70, `${t.id} duration`);
+      assert.ok(t.durationSeconds! >= 45 && t.durationSeconds! <= 80, `${t.id} duration`);
       assert.ok([1, 2, 3].includes(t.heat), `${t.id} heat`);
+    }
+  });
+
+  // Cards used to show the opening words of the narration, so the grid was a
+  // wall of truncated paragraphs. Every tea now carries its own short editorial
+  // title, and these are the rules that keep it a title rather than a sentence.
+  test('every tea has a 3 to 4 word card title', () => {
+    for (const t of TEAS) {
+      assert.ok(t.cardTitle, `${t.id} has no cardTitle`);
+      const words = t.cardTitle.trim().split(/\s+/);
+      assert.ok(
+        words.length >= 3 && words.length <= 4,
+        `${t.id} cardTitle is ${words.length} words: "${t.cardTitle}"`,
+      );
+      assert.ok(!/[.!?]$/.test(t.cardTitle), `${t.id} cardTitle ends like a sentence`);
+    }
+  });
+
+  test('card titles are unique and are not the opening of the narration', () => {
+    assert.equal(new Set(TEAS.map((t) => t.cardTitle)).size, TEAS.length, 'duplicate cardTitle');
+    for (const t of TEAS) {
+      const opener = `${t.hook} ${t.tea}`.trim().toLowerCase().replace(/[^a-z0-9 ]/g, '');
+      const title = t.cardTitle.toLowerCase().replace(/[^a-z0-9 ]/g, '');
+      assert.ok(!opener.startsWith(title), `${t.id} cardTitle just repeats the narration opening`);
     }
   });
 
@@ -30,21 +54,23 @@ describe('Tea catalog (v3)', () => {
   // word count is a real predictor of narration length, not a guess.
   const TEA_WPM = 217;
 
-  test('every tea narrates in 45 to 70 seconds', () => {
+  // V7 delivery: duration is allowed to run to ~80s rather than compromise the
+  // approved performance. Real durations are asserted by `npm run verify:audio`
+  // against the rendered files; this only guards the copy from drifting long.
+  test('every tea stays inside the copy-length budget', () => {
     for (const t of TEAS) {
       const words = `${t.hook} ${t.tea}`.trim().split(/\s+/).length;
-      const secs = (words / TEA_WPM) * 60;
-      assert.ok(secs >= 45 && secs <= 70, `${t.id} narrates in ~${secs.toFixed(0)}s (${words} words)`);
+      assert.ok(words >= 140 && words <= 300, `${t.id} is ${words} words`);
     }
   });
 
   // durationSeconds is reconciled against the real MP3 by `npm run sync:durations`,
   // and `npm run verify:audio` is the authoritative check. Here we only assert the
   // declared value stays inside the product band.
-  test('declared durationSeconds stays in the 45 to 70 second band', () => {
+  test('declared durationSeconds stays in the 45 to 80 second band', () => {
     for (const t of TEAS) {
       assert.ok(
-        t.durationSeconds! >= 45 && t.durationSeconds! <= 70,
+        t.durationSeconds! >= 45 && t.durationSeconds! <= 80,
         `${t.id} declares ${t.durationSeconds}s`,
       );
     }

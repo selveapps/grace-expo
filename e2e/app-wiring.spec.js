@@ -52,9 +52,13 @@ test.describe('Expo app — FE calls Grace API', () => {
     await expect(page.getByText(/John|Philippians|Psalm/i).first()).toBeVisible();
   });
 
-  test('Today tab loads /today/verse', async ({ page }) => {
+  // Today now reads the aggregate /today payload (verse, recommended reading and
+  // recommended story in one round trip) so its listen and continue cards have
+  // real data to point at. /today/verse remains the fallback when /today is
+  // unavailable, so either response satisfies "the tab got its verse from the API".
+  test('Today tab loads its verse from the API', async ({ page }) => {
     const verseRes = page.waitForResponse(
-      (res) => res.url().includes('/today/verse') && res.status() === 200,
+      (res) => /\/today(\/verse)?(\?|$)/.test(res.url()) && res.status() === 200,
       { timeout: 60_000 },
     );
     await waitForApp(page);

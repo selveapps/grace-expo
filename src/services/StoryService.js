@@ -98,6 +98,11 @@ export const StoryService = {
       return FALLBACK_STORIES.find((s) => s.id === id) || null;
     }
   },
+  /**
+   * Legacy on-demand LLM narrative. No screen calls this any more: display text
+   * comes from the render's sidecar via getTranscript, so nothing in the app
+   * triggers an OpenAI request. Retained only for the /ai route's own tests.
+   */
   async getNarrative(id, part = 1) {
     const { data } = await api.post(`/ai/stories/${id}/narrative`, { part }, LLM_REQUEST_OPTS);
     return data;

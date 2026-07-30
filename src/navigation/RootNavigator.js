@@ -21,14 +21,29 @@ import Tabs from './Tabs';
 
 const Stack = createNativeStackNavigator();
 
-// The onboarding flow is a single stack that ends by replacing into the tab app.
+// The onboarding flow is a single stack that ends by navigating into the tab app.
 // Returning users (profile.onboarded persisted) skip straight to the app.
+//
+// This used to carry `key={profile.onboarded ? 'app' : 'onboarding'}` and treat
+// that remount as the only way into the app. It does not work. React Navigation
+// rebuilds a remounted navigator from the existing state whenever the route
+// names still match, and they always match here because it is one stack with a
+// fixed screen list. So `initialRouteName` was ignored, the stack was restored
+// with Paywall still on top, and flipping `onboarded` left the user looking at
+// the screen they had just finished with: the "same screen pops up" report.
+//
+// `initialRouteName` now only decides where a COLD start begins. Moving into the
+// app mid-session is an explicit navigation.reset by the screen that earns it
+// (Paywall's soft exit, Confirmation's Enter Grace). Dropping the key also drops
+// a full remount of the tab tree, which is what made Enter Grace feel slow.
 export default function RootNavigator() {
   const { profile, hydrated } = useProfile();
   if (!hydrated) return null; // wait for AsyncStorage so we don't flash onboarding
   return (
     <Stack.Navigator
-      key={profile.onboarded ? 'app' : 'onboarding'}
+      // Named so a deeply nested screen (Settings, inside You, inside Tabs) can
+      // reach the root to send the user back to onboarding after a sign-out.
+      id="root"
       screenOptions={{ headerShown: false, animation: 'fade', contentStyle: { backgroundColor: '#F7F3EC' } }}
       initialRouteName={profile.onboarded ? 'App' : 'Splash'}
     >

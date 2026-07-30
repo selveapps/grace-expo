@@ -1,5 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import { View, Text, StyleSheet, Pressable } from 'react-native';
+import { useFocusEffect } from '@react-navigation/native';
 import { Audio } from 'expo-av';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
@@ -43,7 +44,18 @@ export default function StoriesPreviewScreen({ navigation }) {
   const [position, setPosition] = useState(0);
   const [duration, setDuration] = useState(0);
 
-  useEffect(() => () => { soundRef.current?.unloadAsync().catch(() => {}); }, []);
+  const stop = useCallback(async () => {
+    const snd = soundRef.current;
+    soundRef.current = null;
+    setNowPlaying(null);
+    setPosition(0);
+    if (snd) await snd.unloadAsync().catch(() => {});
+  }, []);
+
+  // A native stack keeps this screen mounted when you advance, so unmount
+  // cleanup never ran and the preview kept playing over the next screen. Stop on
+  // blur instead, which also covers swiping back to it in a known-idle state.
+  useFocusEffect(useCallback(() => () => { stop(); }, [stop]));
 
   const onStatus = (s) => {
     if (!s.isLoaded) return;

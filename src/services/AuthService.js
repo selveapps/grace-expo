@@ -46,8 +46,11 @@ export const AuthService = {
   // Real Sign in with Apple. Needs a dev/production build; unavailable in Expo Go.
   async signInWithApple() {
     if (!(await this.isAppleAvailable())) {
-      // Expo Go / non-iOS — keep the old link-by-email behaviour so the flow works.
-      return this._linkProvider('apple', 'you@icloud.com');
+      // This used to fall back to linking a hardcoded 'you@icloud.com' to the
+      // guest account and report success, so Expo Go looked signed in while no
+      // authentication had happened and a fabricated address sat on the profile.
+      // Say what is true instead; the email path still works everywhere.
+      return { ok: false, error: 'apple_unavailable' };
     }
 
     // Nonce guards against replay: the raw value goes to Apple, its SHA-256 to us.
@@ -107,11 +110,38 @@ export const AuthService = {
     return { ok: true };
   },
 
-  // Google sign-in still links email to the guest account on the server until
-  // native Google OAuth lands (M11).
-  async signInWithGoogle() { return this._linkProvider('google', 'you@gmail.com'); },
-  async signInWithEmail(email) { return this._linkProvider('email', email || 'you@email.com'); },
+  // NO GOOGLE SIGN-IN.
+  //
+  // `signInWithGoogle` used to exist here and did not sign anyone in to Google:
+  // it PATCHed a hardcoded 'you@gmail.com' onto the guest account and returned
+  // success, while the UI showed a Google mark and "Continue with Google". Real
+  // OAuth needs three things this project does not have yet: iOS + web OAuth
+  // client IDs from Google Cloud, a native module (so a new build, not Expo Go),
+  // and a server route that verifies the Google ID token against Google's JWKS
+  // the way /auth/apple already does. Until those exist there is no honest
+  // Google button to show, so there is no method here to call.
 
+  /**
+   * Saves the address she typed against her account so her library follows her.
+   * This is NOT a verified identity: nothing is sent to that inbox and nothing
+   * is checked. The UI must describe it as remembering an email, never as
+   * signing in or authenticating.
+   */
+  async signInWithEmail(email) {
+    const clean = String(email || '').trim();
+    // No hardcoded placeholder address: an empty field is a failure, not a
+    // silent 'you@email.com' written onto the profile.
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(clean)) return { ok: false, error: 'invalid_email' };
+    return this._linkProvider('email', clean);
+  },
+
+  /**
+   * NOT an onboarding path. This only ensures a guest token exists for API
+   * calls; it is not evidence that anyone signed in, and it must never be wired
+   * to a control that advances onboarding. The sign-in step used to call it
+   * behind a "Skip for now" CTA, which let people past the gate. `ensureGuest`
+   * already runs at boot, so nothing needs this today.
+   */
   async continueAsGuest() {
     await this.ensureGuest().catch(() => {});
     return { ok: true };
@@ -130,8 +160,8 @@ export const AuthService = {
     }
   },
 
-  async linkGuestAccount(provider) {
-    return provider === 'google' ? this.signInWithGoogle() : this.signInWithApple();
+  async linkGuestAccount() {
+    return this.signInWithApple();
   },
 
   async signOut() {

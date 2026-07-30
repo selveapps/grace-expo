@@ -17,6 +17,15 @@ export default function SettingsScreen({ navigation }) {
   const { resetProfile } = useProfile();
   const [deleting, setDeleting] = useState(false);
 
+  // Clearing the profile no longer moves anyone on its own. The root navigator
+  // used to be keyed on `profile.onboarded`, and that remount was supposed to
+  // drop a signed-out user back into onboarding; it never actually did, because
+  // React Navigation restores a remounted stack whose route names are unchanged.
+  // Sending her back is now explicit.
+  const toOnboarding = () => {
+    navigation.getParent('root')?.reset({ index: 0, routes: [{ name: 'Splash' }] });
+  };
+
   const open = (url) => Linking.openURL(url).catch(() => {
     Alert.alert("Couldn't open that link", 'Please check your connection and try again.');
   });
@@ -34,7 +43,15 @@ export default function SettingsScreen({ navigation }) {
   const signOut = () => {
     Alert.alert('Sign out?', "I'll keep your place for when you return.", [
       { text: 'Cancel', style: 'cancel' },
-      { text: 'Sign out', style: 'destructive', onPress: async () => { await StorageService.clearUserData(); resetProfile && resetProfile(); } },
+      {
+        text: 'Sign out',
+        style: 'destructive',
+        onPress: async () => {
+          await StorageService.clearUserData();
+          resetProfile && resetProfile();
+          toOnboarding();
+        },
+      },
     ]);
   };
 
@@ -56,6 +73,7 @@ export default function SettingsScreen({ navigation }) {
             setDeleting(false);
             if (res.ok) {
               resetProfile && resetProfile();
+              toOnboarding();
             } else {
               Alert.alert("I couldn't delete your account just now", 'Please try again in a moment.');
             }

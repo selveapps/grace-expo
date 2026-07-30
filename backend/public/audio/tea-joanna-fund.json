@@ -1,866 +1,824 @@
 {
   "kind": "tea",
   "teaId": "joanna-fund",
-  "mood": "dark",
-  "heat": 2,
-  "text": "Wealthy women funded the entire ministry. Luke chapter eight, and it is three verses that get skipped constantly. Jesus is going throughout every city and village preaching, and the twelve are with him. And then Luke says, and certain women, which had been healed of evil spirits and infirmities. He names them. Mary called Magdalene, out of whom went seven devils. And Joanna the wife of Chuza, Herod's steward. Stop on that one. Herod's steward. That is a household manager inside the royal court, which means Joanna had access and money and a great deal to lose. And Susanna. And many others. And then the line. Which ministered unto him of their substance. Their substance. Their own resources. The most famous ministry in history was underwritten by a group of women, one of them connected to the court of the king who had John the Baptist killed. Luke names them on purpose. He did not have to. He wanted somebody three thousand years later to know exactly who paid for it.",
+  "text": "The most famous ministry in history was funded by women, and Luke names them on purpose.\n\nLuke chapter eight. Three verses that get skipped constantly.\n\nJesus is going through every city and village preaching, and the twelve are with him. Standard. And then Luke adds, \"And certain women, which had been healed of evil spirits and infirmities.\"\n\nAnd he names them.\n\nMary called Magdalene, out of whom went seven devils. Joanna. Susanna. And many others.\n\nStop on Joanna for a second, because Luke drops her job title like it's nothing. \"Joanna the wife of Chuza Herod's steward.\"\n\nHerod's steward. That is a household manager inside the royal court. Which means Joanna had access, money, and an enormous amount to lose by being here.\n\nAnd then the line. \"Which ministered unto him of their substance.\"\n\nTheir substance. Their own resources.\n\nLuke did not have to write any of that down. He wanted somebody two thousand years later to know exactly who paid for it.",
   "voice": "FGY2WhTYpPnrIDTdsKH5",
   "words": [
     {
-      "w": "Wealthy",
-      "start": 0,
-      "end": 0.29
-    },
-    {
-      "w": "women",
-      "start": 0.337,
-      "end": 0.546
-    },
-    {
-      "w": "funded",
-      "start": 0.58,
-      "end": 0.801
-    },
-    {
-      "w": "the",
-      "start": 0.836,
-      "end": 0.906
-    },
-    {
-      "w": "entire",
-      "start": 0.952,
-      "end": 1.289
-    },
-    {
-      "w": "ministry.",
-      "start": 1.324,
-      "end": 1.892
-    },
-    {
-      "w": "Luke",
-      "start": 2.101,
-      "end": 2.345
-    },
-    {
-      "w": "chapter",
-      "start": 2.368,
-      "end": 2.647
-    },
-    {
-      "w": "eight,",
-      "start": 2.717,
-      "end": 3.03
-    },
-    {
-      "w": "and",
-      "start": 3.123,
-      "end": 3.239
-    },
-    {
-      "w": "it",
-      "start": 3.297,
-      "end": 3.367
-    },
-    {
-      "w": "is",
-      "start": 3.425,
-      "end": 3.541
-    },
-    {
-      "w": "three",
-      "start": 3.599,
-      "end": 3.785
-    },
-    {
-      "w": "verses",
-      "start": 3.831,
-      "end": 4.156
-    },
-    {
-      "w": "that",
-      "start": 4.191,
-      "end": 4.307
-    },
-    {
-      "w": "get",
-      "start": 4.354,
-      "end": 4.458
-    },
-    {
-      "w": "skipped",
-      "start": 4.505,
-      "end": 4.748
-    },
-    {
-      "w": "constantly.",
-      "start": 4.795,
-      "end": 5.422
-    },
-    {
-      "w": "Jesus",
-      "start": 5.55,
-      "end": 5.84
-    },
-    {
-      "w": "is",
-      "start": 5.886,
-      "end": 5.956
-    },
-    {
-      "w": "going",
-      "start": 6.002,
-      "end": 6.2
-    },
-    {
-      "w": "throughout",
-      "start": 6.235,
-      "end": 6.548
-    },
-    {
-      "w": "every",
-      "start": 6.629,
-      "end": 6.873
-    },
-    {
-      "w": "city",
-      "start": 6.943,
-      "end": 7.21
-    },
-    {
-      "w": "and",
-      "start": 7.268,
-      "end": 7.361
-    },
-    {
-      "w": "village",
-      "start": 7.407,
-      "end": 7.651
-    },
-    {
-      "w": "preaching,",
-      "start": 7.686,
-      "end": 8.173
-    },
-    {
-      "w": "and",
-      "start": 8.382,
-      "end": 8.499
-    },
-    {
-      "w": "the",
-      "start": 8.533,
-      "end": 8.603
-    },
-    {
-      "w": "twelve",
-      "start": 8.638,
-      "end": 8.916
-    },
-    {
-      "w": "are",
-      "start": 8.94,
-      "end": 9.044
-    },
-    {
-      "w": "with",
-      "start": 9.079,
-      "end": 9.218
-    },
-    {
-      "w": "him.",
-      "start": 9.253,
-      "end": 9.509
-    },
-    {
-      "w": "And",
-      "start": 10.019,
-      "end": 10.147
-    },
-    {
-      "w": "then",
-      "start": 10.182,
-      "end": 10.298
-    },
-    {
-      "w": "Luke",
-      "start": 10.356,
-      "end": 10.553
-    },
-    {
-      "w": "says,",
-      "start": 10.588,
-      "end": 11.099
-    },
-    {
-      "w": "and",
-      "start": 11.331,
-      "end": 11.471
-    },
-    {
-      "w": "certain",
-      "start": 11.529,
-      "end": 11.796
-    },
-    {
-      "w": "women,",
-      "start": 11.843,
-      "end": 12.237
-    },
-    {
-      "w": "which",
-      "start": 12.33,
-      "end": 12.493
-    },
-    {
-      "w": "had",
-      "start": 12.528,
-      "end": 12.597
-    },
-    {
-      "w": "been",
-      "start": 12.632,
-      "end": 12.748
-    },
-    {
-      "w": "healed",
-      "start": 12.783,
-      "end": 12.969
-    },
-    {
-      "w": "of",
-      "start": 12.992,
-      "end": 13.05
-    },
-    {
-      "w": "evil",
-      "start": 13.108,
-      "end": 13.317
-    },
-    {
-      "w": "spirits",
-      "start": 13.363,
-      "end": 13.712
-    },
-    {
-      "w": "and",
-      "start": 13.747,
-      "end": 13.828
-    },
-    {
-      "w": "infirmities.",
-      "start": 13.863,
-      "end": 14.548
-    },
-    {
-      "w": "He",
-      "start": 14.78,
-      "end": 14.861
-    },
-    {
-      "w": "names",
-      "start": 14.919,
-      "end": 15.105
-    },
-    {
-      "w": "them.",
-      "start": 15.14,
-      "end": 15.453
-    },
-    {
-      "w": "Mary",
-      "start": 15.732,
-      "end": 15.952
-    },
-    {
-      "w": "called",
-      "start": 16.011,
-      "end": 16.208
-    },
-    {
-      "w": "Magdalene,",
-      "start": 16.243,
-      "end": 16.8
-    },
-    {
-      "w": "out",
-      "start": 16.87,
-      "end": 17.009
-    },
-    {
-      "w": "of",
-      "start": 17.044,
-      "end": 17.09
-    },
-    {
-      "w": "whom",
-      "start": 17.125,
-      "end": 17.264
-    },
-    {
-      "w": "went",
-      "start": 17.311,
-      "end": 17.485
-    },
-    {
-      "w": "seven",
-      "start": 17.543,
-      "end": 17.775
-    },
-    {
-      "w": "devils.",
-      "start": 17.822,
-      "end": 18.367
-    },
-    {
-      "w": "And",
-      "start": 18.646,
-      "end": 18.89
-    },
-    {
-      "w": "Joanna",
-      "start": 18.948,
-      "end": 19.296
-    },
-    {
-      "w": "the",
-      "start": 19.354,
-      "end": 19.424
-    },
-    {
-      "w": "wife",
-      "start": 19.47,
-      "end": 19.679
-    },
-    {
-      "w": "of",
-      "start": 19.714,
-      "end": 19.772
-    },
-    {
-      "w": "Chuza,",
-      "start": 19.819,
-      "end": 20.295
-    },
-    {
-      "w": "Herod's",
-      "start": 20.341,
-      "end": 20.643
-    },
-    {
-      "w": "steward.",
-      "start": 20.666,
-      "end": 21.084
-    },
-    {
-      "w": "Stop",
-      "start": 21.177,
-      "end": 21.409
-    },
-    {
-      "w": "on",
-      "start": 21.467,
-      "end": 21.514
-    },
-    {
-      "w": "that",
-      "start": 21.548,
-      "end": 21.676
-    },
-    {
-      "w": "one.",
-      "start": 21.723,
-      "end": 22.036
-    },
-    {
-      "w": "Herod's",
-      "start": 22.466,
-      "end": 22.768
-    },
-    {
-      "w": "steward.",
-      "start": 22.791,
-      "end": 23.209
-    },
-    {
-      "w": "That",
-      "start": 23.36,
-      "end": 23.534
-    },
-    {
-      "w": "is",
-      "start": 23.569,
-      "end": 23.638
-    },
-    {
-      "w": "a",
-      "start": 23.684,
-      "end": 23.708
-    },
-    {
-      "w": "household",
-      "start": 23.754,
-      "end": 24.102
-    },
-    {
-      "w": "manager",
-      "start": 24.149,
-      "end": 24.451
-    },
-    {
-      "w": "inside",
-      "start": 24.486,
-      "end": 24.718
-    },
-    {
-      "w": "the",
-      "start": 24.741,
-      "end": 24.811
-    },
-    {
-      "w": "royal",
-      "start": 24.845,
-      "end": 25.043
-    },
-    {
-      "w": "court,",
-      "start": 25.089,
-      "end": 25.368
-    },
-    {
-      "w": "which",
-      "start": 25.403,
-      "end": 25.6
-    },
-    {
-      "w": "means",
-      "start": 25.67,
-      "end": 25.925
-    },
-    {
-      "w": "Joanna",
-      "start": 25.972,
-      "end": 26.239
-    },
-    {
-      "w": "had",
-      "start": 26.273,
-      "end": 26.39
-    },
-    {
-      "w": "access",
-      "start": 26.459,
-      "end": 26.877
-    },
-    {
-      "w": "and",
-      "start": 26.912,
-      "end": 26.993
-    },
-    {
-      "w": "money",
-      "start": 27.04,
-      "end": 27.272
-    },
-    {
-      "w": "and",
-      "start": 27.342,
-      "end": 27.527
-    },
-    {
-      "w": "a",
-      "start": 27.574,
-      "end": 27.597
-    },
-    {
-      "w": "great",
-      "start": 27.667,
-      "end": 27.876
-    },
-    {
-      "w": "deal",
-      "start": 27.922,
-      "end": 28.073
-    },
-    {
-      "w": "to",
-      "start": 28.119,
-      "end": 28.189
-    },
-    {
-      "w": "lose.",
-      "start": 28.247,
-      "end": 28.735
-    },
-    {
-      "w": "And",
-      "start": 29.327,
-      "end": 29.582
-    },
-    {
-      "w": "Susanna.",
-      "start": 29.629,
-      "end": 30.244
-    },
-    {
-      "w": "And",
-      "start": 30.755,
-      "end": 30.894
-    },
-    {
-      "w": "many",
-      "start": 30.941,
-      "end": 31.08
-    },
-    {
-      "w": "others.",
-      "start": 31.126,
-      "end": 31.521
-    },
-    {
-      "w": "And",
-      "start": 31.649,
-      "end": 31.788
-    },
-    {
-      "w": "then",
-      "start": 31.846,
-      "end": 32.09
-    },
-    {
-      "w": "the",
-      "start": 32.218,
-      "end": 32.334
-    },
-    {
-      "w": "line.",
-      "start": 32.404,
-      "end": 32.821
-    },
-    {
-      "w": "Which",
-      "start": 32.914,
-      "end": 33.1
-    },
-    {
-      "w": "ministered",
-      "start": 33.158,
-      "end": 33.541
-    },
-    {
-      "w": "unto",
-      "start": 33.576,
-      "end": 33.75
-    },
-    {
-      "w": "him",
-      "start": 33.832,
-      "end": 33.994
-    },
-    {
-      "w": "of",
-      "start": 34.041,
-      "end": 34.099
-    },
-    {
-      "w": "their",
-      "start": 34.133,
-      "end": 34.296
-    },
-    {
-      "w": "substance.",
-      "start": 34.342,
-      "end": 34.993
-    },
-    {
-      "w": "Their",
-      "start": 35.202,
-      "end": 35.376
-    },
-    {
-      "w": "substance.",
-      "start": 35.411,
-      "end": 36.061
-    },
-    {
-      "w": "Their",
-      "start": 36.432,
-      "end": 36.607
-    },
-    {
-      "w": "own",
-      "start": 36.642,
-      "end": 36.746
-    },
-    {
-      "w": "resources.",
-      "start": 36.804,
-      "end": 37.605
-    },
-    {
       "w": "The",
-      "start": 37.884,
-      "end": 37.977
+      "start": 0,
+      "end": 0.151
     },
     {
       "w": "most",
-      "start": 38.012,
-      "end": 38.151
+      "start": 0.186,
+      "end": 0.337
     },
     {
       "w": "famous",
-      "start": 38.186,
-      "end": 38.441
+      "start": 0.372,
+      "end": 0.615
     },
     {
       "w": "ministry",
-      "start": 38.476,
-      "end": 38.755
+      "start": 0.662,
+      "end": 0.952
     },
     {
       "w": "in",
-      "start": 38.778,
-      "end": 38.824
+      "start": 0.975,
+      "end": 1.022
     },
     {
       "w": "history",
-      "start": 38.871,
-      "end": 39.173
+      "start": 1.057,
+      "end": 1.347
     },
     {
       "w": "was",
-      "start": 39.231,
-      "end": 39.335
+      "start": 1.416,
+      "end": 1.521
     },
     {
-      "w": "underwritten",
-      "start": 39.382,
-      "end": 39.788
+      "w": "funded",
+      "start": 1.591,
+      "end": 1.892
     },
     {
       "w": "by",
-      "start": 39.834,
-      "end": 39.939
-    },
-    {
-      "w": "a",
-      "start": 39.974,
-      "end": 39.997
-    },
-    {
-      "w": "group",
-      "start": 40.032,
-      "end": 40.206
-    },
-    {
-      "w": "of",
-      "start": 40.241,
-      "end": 40.299
+      "start": 1.927,
+      "end": 2.032
     },
     {
       "w": "women,",
-      "start": 40.38,
-      "end": 40.81
+      "start": 2.136,
+      "end": 2.554
     },
     {
-      "w": "one",
-      "start": 41.019,
-      "end": 41.17
-    },
-    {
-      "w": "of",
-      "start": 41.204,
-      "end": 41.251
-    },
-    {
-      "w": "them",
-      "start": 41.286,
-      "end": 41.425
-    },
-    {
-      "w": "connected",
-      "start": 41.483,
-      "end": 41.796
-    },
-    {
-      "w": "to",
-      "start": 41.831,
-      "end": 41.878
-    },
-    {
-      "w": "the",
-      "start": 41.913,
-      "end": 41.982
-    },
-    {
-      "w": "court",
-      "start": 42.017,
-      "end": 42.191
-    },
-    {
-      "w": "of",
-      "start": 42.214,
-      "end": 42.272
-    },
-    {
-      "w": "the",
-      "start": 42.307,
-      "end": 42.377
-    },
-    {
-      "w": "king",
-      "start": 42.412,
-      "end": 42.656
-    },
-    {
-      "w": "who",
-      "start": 42.714,
-      "end": 42.818
-    },
-    {
-      "w": "had",
-      "start": 42.876,
-      "end": 42.992
-    },
-    {
-      "w": "John",
-      "start": 43.05,
-      "end": 43.213
-    },
-    {
-      "w": "the",
-      "start": 43.248,
-      "end": 43.317
-    },
-    {
-      "w": "Baptist",
-      "start": 43.352,
-      "end": 43.642
-    },
-    {
-      "w": "killed.",
-      "start": 43.677,
-      "end": 44.095
+      "w": "and",
+      "start": 2.705,
+      "end": 2.856
     },
     {
       "w": "Luke",
-      "start": 44.327,
-      "end": 44.56
+      "start": 2.902,
+      "end": 3.123
     },
     {
       "w": "names",
-      "start": 44.594,
-      "end": 44.78
+      "start": 3.158,
+      "end": 3.367
     },
     {
       "w": "them",
-      "start": 44.815,
-      "end": 44.943
+      "start": 3.402,
+      "end": 3.529
     },
     {
       "w": "on",
-      "start": 44.989,
-      "end": 45.059
+      "start": 3.576,
+      "end": 3.646
     },
     {
       "w": "purpose.",
-      "start": 45.117,
-      "end": 45.709
+      "start": 3.692,
+      "end": 4.238
     },
     {
-      "w": "He",
-      "start": 45.918,
-      "end": 45.999
+      "w": "Luke",
+      "start": 4.423,
+      "end": 4.644
     },
     {
-      "w": "did",
-      "start": 46.034,
-      "end": 46.139
+      "w": "chapter",
+      "start": 4.679,
+      "end": 4.969
     },
     {
-      "w": "not",
-      "start": 46.173,
-      "end": 46.266
+      "w": "eight.",
+      "start": 5.039,
+      "end": 5.422
     },
     {
-      "w": "have",
-      "start": 46.301,
-      "end": 46.452
+      "w": "Three",
+      "start": 5.666,
+      "end": 5.875
     },
     {
-      "w": "to.",
-      "start": 46.487,
-      "end": 46.777
+      "w": "verses",
+      "start": 5.909,
+      "end": 6.258
     },
     {
-      "w": "He",
-      "start": 47.009,
-      "end": 47.102
+      "w": "that",
+      "start": 6.293,
+      "end": 6.409
     },
     {
-      "w": "wanted",
-      "start": 47.149,
-      "end": 47.358
+      "w": "get",
+      "start": 6.455,
+      "end": 6.571
     },
     {
-      "w": "somebody",
-      "start": 47.392,
-      "end": 47.706
+      "w": "skipped",
+      "start": 6.606,
+      "end": 6.838
     },
     {
-      "w": "three",
-      "start": 47.764,
-      "end": 47.961
+      "w": "constantly.",
+      "start": 6.873,
+      "end": 7.535
     },
     {
-      "w": "thousand",
-      "start": 47.996,
-      "end": 48.286
+      "w": "Jesus",
+      "start": 7.686,
+      "end": 8.034
     },
     {
-      "w": "years",
-      "start": 48.321,
-      "end": 48.495
+      "w": "is",
+      "start": 8.092,
+      "end": 8.162
     },
     {
-      "w": "later",
-      "start": 48.53,
-      "end": 48.728
+      "w": "going",
+      "start": 8.197,
+      "end": 8.371
     },
     {
-      "w": "to",
-      "start": 48.797,
-      "end": 48.867
+      "w": "through",
+      "start": 8.406,
+      "end": 8.591
     },
     {
-      "w": "know",
-      "start": 48.902,
-      "end": 48.995
+      "w": "every",
+      "start": 8.649,
+      "end": 8.882
     },
     {
-      "w": "exactly",
-      "start": 49.041,
-      "end": 49.471
+      "w": "city",
+      "start": 8.94,
+      "end": 9.183
     },
     {
-      "w": "who",
-      "start": 49.517,
-      "end": 49.61
+      "w": "and",
+      "start": 9.23,
+      "end": 9.323
     },
     {
-      "w": "paid",
-      "start": 49.656,
-      "end": 49.807
+      "w": "village",
+      "start": 9.369,
+      "end": 9.625
+    },
+    {
+      "w": "preaching,",
+      "start": 9.66,
+      "end": 10.136
+    },
+    {
+      "w": "and",
+      "start": 10.263,
+      "end": 10.379
+    },
+    {
+      "w": "the",
+      "start": 10.414,
+      "end": 10.484
+    },
+    {
+      "w": "twelve",
+      "start": 10.519,
+      "end": 10.786
+    },
+    {
+      "w": "are",
+      "start": 10.821,
+      "end": 10.937
+    },
+    {
+      "w": "with",
+      "start": 10.972,
+      "end": 11.111
+    },
+    {
+      "w": "him.",
+      "start": 11.146,
+      "end": 11.494
+    },
+    {
+      "w": "Standard.",
+      "start": 11.773,
+      "end": 12.353
+    },
+    {
+      "w": "And",
+      "start": 12.481,
+      "end": 12.62
+    },
+    {
+      "w": "then",
+      "start": 12.655,
+      "end": 12.771
+    },
+    {
+      "w": "Luke",
+      "start": 12.818,
+      "end": 13.027
+    },
+    {
+      "w": "adds,",
+      "start": 13.061,
+      "end": 13.537
+    },
+    {
+      "w": "\"And",
+      "start": 13.979,
+      "end": 14.42
+    },
+    {
+      "w": "certain",
+      "start": 14.524,
+      "end": 14.815
+    },
+    {
+      "w": "women,",
+      "start": 14.849,
+      "end": 15.279
+    },
+    {
+      "w": "which",
+      "start": 15.325,
+      "end": 15.534
+    },
+    {
+      "w": "had",
+      "start": 15.592,
+      "end": 15.743
+    },
+    {
+      "w": "been",
+      "start": 15.778,
+      "end": 15.918
+    },
+    {
+      "w": "healed",
+      "start": 15.952,
+      "end": 16.15
+    },
+    {
+      "w": "of",
+      "start": 16.185,
+      "end": 16.243
+    },
+    {
+      "w": "evil",
+      "start": 16.37,
+      "end": 16.602
+    },
+    {
+      "w": "spirits",
+      "start": 16.649,
+      "end": 17.148
+    },
+    {
+      "w": "and",
+      "start": 17.276,
+      "end": 17.555
+    },
+    {
+      "w": "infirmities.\"",
+      "start": 17.636,
+      "end": 18.507
+    },
+    {
+      "w": "And",
+      "start": 18.948,
+      "end": 19.064
+    },
+    {
+      "w": "he",
+      "start": 19.099,
+      "end": 19.157
+    },
+    {
+      "w": "names",
+      "start": 19.215,
+      "end": 19.412
+    },
+    {
+      "w": "them.",
+      "start": 19.447,
+      "end": 19.726
+    },
+    {
+      "w": "Mary",
+      "start": 20.051,
+      "end": 20.248
+    },
+    {
+      "w": "called",
+      "start": 20.283,
+      "end": 20.48
+    },
+    {
+      "w": "Magdalene,",
+      "start": 20.515,
+      "end": 21.107
+    },
+    {
+      "w": "out",
+      "start": 21.177,
+      "end": 21.305
+    },
+    {
+      "w": "of",
+      "start": 21.339,
+      "end": 21.386
+    },
+    {
+      "w": "whom",
+      "start": 21.421,
+      "end": 21.56
+    },
+    {
+      "w": "went",
+      "start": 21.595,
+      "end": 21.746
+    },
+    {
+      "w": "seven",
+      "start": 21.815,
+      "end": 22.059
+    },
+    {
+      "w": "devils.",
+      "start": 22.094,
+      "end": 22.663
+    },
+    {
+      "w": "Joanna.",
+      "start": 22.872,
+      "end": 23.278
+    },
+    {
+      "w": "Susanna.",
+      "start": 23.313,
+      "end": 23.87
+    },
+    {
+      "w": "And",
+      "start": 23.998,
+      "end": 24.126
+    },
+    {
+      "w": "many",
+      "start": 24.161,
+      "end": 24.312
+    },
+    {
+      "w": "others.",
+      "start": 24.346,
+      "end": 24.834
+    },
+    {
+      "w": "Stop",
+      "start": 25.438,
+      "end": 25.786
+    },
+    {
+      "w": "on",
+      "start": 25.856,
+      "end": 25.995
+    },
+    {
+      "w": "Joanna",
+      "start": 26.065,
+      "end": 26.425
     },
     {
       "w": "for",
-      "start": 49.842,
-      "end": 49.947
+      "start": 26.483,
+      "end": 26.587
+    },
+    {
+      "w": "a",
+      "start": 26.622,
+      "end": 26.657
+    },
+    {
+      "w": "second,",
+      "start": 26.715,
+      "end": 27.133
+    },
+    {
+      "w": "because",
+      "start": 27.156,
+      "end": 27.435
+    },
+    {
+      "w": "Luke",
+      "start": 27.481,
+      "end": 27.69
+    },
+    {
+      "w": "drops",
+      "start": 27.713,
+      "end": 27.969
+    },
+    {
+      "w": "her",
+      "start": 28.004,
+      "end": 28.085
+    },
+    {
+      "w": "job",
+      "start": 28.131,
+      "end": 28.317
+    },
+    {
+      "w": "title",
+      "start": 28.352,
+      "end": 28.607
+    },
+    {
+      "w": "like",
+      "start": 28.642,
+      "end": 28.781
+    },
+    {
+      "w": "it's",
+      "start": 28.816,
+      "end": 28.944
+    },
+    {
+      "w": "nothing.",
+      "start": 29.072,
+      "end": 29.606
+    },
+    {
+      "w": "\"Joanna",
+      "start": 29.85,
+      "end": 30.256
+    },
+    {
+      "w": "the",
+      "start": 30.302,
+      "end": 30.372
+    },
+    {
+      "w": "wife",
+      "start": 30.407,
+      "end": 30.604
+    },
+    {
+      "w": "of",
+      "start": 30.639,
+      "end": 30.709
+    },
+    {
+      "w": "Chuza",
+      "start": 30.813,
+      "end": 31.243
+    },
+    {
+      "w": "Herod's",
+      "start": 31.312,
+      "end": 31.661
+    },
+    {
+      "w": "steward.\"",
+      "start": 31.696,
+      "end": 32.322
+    },
+    {
+      "w": "Herod's",
+      "start": 32.706,
+      "end": 33.089
+    },
+    {
+      "w": "steward.",
+      "start": 33.112,
+      "end": 33.518
+    },
+    {
+      "w": "That",
+      "start": 33.6,
+      "end": 33.774
+    },
+    {
+      "w": "is",
+      "start": 33.809,
+      "end": 33.878
+    },
+    {
+      "w": "a",
+      "start": 33.913,
+      "end": 33.948
+    },
+    {
+      "w": "household",
+      "start": 33.994,
+      "end": 34.331
+    },
+    {
+      "w": "manager",
+      "start": 34.389,
+      "end": 34.668
+    },
+    {
+      "w": "inside",
+      "start": 34.703,
+      "end": 34.97
+    },
+    {
+      "w": "the",
+      "start": 35.004,
+      "end": 35.074
+    },
+    {
+      "w": "royal",
+      "start": 35.12,
+      "end": 35.329
+    },
+    {
+      "w": "court.",
+      "start": 35.388,
+      "end": 35.782
+    },
+    {
+      "w": "Which",
+      "start": 36.026,
+      "end": 36.2
+    },
+    {
+      "w": "means",
+      "start": 36.247,
+      "end": 36.421
+    },
+    {
+      "w": "Joanna",
+      "start": 36.479,
+      "end": 36.792
+    },
+    {
+      "w": "had",
+      "start": 36.839,
+      "end": 36.943
+    },
+    {
+      "w": "access,",
+      "start": 36.99,
+      "end": 37.512
+    },
+    {
+      "w": "money,",
+      "start": 37.593,
+      "end": 38
+    },
+    {
+      "w": "and",
+      "start": 38.046,
+      "end": 38.185
+    },
+    {
+      "w": "an",
+      "start": 38.244,
+      "end": 38.302
+    },
+    {
+      "w": "enormous",
+      "start": 38.36,
+      "end": 38.801
+    },
+    {
+      "w": "amount",
+      "start": 38.836,
+      "end": 39.068
+    },
+    {
+      "w": "to",
+      "start": 39.103,
+      "end": 39.149
+    },
+    {
+      "w": "lose",
+      "start": 39.219,
+      "end": 39.393
+    },
+    {
+      "w": "by",
+      "start": 39.428,
+      "end": 39.509
+    },
+    {
+      "w": "being",
+      "start": 39.567,
+      "end": 39.764
+    },
+    {
+      "w": "here.",
+      "start": 39.822,
+      "end": 40.217
+    },
+    {
+      "w": "And",
+      "start": 40.6,
+      "end": 40.728
+    },
+    {
+      "w": "then",
+      "start": 40.774,
+      "end": 40.902
+    },
+    {
+      "w": "the",
+      "start": 40.949,
+      "end": 41.018
+    },
+    {
+      "w": "line.",
+      "start": 41.076,
+      "end": 41.459
+    },
+    {
+      "w": "\"Which",
+      "start": 41.901,
+      "end": 42.203
+    },
+    {
+      "w": "ministered",
+      "start": 42.272,
+      "end": 42.62
+    },
+    {
+      "w": "unto",
+      "start": 42.655,
+      "end": 42.829
+    },
+    {
+      "w": "him",
+      "start": 42.888,
+      "end": 43.085
+    },
+    {
+      "w": "of",
+      "start": 43.189,
+      "end": 43.294
+    },
+    {
+      "w": "their",
+      "start": 43.329,
+      "end": 43.48
+    },
+    {
+      "w": "substance.\"",
+      "start": 43.526,
+      "end": 44.269
+    },
+    {
+      "w": "Their",
+      "start": 44.548,
+      "end": 44.733
+    },
+    {
+      "w": "substance.",
+      "start": 44.792,
+      "end": 45.523
+    },
+    {
+      "w": "Their",
+      "start": 45.627,
+      "end": 45.802
+    },
+    {
+      "w": "own",
+      "start": 45.825,
+      "end": 45.918
+    },
+    {
+      "w": "resources.",
+      "start": 45.964,
+      "end": 46.777
+    },
+    {
+      "w": "Luke",
+      "start": 46.963,
+      "end": 47.195
+    },
+    {
+      "w": "did",
+      "start": 47.218,
+      "end": 47.323
+    },
+    {
+      "w": "not",
+      "start": 47.357,
+      "end": 47.462
+    },
+    {
+      "w": "have",
+      "start": 47.497,
+      "end": 47.613
+    },
+    {
+      "w": "to",
+      "start": 47.636,
+      "end": 47.682
+    },
+    {
+      "w": "write",
+      "start": 47.717,
+      "end": 47.915
+    },
+    {
+      "w": "any",
+      "start": 47.961,
+      "end": 48.124
+    },
+    {
+      "w": "of",
+      "start": 48.17,
+      "end": 48.216
+    },
+    {
+      "w": "that",
+      "start": 48.251,
+      "end": 48.391
+    },
+    {
+      "w": "down.",
+      "start": 48.425,
+      "end": 48.832
+    },
+    {
+      "w": "He",
+      "start": 48.936,
+      "end": 49.018
+    },
+    {
+      "w": "wanted",
+      "start": 49.064,
+      "end": 49.261
+    },
+    {
+      "w": "somebody",
+      "start": 49.296,
+      "end": 49.563
+    },
+    {
+      "w": "two",
+      "start": 49.61,
+      "end": 49.726
+    },
+    {
+      "w": "thousand",
+      "start": 49.772,
+      "end": 50.097
+    },
+    {
+      "w": "years",
+      "start": 50.144,
+      "end": 50.341
+    },
+    {
+      "w": "later",
+      "start": 50.422,
+      "end": 50.701
+    },
+    {
+      "w": "to",
+      "start": 50.759,
+      "end": 50.84
+    },
+    {
+      "w": "know",
+      "start": 50.887,
+      "end": 51.003
+    },
+    {
+      "w": "exactly",
+      "start": 51.049,
+      "end": 51.502
+    },
+    {
+      "w": "who",
+      "start": 51.537,
+      "end": 51.641
+    },
+    {
+      "w": "paid",
+      "start": 51.688,
+      "end": 51.839
+    },
+    {
+      "w": "for",
+      "start": 51.874,
+      "end": 51.99
     },
     {
       "w": "it.",
-      "start": 50.005,
-      "end": 50.388
+      "start": 52.048,
+      "end": 52.431
     }
   ],
-  "renderedAt": 1785313353774
+  "renderedAt": 1785322328277
 }

@@ -1,956 +1,1004 @@
 {
   "kind": "tea",
   "teaId": "dorcas-needle",
-  "mood": "light",
-  "heat": 1,
-  "text": "Dorcas sewed so much love that the widows brought the evidence. Acts nine. In Joppa there is a disciple named Tabitha, which by interpretation is Dorcas, and the text says she was full of good works and almsdeeds which she did. Then she gets sick and she dies. They wash her and lay her in an upper chamber. Lydda is near Joppa, and the disciples hear Peter is there, so they send two men asking him to come without delay. And when Peter arrives, they bring him upstairs into that room. And here is the scene. All the widows stood by him weeping, and shewing the coats and garments which Dorcas made, while she was with them. They are holding up the clothes. That is the eulogy. Not a speech. Evidence. Widows in that world had almost no safety net, and she had been making them clothes with her own hands. Peter puts them all out of the room, kneels down, prays, turns to the body and says, Tabitha, arise. And she opened her eyes, and sat up. And he called the saints and widows and presented her alive.",
-  "voice": "cgSgspJ2msm6clMCkdW9",
+  "text": "When she died, the widows didn't make speeches. They held up the clothes she made them.\n\nActs nine. In Joppa there's a disciple named Tabitha, which translated is Dorcas. And the text says she was full of good works and almsdeeds which she did.\n\nThen she gets sick, and she dies.\n\nThey wash her and lay her in an upper chamber. Lydda is near Joppa, and the disciples hear Peter is there, so they send two men and beg him to come without delay.\n\nPeter comes. They bring him upstairs.\n\nAnd here is the scene, and it wrecks me every time.\n\n\"All the widows stood by him weeping, and shewing the coats and garments which Dorcas made, while she was with them.\"\n\nThey are holding up the clothes. That's the eulogy. Not a speech. Evidence.\n\nAnd you have to understand what widows were in that world. Almost no safety net. And this woman had been quietly making them clothes with her own hands.\n\nPeter puts everybody out of the room, kneels down, prays, and turns to the body. \"Tabitha, arise.\"\n\nAnd she opened her eyes. And sat up.\n\nAnd he called the saints and widows and presented her alive.",
+  "voice": "FGY2WhTYpPnrIDTdsKH5",
   "words": [
     {
-      "w": "Dorcas",
+      "w": "When",
       "start": 0,
-      "end": 0.406
+      "end": 0.174
     },
     {
-      "w": "sewed",
-      "start": 0.453,
-      "end": 0.673
+      "w": "she",
+      "start": 0.209,
+      "end": 0.29
     },
     {
-      "w": "so",
+      "w": "died,",
+      "start": 0.337,
+      "end": 0.65
+    },
+    {
+      "w": "the",
       "start": 0.72,
-      "end": 0.836
-    },
-    {
-      "w": "much",
-      "start": 0.906,
-      "end": 1.091
-    },
-    {
-      "w": "love",
-      "start": 1.161,
-      "end": 1.405
-    },
-    {
-      "w": "that",
-      "start": 1.44,
-      "end": 1.556
-    },
-    {
-      "w": "the",
-      "start": 1.591,
-      "end": 1.66
+      "end": 0.824
     },
     {
       "w": "widows",
-      "start": 1.707,
-      "end": 1.985
+      "start": 0.871,
+      "end": 1.103
     },
     {
-      "w": "brought",
-      "start": 2.032,
-      "end": 2.252
+      "w": "didn't",
+      "start": 1.149,
+      "end": 1.347
     },
     {
-      "w": "the",
-      "start": 2.276,
-      "end": 2.345
+      "w": "make",
+      "start": 1.382,
+      "end": 1.521
     },
     {
-      "w": "evidence.",
-      "start": 2.392,
-      "end": 3.019
-    },
-    {
-      "w": "Acts",
-      "start": 3.413,
-      "end": 3.657
-    },
-    {
-      "w": "nine.",
-      "start": 3.727,
-      "end": 4.238
-    },
-    {
-      "w": "In",
-      "start": 4.772,
-      "end": 4.899
-    },
-    {
-      "w": "Joppa",
-      "start": 4.946,
-      "end": 5.283
-    },
-    {
-      "w": "there",
-      "start": 5.329,
-      "end": 5.468
-    },
-    {
-      "w": "is",
-      "start": 5.503,
-      "end": 5.561
-    },
-    {
-      "w": "a",
-      "start": 5.596,
-      "end": 5.619
-    },
-    {
-      "w": "disciple",
-      "start": 5.666,
-      "end": 6.084
-    },
-    {
-      "w": "named",
-      "start": 6.118,
-      "end": 6.304
-    },
-    {
-      "w": "Tabitha,",
-      "start": 6.339,
-      "end": 6.954
-    },
-    {
-      "w": "which",
-      "start": 7.198,
-      "end": 7.407
-    },
-    {
-      "w": "by",
-      "start": 7.454,
-      "end": 7.546
-    },
-    {
-      "w": "interpretation",
-      "start": 7.605,
-      "end": 8.22
-    },
-    {
-      "w": "is",
-      "start": 8.266,
-      "end": 8.336
-    },
-    {
-      "w": "Dorcas,",
-      "start": 8.382,
-      "end": 8.882
-    },
-    {
-      "w": "and",
-      "start": 8.916,
-      "end": 9.033
-    },
-    {
-      "w": "the",
-      "start": 9.079,
-      "end": 9.149
-    },
-    {
-      "w": "text",
-      "start": 9.183,
-      "end": 9.427
-    },
-    {
-      "w": "says",
-      "start": 9.462,
-      "end": 9.787
-    },
-    {
-      "w": "she",
-      "start": 10.24,
-      "end": 10.368
-    },
-    {
-      "w": "was",
-      "start": 10.414,
-      "end": 10.519
-    },
-    {
-      "w": "full",
-      "start": 10.577,
-      "end": 10.739
-    },
-    {
-      "w": "of",
-      "start": 10.786,
-      "end": 10.832
-    },
-    {
-      "w": "good",
-      "start": 10.879,
-      "end": 11.018
-    },
-    {
-      "w": "works",
-      "start": 11.053,
-      "end": 11.308
-    },
-    {
-      "w": "and",
-      "start": 11.343,
-      "end": 11.424
-    },
-    {
-      "w": "almsdeeds",
-      "start": 11.471,
-      "end": 11.958
-    },
-    {
-      "w": "which",
-      "start": 11.993,
-      "end": 12.132
-    },
-    {
-      "w": "she",
-      "start": 12.167,
-      "end": 12.249
-    },
-    {
-      "w": "did.",
-      "start": 12.307,
-      "end": 12.736
-    },
-    {
-      "w": "Then",
-      "start": 13.734,
-      "end": 13.897
-    },
-    {
-      "w": "she",
-      "start": 13.943,
-      "end": 14.025
-    },
-    {
-      "w": "gets",
-      "start": 14.071,
-      "end": 14.234
-    },
-    {
-      "w": "sick",
-      "start": 14.268,
-      "end": 14.454
-    },
-    {
-      "w": "and",
-      "start": 14.501,
-      "end": 14.57
-    },
-    {
-      "w": "she",
-      "start": 14.617,
-      "end": 14.698
-    },
-    {
-      "w": "dies.",
-      "start": 14.744,
-      "end": 15.29
+      "w": "speeches.",
+      "start": 1.556,
+      "end": 2.136
     },
     {
       "w": "They",
-      "start": 15.824,
-      "end": 15.975
+      "start": 2.194,
+      "end": 2.357
     },
     {
-      "w": "wash",
-      "start": 16.022,
-      "end": 16.242
-    },
-    {
-      "w": "her",
-      "start": 16.289,
-      "end": 16.393
-    },
-    {
-      "w": "and",
-      "start": 16.451,
-      "end": 16.532
-    },
-    {
-      "w": "lay",
-      "start": 16.579,
-      "end": 16.73
-    },
-    {
-      "w": "her",
-      "start": 16.776,
-      "end": 16.892
-    },
-    {
-      "w": "in",
-      "start": 16.939,
-      "end": 17.008
-    },
-    {
-      "w": "an",
-      "start": 17.055,
-      "end": 17.113
-    },
-    {
-      "w": "upper",
-      "start": 17.159,
-      "end": 17.333
-    },
-    {
-      "w": "chamber.",
-      "start": 17.38,
-      "end": 17.995
-    },
-    {
-      "w": "Lydda",
-      "start": 18.448,
-      "end": 18.692
-    },
-    {
-      "w": "is",
-      "start": 18.75,
-      "end": 18.831
-    },
-    {
-      "w": "near",
-      "start": 18.878,
-      "end": 19.017
-    },
-    {
-      "w": "Joppa,",
-      "start": 19.063,
-      "end": 19.481
-    },
-    {
-      "w": "and",
-      "start": 19.505,
-      "end": 19.621
-    },
-    {
-      "w": "the",
-      "start": 19.667,
-      "end": 19.737
-    },
-    {
-      "w": "disciples",
-      "start": 19.772,
-      "end": 20.178
-    },
-    {
-      "w": "hear",
-      "start": 20.224,
-      "end": 20.34
-    },
-    {
-      "w": "Peter",
-      "start": 20.41,
-      "end": 20.631
-    },
-    {
-      "w": "is",
-      "start": 20.677,
-      "end": 20.758
-    },
-    {
-      "w": "there,",
-      "start": 20.805,
-      "end": 21.258
-    },
-    {
-      "w": "so",
-      "start": 21.397,
-      "end": 21.49
-    },
-    {
-      "w": "they",
-      "start": 21.536,
-      "end": 21.641
-    },
-    {
-      "w": "send",
-      "start": 21.687,
-      "end": 21.85
-    },
-    {
-      "w": "two",
-      "start": 21.885,
-      "end": 22.012
-    },
-    {
-      "w": "men",
-      "start": 22.07,
-      "end": 22.21
-    },
-    {
-      "w": "asking",
-      "start": 22.256,
-      "end": 22.523
-    },
-    {
-      "w": "him",
-      "start": 22.57,
-      "end": 22.651
-    },
-    {
-      "w": "to",
-      "start": 22.697,
-      "end": 22.744
-    },
-    {
-      "w": "come",
-      "start": 22.79,
-      "end": 22.953
-    },
-    {
-      "w": "without",
-      "start": 22.976,
-      "end": 23.208
-    },
-    {
-      "w": "delay.",
-      "start": 23.255,
-      "end": 23.8
-    },
-    {
-      "w": "And",
-      "start": 24.253,
-      "end": 24.369
-    },
-    {
-      "w": "when",
-      "start": 24.404,
-      "end": 24.508
-    },
-    {
-      "w": "Peter",
-      "start": 24.555,
-      "end": 24.764
-    },
-    {
-      "w": "arrives,",
-      "start": 24.81,
-      "end": 25.24
-    },
-    {
-      "w": "they",
-      "start": 25.263,
-      "end": 25.379
-    },
-    {
-      "w": "bring",
-      "start": 25.414,
-      "end": 25.565
-    },
-    {
-      "w": "him",
-      "start": 25.599,
-      "end": 25.681
-    },
-    {
-      "w": "upstairs",
-      "start": 25.716,
-      "end": 26.064
-    },
-    {
-      "w": "into",
-      "start": 26.099,
-      "end": 26.25
-    },
-    {
-      "w": "that",
-      "start": 26.296,
-      "end": 26.424
-    },
-    {
-      "w": "room.",
-      "start": 26.47,
-      "end": 26.83
-    },
-    {
-      "w": "And",
-      "start": 27.457,
-      "end": 27.608
-    },
-    {
-      "w": "here",
-      "start": 27.654,
-      "end": 27.794
-    },
-    {
-      "w": "is",
-      "start": 27.829,
-      "end": 27.898
-    },
-    {
-      "w": "the",
-      "start": 27.945,
-      "end": 28.014
-    },
-    {
-      "w": "scene.",
-      "start": 28.061,
-      "end": 28.595
-    },
-    {
-      "w": "All",
-      "start": 29.315,
-      "end": 29.477
-    },
-    {
-      "w": "the",
-      "start": 29.524,
-      "end": 29.593
-    },
-    {
-      "w": "widows",
-      "start": 29.64,
-      "end": 29.907
-    },
-    {
-      "w": "stood",
-      "start": 29.953,
-      "end": 30.185
-    },
-    {
-      "w": "by",
-      "start": 30.232,
-      "end": 30.336
-    },
-    {
-      "w": "him",
-      "start": 30.383,
-      "end": 30.499
-    },
-    {
-      "w": "weeping,",
-      "start": 30.557,
-      "end": 30.963
-    },
-    {
-      "w": "and",
-      "start": 30.986,
-      "end": 31.091
-    },
-    {
-      "w": "shewing",
-      "start": 31.137,
-      "end": 31.393
-    },
-    {
-      "w": "the",
-      "start": 31.428,
-      "end": 31.497
-    },
-    {
-      "w": "coats",
-      "start": 31.544,
-      "end": 31.788
-    },
-    {
-      "w": "and",
-      "start": 31.822,
-      "end": 31.904
-    },
-    {
-      "w": "garments",
-      "start": 31.95,
-      "end": 32.333
-    },
-    {
-      "w": "which",
-      "start": 32.368,
-      "end": 32.542
-    },
-    {
-      "w": "Dorcas",
-      "start": 32.589,
-      "end": 32.879
-    },
-    {
-      "w": "made,",
-      "start": 32.937,
-      "end": 33.181
-    },
-    {
-      "w": "while",
-      "start": 33.204,
-      "end": 33.39
-    },
-    {
-      "w": "she",
-      "start": 33.413,
-      "end": 33.494
-    },
-    {
-      "w": "was",
-      "start": 33.529,
-      "end": 33.634
-    },
-    {
-      "w": "with",
-      "start": 33.68,
-      "end": 33.819
-    },
-    {
-      "w": "them.",
-      "start": 33.854,
-      "end": 34.249
-    },
-    {
-      "w": "They",
-      "start": 35.096,
-      "end": 35.247
-    },
-    {
-      "w": "are",
-      "start": 35.282,
-      "end": 35.363
-    },
-    {
-      "w": "holding",
-      "start": 35.387,
-      "end": 35.619
+      "w": "held",
+      "start": 2.415,
+      "end": 2.566
     },
     {
       "w": "up",
-      "start": 35.654,
-      "end": 35.723
+      "start": 2.601,
+      "end": 2.682
     },
     {
       "w": "the",
-      "start": 35.77,
-      "end": 35.839
-    },
-    {
-      "w": "clothes.",
-      "start": 35.874,
-      "end": 36.466
-    },
-    {
-      "w": "That",
-      "start": 37.314,
-      "end": 37.476
-    },
-    {
-      "w": "is",
-      "start": 37.523,
-      "end": 37.593
-    },
-    {
-      "w": "the",
-      "start": 37.639,
-      "end": 37.709
-    },
-    {
-      "w": "eulogy.",
-      "start": 37.755,
-      "end": 38.429
-    },
-    {
-      "w": "Not",
-      "start": 38.963,
-      "end": 39.137
-    },
-    {
-      "w": "a",
-      "start": 39.172,
-      "end": 39.195
-    },
-    {
-      "w": "speech.",
-      "start": 39.241,
-      "end": 39.729
-    },
-    {
-      "w": "Evidence.",
-      "start": 40.019,
-      "end": 40.716
-    },
-    {
-      "w": "Widows",
-      "start": 41.563,
-      "end": 41.842
-    },
-    {
-      "w": "in",
-      "start": 41.888,
-      "end": 41.946
-    },
-    {
-      "w": "that",
-      "start": 41.981,
-      "end": 42.097
-    },
-    {
-      "w": "world",
-      "start": 42.132,
-      "end": 42.376
-    },
-    {
-      "w": "had",
-      "start": 42.422,
-      "end": 42.527
-    },
-    {
-      "w": "almost",
-      "start": 42.573,
-      "end": 42.864
-    },
-    {
-      "w": "no",
-      "start": 42.933,
-      "end": 43.096
-    },
-    {
-      "w": "safety",
-      "start": 43.154,
-      "end": 43.456
-    },
-    {
-      "w": "net,",
-      "start": 43.514,
-      "end": 43.781
-    },
-    {
-      "w": "and",
-      "start": 43.967,
-      "end": 44.094
-    },
-    {
-      "w": "she",
-      "start": 44.141,
-      "end": 44.222
-    },
-    {
-      "w": "had",
-      "start": 44.268,
-      "end": 44.338
-    },
-    {
-      "w": "been",
-      "start": 44.373,
-      "end": 44.489
-    },
-    {
-      "w": "making",
-      "start": 44.524,
-      "end": 44.744
-    },
-    {
-      "w": "them",
-      "start": 44.779,
-      "end": 44.895
+      "start": 2.717,
+      "end": 2.786
     },
     {
       "w": "clothes",
-      "start": 44.942,
-      "end": 45.209
-    },
-    {
-      "w": "with",
-      "start": 45.232,
-      "end": 45.337
-    },
-    {
-      "w": "her",
-      "start": 45.371,
-      "end": 45.441
-    },
-    {
-      "w": "own",
-      "start": 45.487,
-      "end": 45.604
-    },
-    {
-      "w": "hands.",
-      "start": 45.638,
-      "end": 46.161
-    },
-    {
-      "w": "Peter",
-      "start": 47.008,
-      "end": 47.229
-    },
-    {
-      "w": "puts",
-      "start": 47.264,
-      "end": 47.438
-    },
-    {
-      "w": "them",
-      "start": 47.473,
-      "end": 47.577
-    },
-    {
-      "w": "all",
-      "start": 47.624,
-      "end": 47.74
-    },
-    {
-      "w": "out",
-      "start": 47.786,
-      "end": 47.902
-    },
-    {
-      "w": "of",
-      "start": 47.926,
-      "end": 47.984
-    },
-    {
-      "w": "the",
-      "start": 48.018,
-      "end": 48.088
-    },
-    {
-      "w": "room,",
-      "start": 48.135,
-      "end": 48.587
-    },
-    {
-      "w": "kneels",
-      "start": 48.738,
-      "end": 49.028
-    },
-    {
-      "w": "down,",
-      "start": 49.075,
-      "end": 49.481
-    },
-    {
-      "w": "prays,",
-      "start": 49.539,
-      "end": 50.062
-    },
-    {
-      "w": "turns",
-      "start": 50.143,
-      "end": 50.387
-    },
-    {
-      "w": "to",
-      "start": 50.433,
-      "end": 50.48
-    },
-    {
-      "w": "the",
-      "start": 50.526,
-      "end": 50.596
-    },
-    {
-      "w": "body",
-      "start": 50.631,
-      "end": 50.84
-    },
-    {
-      "w": "and",
-      "start": 50.886,
-      "end": 50.967
-    },
-    {
-      "w": "says,",
-      "start": 51.025,
-      "end": 51.501
-    },
-    {
-      "w": "Tabitha,",
-      "start": 52.035,
-      "end": 52.744
-    },
-    {
-      "w": "arise.",
-      "start": 53.034,
-      "end": 53.672
-    },
-    {
-      "w": "And",
-      "start": 54.52,
-      "end": 54.648
+      "start": 2.821,
+      "end": 3.158
     },
     {
       "w": "she",
-      "start": 54.694,
-      "end": 54.787
+      "start": 3.193,
+      "end": 3.297
     },
     {
-      "w": "opened",
-      "start": 54.845,
-      "end": 55.089
+      "w": "made",
+      "start": 3.344,
+      "end": 3.495
     },
     {
-      "w": "her",
-      "start": 55.124,
-      "end": 55.217
+      "w": "them.",
+      "start": 3.529,
+      "end": 3.855
     },
     {
-      "w": "eyes,",
-      "start": 55.263,
-      "end": 55.495
+      "w": "Acts",
+      "start": 4.005,
+      "end": 4.249
     },
     {
-      "w": "and",
-      "start": 55.518,
-      "end": 55.6
+      "w": "nine.",
+      "start": 4.307,
+      "end": 4.702
     },
     {
-      "w": "sat",
-      "start": 55.646,
-      "end": 55.844
+      "w": "In",
+      "start": 4.853,
+      "end": 4.969
     },
     {
-      "w": "up.",
-      "start": 55.902,
-      "end": 56.203
+      "w": "Joppa",
+      "start": 5.027,
+      "end": 5.306
+    },
+    {
+      "w": "there's",
+      "start": 5.352,
+      "end": 5.631
+    },
+    {
+      "w": "a",
+      "start": 5.677,
+      "end": 5.712
+    },
+    {
+      "w": "disciple",
+      "start": 5.77,
+      "end": 6.165
+    },
+    {
+      "w": "named",
+      "start": 6.2,
+      "end": 6.385
+    },
+    {
+      "w": "Tabitha,",
+      "start": 6.42,
+      "end": 6.966
+    },
+    {
+      "w": "which",
+      "start": 7.024,
+      "end": 7.279
+    },
+    {
+      "w": "translated",
+      "start": 7.326,
+      "end": 7.906
+    },
+    {
+      "w": "is",
+      "start": 7.964,
+      "end": 8.092
+    },
+    {
+      "w": "Dorcas.",
+      "start": 8.139,
+      "end": 8.731
     },
     {
       "w": "And",
-      "start": 56.54,
-      "end": 56.668
-    },
-    {
-      "w": "he",
-      "start": 56.703,
-      "end": 56.761
-    },
-    {
-      "w": "called",
-      "start": 56.807,
-      "end": 57.063
+      "start": 8.94,
+      "end": 9.056
     },
     {
       "w": "the",
-      "start": 57.097,
-      "end": 57.167
+      "start": 9.091,
+      "end": 9.16
     },
     {
-      "w": "saints",
-      "start": 57.202,
-      "end": 57.515
+      "w": "text",
+      "start": 9.195,
+      "end": 9.416
+    },
+    {
+      "w": "says",
+      "start": 9.451,
+      "end": 9.648
+    },
+    {
+      "w": "she",
+      "start": 9.706,
+      "end": 9.799
+    },
+    {
+      "w": "was",
+      "start": 9.845,
+      "end": 9.95
+    },
+    {
+      "w": "full",
+      "start": 9.996,
+      "end": 10.147
+    },
+    {
+      "w": "of",
+      "start": 10.194,
+      "end": 10.24
+    },
+    {
+      "w": "good",
+      "start": 10.298,
+      "end": 10.437
+    },
+    {
+      "w": "works",
+      "start": 10.484,
+      "end": 10.774
     },
     {
       "w": "and",
-      "start": 57.562,
-      "end": 57.643
+      "start": 10.832,
+      "end": 10.948
     },
     {
-      "w": "widows",
-      "start": 57.689,
-      "end": 57.968
+      "w": "almsdeeds",
+      "start": 11.029,
+      "end": 11.552
+    },
+    {
+      "w": "which",
+      "start": 11.598,
+      "end": 11.772
+    },
+    {
+      "w": "she",
+      "start": 11.807,
+      "end": 11.9
+    },
+    {
+      "w": "did.",
+      "start": 11.958,
+      "end": 12.248
+    },
+    {
+      "w": "Then",
+      "start": 12.353,
+      "end": 12.527
+    },
+    {
+      "w": "she",
+      "start": 12.585,
+      "end": 12.678
+    },
+    {
+      "w": "gets",
+      "start": 12.724,
+      "end": 12.875
+    },
+    {
+      "w": "sick,",
+      "start": 12.91,
+      "end": 13.166
     },
     {
       "w": "and",
-      "start": 58.015,
-      "end": 58.096
+      "start": 13.189,
+      "end": 13.282
     },
     {
-      "w": "presented",
-      "start": 58.142,
-      "end": 58.514
+      "w": "she",
+      "start": 13.317,
+      "end": 13.409
+    },
+    {
+      "w": "dies.",
+      "start": 13.456,
+      "end": 13.874
+    },
+    {
+      "w": "They",
+      "start": 14.025,
+      "end": 14.164
+    },
+    {
+      "w": "wash",
+      "start": 14.211,
+      "end": 14.419
     },
     {
       "w": "her",
-      "start": 58.549,
-      "end": 58.63
+      "start": 14.454,
+      "end": 14.582
+    },
+    {
+      "w": "and",
+      "start": 14.64,
+      "end": 14.733
+    },
+    {
+      "w": "lay",
+      "start": 14.779,
+      "end": 14.919
+    },
+    {
+      "w": "her",
+      "start": 14.988,
+      "end": 15.093
+    },
+    {
+      "w": "in",
+      "start": 15.174,
+      "end": 15.244
+    },
+    {
+      "w": "an",
+      "start": 15.279,
+      "end": 15.325
+    },
+    {
+      "w": "upper",
+      "start": 15.36,
+      "end": 15.522
+    },
+    {
+      "w": "chamber.",
+      "start": 15.569,
+      "end": 16.01
+    },
+    {
+      "w": "Lydda",
+      "start": 16.289,
+      "end": 16.498
+    },
+    {
+      "w": "is",
+      "start": 16.567,
+      "end": 16.649
+    },
+    {
+      "w": "near",
+      "start": 16.695,
+      "end": 16.834
+    },
+    {
+      "w": "Joppa,",
+      "start": 16.892,
+      "end": 17.299
+    },
+    {
+      "w": "and",
+      "start": 17.322,
+      "end": 17.438
+    },
+    {
+      "w": "the",
+      "start": 17.485,
+      "end": 17.554
+    },
+    {
+      "w": "disciples",
+      "start": 17.589,
+      "end": 18.03
+    },
+    {
+      "w": "hear",
+      "start": 18.077,
+      "end": 18.204
+    },
+    {
+      "w": "Peter",
+      "start": 18.251,
+      "end": 18.448
+    },
+    {
+      "w": "is",
+      "start": 18.483,
+      "end": 18.553
+    },
+    {
+      "w": "there,",
+      "start": 18.599,
+      "end": 18.982
+    },
+    {
+      "w": "so",
+      "start": 19.168,
+      "end": 19.284
+    },
+    {
+      "w": "they",
+      "start": 19.331,
+      "end": 19.447
+    },
+    {
+      "w": "send",
+      "start": 19.493,
+      "end": 19.667
+    },
+    {
+      "w": "two",
+      "start": 19.714,
+      "end": 19.83
+    },
+    {
+      "w": "men",
+      "start": 19.899,
+      "end": 20.108
+    },
+    {
+      "w": "and",
+      "start": 20.178,
+      "end": 20.283
+    },
+    {
+      "w": "beg",
+      "start": 20.364,
+      "end": 20.526
+    },
+    {
+      "w": "him",
+      "start": 20.573,
+      "end": 20.666
+    },
+    {
+      "w": "to",
+      "start": 20.7,
+      "end": 20.747
+    },
+    {
+      "w": "come",
+      "start": 20.793,
+      "end": 20.944
+    },
+    {
+      "w": "without",
+      "start": 20.979,
+      "end": 21.246
+    },
+    {
+      "w": "delay.",
+      "start": 21.293,
+      "end": 21.78
+    },
+    {
+      "w": "Peter",
+      "start": 21.966,
+      "end": 22.21
+    },
+    {
+      "w": "comes.",
+      "start": 22.256,
+      "end": 22.744
+    },
+    {
+      "w": "They",
+      "start": 22.93,
+      "end": 23.069
+    },
+    {
+      "w": "bring",
+      "start": 23.104,
+      "end": 23.266
+    },
+    {
+      "w": "him",
+      "start": 23.301,
+      "end": 23.382
+    },
+    {
+      "w": "upstairs.",
+      "start": 23.417,
+      "end": 23.94
+    },
+    {
+      "w": "And",
+      "start": 24.067,
+      "end": 24.195
+    },
+    {
+      "w": "here",
+      "start": 24.265,
+      "end": 24.404
+    },
+    {
+      "w": "is",
+      "start": 24.439,
+      "end": 24.509
+    },
+    {
+      "w": "the",
+      "start": 24.543,
+      "end": 24.613
+    },
+    {
+      "w": "scene,",
+      "start": 24.648,
+      "end": 24.961
+    },
+    {
+      "w": "and",
+      "start": 24.996,
+      "end": 25.112
+    },
+    {
+      "w": "it",
+      "start": 25.159,
+      "end": 25.228
+    },
+    {
+      "w": "wrecks",
+      "start": 25.263,
+      "end": 25.495
+    },
+    {
+      "w": "me",
+      "start": 25.53,
+      "end": 25.646
+    },
+    {
+      "w": "every",
+      "start": 25.704,
+      "end": 25.948
+    },
+    {
+      "w": "time.",
+      "start": 25.995,
+      "end": 26.413
+    },
+    {
+      "w": "\"All",
+      "start": 26.935,
+      "end": 27.167
+    },
+    {
+      "w": "the",
+      "start": 27.202,
+      "end": 27.272
+    },
+    {
+      "w": "widows",
+      "start": 27.307,
+      "end": 27.574
+    },
+    {
+      "w": "stood",
+      "start": 27.609,
+      "end": 27.794
+    },
+    {
+      "w": "by",
+      "start": 27.829,
+      "end": 27.922
+    },
+    {
+      "w": "him",
+      "start": 27.992,
+      "end": 28.096
+    },
+    {
+      "w": "weeping,",
+      "start": 28.154,
+      "end": 28.793
+    },
+    {
+      "w": "and",
+      "start": 28.828,
+      "end": 28.967
+    },
+    {
+      "w": "shewing",
+      "start": 29.025,
+      "end": 29.292
+    },
+    {
+      "w": "the",
+      "start": 29.327,
+      "end": 29.396
+    },
+    {
+      "w": "coats",
+      "start": 29.443,
+      "end": 29.791
+    },
+    {
+      "w": "and",
+      "start": 29.826,
+      "end": 29.907
+    },
+    {
+      "w": "garments",
+      "start": 29.977,
+      "end": 30.407
+    },
+    {
+      "w": "which",
+      "start": 30.441,
+      "end": 30.604
+    },
+    {
+      "w": "Dorcas",
+      "start": 30.65,
+      "end": 30.952
+    },
+    {
+      "w": "made,",
+      "start": 31.022,
+      "end": 31.359
+    },
+    {
+      "w": "while",
+      "start": 31.486,
+      "end": 31.707
+    },
+    {
+      "w": "she",
+      "start": 31.776,
+      "end": 31.939
+    },
+    {
+      "w": "was",
+      "start": 32.009,
+      "end": 32.125
+    },
+    {
+      "w": "with",
+      "start": 32.171,
+      "end": 32.311
+    },
+    {
+      "w": "them.\"",
+      "start": 32.345,
+      "end": 32.74
+    },
+    {
+      "w": "They",
+      "start": 33.437,
+      "end": 33.576
+    },
+    {
+      "w": "are",
+      "start": 33.611,
+      "end": 33.739
+    },
+    {
+      "w": "holding",
+      "start": 33.773,
+      "end": 34.04
+    },
+    {
+      "w": "up",
+      "start": 34.075,
+      "end": 34.157
+    },
+    {
+      "w": "the",
+      "start": 34.191,
+      "end": 34.261
+    },
+    {
+      "w": "clothes.",
+      "start": 34.319,
+      "end": 35.097
+    },
+    {
+      "w": "That's",
+      "start": 35.283,
+      "end": 35.515
+    },
+    {
+      "w": "the",
+      "start": 35.55,
+      "end": 35.619
+    },
+    {
+      "w": "eulogy.",
+      "start": 35.677,
+      "end": 36.13
+    },
+    {
+      "w": "Not",
+      "start": 36.235,
+      "end": 36.386
+    },
+    {
+      "w": "a",
+      "start": 36.421,
+      "end": 36.444
+    },
+    {
+      "w": "speech.",
+      "start": 36.479,
+      "end": 37.001
+    },
+    {
+      "w": "Evidence.",
+      "start": 37.21,
+      "end": 37.79
+    },
+    {
+      "w": "And",
+      "start": 38.174,
+      "end": 38.29
+    },
+    {
+      "w": "you",
+      "start": 38.325,
+      "end": 38.406
+    },
+    {
+      "w": "have",
+      "start": 38.487,
+      "end": 38.615
+    },
+    {
+      "w": "to",
+      "start": 38.638,
+      "end": 38.684
+    },
+    {
+      "w": "understand",
+      "start": 38.719,
+      "end": 39.091
+    },
+    {
+      "w": "what",
+      "start": 39.137,
+      "end": 39.277
+    },
+    {
+      "w": "widows",
+      "start": 39.323,
+      "end": 39.567
+    },
+    {
+      "w": "were",
+      "start": 39.613,
+      "end": 39.776
+    },
+    {
+      "w": "in",
+      "start": 39.811,
+      "end": 39.857
+    },
+    {
+      "w": "that",
+      "start": 39.892,
+      "end": 40.02
+    },
+    {
+      "w": "world.",
+      "start": 40.054,
+      "end": 40.438
+    },
+    {
+      "w": "Almost",
+      "start": 40.879,
+      "end": 41.169
+    },
+    {
+      "w": "no",
+      "start": 41.227,
+      "end": 41.378
+    },
+    {
+      "w": "safety",
+      "start": 41.482,
+      "end": 41.808
+    },
+    {
+      "w": "net.",
+      "start": 41.842,
+      "end": 42.237
+    },
+    {
+      "w": "And",
+      "start": 42.76,
+      "end": 42.864
+    },
+    {
+      "w": "this",
+      "start": 42.899,
+      "end": 43.015
+    },
+    {
+      "w": "woman",
+      "start": 43.073,
+      "end": 43.27
+    },
+    {
+      "w": "had",
+      "start": 43.305,
+      "end": 43.387
+    },
+    {
+      "w": "been",
+      "start": 43.421,
+      "end": 43.561
+    },
+    {
+      "w": "quietly",
+      "start": 43.595,
+      "end": 43.909
+    },
+    {
+      "w": "making",
+      "start": 43.955,
+      "end": 44.176
+    },
+    {
+      "w": "them",
+      "start": 44.211,
+      "end": 44.327
+    },
+    {
+      "w": "clothes",
+      "start": 44.362,
+      "end": 44.652
+    },
+    {
+      "w": "with",
+      "start": 44.687,
+      "end": 44.815
+    },
+    {
+      "w": "her",
+      "start": 44.861,
+      "end": 44.954
+    },
+    {
+      "w": "own",
+      "start": 45.012,
+      "end": 45.163
+    },
+    {
+      "w": "hands.",
+      "start": 45.221,
+      "end": 45.825
+    },
+    {
+      "w": "Peter",
+      "start": 46.347,
+      "end": 46.602
+    },
+    {
+      "w": "puts",
+      "start": 46.649,
+      "end": 46.811
+    },
+    {
+      "w": "everybody",
+      "start": 46.893,
+      "end": 47.311
+    },
+    {
+      "w": "out",
+      "start": 47.346,
+      "end": 47.438
+    },
+    {
+      "w": "of",
+      "start": 47.473,
+      "end": 47.531
+    },
+    {
+      "w": "the",
+      "start": 47.566,
+      "end": 47.635
+    },
+    {
+      "w": "room,",
+      "start": 47.67,
+      "end": 48.042
+    },
+    {
+      "w": "kneels",
+      "start": 48.193,
+      "end": 48.46
+    },
+    {
+      "w": "down,",
+      "start": 48.495,
+      "end": 48.715
+    },
+    {
+      "w": "prays,",
+      "start": 48.75,
+      "end": 49.098
+    },
+    {
+      "w": "and",
+      "start": 49.133,
+      "end": 49.226
+    },
+    {
+      "w": "turns",
+      "start": 49.272,
+      "end": 49.493
+    },
+    {
+      "w": "to",
+      "start": 49.528,
+      "end": 49.586
+    },
+    {
+      "w": "the",
+      "start": 49.621,
+      "end": 49.69
+    },
+    {
+      "w": "body.",
+      "start": 49.725,
+      "end": 50.132
+    },
+    {
+      "w": "\"Tabitha,",
+      "start": 50.457,
+      "end": 51.118
+    },
+    {
+      "w": "arise.\"",
+      "start": 51.153,
+      "end": 51.827
+    },
+    {
+      "w": "And",
+      "start": 52.012,
+      "end": 52.152
+    },
+    {
+      "w": "she",
+      "start": 52.198,
+      "end": 52.303
+    },
+    {
+      "w": "opened",
+      "start": 52.372,
+      "end": 52.651
+    },
+    {
+      "w": "her",
+      "start": 52.686,
+      "end": 52.767
+    },
+    {
+      "w": "eyes.",
+      "start": 52.813,
+      "end": 53.208
+    },
+    {
+      "w": "And",
+      "start": 53.452,
+      "end": 53.58
+    },
+    {
+      "w": "sat",
+      "start": 53.638,
+      "end": 53.824
+    },
+    {
+      "w": "up.",
+      "start": 53.882,
+      "end": 54.102
+    },
+    {
+      "w": "And",
+      "start": 54.23,
+      "end": 54.358
+    },
+    {
+      "w": "he",
+      "start": 54.416,
+      "end": 54.485
+    },
+    {
+      "w": "called",
+      "start": 54.543,
+      "end": 54.752
+    },
+    {
+      "w": "the",
+      "start": 54.787,
+      "end": 54.868
+    },
+    {
+      "w": "saints",
+      "start": 54.915,
+      "end": 55.17
+    },
+    {
+      "w": "and",
+      "start": 55.205,
+      "end": 55.286
+    },
+    {
+      "w": "widows",
+      "start": 55.344,
+      "end": 55.635
+    },
+    {
+      "w": "and",
+      "start": 55.681,
+      "end": 55.786
+    },
+    {
+      "w": "presented",
+      "start": 55.844,
+      "end": 56.157
+    },
+    {
+      "w": "her",
+      "start": 56.192,
+      "end": 56.296
     },
     {
       "w": "alive.",
-      "start": 58.676,
-      "end": 59.35
+      "start": 56.355,
+      "end": 56.935
     }
   ],
-  "renderedAt": 1785313363054
+  "renderedAt": 1785322336833
 }
