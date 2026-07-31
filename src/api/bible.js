@@ -112,13 +112,28 @@ const CARRY_VERSE = {
 };
 const FALLBACK_REF = 'Psalm 23:1-4';
 
+/**
+ * The server hands back a hardcoded "Psalm 23:1" whenever it cannot resolve a
+ * passage from its own verse table, which happens for any reference the KJV
+ * seed did not cover. That is indistinguishable from a real answer, so a woman
+ * who chose Courage silently got the most generic verse in the Bible again.
+ *
+ * If we asked for a specific tag and got the generic single verse back, we
+ * resolve the mapped passage ourselves instead of trusting it.
+ */
+const GENERIC_FALLBACK = /^psalm\s*23:1$/i;
+
 export async function verseForCarrying(carrying = []) {
   const tags = carrying.filter(Boolean).join(',');
-  const data = await getPrivate(`/verse/for-carrying?tags=${encodeURIComponent(tags)}`);
-  if (data?.text) return { ref: data.ref, text: data.text, online: true };
   // Match on the first tag we actually have a passage for, rather than only
   // ever looking at carrying[0].
   const key = carrying.find((c) => CARRY_VERSE[c]);
+  const data = await getPrivate(`/verse/for-carrying?tags=${encodeURIComponent(tags)}`);
+
+  const serverGaveGeneric = data?.ref && GENERIC_FALLBACK.test(String(data.ref).trim());
+  if (data?.text && !(serverGaveGeneric && key)) {
+    return { ref: data.ref, text: data.text, online: true };
+  }
   return getPassage(key ? CARRY_VERSE[key] : FALLBACK_REF);
 }
 
