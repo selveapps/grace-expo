@@ -5,6 +5,7 @@ import { BlurView } from 'expo-blur';
 import { LinearGradient } from 'expo-linear-gradient';
 import * as Haptics from 'expo-haptics';
 import Icon from '../components/Icon';
+import TeaMiniPlayer from '../components/TeaMiniPlayer';
 import { colors, fonts } from '../theme';
 
 import TodayScreen from '../screens/tabs/TodayScreen';
@@ -44,6 +45,7 @@ const tabListeners = ({ navigation, route }) => ({
 // ink weight alone. Screens add paddingBottom so nothing hides underneath.
 export default function Tabs() {
   return (
+    <>
     <Tab.Navigator
       screenOptions={({ route }) => ({
         headerShown: false,
@@ -75,6 +77,9 @@ export default function Tabs() {
       <Tab.Screen name="Reading" component={ReadingStack} listeners={tabListeners} />
       <Tab.Screen name="You" component={YouStack} listeners={tabListeners} />
     </Tab.Navigator>
+    {/* Above the tab navigator so a playing Tea can be stopped from any tab. */}
+    <TeaMiniPlayer />
+    </>
   );
 }
 

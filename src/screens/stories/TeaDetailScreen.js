@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { View, Text, StyleSheet, Pressable, Share, ActivityIndicator, Dimensions, Animated, Easing, StatusBar } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Audio } from 'expo-av';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
 import GraceDove from '../../components/GraceDove';
@@ -10,7 +9,7 @@ import TeaImage from '../../components/TeaImage';
 import GIcon from '../../components/GIcon';
 import LiveCaptions from '../../components/LiveCaptions';
 import { TeaService } from '../../services';
-import { resolveStaticAudioUrl } from '../../api/audio';
+import { TeaAudioService } from '../../services/TeaAudioService';
 import { colors, fonts, radius, shadow } from '../../theme';
 
 // Tea Detail doubles as a recording surface: someone screen-records this with
@@ -44,10 +43,14 @@ export default function TeaDetailScreen({ route, navigation }) {
   const [teas, setTeas] = useState([]);
   const [eng, setEng] = useState({ liked: false, saved: false });
   const [tr, setTr] = useState(null);
-  const [audio, setAudio] = useState('idle'); // idle | loading | playing | error
-  const [position, setPosition] = useState(0);
-  const [duration, setDuration] = useState(0);
-  const soundRef = useRef(null);
+  // Playback lives in TeaAudioService so a clip survives leaving this screen;
+  // the mini player above the tab bar is what stops it from elsewhere.
+  const [snd, setSnd] = useState(() => TeaAudioService.getState());
+  useEffect(() => TeaAudioService.subscribe(setSnd), []);
+  const mine = snd.tea?.id === id;
+  const audio = mine ? snd.status : 'idle';
+  const position = mine ? snd.position : 0;
+  const duration = mine ? snd.duration : 0;
   // Chrome recedes while the clip plays. A screen recording then shows art,
   // hook and captions, with the app's own controls out of the way. Tapping the
   // frame brings them back, so nothing becomes unreachable.
@@ -66,8 +69,6 @@ export default function TeaDetailScreen({ route, navigation }) {
   useEffect(() => {
     let alive = true;
     setLoading(true);
-    setAudio('idle');
-    setPosition(0);
     setTr(null);
     TeaService.getOne(id)
       .then((t) => { if (alive) setTea(t); })
@@ -90,57 +91,24 @@ export default function TeaDetailScreen({ route, navigation }) {
     return () => { alive = false; };
   }, [id]);
 
-  const stop = useCallback(async () => {
-    const snd = soundRef.current;
-    soundRef.current = null;
-    setAudio('idle');
-    setPosition(0);
-    if (snd) await snd.unloadAsync().catch(() => {});
-  }, []);
-
-  // Leaving the screen must silence the clip; a native stack keeps it mounted.
-  useFocusEffect(useCallback(() => () => { stop(); }, [stop]));
-
-  const onStatus = (s) => {
-    if (!s.isLoaded) { if (s.error) setAudio('error'); return; }
-    setPosition((s.positionMillis ?? 0) / 1000);
-    setDuration((s.durationMillis ?? 0) / 1000);
-    if (s.didJustFinish) { setAudio('idle'); setPosition(0); }
-  };
+  // Tell the service when this screen is on top, so the bar does not double up
+  // with the full controls, and stop the clip when the tea itself changes.
+  useFocusEffect(useCallback(() => {
+    if (tea) TeaAudioService.setDetailVisible(tea, true);
+    return () => TeaAudioService.setDetailVisible(tea, false);
+  }, [tea]));
 
   const togglePlay = async () => {
-    // The card hands over a title, not a media url; wait for the real record.
     if (!tea) return;
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Soft);
-    if (soundRef.current) {
-      const st = await soundRef.current.getStatusAsync();
-      if (st.isLoaded && st.isPlaying) { await soundRef.current.pauseAsync(); setAudio('idle'); return; }
-      if (st.isLoaded) { await soundRef.current.playAsync(); setAudio('playing'); return; }
-    }
-    setAudio('loading');
-    try {
-      await Audio.setAudioModeAsync({ playsInSilentModeIOS: true, staysActiveInBackground: true });
-      const uri = await resolveStaticAudioUrl(tea.audioUrl || `/audio/tea-${tea.id}.mp3`);
-      if (!uri) { setAudio('error'); return; }
-      const { sound } = await Audio.Sound.createAsync(
-        { uri },
-        { shouldPlay: true, progressUpdateIntervalMillis: 60 }, // tight for caption sync
-        onStatus,
-      );
-      soundRef.current = sound;
-      setAudio('playing');
-    } catch {
-      setAudio('error');
-    }
+    await TeaAudioService.toggle(tea);
   };
 
   const replay = async () => {
+    if (!tea) return;
     Haptics.selectionAsync();
-    if (!soundRef.current) return togglePlay();
-    await soundRef.current.setPositionAsync(0);
-    await soundRef.current.playAsync();
-    setPosition(0);
-    setAudio('playing');
+    if (!mine) return TeaAudioService.play(tea);
+    await TeaAudioService.restart();
   };
 
   const like = async () => { Haptics.selectionAsync(); setEng(await TeaService.toggleLike(id)); };

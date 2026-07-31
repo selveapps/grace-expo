@@ -1,193 +1,194 @@
-# Grace — Tea scripts (shipped in TestFlight build 7)
+# Grace — Tea scripts (as shipped)
 
-Generated from `backend/src/lib/teaCatalog.ts`. Durations are measured
-from the rendered MP3s, not estimated. Every quoted span is verbatim KJV.
+Generated from `backend/src/lib/teaCatalog.ts`. Durations measured from the
+rendered MP3s. Scripts marked **voice-note** come from
+`Grace_Tea_Scripts_Voice_Actors.md` with the performance notation stripped.
 
 
 ---
 
 ## 1. She Would Not Come
-`vashti-no` · **Esther 1:12** · heat 2 · 69s · 237 words
+`vashti-no` · **Esther 1:12** · 45s · **voice-note**
 
-**Hook:** One woman said no to her husband. The empire passed a law about it.
+**Hook:** Okay bestie I need you to sit all the way down for this one… …
 
-Esther chapter one. A king with one hundred and twenty-seven provinces throws a seven day party. Royal wine. Whole city invited. Day seven, direct quote: "the heart of the king was merry with wine." Cute. So he sends seven men to fetch his wife. Bring Queen Vashti out in the royal crown, let the people and the princes look at her beauty. Meanwhile Vashti is hosting her own feast. For the women. Same palace. Same week. She says no. That is the entire receipt. Scripture records the refusal and not one syllable about why. Anybody telling you her reasons is writing fanfiction. Does he go and talk to his wife? Absolutely not. He convenes a legal panel. "What shall we do unto the queen Vashti according to law?" Enter Memucan. And I am not exaggerating what he says. This is not just about you, king. If word gets out, every woman in the empire hears it, and they will start despising their husbands. So they write it into the law of the Persians and the Medes. The kind that cannot be repealed. Vashti never comes before the king again. And letters go out to every province, in every language: every man shall bear rule in his own house. One woman said no at a dinner party. And an entire empire had to legislate.
+This king owns 127 provinces and throws a seven-day party so massive the whole city is invited. Day seven he’s wasted and decides he wants his wife to walk out in the crown so every man can stare at her. Meanwhile she’s throwing her own feast for the women in the same palace. She says no.… No explanation. Just no. He doesn’t even go talk to her. He calls an emergency meeting of advisors like this is a national security threat. One of them stands up and basically says, “If the other women hear about this they’re all gonna start disrespecting their husbands.” So they pass a permanent law: every man must rule his own house. Letters go out in every language of the empire. One woman said no at a dinner party… and an entire empire had a complete meltdown. I’m obsessed with her. ---
 
 ---
 
 ## 2. Loyalty In The Barley
-`ruth-field` · **Ruth 2:2** · heat 1 · 72s · 215 words
+`ruth-field` · **Ruth 2:2** · 53s · **voice-note**
 
-**Hook:** Broke, widowed, foreign, picking up other people's leftovers. Three generations later her great-grandson is king.
+**Hook:** No because why is this the most soft launch of a dynasty I’ve ever seen… …
 
-Naomi loses her husband. Then both her sons. Left with two foreign daughters in law in a country that is not hers, she tells them both to go home. Twice. Not cold. Honest. She has nothing to give them. Orpah kisses her and goes. But Ruth clave unto her. And says, "For whither thou goest, I will go; and where thou lodgest, I will lodge: thy people shall be my people, and thy God my God." That is a vow with a curse attached. She means it. They walk into Bethlehem with nothing, right as barley harvest starts. And Ruth goes to work. Gleaning. Following the reapers for what they drop. And the text says her hap was to light on a field belonging to Boaz. Her happenstance. Sure. The book spends two more chapters showing you what that was. Boaz clocks her immediately. Tells his men not to touch her. Then quietly tells them to drop extra grain where she will find it. She goes home with an ephah of barley. An absurdly good day. Chapters later he redeems the family at the town gate. She has a son named Obed. Obed's son is Jesse. Jesse's son is David.
+Naomi loses her husband and both her sons. She’s left with two foreign daughters-in-law and tells them both to go home because she has nothing left to give. One leaves. The other one, Ruth, looks her dead in the eye and says “where you go I go, your people my people, your God my God.” That’s not cute. That’s a lifelong vow. They walk into Bethlehem broke during harvest. Ruth starts gleaning, literally picking up other people’s leftovers in the field. And somehow she “happens” to land in the field of a rich relative named Boaz. He notices her immediately, tells his men not to touch her, then quietly tells them to drop extra grain for her on purpose. She goes home with an insane amount of barley. Fast forward: he marries her, they have a son, and that son’s grandson is King David. Broke foreign widow picking up scraps… three generations later her bloodline is on the throne. I can’t. ---
 
 ---
 
 ## 3. Court Under A Palm
-`deborah-palm` · **Judges 4:4** · heat 2 · 62s · 209 words
+`deborah-palm` · **Judges 4:4** · 42s · **voice-note**
 
-**Hook:** A general refused to go to war unless she came with him. She went. Then told him he had just lost the credit.
+**Hook:** Wait wait wait… a woman was literally the judge of the whole nation and nobody talks about it enough… …
 
-Judges chapter four. Deborah. Prophetess. And the text says it flat: she judged Israel at that time. Not helped. Not advised. Judged. She holds court under a palm tree between Ramah and Bethel, and the children of Israel come up to her for judgment. That is the office. Written down. No hedging. So she summons Barak. Military commander. And hands him God's orders. Take ten thousand men to mount Tabor. And Barak, a grown general, says: "If thou wilt go with me, then I will go. But if thou wilt not go with me, then I will not go." Sir. She goes. Of course she goes. But she calls it first. "The journey that thou takest shall not be for thine honour, for the Lord shall sell Sisera into the hand of a woman." She told him exactly how it would end before it started. And that is exactly how it ended. In a tent. With a woman named Jael and a hammer. So the record reads: the prophetess gave the orders, the general needed a chaperone, and another woman finished it. Palm tree. Entire nation.
+Deborah. The text doesn’t say she “helped” or “advised.” It says she judged Israel. She held court under a palm tree and people came to her for actual legal decisions. She summons the military commander Barak and gives him God’s battle plan. This grown man looks at her and says, “I’ll only go if you come with me.” She goes… but she tells him to his face: “This victory won’t be yours. The Lord is going to hand the enemy over to a woman.” And that’s exactly what happens. Sisera ends up dead in a tent with a hammer through his head. So the official record is: the prophetess gave the orders, the general needed a babysitter, and another woman finished the job. Palm tree. Entire nation. I’m screaming. ---
 
 ---
 
 ## 4. She Intercepted A King
-`abigail-intercept` · **1 Samuel 25:18** · heat 2 · 76s · 224 words
+`abigail-intercept` · **1 Samuel 25:18** · 55s · **voice-note**
 
-**Hook:** David swore to kill every male in that household. The Bible's exact words are "any that pisseth against the wall."
+**Hook:** Girl the way she pulled up on 400 armed men like it was nothing… …
 
-Nabal. Three thousand sheep. Shearing season. He is throwing a feast "like the feast of a king." David's men had guarded his shepherds for free. His own staff say it: they were a wall unto us, night and day. David sends ten men. Asks for food. And Nabal says, "Who is David? and who is the son of Jesse?" Sir. David's answer: "Gird ye on every man his sword." Four hundred men. Over dinner. A servant runs to the wife. Nobody can talk to Nabal. Abigail does not panic. She does inventory. Two hundred loaves. Two bottles of wine. Five dressed sheep. Roasted corn. A hundred clusters of raisins. Two hundred cakes of figs. On donkeys. Sent ahead. "But she told not her husband Nabal." Then she rides at four hundred swords and calls her own husband a fool to his face. "Nabal is his name, and folly is with him." She talks him down. Four hundred men turn around. He is drunk when she gets home, so she waits till morning. "His heart died within him, and he became as a stone." Ten days later he is dead. And David, the man riding out to kill him, sends for her. She married him.
+David is about to commit a massacre. Some rich guy named Nabal just insulted him after David’s men protected his sheep for free, so David straps on his sword and takes 400 men. He’s going to kill every male in the house. A servant runs to Nabal’s wife Abigail like “your husband just signed our death warrant.” She doesn’t cry. She does inventory. Loads up donkeys with food and wine and sends them ahead. Doesn’t even tell her husband. Then she rides out herself, meets 400 armed men on the road, and starts talking. Calls her own husband a fool to David’s face. Talks the future king completely down. The 400 men turn around. She goes home, waits until her husband is sober the next morning, tells him what she did… and he has a stroke basically. Ten days later he’s dead. David hears about it and sends for her. She becomes his wife. Girl said “not today” to 400 swords and a future king… and won. ---
 
 ---
 
 ## 5. The Most Costly Yes
-`mary-yes` · **Luke 1:38** · heat 1 · 69s · 243 words
+`mary-yes` · **Luke 1:38** · 37s · **voice-note**
 
-**Hook:** She was engaged. Not married. In her village, saying yes to this could have got her killed.
+**Hook:** Bestie she said yes to a plan that could’ve gotten her killed and I’m still not over it… …
 
-Gabriel gets sent to Nazareth. Not Jerusalem. Not the temple. A village nobody writes about. To a girl promised to a man named Joseph. Quick note, because everybody gets this wrong. Luke gives us the town, the fiancé, and his royal line. He never gives us her age. When you hear teenager, that is tradition talking, not the text. The angel opens with, "Hail, thou that art highly favoured, the Lord is with thee." And she is troubled. Not by the angel. By the greeting. She is turning the words over trying to work out what kind of hello that is. Then the news lands. You will conceive. You will have a son. His kingdom will have no end. Now sit in the actual situation. She is engaged. Not married. In her century, in her village, this is not a blessing. It is a scandal that can cost her everything, and the law had opinions about women in her position. And her one question is not can God do this. It is: "How shall this be, seeing I know not a man?" She is not asking for proof. She is asking how. And when he answers, she says, "Behold the handmaid of the Lord. Be it unto me according to thy word." Yes to a plan she could not verify. In a town that could count.
+Gabriel shows up in a random village nobody cares about and tells a girl who’s engaged (not married) that she’s about to get pregnant by the Holy Spirit and her son will be the forever king. She’s troubled by the greeting first, not even the angel. Then when the actual news lands her only question is “how, since I’ve never been with a man?” She’s not asking for proof. She’s asking logistics. In her village this could ruin her life or get her killed. And she still says yes. “Be it unto me according to thy word.” Yes to a plan she couldn’t verify, in a town that could count. I’m not okay. ---
 
 ---
 
 ## 6. The Better Part
-`martha-mary` · **Luke 10:42** · heat 1 · 68s · 230 words
+`martha-mary` · **Luke 10:42** · 44s · **voice-note**
 
-**Hook:** Everybody thinks Jesus told Mary off in this story. He said Martha's name. Twice.
+**Hook:** No because Jesus really said her name twice like he was talking to his favorite person… …
 
-Jesus comes into a village. Martha receives him into her house. Her house. She is the host. This was her call. Her sister Mary sits down at his feet and just listens. And Martha is what the text calls cumbered about much serving. Cumbered. Dragged in every direction. Hosting is real work and she is doing all of it, alone, while her sister sits on the floor. So Martha does what a lot of us do. She does not go to Mary. She goes over her head. "Lord, dost thou not care that my sister hath left me to serve alone? Bid her therefore that she help me." She is not asking. She is telling him to sort out her sister. And here is where everybody expects the scolding. He says, "Martha, Martha." Her name. Twice. That is not how you open a telling off. That is how you talk to someone you love who is drowning. "Thou art careful and troubled about many things. But one thing is needful, and Mary hath chosen that good part, which shall not be taken away from her." Now read what he did not say. He never tells Mary to get up. He never says the serving was wrong. He tells Martha she is allowed to sit down too.
+Jesus walks into a house. Martha is the host and she’s drowning in the work, cooking, serving, stressed. Her sister Mary is just sitting at Jesus’ feet listening. Martha finally snaps and goes over Mary’s head: “Lord, don’t you care that my sister left me to do everything alone? Tell her to help me.” She’s not asking. She’s ordering him. And instead of scolding her he says her name twice, “Martha, Martha”, the way you talk to someone you love who’s spiraling. Then he tells her she’s worried about too many things, and Mary chose the one thing that can’t be taken from her. He never tells Mary to get up. He never says the serving was wrong. He basically tells Martha she’s allowed to sit down too. I’m soft for that. ---
 
 ---
 
 ## 7. She Left The Waterpot
-`well-woman` · **John 4:28** · heat 3 · 70s · 250 words
+`well-woman` · **John 4:28** · 47s · **voice-note**
 
-**Hook:** Five husbands, and the man at the well already knew. He told her who he was anyway. She is the first person he says it to outright.
+**Hook:** Okay the first person Jesus fully revealed himself to was a woman with five exes and I’m screaming… …
 
-John four. Jesus is tired. Sits down by a well. About the sixth hour, so, midday heat. A woman of Samaria comes to draw water. He says, "Give me to drink." That is two scandals in one sentence, and she names them both herself: "How is it that thou, being a Jew, askest drink of me, which am a woman of Samaria?" Then the conversation turns. He offers her living water. She wants it. He says, go call your husband. She says, "I have no husband." And he goes, "Thou hast well said, I have no husband." Then: "For thou hast had five husbands; and he whom thou now hast is not thy husband." He is not dragging her. He is telling her he already knew and he is still sitting there. Now, people love to say she came at noon to dodge the gossip. That is a reasonable guess. It is still a guess. The text just says the sixth hour. Here is what the text does say. She brings up the Messiah. And he answers, "I that speak unto thee am he." That is the first time in this Gospel he says it outright. To a Samaritan woman with five marriages behind her, at a well, at midday. And she left her waterpot. Left it. And went and told the town.
+Jesus is tired and sits by a well at the hottest part of the day. A Samaritan woman comes to draw water. He asks her for a drink (already scandalous) and the conversation goes sideways fast. He offers her living water. She wants it. He says go call your husband. She says she doesn’t have one. He goes, “You’re right… you’ve had five. And the one you have now isn’t your husband.” He’s not shaming her. He’s telling her he already knew every messy detail and he’s still sitting there talking to her. Then she brings up the Messiah and he looks at her and says “I that speak unto thee am he.” First time in the whole Gospel he says it that clearly… to her. She leaves her waterpot. Just abandons it. Runs back to town and becomes the first evangelist. Five exes and a waterpot. I’m obsessed. ---
 
 ---
 
 ## 8. If I Perish
-`esther-uninvited` · **Esther 4:16** · heat 2 · 71s · 219 words
+`esther-uninvited` · **Esther 4:16** · 53s · **voice-note**
 
-**Hook:** Walking in without a summons was a death sentence. She had not been called in thirty days.
+**Hook:** She walked in knowing it could kill her and still said “if I perish, I perish”… …
 
-One law in Persia. Man or woman. You come to the king unsummoned, you die. Unless he holds out the golden sceptre. And Esther tells Mordecai the part that kept her up at night. "I have not been called to come in unto the king these thirty days." Thirty days. She is the queen. And she has no idea where she stands. Mordecai's reply is brutal and kind at once. "Think not with thyself that thou shalt escape in the king's house, more than all the Jews." You are not safe. The palace is not a shelter. Then: if you stay silent, deliverance will arise from another place, but you and your father's house will be destroyed. Hear that. He never says God will fail. He says rescue is coming and you might not be in it. "And who knoweth whether thou art come to the kingdom for such a time as this?" A question. Not a command. So she fasts three days and sends back four words: "If I perish, I perish." Third day. Royal apparel. Inner court. And the king holds out the sceptre. She lives. And then she throws the dinner party that ends an empire's second in command.
+There’s a law in Persia: if you walk into the king’s presence without being summoned, you die. Unless he holds out the golden scepter. Esther tells Mordecai she hasn’t been called in thirty days. She’s the queen and she has no idea if she’s still safe. Mordecai hits her with the hardest truth: don’t think the palace will protect you. If you stay silent, deliverance will come from somewhere else… but you and your family might not make it. Then he drops the line: “Who knows if you came to the kingdom for such a time as this?” She fasts three days and sends back four words: “If I perish, I perish.” Third day she walks in. The king holds out the scepter. She lives… and then throws the dinner party that takes down the second most powerful man in the empire. I’m obsessed with her courage. ---
 
 ---
 
 ## 9. Only Her Lips Moved
-`hannah-prayer` · **1 Samuel 1:13** · heat 1 · 68s · 238 words
+`hannah-prayer` · **1 Samuel 1:13** · 47s · **voice-note**
 
-**Hook:** She prayed so hard the priest told her to sober up. She had not touched a drink.
+**Hook:** The priest really called her drunk for praying too hard and I’m not over it… …
 
-Elkanah has two wives. Peninnah has children. Hannah does not. And Scripture calls Peninnah her adversary, and says she provoked her sore. Year after year. Every single time they went up to worship. At the one place she goes to meet God. So Hannah stops eating and weeps. And her husband, who genuinely loves her, says the most well meaning wrong thing in the Bible: "Am not I better to thee than ten sons?" Sir. Read the room. So she gets up from that table and goes to the house of the Lord. And she prays in bitterness of soul. Here is the detail. She spake in her heart. Only her lips moved. Her voice was not heard. And Eli the priest, whose entire job is recognising devotion when he sees it, watches her mouth move and decides she is drunk. Out loud. "How long wilt thou be drunken? Put away thy wine from thee." And Hannah does not shrink and does not fight. "No, my lord, I am a woman of a sorrowful spirit: I have drunken neither wine nor strong drink, but have poured out my soul before the LORD." The most honest prayer in the building. And the priest called her a drunk. She walks out still childless. And the text says her countenance was no more sad.
+Hannah can’t have kids. Her husband’s other wife has plenty and provokes her about it every single year at the place of worship. Hannah stops eating and just weeps. Her husband tries to comfort her with the most well-meaning terrible line ever: “Am I not better to you than ten sons?” She gets up, goes to the temple, and prays so hard that only her lips are moving. No sound. The priest watches her and decides she’s drunk. Out loud. “How long will you be drunk? Put away your wine.” She doesn’t shrink. She just says, “No my lord, I’m a woman of a sorrowful spirit. I haven’t had anything to drink. I’ve been pouring out my soul before the Lord.” Most honest prayer in the building and the priest called her a drunk. She walks out still childless… but the text says her face wasn’t sad anymore. I’m soft for her. ---
 
 ---
 
 ## 10. The First To See
-`magdalene-first` · **John 20:18** · heat 2 · 68s · 223 words
+`magdalene-first` · **John 20:18** · 41s · **voice-note**
 
-**Hook:** Peter and John looked into the empty tomb and went home. She stayed. So she is the one who saw him.
+**Hook:** Peter and John left… she stayed… and that’s why she saw Him first… …
 
-John twenty. Mary Magdalene comes to the tomb while it is still dark, sees the stone gone, and runs for Peter and John. They sprint back. Look in. See the linen. And then the text says it plainly. They went away again unto their own home. They left. She did not. Mary stood without at the sepulchre weeping. So she is the one still there when two angels ask her why she is crying. And she says, "They have taken away my Lord, and I know not where they have laid him." Then she turns around, sees a man, and thinks he is the gardener. "Sir, if thou have borne him hence, tell me where thou hast laid him, and I will take him away." She is devastated and still trying to handle the logistics herself. She is going to carry a body. And he says one word. "Mary." That is it. That is the whole thing. He says her name and she knows. Then he sends her. Go to my brethren and tell them. And Mary Magdalene came and told the disciples that she had seen the Lord. The resurrection gets announced by the woman who would not leave the graveyard.
+Mary Magdalene gets to the tomb while it’s still dark. Stone is gone. She runs and gets Peter and John. They sprint there, look inside, see the empty linen… and go home. They leave. She stays. She’s still crying outside when two angels ask her why. Then she turns around, sees Jesus, and thinks he’s the gardener. She’s so wrecked she’s ready to carry the body herself if he’ll just tell her where it is. He says one word. “Mary.” That’s it. She knows. He sends her to go tell the others. The resurrection gets announced by the woman who refused to leave the graveyard. I’m crying. ---
 
 ---
 
 ## 11. The Scarlet Cord
-`rahab-rope` · **Joshua 2:4** · heat 3 · 66s · 236 words
+`rahab-rope` · **Joshua 2:4** · 45s · **voice-note**
 
-**Hook:** She lied to the king's men, hid two spies under flax on her roof, and negotiated her whole family out of a war.
+**Hook:** She lied to the king, hid the spies, and negotiated her whole family out of a war… …
 
-Joshua two. Two Israelite spies come into Jericho and end up at the house of a woman named Rahab. The text says exactly what she is. It does not soften it and neither will I. The king finds out and sends men to bring them out. And Rahab hides them. Then looks the king's messengers in the face and says, "There came men unto me, but I wist not whence they were." Then sends them chasing in the wrong direction. She lied to a king. The Bible writes it down without comment. Then she goes up to the roof and tells the spies the actual reason. "I know that the Lord hath given you the land." She had heard what happened at the Red Sea. She says, "our hearts did melt." And then, "The Lord your God, he is God in heaven above, and in earth beneath." That is a confession of faith from a Canaanite sex worker, and it is sharper theology than most of Israel manages that decade. Then she negotiates. And notice what she negotiates for. Not herself. "Save alive my father, and my mother, and my brethren, and my sisters." Scarlet cord in the window. Her whole household lives. And Matthew puts her in the family line of Jesus.
+Two Israelite spies sneak into Jericho and end up at Rahab’s house. The text does not soften what she does for a living. The king finds out and sends soldiers. Rahab hides the spies, looks the soldiers dead in the face, and lies. Sends them the wrong way. Then she goes up to the roof and tells the spies the real reason: “I know your God has given you this land. We heard what happened at the Red Sea and our hearts melted. Your God is God in heaven and on earth.” That’s a full confession of faith from a Canaanite sex worker, sharper than most of Israel at the time. Then she negotiates… not for herself. For her whole family. Father, mother, brothers, sisters. Scarlet cord in the window. Her household lives. And Matthew puts her in the family line of Jesus. I’m obsessed. ---
 
 ---
 
 ## 12. Milk, Then A Hammer
-`jael-tent` · **Judges 4:21** · heat 3 · 69s · 253 words
+`jael-tent` · **Judges 4:21** · 42s · **voice-note**
 
-**Hook:** He asked for water. She gave him milk. Then she waited for him to fall asleep.
+**Hook:** She gave him milk, tucked him in, then finished the war… …
 
-Sisera. Nine hundred chariots of iron. Twenty years crushing Israel. Now he is on foot. Alone. His army just collapsed. He runs for the nearest tent. A woman named Jael. Her husband's people are at peace with his king. He thinks it is safe. She comes out to meet him. And says: "Turn in, my lord, turn in to me. Fear not." Fear not. Remember that. He asks for a little water. She opens a bottle of milk. Covers him up. Then he gives her orders. Stand in the door. Anybody asks if there is a man in here, say no. "For he was fast asleep and weary." Then: "Jael Heber's wife took a nail of the tent, and took an hammer in her hand, and went softly unto him." Went softly. Then she walks out, finds the general hunting him, and says, "Come, and I will shew thee the man whom thou seekest." The audacity. And Deborah puts it in a song. Blessed above women, she calls her. But here is the part nobody tells you. The same song cuts to Sisera's mother. At a window. Waiting. "Why is his chariot so long in coming?" Her ladies reassure her. He is late because he is dividing the spoils. "To every man a damsel or two." That is in the victory song. The last thing you hear about her. Scripture does not flinch. So I will not.
+Sisera has been crushing Israel for twenty years with 900 iron chariots. His army finally collapses and he’s running for his life on foot. He ducks into the nearest tent. A woman named Jael comes out all soft: “Turn in, my lord. Fear not.” He asks for water. She gives him milk. Covers him up. He falls asleep. Then she takes a tent peg and a hammer… and goes softly. Walks out, finds the commander hunting him, and says “Come, I’ll show you the man you’re looking for.” The victory song calls her blessed above women. And it ends with Sisera’s mother waiting at the window wondering why his chariot is taking so long while her friends reassure her he’s just dividing the girls. She served milk and a murder. I’m scared of her and I love her. ---
 
 ---
 
 ## 13. She Took His Signet
-`tamar-veil` · **Genesis 38:26** · heat 3 · 73s · 217 words
+`tamar-veil` · **Genesis 38:26** · 54s · **voice-note**
 
-**Hook:** He sentenced her to be burned alive. Then she sent back his ID.
+**Hook:** She took his government ID and then almost got burned alive for it… …
 
-Genesis thirty-eight. Tamar marries Judah's oldest son. He dies. By custom she goes to the next brother. He dies too. Judah has a third son, Shelah. He tells Tamar to go live as a widow at her father's house until the boy grows up. Then never sends for her. She is parked. No husband. No children. No standing. No legal way to fight it. Years pass. Shelah grows up and nobody comes. So she takes off her widow's clothes, covers herself with a veil, and sits by the road to Timnath. Judah goes past, does not recognise her, and propositions her. And here she gets sharp. He offers a young goat. She says, "Wilt thou give me a pledge, till thou send it?" He says, what pledge. And she names three things. His signet. His bracelets. His staff. That is his identification. She took his ID. Three months later word gets to Judah that she is pregnant. And he says, "Bring her forth, and let her be burnt." And she sends him his own signet and staff with a message. "Discern, I pray thee, whose are these." And Judah says it out loud, in front of everybody. "She hath been more righteous than I."
+Tamar marries Judah’s oldest son. He dies. Next brother. He dies too. Judah has one more son but parks her at her dad’s house “until he’s grown” and then never sends for her. Years pass. She’s stuck with no rights. So she puts on a veil, sits by the road, and when Judah walks past he doesn’t recognize her and propositions her. She says fine, but I need a pledge. He asks what. She says your signet, your bracelets, and your staff. That’s his government ID. Three months later people tell Judah she’s pregnant and he’s ready to have her burned alive. She sends back his own signet and staff with a note that basically says “recognize these?” In front of everyone he has to admit: “She hath been more righteous than I.” She played him so clean he had to say it out loud. I’m on the floor. ---
 
 ---
 
 ## 14. Timbrel On The Shore
-`miriam-song` · **Exodus 15:20** · heat 1 · 68s · 227 words
+`miriam-song` · **Exodus 15:20** · 37s · **voice-note**
 
-**Hook:** The sea had just closed on an army. She picked up a tambourine.
+**Hook:** The sea just closed on an entire army and she reached for a tambourine… …
 
-Exodus fifteen. Israel has walked through the sea on dry ground and watched it come down behind them. Now, order matters here, so let us be accurate. Moses and the children of Israel sing first. That is verse one. Then verse twenty. "And Miriam the prophetess, the sister of Aaron, took a timbrel in her hand. And all the women went out after her with timbrels and with dances." And Miriam answered them. Answered. She takes the song and leads the women in it, with percussion and dancing, standing on the edge of a crossing that should not have been possible. "Sing ye to the Lord, for he hath triumphed gloriously. The horse and his rider hath he thrown into the sea." Two things Scripture calls her, right there, in one verse. Prophetess. And sister of Aaron. Now here is the thing readers connect. Exodus two never names the sister who watched a baby float away in a basket and talked a princess into hiring his own mother as the nurse. Numbers twenty-six names Miriam among those siblings. That is the link most people make. It is a reasonable reading, not a stated one. What is not in doubt is this. When the water closed, she was the one who reached for an instrument.
+Israel just walked through the sea on dry ground and watched the water crash down on the entire Egyptian army. Moses and the people sing first. Then Miriam the prophetess grabs a tambourine. All the women follow her with instruments and dancing. She leads the response: “Sing to the Lord, for he has triumphed gloriously. The horse and his rider he has thrown into the sea.” The text calls her two things in one verse: prophetess, and sister of Aaron. When the water closed and the impossible happened… she was the one who reached for an instrument. I’m soft for that energy. ---
 
 ---
 
 ## 15. I Will Not Leave
-`shunammite` · **2 Kings 4:30** · heat 2 · 63s · 223 words
+`shunammite` · **2 Kings 4:30** · 44s · **voice-note**
 
-**Hook:** Her son died on her lap. She said "It shall be well," and saddled a donkey.
+**Hook:** Her son died on her lap and she still said “it shall be well”… …
 
-Second Kings four. This woman is described as great. Standing. Money. Influence. She is the one who notices Elisha passing through and builds him a room. Bed, table, stool, candlestick. He wants to repay her. She says no. She is fine. He gives her a son anyway. Years later the boy is out in the field, says "My head, my head," and is carried to his mother. And the text says he sat on her knees till noon, and then died. Now watch her. She carries him upstairs. Lays him on the prophet's bed. Shuts the door. And calls for a donkey. Her husband asks why she is going, it is not new moon or sabbath. She says, "It shall be well." She does not tell him the child is dead. She is not asking permission. She is going. She rides to Carmel. Elisha's servant tries to intercept her with polite questions. She goes straight past him. Then she catches Elisha by the feet. And Gehazi moves to shove her off, and Elisha says, "Let her alone, for her soul is vexed within her." And she says, "As the Lord liveth, and as thy soul liveth, I will not leave thee." He got up and followed her.
+This wealthy woman notices the prophet Elisha keeps passing through and builds him a whole room, bed, table, chair, lamp. He wants to repay her. She says she’s fine. He gives her a son anyway. Years later the boy is out in the field, says “my head, my head,” and dies on her lap at noon. She carries him upstairs, lays him on the prophet’s bed, shuts the door, and calls for a donkey. Her husband asks why she’s going. She just says “it shall be well.” Doesn’t tell him the child is dead. Doesn’t ask permission. She rides to Elisha, blows past his servant, grabs the prophet by the feet and says “as the Lord lives and as your soul lives, I will not leave you.” He gets up and follows her. Her son died on her lap and she still said “it shall be well” and refused to let go. I’m in awe. ---
 
 ---
 
 ## 16. Borrow Not A Few
-`widow-oil` · **2 Kings 4:6** · heat 1 · 67s · 207 words
+`widow-oil` · **2 Kings 4:6** · 45s · **voice-note**
 
-**Hook:** The creditor was not coming for her furniture. He was coming for her sons.
+**Hook:** The miracle stopped exactly when the jars ran out and that detail is everything… …
 
-Second Kings four, opening scene. A widow cries out to Elisha and lays out the situation. Her husband is dead. He feared the Lord. And the creditor is coming to take her two sons to be his slaves. Not the furniture. The children. That is the debt system she is trapped inside. And Elisha asks a question I think about a lot. "What shall I do for thee? tell me, what hast thou in the house?" And she says, "Thine handmaid hath not any thing in the house, save a pot of oil." Nothing. Except one thing. And he says go and borrow vessels from all your neighbours. Empty ones. And then, this is the line, "borrow not a few." So she does. Shuts the door on herself and her sons. And starts pouring. And it keeps coming. Vessel after vessel after vessel. Until she says to her son, "Bring me yet a vessel." And he says, "There is not a vessel more." And the oil stayed. Read that again. The supply stopped exactly when the containers did. She sells it. Pays the debt. Keeps her sons. And lives on what is left.
+A widow’s husband dies. The creditor is coming, not for the furniture, for her two sons. They’re about to be taken as slaves to pay the debt. Elisha asks her what she has in the house. She says nothing… except a little jar of oil. He tells her to go borrow empty vessels from all her neighbors. And then he says the line: “borrow not a few.” She shuts the door with her sons and starts pouring. The oil keeps coming. Vessel after vessel. Until she asks for one more and her son says there are no more left. The oil stops exactly when the containers run out. She sells it, pays the debt, keeps her sons, and lives on the rest. The miracle matched the size of her vessels. I’m soft. ---
 
 ---
 
 ## 17. Twelve Years, One Touch
-`bleeding-woman` · **Mark 5:34** · heat 2 · 62s · 215 words
+`bleeding-woman` · **Mark 5:34** · 44s · **voice-note**
 
-**Hook:** Twelve years. Every doctor she could pay. And Mark writes that she was "nothing bettered, but rather grew worse."
+**Hook:** She spent everything she had and still got worse… then one touch changed everything… …
 
-That is the text. Not my summary. Mark writes that she had suffered many things of many physicians, and had spent all that she had, and was nothing bettered, but rather grew worse. Twelve years. Broke. Out of options. So she hears about Jesus. And she does not go to the front and ask. She comes up behind him in a crowd. Because she says within herself, "If I may touch but his clothes, I shall be whole." And she does. And immediately it stops. She could have walked. That was the entire plan. Get in, get out, nobody knows. And he stops the whole procession. In a crowd pressing on him from every side, he turns around and says, "Who touched my clothes?" And the disciples basically tell him that is an insane question. Look at these people. He keeps looking. So she comes fearing and trembling, falls down, and tells him all the truth. Not a summary. All of it. Twelve years of it, out loud, in front of a crowd. And he says, "Daughter, thy faith hath made thee whole. Go in peace." Daughter. He would not let her leave as a secret.
+Twelve years. Every doctor she could afford. Mark says she “suffered many things of many physicians, and had spent all that she had, and was nothing bettered, but rather grew worse.” She’s broke and out of options. She hears about Jesus and decides she’s not even going to ask. She just needs to touch his clothes. She comes up behind him in the crowd, touches, and immediately she’s healed. She could have disappeared. That was the whole plan. But he stops the entire procession and asks “who touched my clothes?” The disciples think he’s crazy, look at this crowd. He keeps looking. She comes forward terrified and tells him everything. All twelve years. Out loud. He calls her Daughter and tells her to go in peace. He wouldn’t let her leave as a secret. I’m crying. ---
 
 ---
 
 ## 18. She Argued For Crumbs
-`canaanite-mother` · **Matthew 15:28** · heat 3 · 70s · 218 words
+`canaanite-mother` · **Matthew 15:28** · 43s · **voice-note**
 
-**Hook:** She asked him for help and he did not answer her. Not one word. She kept going.
+**Hook:** She took Jesus’ own metaphor and flipped it on him… …
 
-Matthew fifteen. Jesus goes into the coasts of Tyre and Sidon. And a woman of Canaan comes out after him, crying, "Have mercy on me, O Lord, thou Son of David. My daughter is grievously vexed with a devil." And then the text says something that stops you cold. "But he answered her not a word." Silence. Then the disciples get involved, and not helpfully. "Send her away, for she crieth after us." They are not moved. They are annoyed. Then he says he was sent to the lost sheep of the house of Israel. She still does not leave. She comes and worships him and says three words. "Lord, help me." And then he gives her the hard line. "It is not meet to take the children's bread, and to cast it to dogs." People argue endlessly about his tone. The text does not record tone, so hold your theory loosely. What is not in dispute is her comeback. "Truth, Lord: yet the dogs eat of the crumbs which fall from their masters' table." She takes his own metaphor, accepts the terms, and turns it around on him. And he says, "O woman, great is thy faith." Healed that hour.
+A Canaanite woman comes after Jesus screaming for help for her demonized daughter. He doesn’t answer her. Not one word. The disciples get annoyed and tell him to send her away because she’s being loud. He says he was only sent to the lost sheep of Israel. She still doesn’t leave. She kneels and says “Lord, help me.” Then he gives her the hard line about not giving the children’s bread to dogs. She doesn’t get offended. She takes his metaphor and flips it: “Truth, Lord… but even the dogs eat the crumbs that fall from the master’s table.” He looks at her and says “O woman, great is thy faith.” Her daughter is healed that hour. She argued with Jesus for crumbs and won. I’m obsessed. ---
 
 ---
 
 ## 19. Decades Of Showing Up
-`anna-temple` · **Luke 2:38** · heat 1 · 70s · 229 words
+`anna-temple` · **Luke 2:38** · 45s · **voice-note**
 
-**Hook:** She was a widow for eighty-four years. She spent all of it inside one building. Waiting.
+**Hook:** Eighty-four years of showing up with zero proof… and she still got the scoop… …
 
-Luke names her. Anna. A prophetess. "The daughter of Phanuel, of the tribe of Aser." Stop on that. Asher. One of the northern tribes Assyria scattered off the map centuries earlier. The woman standing in the temple is from a people most of the country had written off. Married seven years. Then her husband died. And Luke says she was "a widow of about fourscore and four years." Quick honesty note, because people fudge this. Translators genuinely split. Either she was eighty-four, or widowed for eighty-four years. Anybody picking whichever version preaches better is doing you dirty. Either way. Decades. "Which departed not from the temple, but served God with fastings and prayers night and day." Night and day. In a building. Waiting on something she had no proof was ever coming. Then one ordinary morning a poor couple walks in with a newborn to do what the law required. Nothing about it looks like anything. "And she coming in that instant." That instant. And then she does the thing nobody else in the scene does. Simeon blesses the parents and speaks to the family. Anna walks out and tells the city. "Spake of him to all them that looked for redemption in Jerusalem." Eighty-four years of nothing. And she got the scoop.
+Anna. Prophetess. From the tribe of Asher, one of the northern tribes that got scattered centuries earlier. Most people had written her people off. Married seven years. Then her husband dies. Luke says she was a widow of about eighty-four years. Decades. She never left the temple. Fasting and praying night and day. Waiting for something she had no proof was coming. One ordinary morning a poor couple walks in with a newborn to do the legal requirement. Nothing about it looks special. She walks in at that exact instant, sees the baby, and then goes out and tells everyone in Jerusalem who’s been waiting for redemption. Eighty-four years of nothing… and she got the scoop. I’m soft for the long game. ---
 
 ---
 
 ## 20. And She Constrained Us
-`lydia-house` · **Acts 16:15** · heat 2 · 65s · 212 words
+`lydia-house` · **Acts 16:15** · 45s · **voice-note**
 
-**Hook:** Luke says she "constrained us." She strong-armed the apostles into moving into her house.
+**Hook:** She literally strong-armed the apostles into moving into her house… …
 
-Acts sixteen. Paul and his companions get to Philippi. And on the sabbath they go out of the city by a river side, where prayer was made. They sit down and speak to the women who gathered there. And there is Lydia. Seller of purple. From Thyatira. Purple is the luxury trade. She has money and she runs a business. And the text says the Lord opened her heart, that she attended unto the things which were spoken of Paul. She is baptized. Her whole household with her. And then she makes an offer that is not really an offer. "If ye have judged me to be faithful to the Lord, come into my house, and abide there." And Luke adds four words that tell you everything about how that went. "And she constrained us." She talked them into it. That is the phrasing. She would not take no. And here is the receipt. Later in that same chapter, after Paul and Silas get out of prison, after an earthquake, after the jailer's whole household is baptized, where do they go? They entered into the house of Lydia. Her house was the base of operations. Not asked. Told.
+Paul and the team get to Philippi. On the Sabbath they go to the river where the women gather to pray. There’s Lydia. Seller of purple, luxury fabric. She has money and runs a business. The Lord opens her heart. She gets baptized along with her whole household. Then she makes an offer that isn’t really an offer: “If you judge me faithful to the Lord, come stay at my house.” Luke adds four words that tell you everything: “And she constrained us.” She would not take no. Later in the same chapter, after the earthquake and the jailer’s household getting baptized, where do they go? Back to Lydia’s house. Her house became the base of operations. Not asked. Told. I’m obsessed with her energy. ---
 
 ---
 
 ## 21. She Taught The Teacher
-`priscilla-teach` · **Acts 18:26** · heat 2 · 63s · 224 words
+`priscilla-teach` · **Acts 18:26** · 63s · previous narration style
 
 **Hook:** The most eloquent preacher in the city was about eighty percent right. She took him aside and fixed it.
 
@@ -196,7 +197,7 @@ Acts eighteen. A man named Apollos shows up in Ephesus. Born in Alexandria. The 
 ---
 
 ## 22. Laughter Behind The Tent
-`sarah-laugh` · **Genesis 18:12** · heat 2 · 67s · 179 words
+`sarah-laugh` · **Genesis 18:12** · 67s · previous narration style
 
 **Hook:** She laughed silently, inside her own head, behind a tent flap. And got caught.
 
@@ -205,7 +206,7 @@ Genesis eighteen. Three visitors come to Abraham's tent in the heat of the day. 
 ---
 
 ## 23. Thou God Seest Me
-`hagar-seen` · **Genesis 16:13** · heat 2 · 65s · 236 words
+`hagar-seen` · **Genesis 16:13** · 65s · previous narration style
 
 **Hook:** A pregnant runaway slave is the first person in the Bible to give God a name.
 
@@ -214,7 +215,7 @@ Sarai cannot have children. So she gives her Egyptian handmaid Hagar to Abram, t
 ---
 
 ## 24. Five Sisters Speak Right
-`zelophehad` · **Numbers 27:7** · heat 3 · 67s · 203 words
+`zelophehad` · **Numbers 27:7** · 67s · previous narration style
 
 **Hook:** Five sisters argued property law in front of the entire nation. God said they were right.
 
@@ -223,7 +224,7 @@ Numbers twenty-seven. Their names are Mahlah, Noah, Hoglah, Milcah and Tirzah. S
 ---
 
 ## 25. They Asked The Prophetess
-`huldah-scroll` · **2 Kings 22:14** · heat 2 · 62s · 201 words
+`huldah-scroll` · **2 Kings 22:14** · 62s · previous narration style
 
 **Hook:** They found a lost scroll in the temple. The king had a building full of priests. He sent them to a woman.
 
@@ -232,7 +233,7 @@ Second Kings twenty-two. They are renovating the temple, and Hilkiah the high pr
 ---
 
 ## 26. All Her Living
-`widow-mite` · **Mark 12:44** · heat 1 · 60s · 194 words
+`widow-mite` · **Mark 12:44** · 60s · previous narration style
 
 **Hook:** He sat down opposite the treasury and watched people give. On purpose.
 
@@ -241,7 +242,7 @@ Mark twelve. And the setup is the part everyone skips. "Jesus sat over against t
 ---
 
 ## 27. Of Their Own Substance
-`joanna-fund` · **Luke 8:3** · heat 2 · 54s · 188 words
+`joanna-fund` · **Luke 8:3** · 54s · previous narration style
 
 **Hook:** One of the women funding the ministry was married to Herod's household manager. She was inside the court that killed John.
 
@@ -250,7 +251,7 @@ Luke chapter eight. Three verses that get skipped constantly. Jesus is going thr
 ---
 
 ## 28. The Coats She Made
-`dorcas-needle` · **Acts 9:39** · heat 1 · 77s · 214 words
+`dorcas-needle` · **Acts 9:39** · 77s · previous narration style
 
 **Hook:** There is exactly one woman in the whole New Testament that Luke calls a disciple. She spent her life sewing.
 
@@ -259,7 +260,7 @@ Joppa. Her name is Tabitha. In Greek, Dorcas. Luke describes her in one line. "F
 ---
 
 ## 29. A Succourer Of Many
-`phoebe-letter` · **Romans 16:1** · heat 2 · 62s · 228 words
+`phoebe-letter` · **Romans 16:1** · 62s · previous narration style
 
 **Hook:** Paul opens the last chapter of Romans by telling an entire church to give this woman whatever she asks for.
 
@@ -268,7 +269,7 @@ Romans sixteen. The final chapter. And he starts it with a personal commendation
 ---
 
 ## 30. A Year Poured Out
-`mary-perfume` · **John 12:7** · heat 3 · 67s · 236 words
+`mary-perfume` · **John 12:7** · 67s · previous narration style
 
 **Hook:** She poured a year's wages on the floor. The man who complained about the waste was skimming the money.
 
@@ -276,4 +277,4 @@ John twelve. Six days before Passover, in Bethany. Supper. Martha is serving. La
 
 ---
 
-**30 clips · 34 min total · avg 67s**
+**30 clips · 26 min · avg 52s**

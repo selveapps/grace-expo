@@ -55,7 +55,13 @@ async function main() {
     if (d == null) continue;
     const secs = Math.round(d);
     if (secs !== t.durationSeconds) {
-      teaSrc = teaSrc.replace(new RegExp(`(\\{ id: '${t.id}', durationSeconds: )\\d+`), `$1${secs}`);
+      // Field-order tolerant. This used to require durationSeconds to sit
+      // immediately after id; adding cardTitle between them silently broke
+      // every tea sync while still reporting success.
+      teaSrc = teaSrc.replace(
+        new RegExp(`(\\{ id: '${t.id}',[^\\n]*?durationSeconds: )\\d+`),
+        `$1${secs}`,
+      );
       teaChanged++;
     }
   }
