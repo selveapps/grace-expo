@@ -1,3 +1,7 @@
+/** Google client ids always end in .apps.googleusercontent.com. */
+const realClientId = (v) =>
+  (typeof v === 'string' && v.trim().endsWith('.apps.googleusercontent.com') ? v.trim() : null);
+
 export default ({ config }) => ({
   ...config,
   extra: {
@@ -13,7 +17,9 @@ export default ({ config }) => ({
     // used by the App Store / TestFlight build; the web one is what Expo Go's
     // auth proxy needs. When neither is set the app hides the Google button
     // rather than offering a sign-in that cannot complete.
-    googleIosClientId: process.env.EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID || null,
-    googleWebClientId: process.env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID || null,
+    // Only a real Google client id counts. A placeholder left in by mistake
+    // would otherwise light up a Google button that cannot complete a sign-in.
+    googleIosClientId: realClientId(process.env.EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID),
+    googleWebClientId: realClientId(process.env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID),
   },
 });
