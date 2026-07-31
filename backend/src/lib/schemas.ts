@@ -212,7 +212,6 @@ export const schemas = {
       type: 'object',
       properties: {
         name: { type: 'string' },
-        email: { type: 'string', format: 'email' },
         carrying: { type: 'array', items: { type: 'string' } },
         gentleness: { type: 'string' },
         rhythm: { type: 'string' },
@@ -354,6 +353,7 @@ export const schemas = {
       200: { type: 'object', additionalProperties: true },
       400: errorResponse,
       401: errorResponse,
+      403: errorResponse,
     },
   },
 

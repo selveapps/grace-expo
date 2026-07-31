@@ -35,6 +35,7 @@
     "setup:railway": "bash scripts/setup-railway.sh",
     "verify:audio": "tsx --env-file-if-exists=.env scripts/verify-audio.ts",
     "sync:durations": "tsx --env-file-if-exists=.env scripts/sync-durations.ts",
+    "sync:tea-fallback": "tsx scripts/sync-tea-fallback.ts",
     "tea:ab": "tsx --env-file-if-exists=.env scripts/tea-voice-ab.ts"
   },
   "engines": {

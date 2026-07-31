@@ -20,11 +20,9 @@ import { ProfileProvider } from './src/state/profile';
 import { AuthService } from './src/services/AuthService';
 import { colors } from './src/theme';
 
-// Hold the native splash until fonts and the guest session are ready. Without
-// this the splash auto-hides the moment JS boots, exposing a spinner on a
-// different background: launch read as three screens (dark icon plate, ivory
-// spinner, then the dove). One surface, one branded moment.
 SplashScreen.preventAutoHideAsync().catch(() => {});
+
+const GUEST_BOOT_TIMEOUT_MS = 3000;
 
 export default function App() {
   const [loaded] = useFonts({
@@ -36,26 +34,35 @@ export default function App() {
     HankenGrotesk_600SemiBold,
     HankenGrotesk_700Bold,
   });
-  const [booted, setBooted] = useState(false);
+  const [guestReady, setGuestReady] = useState(false);
 
   useEffect(() => {
+    if (!loaded) return undefined;
     let cancelled = false;
+    const timeout = setTimeout(() => {
+      if (!cancelled) setGuestReady(true);
+    }, GUEST_BOOT_TIMEOUT_MS);
     AuthService.ensureGuest()
       .catch(() => {})
-      .finally(() => { if (!cancelled) setBooted(true); });
-    return () => { cancelled = true; };
-  }, []);
+      .finally(() => {
+        clearTimeout(timeout);
+        if (!cancelled) setGuestReady(true);
+      });
+    return () => {
+      cancelled = true;
+      clearTimeout(timeout);
+    };
+  }, [loaded]);
 
   useEffect(() => {
-    if (loaded && booted) SplashScreen.hideAsync().catch(() => {});
-  }, [loaded, booted]);
+    if (loaded) SplashScreen.hideAsync().catch(() => {});
+  }, [loaded]);
 
-  // Native splash is still up; rendering nothing avoids a second background.
-  if (!loaded || !booted) return null;
+  if (!loaded) return null;
 
   return (
     <SafeAreaProvider>
-      <ProfileProvider booted={booted}>
+      <ProfileProvider booted={guestReady}>
         <NavigationContainer>
           <StatusBar style="dark" />
           <RootNavigator />

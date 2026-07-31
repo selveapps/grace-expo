@@ -27,7 +27,6 @@ export async function registerMeRoutes(app: FastifyInstance) {
   app.patch('/me', { schema: schemas.patchMe, preHandler: requireAuth }, async (req, reply) => {
     const body = req.body as {
       name?: string;
-      email?: string;
       carrying?: string[];
       gentleness?: string;
       rhythm?: string;

@@ -37,7 +37,7 @@ export type AppleIdentity = {
  */
 export async function verifyAppleIdentityToken(
   identityToken: string,
-  expectedNonce?: string,
+  expectedNonce: string,
 ): Promise<AppleIdentity> {
   const audience = process.env.APPLE_BUNDLE_ID;
   if (!audience) throw new Error('APPLE_BUNDLE_ID not configured');
@@ -48,7 +48,8 @@ export async function verifyAppleIdentityToken(
     audience,
   });
 
-  if (expectedNonce && payload.nonce !== expectedNonce) throw new Error('Nonce mismatch');
+  if (!expectedNonce) throw new Error('Nonce required');
+  if (payload.nonce !== expectedNonce) throw new Error('Nonce mismatch');
   if (!payload.sub) throw new Error('Apple token missing sub');
 
   const emailVerified = payload.email_verified;

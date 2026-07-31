@@ -50,7 +50,10 @@ export type GoogleIdentity = {
 };
 
 /** Verify an ID token issued to one of our configured clients. */
-export async function verifyGoogleIdToken(idToken: string): Promise<GoogleIdentity> {
+export async function verifyGoogleIdToken(
+  idToken: string,
+  expectedNonce: string,
+): Promise<GoogleIdentity> {
   const audience = googleAudiences();
   if (!audience.length) throw new Error('GOOGLE_CLIENT_IDS not configured');
 
@@ -59,6 +62,9 @@ export async function verifyGoogleIdToken(idToken: string): Promise<GoogleIdenti
     issuer: GOOGLE_ISS,
     audience,
   });
+
+  if (!expectedNonce) throw new Error('Nonce required');
+  if (payload.nonce !== expectedNonce) throw new Error('Nonce mismatch');
 
   if (!payload.sub) throw new Error('Google token missing sub');
 
