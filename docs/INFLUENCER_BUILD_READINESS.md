@@ -44,17 +44,25 @@ because only you can create them in Google Cloud.
    what Expo Go uses via its auth proxy — you only need it if you want Google
    sign-in to work while developing in Expo Go.
 
-### 1b. App-side env (EAS)
+### 1b. App-side env (EAS) — drop-in for the CTO
 
-Both are read in `app.config.js` and surfaced through `expoConfig.extra`:
+Add these two keys to `build.staging.env` (and `build.production.env`) in
+`eas.json`, or set them as EAS project secrets:
 
 ```
 EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID=<iOS client id>.apps.googleusercontent.com
 EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID=<Web client id>.apps.googleusercontent.com
 ```
 
-Add them to the `staging` (and later `production`) `env` block in `eas.json`, or
-as EAS project secrets.
+Nothing else changes. `app.config.js` already reads both and exposes them via
+`expoConfig.extra`; `AuthService` already picks iOS vs web by platform.
+
+Two guard rails worth knowing:
+- The keys are deliberately **absent** rather than empty, because EAS rejects
+  an empty env value and refuses to build.
+- `app.config.js` accepts a value only if it ends in
+  `.apps.googleusercontent.com`. A placeholder left in by mistake is treated as
+  unset, so it can never light up a Google button that cannot sign anyone in.
 
 ### 1c. API-side env (Railway)
 
@@ -129,13 +137,24 @@ Order:
 Nothing here is production. Production deploy and `main` merge are explicitly
 out of scope.
 
-### Known config issue to fix before building
+### Staging host — corrected
 
-`eas.json` → `build.staging.env.EXPO_PUBLIC_API_BASE` is currently
-`https://grace-expo-production.up.railway.app`. That is the Expo service host,
-not the API. Production correctly uses `https://grace-api-production.up.railway.app`.
-**A staging build made today would point the app at the wrong host.** Decide the
-staging API hostname and correct this before building.
+An earlier draft of this document called `eas.json` →
+`build.staging.env.EXPO_PUBLIC_API_BASE` a misconfiguration. **That was wrong**,
+and the correction matters if anyone acts on the old note.
+
+`https://grace-expo-production.up.railway.app` IS the staging API. The Railway
+service is named `grace-expo` but it lives in the project `grace-api-staging`,
+so the hostname reads like the Expo app while actually serving the API. It
+returns `{"ok":true,"db":true}` and is the host the staging profile should use.
+No change needed.
+
+`grace-api-production.up.railway.app` is a separate, older deployment and is
+**stale** — no `/auth/google`, v1 Tea copy, no byte-range audio. Do not point a
+build at it without deploying to it first.
+
+Staging deploys automatically from `feat/tf-v1-feedback` on push, and takes
+about a minute.
 
 ---
 
