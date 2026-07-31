@@ -22,7 +22,7 @@ type Body = {
  * `guestUserId` (as the spec's reference sketch did) would let anyone hand us
  * another user's id and adopt their saved verses and reflections.
  */
-async function guestIdFromAuthHeader(header?: string): Promise<string | null> {
+export async function guestIdFromAuthHeader(header?: string): Promise<string | null> {
   if (!header?.startsWith('Bearer ')) return null;
   try {
     return await verifyToken(header.slice(7), 'access');
@@ -37,7 +37,7 @@ async function guestIdFromAuthHeader(header?: string): Promise<string | null> {
  * already owns that book/story/tea/verse. Keep the account's own row in that
  * case and drop the guest's.
  */
-async function migrateGuestData(tx: Prisma.TransactionClient, guestId: string, userId: string) {
+export async function migrateGuestData(tx: Prisma.TransactionClient, guestId: string, userId: string) {
   const [verses, reading, stories, teas] = await Promise.all([
     tx.savedVerse.findMany({ where: { userId: guestId } }),
     tx.readingProgress.findMany({ where: { userId: guestId } }),

@@ -206,13 +206,17 @@ export default function PaywallScreen({ navigation }) {
         <Pressable onPress={restore} hitSlop={8} style={styles.restore} accessibilityRole="button" testID="paywall-restore">
           <Text style={styles.restoreText}>{restoring ? 'Checking…' : 'Restore purchase'}</Text>
         </Pressable>
-        {/* Guideline 3.1.2 needs title, length and price per period beside the
-            CTA with both documents linked. It stays fully present, but as one
-            quiet line plus a tap to expand, so it stops dominating the screen. */}
+        {/* The "$69.99/year after a 3-day free trial. Cancel anytime." summary
+            line that used to sit here has been removed on request.
+
+            Guideline 3.1.2 still has to be satisfied, and it is: the plan cards
+            above carry the subscription name, period and price per period, and
+            the Today/Day 2/Day 3 timeline states the trial length and that it
+            ends. The full renewal wording remains one tap away under Details,
+            beside both required documents. If App Review pushes back, the line
+            to restore is SUMMARY[plan]. */}
         <Pressable onPress={() => { Haptics.selectionAsync(); setLegalOpen((v) => !v); }} hitSlop={8} style={styles.legalToggle}>
-          <Text style={styles.legalSummary}>
-            {SUMMARY[plan]}  <Text style={styles.legalMore}>{legalOpen ? 'Less' : 'Details'}</Text>
-          </Text>
+          <Text style={styles.legalMore}>{legalOpen ? 'Less' : 'Details'}</Text>
         </Pressable>
         {legalOpen ? <Text style={styles.disclosure}>{DISCLOSURE[plan]}</Text> : null}
         <View style={styles.legalRow}>
@@ -257,9 +261,8 @@ const styles = StyleSheet.create({
   notice: { fontFamily: fonts.sans, fontSize: 14, lineHeight: 20, color: colors.onDarkMuted, textAlign: 'center', marginBottom: 12 },
   restore: { minHeight: 40, justifyContent: 'center', alignItems: 'center', marginTop: 6 },
   restoreText: { fontFamily: fonts.sansMed, fontSize: 14, color: 'rgba(230,207,148,0.9)' },
-  legalToggle: { minHeight: 34, justifyContent: 'center', marginTop: 10 },
-  legalSummary: { fontFamily: fonts.sans, fontSize: 12, lineHeight: 17, color: 'rgba(203,185,143,0.78)', textAlign: 'center' },
-  legalMore: { fontFamily: fonts.sansSemi, color: colors.gold },
+  legalToggle: { minHeight: 34, justifyContent: 'center', marginTop: 8 },
+  legalMore: { fontFamily: fonts.sansSemi, fontSize: 12, color: colors.gold, textAlign: 'center' },
   disclosure: { fontFamily: fonts.sans, fontSize: 11.5, lineHeight: 17, color: 'rgba(203,185,143,0.72)', textAlign: 'center', marginTop: 6, paddingHorizontal: 6 },
   legalRow: { flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: 8, minHeight: 40 },
   legalLink: { fontFamily: fonts.sansMed, fontSize: 12, color: 'rgba(230,207,148,0.85)' },

@@ -1,1019 +1,1126 @@
 {
   "kind": "tea",
   "teaId": "magdalene-first",
-  "text": "Everybody went home. She stayed and cried in a graveyard. So she's the one who saw him first.\n\nJohn twenty. Mary Magdalene comes to the tomb while it's still dark, sees the stone gone, and runs for Peter and John. They sprint back, look in, see the linen, and then the text says it plainly. They went away again unto their own home.\n\nThey left.\n\nShe didn't. Mary stood without at the sepulchre weeping.\n\nSo she's the one there when two angels ask why she's crying. And she says, \"Because they have taken away my Lord, and I know not where they have laid him.\"\n\nThen she turns around, sees a man, and thinks he's the gardener. Says, \"Sir, if thou have borne him hence, tell me where thou hast laid him, and I will take him away.\"\n\nShe's devastated and still trying to handle the logistics herself.\n\nAnd he says one word. \"Mary.\"\n\nThat's it. That's the whole thing. He says her name and she knows.\n\nThen he sends her. Go to my brethren and tell them.\n\nAnd Mary Magdalene came and told the disciples that she had seen the Lord.\n\nThe resurrection gets announced by a woman who wouldn't leave.",
-  "voice": "FGY2WhTYpPnrIDTdsKH5",
+  "mood": "light",
+  "heat": 2,
+  "text": "Peter and John looked into the empty tomb and went home. She stayed. So she is the one who saw him. John twenty. Mary Magdalene comes to the tomb while it is still dark, sees the stone gone, and runs for Peter and John. They sprint back. Look in. See the linen. And then the text says it plainly. They went away again unto their own home. They left. She did not. Mary stood without at the sepulchre weeping. So she is the one still there when two angels ask her why she is crying. And she says, \"They have taken away my Lord, and I know not where they have laid him.\" Then she turns around, sees a man, and thinks he is the gardener. \"Sir, if thou have borne him hence, tell me where thou hast laid him, and I will take him away.\" She is devastated and still trying to handle the logistics herself. She is going to carry a body. And he says one word. \"Mary.\" That is it. That is the whole thing. He says her name and she knows. Then he sends her. Go to my brethren and tell them. And Mary Magdalene came and told the disciples that she had seen the Lord. The resurrection gets announced by the woman who would not leave the graveyard.",
+  "voice": "cgSgspJ2msm6clMCkdW9",
   "words": [
     {
-      "w": "Everybody",
+      "w": "Peter",
       "start": 0,
-      "end": 0.36
-    },
-    {
-      "w": "went",
-      "start": 0.395,
-      "end": 0.534
-    },
-    {
-      "w": "home.",
-      "start": 0.569,
-      "end": 0.917
-    },
-    {
-      "w": "She",
-      "start": 1.045,
-      "end": 1.173
-    },
-    {
-      "w": "stayed",
-      "start": 1.231,
-      "end": 1.533
+      "end": 0.313
     },
     {
       "w": "and",
-      "start": 1.567,
-      "end": 1.637
-    },
-    {
-      "w": "cried",
-      "start": 1.672,
-      "end": 1.892
-    },
-    {
-      "w": "in",
-      "start": 1.927,
-      "end": 1.985
-    },
-    {
-      "w": "a",
-      "start": 2.02,
-      "end": 2.043
-    },
-    {
-      "w": "graveyard.",
-      "start": 2.078,
-      "end": 2.612
-    },
-    {
-      "w": "So",
-      "start": 2.763,
-      "end": 3.053
-    },
-    {
-      "w": "she's",
-      "start": 3.181,
-      "end": 3.483
-    },
-    {
-      "w": "the",
-      "start": 3.541,
-      "end": 3.611
-    },
-    {
-      "w": "one",
-      "start": 3.669,
-      "end": 3.785
-    },
-    {
-      "w": "who",
-      "start": 3.808,
-      "end": 3.913
-    },
-    {
-      "w": "saw",
-      "start": 3.959,
-      "end": 4.11
-    },
-    {
-      "w": "him",
-      "start": 4.168,
-      "end": 4.272
-    },
-    {
-      "w": "first.",
-      "start": 4.342,
-      "end": 4.853
+      "start": 0.383,
+      "end": 0.499
     },
     {
       "w": "John",
-      "start": 5.294,
-      "end": 5.492
+      "start": 0.557,
+      "end": 0.778
     },
     {
-      "w": "twenty.",
-      "start": 5.526,
-      "end": 5.921
+      "w": "looked",
+      "start": 0.824,
+      "end": 1.01
     },
     {
-      "w": "Mary",
-      "start": 6.026,
-      "end": 6.223
-    },
-    {
-      "w": "Magdalene",
-      "start": 6.269,
-      "end": 6.676
-    },
-    {
-      "w": "comes",
-      "start": 6.711,
-      "end": 6.908
-    },
-    {
-      "w": "to",
-      "start": 6.943,
-      "end": 7.012
+      "w": "into",
+      "start": 1.033,
+      "end": 1.173
     },
     {
       "w": "the",
-      "start": 7.07,
-      "end": 7.14
+      "start": 1.219,
+      "end": 1.3
+    },
+    {
+      "w": "empty",
+      "start": 1.347,
+      "end": 1.567
     },
     {
       "w": "tomb",
-      "start": 7.175,
-      "end": 7.361
-    },
-    {
-      "w": "while",
-      "start": 7.396,
-      "end": 7.546
-    },
-    {
-      "w": "it's",
-      "start": 7.57,
-      "end": 7.686
-    },
-    {
-      "w": "still",
-      "start": 7.709,
-      "end": 7.883
-    },
-    {
-      "w": "dark,",
-      "start": 7.93,
-      "end": 8.324
-    },
-    {
-      "w": "sees",
-      "start": 8.429,
-      "end": 8.649
-    },
-    {
-      "w": "the",
-      "start": 8.684,
-      "end": 8.754
-    },
-    {
-      "w": "stone",
-      "start": 8.8,
-      "end": 9.021
-    },
-    {
-      "w": "gone,",
-      "start": 9.056,
-      "end": 9.346
+      "start": 1.625,
+      "end": 1.858
     },
     {
       "w": "and",
-      "start": 9.369,
-      "end": 9.474
-    },
-    {
-      "w": "runs",
-      "start": 9.509,
-      "end": 9.671
-    },
-    {
-      "w": "for",
-      "start": 9.706,
-      "end": 9.81
-    },
-    {
-      "w": "Peter",
-      "start": 9.857,
-      "end": 10.054
-    },
-    {
-      "w": "and",
-      "start": 10.089,
-      "end": 10.17
-    },
-    {
-      "w": "John.",
-      "start": 10.205,
-      "end": 10.67
-    },
-    {
-      "w": "They",
-      "start": 11.111,
-      "end": 11.25
-    },
-    {
-      "w": "sprint",
-      "start": 11.297,
-      "end": 11.529
-    },
-    {
-      "w": "back,",
-      "start": 11.564,
-      "end": 11.958
-    },
-    {
-      "w": "look",
-      "start": 12.063,
-      "end": 12.225
-    },
-    {
-      "w": "in,",
-      "start": 12.307,
-      "end": 12.574
-    },
-    {
-      "w": "see",
-      "start": 12.678,
-      "end": 12.841
-    },
-    {
-      "w": "the",
-      "start": 12.876,
-      "end": 12.945
-    },
-    {
-      "w": "linen,",
-      "start": 12.98,
-      "end": 13.305
-    },
-    {
-      "w": "and",
-      "start": 13.34,
-      "end": 13.468
-    },
-    {
-      "w": "then",
-      "start": 13.503,
-      "end": 13.607
-    },
-    {
-      "w": "the",
-      "start": 13.642,
-      "end": 13.712
-    },
-    {
-      "w": "text",
-      "start": 13.746,
-      "end": 14.037
-    },
-    {
-      "w": "says",
-      "start": 14.141,
-      "end": 14.315
-    },
-    {
-      "w": "it",
-      "start": 14.373,
-      "end": 14.443
-    },
-    {
-      "w": "plainly.",
-      "start": 14.478,
-      "end": 15.035
-    },
-    {
-      "w": "They",
-      "start": 15.36,
-      "end": 15.499
+      "start": 1.892,
+      "end": 1.974
     },
     {
       "w": "went",
-      "start": 15.534,
-      "end": 15.662
-    },
-    {
-      "w": "away",
-      "start": 15.685,
-      "end": 15.836
-    },
-    {
-      "w": "again",
-      "start": 15.871,
-      "end": 16.045
-    },
-    {
-      "w": "unto",
-      "start": 16.126,
-      "end": 16.312
-    },
-    {
-      "w": "their",
-      "start": 16.359,
-      "end": 16.51
-    },
-    {
-      "w": "own",
-      "start": 16.544,
-      "end": 16.637
+      "start": 2.009,
+      "end": 2.148
     },
     {
       "w": "home.",
-      "start": 16.684,
-      "end": 16.997
-    },
-    {
-      "w": "They",
-      "start": 17.125,
-      "end": 17.276
-    },
-    {
-      "w": "left.",
-      "start": 17.334,
-      "end": 17.775
+      "start": 2.194,
+      "end": 2.601
     },
     {
       "w": "She",
-      "start": 18.054,
-      "end": 18.181
+      "start": 2.926,
+      "end": 3.042
     },
     {
-      "w": "didn't.",
-      "start": 18.228,
-      "end": 18.634
-    },
-    {
-      "w": "Mary",
-      "start": 18.913,
-      "end": 19.145
-    },
-    {
-      "w": "stood",
-      "start": 19.203,
-      "end": 19.389
-    },
-    {
-      "w": "without",
-      "start": 19.412,
-      "end": 19.644
-    },
-    {
-      "w": "at",
-      "start": 19.679,
-      "end": 19.737
-    },
-    {
-      "w": "the",
-      "start": 19.76,
-      "end": 19.83
-    },
-    {
-      "w": "sepulchre",
-      "start": 19.876,
-      "end": 20.306
-    },
-    {
-      "w": "weeping.",
-      "start": 20.341,
-      "end": 20.759
+      "w": "stayed.",
+      "start": 3.077,
+      "end": 3.622
     },
     {
       "w": "So",
-      "start": 20.863,
-      "end": 20.991
+      "start": 4.005,
+      "end": 4.133
     },
     {
-      "w": "she's",
-      "start": 21.049,
-      "end": 21.235
+      "w": "she",
+      "start": 4.203,
+      "end": 4.342
+    },
+    {
+      "w": "is",
+      "start": 4.423,
+      "end": 4.505
     },
     {
       "w": "the",
-      "start": 21.27,
-      "end": 21.339
+      "start": 4.54,
+      "end": 4.609
     },
     {
       "w": "one",
-      "start": 21.374,
-      "end": 21.49
-    },
-    {
-      "w": "there",
-      "start": 21.525,
-      "end": 21.688
-    },
-    {
-      "w": "when",
-      "start": 21.711,
-      "end": 21.838
-    },
-    {
-      "w": "two",
-      "start": 21.873,
-      "end": 22.001
-    },
-    {
-      "w": "angels",
-      "start": 22.071,
-      "end": 22.442
-    },
-    {
-      "w": "ask",
-      "start": 22.512,
-      "end": 22.756
-    },
-    {
-      "w": "why",
-      "start": 22.791,
-      "end": 22.953
-    },
-    {
-      "w": "she's",
-      "start": 23.011,
-      "end": 23.174
-    },
-    {
-      "w": "crying.",
-      "start": 23.209,
-      "end": 23.65
-    },
-    {
-      "w": "And",
-      "start": 23.975,
-      "end": 24.091
-    },
-    {
-      "w": "she",
-      "start": 24.126,
-      "end": 24.219
-    },
-    {
-      "w": "says,",
-      "start": 24.277,
-      "end": 24.463
-    },
-    {
-      "w": "\"Because",
-      "start": 24.486,
-      "end": 24.799
-    },
-    {
-      "w": "they",
-      "start": 24.823,
-      "end": 24.939
-    },
-    {
-      "w": "have",
-      "start": 24.974,
-      "end": 25.09
-    },
-    {
-      "w": "taken",
-      "start": 25.113,
-      "end": 25.357
-    },
-    {
-      "w": "away",
-      "start": 25.392,
-      "end": 25.577
-    },
-    {
-      "w": "my",
-      "start": 25.624,
-      "end": 25.705
-    },
-    {
-      "w": "Lord,",
-      "start": 25.786,
-      "end": 26.135
-    },
-    {
-      "w": "and",
-      "start": 26.344,
-      "end": 26.483
-    },
-    {
-      "w": "I",
-      "start": 26.564,
-      "end": 26.587
-    },
-    {
-      "w": "know",
-      "start": 26.715,
-      "end": 26.878
-    },
-    {
-      "w": "not",
-      "start": 26.959,
-      "end": 27.133
-    },
-    {
-      "w": "where",
-      "start": 27.168,
-      "end": 27.319
-    },
-    {
-      "w": "they",
-      "start": 27.342,
-      "end": 27.458
-    },
-    {
-      "w": "have",
-      "start": 27.505,
-      "end": 27.644
-    },
-    {
-      "w": "laid",
-      "start": 27.679,
-      "end": 27.853
-    },
-    {
-      "w": "him.\"",
-      "start": 27.899,
-      "end": 28.201
-    },
-    {
-      "w": "Then",
-      "start": 28.41,
-      "end": 28.549
-    },
-    {
-      "w": "she",
-      "start": 28.584,
-      "end": 28.666
-    },
-    {
-      "w": "turns",
-      "start": 28.7,
-      "end": 28.886
-    },
-    {
-      "w": "around,",
-      "start": 28.921,
-      "end": 29.269
-    },
-    {
-      "w": "sees",
-      "start": 29.374,
-      "end": 29.594
-    },
-    {
-      "w": "a",
-      "start": 29.629,
-      "end": 29.664
-    },
-    {
-      "w": "man,",
-      "start": 29.722,
-      "end": 30.059
-    },
-    {
-      "w": "and",
-      "start": 30.094,
-      "end": 30.21
-    },
-    {
-      "w": "thinks",
-      "start": 30.256,
-      "end": 30.453
-    },
-    {
-      "w": "he's",
-      "start": 30.5,
-      "end": 30.639
-    },
-    {
-      "w": "the",
-      "start": 30.674,
-      "end": 30.744
-    },
-    {
-      "w": "gardener.",
-      "start": 30.79,
-      "end": 31.231
-    },
-    {
-      "w": "Says,",
-      "start": 31.313,
-      "end": 31.696
-    },
-    {
-      "w": "\"Sir,",
-      "start": 31.731,
-      "end": 31.986
-    },
-    {
-      "w": "if",
-      "start": 32.009,
-      "end": 32.067
-    },
-    {
-      "w": "thou",
-      "start": 32.102,
-      "end": 32.23
-    },
-    {
-      "w": "have",
-      "start": 32.265,
-      "end": 32.381
-    },
-    {
-      "w": "borne",
-      "start": 32.404,
-      "end": 32.59
-    },
-    {
-      "w": "him",
-      "start": 32.625,
-      "end": 32.717
-    },
-    {
-      "w": "hence,",
-      "start": 32.787,
-      "end": 33.205
-    },
-    {
-      "w": "tell",
-      "start": 33.414,
-      "end": 33.623
-    },
-    {
-      "w": "me",
-      "start": 33.669,
-      "end": 33.751
-    },
-    {
-      "w": "where",
-      "start": 33.786,
-      "end": 33.96
-    },
-    {
-      "w": "thou",
-      "start": 33.994,
-      "end": 34.146
-    },
-    {
-      "w": "hast",
-      "start": 34.215,
-      "end": 34.378
-    },
-    {
-      "w": "laid",
-      "start": 34.424,
-      "end": 34.575
-    },
-    {
-      "w": "him,",
-      "start": 34.622,
-      "end": 34.796
-    },
-    {
-      "w": "and",
-      "start": 34.831,
-      "end": 34.935
-    },
-    {
-      "w": "I",
-      "start": 34.982,
-      "end": 35.017
-    },
-    {
-      "w": "will",
-      "start": 35.075,
-      "end": 35.226
-    },
-    {
-      "w": "take",
-      "start": 35.272,
-      "end": 35.446
-    },
-    {
-      "w": "him",
-      "start": 35.481,
-      "end": 35.574
-    },
-    {
-      "w": "away.\"",
-      "start": 35.609,
-      "end": 36.027
-    },
-    {
-      "w": "She's",
-      "start": 36.27,
-      "end": 36.491
-    },
-    {
-      "w": "devastated",
-      "start": 36.561,
-      "end": 37.118
-    },
-    {
-      "w": "and",
-      "start": 37.199,
-      "end": 37.408
-    },
-    {
-      "w": "still",
-      "start": 37.513,
-      "end": 37.745
-    },
-    {
-      "w": "trying",
-      "start": 37.791,
-      "end": 38.012
-    },
-    {
-      "w": "to",
-      "start": 38.047,
-      "end": 38.093
-    },
-    {
-      "w": "handle",
-      "start": 38.128,
-      "end": 38.36
-    },
-    {
-      "w": "the",
-      "start": 38.395,
-      "end": 38.465
-    },
-    {
-      "w": "logistics",
-      "start": 38.511,
-      "end": 38.918
-    },
-    {
-      "w": "herself.",
-      "start": 38.952,
-      "end": 39.37
-    },
-    {
-      "w": "And",
-      "start": 39.394,
-      "end": 39.626
-    },
-    {
-      "w": "he",
-      "start": 39.684,
-      "end": 39.753
-    },
-    {
-      "w": "says",
-      "start": 39.8,
-      "end": 39.974
-    },
-    {
-      "w": "one",
-      "start": 40.055,
-      "end": 40.241
-    },
-    {
-      "w": "word.",
-      "start": 40.276,
-      "end": 40.682
-    },
-    {
-      "w": "\"Mary.\"",
-      "start": 40.961,
-      "end": 41.623
-    },
-    {
-      "w": "That's",
-      "start": 41.808,
-      "end": 42.041
-    },
-    {
-      "w": "it.",
-      "start": 42.087,
-      "end": 42.296
-    },
-    {
-      "w": "That's",
-      "start": 42.424,
-      "end": 42.644
-    },
-    {
-      "w": "the",
-      "start": 42.679,
-      "end": 42.749
-    },
-    {
-      "w": "whole",
-      "start": 42.784,
-      "end": 42.946
-    },
-    {
-      "w": "thing.",
-      "start": 42.969,
-      "end": 43.306
-    },
-    {
-      "w": "He",
-      "start": 43.434,
-      "end": 43.515
-    },
-    {
-      "w": "says",
-      "start": 43.562,
-      "end": 43.701
-    },
-    {
-      "w": "her",
-      "start": 43.747,
-      "end": 43.829
-    },
-    {
-      "w": "name",
-      "start": 43.863,
-      "end": 44.026
-    },
-    {
-      "w": "and",
-      "start": 44.061,
-      "end": 44.165
-    },
-    {
-      "w": "she",
-      "start": 44.2,
-      "end": 44.293
-    },
-    {
-      "w": "knows.",
-      "start": 44.339,
-      "end": 44.769
-    },
-    {
-      "w": "Then",
-      "start": 44.955,
-      "end": 45.129
-    },
-    {
-      "w": "he",
-      "start": 45.233,
-      "end": 45.396
-    },
-    {
-      "w": "sends",
-      "start": 45.466,
-      "end": 45.675
-    },
-    {
-      "w": "her.",
-      "start": 45.721,
-      "end": 46.011
-    },
-    {
-      "w": "Go",
-      "start": 46.29,
-      "end": 46.418
-    },
-    {
-      "w": "to",
-      "start": 46.453,
-      "end": 46.499
-    },
-    {
-      "w": "my",
-      "start": 46.546,
-      "end": 46.615
-    },
-    {
-      "w": "brethren",
-      "start": 46.662,
-      "end": 47.01
-    },
-    {
-      "w": "and",
-      "start": 47.068,
-      "end": 47.184
-    },
-    {
-      "w": "tell",
-      "start": 47.219,
-      "end": 47.382
-    },
-    {
-      "w": "them.",
-      "start": 47.428,
-      "end": 47.684
-    },
-    {
-      "w": "And",
-      "start": 47.707,
-      "end": 47.811
-    },
-    {
-      "w": "Mary",
-      "start": 47.846,
-      "end": 47.985
-    },
-    {
-      "w": "Magdalene",
-      "start": 48.032,
-      "end": 48.45
-    },
-    {
-      "w": "came",
-      "start": 48.496,
-      "end": 48.694
-    },
-    {
-      "w": "and",
-      "start": 48.717,
-      "end": 48.786
-    },
-    {
-      "w": "told",
-      "start": 48.833,
-      "end": 49.123
-    },
-    {
-      "w": "the",
-      "start": 49.228,
-      "end": 49.321
-    },
-    {
-      "w": "disciples",
-      "start": 49.367,
-      "end": 49.785
-    },
-    {
-      "w": "that",
-      "start": 49.82,
-      "end": 49.936
-    },
-    {
-      "w": "she",
-      "start": 49.971,
-      "end": 50.064
-    },
-    {
-      "w": "had",
-      "start": 50.11,
-      "end": 50.215
-    },
-    {
-      "w": "seen",
-      "start": 50.261,
-      "end": 50.435
-    },
-    {
-      "w": "the",
-      "start": 50.47,
-      "end": 50.54
-    },
-    {
-      "w": "Lord.",
-      "start": 50.586,
-      "end": 50.899
-    },
-    {
-      "w": "The",
-      "start": 51.004,
-      "end": 51.097
-    },
-    {
-      "w": "resurrection",
-      "start": 51.132,
-      "end": 51.573
-    },
-    {
-      "w": "gets",
-      "start": 51.608,
-      "end": 51.747
-    },
-    {
-      "w": "announced",
-      "start": 51.782,
-      "end": 52.119
-    },
-    {
-      "w": "by",
-      "start": 52.153,
-      "end": 52.258
-    },
-    {
-      "w": "a",
-      "start": 52.304,
-      "end": 52.328
-    },
-    {
-      "w": "woman",
-      "start": 52.362,
-      "end": 52.56
+      "start": 4.656,
+      "end": 4.76
     },
     {
       "w": "who",
-      "start": 52.595,
-      "end": 52.687
+      "start": 4.783,
+      "end": 4.876
     },
     {
-      "w": "wouldn't",
-      "start": 52.722,
-      "end": 52.978
+      "w": "saw",
+      "start": 4.923,
+      "end": 5.074
     },
     {
-      "w": "leave.",
-      "start": 53.013,
-      "end": 53.454
+      "w": "him.",
+      "start": 5.132,
+      "end": 5.48
+    },
+    {
+      "w": "John",
+      "start": 5.863,
+      "end": 6.072
+    },
+    {
+      "w": "twenty.",
+      "start": 6.118,
+      "end": 6.664
+    },
+    {
+      "w": "Mary",
+      "start": 6.873,
+      "end": 7.082
+    },
+    {
+      "w": "Magdalene",
+      "start": 7.129,
+      "end": 7.488
+    },
+    {
+      "w": "comes",
+      "start": 7.523,
+      "end": 7.709
+    },
+    {
+      "w": "to",
+      "start": 7.744,
+      "end": 7.802
+    },
+    {
+      "w": "the",
+      "start": 7.86,
+      "end": 7.93
+    },
+    {
+      "w": "tomb",
+      "start": 7.964,
+      "end": 8.185
+    },
+    {
+      "w": "while",
+      "start": 8.208,
+      "end": 8.371
+    },
+    {
+      "w": "it",
+      "start": 8.406,
+      "end": 8.475
+    },
+    {
+      "w": "is",
+      "start": 8.51,
+      "end": 8.58
+    },
+    {
+      "w": "still",
+      "start": 8.615,
+      "end": 8.789
+    },
+    {
+      "w": "dark,",
+      "start": 8.824,
+      "end": 9.253
+    },
+    {
+      "w": "sees",
+      "start": 9.636,
+      "end": 9.88
+    },
+    {
+      "w": "the",
+      "start": 9.927,
+      "end": 9.996
+    },
+    {
+      "w": "stone",
+      "start": 10.031,
+      "end": 10.263
+    },
+    {
+      "w": "gone,",
+      "start": 10.298,
+      "end": 10.577
+    },
+    {
+      "w": "and",
+      "start": 10.6,
+      "end": 10.704
+    },
+    {
+      "w": "runs",
+      "start": 10.762,
+      "end": 10.96
+    },
+    {
+      "w": "for",
+      "start": 10.995,
+      "end": 11.099
+    },
+    {
+      "w": "Peter",
+      "start": 11.134,
+      "end": 11.331
+    },
+    {
+      "w": "and",
+      "start": 11.366,
+      "end": 11.436
+    },
+    {
+      "w": "John.",
+      "start": 11.471,
+      "end": 11.947
+    },
+    {
+      "w": "They",
+      "start": 12.91,
+      "end": 13.05
+    },
+    {
+      "w": "sprint",
+      "start": 13.085,
+      "end": 13.294
+    },
+    {
+      "w": "back.",
+      "start": 13.329,
+      "end": 13.747
+    },
+    {
+      "w": "Look",
+      "start": 14.072,
+      "end": 14.234
+    },
+    {
+      "w": "in.",
+      "start": 14.315,
+      "end": 14.606
+    },
+    {
+      "w": "See",
+      "start": 14.815,
+      "end": 14.942
+    },
+    {
+      "w": "the",
+      "start": 14.977,
+      "end": 15.047
+    },
+    {
+      "w": "linen.",
+      "start": 15.082,
+      "end": 15.511
+    },
+    {
+      "w": "And",
+      "start": 16.115,
+      "end": 16.231
+    },
+    {
+      "w": "then",
+      "start": 16.254,
+      "end": 16.37
+    },
+    {
+      "w": "the",
+      "start": 16.405,
+      "end": 16.475
+    },
+    {
+      "w": "text",
+      "start": 16.51,
+      "end": 16.788
+    },
+    {
+      "w": "says",
+      "start": 16.846,
+      "end": 16.997
+    },
+    {
+      "w": "it",
+      "start": 17.032,
+      "end": 17.102
+    },
+    {
+      "w": "plainly.",
+      "start": 17.137,
+      "end": 17.706
+    },
+    {
+      "w": "They",
+      "start": 18.53,
+      "end": 18.669
+    },
+    {
+      "w": "went",
+      "start": 18.692,
+      "end": 18.809
+    },
+    {
+      "w": "away",
+      "start": 18.832,
+      "end": 18.971
+    },
+    {
+      "w": "again",
+      "start": 19.018,
+      "end": 19.238
+    },
+    {
+      "w": "unto",
+      "start": 19.296,
+      "end": 19.435
+    },
+    {
+      "w": "their",
+      "start": 19.47,
+      "end": 19.61
+    },
+    {
+      "w": "own",
+      "start": 19.644,
+      "end": 19.761
+    },
+    {
+      "w": "home.",
+      "start": 19.807,
+      "end": 20.179
+    },
+    {
+      "w": "They",
+      "start": 20.26,
+      "end": 20.399
+    },
+    {
+      "w": "left.",
+      "start": 20.457,
+      "end": 20.887
+    },
+    {
+      "w": "She",
+      "start": 21.165,
+      "end": 21.27
+    },
+    {
+      "w": "did",
+      "start": 21.316,
+      "end": 21.421
+    },
+    {
+      "w": "not.",
+      "start": 21.456,
+      "end": 21.908
+    },
+    {
+      "w": "Mary",
+      "start": 22.512,
+      "end": 22.768
+    },
+    {
+      "w": "stood",
+      "start": 22.802,
+      "end": 22.977
+    },
+    {
+      "w": "without",
+      "start": 23.011,
+      "end": 23.336
+    },
+    {
+      "w": "at",
+      "start": 23.383,
+      "end": 23.453
+    },
+    {
+      "w": "the",
+      "start": 23.487,
+      "end": 23.557
+    },
+    {
+      "w": "sepulchre",
+      "start": 23.592,
+      "end": 24.021
+    },
+    {
+      "w": "weeping.",
+      "start": 24.079,
+      "end": 24.637
+    },
+    {
+      "w": "So",
+      "start": 25.24,
+      "end": 25.38
+    },
+    {
+      "w": "she",
+      "start": 25.426,
+      "end": 25.531
+    },
+    {
+      "w": "is",
+      "start": 25.577,
+      "end": 25.647
+    },
+    {
+      "w": "the",
+      "start": 25.682,
+      "end": 25.751
+    },
+    {
+      "w": "one",
+      "start": 25.798,
+      "end": 25.925
+    },
+    {
+      "w": "still",
+      "start": 25.96,
+      "end": 26.146
+    },
+    {
+      "w": "there",
+      "start": 26.181,
+      "end": 26.332
+    },
+    {
+      "w": "when",
+      "start": 26.367,
+      "end": 26.494
+    },
+    {
+      "w": "two",
+      "start": 26.529,
+      "end": 26.645
+    },
+    {
+      "w": "angels",
+      "start": 26.692,
+      "end": 26.947
+    },
+    {
+      "w": "ask",
+      "start": 26.982,
+      "end": 27.156
+    },
+    {
+      "w": "her",
+      "start": 27.191,
+      "end": 27.272
+    },
+    {
+      "w": "why",
+      "start": 27.307,
+      "end": 27.446
+    },
+    {
+      "w": "she",
+      "start": 27.492,
+      "end": 27.585
+    },
+    {
+      "w": "is",
+      "start": 27.62,
+      "end": 27.69
+    },
+    {
+      "w": "crying.",
+      "start": 27.736,
+      "end": 28.212
+    },
+    {
+      "w": "And",
+      "start": 28.653,
+      "end": 28.781
+    },
+    {
+      "w": "she",
+      "start": 28.816,
+      "end": 28.909
+    },
+    {
+      "w": "says,",
+      "start": 28.967,
+      "end": 29.408
+    },
+    {
+      "w": "\"They",
+      "start": 29.478,
+      "end": 29.664
+    },
+    {
+      "w": "have",
+      "start": 29.698,
+      "end": 29.803
+    },
+    {
+      "w": "taken",
+      "start": 29.826,
+      "end": 30.035
+    },
+    {
+      "w": "away",
+      "start": 30.07,
+      "end": 30.209
+    },
+    {
+      "w": "my",
+      "start": 30.256,
+      "end": 30.325
+    },
+    {
+      "w": "Lord,",
+      "start": 30.383,
+      "end": 30.674
+    },
+    {
+      "w": "and",
+      "start": 30.708,
+      "end": 30.801
+    },
+    {
+      "w": "I",
+      "start": 30.883,
+      "end": 30.917
+    },
+    {
+      "w": "know",
+      "start": 30.975,
+      "end": 31.103
+    },
+    {
+      "w": "not",
+      "start": 31.15,
+      "end": 31.254
+    },
+    {
+      "w": "where",
+      "start": 31.289,
+      "end": 31.475
+    },
+    {
+      "w": "they",
+      "start": 31.51,
+      "end": 31.614
+    },
+    {
+      "w": "have",
+      "start": 31.649,
+      "end": 31.753
+    },
+    {
+      "w": "laid",
+      "start": 31.788,
+      "end": 31.928
+    },
+    {
+      "w": "him.\"",
+      "start": 31.962,
+      "end": 32.287
+    },
+    {
+      "w": "Then",
+      "start": 32.891,
+      "end": 33.065
+    },
+    {
+      "w": "she",
+      "start": 33.135,
+      "end": 33.216
+    },
+    {
+      "w": "turns",
+      "start": 33.251,
+      "end": 33.437
+    },
+    {
+      "w": "around,",
+      "start": 33.472,
+      "end": 33.948
+    },
+    {
+      "w": "sees",
+      "start": 34.226,
+      "end": 34.458
+    },
+    {
+      "w": "a",
+      "start": 34.493,
+      "end": 34.517
+    },
+    {
+      "w": "man,",
+      "start": 34.563,
+      "end": 34.981
+    },
+    {
+      "w": "and",
+      "start": 35.306,
+      "end": 35.445
+    },
+    {
+      "w": "thinks",
+      "start": 35.503,
+      "end": 35.782
+    },
+    {
+      "w": "he",
+      "start": 35.852,
+      "end": 35.91
+    },
+    {
+      "w": "is",
+      "start": 35.956,
+      "end": 36.026
+    },
+    {
+      "w": "the",
+      "start": 36.061,
+      "end": 36.13
+    },
+    {
+      "w": "gardener.",
+      "start": 36.165,
+      "end": 36.746
+    },
+    {
+      "w": "\"Sir,",
+      "start": 37.57,
+      "end": 38.162
+    },
+    {
+      "w": "if",
+      "start": 38.348,
+      "end": 38.452
+    },
+    {
+      "w": "thou",
+      "start": 38.487,
+      "end": 38.615
+    },
+    {
+      "w": "have",
+      "start": 38.673,
+      "end": 38.801
+    },
+    {
+      "w": "borne",
+      "start": 38.835,
+      "end": 39.021
+    },
+    {
+      "w": "him",
+      "start": 39.056,
+      "end": 39.149
+    },
+    {
+      "w": "hence,",
+      "start": 39.195,
+      "end": 39.602
+    },
+    {
+      "w": "tell",
+      "start": 39.811,
+      "end": 39.973
+    },
+    {
+      "w": "me",
+      "start": 40.02,
+      "end": 40.089
+    },
+    {
+      "w": "where",
+      "start": 40.124,
+      "end": 40.251
+    },
+    {
+      "w": "thou",
+      "start": 40.286,
+      "end": 40.391
+    },
+    {
+      "w": "hast",
+      "start": 40.426,
+      "end": 40.553
+    },
+    {
+      "w": "laid",
+      "start": 40.588,
+      "end": 40.739
+    },
+    {
+      "w": "him,",
+      "start": 40.785,
+      "end": 40.925
+    },
+    {
+      "w": "and",
+      "start": 40.96,
+      "end": 41.064
+    },
+    {
+      "w": "I",
+      "start": 41.169,
+      "end": 41.227
+    },
+    {
+      "w": "will",
+      "start": 41.296,
+      "end": 41.424
+    },
+    {
+      "w": "take",
+      "start": 41.459,
+      "end": 41.587
+    },
+    {
+      "w": "him",
+      "start": 41.61,
+      "end": 41.691
+    },
+    {
+      "w": "away.\"",
+      "start": 41.726,
+      "end": 42.283
+    },
+    {
+      "w": "She",
+      "start": 43.107,
+      "end": 43.224
+    },
+    {
+      "w": "is",
+      "start": 43.258,
+      "end": 43.316
+    },
+    {
+      "w": "devastated",
+      "start": 43.351,
+      "end": 43.874
+    },
+    {
+      "w": "and",
+      "start": 43.932,
+      "end": 44.025
+    },
+    {
+      "w": "still",
+      "start": 44.094,
+      "end": 44.315
+    },
+    {
+      "w": "trying",
+      "start": 44.361,
+      "end": 44.547
+    },
+    {
+      "w": "to",
+      "start": 44.582,
+      "end": 44.64
+    },
+    {
+      "w": "handle",
+      "start": 44.698,
+      "end": 44.93
+    },
+    {
+      "w": "the",
+      "start": 44.965,
+      "end": 45.035
+    },
+    {
+      "w": "logistics",
+      "start": 45.081,
+      "end": 45.511
+    },
+    {
+      "w": "herself.",
+      "start": 45.546,
+      "end": 46.08
+    },
+    {
+      "w": "She",
+      "start": 46.602,
+      "end": 46.707
+    },
+    {
+      "w": "is",
+      "start": 46.741,
+      "end": 46.799
+    },
+    {
+      "w": "going",
+      "start": 46.834,
+      "end": 46.974
+    },
+    {
+      "w": "to",
+      "start": 47.008,
+      "end": 47.055
+    },
+    {
+      "w": "carry",
+      "start": 47.101,
+      "end": 47.333
+    },
+    {
+      "w": "a",
+      "start": 47.368,
+      "end": 47.403
+    },
+    {
+      "w": "body.",
+      "start": 47.438,
+      "end": 47.937
+    },
+    {
+      "w": "And",
+      "start": 48.541,
+      "end": 48.68
+    },
+    {
+      "w": "he",
+      "start": 48.738,
+      "end": 48.808
+    },
+    {
+      "w": "says",
+      "start": 48.866,
+      "end": 49.04
+    },
+    {
+      "w": "one",
+      "start": 49.11,
+      "end": 49.226
+    },
+    {
+      "w": "word.",
+      "start": 49.261,
+      "end": 49.69
+    },
+    {
+      "w": "\"Mary.\"",
+      "start": 50.515,
+      "end": 51.246
+    },
+    {
+      "w": "That",
+      "start": 51.943,
+      "end": 52.128
+    },
+    {
+      "w": "is",
+      "start": 52.163,
+      "end": 52.233
+    },
+    {
+      "w": "it.",
+      "start": 52.303,
+      "end": 52.604
+    },
+    {
+      "w": "That",
+      "start": 53.127,
+      "end": 53.371
+    },
+    {
+      "w": "is",
+      "start": 53.417,
+      "end": 53.487
+    },
+    {
+      "w": "the",
+      "start": 53.522,
+      "end": 53.591
+    },
+    {
+      "w": "whole",
+      "start": 53.626,
+      "end": 53.777
+    },
+    {
+      "w": "thing.",
+      "start": 53.8,
+      "end": 54.288
+    },
+    {
+      "w": "He",
+      "start": 54.984,
+      "end": 55.077
+    },
+    {
+      "w": "says",
+      "start": 55.124,
+      "end": 55.263
+    },
+    {
+      "w": "her",
+      "start": 55.298,
+      "end": 55.379
+    },
+    {
+      "w": "name",
+      "start": 55.426,
+      "end": 55.658
+    },
+    {
+      "w": "and",
+      "start": 55.693,
+      "end": 55.762
+    },
+    {
+      "w": "she",
+      "start": 55.797,
+      "end": 55.89
+    },
+    {
+      "w": "knows.",
+      "start": 55.948,
+      "end": 56.47
+    },
+    {
+      "w": "Then",
+      "start": 57.167,
+      "end": 57.318
+    },
+    {
+      "w": "he",
+      "start": 57.353,
+      "end": 57.399
+    },
+    {
+      "w": "sends",
+      "start": 57.434,
+      "end": 57.62
+    },
+    {
+      "w": "her.",
+      "start": 57.655,
+      "end": 57.922
+    },
+    {
+      "w": "Go",
+      "start": 58.444,
+      "end": 58.549
+    },
+    {
+      "w": "to",
+      "start": 58.583,
+      "end": 58.63
+    },
+    {
+      "w": "my",
+      "start": 58.665,
+      "end": 58.734
+    },
+    {
+      "w": "brethren",
+      "start": 58.781,
+      "end": 59.094
+    },
+    {
+      "w": "and",
+      "start": 59.129,
+      "end": 59.21
+    },
+    {
+      "w": "tell",
+      "start": 59.245,
+      "end": 59.373
+    },
+    {
+      "w": "them.",
+      "start": 59.408,
+      "end": 59.721
+    },
+    {
+      "w": "And",
+      "start": 60.847,
+      "end": 60.963
+    },
+    {
+      "w": "Mary",
+      "start": 60.998,
+      "end": 61.161
+    },
+    {
+      "w": "Magdalene",
+      "start": 61.196,
+      "end": 61.579
+    },
+    {
+      "w": "came",
+      "start": 61.614,
+      "end": 61.869
+    },
+    {
+      "w": "and",
+      "start": 61.904,
+      "end": 61.997
+    },
+    {
+      "w": "told",
+      "start": 62.055,
+      "end": 62.229
+    },
+    {
+      "w": "the",
+      "start": 62.264,
+      "end": 62.333
+    },
+    {
+      "w": "disciples",
+      "start": 62.357,
+      "end": 62.786
+    },
+    {
+      "w": "that",
+      "start": 62.821,
+      "end": 62.937
+    },
+    {
+      "w": "she",
+      "start": 62.96,
+      "end": 63.053
+    },
+    {
+      "w": "had",
+      "start": 63.1,
+      "end": 63.193
+    },
+    {
+      "w": "seen",
+      "start": 63.227,
+      "end": 63.39
+    },
+    {
+      "w": "the",
+      "start": 63.425,
+      "end": 63.494
+    },
+    {
+      "w": "Lord.",
+      "start": 63.529,
+      "end": 63.947
+    },
+    {
+      "w": "The",
+      "start": 64.644,
+      "end": 64.737
+    },
+    {
+      "w": "resurrection",
+      "start": 64.783,
+      "end": 65.213
+    },
+    {
+      "w": "gets",
+      "start": 65.248,
+      "end": 65.387
+    },
+    {
+      "w": "announced",
+      "start": 65.422,
+      "end": 65.735
+    },
+    {
+      "w": "by",
+      "start": 65.77,
+      "end": 65.84
+    },
+    {
+      "w": "the",
+      "start": 65.875,
+      "end": 65.944
+    },
+    {
+      "w": "woman",
+      "start": 65.979,
+      "end": 66.211
+    },
+    {
+      "w": "who",
+      "start": 66.246,
+      "end": 66.339
+    },
+    {
+      "w": "would",
+      "start": 66.362,
+      "end": 66.49
+    },
+    {
+      "w": "not",
+      "start": 66.525,
+      "end": 66.629
+    },
+    {
+      "w": "leave",
+      "start": 66.664,
+      "end": 66.815
+    },
+    {
+      "w": "the",
+      "start": 66.838,
+      "end": 66.908
+    },
+    {
+      "w": "graveyard.",
+      "start": 66.931,
+      "end": 67.662
     }
   ],
-  "renderedAt": 1785322198566
+  "renderedAt": 1785479468686
 }

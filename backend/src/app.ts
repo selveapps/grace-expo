@@ -12,6 +12,7 @@ import { registerTodayRoutes } from './routes/today.js';
 import { registerAudioRoutes } from './routes/audio.js';
 import { registerReviewRoutes } from './routes/review.js';
 import { registerAppleAuthRoutes } from './routes/auth-apple.js';
+import { registerGoogleAuthRoutes } from './routes/auth-google.js';
 import { registerSwagger } from './plugins/swagger.js';
 
 export async function buildApp(options: { logger?: boolean } = {}) {
@@ -33,6 +34,7 @@ export async function buildApp(options: { logger?: boolean } = {}) {
   await registerAudioRoutes(app);
   await registerReviewRoutes(app);
   await registerAppleAuthRoutes(app);
+  await registerGoogleAuthRoutes(app);
 
   return app;
 }

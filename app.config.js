@@ -9,5 +9,11 @@ export default ({ config }) => ({
       process.env.EXPO_PUBLIC_API_BASE ||
       'https://grace-api-production.up.railway.app',
     betaRedeemCode: process.env.EXPO_PUBLIC_BETA_REDEEM_CODE || 'grace-beta',
+    // Google OAuth client ids, from the Google Cloud console. The iOS one is
+    // used by the App Store / TestFlight build; the web one is what Expo Go's
+    // auth proxy needs. When neither is set the app hides the Google button
+    // rather than offering a sign-in that cannot complete.
+    googleIosClientId: process.env.EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID || null,
+    googleWebClientId: process.env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID || null,
   },
 });

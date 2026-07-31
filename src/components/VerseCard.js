@@ -14,6 +14,20 @@ const SIZES = {
   compact: { padding: 22, radius: radius.lg, verse: 24, line: 34, ref: 12, gap: 14 },
 };
 
+/**
+ * Verses are passages now, not single lines, so the card has to cope with a
+ * four-verse reading as well as a nine-word one. `adjustsFontSizeToFit` does
+ * nothing for wrapping multi-line text in React Native, so the ramp is stepped
+ * off the length instead: long passages set smaller and tighter rather than
+ * overflowing the hero card on a small phone.
+ */
+function scaleFor(len) {
+  if (len > 460) return 0.62;
+  if (len > 320) return 0.72;
+  if (len > 200) return 0.84;
+  return 1;
+}
+
 export default function VerseCard({
   verse,
   reference,
@@ -23,13 +37,15 @@ export default function VerseCard({
   style,
 }) {
   const s = SIZES[size] ?? SIZES.compact;
+  const k = scaleFor(String(verse || '').length);
   return (
     <View style={[styles.card, { padding: s.padding, borderRadius: s.radius }, style]}>
       {kicker ? <Text style={[styles.kicker, { marginBottom: s.gap - 6 }]}>{kicker}</Text> : null}
       <Text
-        style={[styles.verse, { fontSize: s.verse, lineHeight: s.line }]}
-        adjustsFontSizeToFit
-        minimumFontScale={0.8}
+        style={[
+          styles.verse,
+          { fontSize: Math.round(s.verse * k), lineHeight: Math.round(s.line * k) },
+        ]}
       >
         {verse}
       </Text>

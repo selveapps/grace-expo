@@ -196,10 +196,10 @@ export default function ChapterScreen({ route, navigation }) {
       )}
 
       <View style={[styles.nav, { borderTopColor: THEME.line }]}>
-        <Pressable disabled={chapter <= 1} onPress={() => { Haptics.selectionAsync(); navigation.push('Chapter', { book, chapter: chapter - 1 }); }}>
+        <Pressable disabled={chapter <= 1} onPress={() => { Haptics.selectionAsync(); navigation.replace('Chapter', { book, chapter: chapter - 1 }); }}>
           <Text style={[styles.navText, chapter <= 1 && { opacity: 0.3 }]}>‹ {book} {chapter - 1}</Text>
         </Pressable>
-        <Pressable onPress={() => { Haptics.selectionAsync(); navigation.push('Chapter', { book, chapter: chapter + 1 }); }}>
+        <Pressable onPress={() => { Haptics.selectionAsync(); navigation.replace('Chapter', { book, chapter: chapter + 1 }); }}>
           <Text style={styles.navText}>{book} {chapter + 1} ›</Text>
         </Pressable>
       </View>

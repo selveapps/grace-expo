@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   View, Text, Pressable, StyleSheet, ActivityIndicator, TextInput,
   KeyboardAvoidingView, Platform, ScrollView, Keyboard,
@@ -15,6 +15,14 @@ const AppleMark = () => (
     <Path d="M17.05 12.5c0-2.1 1.7-3.1 1.8-3.2-1-1.4-2.5-1.6-3-1.7-1.3-.1-2.5.8-3.1.8-.6 0-1.6-.7-2.7-.7-1.4 0-2.7.8-3.4 2-1.5 2.5-.4 6.3 1 8.3.7 1 1.5 2.1 2.6 2.1 1 0 1.4-.7 2.7-.7 1.2 0 1.6.7 2.7.6 1.1 0 1.8-1 2.5-2 .8-1.2 1.1-2.3 1.1-2.4-.1 0-2.1-.8-2.1-3.4zM15 6.3c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 0 1.9-.5 2.5-1.2z" />
   </Svg>
 );
+const GoogleMark = () => (
+  <Svg width={18} height={18} viewBox="0 0 24 24">
+    <Path fill="#4285F4" d="M22.5 12.2c0-.8-.1-1.5-.2-2.2H12v4.3h5.9a5 5 0 0 1-2.2 3.3v2.7h3.5c2-1.9 3.3-4.7 3.3-8.1z" />
+    <Path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.5-2.7c-1 .7-2.2 1.1-3.8 1.1-2.9 0-5.4-2-6.3-4.6H2v2.8A11 11 0 0 0 12 23z" />
+    <Path fill="#FBBC05" d="M5.7 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2a11 11 0 0 0 0 9.8l3.7-2.8z" />
+    <Path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.7l3.1-3.1A11 11 0 0 0 2 7.1l3.7 2.8C6.6 7.3 9.1 5.4 12 5.4z" />
+  </Svg>
+);
 
 // A request that cannot hang the screen. /auth/guest or /me stalling used to
 // leave the button spinning with no way out.
@@ -25,9 +33,11 @@ const withTimeout = (p) => Promise.race([
 ]);
 
 const MESSAGES = {
-  apple_unavailable: 'Sign in with Apple needs the App Store build. Use your email below for now.',
+  apple_unavailable: 'Sign in with Apple needs the App Store build. Use Google or your email below.',
+  google_unavailable: 'Google sign-in is not available right now. Try Apple or your email.',
+  google_failed: "Google didn't complete that sign-in. Please try again.",
   invalid_email: 'That email does not look right. Check it and try again.',
-  timeout: "That took too long. Check your connection and try again.",
+  timeout: 'That took too long. Check your connection and try again.',
   default: "That didn't go through. Please try again.",
 };
 
@@ -53,6 +63,18 @@ export default function SignInScreen({ navigation }) {
   const [emailOpen, setEmailOpen] = useState(false);
   const [email, setEmail] = useState('');
   const lastAttempt = useRef(null); // replayed by Try again
+
+  // Only offer Google when a real sign-in can complete: a client id on this
+  // side and a server configured to verify the token. Anything less would be
+  // the old button that showed Google's logo and never spoke to Google.
+  const [googleReady, setGoogleReady] = useState(false);
+  useEffect(() => {
+    let alive = true;
+    AuthService.isGoogleAvailable()
+      .then((ok) => { if (alive) setGoogleReady(ok); })
+      .catch(() => {});
+    return () => { alive = false; };
+  }, []);
 
   const run = async (provider, fn) => {
     if (busy) return;
@@ -121,7 +143,7 @@ export default function SignInScreen({ navigation }) {
             <GraceDove size={110} wings="folded" motion="breathe" />
             <Text style={styles.title}>Keep your place,{'\n'}always.</Text>
             <Text style={styles.sub}>
-              Sign in with Apple so Grace remembers you across every device you pick up.
+              Sign in so Grace remembers you across every device you pick up.
             </Text>
           </View>
 
@@ -151,6 +173,22 @@ export default function SignInScreen({ navigation }) {
               </>
             )}
           </Pressable>
+
+          {googleReady ? (
+            <Pressable
+              testID="signin-google"
+              onPress={() => run('google', () => AuthService.signInWithGoogle())}
+              disabled={!!busy}
+              style={[styles.btn, styles.btnLight, busy && busy !== 'google' && styles.btnDim]}
+            >
+              {busy === 'google' ? <ActivityIndicator color={colors.ink} /> : (
+                <>
+                  <GoogleMark />
+                  <Text style={[styles.btnText, { color: colors.ink }]}>Continue with Google</Text>
+                </>
+              )}
+            </Pressable>
+          ) : null}
 
           {!emailOpen ? (
             <Pressable

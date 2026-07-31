@@ -56,15 +56,28 @@ export default function TodayScreen({ navigation }) {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Soft);
     // autoplay: these are play affordances, so they should start playing rather
     // than land on a paused player she has to tap again.
-    navigation.navigate('Stories', { screen: 'Player', params: { id, autoplay: true } });
+    //
+    // `initial: false` is load-bearing. Without it React Navigation makes Player
+    // the ONLY route in the Stories stack, so back had nowhere to go and the
+    // Stories list, its collections and Tea were all unreachable after playing
+    // anything from Home. With it the stack is [StoriesHome, Player].
+    navigation.navigate('Stories', {
+      screen: 'Player',
+      params: { id, autoplay: true },
+      initial: false,
+    });
   };
 
   const openReading = () => {
     if (!reading?.book) return;
     Haptics.selectionAsync();
+    // Same reason as above: without `initial: false` the chapter becomes the
+    // only route in the Reading stack and its back control has nothing to
+    // return to, which is why back "doesn't go out to other texts".
     navigation.navigate('Reading', {
       screen: 'Chapter',
       params: { book: reading.book, chapter: reading.chapter || 1 },
+      initial: false,
     });
   };
 

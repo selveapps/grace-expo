@@ -1,1219 +1,1086 @@
 {
   "kind": "tea",
   "teaId": "ruth-field",
-  "text": "Widowed, broke, foreign, and she still says the most loyal sentence in the Bible.\n\nNaomi loses her husband. Then both her sons. She is left with two daughters in law in a country that isn't hers, and she tells them both to go home. Twice. She's not being cold, she's being honest. She's got nothing to give them.\n\nOrpah kisses her and goes. Nobody should drag Orpah, she did exactly what she was told.\n\nBut Ruth clave unto her. And she says, \"Whither thou goest, I will go. Thy people shall be my people, and thy God my God.\"\n\nThat's a vow with a curse attached. She means it.\n\nSo they walk into Bethlehem with nothing, right as barley harvest starts. And Ruth goes to work, gleaning the leftovers, because the law said the poor get to follow the reapers.\n\nAnd the text says her hap was to light on a field belonging to Boaz. Her happenstance. Sure. The book spends two more chapters showing you what that was.\n\nBoaz clocks her immediately. Tells his men not to touch her. Tells her to drink their water. Then quietly tells them to drop extra grain where she'll find it.\n\nShe goes home with about an ephah of barley. That is a wildly good day.\n\nChapters later, Boaz redeems the family at the town gate, and Ruth has a son named Obed. Obed's son is Jesse. Jesse's son is David.\n\nLoyalty is a flex.",
-  "voice": "FGY2WhTYpPnrIDTdsKH5",
+  "mood": "light",
+  "heat": 1,
+  "text": "Broke, widowed, foreign, picking up other people's leftovers. Three generations later her great-grandson is king. Naomi loses her husband. Then both her sons. Left with two foreign daughters in law in a country that is not hers, she tells them both to go home. Twice. Not cold. Honest. She has nothing to give them. Orpah kisses her and goes. But Ruth clave unto her. And says, \"For whither thou goest, I will go; and where thou lodgest, I will lodge: thy people shall be my people, and thy God my God.\" That is a vow with a curse attached. She means it. They walk into Bethlehem with nothing, right as barley harvest starts. And Ruth goes to work. Gleaning. Following the reapers for what they drop. And the text says her hap was to light on a field belonging to Boaz. Her happenstance. Sure. The book spends two more chapters showing you what that was. Boaz clocks her immediately. Tells his men not to touch her. Then quietly tells them to drop extra grain where she will find it. She goes home with an ephah of barley. An absurdly good day. Chapters later he redeems the family at the town gate. She has a son named Obed. Obed's son is Jesse. Jesse's son is David.",
+  "voice": "cgSgspJ2msm6clMCkdW9",
   "words": [
     {
-      "w": "Widowed,",
+      "w": "Broke,",
       "start": 0,
-      "end": 0.488
+      "end": 0.604
     },
     {
-      "w": "broke,",
-      "start": 0.522,
-      "end": 0.998
+      "w": "widowed,",
+      "start": 0.755,
+      "end": 1.335
     },
     {
       "w": "foreign,",
-      "start": 1.126,
-      "end": 1.509
+      "start": 1.463,
+      "end": 2.055
     },
     {
-      "w": "and",
-      "start": 1.544,
-      "end": 1.672
+      "w": "picking",
+      "start": 2.159,
+      "end": 2.415
     },
     {
-      "w": "she",
-      "start": 1.718,
-      "end": 1.834
-    },
-    {
-      "w": "still",
-      "start": 1.916,
-      "end": 2.125
-    },
-    {
-      "w": "says",
-      "start": 2.183,
-      "end": 2.403
-    },
-    {
-      "w": "the",
+      "w": "up",
       "start": 2.45,
       "end": 2.519
     },
     {
-      "w": "most",
+      "w": "other",
       "start": 2.566,
-      "end": 2.705
+      "end": 2.717
     },
     {
-      "w": "loyal",
+      "w": "people's",
       "start": 2.763,
-      "end": 2.961
+      "end": 3.053
     },
     {
-      "w": "sentence",
-      "start": 3.007,
-      "end": 3.309
+      "w": "leftovers.",
+      "start": 3.1,
+      "end": 3.913
     },
     {
-      "w": "in",
-      "start": 3.332,
-      "end": 3.39
+      "w": "Three",
+      "start": 4.516,
+      "end": 4.725
     },
     {
-      "w": "the",
-      "start": 3.425,
-      "end": 3.495
+      "w": "generations",
+      "start": 4.772,
+      "end": 5.271
     },
     {
-      "w": "Bible.",
-      "start": 3.529,
-      "end": 3.982
+      "w": "later",
+      "start": 5.329,
+      "end": 5.55
+    },
+    {
+      "w": "her",
+      "start": 5.608,
+      "end": 5.7
+    },
+    {
+      "w": "great-grandson",
+      "start": 5.747,
+      "end": 6.327
+    },
+    {
+      "w": "is",
+      "start": 6.362,
+      "end": 6.432
+    },
+    {
+      "w": "king.",
+      "start": 6.49,
+      "end": 6.954
     },
     {
       "w": "Naomi",
-      "start": 4.365,
-      "end": 4.702
+      "start": 7.477,
+      "end": 7.779
     },
     {
       "w": "loses",
-      "start": 4.76,
-      "end": 5.004
+      "start": 7.825,
+      "end": 8.115
     },
     {
       "w": "her",
-      "start": 5.05,
-      "end": 5.12
+      "start": 8.15,
+      "end": 8.255
     },
     {
       "w": "husband.",
-      "start": 5.155,
-      "end": 5.759
+      "start": 8.29,
+      "end": 8.858
     },
     {
       "w": "Then",
-      "start": 5.944,
-      "end": 6.107
+      "start": 8.986,
+      "end": 9.265
     },
     {
       "w": "both",
-      "start": 6.177,
-      "end": 6.374
+      "start": 9.369,
+      "end": 9.567
     },
     {
       "w": "her",
-      "start": 6.42,
-      "end": 6.525
+      "start": 9.601,
+      "end": 9.683
     },
     {
       "w": "sons.",
-      "start": 6.56,
-      "end": 7.012
+      "start": 9.729,
+      "end": 10.286
     },
     {
-      "w": "She",
-      "start": 7.163,
-      "end": 7.268
-    },
-    {
-      "w": "is",
-      "start": 7.314,
-      "end": 7.384
-    },
-    {
-      "w": "left",
-      "start": 7.43,
-      "end": 7.593
+      "w": "Left",
+      "start": 10.728,
+      "end": 10.937
     },
     {
       "w": "with",
-      "start": 7.616,
-      "end": 7.744
+      "start": 10.971,
+      "end": 11.099
     },
     {
       "w": "two",
-      "start": 7.779,
-      "end": 7.883
+      "start": 11.146,
+      "end": 11.285
+    },
+    {
+      "w": "foreign",
+      "start": 11.366,
+      "end": 11.633
     },
     {
       "w": "daughters",
-      "start": 7.93,
-      "end": 8.22
+      "start": 11.668,
+      "end": 11.993
     },
     {
       "w": "in",
-      "start": 8.255,
-      "end": 8.313
+      "start": 12.04,
+      "end": 12.109
     },
     {
       "w": "law",
-      "start": 8.359,
-      "end": 8.533
+      "start": 12.156,
+      "end": 12.353
     },
     {
       "w": "in",
-      "start": 8.568,
-      "end": 8.626
+      "start": 12.411,
+      "end": 12.481
     },
     {
       "w": "a",
-      "start": 8.661,
-      "end": 8.696
+      "start": 12.516,
+      "end": 12.539
     },
     {
       "w": "country",
-      "start": 8.742,
-      "end": 8.998
+      "start": 12.585,
+      "end": 12.841
     },
     {
       "w": "that",
-      "start": 9.033,
-      "end": 9.16
+      "start": 12.875,
+      "end": 12.992
     },
     {
-      "w": "isn't",
-      "start": 9.218,
-      "end": 9.451
+      "w": "is",
+      "start": 13.026,
+      "end": 13.084
+    },
+    {
+      "w": "not",
+      "start": 13.154,
+      "end": 13.317
     },
     {
       "w": "hers,",
-      "start": 9.485,
-      "end": 9.95
-    },
-    {
-      "w": "and",
-      "start": 10.136,
-      "end": 10.263
+      "start": 13.351,
+      "end": 13.921
     },
     {
       "w": "she",
-      "start": 10.298,
-      "end": 10.414
+      "start": 14.246,
+      "end": 14.339
     },
     {
       "w": "tells",
-      "start": 10.461,
-      "end": 10.646
+      "start": 14.374,
+      "end": 14.559
     },
     {
       "w": "them",
-      "start": 10.681,
-      "end": 10.797
+      "start": 14.594,
+      "end": 14.722
     },
     {
       "w": "both",
-      "start": 10.844,
-      "end": 11.041
+      "start": 14.768,
+      "end": 14.931
     },
     {
       "w": "to",
-      "start": 11.099,
-      "end": 11.169
+      "start": 14.977,
+      "end": 15.035
     },
     {
       "w": "go",
-      "start": 11.215,
-      "end": 11.32
+      "start": 15.082,
+      "end": 15.163
     },
     {
       "w": "home.",
-      "start": 11.378,
-      "end": 11.842
+      "start": 15.221,
+      "end": 15.604
     },
     {
       "w": "Twice.",
-      "start": 12.365,
-      "end": 12.991
+      "start": 15.929,
+      "end": 16.498
     },
     {
-      "w": "She's",
-      "start": 13.433,
-      "end": 13.618
+      "w": "Not",
+      "start": 16.649,
+      "end": 16.777
     },
     {
-      "w": "not",
-      "start": 13.665,
-      "end": 13.793
+      "w": "cold.",
+      "start": 16.823,
+      "end": 17.299
     },
     {
-      "w": "being",
-      "start": 13.827,
-      "end": 13.99
-    },
-    {
-      "w": "cold,",
-      "start": 14.06,
-      "end": 14.385
-    },
-    {
-      "w": "she's",
-      "start": 14.408,
-      "end": 14.57
-    },
-    {
-      "w": "being",
-      "start": 14.617,
-      "end": 14.768
-    },
-    {
-      "w": "honest.",
-      "start": 14.803,
-      "end": 15.232
-    },
-    {
-      "w": "She's",
-      "start": 15.302,
-      "end": 15.476
-    },
-    {
-      "w": "got",
-      "start": 15.511,
-      "end": 15.65
-    },
-    {
-      "w": "nothing",
-      "start": 15.708,
-      "end": 15.964
-    },
-    {
-      "w": "to",
-      "start": 15.987,
-      "end": 16.033
-    },
-    {
-      "w": "give",
-      "start": 16.068,
-      "end": 16.207
-    },
-    {
-      "w": "them.",
-      "start": 16.242,
-      "end": 16.533
-    },
-    {
-      "w": "Orpah",
-      "start": 16.742,
-      "end": 17.067
-    },
-    {
-      "w": "kisses",
-      "start": 17.101,
-      "end": 17.357
-    },
-    {
-      "w": "her",
-      "start": 17.403,
-      "end": 17.543
-    },
-    {
-      "w": "and",
-      "start": 17.601,
-      "end": 17.705
-    },
-    {
-      "w": "goes.",
-      "start": 17.752,
-      "end": 18.228
-    },
-    {
-      "w": "Nobody",
-      "start": 18.553,
-      "end": 18.924
-    },
-    {
-      "w": "should",
-      "start": 18.959,
-      "end": 19.133
-    },
-    {
-      "w": "drag",
-      "start": 19.156,
-      "end": 19.377
-    },
-    {
-      "w": "Orpah,",
-      "start": 19.423,
-      "end": 19.795
-    },
-    {
-      "w": "she",
-      "start": 19.841,
-      "end": 19.934
-    },
-    {
-      "w": "did",
-      "start": 19.969,
-      "end": 20.074
-    },
-    {
-      "w": "exactly",
-      "start": 20.12,
-      "end": 20.48
-    },
-    {
-      "w": "what",
-      "start": 20.515,
-      "end": 20.631
-    },
-    {
-      "w": "she",
-      "start": 20.666,
-      "end": 20.747
-    },
-    {
-      "w": "was",
-      "start": 20.782,
-      "end": 20.886
-    },
-    {
-      "w": "told.",
-      "start": 20.933,
-      "end": 21.339
-    },
-    {
-      "w": "But",
-      "start": 21.548,
-      "end": 21.711
-    },
-    {
-      "w": "Ruth",
-      "start": 21.769,
-      "end": 21.989
-    },
-    {
-      "w": "clave",
-      "start": 22.036,
-      "end": 22.349
-    },
-    {
-      "w": "unto",
-      "start": 22.384,
-      "end": 22.547
-    },
-    {
-      "w": "her.",
-      "start": 22.616,
-      "end": 22.93
-    },
-    {
-      "w": "And",
-      "start": 22.988,
-      "end": 23.15
-    },
-    {
-      "w": "she",
-      "start": 23.208,
-      "end": 23.313
-    },
-    {
-      "w": "says,",
-      "start": 23.371,
-      "end": 23.789
-    },
-    {
-      "w": "\"Whither",
-      "start": 23.893,
-      "end": 24.184
-    },
-    {
-      "w": "thou",
-      "start": 24.218,
-      "end": 24.346
-    },
-    {
-      "w": "goest,",
-      "start": 24.415,
-      "end": 24.903
-    },
-    {
-      "w": "I",
-      "start": 24.938,
-      "end": 24.973
-    },
-    {
-      "w": "will",
-      "start": 25.054,
-      "end": 25.205
-    },
-    {
-      "w": "go.",
-      "start": 25.24,
-      "end": 25.588
-    },
-    {
-      "w": "Thy",
-      "start": 25.797,
-      "end": 25.948
-    },
-    {
-      "w": "people",
-      "start": 25.994,
-      "end": 26.261
-    },
-    {
-      "w": "shall",
-      "start": 26.296,
-      "end": 26.47
-    },
-    {
-      "w": "be",
-      "start": 26.505,
-      "end": 26.575
-    },
-    {
-      "w": "my",
-      "start": 26.61,
-      "end": 26.714
-    },
-    {
-      "w": "people,",
-      "start": 26.784,
-      "end": 27.109
-    },
-    {
-      "w": "and",
-      "start": 27.144,
-      "end": 27.237
-    },
-    {
-      "w": "thy",
-      "start": 27.283,
-      "end": 27.388
-    },
-    {
-      "w": "God",
-      "start": 27.446,
-      "end": 27.701
-    },
-    {
-      "w": "my",
-      "start": 27.806,
-      "end": 27.933
-    },
-    {
-      "w": "God.\"",
-      "start": 28.003,
-      "end": 28.502
-    },
-    {
-      "w": "That's",
-      "start": 28.827,
-      "end": 29.048
-    },
-    {
-      "w": "a",
-      "start": 29.083,
-      "end": 29.106
-    },
-    {
-      "w": "vow",
-      "start": 29.141,
-      "end": 29.28
-    },
-    {
-      "w": "with",
-      "start": 29.315,
-      "end": 29.443
-    },
-    {
-      "w": "a",
-      "start": 29.477,
-      "end": 29.501
-    },
-    {
-      "w": "curse",
-      "start": 29.535,
-      "end": 29.744
-    },
-    {
-      "w": "attached.",
-      "start": 29.768,
-      "end": 30.302
+      "w": "Honest.",
+      "start": 17.578,
+      "end": 18.251
     },
     {
       "w": "She",
-      "start": 30.488,
-      "end": 30.592
-    },
-    {
-      "w": "means",
-      "start": 30.638,
-      "end": 30.847
-    },
-    {
-      "w": "it.",
-      "start": 30.917,
-      "end": 31.126
-    },
-    {
-      "w": "So",
-      "start": 31.231,
-      "end": 31.335
-    },
-    {
-      "w": "they",
-      "start": 31.381,
-      "end": 31.486
-    },
-    {
-      "w": "walk",
-      "start": 31.532,
-      "end": 31.718
-    },
-    {
-      "w": "into",
-      "start": 31.765,
-      "end": 31.892
-    },
-    {
-      "w": "Bethlehem",
-      "start": 31.939,
-      "end": 32.31
-    },
-    {
-      "w": "with",
-      "start": 32.357,
-      "end": 32.484
-    },
-    {
-      "w": "nothing,",
-      "start": 32.531,
-      "end": 32.984
-    },
-    {
-      "w": "right",
-      "start": 33.193,
-      "end": 33.402
-    },
-    {
-      "w": "as",
-      "start": 33.436,
-      "end": 33.506
-    },
-    {
-      "w": "barley",
-      "start": 33.564,
-      "end": 33.82
-    },
-    {
-      "w": "harvest",
-      "start": 33.866,
-      "end": 34.156
-    },
-    {
-      "w": "starts.",
-      "start": 34.179,
-      "end": 34.702
-    },
-    {
-      "w": "And",
-      "start": 34.981,
-      "end": 35.108
-    },
-    {
-      "w": "Ruth",
-      "start": 35.178,
-      "end": 35.387
-    },
-    {
-      "w": "goes",
-      "start": 35.422,
-      "end": 35.596
-    },
-    {
-      "w": "to",
-      "start": 35.642,
-      "end": 35.712
-    },
-    {
-      "w": "work,",
-      "start": 35.77,
-      "end": 36.002
-    },
-    {
-      "w": "gleaning",
-      "start": 36.06,
-      "end": 36.374
-    },
-    {
-      "w": "the",
-      "start": 36.409,
-      "end": 36.479
-    },
-    {
-      "w": "leftovers,",
-      "start": 36.514,
-      "end": 37.164
-    },
-    {
-      "w": "because",
-      "start": 37.349,
-      "end": 37.605
-    },
-    {
-      "w": "the",
-      "start": 37.64,
-      "end": 37.709
-    },
-    {
-      "w": "law",
-      "start": 37.767,
-      "end": 37.953
-    },
-    {
-      "w": "said",
-      "start": 38.023,
-      "end": 38.162
-    },
-    {
-      "w": "the",
-      "start": 38.197,
-      "end": 38.267
-    },
-    {
-      "w": "poor",
-      "start": 38.301,
-      "end": 38.534
-    },
-    {
-      "w": "get",
-      "start": 38.592,
-      "end": 38.708
-    },
-    {
-      "w": "to",
-      "start": 38.731,
-      "end": 38.777
-    },
-    {
-      "w": "follow",
-      "start": 38.812,
-      "end": 39.033
-    },
-    {
-      "w": "the",
-      "start": 39.079,
-      "end": 39.149
-    },
-    {
-      "w": "reapers.",
-      "start": 39.195,
-      "end": 39.695
-    },
-    {
-      "w": "And",
-      "start": 39.718,
-      "end": 39.822
-    },
-    {
-      "w": "the",
-      "start": 39.857,
-      "end": 39.927
-    },
-    {
-      "w": "text",
-      "start": 39.962,
-      "end": 40.182
-    },
-    {
-      "w": "says",
-      "start": 40.217,
-      "end": 40.496
-    },
-    {
-      "w": "her",
-      "start": 40.623,
-      "end": 40.74
-    },
-    {
-      "w": "hap",
-      "start": 40.786,
-      "end": 40.925
-    },
-    {
-      "w": "was",
-      "start": 40.96,
-      "end": 41.065
-    },
-    {
-      "w": "to",
-      "start": 41.123,
-      "end": 41.181
-    },
-    {
-      "w": "light",
-      "start": 41.25,
-      "end": 41.425
-    },
-    {
-      "w": "on",
-      "start": 41.459,
-      "end": 41.517
-    },
-    {
-      "w": "a",
-      "start": 41.552,
-      "end": 41.575
-    },
-    {
-      "w": "field",
-      "start": 41.634,
-      "end": 41.877
-    },
-    {
-      "w": "belonging",
-      "start": 41.947,
-      "end": 42.319
-    },
-    {
-      "w": "to",
-      "start": 42.365,
-      "end": 42.411
-    },
-    {
-      "w": "Boaz.",
-      "start": 42.458,
-      "end": 43.05
-    },
-    {
-      "w": "Her",
-      "start": 43.085,
-      "end": 43.189
-    },
-    {
-      "w": "happenstance.",
-      "start": 43.236,
-      "end": 43.909
-    },
-    {
-      "w": "Sure.",
-      "start": 44.014,
-      "end": 44.408
-    },
-    {
-      "w": "The",
-      "start": 44.559,
-      "end": 44.664
-    },
-    {
-      "w": "book",
-      "start": 44.699,
-      "end": 44.838
-    },
-    {
-      "w": "spends",
-      "start": 44.873,
-      "end": 45.163
-    },
-    {
-      "w": "two",
-      "start": 45.221,
-      "end": 45.36
-    },
-    {
-      "w": "more",
-      "start": 45.418,
-      "end": 45.569
-    },
-    {
-      "w": "chapters",
-      "start": 45.604,
-      "end": 46.057
-    },
-    {
-      "w": "showing",
-      "start": 46.161,
-      "end": 46.452
-    },
-    {
-      "w": "you",
-      "start": 46.51,
-      "end": 46.603
-    },
-    {
-      "w": "what",
-      "start": 46.672,
-      "end": 46.812
-    },
-    {
-      "w": "that",
-      "start": 46.846,
-      "end": 46.974
-    },
-    {
-      "w": "was.",
-      "start": 47.032,
-      "end": 47.508
-    },
-    {
-      "w": "Boaz",
-      "start": 47.636,
-      "end": 47.996
-    },
-    {
-      "w": "clocks",
-      "start": 48.065,
-      "end": 48.344
-    },
-    {
-      "w": "her",
-      "start": 48.379,
-      "end": 48.506
-    },
-    {
-      "w": "immediately.",
-      "start": 48.588,
-      "end": 49.249
-    },
-    {
-      "w": "Tells",
-      "start": 49.458,
-      "end": 49.679
-    },
-    {
-      "w": "his",
-      "start": 49.702,
-      "end": 49.795
-    },
-    {
-      "w": "men",
-      "start": 49.842,
-      "end": 49.993
-    },
-    {
-      "w": "not",
-      "start": 50.051,
-      "end": 50.19
-    },
-    {
-      "w": "to",
-      "start": 50.213,
-      "end": 50.26
-    },
-    {
-      "w": "touch",
-      "start": 50.294,
-      "end": 50.457
-    },
-    {
-      "w": "her.",
-      "start": 50.492,
-      "end": 50.782
-    },
-    {
-      "w": "Tells",
-      "start": 50.991,
-      "end": 51.188
-    },
-    {
-      "w": "her",
-      "start": 51.235,
-      "end": 51.328
-    },
-    {
-      "w": "to",
-      "start": 51.363,
-      "end": 51.409
-    },
-    {
-      "w": "drink",
-      "start": 51.444,
-      "end": 51.618
-    },
-    {
-      "w": "their",
-      "start": 51.653,
-      "end": 51.78
-    },
-    {
-      "w": "water.",
-      "start": 51.815,
-      "end": 52.187
-    },
-    {
-      "w": "Then",
-      "start": 52.256,
-      "end": 52.407
-    },
-    {
-      "w": "quietly",
-      "start": 52.454,
-      "end": 52.802
-    },
-    {
-      "w": "tells",
-      "start": 52.86,
-      "end": 53.046
-    },
-    {
-      "w": "them",
-      "start": 53.081,
-      "end": 53.243
-    },
-    {
-      "w": "to",
-      "start": 53.348,
-      "end": 53.452
-    },
-    {
-      "w": "drop",
-      "start": 53.51,
-      "end": 53.731
-    },
-    {
-      "w": "extra",
-      "start": 53.835,
-      "end": 54.079
-    },
-    {
-      "w": "grain",
-      "start": 54.114,
-      "end": 54.311
-    },
-    {
-      "w": "where",
-      "start": 54.346,
-      "end": 54.486
-    },
-    {
-      "w": "she'll",
-      "start": 54.509,
-      "end": 54.66
-    },
-    {
-      "w": "find",
-      "start": 54.695,
-      "end": 54.846
-    },
-    {
-      "w": "it.",
-      "start": 54.904,
-      "end": 55.101
-    },
-    {
-      "w": "She",
-      "start": 55.287,
-      "end": 55.403
-    },
-    {
-      "w": "goes",
-      "start": 55.461,
-      "end": 55.623
-    },
-    {
-      "w": "home",
-      "start": 55.658,
-      "end": 55.832
-    },
-    {
-      "w": "with",
-      "start": 55.856,
-      "end": 55.972
-    },
-    {
-      "w": "about",
-      "start": 56.007,
-      "end": 56.204
-    },
-    {
-      "w": "an",
-      "start": 56.239,
-      "end": 56.308
-    },
-    {
-      "w": "ephah",
-      "start": 56.413,
-      "end": 56.726
-    },
-    {
-      "w": "of",
-      "start": 56.773,
-      "end": 56.854
-    },
-    {
-      "w": "barley.",
-      "start": 56.912,
-      "end": 57.411
-    },
-    {
-      "w": "That",
-      "start": 57.516,
-      "end": 57.841
-    },
-    {
-      "w": "is",
-      "start": 57.922,
-      "end": 58.061
-    },
-    {
-      "w": "a",
-      "start": 58.108,
-      "end": 58.131
-    },
-    {
-      "w": "wildly",
-      "start": 58.236,
-      "end": 58.607
-    },
-    {
-      "w": "good",
-      "start": 58.665,
-      "end": 58.816
-    },
-    {
-      "w": "day.",
-      "start": 58.851,
-      "end": 59.245
-    },
-    {
-      "w": "Chapters",
-      "start": 60.07,
-      "end": 60.395
-    },
-    {
-      "w": "later,",
-      "start": 60.441,
-      "end": 60.766
-    },
-    {
-      "w": "Boaz",
-      "start": 60.871,
-      "end": 61.207
-    },
-    {
-      "w": "redeems",
-      "start": 61.277,
-      "end": 61.579
-    },
-    {
-      "w": "the",
-      "start": 61.614,
-      "end": 61.683
-    },
-    {
-      "w": "family",
-      "start": 61.718,
-      "end": 61.962
-    },
-    {
-      "w": "at",
-      "start": 61.997,
-      "end": 62.055
-    },
-    {
-      "w": "the",
-      "start": 62.09,
-      "end": 62.16
-    },
-    {
-      "w": "town",
-      "start": 62.194,
-      "end": 62.357
-    },
-    {
-      "w": "gate,",
-      "start": 62.392,
-      "end": 62.682
-    },
-    {
-      "w": "and",
-      "start": 62.717,
-      "end": 62.868
-    },
-    {
-      "w": "Ruth",
-      "start": 62.972,
-      "end": 63.181
+      "start": 18.46,
+      "end": 18.565
     },
     {
       "w": "has",
-      "start": 63.216,
-      "end": 63.32
+      "start": 18.6,
+      "end": 18.704
     },
     {
-      "w": "a",
-      "start": 63.367,
-      "end": 63.402
+      "w": "nothing",
+      "start": 18.774,
+      "end": 19.018
     },
     {
-      "w": "son",
-      "start": 63.448,
-      "end": 63.599
+      "w": "to",
+      "start": 19.064,
+      "end": 19.11
     },
     {
-      "w": "named",
-      "start": 63.646,
-      "end": 63.855
+      "w": "give",
+      "start": 19.157,
+      "end": 19.296
     },
     {
-      "w": "Obed.",
-      "start": 63.959,
-      "end": 64.423
+      "w": "them.",
+      "start": 19.319,
+      "end": 19.656
     },
     {
-      "w": "Obed's",
-      "start": 64.551,
-      "end": 64.899
+      "w": "Orpah",
+      "start": 20.353,
+      "end": 20.701
     },
     {
-      "w": "son",
-      "start": 64.934,
-      "end": 65.12
+      "w": "kisses",
+      "start": 20.736,
+      "end": 21.014
+    },
+    {
+      "w": "her",
+      "start": 21.049,
+      "end": 21.142
+    },
+    {
+      "w": "and",
+      "start": 21.189,
+      "end": 21.27
+    },
+    {
+      "w": "goes.",
+      "start": 21.316,
+      "end": 21.85
+    },
+    {
+      "w": "But",
+      "start": 22.234,
+      "end": 22.373
+    },
+    {
+      "w": "Ruth",
+      "start": 22.408,
+      "end": 22.593
+    },
+    {
+      "w": "clave",
+      "start": 22.64,
+      "end": 22.918
+    },
+    {
+      "w": "unto",
+      "start": 22.953,
+      "end": 23.116
+    },
+    {
+      "w": "her.",
+      "start": 23.186,
+      "end": 23.406
+    },
+    {
+      "w": "And",
+      "start": 23.429,
+      "end": 23.557
+    },
+    {
+      "w": "says,",
+      "start": 23.627,
+      "end": 24.172
+    },
+    {
+      "w": "\"For",
+      "start": 24.555,
+      "end": 24.764
+    },
+    {
+      "w": "whither",
+      "start": 24.799,
+      "end": 25.02
+    },
+    {
+      "w": "thou",
+      "start": 25.055,
+      "end": 25.159
+    },
+    {
+      "w": "goest,",
+      "start": 25.217,
+      "end": 25.624
+    },
+    {
+      "w": "I",
+      "start": 25.658,
+      "end": 25.705
+    },
+    {
+      "w": "will",
+      "start": 25.775,
+      "end": 25.902
+    },
+    {
+      "w": "go;",
+      "start": 25.949,
+      "end": 26.343
+    },
+    {
+      "w": "and",
+      "start": 26.529,
+      "end": 26.669
+    },
+    {
+      "w": "where",
+      "start": 26.727,
+      "end": 26.912
+    },
+    {
+      "w": "thou",
+      "start": 26.947,
+      "end": 27.052
+    },
+    {
+      "w": "lodgest,",
+      "start": 27.098,
+      "end": 27.47
+    },
+    {
+      "w": "I",
+      "start": 27.504,
+      "end": 27.539
+    },
+    {
+      "w": "will",
+      "start": 27.597,
+      "end": 27.725
+    },
+    {
+      "w": "lodge:",
+      "start": 27.76,
+      "end": 28.224
+    },
+    {
+      "w": "thy",
+      "start": 28.375,
+      "end": 28.502
+    },
+    {
+      "w": "people",
+      "start": 28.56,
+      "end": 28.804
+    },
+    {
+      "w": "shall",
+      "start": 28.839,
+      "end": 28.99
+    },
+    {
+      "w": "be",
+      "start": 29.025,
+      "end": 29.106
+    },
+    {
+      "w": "my",
+      "start": 29.141,
+      "end": 29.222
+    },
+    {
+      "w": "people,",
+      "start": 29.269,
+      "end": 29.652
+    },
+    {
+      "w": "and",
+      "start": 29.687,
+      "end": 29.78
+    },
+    {
+      "w": "thy",
+      "start": 29.814,
+      "end": 29.907
+    },
+    {
+      "w": "God",
+      "start": 29.954,
+      "end": 30.128
+    },
+    {
+      "w": "my",
+      "start": 30.163,
+      "end": 30.221
+    },
+    {
+      "w": "God.\"",
+      "start": 30.279,
+      "end": 30.836
+    },
+    {
+      "w": "That",
+      "start": 31.66,
+      "end": 31.811
     },
     {
       "w": "is",
-      "start": 65.178,
+      "start": 31.846,
+      "end": 31.916
+    },
+    {
+      "w": "a",
+      "start": 31.951,
+      "end": 31.974
+    },
+    {
+      "w": "vow",
+      "start": 32.02,
+      "end": 32.218
+    },
+    {
+      "w": "with",
+      "start": 32.287,
+      "end": 32.415
+    },
+    {
+      "w": "a",
+      "start": 32.45,
+      "end": 32.473
+    },
+    {
+      "w": "curse",
+      "start": 32.508,
+      "end": 32.74
+    },
+    {
+      "w": "attached.",
+      "start": 32.775,
+      "end": 33.379
+    },
+    {
+      "w": "She",
+      "start": 33.657,
+      "end": 33.773
+    },
+    {
+      "w": "means",
+      "start": 33.843,
+      "end": 34.064
+    },
+    {
+      "w": "it.",
+      "start": 34.122,
+      "end": 34.447
+    },
+    {
+      "w": "They",
+      "start": 34.725,
+      "end": 34.853
+    },
+    {
+      "w": "walk",
+      "start": 34.888,
+      "end": 35.027
+    },
+    {
+      "w": "into",
+      "start": 35.062,
+      "end": 35.178
+    },
+    {
+      "w": "Bethlehem",
+      "start": 35.225,
+      "end": 35.573
+    },
+    {
+      "w": "with",
+      "start": 35.619,
+      "end": 35.735
+    },
+    {
+      "w": "nothing,",
+      "start": 35.817,
+      "end": 36.223
+    },
+    {
+      "w": "right",
+      "start": 36.27,
+      "end": 36.455
+    },
+    {
+      "w": "as",
+      "start": 36.49,
+      "end": 36.56
+    },
+    {
+      "w": "barley",
+      "start": 36.618,
+      "end": 36.885
+    },
+    {
+      "w": "harvest",
+      "start": 36.92,
+      "end": 37.175
+    },
+    {
+      "w": "starts.",
+      "start": 37.21,
+      "end": 37.86
+    },
+    {
+      "w": "And",
+      "start": 38.464,
+      "end": 38.603
+    },
+    {
+      "w": "Ruth",
+      "start": 38.65,
+      "end": 38.835
+    },
+    {
+      "w": "goes",
+      "start": 38.87,
+      "end": 39.033
+    },
+    {
+      "w": "to",
+      "start": 39.079,
+      "end": 39.137
+    },
+    {
+      "w": "work.",
+      "start": 39.184,
+      "end": 39.636
+    },
+    {
+      "w": "Gleaning.",
+      "start": 40.078,
+      "end": 40.716
+    },
+    {
+      "w": "Following",
+      "start": 40.902,
+      "end": 41.227
+    },
+    {
+      "w": "the",
+      "start": 41.262,
+      "end": 41.331
+    },
+    {
+      "w": "reapers",
+      "start": 41.366,
+      "end": 41.633
+    },
+    {
+      "w": "for",
+      "start": 41.668,
+      "end": 41.773
+    },
+    {
+      "w": "what",
+      "start": 41.808,
+      "end": 41.924
+    },
+    {
+      "w": "they",
+      "start": 41.959,
+      "end": 42.075
+    },
+    {
+      "w": "drop.",
+      "start": 42.11,
+      "end": 42.597
+    },
+    {
+      "w": "And",
+      "start": 43.12,
+      "end": 43.247
+    },
+    {
+      "w": "the",
+      "start": 43.282,
+      "end": 43.352
+    },
+    {
+      "w": "text",
+      "start": 43.387,
+      "end": 43.572
+    },
+    {
+      "w": "says",
+      "start": 43.596,
+      "end": 43.758
+    },
+    {
+      "w": "her",
+      "start": 43.805,
+      "end": 43.897
+    },
+    {
+      "w": "hap",
+      "start": 43.944,
+      "end": 44.095
+    },
+    {
+      "w": "was",
+      "start": 44.153,
+      "end": 44.269
+    },
+    {
+      "w": "to",
+      "start": 44.327,
+      "end": 44.397
+    },
+    {
+      "w": "light",
+      "start": 44.478,
+      "end": 44.664
+    },
+    {
+      "w": "on",
+      "start": 44.699,
+      "end": 44.768
+    },
+    {
+      "w": "a",
+      "start": 44.803,
+      "end": 44.826
+    },
+    {
+      "w": "field",
+      "start": 44.908,
+      "end": 45.186
+    },
+    {
+      "w": "belonging",
+      "start": 45.256,
+      "end": 45.616
+    },
+    {
+      "w": "to",
+      "start": 45.674,
+      "end": 45.72
+    },
+    {
+      "w": "Boaz.",
+      "start": 45.767,
+      "end": 46.394
+    },
+    {
+      "w": "Her",
+      "start": 46.637,
+      "end": 46.754
+    },
+    {
+      "w": "happenstance.",
+      "start": 46.812,
+      "end": 47.682
+    },
+    {
+      "w": "Sure.",
+      "start": 48.286,
+      "end": 48.646
+    },
+    {
+      "w": "The",
+      "start": 48.971,
+      "end": 49.064
+    },
+    {
+      "w": "book",
+      "start": 49.099,
+      "end": 49.238
+    },
+    {
+      "w": "spends",
+      "start": 49.273,
+      "end": 49.517
+    },
+    {
+      "w": "two",
+      "start": 49.552,
+      "end": 49.656
+    },
+    {
+      "w": "more",
+      "start": 49.702,
+      "end": 49.819
+    },
+    {
+      "w": "chapters",
+      "start": 49.853,
+      "end": 50.213
+    },
+    {
+      "w": "showing",
+      "start": 50.248,
+      "end": 50.469
+    },
+    {
+      "w": "you",
+      "start": 50.504,
+      "end": 50.573
+    },
+    {
+      "w": "what",
+      "start": 50.608,
+      "end": 50.713
+    },
+    {
+      "w": "that",
+      "start": 50.747,
+      "end": 50.863
+    },
+    {
+      "w": "was.",
+      "start": 50.898,
+      "end": 51.409
+    },
+    {
+      "w": "Boaz",
+      "start": 52.106,
+      "end": 52.466
+    },
+    {
+      "w": "clocks",
+      "start": 52.524,
+      "end": 52.756
+    },
+    {
+      "w": "her",
+      "start": 52.779,
+      "end": 52.86
+    },
+    {
+      "w": "immediately.",
+      "start": 52.895,
+      "end": 53.603
+    },
+    {
+      "w": "Tells",
+      "start": 53.882,
+      "end": 54.079
+    },
+    {
+      "w": "his",
+      "start": 54.114,
+      "end": 54.184
+    },
+    {
+      "w": "men",
+      "start": 54.23,
+      "end": 54.346
+    },
+    {
+      "w": "not",
+      "start": 54.393,
+      "end": 54.544
+    },
+    {
+      "w": "to",
+      "start": 54.579,
+      "end": 54.637
+    },
+    {
+      "w": "touch",
+      "start": 54.683,
+      "end": 54.857
+    },
+    {
+      "w": "her.",
+      "start": 54.892,
+      "end": 55.205
+    },
+    {
+      "w": "Then",
+      "start": 55.53,
+      "end": 55.693
+    },
+    {
+      "w": "quietly",
+      "start": 55.774,
+      "end": 56.215
+    },
+    {
+      "w": "tells",
+      "start": 56.262,
+      "end": 56.459
+    },
+    {
+      "w": "them",
+      "start": 56.494,
+      "end": 56.622
+    },
+    {
+      "w": "to",
+      "start": 56.668,
+      "end": 56.714
+    },
+    {
+      "w": "drop",
+      "start": 56.749,
+      "end": 56.912
+    },
+    {
+      "w": "extra",
+      "start": 56.97,
+      "end": 57.19
+    },
+    {
+      "w": "grain",
+      "start": 57.225,
+      "end": 57.434
+    },
+    {
+      "w": "where",
+      "start": 57.469,
+      "end": 57.62
+    },
+    {
+      "w": "she",
+      "start": 57.655,
+      "end": 57.736
+    },
+    {
+      "w": "will",
+      "start": 57.771,
+      "end": 57.899
+    },
+    {
+      "w": "find",
+      "start": 57.933,
+      "end": 58.119
+    },
+    {
+      "w": "it.",
+      "start": 58.166,
+      "end": 58.433
+    },
+    {
+      "w": "She",
+      "start": 59.396,
+      "end": 59.489
+    },
+    {
+      "w": "goes",
+      "start": 59.524,
+      "end": 59.663
+    },
+    {
+      "w": "home",
+      "start": 59.698,
+      "end": 59.849
+    },
+    {
+      "w": "with",
+      "start": 59.872,
+      "end": 59.988
+    },
+    {
+      "w": "an",
+      "start": 60.023,
+      "end": 60.081
+    },
+    {
+      "w": "ephah",
+      "start": 60.139,
+      "end": 60.372
+    },
+    {
+      "w": "of",
+      "start": 60.406,
+      "end": 60.464
+    },
+    {
+      "w": "barley.",
+      "start": 60.511,
+      "end": 61.08
+    },
+    {
+      "w": "An",
+      "start": 61.289,
+      "end": 61.405
+    },
+    {
+      "w": "absurdly",
+      "start": 61.44,
+      "end": 61.8
+    },
+    {
+      "w": "good",
+      "start": 61.846,
+      "end": 61.974
+    },
+    {
+      "w": "day.",
+      "start": 62.009,
+      "end": 62.461
+    },
+    {
+      "w": "Chapters",
+      "start": 63.425,
+      "end": 63.727
+    },
+    {
+      "w": "later",
+      "start": 63.773,
+      "end": 63.994
+    },
+    {
+      "w": "he",
+      "start": 64.052,
+      "end": 64.11
+    },
+    {
+      "w": "redeems",
+      "start": 64.168,
+      "end": 64.435
+    },
+    {
+      "w": "the",
+      "start": 64.47,
+      "end": 64.54
+    },
+    {
+      "w": "family",
+      "start": 64.574,
+      "end": 64.853
+    },
+    {
+      "w": "at",
+      "start": 64.888,
+      "end": 64.958
+    },
+    {
+      "w": "the",
+      "start": 64.992,
+      "end": 65.062
+    },
+    {
+      "w": "town",
+      "start": 65.097,
       "end": 65.259
     },
     {
-      "w": "Jesse.",
-      "start": 65.317,
-      "end": 65.759
+      "w": "gate.",
+      "start": 65.306,
+      "end": 65.805
     },
     {
-      "w": "Jesse's",
-      "start": 66.002,
-      "end": 66.351
+      "w": "She",
+      "start": 66.769,
+      "end": 66.873
     },
     {
-      "w": "son",
-      "start": 66.386,
-      "end": 66.583
-    },
-    {
-      "w": "is",
-      "start": 66.641,
-      "end": 66.711
-    },
-    {
-      "w": "David.",
-      "start": 66.78,
-      "end": 67.268
-    },
-    {
-      "w": "Loyalty",
-      "start": 67.454,
-      "end": 67.802
-    },
-    {
-      "w": "is",
-      "start": 67.837,
-      "end": 67.906
+      "w": "has",
+      "start": 66.908,
+      "end": 67.012
     },
     {
       "w": "a",
-      "start": 67.953,
-      "end": 67.976
+      "start": 67.047,
+      "end": 67.082
     },
     {
-      "w": "flex.",
-      "start": 68.011,
-      "end": 68.638
+      "w": "son",
+      "start": 67.129,
+      "end": 67.303
+    },
+    {
+      "w": "named",
+      "start": 67.338,
+      "end": 67.5
+    },
+    {
+      "w": "Obed.",
+      "start": 67.558,
+      "end": 68.092
+    },
+    {
+      "w": "Obed's",
+      "start": 68.696,
+      "end": 69.033
+    },
+    {
+      "w": "son",
+      "start": 69.056,
+      "end": 69.253
+    },
+    {
+      "w": "is",
+      "start": 69.323,
+      "end": 69.416
+    },
+    {
+      "w": "Jesse.",
+      "start": 69.52,
+      "end": 70.054
+    },
+    {
+      "w": "Jesse's",
+      "start": 70.879,
+      "end": 71.192
+    },
+    {
+      "w": "son",
+      "start": 71.215,
+      "end": 71.389
+    },
+    {
+      "w": "is",
+      "start": 71.447,
+      "end": 71.517
+    },
+    {
+      "w": "David.",
+      "start": 71.598,
+      "end": 72.214
     }
   ],
-  "renderedAt": 1785322144095
+  "renderedAt": 1785480376146
 }

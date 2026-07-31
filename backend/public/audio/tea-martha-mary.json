@@ -1,1159 +1,1161 @@
 {
   "kind": "tea",
   "teaId": "martha-mary",
-  "text": "Two sisters, one house, and one of them is about to get publicly told, and it is not who you think.\n\nJesus comes into a village. Martha receives him into her house. Her house. She's the host, this was her call.\n\nHer sister Mary sits down at his feet and just, listens.\n\nAnd Martha is what the text calls cumbered about much serving. Cumbered. Dragged in every direction. Because hosting is real work, and she is doing all of it, alone, while her sister sits on the floor.\n\nSo Martha does what a lot of us do. She doesn't go to Mary. She goes over her head.\n\n\"Lord, dost thou not care that my sister hath left me to serve alone? Bid her therefore that she help me.\"\n\nShe's not asking. She's telling him to sort out her sister.\n\nAnd here's where everybody expects a scolding.\n\nHe says, \"Martha, Martha.\"\n\nHer name. Twice. That is not how you open a telling-off. That is how you talk to somebody you love who is drowning.\n\n\"Thou art careful and troubled about many things. But one thing is needful, and Mary hath chosen that good part, which shall not be taken away from her.\"\n\nRead what he did not say. He never tells Mary to get up. He never says the serving was wrong.\n\nHe tells Martha she's allowed to sit down too.",
-  "voice": "FGY2WhTYpPnrIDTdsKH5",
+  "mood": "light",
+  "heat": 1,
+  "text": "Everybody thinks Jesus told Mary off in this story. He said Martha's name. Twice. Jesus comes into a village. Martha receives him into her house. Her house. She is the host. This was her call. Her sister Mary sits down at his feet and just listens. And Martha is what the text calls cumbered about much serving. Cumbered. Dragged in every direction. Hosting is real work and she is doing all of it, alone, while her sister sits on the floor. So Martha does what a lot of us do. She does not go to Mary. She goes over her head. \"Lord, dost thou not care that my sister hath left me to serve alone? Bid her therefore that she help me.\" She is not asking. She is telling him to sort out her sister. And here is where everybody expects the scolding. He says, \"Martha, Martha.\" Her name. Twice. That is not how you open a telling off. That is how you talk to someone you love who is drowning. \"Thou art careful and troubled about many things. But one thing is needful, and Mary hath chosen that good part, which shall not be taken away from her.\" Now read what he did not say. He never tells Mary to get up. He never says the serving was wrong. He tells Martha she is allowed to sit down too.",
+  "voice": "cgSgspJ2msm6clMCkdW9",
   "words": [
     {
-      "w": "Two",
+      "w": "Everybody",
       "start": 0,
-      "end": 0.174
+      "end": 0.395
     },
     {
-      "w": "sisters,",
-      "start": 0.244,
-      "end": 0.731
-    },
-    {
-      "w": "one",
-      "start": 0.813,
-      "end": 1.033
-    },
-    {
-      "w": "house,",
-      "start": 1.08,
-      "end": 1.405
-    },
-    {
-      "w": "and",
-      "start": 1.428,
-      "end": 1.556
-    },
-    {
-      "w": "one",
-      "start": 1.637,
-      "end": 1.823
-    },
-    {
-      "w": "of",
-      "start": 1.858,
-      "end": 1.916
-    },
-    {
-      "w": "them",
-      "start": 1.95,
-      "end": 2.125
-    },
-    {
-      "w": "is",
-      "start": 2.183,
-      "end": 2.276
-    },
-    {
-      "w": "about",
-      "start": 2.322,
-      "end": 2.508
-    },
-    {
-      "w": "to",
-      "start": 2.543,
-      "end": 2.589
-    },
-    {
-      "w": "get",
-      "start": 2.624,
-      "end": 2.728
-    },
-    {
-      "w": "publicly",
-      "start": 2.775,
-      "end": 3.146
-    },
-    {
-      "w": "told,",
-      "start": 3.193,
-      "end": 3.529
-    },
-    {
-      "w": "and",
-      "start": 3.773,
-      "end": 3.889
-    },
-    {
-      "w": "it",
-      "start": 3.936,
-      "end": 3.982
-    },
-    {
-      "w": "is",
-      "start": 4.017,
-      "end": 4.098
-    },
-    {
-      "w": "not",
-      "start": 4.18,
-      "end": 4.377
-    },
-    {
-      "w": "who",
-      "start": 4.412,
-      "end": 4.505
-    },
-    {
-      "w": "you",
-      "start": 4.551,
-      "end": 4.632
-    },
-    {
-      "w": "think.",
-      "start": 4.69,
-      "end": 5.062
+      "w": "thinks",
+      "start": 0.441,
+      "end": 0.673
     },
     {
       "w": "Jesus",
-      "start": 5.19,
-      "end": 5.468
+      "start": 0.778,
+      "end": 1.091
     },
     {
-      "w": "comes",
-      "start": 5.515,
-      "end": 5.7
-    },
-    {
-      "w": "into",
-      "start": 5.735,
-      "end": 5.886
-    },
-    {
-      "w": "a",
-      "start": 5.956,
-      "end": 5.991
-    },
-    {
-      "w": "village.",
-      "start": 6.026,
-      "end": 6.467
-    },
-    {
-      "w": "Martha",
-      "start": 6.792,
-      "end": 7.07
-    },
-    {
-      "w": "receives",
-      "start": 7.152,
-      "end": 7.488
-    },
-    {
-      "w": "him",
-      "start": 7.523,
-      "end": 7.628
-    },
-    {
-      "w": "into",
-      "start": 7.697,
-      "end": 7.872
-    },
-    {
-      "w": "her",
-      "start": 7.941,
-      "end": 8.022
-    },
-    {
-      "w": "house.",
-      "start": 8.069,
-      "end": 8.452
-    },
-    {
-      "w": "Her",
-      "start": 8.731,
-      "end": 8.882
-    },
-    {
-      "w": "house.",
-      "start": 8.928,
-      "end": 9.369
-    },
-    {
-      "w": "She's",
-      "start": 9.497,
-      "end": 9.694
-    },
-    {
-      "w": "the",
-      "start": 9.729,
-      "end": 9.799
-    },
-    {
-      "w": "host,",
-      "start": 9.845,
-      "end": 10.286
-    },
-    {
-      "w": "this",
-      "start": 10.356,
-      "end": 10.507
-    },
-    {
-      "w": "was",
-      "start": 10.542,
-      "end": 10.646
-    },
-    {
-      "w": "her",
-      "start": 10.693,
-      "end": 10.774
-    },
-    {
-      "w": "call.",
-      "start": 10.82,
-      "end": 11.18
-    },
-    {
-      "w": "Her",
-      "start": 11.262,
-      "end": 11.389
-    },
-    {
-      "w": "sister",
-      "start": 11.424,
-      "end": 11.668
+      "w": "told",
+      "start": 1.126,
+      "end": 1.277
     },
     {
       "w": "Mary",
-      "start": 11.726,
-      "end": 11.946
+      "start": 1.335,
+      "end": 1.556
     },
     {
-      "w": "sits",
-      "start": 11.993,
-      "end": 12.179
-    },
-    {
-      "w": "down",
-      "start": 12.225,
-      "end": 12.388
-    },
-    {
-      "w": "at",
-      "start": 12.422,
-      "end": 12.48
-    },
-    {
-      "w": "his",
-      "start": 12.515,
-      "end": 12.608
-    },
-    {
-      "w": "feet",
-      "start": 12.666,
-      "end": 12.887
-    },
-    {
-      "w": "and",
-      "start": 12.945,
-      "end": 13.084
-    },
-    {
-      "w": "just,",
-      "start": 13.189,
-      "end": 13.56
-    },
-    {
-      "w": "listens.",
-      "start": 13.618,
-      "end": 14.141
-    },
-    {
-      "w": "And",
-      "start": 14.199,
-      "end": 14.303
-    },
-    {
-      "w": "Martha",
-      "start": 14.361,
-      "end": 14.617
-    },
-    {
-      "w": "is",
-      "start": 14.652,
-      "end": 14.721
-    },
-    {
-      "w": "what",
-      "start": 14.756,
-      "end": 14.872
-    },
-    {
-      "w": "the",
-      "start": 14.907,
-      "end": 14.977
-    },
-    {
-      "w": "text",
-      "start": 15.011,
-      "end": 15.244
-    },
-    {
-      "w": "calls",
-      "start": 15.267,
-      "end": 15.546
-    },
-    {
-      "w": "cumbered",
-      "start": 15.604,
-      "end": 15.894
-    },
-    {
-      "w": "about",
-      "start": 15.917,
-      "end": 16.091
-    },
-    {
-      "w": "much",
-      "start": 16.126,
-      "end": 16.3
-    },
-    {
-      "w": "serving.",
-      "start": 16.347,
-      "end": 16.788
-    },
-    {
-      "w": "Cumbered.",
-      "start": 16.939,
-      "end": 17.415
-    },
-    {
-      "w": "Dragged",
-      "start": 17.6,
-      "end": 17.914
+      "w": "off",
+      "start": 1.614,
+      "end": 1.753
     },
     {
       "w": "in",
-      "start": 17.949,
-      "end": 18.007
+      "start": 1.8,
+      "end": 1.858
     },
     {
-      "w": "every",
-      "start": 18.111,
-      "end": 18.355
+      "w": "this",
+      "start": 1.892,
+      "end": 1.997
     },
     {
-      "w": "direction.",
-      "start": 18.402,
-      "end": 18.97
-    },
-    {
-      "w": "Because",
-      "start": 19.098,
-      "end": 19.365
-    },
-    {
-      "w": "hosting",
-      "start": 19.4,
-      "end": 19.702
-    },
-    {
-      "w": "is",
-      "start": 19.737,
-      "end": 19.806
-    },
-    {
-      "w": "real",
-      "start": 19.864,
-      "end": 20.015
-    },
-    {
-      "w": "work,",
-      "start": 20.073,
-      "end": 20.387
-    },
-    {
-      "w": "and",
-      "start": 20.41,
-      "end": 20.526
-    },
-    {
-      "w": "she",
-      "start": 20.584,
-      "end": 20.677
-    },
-    {
-      "w": "is",
-      "start": 20.724,
-      "end": 20.782
-    },
-    {
-      "w": "doing",
-      "start": 20.828,
-      "end": 21.037
-    },
-    {
-      "w": "all",
-      "start": 21.142,
-      "end": 21.374
-    },
-    {
-      "w": "of",
-      "start": 21.409,
-      "end": 21.455
-    },
-    {
-      "w": "it,",
-      "start": 21.501,
-      "end": 21.629
-    },
-    {
-      "w": "alone,",
-      "start": 21.652,
-      "end": 22.094
-    },
-    {
-      "w": "while",
-      "start": 22.117,
-      "end": 22.291
-    },
-    {
-      "w": "her",
-      "start": 22.326,
-      "end": 22.419
-    },
-    {
-      "w": "sister",
-      "start": 22.477,
-      "end": 22.72
-    },
-    {
-      "w": "sits",
-      "start": 22.779,
-      "end": 22.941
-    },
-    {
-      "w": "on",
-      "start": 22.976,
-      "end": 23.045
-    },
-    {
-      "w": "the",
-      "start": 23.08,
-      "end": 23.15
-    },
-    {
-      "w": "floor.",
-      "start": 23.173,
-      "end": 23.603
-    },
-    {
-      "w": "So",
-      "start": 24.206,
-      "end": 24.357
-    },
-    {
-      "w": "Martha",
-      "start": 24.415,
-      "end": 24.636
-    },
-    {
-      "w": "does",
-      "start": 24.682,
-      "end": 24.833
-    },
-    {
-      "w": "what",
-      "start": 24.868,
-      "end": 24.984
-    },
-    {
-      "w": "a",
-      "start": 25.019,
-      "end": 25.042
-    },
-    {
-      "w": "lot",
-      "start": 25.089,
-      "end": 25.228
-    },
-    {
-      "w": "of",
-      "start": 25.251,
-      "end": 25.298
-    },
-    {
-      "w": "us",
-      "start": 25.344,
-      "end": 25.426
-    },
-    {
-      "w": "do.",
-      "start": 25.472,
-      "end": 25.785
-    },
-    {
-      "w": "She",
-      "start": 25.89,
-      "end": 25.983
-    },
-    {
-      "w": "doesn't",
-      "start": 26.018,
-      "end": 26.25
-    },
-    {
-      "w": "go",
-      "start": 26.285,
-      "end": 26.378
-    },
-    {
-      "w": "to",
-      "start": 26.424,
-      "end": 26.47
-    },
-    {
-      "w": "Mary.",
-      "start": 26.505,
-      "end": 26.888
-    },
-    {
-      "w": "She",
-      "start": 26.923,
-      "end": 27.016
-    },
-    {
-      "w": "goes",
-      "start": 27.063,
-      "end": 27.213
-    },
-    {
-      "w": "over",
-      "start": 27.248,
-      "end": 27.399
-    },
-    {
-      "w": "her",
-      "start": 27.457,
-      "end": 27.539
-    },
-    {
-      "w": "head.",
-      "start": 27.573,
-      "end": 27.898
-    },
-    {
-      "w": "\"Lord,",
-      "start": 28.421,
-      "end": 28.746
-    },
-    {
-      "w": "dost",
-      "start": 28.769,
-      "end": 28.92
-    },
-    {
-      "w": "thou",
-      "start": 28.943,
-      "end": 29.059
-    },
-    {
-      "w": "not",
-      "start": 29.118,
-      "end": 29.245
-    },
-    {
-      "w": "care",
-      "start": 29.292,
-      "end": 29.594
-    },
-    {
-      "w": "that",
-      "start": 29.652,
-      "end": 29.768
-    },
-    {
-      "w": "my",
-      "start": 29.814,
-      "end": 29.895
-    },
-    {
-      "w": "sister",
-      "start": 29.965,
-      "end": 30.267
-    },
-    {
-      "w": "hath",
-      "start": 30.325,
-      "end": 30.464
-    },
-    {
-      "w": "left",
-      "start": 30.522,
-      "end": 30.696
-    },
-    {
-      "w": "me",
-      "start": 30.731,
-      "end": 30.801
-    },
-    {
-      "w": "to",
-      "start": 30.836,
-      "end": 30.894
-    },
-    {
-      "w": "serve",
-      "start": 30.952,
-      "end": 31.161
-    },
-    {
-      "w": "alone?",
-      "start": 31.196,
-      "end": 31.66
-    },
-    {
-      "w": "Bid",
-      "start": 31.811,
-      "end": 31.974
-    },
-    {
-      "w": "her",
-      "start": 32.008,
-      "end": 32.09
-    },
-    {
-      "w": "therefore",
-      "start": 32.136,
-      "end": 32.496
-    },
-    {
-      "w": "that",
-      "start": 32.542,
-      "end": 32.67
-    },
-    {
-      "w": "she",
-      "start": 32.705,
-      "end": 32.798
-    },
-    {
-      "w": "help",
-      "start": 32.856,
-      "end": 32.995
-    },
-    {
-      "w": "me.\"",
-      "start": 33.03,
-      "end": 33.402
-    },
-    {
-      "w": "She's",
-      "start": 33.785,
-      "end": 33.97
-    },
-    {
-      "w": "not",
-      "start": 34.005,
-      "end": 34.145
-    },
-    {
-      "w": "asking.",
-      "start": 34.191,
-      "end": 34.69
-    },
-    {
-      "w": "She's",
-      "start": 34.795,
-      "end": 34.981
-    },
-    {
-      "w": "telling",
-      "start": 35.016,
-      "end": 35.271
-    },
-    {
-      "w": "him",
-      "start": 35.318,
-      "end": 35.41
-    },
-    {
-      "w": "to",
-      "start": 35.457,
-      "end": 35.526
-    },
-    {
-      "w": "sort",
-      "start": 35.596,
-      "end": 35.782
-    },
-    {
-      "w": "out",
-      "start": 35.817,
-      "end": 35.921
-    },
-    {
-      "w": "her",
-      "start": 35.968,
-      "end": 36.061
-    },
-    {
-      "w": "sister.",
-      "start": 36.095,
-      "end": 36.467
-    },
-    {
-      "w": "And",
-      "start": 36.548,
-      "end": 36.699
-    },
-    {
-      "w": "here's",
-      "start": 36.769,
-      "end": 36.966
-    },
-    {
-      "w": "where",
-      "start": 37.001,
-      "end": 37.152
-    },
-    {
-      "w": "everybody",
-      "start": 37.198,
-      "end": 37.57
-    },
-    {
-      "w": "expects",
-      "start": 37.616,
-      "end": 37.93
-    },
-    {
-      "w": "a",
-      "start": 37.965,
-      "end": 37.988
-    },
-    {
-      "w": "scolding.",
-      "start": 38.023,
-      "end": 38.522
+      "w": "story.",
+      "start": 2.032,
+      "end": 2.577
     },
     {
       "w": "He",
-      "start": 38.801,
-      "end": 38.905
+      "start": 2.763,
+      "end": 2.844
     },
     {
-      "w": "says,",
-      "start": 38.951,
-      "end": 39.242
+      "w": "said",
+      "start": 2.879,
+      "end": 3.007
     },
     {
-      "w": "\"Martha,",
-      "start": 39.265,
-      "end": 39.753
-    },
-    {
-      "w": "Martha.\"",
-      "start": 39.811,
-      "end": 40.356
-    },
-    {
-      "w": "Her",
-      "start": 40.403,
-      "end": 40.53
+      "w": "Martha's",
+      "start": 3.042,
+      "end": 3.332
     },
     {
       "w": "name.",
-      "start": 40.565,
-      "end": 40.948
+      "start": 3.367,
+      "end": 3.785
     },
     {
       "w": "Twice.",
-      "start": 41.227,
-      "end": 41.9
+      "start": 4.11,
+      "end": 4.679
     },
     {
-      "w": "That",
-      "start": 42.504,
-      "end": 42.678
+      "w": "Jesus",
+      "start": 5.375,
+      "end": 5.689
     },
     {
-      "w": "is",
-      "start": 42.713,
-      "end": 42.783
+      "w": "comes",
+      "start": 5.735,
+      "end": 5.909
     },
     {
-      "w": "not",
-      "start": 42.864,
-      "end": 43.061
-    },
-    {
-      "w": "how",
-      "start": 43.096,
-      "end": 43.189
-    },
-    {
-      "w": "you",
-      "start": 43.236,
-      "end": 43.317
-    },
-    {
-      "w": "open",
-      "start": 43.398,
-      "end": 43.595
+      "w": "into",
+      "start": 5.944,
+      "end": 6.072
     },
     {
       "w": "a",
-      "start": 43.63,
-      "end": 43.665
+      "start": 6.13,
+      "end": 6.153
     },
     {
-      "w": "telling-off.",
-      "start": 43.7,
-      "end": 44.28
-    },
-    {
-      "w": "That",
-      "start": 44.431,
-      "end": 44.606
-    },
-    {
-      "w": "is",
-      "start": 44.64,
-      "end": 44.71
-    },
-    {
-      "w": "how",
-      "start": 44.745,
-      "end": 44.826
-    },
-    {
-      "w": "you",
-      "start": 44.861,
-      "end": 44.931
-    },
-    {
-      "w": "talk",
-      "start": 44.989,
-      "end": 45.14
-    },
-    {
-      "w": "to",
-      "start": 45.186,
-      "end": 45.256
-    },
-    {
-      "w": "somebody",
-      "start": 45.314,
-      "end": 45.592
-    },
-    {
-      "w": "you",
-      "start": 45.627,
-      "end": 45.708
-    },
-    {
-      "w": "love",
-      "start": 45.79,
-      "end": 45.999
-    },
-    {
-      "w": "who",
-      "start": 46.022,
-      "end": 46.115
-    },
-    {
-      "w": "is",
-      "start": 46.173,
-      "end": 46.243
-    },
-    {
-      "w": "drowning.",
-      "start": 46.289,
-      "end": 46.811
-    },
-    {
-      "w": "\"Thou",
-      "start": 47.02,
-      "end": 47.333
-    },
-    {
-      "w": "art",
-      "start": 47.403,
-      "end": 47.542
-    },
-    {
-      "w": "careful",
-      "start": 47.577,
-      "end": 47.891
-    },
-    {
-      "w": "and",
-      "start": 47.926,
-      "end": 48.007
-    },
-    {
-      "w": "troubled",
-      "start": 48.042,
-      "end": 48.344
-    },
-    {
-      "w": "about",
-      "start": 48.367,
-      "end": 48.541
-    },
-    {
-      "w": "many",
-      "start": 48.576,
-      "end": 48.715
-    },
-    {
-      "w": "things.",
-      "start": 48.75,
-      "end": 49.168
-    },
-    {
-      "w": "But",
-      "start": 49.226,
-      "end": 49.365
-    },
-    {
-      "w": "one",
-      "start": 49.412,
-      "end": 49.539
-    },
-    {
-      "w": "thing",
-      "start": 49.574,
-      "end": 49.713
-    },
-    {
-      "w": "is",
-      "start": 49.748,
-      "end": 49.818
-    },
-    {
-      "w": "needful,",
-      "start": 49.864,
-      "end": 50.236
-    },
-    {
-      "w": "and",
-      "start": 50.271,
-      "end": 50.364
-    },
-    {
-      "w": "Mary",
-      "start": 50.41,
-      "end": 50.607
-    },
-    {
-      "w": "hath",
-      "start": 50.666,
-      "end": 50.793
-    },
-    {
-      "w": "chosen",
-      "start": 50.828,
-      "end": 51.095
-    },
-    {
-      "w": "that",
-      "start": 51.13,
-      "end": 51.234
-    },
-    {
-      "w": "good",
-      "start": 51.269,
-      "end": 51.409
-    },
-    {
-      "w": "part,",
-      "start": 51.443,
-      "end": 51.803
-    },
-    {
-      "w": "which",
-      "start": 51.989,
-      "end": 52.152
-    },
-    {
-      "w": "shall",
-      "start": 52.186,
-      "end": 52.361
-    },
-    {
-      "w": "not",
-      "start": 52.407,
-      "end": 52.511
-    },
-    {
-      "w": "be",
-      "start": 52.546,
-      "end": 52.628
-    },
-    {
-      "w": "taken",
-      "start": 52.662,
-      "end": 52.883
-    },
-    {
-      "w": "away",
-      "start": 52.918,
-      "end": 53.057
-    },
-    {
-      "w": "from",
-      "start": 53.092,
-      "end": 53.22
-    },
-    {
-      "w": "her.\"",
-      "start": 53.266,
-      "end": 53.684
-    },
-    {
-      "w": "Read",
-      "start": 54.648,
-      "end": 54.822
-    },
-    {
-      "w": "what",
-      "start": 54.857,
-      "end": 54.961
-    },
-    {
-      "w": "he",
-      "start": 54.996,
-      "end": 55.042
-    },
-    {
-      "w": "did",
-      "start": 55.077,
-      "end": 55.182
-    },
-    {
-      "w": "not",
-      "start": 55.217,
-      "end": 55.344
-    },
-    {
-      "w": "say.",
-      "start": 55.379,
-      "end": 55.774
-    },
-    {
-      "w": "He",
-      "start": 55.96,
-      "end": 56.053
-    },
-    {
-      "w": "never",
-      "start": 56.111,
-      "end": 56.273
-    },
-    {
-      "w": "tells",
-      "start": 56.32,
-      "end": 56.505
-    },
-    {
-      "w": "Mary",
-      "start": 56.552,
-      "end": 56.726
-    },
-    {
-      "w": "to",
-      "start": 56.761,
-      "end": 56.807
-    },
-    {
-      "w": "get",
-      "start": 56.842,
-      "end": 56.947
-    },
-    {
-      "w": "up.",
-      "start": 56.993,
-      "end": 57.19
-    },
-    {
-      "w": "He",
-      "start": 57.295,
-      "end": 57.399
-    },
-    {
-      "w": "never",
-      "start": 57.446,
-      "end": 57.62
-    },
-    {
-      "w": "says",
-      "start": 57.666,
-      "end": 57.84
-    },
-    {
-      "w": "the",
-      "start": 57.899,
-      "end": 57.968
-    },
-    {
-      "w": "serving",
-      "start": 58.026,
-      "end": 58.282
-    },
-    {
-      "w": "was",
-      "start": 58.328,
-      "end": 58.421
-    },
-    {
-      "w": "wrong.",
-      "start": 58.456,
-      "end": 58.862
-    },
-    {
-      "w": "He",
-      "start": 59.071,
-      "end": 59.176
-    },
-    {
-      "w": "tells",
-      "start": 59.234,
-      "end": 59.443
+      "w": "village.",
+      "start": 6.188,
+      "end": 6.687
     },
     {
       "w": "Martha",
-      "start": 59.489,
-      "end": 59.745
+      "start": 7.07,
+      "end": 7.338
     },
     {
-      "w": "she's",
-      "start": 59.803,
-      "end": 59.953
+      "w": "receives",
+      "start": 7.396,
+      "end": 7.732
     },
     {
-      "w": "allowed",
-      "start": 59.988,
-      "end": 60.232
+      "w": "him",
+      "start": 7.767,
+      "end": 7.883
     },
     {
-      "w": "to",
-      "start": 60.255,
-      "end": 60.302
+      "w": "into",
+      "start": 7.953,
+      "end": 8.162
     },
     {
-      "w": "sit",
-      "start": 60.348,
-      "end": 60.476
+      "w": "her",
+      "start": 8.22,
+      "end": 8.301
+    },
+    {
+      "w": "house.",
+      "start": 8.336,
+      "end": 8.847
+    },
+    {
+      "w": "Her",
+      "start": 9.369,
+      "end": 9.52
+    },
+    {
+      "w": "house.",
+      "start": 9.578,
+      "end": 9.903
+    },
+    {
+      "w": "She",
+      "start": 9.95,
+      "end": 10.077
+    },
+    {
+      "w": "is",
+      "start": 10.124,
+      "end": 10.205
+    },
+    {
+      "w": "the",
+      "start": 10.252,
+      "end": 10.321
+    },
+    {
+      "w": "host.",
+      "start": 10.356,
+      "end": 10.797
+    },
+    {
+      "w": "This",
+      "start": 10.948,
+      "end": 11.088
+    },
+    {
+      "w": "was",
+      "start": 11.122,
+      "end": 11.215
+    },
+    {
+      "w": "her",
+      "start": 11.25,
+      "end": 11.331
+    },
+    {
+      "w": "call.",
+      "start": 11.378,
+      "end": 11.819
+    },
+    {
+      "w": "Her",
+      "start": 12.783,
+      "end": 12.91
+    },
+    {
+      "w": "sister",
+      "start": 12.968,
+      "end": 13.224
+    },
+    {
+      "w": "Mary",
+      "start": 13.27,
+      "end": 13.537
+    },
+    {
+      "w": "sits",
+      "start": 13.595,
+      "end": 13.769
     },
     {
       "w": "down",
-      "start": 60.511,
+      "start": 13.804,
+      "end": 13.955
+    },
+    {
+      "w": "at",
+      "start": 13.99,
+      "end": 14.048
+    },
+    {
+      "w": "his",
+      "start": 14.083,
+      "end": 14.176
+    },
+    {
+      "w": "feet",
+      "start": 14.211,
+      "end": 14.443
+    },
+    {
+      "w": "and",
+      "start": 14.513,
+      "end": 14.617
+    },
+    {
+      "w": "just",
+      "start": 14.675,
+      "end": 14.872
+    },
+    {
+      "w": "listens.",
+      "start": 14.93,
+      "end": 15.581
+    },
+    {
+      "w": "And",
+      "start": 16.022,
+      "end": 16.15
+    },
+    {
+      "w": "Martha",
+      "start": 16.196,
+      "end": 16.44
+    },
+    {
+      "w": "is",
+      "start": 16.475,
+      "end": 16.533
+    },
+    {
+      "w": "what",
+      "start": 16.567,
+      "end": 16.684
+    },
+    {
+      "w": "the",
+      "start": 16.718,
+      "end": 16.788
+    },
+    {
+      "w": "text",
+      "start": 16.823,
+      "end": 17.078
+    },
+    {
+      "w": "calls",
+      "start": 17.125,
+      "end": 17.392
+    },
+    {
+      "w": "cumbered",
+      "start": 17.45,
+      "end": 17.717
+    },
+    {
+      "w": "about",
+      "start": 17.74,
+      "end": 17.879
+    },
+    {
+      "w": "much",
+      "start": 17.903,
+      "end": 18.054
+    },
+    {
+      "w": "serving.",
+      "start": 18.088,
+      "end": 18.541
+    },
+    {
+      "w": "Cumbered.",
+      "start": 19.238,
+      "end": 19.679
+    },
+    {
+      "w": "Dragged",
+      "start": 19.923,
+      "end": 20.225
+    },
+    {
+      "w": "in",
+      "start": 20.259,
+      "end": 20.318
+    },
+    {
+      "w": "every",
+      "start": 20.376,
+      "end": 20.561
+    },
+    {
+      "w": "direction.",
+      "start": 20.596,
+      "end": 21.177
+    },
+    {
+      "w": "Hosting",
+      "start": 21.502,
+      "end": 21.838
+    },
+    {
+      "w": "is",
+      "start": 21.885,
+      "end": 21.955
+    },
+    {
+      "w": "real",
+      "start": 22.001,
+      "end": 22.152
+    },
+    {
+      "w": "work",
+      "start": 22.187,
+      "end": 22.419
+    },
+    {
+      "w": "and",
+      "start": 22.477,
+      "end": 22.581
+    },
+    {
+      "w": "she",
+      "start": 22.64,
+      "end": 22.732
+    },
+    {
+      "w": "is",
+      "start": 22.767,
+      "end": 22.825
+    },
+    {
+      "w": "doing",
+      "start": 22.86,
+      "end": 23.034
+    },
+    {
+      "w": "all",
+      "start": 23.092,
+      "end": 23.208
+    },
+    {
+      "w": "of",
+      "start": 23.243,
+      "end": 23.29
+    },
+    {
+      "w": "it,",
+      "start": 23.348,
+      "end": 23.464
+    },
+    {
+      "w": "alone,",
+      "start": 23.487,
+      "end": 23.905
+    },
+    {
+      "w": "while",
+      "start": 24.033,
+      "end": 24.207
+    },
+    {
+      "w": "her",
+      "start": 24.23,
+      "end": 24.311
+    },
+    {
+      "w": "sister",
+      "start": 24.346,
+      "end": 24.602
+    },
+    {
+      "w": "sits",
+      "start": 24.671,
+      "end": 24.834
+    },
+    {
+      "w": "on",
+      "start": 24.869,
+      "end": 24.927
+    },
+    {
+      "w": "the",
+      "start": 24.961,
+      "end": 25.031
+    },
+    {
+      "w": "floor.",
+      "start": 25.054,
+      "end": 25.496
+    },
+    {
+      "w": "So",
+      "start": 26.099,
+      "end": 26.262
+    },
+    {
+      "w": "Martha",
+      "start": 26.331,
+      "end": 26.529
+    },
+    {
+      "w": "does",
+      "start": 26.564,
+      "end": 26.703
+    },
+    {
+      "w": "what",
+      "start": 26.738,
+      "end": 26.854
+    },
+    {
+      "w": "a",
+      "start": 26.889,
+      "end": 26.912
+    },
+    {
+      "w": "lot",
+      "start": 26.97,
+      "end": 27.109
+    },
+    {
+      "w": "of",
+      "start": 27.144,
+      "end": 27.191
+    },
+    {
+      "w": "us",
+      "start": 27.237,
+      "end": 27.318
+    },
+    {
+      "w": "do.",
+      "start": 27.388,
+      "end": 27.759
+    },
+    {
+      "w": "She",
+      "start": 28.201,
+      "end": 28.305
+    },
+    {
+      "w": "does",
+      "start": 28.34,
+      "end": 28.456
+    },
+    {
+      "w": "not",
+      "start": 28.491,
+      "end": 28.595
+    },
+    {
+      "w": "go",
+      "start": 28.642,
+      "end": 28.735
+    },
+    {
+      "w": "to",
+      "start": 28.77,
+      "end": 28.816
+    },
+    {
+      "w": "Mary.",
+      "start": 28.874,
+      "end": 29.292
+    },
+    {
+      "w": "She",
+      "start": 29.327,
+      "end": 29.443
+    },
+    {
+      "w": "goes",
+      "start": 29.489,
+      "end": 29.617
+    },
+    {
+      "w": "over",
+      "start": 29.652,
+      "end": 29.791
+    },
+    {
+      "w": "her",
+      "start": 29.849,
+      "end": 29.931
+    },
+    {
+      "w": "head.",
+      "start": 29.977,
+      "end": 30.383
+    },
+    {
+      "w": "\"Lord,",
+      "start": 30.906,
+      "end": 31.266
+    },
+    {
+      "w": "dost",
+      "start": 31.289,
+      "end": 31.451
+    },
+    {
+      "w": "thou",
+      "start": 31.475,
+      "end": 31.591
+    },
+    {
+      "w": "not",
+      "start": 31.637,
+      "end": 31.753
+    },
+    {
+      "w": "care",
+      "start": 31.788,
+      "end": 31.951
+    },
+    {
+      "w": "that",
+      "start": 31.986,
+      "end": 32.078
+    },
+    {
+      "w": "my",
+      "start": 32.113,
+      "end": 32.183
+    },
+    {
+      "w": "sister",
+      "start": 32.229,
+      "end": 32.45
+    },
+    {
+      "w": "hath",
+      "start": 32.496,
+      "end": 32.624
+    },
+    {
+      "w": "left",
+      "start": 32.659,
+      "end": 32.798
+    },
+    {
+      "w": "me",
+      "start": 32.845,
+      "end": 32.914
+    },
+    {
+      "w": "to",
+      "start": 32.949,
+      "end": 33.019
+    },
+    {
+      "w": "serve",
+      "start": 33.077,
+      "end": 33.251
+    },
+    {
+      "w": "alone?",
+      "start": 33.286,
+      "end": 33.797
+    },
+    {
+      "w": "Bid",
+      "start": 34.18,
+      "end": 34.331
+    },
+    {
+      "w": "her",
+      "start": 34.366,
+      "end": 34.447
+    },
+    {
+      "w": "therefore",
+      "start": 34.482,
+      "end": 34.842
+    },
+    {
+      "w": "that",
+      "start": 34.888,
+      "end": 34.993
+    },
+    {
+      "w": "she",
+      "start": 35.027,
+      "end": 35.12
+    },
+    {
+      "w": "help",
+      "start": 35.167,
+      "end": 35.283
+    },
+    {
+      "w": "me.\"",
+      "start": 35.329,
+      "end": 35.654
+    },
+    {
+      "w": "She",
+      "start": 36.351,
+      "end": 36.444
+    },
+    {
+      "w": "is",
+      "start": 36.479,
+      "end": 36.548
+    },
+    {
+      "w": "not",
+      "start": 36.595,
+      "end": 36.711
+    },
+    {
+      "w": "asking.",
+      "start": 36.757,
+      "end": 37.338
+    },
+    {
+      "w": "She",
+      "start": 37.616,
+      "end": 37.721
+    },
+    {
+      "w": "is",
+      "start": 37.767,
+      "end": 37.837
+    },
+    {
+      "w": "telling",
+      "start": 37.872,
+      "end": 38.104
+    },
+    {
+      "w": "him",
+      "start": 38.139,
+      "end": 38.232
+    },
+    {
+      "w": "to",
+      "start": 38.267,
+      "end": 38.325
+    },
+    {
+      "w": "sort",
+      "start": 38.383,
+      "end": 38.557
+    },
+    {
+      "w": "out",
+      "start": 38.592,
+      "end": 38.696
+    },
+    {
+      "w": "her",
+      "start": 38.731,
+      "end": 38.812
+    },
+    {
+      "w": "sister.",
+      "start": 38.859,
+      "end": 39.428
+    },
+    {
+      "w": "And",
+      "start": 39.706,
+      "end": 39.846
+    },
+    {
+      "w": "here",
+      "start": 39.927,
+      "end": 40.147
+    },
+    {
+      "w": "is",
+      "start": 40.182,
+      "end": 40.252
+    },
+    {
+      "w": "where",
+      "start": 40.275,
+      "end": 40.403
+    },
+    {
+      "w": "everybody",
+      "start": 40.438,
+      "end": 40.751
+    },
+    {
+      "w": "expects",
+      "start": 40.798,
+      "end": 41.204
+    },
+    {
+      "w": "the",
+      "start": 41.25,
+      "end": 41.332
+    },
+    {
+      "w": "scolding.",
+      "start": 41.378,
+      "end": 42.005
+    },
+    {
+      "w": "He",
+      "start": 42.829,
+      "end": 42.922
+    },
+    {
+      "w": "says,",
+      "start": 42.969,
+      "end": 43.421
+    },
+    {
+      "w": "\"Martha,",
+      "start": 43.572,
+      "end": 44.002
+    },
+    {
+      "w": "Martha.\"",
+      "start": 44.037,
+      "end": 44.559
+    },
+    {
+      "w": "Her",
+      "start": 44.942,
+      "end": 45.058
+    },
+    {
+      "w": "name.",
+      "start": 45.105,
+      "end": 45.546
+    },
+    {
+      "w": "Twice.",
+      "start": 45.651,
+      "end": 46.277
+    },
+    {
+      "w": "That",
+      "start": 46.974,
+      "end": 47.113
+    },
+    {
+      "w": "is",
+      "start": 47.148,
+      "end": 47.218
+    },
+    {
+      "w": "not",
+      "start": 47.264,
+      "end": 47.438
+    },
+    {
+      "w": "how",
+      "start": 47.473,
+      "end": 47.543
+    },
+    {
+      "w": "you",
+      "start": 47.578,
+      "end": 47.659
+    },
+    {
+      "w": "open",
+      "start": 47.74,
+      "end": 47.938
+    },
+    {
+      "w": "a",
+      "start": 47.973,
+      "end": 47.996
+    },
+    {
+      "w": "telling",
+      "start": 48.031,
+      "end": 48.263
+    },
+    {
+      "w": "off.",
+      "start": 48.309,
+      "end": 48.774
+    },
+    {
+      "w": "That",
+      "start": 49.377,
+      "end": 49.517
+    },
+    {
+      "w": "is",
+      "start": 49.551,
+      "end": 49.61
+    },
+    {
+      "w": "how",
+      "start": 49.644,
+      "end": 49.737
+    },
+    {
+      "w": "you",
+      "start": 49.784,
+      "end": 49.865
+    },
+    {
+      "w": "talk",
+      "start": 49.911,
+      "end": 50.051
+    },
+    {
+      "w": "to",
+      "start": 50.086,
+      "end": 50.132
+    },
+    {
+      "w": "someone",
+      "start": 50.167,
+      "end": 50.387
+    },
+    {
+      "w": "you",
+      "start": 50.411,
+      "end": 50.492
+    },
+    {
+      "w": "love",
+      "start": 50.562,
+      "end": 50.782
+    },
+    {
+      "w": "who",
+      "start": 50.805,
+      "end": 50.898
+    },
+    {
+      "w": "is",
+      "start": 50.945,
+      "end": 51.014
+    },
+    {
+      "w": "drowning.",
+      "start": 51.049,
+      "end": 51.595
+    },
+    {
+      "w": "\"Thou",
+      "start": 52.199,
+      "end": 52.419
+    },
+    {
+      "w": "art",
+      "start": 52.454,
+      "end": 52.558
+    },
+    {
+      "w": "careful",
+      "start": 52.593,
+      "end": 52.871
+    },
+    {
+      "w": "and",
+      "start": 52.906,
+      "end": 52.988
+    },
+    {
+      "w": "troubled",
+      "start": 53.022,
+      "end": 53.336
+    },
+    {
+      "w": "about",
+      "start": 53.371,
+      "end": 53.533
+    },
+    {
+      "w": "many",
+      "start": 53.568,
+      "end": 53.731
+    },
+    {
+      "w": "things.",
+      "start": 53.777,
+      "end": 54.311
+    },
+    {
+      "w": "But",
+      "start": 54.497,
+      "end": 54.625
+    },
+    {
+      "w": "one",
+      "start": 54.659,
+      "end": 54.775
+    },
+    {
+      "w": "thing",
+      "start": 54.81,
+      "end": 54.961
+    },
+    {
+      "w": "is",
+      "start": 54.996,
+      "end": 55.066
+    },
+    {
+      "w": "needful,",
+      "start": 55.112,
+      "end": 55.623
+    },
+    {
+      "w": "and",
+      "start": 55.902,
+      "end": 56.006
+    },
+    {
+      "w": "Mary",
+      "start": 56.041,
+      "end": 56.262
+    },
+    {
+      "w": "hath",
+      "start": 56.296,
+      "end": 56.436
+    },
+    {
+      "w": "chosen",
+      "start": 56.471,
+      "end": 56.738
+    },
+    {
+      "w": "that",
+      "start": 56.772,
+      "end": 56.888
+    },
+    {
+      "w": "good",
+      "start": 56.923,
+      "end": 57.063
+    },
+    {
+      "w": "part,",
+      "start": 57.097,
+      "end": 57.469
+    },
+    {
+      "w": "which",
+      "start": 57.573,
+      "end": 57.724
+    },
+    {
+      "w": "shall",
+      "start": 57.759,
+      "end": 57.922
+    },
+    {
+      "w": "not",
+      "start": 57.98,
+      "end": 58.108
+    },
+    {
+      "w": "be",
+      "start": 58.142,
+      "end": 58.224
+    },
+    {
+      "w": "taken",
+      "start": 58.258,
+      "end": 58.491
+    },
+    {
+      "w": "away",
+      "start": 58.525,
+      "end": 58.665
+    },
+    {
+      "w": "from",
+      "start": 58.7,
+      "end": 58.839
+    },
+    {
+      "w": "her.\"",
+      "start": 58.897,
+      "end": 59.269
+    },
+    {
+      "w": "Now",
+      "start": 59.965,
+      "end": 60.081
+    },
+    {
+      "w": "read",
+      "start": 60.128,
+      "end": 60.267
+    },
+    {
+      "w": "what",
+      "start": 60.302,
+      "end": 60.418
+    },
+    {
+      "w": "he",
+      "start": 60.453,
+      "end": 60.499
+    },
+    {
+      "w": "did",
+      "start": 60.546,
       "end": 60.65
     },
     {
-      "w": "too.",
+      "w": "not",
       "start": 60.685,
-      "end": 61.347
+      "end": 60.836
+    },
+    {
+      "w": "say.",
+      "start": 60.882,
+      "end": 61.312
+    },
+    {
+      "w": "He",
+      "start": 61.591,
+      "end": 61.672
+    },
+    {
+      "w": "never",
+      "start": 61.718,
+      "end": 61.869
+    },
+    {
+      "w": "tells",
+      "start": 61.904,
+      "end": 62.078
+    },
+    {
+      "w": "Mary",
+      "start": 62.113,
+      "end": 62.276
+    },
+    {
+      "w": "to",
+      "start": 62.31,
+      "end": 62.357
+    },
+    {
+      "w": "get",
+      "start": 62.392,
+      "end": 62.496
+    },
+    {
+      "w": "up.",
+      "start": 62.554,
+      "end": 62.833
+    },
+    {
+      "w": "He",
+      "start": 63.437,
+      "end": 63.529
+    },
+    {
+      "w": "never",
+      "start": 63.564,
+      "end": 63.727
+    },
+    {
+      "w": "says",
+      "start": 63.773,
+      "end": 63.924
+    },
+    {
+      "w": "the",
+      "start": 63.959,
+      "end": 64.029
+    },
+    {
+      "w": "serving",
+      "start": 64.063,
+      "end": 64.284
+    },
+    {
+      "w": "was",
+      "start": 64.319,
+      "end": 64.4
+    },
+    {
+      "w": "wrong.",
+      "start": 64.435,
+      "end": 64.83
+    },
+    {
+      "w": "He",
+      "start": 65.526,
+      "end": 65.619
+    },
+    {
+      "w": "tells",
+      "start": 65.654,
+      "end": 65.84
+    },
+    {
+      "w": "Martha",
+      "start": 65.898,
+      "end": 66.223
+    },
+    {
+      "w": "she",
+      "start": 66.327,
+      "end": 66.432
+    },
+    {
+      "w": "is",
+      "start": 66.478,
+      "end": 66.536
+    },
+    {
+      "w": "allowed",
+      "start": 66.571,
+      "end": 66.792
+    },
+    {
+      "w": "to",
+      "start": 66.815,
+      "end": 66.861
+    },
+    {
+      "w": "sit",
+      "start": 66.896,
+      "end": 67.012
+    },
+    {
+      "w": "down",
+      "start": 67.047,
+      "end": 67.198
+    },
+    {
+      "w": "too.",
+      "start": 67.245,
+      "end": 67.755
     }
   ],
-  "renderedAt": 1785321789232
+  "renderedAt": 1785479967062
 }

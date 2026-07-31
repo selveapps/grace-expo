@@ -1,994 +1,1146 @@
 {
   "kind": "tea",
   "teaId": "miriam-song",
-  "text": "She watched the water close, picked up a tambourine, and started the party on the far shore.\n\nExodus fifteen. Israel has just walked through the sea on dry ground and watched it come down behind them.\n\nNow, order matters here, so let's be accurate. Moses and the children of Israel sing first. That's verse one.\n\nThen verse twenty. \"And Miriam the prophetess, the sister of Aaron, took a timbrel in her hand. And all the women went out after her with timbrels and with dances.\"\n\nAnd Miriam answered them. Answered. She takes the song and she leads the women in it, with percussion and dancing, standing on the edge of an impossible crossing.\n\n\"Sing ye to the Lord, for he hath triumphed gloriously. The horse and his rider hath he thrown into the sea.\"\n\nTwo things Scripture calls her right there in one verse. Prophetess. And sister of Aaron.\n\nExodus two never names the sister who watched a baby float away in a basket. Numbers twenty-six names Miriam among those siblings, and that's the connection most readers make.\n\nWhat isn't in doubt is this. When the water closed, she was the one who picked up an instrument.",
-  "voice": "FGY2WhTYpPnrIDTdsKH5",
+  "mood": "light",
+  "heat": 1,
+  "text": "The sea had just closed on an army. She picked up a tambourine. Exodus fifteen. Israel has walked through the sea on dry ground and watched it come down behind them. Now, order matters here, so let us be accurate. Moses and the children of Israel sing first. That is verse one. Then verse twenty. \"And Miriam the prophetess, the sister of Aaron, took a timbrel in her hand. And all the women went out after her with timbrels and with dances.\" And Miriam answered them. Answered. She takes the song and leads the women in it, with percussion and dancing, standing on the edge of a crossing that should not have been possible. \"Sing ye to the Lord, for he hath triumphed gloriously. The horse and his rider hath he thrown into the sea.\" Two things Scripture calls her, right there, in one verse. Prophetess. And sister of Aaron. Now here is the thing readers connect. Exodus two never names the sister who watched a baby float away in a basket and talked a princess into hiring his own mother as the nurse. Numbers twenty-six names Miriam among those siblings. That is the link most people make. It is a reasonable reading, not a stated one. What is not in doubt is this. When the water closed, she was the one who reached for an instrument.",
+  "voice": "cgSgspJ2msm6clMCkdW9",
   "words": [
     {
-      "w": "She",
+      "w": "The",
       "start": 0,
-      "end": 0.151
-    },
-    {
-      "w": "watched",
-      "start": 0.221,
-      "end": 0.488
-    },
-    {
-      "w": "the",
-      "start": 0.522,
-      "end": 0.592
-    },
-    {
-      "w": "water",
-      "start": 0.627,
-      "end": 0.836
-    },
-    {
-      "w": "close,",
-      "start": 0.882,
-      "end": 1.277
-    },
-    {
-      "w": "picked",
-      "start": 1.312,
-      "end": 1.521
-    },
-    {
-      "w": "up",
-      "start": 1.544,
-      "end": 1.614
-    },
-    {
-      "w": "a",
-      "start": 1.649,
-      "end": 1.672
-    },
-    {
-      "w": "tambourine,",
-      "start": 1.707,
-      "end": 2.241
-    },
-    {
-      "w": "and",
-      "start": 2.276,
-      "end": 2.392
-    },
-    {
-      "w": "started",
-      "start": 2.473,
-      "end": 2.763
-    },
-    {
-      "w": "the",
-      "start": 2.786,
-      "end": 2.856
-    },
-    {
-      "w": "party",
-      "start": 2.902,
-      "end": 3.146
-    },
-    {
-      "w": "on",
-      "start": 3.193,
-      "end": 3.251
-    },
-    {
-      "w": "the",
-      "start": 3.286,
-      "end": 3.355
-    },
-    {
-      "w": "far",
-      "start": 3.39,
-      "end": 3.553
-    },
-    {
-      "w": "shore.",
-      "start": 3.611,
-      "end": 3.994
-    },
-    {
-      "w": "Exodus",
-      "start": 4.272,
-      "end": 4.69
-    },
-    {
-      "w": "fifteen.",
-      "start": 4.737,
-      "end": 5.294
-    },
-    {
-      "w": "Israel",
-      "start": 5.573,
-      "end": 5.921
-    },
-    {
-      "w": "has",
-      "start": 5.979,
-      "end": 6.072
-    },
-    {
-      "w": "just",
-      "start": 6.107,
-      "end": 6.258
-    },
-    {
-      "w": "walked",
-      "start": 6.293,
-      "end": 6.502
-    },
-    {
-      "w": "through",
-      "start": 6.525,
-      "end": 6.722
-    },
-    {
-      "w": "the",
-      "start": 6.757,
-      "end": 6.827
+      "end": 0.128
     },
     {
       "w": "sea",
-      "start": 6.861,
-      "end": 7.001
+      "start": 0.186,
+      "end": 0.36
+    },
+    {
+      "w": "had",
+      "start": 0.395,
+      "end": 0.488
+    },
+    {
+      "w": "just",
+      "start": 0.522,
+      "end": 0.662
+    },
+    {
+      "w": "closed",
+      "start": 0.708,
+      "end": 1.068
     },
     {
       "w": "on",
-      "start": 7.047,
-      "end": 7.117
+      "start": 1.103,
+      "end": 1.173
     },
     {
-      "w": "dry",
-      "start": 7.163,
-      "end": 7.326
+      "w": "an",
+      "start": 1.207,
+      "end": 1.277
     },
     {
-      "w": "ground",
-      "start": 7.384,
-      "end": 7.697
-    },
-    {
-      "w": "and",
-      "start": 7.802,
-      "end": 7.941
-    },
-    {
-      "w": "watched",
-      "start": 8.022,
-      "end": 8.278
-    },
-    {
-      "w": "it",
-      "start": 8.313,
-      "end": 8.382
-    },
-    {
-      "w": "come",
-      "start": 8.417,
-      "end": 8.557
-    },
-    {
-      "w": "down",
-      "start": 8.591,
-      "end": 8.731
-    },
-    {
-      "w": "behind",
-      "start": 8.777,
-      "end": 8.998
-    },
-    {
-      "w": "them.",
-      "start": 9.033,
-      "end": 9.334
-    },
-    {
-      "w": "Now,",
-      "start": 9.718,
-      "end": 10.101
-    },
-    {
-      "w": "order",
-      "start": 10.147,
-      "end": 10.379
-    },
-    {
-      "w": "matters",
-      "start": 10.426,
-      "end": 10.693
-    },
-    {
-      "w": "here,",
-      "start": 10.739,
-      "end": 10.995
-    },
-    {
-      "w": "so",
-      "start": 11.029,
-      "end": 11.157
-    },
-    {
-      "w": "let's",
-      "start": 11.215,
-      "end": 11.389
-    },
-    {
-      "w": "be",
-      "start": 11.424,
-      "end": 11.517
-    },
-    {
-      "w": "accurate.",
-      "start": 11.575,
-      "end": 12.144
-    },
-    {
-      "w": "Moses",
-      "start": 12.272,
-      "end": 12.632
-    },
-    {
-      "w": "and",
-      "start": 12.666,
-      "end": 12.748
-    },
-    {
-      "w": "the",
-      "start": 12.782,
-      "end": 12.852
-    },
-    {
-      "w": "children",
-      "start": 12.887,
-      "end": 13.177
-    },
-    {
-      "w": "of",
-      "start": 13.2,
-      "end": 13.247
-    },
-    {
-      "w": "Israel",
-      "start": 13.305,
-      "end": 13.56
-    },
-    {
-      "w": "sing",
-      "start": 13.63,
-      "end": 13.804
-    },
-    {
-      "w": "first.",
-      "start": 13.885,
-      "end": 14.28
-    },
-    {
-      "w": "That's",
-      "start": 14.315,
-      "end": 14.512
-    },
-    {
-      "w": "verse",
-      "start": 14.547,
-      "end": 14.745
-    },
-    {
-      "w": "one.",
-      "start": 14.779,
-      "end": 15.046
-    },
-    {
-      "w": "Then",
-      "start": 15.093,
-      "end": 15.232
-    },
-    {
-      "w": "verse",
-      "start": 15.279,
-      "end": 15.441
-    },
-    {
-      "w": "twenty.",
-      "start": 15.476,
-      "end": 15.859
-    },
-    {
-      "w": "\"And",
-      "start": 16.01,
-      "end": 16.231
-    },
-    {
-      "w": "Miriam",
-      "start": 16.277,
-      "end": 16.556
-    },
-    {
-      "w": "the",
-      "start": 16.591,
-      "end": 16.66
-    },
-    {
-      "w": "prophetess,",
-      "start": 16.695,
-      "end": 17.392
-    },
-    {
-      "w": "the",
-      "start": 17.45,
-      "end": 17.543
-    },
-    {
-      "w": "sister",
-      "start": 17.577,
-      "end": 17.798
-    },
-    {
-      "w": "of",
-      "start": 17.833,
-      "end": 17.879
-    },
-    {
-      "w": "Aaron,",
-      "start": 17.949,
-      "end": 18.204
-    },
-    {
-      "w": "took",
-      "start": 18.228,
-      "end": 18.378
-    },
-    {
-      "w": "a",
-      "start": 18.413,
-      "end": 18.437
-    },
-    {
-      "w": "timbrel",
-      "start": 18.483,
-      "end": 18.785
-    },
-    {
-      "w": "in",
-      "start": 18.843,
-      "end": 18.913
-    },
-    {
-      "w": "her",
-      "start": 18.971,
-      "end": 19.052
-    },
-    {
-      "w": "hand.",
-      "start": 19.098,
-      "end": 19.447
-    },
-    {
-      "w": "And",
-      "start": 19.481,
-      "end": 19.586
-    },
-    {
-      "w": "all",
-      "start": 19.621,
-      "end": 19.725
-    },
-    {
-      "w": "the",
-      "start": 19.76,
-      "end": 19.83
-    },
-    {
-      "w": "women",
-      "start": 19.865,
-      "end": 20.039
-    },
-    {
-      "w": "went",
-      "start": 20.074,
-      "end": 20.213
-    },
-    {
-      "w": "out",
-      "start": 20.248,
-      "end": 20.352
-    },
-    {
-      "w": "after",
-      "start": 20.387,
-      "end": 20.573
-    },
-    {
-      "w": "her",
-      "start": 20.631,
-      "end": 20.793
-    },
-    {
-      "w": "with",
-      "start": 20.875,
-      "end": 21.026
-    },
-    {
-      "w": "timbrels",
-      "start": 21.072,
-      "end": 21.548
-    },
-    {
-      "w": "and",
-      "start": 21.606,
-      "end": 21.699
-    },
-    {
-      "w": "with",
-      "start": 21.745,
-      "end": 21.873
-    },
-    {
-      "w": "dances.\"",
-      "start": 21.931,
-      "end": 22.663
-    },
-    {
-      "w": "And",
-      "start": 22.906,
-      "end": 23.034
-    },
-    {
-      "w": "Miriam",
-      "start": 23.069,
-      "end": 23.348
-    },
-    {
-      "w": "answered",
-      "start": 23.406,
-      "end": 23.684
-    },
-    {
-      "w": "them.",
-      "start": 23.719,
-      "end": 23.986
-    },
-    {
-      "w": "Answered.",
-      "start": 24.056,
-      "end": 24.636
+      "w": "army.",
+      "start": 1.312,
+      "end": 1.834
     },
     {
       "w": "She",
-      "start": 25.019,
-      "end": 25.147
-    },
-    {
-      "w": "takes",
-      "start": 25.194,
-      "end": 25.391
-    },
-    {
-      "w": "the",
-      "start": 25.437,
-      "end": 25.507
-    },
-    {
-      "w": "song",
-      "start": 25.553,
-      "end": 25.844
-    },
-    {
-      "w": "and",
-      "start": 25.902,
-      "end": 26.006
-    },
-    {
-      "w": "she",
-      "start": 26.041,
-      "end": 26.146
-    },
-    {
-      "w": "leads",
-      "start": 26.215,
-      "end": 26.413
-    },
-    {
-      "w": "the",
-      "start": 26.459,
-      "end": 26.529
-    },
-    {
-      "w": "women",
-      "start": 26.564,
-      "end": 26.761
-    },
-    {
-      "w": "in",
-      "start": 26.796,
-      "end": 26.854
-    },
-    {
-      "w": "it,",
-      "start": 26.9,
-      "end": 27.098
-    },
-    {
-      "w": "with",
-      "start": 27.167,
-      "end": 27.307
-    },
-    {
-      "w": "percussion",
-      "start": 27.353,
-      "end": 27.771
-    },
-    {
-      "w": "and",
-      "start": 27.806,
-      "end": 27.887
-    },
-    {
-      "w": "dancing,",
-      "start": 27.922,
-      "end": 28.444
-    },
-    {
-      "w": "standing",
-      "start": 28.526,
-      "end": 28.839
-    },
-    {
-      "w": "on",
-      "start": 28.874,
-      "end": 28.932
-    },
-    {
-      "w": "the",
-      "start": 28.967,
-      "end": 29.036
-    },
-    {
-      "w": "edge",
-      "start": 29.083,
-      "end": 29.222
-    },
-    {
-      "w": "of",
-      "start": 29.245,
-      "end": 29.292
-    },
-    {
-      "w": "an",
-      "start": 29.327,
-      "end": 29.373
-    },
-    {
-      "w": "impossible",
-      "start": 29.408,
-      "end": 29.919
-    },
-    {
-      "w": "crossing.",
-      "start": 29.954,
-      "end": 30.441
-    },
-    {
-      "w": "\"Sing",
-      "start": 30.546,
-      "end": 30.917
-    },
-    {
-      "w": "ye",
-      "start": 30.964,
-      "end": 31.045
-    },
-    {
-      "w": "to",
-      "start": 31.091,
-      "end": 31.161
-    },
-    {
-      "w": "the",
-      "start": 31.207,
-      "end": 31.277
-    },
-    {
-      "w": "Lord,",
-      "start": 31.324,
-      "end": 31.718
-    },
-    {
-      "w": "for",
-      "start": 31.8,
-      "end": 31.927
-    },
-    {
-      "w": "he",
-      "start": 31.974,
-      "end": 32.043
-    },
-    {
-      "w": "hath",
-      "start": 32.09,
-      "end": 32.218
-    },
-    {
-      "w": "triumphed",
-      "start": 32.252,
-      "end": 32.67
-    },
-    {
-      "w": "gloriously.",
-      "start": 32.705,
-      "end": 33.529
-    },
-    {
-      "w": "The",
-      "start": 33.971,
-      "end": 34.087
-    },
-    {
-      "w": "horse",
-      "start": 34.133,
-      "end": 34.342
-    },
-    {
-      "w": "and",
-      "start": 34.365,
-      "end": 34.447
-    },
-    {
-      "w": "his",
-      "start": 34.481,
-      "end": 34.574
-    },
-    {
-      "w": "rider",
-      "start": 34.621,
-      "end": 34.865
-    },
-    {
-      "w": "hath",
-      "start": 34.911,
-      "end": 35.062
-    },
-    {
-      "w": "he",
-      "start": 35.097,
-      "end": 35.143
-    },
-    {
-      "w": "thrown",
-      "start": 35.178,
-      "end": 35.387
-    },
-    {
-      "w": "into",
-      "start": 35.422,
-      "end": 35.573
-    },
-    {
-      "w": "the",
-      "start": 35.631,
-      "end": 35.7
-    },
-    {
-      "w": "sea.\"",
-      "start": 35.735,
-      "end": 36.188
-    },
-    {
-      "w": "Two",
-      "start": 36.432,
-      "end": 36.594
-    },
-    {
-      "w": "things",
-      "start": 36.652,
-      "end": 36.861
-    },
-    {
-      "w": "Scripture",
-      "start": 36.885,
-      "end": 37.233
-    },
-    {
-      "w": "calls",
-      "start": 37.268,
-      "end": 37.465
-    },
-    {
-      "w": "her",
-      "start": 37.512,
-      "end": 37.616
-    },
-    {
-      "w": "right",
-      "start": 37.686,
-      "end": 37.86
-    },
-    {
-      "w": "there",
-      "start": 37.895,
-      "end": 38.08
-    },
-    {
-      "w": "in",
-      "start": 38.115,
-      "end": 38.173
-    },
-    {
-      "w": "one",
-      "start": 38.231,
-      "end": 38.359
-    },
-    {
-      "w": "verse.",
-      "start": 38.394,
-      "end": 38.8
-    },
-    {
-      "w": "Prophetess.",
-      "start": 39.323,
-      "end": 40.089
-    },
-    {
-      "w": "And",
-      "start": 40.112,
-      "end": 40.298
-    },
-    {
-      "w": "sister",
-      "start": 40.344,
-      "end": 40.658
-    },
-    {
-      "w": "of",
-      "start": 40.704,
-      "end": 40.774
-    },
-    {
-      "w": "Aaron.",
-      "start": 40.832,
-      "end": 41.238
-    },
-    {
-      "w": "Exodus",
-      "start": 41.424,
-      "end": 41.854
-    },
-    {
-      "w": "two",
-      "start": 41.9,
-      "end": 42.167
-    },
-    {
-      "w": "never",
-      "start": 42.318,
-      "end": 42.527
-    },
-    {
-      "w": "names",
-      "start": 42.585,
-      "end": 42.771
-    },
-    {
-      "w": "the",
-      "start": 42.806,
-      "end": 42.875
-    },
-    {
-      "w": "sister",
-      "start": 42.922,
-      "end": 43.212
-    },
-    {
-      "w": "who",
-      "start": 43.259,
-      "end": 43.363
-    },
-    {
-      "w": "watched",
-      "start": 43.409,
-      "end": 43.688
-    },
-    {
-      "w": "a",
-      "start": 43.723,
-      "end": 43.758
-    },
-    {
-      "w": "baby",
-      "start": 43.816,
-      "end": 44.036
-    },
-    {
-      "w": "float",
-      "start": 44.094,
-      "end": 44.303
-    },
-    {
-      "w": "away",
-      "start": 44.338,
-      "end": 44.512
-    },
-    {
-      "w": "in",
-      "start": 44.547,
-      "end": 44.605
-    },
-    {
-      "w": "a",
-      "start": 44.64,
-      "end": 44.663
-    },
-    {
-      "w": "basket.",
-      "start": 44.698,
-      "end": 45.302
-    },
-    {
-      "w": "Numbers",
-      "start": 45.743,
-      "end": 46.045
-    },
-    {
-      "w": "twenty-six",
-      "start": 46.091,
-      "end": 46.532
-    },
-    {
-      "w": "names",
-      "start": 46.602,
-      "end": 46.823
-    },
-    {
-      "w": "Miriam",
-      "start": 46.869,
-      "end": 47.113
-    },
-    {
-      "w": "among",
-      "start": 47.148,
-      "end": 47.31
-    },
-    {
-      "w": "those",
-      "start": 47.345,
-      "end": 47.507
-    },
-    {
-      "w": "siblings,",
-      "start": 47.542,
-      "end": 48.053
-    },
-    {
-      "w": "and",
-      "start": 48.076,
-      "end": 48.192
-    },
-    {
-      "w": "that's",
-      "start": 48.227,
-      "end": 48.425
-    },
-    {
-      "w": "the",
-      "start": 48.46,
-      "end": 48.529
-    },
-    {
-      "w": "connection",
-      "start": 48.564,
-      "end": 48.912
-    },
-    {
-      "w": "most",
-      "start": 48.947,
-      "end": 49.098
-    },
-    {
-      "w": "readers",
-      "start": 49.145,
-      "end": 49.388
-    },
-    {
-      "w": "make.",
-      "start": 49.423,
-      "end": 49.748
-    },
-    {
-      "w": "What",
-      "start": 50.027,
-      "end": 50.189
-    },
-    {
-      "w": "isn't",
-      "start": 50.224,
-      "end": 50.398
-    },
-    {
-      "w": "in",
-      "start": 50.433,
-      "end": 50.491
-    },
-    {
-      "w": "doubt",
-      "start": 50.526,
-      "end": 50.863
-    },
-    {
-      "w": "is",
-      "start": 51.014,
-      "end": 51.176
-    },
-    {
-      "w": "this.",
-      "start": 51.223,
-      "end": 51.594
-    },
-    {
-      "w": "When",
-      "start": 51.919,
-      "end": 52.059
-    },
-    {
-      "w": "the",
-      "start": 52.093,
-      "end": 52.163
-    },
-    {
-      "w": "water",
-      "start": 52.198,
-      "end": 52.384
-    },
-    {
-      "w": "closed,",
-      "start": 52.419,
-      "end": 52.86
-    },
-    {
-      "w": "she",
-      "start": 52.929,
-      "end": 53.045
-    },
-    {
-      "w": "was",
-      "start": 53.08,
-      "end": 53.185
-    },
-    {
-      "w": "the",
-      "start": 53.22,
-      "end": 53.289
-    },
-    {
-      "w": "one",
-      "start": 53.336,
-      "end": 53.44
-    },
-    {
-      "w": "who",
-      "start": 53.463,
-      "end": 53.533
+      "start": 2.218,
+      "end": 2.334
     },
     {
       "w": "picked",
-      "start": 53.568,
-      "end": 53.765
+      "start": 2.368,
+      "end": 2.566
     },
     {
       "w": "up",
-      "start": 53.788,
-      "end": 53.858
+      "start": 2.601,
+      "end": 2.67
+    },
+    {
+      "w": "a",
+      "start": 2.717,
+      "end": 2.74
+    },
+    {
+      "w": "tambourine.",
+      "start": 2.786,
+      "end": 3.46
+    },
+    {
+      "w": "Exodus",
+      "start": 3.901,
+      "end": 4.272
+    },
+    {
+      "w": "fifteen.",
+      "start": 4.307,
+      "end": 4.934
+    },
+    {
+      "w": "Israel",
+      "start": 5.457,
+      "end": 5.805
+    },
+    {
+      "w": "has",
+      "start": 5.851,
+      "end": 5.944
+    },
+    {
+      "w": "walked",
+      "start": 5.979,
+      "end": 6.165
+    },
+    {
+      "w": "through",
+      "start": 6.188,
+      "end": 6.351
+    },
+    {
+      "w": "the",
+      "start": 6.385,
+      "end": 6.455
+    },
+    {
+      "w": "sea",
+      "start": 6.49,
+      "end": 6.711
+    },
+    {
+      "w": "on",
+      "start": 6.792,
+      "end": 6.896
+    },
+    {
+      "w": "dry",
+      "start": 6.943,
+      "end": 7.105
+    },
+    {
+      "w": "ground",
+      "start": 7.163,
+      "end": 7.488
+    },
+    {
+      "w": "and",
+      "start": 7.546,
+      "end": 7.628
+    },
+    {
+      "w": "watched",
+      "start": 7.686,
+      "end": 7.906
+    },
+    {
+      "w": "it",
+      "start": 7.941,
+      "end": 7.999
+    },
+    {
+      "w": "come",
+      "start": 8.034,
+      "end": 8.173
+    },
+    {
+      "w": "down",
+      "start": 8.208,
+      "end": 8.348
+    },
+    {
+      "w": "behind",
+      "start": 8.382,
+      "end": 8.626
+    },
+    {
+      "w": "them.",
+      "start": 8.661,
+      "end": 9.044
+    },
+    {
+      "w": "Now,",
+      "start": 9.485,
+      "end": 9.857
+    },
+    {
+      "w": "order",
+      "start": 10.008,
+      "end": 10.252
+    },
+    {
+      "w": "matters",
+      "start": 10.298,
+      "end": 10.542
+    },
+    {
+      "w": "here,",
+      "start": 10.6,
+      "end": 10.832
+    },
+    {
+      "w": "so",
+      "start": 10.867,
+      "end": 10.983
+    },
+    {
+      "w": "let",
+      "start": 11.041,
+      "end": 11.146
+    },
+    {
+      "w": "us",
+      "start": 11.192,
+      "end": 11.262
+    },
+    {
+      "w": "be",
+      "start": 11.308,
+      "end": 11.378
+    },
+    {
+      "w": "accurate.",
+      "start": 11.424,
+      "end": 12.051
+    },
+    {
+      "w": "Moses",
+      "start": 12.434,
+      "end": 12.794
+    },
+    {
+      "w": "and",
+      "start": 12.841,
+      "end": 12.922
+    },
+    {
+      "w": "the",
+      "start": 12.957,
+      "end": 13.026
+    },
+    {
+      "w": "children",
+      "start": 13.061,
+      "end": 13.351
+    },
+    {
+      "w": "of",
+      "start": 13.386,
+      "end": 13.433
+    },
+    {
+      "w": "Israel",
+      "start": 13.479,
+      "end": 13.734
+    },
+    {
+      "w": "sing",
+      "start": 13.781,
+      "end": 13.943
+    },
+    {
+      "w": "first.",
+      "start": 14.001,
+      "end": 14.582
+    },
+    {
+      "w": "That",
+      "start": 14.826,
+      "end": 14.965
+    },
+    {
+      "w": "is",
+      "start": 15,
+      "end": 15.058
+    },
+    {
+      "w": "verse",
+      "start": 15.093,
+      "end": 15.267
+    },
+    {
+      "w": "one.",
+      "start": 15.302,
+      "end": 15.72
+    },
+    {
+      "w": "Then",
+      "start": 16.683,
+      "end": 16.858
+    },
+    {
+      "w": "verse",
+      "start": 16.916,
+      "end": 17.09
+    },
+    {
+      "w": "twenty.",
+      "start": 17.113,
+      "end": 17.554
+    },
+    {
+      "w": "\"And",
+      "start": 18.251,
+      "end": 18.46
+    },
+    {
+      "w": "Miriam",
+      "start": 18.518,
+      "end": 18.843
+    },
+    {
+      "w": "the",
+      "start": 18.889,
+      "end": 18.959
+    },
+    {
+      "w": "prophetess,",
+      "start": 18.994,
+      "end": 19.435
+    },
+    {
+      "w": "the",
+      "start": 19.458,
+      "end": 19.539
+    },
+    {
+      "w": "sister",
+      "start": 19.574,
+      "end": 19.795
+    },
+    {
+      "w": "of",
+      "start": 19.83,
+      "end": 19.876
+    },
+    {
+      "w": "Aaron,",
+      "start": 19.946,
+      "end": 20.271
+    },
+    {
+      "w": "took",
+      "start": 20.306,
+      "end": 20.445
+    },
+    {
+      "w": "a",
+      "start": 20.48,
+      "end": 20.503
+    },
+    {
+      "w": "timbrel",
+      "start": 20.561,
+      "end": 20.84
+    },
+    {
+      "w": "in",
+      "start": 20.875,
+      "end": 20.933
+    },
+    {
+      "w": "her",
+      "start": 20.967,
+      "end": 21.037
+    },
+    {
+      "w": "hand.",
+      "start": 21.072,
+      "end": 21.467
+    },
+    {
+      "w": "And",
+      "start": 21.71,
+      "end": 21.85
+    },
+    {
+      "w": "all",
+      "start": 21.919,
+      "end": 22.07
+    },
+    {
+      "w": "the",
+      "start": 22.105,
+      "end": 22.175
+    },
+    {
+      "w": "women",
+      "start": 22.21,
+      "end": 22.395
+    },
+    {
+      "w": "went",
+      "start": 22.43,
+      "end": 22.558
+    },
+    {
+      "w": "out",
+      "start": 22.593,
+      "end": 22.697
+    },
+    {
+      "w": "after",
+      "start": 22.744,
+      "end": 22.964
+    },
+    {
+      "w": "her",
+      "start": 23.011,
+      "end": 23.115
+    },
+    {
+      "w": "with",
+      "start": 23.173,
+      "end": 23.313
+    },
+    {
+      "w": "timbrels",
+      "start": 23.359,
+      "end": 23.719
+    },
+    {
+      "w": "and",
+      "start": 23.754,
+      "end": 23.835
+    },
+    {
+      "w": "with",
+      "start": 23.87,
+      "end": 23.986
+    },
+    {
+      "w": "dances.\"",
+      "start": 24.021,
+      "end": 24.683
+    },
+    {
+      "w": "And",
+      "start": 25.379,
+      "end": 25.495
+    },
+    {
+      "w": "Miriam",
+      "start": 25.53,
+      "end": 25.797
+    },
+    {
+      "w": "answered",
+      "start": 25.832,
+      "end": 26.099
+    },
+    {
+      "w": "them.",
+      "start": 26.122,
+      "end": 26.424
+    },
+    {
+      "w": "Answered.",
+      "start": 26.807,
+      "end": 27.341
+    },
+    {
+      "w": "She",
+      "start": 28.038,
+      "end": 28.154
+    },
+    {
+      "w": "takes",
+      "start": 28.188,
+      "end": 28.374
+    },
+    {
+      "w": "the",
+      "start": 28.409,
+      "end": 28.479
+    },
+    {
+      "w": "song",
+      "start": 28.514,
+      "end": 28.723
+    },
+    {
+      "w": "and",
+      "start": 28.757,
+      "end": 28.827
+    },
+    {
+      "w": "leads",
+      "start": 28.862,
+      "end": 29.048
+    },
+    {
+      "w": "the",
+      "start": 29.082,
+      "end": 29.152
+    },
+    {
+      "w": "women",
+      "start": 29.187,
+      "end": 29.361
+    },
+    {
+      "w": "in",
+      "start": 29.396,
+      "end": 29.454
+    },
+    {
+      "w": "it,",
+      "start": 29.512,
+      "end": 29.698
+    },
+    {
+      "w": "with",
+      "start": 29.744,
+      "end": 29.907
+    },
+    {
+      "w": "percussion",
+      "start": 29.976,
+      "end": 30.394
+    },
+    {
+      "w": "and",
+      "start": 30.429,
+      "end": 30.51
+    },
+    {
+      "w": "dancing,",
+      "start": 30.545,
+      "end": 31.079
+    },
+    {
+      "w": "standing",
+      "start": 31.288,
+      "end": 31.579
+    },
+    {
+      "w": "on",
+      "start": 31.613,
+      "end": 31.66
+    },
+    {
+      "w": "the",
+      "start": 31.695,
+      "end": 31.764
+    },
+    {
+      "w": "edge",
+      "start": 31.811,
+      "end": 31.939
+    },
+    {
+      "w": "of",
+      "start": 31.962,
+      "end": 32.008
+    },
+    {
+      "w": "a",
+      "start": 32.043,
+      "end": 32.078
+    },
+    {
+      "w": "crossing",
+      "start": 32.113,
+      "end": 32.426
+    },
+    {
+      "w": "that",
+      "start": 32.461,
+      "end": 32.565
+    },
+    {
+      "w": "should",
+      "start": 32.6,
+      "end": 32.763
+    },
+    {
+      "w": "not",
+      "start": 32.798,
+      "end": 32.949
+    },
+    {
+      "w": "have",
+      "start": 32.983,
+      "end": 33.111
+    },
+    {
+      "w": "been",
+      "start": 33.134,
+      "end": 33.239
+    },
+    {
+      "w": "possible.",
+      "start": 33.274,
+      "end": 33.854
+    },
+    {
+      "w": "\"Sing",
+      "start": 34.458,
+      "end": 34.818
+    },
+    {
+      "w": "ye",
+      "start": 34.853,
+      "end": 34.922
+    },
+    {
+      "w": "to",
+      "start": 34.969,
+      "end": 35.027
+    },
+    {
+      "w": "the",
+      "start": 35.073,
+      "end": 35.143
+    },
+    {
+      "w": "Lord,",
+      "start": 35.178,
+      "end": 35.561
+    },
+    {
+      "w": "for",
+      "start": 35.712,
+      "end": 35.816
+    },
+    {
+      "w": "he",
+      "start": 35.851,
+      "end": 35.909
+    },
+    {
+      "w": "hath",
+      "start": 35.956,
+      "end": 36.083
+    },
+    {
+      "w": "triumphed",
+      "start": 36.118,
+      "end": 36.478
+    },
+    {
+      "w": "gloriously.",
+      "start": 36.513,
+      "end": 37.186
+    },
+    {
+      "w": "The",
+      "start": 37.465,
+      "end": 37.558
+    },
+    {
+      "w": "horse",
+      "start": 37.604,
+      "end": 37.802
+    },
+    {
+      "w": "and",
+      "start": 37.825,
+      "end": 37.895
+    },
+    {
+      "w": "his",
+      "start": 37.93,
+      "end": 37.999
+    },
+    {
+      "w": "rider",
+      "start": 38.046,
+      "end": 38.255
+    },
+    {
+      "w": "hath",
+      "start": 38.301,
+      "end": 38.44
+    },
+    {
+      "w": "he",
+      "start": 38.464,
+      "end": 38.522
+    },
+    {
+      "w": "thrown",
+      "start": 38.556,
+      "end": 38.765
+    },
+    {
+      "w": "into",
+      "start": 38.8,
+      "end": 38.928
+    },
+    {
+      "w": "the",
+      "start": 38.974,
+      "end": 39.044
+    },
+    {
+      "w": "sea.\"",
+      "start": 39.079,
+      "end": 39.578
+    },
+    {
+      "w": "Two",
+      "start": 40.542,
+      "end": 40.681
+    },
+    {
+      "w": "things",
+      "start": 40.716,
+      "end": 40.902
+    },
+    {
+      "w": "Scripture",
+      "start": 40.925,
+      "end": 41.227
+    },
+    {
+      "w": "calls",
+      "start": 41.262,
+      "end": 41.459
+    },
+    {
+      "w": "her,",
+      "start": 41.494,
+      "end": 41.668
+    },
+    {
+      "w": "right",
+      "start": 41.703,
+      "end": 41.877
+    },
+    {
+      "w": "there,",
+      "start": 41.912,
+      "end": 42.144
+    },
+    {
+      "w": "in",
+      "start": 42.179,
+      "end": 42.26
+    },
+    {
+      "w": "one",
+      "start": 42.318,
+      "end": 42.423
+    },
+    {
+      "w": "verse.",
+      "start": 42.457,
+      "end": 43.015
+    },
+    {
+      "w": "Prophetess.",
+      "start": 43.398,
+      "end": 44.315
+    },
+    {
+      "w": "And",
+      "start": 45.279,
+      "end": 45.441
+    },
+    {
+      "w": "sister",
+      "start": 45.511,
+      "end": 45.766
+    },
+    {
+      "w": "of",
+      "start": 45.801,
+      "end": 45.848
+    },
+    {
+      "w": "Aaron.",
+      "start": 45.894,
+      "end": 46.393
+    },
+    {
+      "w": "Now",
+      "start": 46.602,
+      "end": 46.742
+    },
+    {
+      "w": "here",
+      "start": 46.823,
+      "end": 46.997
+    },
+    {
+      "w": "is",
+      "start": 47.032,
+      "end": 47.101
+    },
+    {
+      "w": "the",
+      "start": 47.148,
+      "end": 47.218
+    },
+    {
+      "w": "thing",
+      "start": 47.252,
+      "end": 47.415
+    },
+    {
+      "w": "readers",
+      "start": 47.485,
+      "end": 47.728
+    },
+    {
+      "w": "connect.",
+      "start": 47.775,
+      "end": 48.355
+    },
+    {
+      "w": "Exodus",
+      "start": 49.18,
+      "end": 49.574
+    },
+    {
+      "w": "two",
+      "start": 49.632,
+      "end": 49.911
+    },
+    {
+      "w": "never",
+      "start": 50.016,
+      "end": 50.224
+    },
+    {
+      "w": "names",
+      "start": 50.294,
+      "end": 50.538
+    },
+    {
+      "w": "the",
+      "start": 50.573,
+      "end": 50.654
+    },
+    {
+      "w": "sister",
+      "start": 50.712,
+      "end": 51.014
+    },
+    {
+      "w": "who",
+      "start": 51.049,
+      "end": 51.142
+    },
+    {
+      "w": "watched",
+      "start": 51.177,
+      "end": 51.397
+    },
+    {
+      "w": "a",
+      "start": 51.432,
+      "end": 51.455
+    },
+    {
+      "w": "baby",
+      "start": 51.502,
+      "end": 51.734
+    },
+    {
+      "w": "float",
+      "start": 51.804,
+      "end": 51.989
+    },
+    {
+      "w": "away",
+      "start": 52.013,
+      "end": 52.152
+    },
+    {
+      "w": "in",
+      "start": 52.187,
+      "end": 52.233
+    },
+    {
+      "w": "a",
+      "start": 52.268,
+      "end": 52.303
+    },
+    {
+      "w": "basket",
+      "start": 52.338,
+      "end": 52.698
+    },
+    {
+      "w": "and",
+      "start": 52.756,
+      "end": 52.86
+    },
+    {
+      "w": "talked",
+      "start": 52.895,
+      "end": 53.104
+    },
+    {
+      "w": "a",
+      "start": 53.139,
+      "end": 53.174
+    },
+    {
+      "w": "princess",
+      "start": 53.22,
+      "end": 53.603
+    },
+    {
+      "w": "into",
+      "start": 53.638,
+      "end": 53.766
+    },
+    {
+      "w": "hiring",
+      "start": 53.812,
+      "end": 54.102
+    },
+    {
+      "w": "his",
+      "start": 54.149,
+      "end": 54.253
+    },
+    {
+      "w": "own",
+      "start": 54.311,
+      "end": 54.474
+    },
+    {
+      "w": "mother",
+      "start": 54.509,
+      "end": 54.729
+    },
+    {
+      "w": "as",
+      "start": 54.787,
+      "end": 54.869
+    },
+    {
+      "w": "the",
+      "start": 54.927,
+      "end": 54.996
+    },
+    {
+      "w": "nurse.",
+      "start": 55.031,
+      "end": 55.496
+    },
+    {
+      "w": "Numbers",
+      "start": 55.821,
+      "end": 56.064
+    },
+    {
+      "w": "twenty-six",
+      "start": 56.088,
+      "end": 56.517
+    },
+    {
+      "w": "names",
+      "start": 56.575,
+      "end": 56.877
+    },
+    {
+      "w": "Miriam",
+      "start": 57.156,
+      "end": 57.516
+    },
+    {
+      "w": "among",
+      "start": 57.551,
+      "end": 57.713
+    },
+    {
+      "w": "those",
+      "start": 57.748,
+      "end": 57.899
+    },
+    {
+      "w": "siblings.",
+      "start": 57.922,
+      "end": 58.549
+    },
+    {
+      "w": "That",
+      "start": 59.071,
+      "end": 59.222
+    },
+    {
+      "w": "is",
+      "start": 59.257,
+      "end": 59.327
+    },
+    {
+      "w": "the",
+      "start": 59.362,
+      "end": 59.431
+    },
+    {
+      "w": "link",
+      "start": 59.466,
+      "end": 59.629
+    },
+    {
+      "w": "most",
+      "start": 59.687,
+      "end": 59.849
+    },
+    {
+      "w": "people",
+      "start": 59.884,
+      "end": 60.093
+    },
+    {
+      "w": "make.",
+      "start": 60.128,
+      "end": 60.499
+    },
+    {
+      "w": "It",
+      "start": 60.883,
+      "end": 60.999
+    },
+    {
+      "w": "is",
+      "start": 61.034,
+      "end": 61.103
+    },
+    {
+      "w": "a",
+      "start": 61.138,
+      "end": 61.173
+    },
+    {
+      "w": "reasonable",
+      "start": 61.277,
+      "end": 61.695
+    },
+    {
+      "w": "reading,",
+      "start": 61.73,
+      "end": 62.032
+    },
+    {
+      "w": "not",
+      "start": 62.067,
+      "end": 62.218
+    },
+    {
+      "w": "a",
+      "start": 62.253,
+      "end": 62.276
+    },
+    {
+      "w": "stated",
+      "start": 62.311,
+      "end": 62.543
+    },
+    {
+      "w": "one.",
+      "start": 62.601,
+      "end": 62.961
+    },
+    {
+      "w": "What",
+      "start": 63.565,
+      "end": 63.704
+    },
+    {
+      "w": "is",
+      "start": 63.739,
+      "end": 63.797
+    },
+    {
+      "w": "not",
+      "start": 63.832,
+      "end": 63.936
+    },
+    {
+      "w": "in",
+      "start": 63.971,
+      "end": 64.029
+    },
+    {
+      "w": "doubt",
+      "start": 64.064,
+      "end": 64.285
+    },
+    {
+      "w": "is",
+      "start": 64.331,
+      "end": 64.424
+    },
+    {
+      "w": "this.",
+      "start": 64.459,
+      "end": 64.865
+    },
+    {
+      "w": "When",
+      "start": 65.051,
+      "end": 65.167
+    },
+    {
+      "w": "the",
+      "start": 65.202,
+      "end": 65.271
+    },
+    {
+      "w": "water",
+      "start": 65.295,
+      "end": 65.492
+    },
+    {
+      "w": "closed,",
+      "start": 65.527,
+      "end": 65.91
+    },
+    {
+      "w": "she",
+      "start": 65.933,
+      "end": 66.038
+    },
+    {
+      "w": "was",
+      "start": 66.084,
+      "end": 66.177
+    },
+    {
+      "w": "the",
+      "start": 66.212,
+      "end": 66.281
+    },
+    {
+      "w": "one",
+      "start": 66.328,
+      "end": 66.444
+    },
+    {
+      "w": "who",
+      "start": 66.467,
+      "end": 66.56
+    },
+    {
+      "w": "reached",
+      "start": 66.618,
+      "end": 66.827
+    },
+    {
+      "w": "for",
+      "start": 66.85,
+      "end": 66.943
     },
     {
       "w": "an",
-      "start": 53.893,
-      "end": 53.951
+      "start": 66.978,
+      "end": 67.048
     },
     {
       "w": "instrument.",
-      "start": 53.986,
-      "end": 54.706
+      "start": 67.083,
+      "end": 67.756
     }
   ],
-  "renderedAt": 1785322225877
+  "renderedAt": 1785479509912
 }

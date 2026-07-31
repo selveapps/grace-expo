@@ -1,999 +1,981 @@
 {
   "kind": "tea",
   "teaId": "widow-mite",
-  "text": "He sat down and watched people give, and the one he pointed at had less than everybody.\n\nMark twelve. And the setup is the part people skip. \"Jesus sat over against the treasury, and beheld how the people cast money into the treasury.\"\n\nHe sat down. And watched. On purpose.\n\nAnd many that were rich cast in much. That's in the text too. It's not a lie, they gave a lot.\n\nThen a certain poor widow comes and throws in two mites. And Mark actually converts the currency for his readers, which tells you how small it was. Two mites, which make a farthing.\n\nAnd Jesus calls his disciples over. He wants them to see this specifically.\n\n\"Verily I say unto you, that this poor widow hath cast more in, than all they which have cast into the treasury.\"\n\nMore than all of them. Combined.\n\nAnd then he does the maths out loud. \"For all they did cast in of their abundance. But she of her want did cast in all that she had, even all her living.\"\n\nAll her living. Not a percentage. Everything.\n\nHe is not measuring the gift. He is measuring what was left afterwards.",
-  "voice": "FGY2WhTYpPnrIDTdsKH5",
+  "mood": "light",
+  "heat": 1,
+  "text": "He sat down opposite the treasury and watched people give. On purpose. Mark twelve. And the setup is the part everyone skips. \"Jesus sat over against the treasury, and beheld how the people cast money into the treasury.\" He sat down. And watched. Deliberately. And many that were rich cast in much. That is in the text too. It is not a lie. They gave a lot. Then a certain poor widow comes and throws in two mites. And Mark actually converts the currency for his readers, which tells you how small it was. Two mites, which make a farthing. And Jesus calls his disciples over. He wants them to see this specifically. \"Verily I say unto you, That this poor widow hath cast more in, than all they which have cast into the treasury.\" More than all of them. Combined. And then he does the maths out loud. \"For all they did cast in of their abundance; but she of her want did cast in all that she had, even all her living.\" All her living. Not a percentage. Everything. He is not measuring the gift. He is measuring what was left afterwards.",
+  "voice": "cgSgspJ2msm6clMCkdW9",
   "words": [
     {
       "w": "He",
       "start": 0,
-      "end": 0.151
+      "end": 0.116
     },
     {
       "w": "sat",
-      "start": 0.221,
-      "end": 0.406
+      "start": 0.163,
+      "end": 0.348
     },
     {
       "w": "down",
-      "start": 0.453,
-      "end": 0.615
+      "start": 0.383,
+      "end": 0.534
+    },
+    {
+      "w": "opposite",
+      "start": 0.58,
+      "end": 0.917
+    },
+    {
+      "w": "the",
+      "start": 0.94,
+      "end": 1.01
+    },
+    {
+      "w": "treasury",
+      "start": 1.045,
+      "end": 1.405
     },
     {
       "w": "and",
-      "start": 0.65,
-      "end": 0.72
+      "start": 1.451,
+      "end": 1.533
     },
     {
       "w": "watched",
-      "start": 0.766,
-      "end": 1.057
+      "start": 1.579,
+      "end": 1.811
     },
     {
       "w": "people",
-      "start": 1.103,
-      "end": 1.335
+      "start": 1.858,
+      "end": 2.067
     },
     {
-      "w": "give,",
-      "start": 1.37,
-      "end": 1.8
-    },
-    {
-      "w": "and",
-      "start": 1.927,
-      "end": 2.032
-    },
-    {
-      "w": "the",
-      "start": 2.067,
-      "end": 2.136
-    },
-    {
-      "w": "one",
-      "start": 2.194,
-      "end": 2.287
-    },
-    {
-      "w": "he",
-      "start": 2.322,
-      "end": 2.368
-    },
-    {
-      "w": "pointed",
-      "start": 2.415,
-      "end": 2.682
-    },
-    {
-      "w": "at",
-      "start": 2.728,
-      "end": 2.914
-    },
-    {
-      "w": "had",
-      "start": 3.123,
-      "end": 3.274
-    },
-    {
-      "w": "less",
-      "start": 3.355,
-      "end": 3.576
-    },
-    {
-      "w": "than",
-      "start": 3.622,
-      "end": 3.796
-    },
-    {
-      "w": "everybody.",
-      "start": 3.924,
-      "end": 4.702
-    },
-    {
-      "w": "Mark",
-      "start": 5.027,
-      "end": 5.294
-    },
-    {
-      "w": "twelve.",
-      "start": 5.341,
-      "end": 5.863
-    },
-    {
-      "w": "And",
-      "start": 6.246,
-      "end": 6.362
-    },
-    {
-      "w": "the",
-      "start": 6.409,
-      "end": 6.478
-    },
-    {
-      "w": "setup",
-      "start": 6.513,
-      "end": 6.792
-    },
-    {
-      "w": "is",
-      "start": 6.873,
-      "end": 6.989
-    },
-    {
-      "w": "the",
-      "start": 7.047,
-      "end": 7.117
-    },
-    {
-      "w": "part",
-      "start": 7.152,
-      "end": 7.303
-    },
-    {
-      "w": "people",
-      "start": 7.338,
-      "end": 7.546
-    },
-    {
-      "w": "skip.",
-      "start": 7.581,
-      "end": 7.988
-    },
-    {
-      "w": "\"Jesus",
-      "start": 8.173,
-      "end": 8.615
-    },
-    {
-      "w": "sat",
-      "start": 8.649,
-      "end": 8.824
-    },
-    {
-      "w": "over",
-      "start": 8.87,
-      "end": 9.033
-    },
-    {
-      "w": "against",
-      "start": 9.079,
-      "end": 9.334
-    },
-    {
-      "w": "the",
-      "start": 9.369,
-      "end": 9.439
-    },
-    {
-      "w": "treasury,",
-      "start": 9.474,
-      "end": 9.892
-    },
-    {
-      "w": "and",
-      "start": 9.915,
-      "end": 9.985
-    },
-    {
-      "w": "beheld",
-      "start": 10.031,
-      "end": 10.495
-    },
-    {
-      "w": "how",
-      "start": 10.542,
-      "end": 10.623
-    },
-    {
-      "w": "the",
-      "start": 10.658,
-      "end": 10.728
-    },
-    {
-      "w": "people",
-      "start": 10.774,
-      "end": 11.029
-    },
-    {
-      "w": "cast",
-      "start": 11.064,
-      "end": 11.366
-    },
-    {
-      "w": "money",
-      "start": 11.447,
-      "end": 11.68
-    },
-    {
-      "w": "into",
-      "start": 11.761,
-      "end": 11.9
-    },
-    {
-      "w": "the",
-      "start": 11.947,
-      "end": 12.016
-    },
-    {
-      "w": "treasury.\"",
-      "start": 12.051,
-      "end": 12.725
-    },
-    {
-      "w": "He",
-      "start": 13.05,
-      "end": 13.143
-    },
-    {
-      "w": "sat",
-      "start": 13.201,
-      "end": 13.386
-    },
-    {
-      "w": "down.",
-      "start": 13.433,
-      "end": 13.862
-    },
-    {
-      "w": "And",
-      "start": 14.013,
-      "end": 14.153
-    },
-    {
-      "w": "watched.",
-      "start": 14.234,
-      "end": 14.756
+      "w": "give.",
+      "start": 2.09,
+      "end": 2.554
     },
     {
       "w": "On",
-      "start": 14.942,
-      "end": 15.081
+      "start": 3.158,
+      "end": 3.309
     },
     {
       "w": "purpose.",
-      "start": 15.14,
-      "end": 15.662
-    },
-    {
-      "w": "And",
-      "start": 15.871,
-      "end": 16.01
-    },
-    {
-      "w": "many",
-      "start": 16.057,
-      "end": 16.208
-    },
-    {
-      "w": "that",
-      "start": 16.242,
-      "end": 16.359
-    },
-    {
-      "w": "were",
-      "start": 16.393,
-      "end": 16.544
-    },
-    {
-      "w": "rich",
-      "start": 16.649,
-      "end": 16.951
-    },
-    {
-      "w": "cast",
-      "start": 17.194,
-      "end": 17.543
-    },
-    {
-      "w": "in",
-      "start": 17.589,
-      "end": 17.67
-    },
-    {
-      "w": "much.",
-      "start": 17.717,
-      "end": 18.112
-    },
-    {
-      "w": "That's",
-      "start": 18.193,
-      "end": 18.425
-    },
-    {
-      "w": "in",
-      "start": 18.46,
-      "end": 18.506
-    },
-    {
-      "w": "the",
-      "start": 18.541,
-      "end": 18.611
-    },
-    {
-      "w": "text",
-      "start": 18.646,
-      "end": 18.913
-    },
-    {
-      "w": "too.",
-      "start": 18.948,
-      "end": 19.145
-    },
-    {
-      "w": "It's",
-      "start": 19.168,
-      "end": 19.308
-    },
-    {
-      "w": "not",
-      "start": 19.412,
-      "end": 19.609
-    },
-    {
-      "w": "a",
-      "start": 19.644,
-      "end": 19.667
-    },
-    {
-      "w": "lie,",
-      "start": 19.702,
-      "end": 19.9
-    },
-    {
-      "w": "they",
-      "start": 19.923,
-      "end": 20.016
-    },
-    {
-      "w": "gave",
-      "start": 20.051,
-      "end": 20.19
-    },
-    {
-      "w": "a",
-      "start": 20.213,
-      "end": 20.248
-    },
-    {
-      "w": "lot.",
-      "start": 20.283,
-      "end": 20.654
-    },
-    {
-      "w": "Then",
-      "start": 20.863,
-      "end": 21.003
-    },
-    {
-      "w": "a",
-      "start": 21.037,
-      "end": 21.061
-    },
-    {
-      "w": "certain",
-      "start": 21.107,
-      "end": 21.386
-    },
-    {
-      "w": "poor",
-      "start": 21.49,
-      "end": 21.711
-    },
-    {
-      "w": "widow",
-      "start": 21.757,
-      "end": 21.955
-    },
-    {
-      "w": "comes",
-      "start": 22.024,
-      "end": 22.314
-    },
-    {
-      "w": "and",
-      "start": 22.349,
-      "end": 22.442
-    },
-    {
-      "w": "throws",
-      "start": 22.477,
-      "end": 22.756
-    },
-    {
-      "w": "in",
-      "start": 22.825,
-      "end": 22.907
-    },
-    {
-      "w": "two",
-      "start": 22.953,
-      "end": 23.069
-    },
-    {
-      "w": "mites.",
-      "start": 23.127,
-      "end": 23.661
-    },
-    {
-      "w": "And",
-      "start": 23.905,
-      "end": 24.021
+      "start": 3.355,
+      "end": 3.959
     },
     {
       "w": "Mark",
-      "start": 24.079,
-      "end": 24.323
+      "start": 4.168,
+      "end": 4.331
     },
     {
-      "w": "actually",
-      "start": 24.393,
-      "end": 24.741
+      "w": "twelve.",
+      "start": 4.377,
+      "end": 4.888
     },
     {
-      "w": "converts",
-      "start": 24.776,
-      "end": 25.089
+      "w": "And",
+      "start": 5.41,
+      "end": 5.515
     },
     {
       "w": "the",
-      "start": 25.124,
-      "end": 25.193
+      "start": 5.55,
+      "end": 5.619
     },
     {
-      "w": "currency",
-      "start": 25.228,
-      "end": 25.623
+      "w": "setup",
+      "start": 5.654,
+      "end": 5.851
     },
     {
-      "w": "for",
-      "start": 25.669,
-      "end": 25.774
+      "w": "is",
+      "start": 5.886,
+      "end": 5.944
     },
     {
-      "w": "his",
-      "start": 25.809,
-      "end": 25.89
+      "w": "the",
+      "start": 5.979,
+      "end": 6.049
     },
     {
-      "w": "readers,",
-      "start": 25.948,
-      "end": 26.401
+      "w": "part",
+      "start": 6.084,
+      "end": 6.281
     },
     {
-      "w": "which",
-      "start": 26.61,
-      "end": 26.842
+      "w": "everyone",
+      "start": 6.339,
+      "end": 6.653
     },
     {
-      "w": "tells",
-      "start": 26.946,
-      "end": 27.19
+      "w": "skips.",
+      "start": 6.687,
+      "end": 7.256
     },
     {
-      "w": "you",
-      "start": 27.225,
-      "end": 27.306
+      "w": "\"Jesus",
+      "start": 7.86,
+      "end": 8.44
+    },
+    {
+      "w": "sat",
+      "start": 8.545,
+      "end": 8.754
+    },
+    {
+      "w": "over",
+      "start": 8.812,
+      "end": 8.998
+    },
+    {
+      "w": "against",
+      "start": 9.056,
+      "end": 9.311
+    },
+    {
+      "w": "the",
+      "start": 9.346,
+      "end": 9.416
+    },
+    {
+      "w": "treasury,",
+      "start": 9.451,
+      "end": 9.927
+    },
+    {
+      "w": "and",
+      "start": 9.961,
+      "end": 10.054
+    },
+    {
+      "w": "beheld",
+      "start": 10.089,
+      "end": 10.333
     },
     {
       "w": "how",
-      "start": 27.341,
-      "end": 27.422
+      "start": 10.368,
+      "end": 10.437
     },
     {
-      "w": "small",
-      "start": 27.469,
-      "end": 27.643
+      "w": "the",
+      "start": 10.472,
+      "end": 10.542
     },
     {
-      "w": "it",
-      "start": 27.678,
-      "end": 27.736
-    },
-    {
-      "w": "was.",
-      "start": 27.771,
-      "end": 28.247
-    },
-    {
-      "w": "Two",
-      "start": 28.688,
-      "end": 28.839
-    },
-    {
-      "w": "mites,",
-      "start": 28.897,
-      "end": 29.338
-    },
-    {
-      "w": "which",
-      "start": 29.385,
-      "end": 29.675
-    },
-    {
-      "w": "make",
-      "start": 29.779,
-      "end": 29.93
-    },
-    {
-      "w": "a",
-      "start": 29.953,
-      "end": 29.977
-    },
-    {
-      "w": "farthing.",
-      "start": 30.011,
-      "end": 30.487
-    },
-    {
-      "w": "And",
-      "start": 30.534,
-      "end": 30.731
-    },
-    {
-      "w": "Jesus",
-      "start": 30.801,
-      "end": 31.091
-    },
-    {
-      "w": "calls",
-      "start": 31.126,
-      "end": 31.335
-    },
-    {
-      "w": "his",
-      "start": 31.381,
-      "end": 31.486
-    },
-    {
-      "w": "disciples",
-      "start": 31.544,
-      "end": 31.904
-    },
-    {
-      "w": "over.",
-      "start": 31.939,
-      "end": 32.299
-    },
-    {
-      "w": "He",
-      "start": 32.542,
-      "end": 32.624
-    },
-    {
-      "w": "wants",
-      "start": 32.659,
-      "end": 32.833
-    },
-    {
-      "w": "them",
-      "start": 32.868,
-      "end": 32.995
-    },
-    {
-      "w": "to",
-      "start": 33.03,
-      "end": 33.076
-    },
-    {
-      "w": "see",
-      "start": 33.123,
-      "end": 33.262
-    },
-    {
-      "w": "this",
-      "start": 33.297,
-      "end": 33.425
-    },
-    {
-      "w": "specifically.",
-      "start": 33.46,
-      "end": 34.179
-    },
-    {
-      "w": "\"Verily",
-      "start": 34.876,
-      "end": 35.236
-    },
-    {
-      "w": "I",
-      "start": 35.282,
-      "end": 35.317
-    },
-    {
-      "w": "say",
-      "start": 35.422,
-      "end": 35.724
-    },
-    {
-      "w": "unto",
-      "start": 35.805,
-      "end": 35.967
-    },
-    {
-      "w": "you,",
-      "start": 36.025,
-      "end": 36.327
-    },
-    {
-      "w": "that",
-      "start": 36.374,
-      "end": 36.606
-    },
-    {
-      "w": "this",
-      "start": 36.664,
-      "end": 36.885
-    },
-    {
-      "w": "poor",
-      "start": 37.012,
-      "end": 37.244
-    },
-    {
-      "w": "widow",
-      "start": 37.303,
-      "end": 37.523
-    },
-    {
-      "w": "hath",
-      "start": 37.581,
-      "end": 37.72
+      "w": "people",
+      "start": 10.577,
+      "end": 10.809
     },
     {
       "w": "cast",
-      "start": 37.755,
-      "end": 38.022
+      "start": 10.844,
+      "end": 11.064
     },
     {
-      "w": "more",
-      "start": 38.069,
-      "end": 38.231
-    },
-    {
-      "w": "in,",
-      "start": 38.301,
-      "end": 38.522
-    },
-    {
-      "w": "than",
-      "start": 38.568,
-      "end": 38.731
-    },
-    {
-      "w": "all",
-      "start": 38.789,
-      "end": 38.974
-    },
-    {
-      "w": "they",
-      "start": 39.033,
-      "end": 39.16
-    },
-    {
-      "w": "which",
-      "start": 39.218,
-      "end": 39.381
-    },
-    {
-      "w": "have",
-      "start": 39.427,
-      "end": 39.613
-    },
-    {
-      "w": "cast",
-      "start": 39.648,
-      "end": 39.903
+      "w": "money",
+      "start": 11.122,
+      "end": 11.297
     },
     {
       "w": "into",
-      "start": 39.938,
-      "end": 40.066
+      "start": 11.331,
+      "end": 11.459
     },
     {
       "w": "the",
-      "start": 40.112,
-      "end": 40.182
+      "start": 11.505,
+      "end": 11.575
     },
     {
       "w": "treasury.\"",
-      "start": 40.205,
-      "end": 40.786
+      "start": 11.61,
+      "end": 12.341
     },
     {
-      "w": "More",
-      "start": 41.111,
-      "end": 41.413
+      "w": "He",
+      "start": 13.038,
+      "end": 13.131
     },
     {
-      "w": "than",
-      "start": 41.471,
-      "end": 41.622
+      "w": "sat",
+      "start": 13.177,
+      "end": 13.352
     },
     {
-      "w": "all",
-      "start": 41.668,
-      "end": 41.831
-    },
-    {
-      "w": "of",
-      "start": 41.877,
-      "end": 41.935
-    },
-    {
-      "w": "them.",
-      "start": 41.981,
-      "end": 42.307
-    },
-    {
-      "w": "Combined.",
-      "start": 42.341,
-      "end": 42.922
+      "w": "down.",
+      "start": 13.387,
+      "end": 13.816
     },
     {
       "w": "And",
-      "start": 43.247,
-      "end": 43.363
+      "start": 14.257,
+      "end": 14.385
     },
     {
-      "w": "then",
-      "start": 43.398,
-      "end": 43.514
+      "w": "watched.",
+      "start": 14.443,
+      "end": 15.012
     },
     {
-      "w": "he",
-      "start": 43.56,
-      "end": 43.618
+      "w": "Deliberately.",
+      "start": 15.256,
+      "end": 15.987
     },
     {
-      "w": "does",
-      "start": 43.665,
-      "end": 43.816
+      "w": "And",
+      "start": 16.266,
+      "end": 16.394
     },
     {
-      "w": "the",
-      "start": 43.851,
-      "end": 43.92
-    },
-    {
-      "w": "maths",
-      "start": 43.955,
-      "end": 44.292
-    },
-    {
-      "w": "out",
-      "start": 44.361,
-      "end": 44.536
-    },
-    {
-      "w": "loud.",
-      "start": 44.57,
-      "end": 44.93
-    },
-    {
-      "w": "\"For",
-      "start": 45.372,
-      "end": 45.534
-    },
-    {
-      "w": "all",
-      "start": 45.581,
-      "end": 45.697
-    },
-    {
-      "w": "they",
-      "start": 45.743,
-      "end": 45.859
-    },
-    {
-      "w": "did",
-      "start": 45.894,
-      "end": 45.998
-    },
-    {
-      "w": "cast",
-      "start": 46.045,
-      "end": 46.289
-    },
-    {
-      "w": "in",
-      "start": 46.335,
-      "end": 46.486
-    },
-    {
-      "w": "of",
-      "start": 46.591,
-      "end": 46.672
-    },
-    {
-      "w": "their",
-      "start": 46.707,
-      "end": 46.846
-    },
-    {
-      "w": "abundance.",
-      "start": 46.881,
-      "end": 47.519
-    },
-    {
-      "w": "But",
-      "start": 47.647,
-      "end": 47.775
-    },
-    {
-      "w": "she",
-      "start": 47.821,
-      "end": 47.937
-    },
-    {
-      "w": "of",
-      "start": 48.007,
-      "end": 48.065
-    },
-    {
-      "w": "her",
-      "start": 48.135,
-      "end": 48.228
-    },
-    {
-      "w": "want",
-      "start": 48.274,
-      "end": 48.506
-    },
-    {
-      "w": "did",
-      "start": 48.588,
-      "end": 48.727
-    },
-    {
-      "w": "cast",
-      "start": 48.773,
-      "end": 49.04
-    },
-    {
-      "w": "in",
-      "start": 49.087,
-      "end": 49.249
-    },
-    {
-      "w": "all",
-      "start": 49.354,
-      "end": 49.551
+      "w": "many",
+      "start": 16.428,
+      "end": 16.568
     },
     {
       "w": "that",
-      "start": 49.598,
-      "end": 49.725
+      "start": 16.603,
+      "end": 16.707
     },
     {
-      "w": "she",
-      "start": 49.76,
-      "end": 49.841
+      "w": "were",
+      "start": 16.73,
+      "end": 16.858
     },
     {
-      "w": "had,",
-      "start": 49.899,
-      "end": 50.189
+      "w": "rich",
+      "start": 16.893,
+      "end": 17.079
     },
     {
-      "w": "even",
-      "start": 50.398,
-      "end": 50.654
+      "w": "cast",
+      "start": 17.148,
+      "end": 17.415
     },
     {
-      "w": "all",
-      "start": 50.712,
-      "end": 50.839
+      "w": "in",
+      "start": 17.45,
+      "end": 17.52
     },
     {
-      "w": "her",
-      "start": 50.897,
-      "end": 50.979
+      "w": "much.",
+      "start": 17.566,
+      "end": 18.019
     },
     {
-      "w": "living.\"",
-      "start": 51.025,
-      "end": 51.443
-    },
-    {
-      "w": "All",
-      "start": 51.884,
-      "end": 52.07
-    },
-    {
-      "w": "her",
-      "start": 52.128,
-      "end": 52.221
-    },
-    {
-      "w": "living.",
-      "start": 52.267,
-      "end": 52.662
-    },
-    {
-      "w": "Not",
-      "start": 52.813,
-      "end": 52.964
-    },
-    {
-      "w": "a",
-      "start": 52.999,
-      "end": 53.022
-    },
-    {
-      "w": "percentage.",
-      "start": 53.057,
-      "end": 53.568
-    },
-    {
-      "w": "Everything.",
-      "start": 53.777,
-      "end": 54.357
-    },
-    {
-      "w": "He",
-      "start": 54.636,
-      "end": 54.752
+      "w": "That",
+      "start": 18.298,
+      "end": 18.449
     },
     {
       "w": "is",
-      "start": 54.787,
-      "end": 54.88
+      "start": 18.483,
+      "end": 18.553
     },
     {
-      "w": "not",
-      "start": 54.961,
-      "end": 55.193
-    },
-    {
-      "w": "measuring",
-      "start": 55.251,
-      "end": 55.53
+      "w": "in",
+      "start": 18.6,
+      "end": 18.658
     },
     {
       "w": "the",
-      "start": 55.565,
-      "end": 55.634
+      "start": 18.692,
+      "end": 18.762
     },
     {
-      "w": "gift.",
-      "start": 55.669,
-      "end": 55.994
+      "w": "text",
+      "start": 18.797,
+      "end": 19.017
     },
     {
-      "w": "He",
-      "start": 56.029,
-      "end": 56.157
+      "w": "too.",
+      "start": 19.052,
+      "end": 19.354
+    },
+    {
+      "w": "It",
+      "start": 19.377,
+      "end": 19.482
     },
     {
       "w": "is",
-      "start": 56.203,
-      "end": 56.285
+      "start": 19.517,
+      "end": 19.575
+    },
+    {
+      "w": "not",
+      "start": 19.633,
+      "end": 19.737
+    },
+    {
+      "w": "a",
+      "start": 19.772,
+      "end": 19.795
+    },
+    {
+      "w": "lie.",
+      "start": 19.842,
+      "end": 20.248
+    },
+    {
+      "w": "They",
+      "start": 20.492,
+      "end": 20.62
+    },
+    {
+      "w": "gave",
+      "start": 20.655,
+      "end": 20.794
+    },
+    {
+      "w": "a",
+      "start": 20.817,
+      "end": 20.852
+    },
+    {
+      "w": "lot.",
+      "start": 20.887,
+      "end": 21.316
+    },
+    {
+      "w": "Then",
+      "start": 22.013,
+      "end": 22.199
+    },
+    {
+      "w": "a",
+      "start": 22.257,
+      "end": 22.292
+    },
+    {
+      "w": "certain",
+      "start": 22.361,
+      "end": 22.582
+    },
+    {
+      "w": "poor",
+      "start": 22.617,
+      "end": 22.779
+    },
+    {
+      "w": "widow",
+      "start": 22.826,
+      "end": 23.023
+    },
+    {
+      "w": "comes",
+      "start": 23.081,
+      "end": 23.371
+    },
+    {
+      "w": "and",
+      "start": 23.418,
+      "end": 23.499
+    },
+    {
+      "w": "throws",
+      "start": 23.534,
+      "end": 23.766
+    },
+    {
+      "w": "in",
+      "start": 23.812,
+      "end": 23.894
+    },
+    {
+      "w": "two",
+      "start": 23.952,
+      "end": 24.079
+    },
+    {
+      "w": "mites.",
+      "start": 24.137,
+      "end": 24.602
+    },
+    {
+      "w": "And",
+      "start": 24.811,
+      "end": 24.927
+    },
+    {
+      "w": "Mark",
+      "start": 24.962,
+      "end": 25.124
+    },
+    {
+      "w": "actually",
+      "start": 25.171,
+      "end": 25.438
+    },
+    {
+      "w": "converts",
+      "start": 25.473,
+      "end": 25.763
+    },
+    {
+      "w": "the",
+      "start": 25.798,
+      "end": 25.867
+    },
+    {
+      "w": "currency",
+      "start": 25.902,
+      "end": 26.262
+    },
+    {
+      "w": "for",
+      "start": 26.32,
+      "end": 26.425
+    },
+    {
+      "w": "his",
+      "start": 26.46,
+      "end": 26.553
+    },
+    {
+      "w": "readers,",
+      "start": 26.599,
+      "end": 27.121
+    },
+    {
+      "w": "which",
+      "start": 27.226,
+      "end": 27.412
+    },
+    {
+      "w": "tells",
+      "start": 27.446,
+      "end": 27.632
+    },
+    {
+      "w": "you",
+      "start": 27.667,
+      "end": 27.748
+    },
+    {
+      "w": "how",
+      "start": 27.783,
+      "end": 27.876
+    },
+    {
+      "w": "small",
+      "start": 27.922,
+      "end": 28.12
+    },
+    {
+      "w": "it",
+      "start": 28.155,
+      "end": 28.213
+    },
+    {
+      "w": "was.",
+      "start": 28.248,
+      "end": 28.631
+    },
+    {
+      "w": "Two",
+      "start": 29.455,
+      "end": 29.594
+    },
+    {
+      "w": "mites,",
+      "start": 29.652,
+      "end": 30.128
+    },
+    {
+      "w": "which",
+      "start": 30.163,
+      "end": 30.337
+    },
+    {
+      "w": "make",
+      "start": 30.372,
+      "end": 30.512
+    },
+    {
+      "w": "a",
+      "start": 30.535,
+      "end": 30.558
+    },
+    {
+      "w": "farthing.",
+      "start": 30.593,
+      "end": 31.127
+    },
+    {
+      "w": "And",
+      "start": 31.452,
+      "end": 31.58
+    },
+    {
+      "w": "Jesus",
+      "start": 31.614,
+      "end": 31.847
+    },
+    {
+      "w": "calls",
+      "start": 31.881,
+      "end": 32.056
+    },
+    {
+      "w": "his",
+      "start": 32.079,
+      "end": 32.172
+    },
+    {
+      "w": "disciples",
+      "start": 32.207,
+      "end": 32.59
+    },
+    {
+      "w": "over.",
+      "start": 32.625,
+      "end": 33.019
+    },
+    {
+      "w": "He",
+      "start": 33.716,
+      "end": 33.809
+    },
+    {
+      "w": "wants",
+      "start": 33.855,
+      "end": 34.018
+    },
+    {
+      "w": "them",
+      "start": 34.053,
+      "end": 34.169
+    },
+    {
+      "w": "to",
+      "start": 34.203,
+      "end": 34.262
+    },
+    {
+      "w": "see",
+      "start": 34.296,
+      "end": 34.412
+    },
+    {
+      "w": "this",
+      "start": 34.447,
+      "end": 34.563
+    },
+    {
+      "w": "specifically.",
+      "start": 34.598,
+      "end": 35.376
+    },
+    {
+      "w": "\"Verily",
+      "start": 36.073,
+      "end": 36.502
+    },
+    {
+      "w": "I",
+      "start": 36.549,
+      "end": 36.572
+    },
+    {
+      "w": "say",
+      "start": 36.653,
+      "end": 36.781
+    },
+    {
+      "w": "unto",
+      "start": 36.816,
+      "end": 36.978
+    },
+    {
+      "w": "you,",
+      "start": 37.06,
+      "end": 37.303
+    },
+    {
+      "w": "That",
+      "start": 37.35,
+      "end": 37.489
+    },
+    {
+      "w": "this",
+      "start": 37.524,
+      "end": 37.628
+    },
+    {
+      "w": "poor",
+      "start": 37.686,
+      "end": 37.861
+    },
+    {
+      "w": "widow",
+      "start": 37.919,
+      "end": 38.128
+    },
+    {
+      "w": "hath",
+      "start": 38.186,
+      "end": 38.313
+    },
+    {
+      "w": "cast",
+      "start": 38.348,
+      "end": 38.58
+    },
+    {
+      "w": "more",
+      "start": 38.627,
+      "end": 38.778
+    },
+    {
+      "w": "in,",
+      "start": 38.824,
+      "end": 39.138
+    },
+    {
+      "w": "than",
+      "start": 39.242,
+      "end": 39.393
+    },
+    {
+      "w": "all",
+      "start": 39.44,
+      "end": 39.567
+    },
+    {
+      "w": "they",
+      "start": 39.614,
+      "end": 39.753
+    },
+    {
+      "w": "which",
+      "start": 39.788,
+      "end": 39.927
+    },
+    {
+      "w": "have",
+      "start": 39.962,
+      "end": 40.067
+    },
+    {
+      "w": "cast",
+      "start": 40.101,
+      "end": 40.368
+    },
+    {
+      "w": "into",
+      "start": 40.403,
+      "end": 40.519
+    },
+    {
+      "w": "the",
+      "start": 40.554,
+      "end": 40.624
+    },
+    {
+      "w": "treasury.\"",
+      "start": 40.659,
+      "end": 41.274
+    },
+    {
+      "w": "More",
+      "start": 41.715,
+      "end": 41.889
+    },
+    {
+      "w": "than",
+      "start": 41.924,
+      "end": 42.052
+    },
+    {
+      "w": "all",
+      "start": 42.098,
+      "end": 42.214
+    },
+    {
+      "w": "of",
+      "start": 42.261,
+      "end": 42.307
+    },
+    {
+      "w": "them.",
+      "start": 42.342,
+      "end": 42.656
+    },
+    {
+      "w": "Combined.",
+      "start": 42.981,
+      "end": 43.666
+    },
+    {
+      "w": "And",
+      "start": 44.049,
+      "end": 44.176
+    },
+    {
+      "w": "then",
+      "start": 44.211,
+      "end": 44.316
+    },
+    {
+      "w": "he",
+      "start": 44.351,
+      "end": 44.397
+    },
+    {
+      "w": "does",
+      "start": 44.432,
+      "end": 44.56
+    },
+    {
+      "w": "the",
+      "start": 44.583,
+      "end": 44.652
+    },
+    {
+      "w": "maths",
+      "start": 44.687,
+      "end": 44.943
+    },
+    {
+      "w": "out",
+      "start": 44.989,
+      "end": 45.094
+    },
+    {
+      "w": "loud.",
+      "start": 45.128,
+      "end": 45.546
+    },
+    {
+      "w": "\"For",
+      "start": 46.243,
+      "end": 46.487
+    },
+    {
+      "w": "all",
+      "start": 46.522,
+      "end": 46.649
+    },
+    {
+      "w": "they",
+      "start": 46.696,
+      "end": 46.824
+    },
+    {
+      "w": "did",
+      "start": 46.893,
+      "end": 47.079
+    },
+    {
+      "w": "cast",
+      "start": 47.125,
+      "end": 47.404
+    },
+    {
+      "w": "in",
+      "start": 47.474,
+      "end": 47.543
+    },
+    {
+      "w": "of",
+      "start": 47.59,
+      "end": 47.636
+    },
+    {
+      "w": "their",
+      "start": 47.671,
+      "end": 47.822
+    },
+    {
+      "w": "abundance;",
+      "start": 47.857,
+      "end": 48.565
+    },
+    {
+      "w": "but",
+      "start": 48.774,
+      "end": 48.902
+    },
+    {
+      "w": "she",
+      "start": 48.937,
+      "end": 49.053
+    },
+    {
+      "w": "of",
+      "start": 49.111,
+      "end": 49.169
+    },
+    {
+      "w": "her",
+      "start": 49.215,
+      "end": 49.308
+    },
+    {
+      "w": "want",
+      "start": 49.354,
+      "end": 49.575
+    },
+    {
+      "w": "did",
+      "start": 49.61,
+      "end": 49.714
+    },
+    {
+      "w": "cast",
+      "start": 49.749,
+      "end": 50.005
+    },
+    {
+      "w": "in",
+      "start": 50.051,
+      "end": 50.121
+    },
+    {
+      "w": "all",
+      "start": 50.167,
+      "end": 50.272
+    },
+    {
+      "w": "that",
+      "start": 50.307,
+      "end": 50.411
+    },
+    {
+      "w": "she",
+      "start": 50.434,
+      "end": 50.515
+    },
+    {
+      "w": "had,",
+      "start": 50.574,
+      "end": 50.91
+    },
+    {
+      "w": "even",
+      "start": 51.038,
+      "end": 51.259
+    },
+    {
+      "w": "all",
+      "start": 51.305,
+      "end": 51.433
+    },
+    {
+      "w": "her",
+      "start": 51.479,
+      "end": 51.572
+    },
+    {
+      "w": "living.\"",
+      "start": 51.619,
+      "end": 52.095
+    },
+    {
+      "w": "All",
+      "start": 52.919,
+      "end": 53.116
+    },
+    {
+      "w": "her",
+      "start": 53.163,
+      "end": 53.267
+    },
+    {
+      "w": "living.",
+      "start": 53.314,
+      "end": 53.825
+    },
+    {
+      "w": "Not",
+      "start": 54.208,
+      "end": 54.347
+    },
+    {
+      "w": "a",
+      "start": 54.382,
+      "end": 54.405
+    },
+    {
+      "w": "percentage.",
+      "start": 54.44,
+      "end": 54.986
+    },
+    {
+      "w": "Everything.",
+      "start": 55.229,
+      "end": 55.891
+    },
+    {
+      "w": "He",
+      "start": 56.588,
+      "end": 56.692
+    },
+    {
+      "w": "is",
+      "start": 56.739,
+      "end": 56.82
+    },
+    {
+      "w": "not",
+      "start": 56.878,
+      "end": 57.064
     },
     {
       "w": "measuring",
-      "start": 56.389,
-      "end": 56.726
+      "start": 57.099,
+      "end": 57.377
+    },
+    {
+      "w": "the",
+      "start": 57.412,
+      "end": 57.482
+    },
+    {
+      "w": "gift.",
+      "start": 57.517,
+      "end": 57.946
+    },
+    {
+      "w": "He",
+      "start": 58.329,
+      "end": 58.434
+    },
+    {
+      "w": "is",
+      "start": 58.48,
+      "end": 58.55
+    },
+    {
+      "w": "measuring",
+      "start": 58.596,
+      "end": 58.898
     },
     {
       "w": "what",
-      "start": 56.784,
-      "end": 56.923
+      "start": 58.921,
+      "end": 59.026
     },
     {
       "w": "was",
-      "start": 56.958,
-      "end": 57.062
+      "start": 59.061,
+      "end": 59.142
     },
     {
       "w": "left",
-      "start": 57.12,
-      "end": 57.271
+      "start": 59.212,
+      "end": 59.397
     },
     {
       "w": "afterwards.",
-      "start": 57.306,
-      "end": 58.049
+      "start": 59.432,
+      "end": 60.28
     }
   ],
-  "renderedAt": 1785322320753
+  "renderedAt": 1785479627792
 }

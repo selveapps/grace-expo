@@ -155,7 +155,13 @@ export default function TeaDetailScreen({ route, navigation }) {
   const openScripture = () => {
     if (!tea?.book) return;
     Haptics.selectionAsync();
-    navigation.getParent()?.navigate('Reading', { screen: 'Book', params: { book: tea.book } });
+    // `initial: false` keeps the Reading tab's own home beneath this book, so
+    // back leaves for the book list rather than dead-ending.
+    navigation.getParent()?.navigate('Reading', {
+      screen: 'Book',
+      params: { book: tea.book },
+      initial: false,
+    });
   };
   const nextTea = () => {
     if (!teas.length) return;
@@ -223,25 +229,32 @@ export default function TeaDetailScreen({ route, navigation }) {
       />
 
       <Screen bg="transparent" edges={['top', 'bottom']} style={styles.frame}>
-        {/* Top chrome, kept small so it never competes in a recording. */}
-        <Animated.View style={[styles.topBar, { opacity: chrome }]}>
-          <Pressable onPress={() => navigation.goBack()} hitSlop={12} style={styles.iconBtn} accessibilityRole="button" accessibilityLabel="Back to Tea">
-            <GIcon name="chevronDown" size={20} color={colors.espresso} />
-          </Pressable>
-          {/* The single Grace lockup on this screen: bird over wordmark, dead
-              centre. It replaces the old bottom-right mark, so a reposted clip
-              is still branded but only once. */}
-          {/* Sized to be legible as a brand in a screen recording without
-              crowding the frame: this is the mark that survives a repost. */}
+        <View style={styles.topBar}>
+          {/* Controls recede while the clip plays, so a recording shows art and
+              captions rather than app chrome. */}
+          <Animated.View style={{ opacity: chrome }}>
+            <Pressable onPress={() => navigation.goBack()} hitSlop={12} style={styles.iconBtn} accessibilityRole="button" accessibilityLabel="Back to Tea">
+              <GIcon name="chevronDown" size={20} color={colors.espresso} />
+            </Pressable>
+          </Animated.View>
+
+          {/* The single Grace lockup: bird over wordmark, dead centre. It is
+              deliberately OUTSIDE the chrome fade. Playback is exactly when
+              someone is recording for a feed, so that is the moment the mark has
+              to stay on screen; fading it out with the controls meant every clip
+              anyone captured was unbranded. */}
           <View style={styles.mark} pointerEvents="none">
             <GraceDove size={65} crop="head" motion="none" />
             <Text style={styles.markText}>Grace</Text>
           </View>
-          <Pressable onPress={share} hitSlop={12} style={styles.shareBtn} accessibilityRole="button" accessibilityLabel="Share">
-            <GIcon name="share" size={17} color={colors.espresso} />
-            <Text style={styles.shareText}>Share</Text>
-          </Pressable>
-        </Animated.View>
+
+          <Animated.View style={{ opacity: chrome }}>
+            <Pressable onPress={share} hitSlop={12} style={styles.shareBtn} accessibilityRole="button" accessibilityLabel="Share">
+              <GIcon name="share" size={17} color={colors.espresso} />
+              <Text style={styles.shareText}>Share</Text>
+            </Pressable>
+          </Animated.View>
+        </View>
 
         {/* Tapping the empty middle restores the controls mid-playback. */}
         <Pressable style={{ flex: 1 }} onPress={revealChrome} accessibilityLabel="Show controls" />

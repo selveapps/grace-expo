@@ -1,8 +1,10 @@
 {
   "kind": "tea",
   "teaId": "esther-uninvited",
-  "text": "Walking into that throne room uninvited was a death sentence, and she put on the crown and did it anyway.\n\nOne law in Persia. Man or woman, you come to the king unsummoned, you die. Unless he holds out the golden sceptre.\n\nAnd Esther tells Mordecai the part that had to keep her up at night: \"I have not been called to come in unto the king these thirty days.\"\n\nThirty days. She's the queen. She has no idea where she stands.\n\nAnd Mordecai's reply is brutal and kind at the same time. \"Think not with thyself that thou shalt escape in the king's house, more than all the Jews.\"\n\nYou are not safe. The palace is not a shelter.\n\nThen: if you stay silent, deliverance will arise from another place, but you and your father's house will be destroyed.\n\nHear that theology. He never says God will fail. He says rescue is coming and you might miss it.\n\n\"And who knoweth whether thou art come to the kingdom for such a time as this?\"\n\nA question. Not a command. He leaves her free.\n\nSo she fasts three days and sends back, \"If I perish, I perish.\"\n\nThird day, royal apparel, inner court. And the king holds out the sceptre.\n\nShe lives. And then she throws the dinner party that flips an empire.",
-  "voice": "FGY2WhTYpPnrIDTdsKH5",
+  "mood": "light",
+  "heat": 2,
+  "text": "Walking in without a summons was a death sentence. She had not been called in thirty days. One law in Persia. Man or woman. You come to the king unsummoned, you die. Unless he holds out the golden sceptre. And Esther tells Mordecai the part that kept her up at night. \"I have not been called to come in unto the king these thirty days.\" Thirty days. She is the queen. And she has no idea where she stands. Mordecai's reply is brutal and kind at once. \"Think not with thyself that thou shalt escape in the king's house, more than all the Jews.\" You are not safe. The palace is not a shelter. Then: if you stay silent, deliverance will arise from another place, but you and your father's house will be destroyed. Hear that. He never says God will fail. He says rescue is coming and you might not be in it. \"And who knoweth whether thou art come to the kingdom for such a time as this?\" A question. Not a command. So she fasts three days and sends back four words: \"If I perish, I perish.\" Third day. Royal apparel. Inner court. And the king holds out the sceptre. She lives. And then she throws the dinner party that ends an empire's second in command.",
+  "voice": "cgSgspJ2msm6clMCkdW9",
   "words": [
     {
       "w": "Walking",
@@ -10,1115 +12,1095 @@
       "end": 0.36
     },
     {
-      "w": "into",
-      "start": 0.395,
+      "w": "in",
+      "start": 0.418,
       "end": 0.511
     },
     {
-      "w": "that",
+      "w": "without",
       "start": 0.546,
-      "end": 0.662
-    },
-    {
-      "w": "throne",
-      "start": 0.697,
-      "end": 0.952
-    },
-    {
-      "w": "room",
-      "start": 0.987,
-      "end": 1.138
-    },
-    {
-      "w": "uninvited",
-      "start": 1.219,
-      "end": 1.718
-    },
-    {
-      "w": "was",
-      "start": 1.776,
-      "end": 1.892
+      "end": 0.778
     },
     {
       "w": "a",
-      "start": 1.939,
-      "end": 1.962
+      "start": 0.813,
+      "end": 0.836
+    },
+    {
+      "w": "summons",
+      "start": 0.871,
+      "end": 1.265
+    },
+    {
+      "w": "was",
+      "start": 1.37,
+      "end": 1.509
+    },
+    {
+      "w": "a",
+      "start": 1.544,
+      "end": 1.579
     },
     {
       "w": "death",
-      "start": 1.997,
-      "end": 2.171
+      "start": 1.625,
+      "end": 1.8
     },
     {
-      "w": "sentence,",
-      "start": 2.206,
-      "end": 2.74
+      "w": "sentence.",
+      "start": 1.846,
+      "end": 2.473
     },
     {
-      "w": "and",
-      "start": 2.926,
-      "end": 3.042
-    },
-    {
-      "w": "she",
+      "w": "She",
       "start": 3.077,
       "end": 3.17
     },
     {
-      "w": "put",
+      "w": "had",
       "start": 3.204,
-      "end": 3.32
+      "end": 3.286
     },
     {
-      "w": "on",
-      "start": 3.355,
+      "w": "not",
+      "start": 3.32,
       "end": 3.425
     },
     {
-      "w": "the",
+      "w": "been",
       "start": 3.46,
-      "end": 3.529
+      "end": 3.587
     },
     {
-      "w": "crown",
-      "start": 3.564,
-      "end": 3.866
+      "w": "called",
+      "start": 3.622,
+      "end": 3.843
     },
     {
-      "w": "and",
-      "start": 3.924,
-      "end": 4.052
+      "w": "in",
+      "start": 3.878,
+      "end": 3.936
     },
     {
-      "w": "did",
-      "start": 4.11,
-      "end": 4.238
+      "w": "thirty",
+      "start": 3.971,
+      "end": 4.168
     },
     {
-      "w": "it",
-      "start": 4.272,
-      "end": 4.354
-    },
-    {
-      "w": "anyway.",
-      "start": 4.4,
-      "end": 4.981
+      "w": "days.",
+      "start": 4.203,
+      "end": 4.725
     },
     {
       "w": "One",
-      "start": 5.19,
-      "end": 5.399
+      "start": 5.166,
+      "end": 5.387
     },
     {
       "w": "law",
-      "start": 5.445,
-      "end": 5.631
+      "start": 5.422,
+      "end": 5.642
     },
     {
       "w": "in",
       "start": 5.7,
-      "end": 5.782
+      "end": 5.77
     },
     {
       "w": "Persia.",
-      "start": 5.863,
-      "end": 6.432
+      "start": 5.84,
+      "end": 6.42
     },
     {
       "w": "Man",
-      "start": 6.676,
+      "start": 6.629,
       "end": 6.896
     },
     {
       "w": "or",
       "start": 6.966,
-      "end": 7.105
+      "end": 7.07
     },
     {
-      "w": "woman,",
-      "start": 7.175,
-      "end": 7.512
-    },
-    {
-      "w": "you",
-      "start": 7.593,
-      "end": 7.709
-    },
-    {
-      "w": "come",
-      "start": 7.779,
-      "end": 7.93
-    },
-    {
-      "w": "to",
-      "start": 7.964,
-      "end": 8.022
-    },
-    {
-      "w": "the",
-      "start": 8.069,
-      "end": 8.139
-    },
-    {
-      "w": "king",
-      "start": 8.173,
-      "end": 8.394
-    },
-    {
-      "w": "unsummoned,",
-      "start": 8.522,
-      "end": 9.149
-    },
-    {
-      "w": "you",
-      "start": 9.218,
-      "end": 9.334
-    },
-    {
-      "w": "die.",
-      "start": 9.392,
-      "end": 9.88
-    },
-    {
-      "w": "Unless",
-      "start": 10.124,
-      "end": 10.507
-    },
-    {
-      "w": "he",
-      "start": 10.542,
-      "end": 10.6
-    },
-    {
-      "w": "holds",
-      "start": 10.658,
-      "end": 10.844
-    },
-    {
-      "w": "out",
-      "start": 10.879,
-      "end": 10.995
-    },
-    {
-      "w": "the",
-      "start": 11.029,
-      "end": 11.099
-    },
-    {
-      "w": "golden",
-      "start": 11.134,
-      "end": 11.366
-    },
-    {
-      "w": "sceptre.",
-      "start": 11.401,
-      "end": 11.912
-    },
-    {
-      "w": "And",
-      "start": 12.063,
-      "end": 12.191
-    },
-    {
-      "w": "Esther",
-      "start": 12.249,
-      "end": 12.551
-    },
-    {
-      "w": "tells",
-      "start": 12.597,
-      "end": 12.795
-    },
-    {
-      "w": "Mordecai",
-      "start": 12.841,
-      "end": 13.189
-    },
-    {
-      "w": "the",
-      "start": 13.224,
-      "end": 13.294
-    },
-    {
-      "w": "part",
-      "start": 13.34,
-      "end": 13.572
-    },
-    {
-      "w": "that",
-      "start": 13.607,
-      "end": 13.805
-    },
-    {
-      "w": "had",
-      "start": 13.909,
-      "end": 14.06
-    },
-    {
-      "w": "to",
-      "start": 14.095,
-      "end": 14.153
-    },
-    {
-      "w": "keep",
-      "start": 14.199,
-      "end": 14.35
-    },
-    {
-      "w": "her",
-      "start": 14.397,
-      "end": 14.49
-    },
-    {
-      "w": "up",
-      "start": 14.536,
-      "end": 14.606
-    },
-    {
-      "w": "at",
-      "start": 14.652,
-      "end": 14.71
-    },
-    {
-      "w": "night:",
-      "start": 14.745,
-      "end": 15.093
-    },
-    {
-      "w": "\"I",
-      "start": 15.697,
-      "end": 15.813
-    },
-    {
-      "w": "have",
-      "start": 15.883,
-      "end": 15.999
-    },
-    {
-      "w": "not",
-      "start": 16.034,
-      "end": 16.138
-    },
-    {
-      "w": "been",
-      "start": 16.173,
-      "end": 16.301
-    },
-    {
-      "w": "called",
-      "start": 16.336,
-      "end": 16.533
-    },
-    {
-      "w": "to",
-      "start": 16.556,
-      "end": 16.603
-    },
-    {
-      "w": "come",
-      "start": 16.637,
-      "end": 16.788
-    },
-    {
-      "w": "in",
-      "start": 16.823,
-      "end": 16.881
-    },
-    {
-      "w": "unto",
-      "start": 16.916,
-      "end": 17.032
-    },
-    {
-      "w": "the",
-      "start": 17.079,
-      "end": 17.148
-    },
-    {
-      "w": "king",
-      "start": 17.183,
-      "end": 17.415
-    },
-    {
-      "w": "these",
-      "start": 17.473,
-      "end": 17.717
-    },
-    {
-      "w": "thirty",
-      "start": 17.752,
-      "end": 17.996
-    },
-    {
-      "w": "days.\"",
-      "start": 18.042,
-      "end": 18.541
-    },
-    {
-      "w": "Thirty",
-      "start": 18.727,
-      "end": 18.971
-    },
-    {
-      "w": "days.",
-      "start": 19.017,
-      "end": 19.459
-    },
-    {
-      "w": "She's",
-      "start": 19.668,
-      "end": 19.888
-    },
-    {
-      "w": "the",
-      "start": 19.935,
-      "end": 20.004
-    },
-    {
-      "w": "queen.",
-      "start": 20.039,
-      "end": 20.504
-    },
-    {
-      "w": "She",
-      "start": 20.562,
-      "end": 20.689
-    },
-    {
-      "w": "has",
-      "start": 20.747,
-      "end": 20.863
-    },
-    {
-      "w": "no",
-      "start": 20.922,
-      "end": 21.003
-    },
-    {
-      "w": "idea",
-      "start": 21.061,
-      "end": 21.27
-    },
-    {
-      "w": "where",
-      "start": 21.305,
-      "end": 21.456
-    },
-    {
-      "w": "she",
-      "start": 21.479,
-      "end": 21.572
-    },
-    {
-      "w": "stands.",
-      "start": 21.618,
-      "end": 22.187
-    },
-    {
-      "w": "And",
-      "start": 22.338,
-      "end": 22.454
-    },
-    {
-      "w": "Mordecai's",
-      "start": 22.5,
-      "end": 22.918
-    },
-    {
-      "w": "reply",
-      "start": 22.953,
-      "end": 23.302
-    },
-    {
-      "w": "is",
-      "start": 23.406,
-      "end": 23.511
-    },
-    {
-      "w": "brutal",
-      "start": 23.58,
-      "end": 23.894
-    },
-    {
-      "w": "and",
-      "start": 23.975,
-      "end": 24.173
-    },
-    {
-      "w": "kind",
-      "start": 24.254,
-      "end": 24.509
-    },
-    {
-      "w": "at",
-      "start": 24.544,
-      "end": 24.602
-    },
-    {
-      "w": "the",
-      "start": 24.637,
-      "end": 24.707
-    },
-    {
-      "w": "same",
-      "start": 24.742,
-      "end": 24.904
-    },
-    {
-      "w": "time.",
-      "start": 24.939,
-      "end": 25.392
-    },
-    {
-      "w": "\"Think",
-      "start": 26.088,
-      "end": 26.46
-    },
-    {
-      "w": "not",
-      "start": 26.53,
-      "end": 26.704
-    },
-    {
-      "w": "with",
-      "start": 26.75,
-      "end": 26.866
-    },
-    {
-      "w": "thyself",
-      "start": 26.901,
-      "end": 27.331
-    },
-    {
-      "w": "that",
-      "start": 27.377,
-      "end": 27.516
-    },
-    {
-      "w": "thou",
-      "start": 27.551,
-      "end": 27.725
-    },
-    {
-      "w": "shalt",
-      "start": 27.83,
-      "end": 28.05
-    },
-    {
-      "w": "escape",
-      "start": 28.097,
-      "end": 28.387
-    },
-    {
-      "w": "in",
-      "start": 28.422,
-      "end": 28.48
-    },
-    {
-      "w": "the",
-      "start": 28.515,
-      "end": 28.584
-    },
-    {
-      "w": "king's",
-      "start": 28.643,
-      "end": 28.898
-    },
-    {
-      "w": "house,",
-      "start": 28.933,
-      "end": 29.397
-    },
-    {
-      "w": "more",
-      "start": 29.548,
-      "end": 29.711
-    },
-    {
-      "w": "than",
-      "start": 29.745,
-      "end": 29.862
-    },
-    {
-      "w": "all",
-      "start": 29.896,
-      "end": 29.989
-    },
-    {
-      "w": "the",
-      "start": 30.036,
-      "end": 30.105
-    },
-    {
-      "w": "Jews.\"",
-      "start": 30.152,
-      "end": 30.674
+      "w": "woman.",
+      "start": 7.129,
+      "end": 7.593
     },
     {
       "w": "You",
-      "start": 30.825,
-      "end": 30.976
-    },
-    {
-      "w": "are",
-      "start": 31.023,
-      "end": 31.127
-    },
-    {
-      "w": "not",
-      "start": 31.162,
-      "end": 31.301
-    },
-    {
-      "w": "safe.",
-      "start": 31.348,
-      "end": 31.766
-    },
-    {
-      "w": "The",
-      "start": 31.893,
-      "end": 31.986
-    },
-    {
-      "w": "palace",
-      "start": 32.033,
-      "end": 32.369
-    },
-    {
-      "w": "is",
-      "start": 32.404,
-      "end": 32.543
-    },
-    {
-      "w": "not",
-      "start": 32.625,
-      "end": 32.776
-    },
-    {
-      "w": "a",
-      "start": 32.811,
-      "end": 32.834
-    },
-    {
-      "w": "shelter.",
-      "start": 32.869,
-      "end": 33.414
-    },
-    {
-      "w": "Then:",
-      "start": 33.855,
-      "end": 34.227
-    },
-    {
-      "w": "if",
-      "start": 34.668,
-      "end": 34.773
-    },
-    {
-      "w": "you",
-      "start": 34.807,
-      "end": 34.877
-    },
-    {
-      "w": "stay",
-      "start": 34.924,
-      "end": 35.086
-    },
-    {
-      "w": "silent,",
-      "start": 35.144,
-      "end": 35.562
-    },
-    {
-      "w": "deliverance",
-      "start": 35.609,
-      "end": 36.026
-    },
-    {
-      "w": "will",
-      "start": 36.061,
-      "end": 36.177
-    },
-    {
-      "w": "arise",
-      "start": 36.212,
-      "end": 36.502
-    },
-    {
-      "w": "from",
-      "start": 36.537,
-      "end": 36.677
-    },
-    {
-      "w": "another",
-      "start": 36.711,
-      "end": 36.932
-    },
-    {
-      "w": "place,",
-      "start": 36.979,
-      "end": 37.431
-    },
-    {
-      "w": "but",
-      "start": 37.64,
-      "end": 37.768
-    },
-    {
-      "w": "you",
-      "start": 37.803,
-      "end": 37.896
-    },
-    {
-      "w": "and",
-      "start": 37.942,
-      "end": 38.012
-    },
-    {
-      "w": "your",
-      "start": 38.047,
-      "end": 38.163
-    },
-    {
-      "w": "father's",
-      "start": 38.209,
-      "end": 38.534
-    },
-    {
-      "w": "house",
-      "start": 38.581,
-      "end": 38.801
-    },
-    {
-      "w": "will",
-      "start": 38.836,
-      "end": 38.964
-    },
-    {
-      "w": "be",
-      "start": 38.999,
-      "end": 39.068
-    },
-    {
-      "w": "destroyed.",
-      "start": 39.103,
-      "end": 39.684
-    },
-    {
-      "w": "Hear",
-      "start": 39.788,
-      "end": 40.032
-    },
-    {
-      "w": "that",
-      "start": 40.09,
-      "end": 40.229
-    },
-    {
-      "w": "theology.",
-      "start": 40.264,
-      "end": 40.88
-    },
-    {
-      "w": "He",
-      "start": 41.007,
-      "end": 41.089
-    },
-    {
-      "w": "never",
-      "start": 41.147,
-      "end": 41.309
-    },
-    {
-      "w": "says",
-      "start": 41.356,
-      "end": 41.53
-    },
-    {
-      "w": "God",
-      "start": 41.576,
-      "end": 41.75
-    },
-    {
-      "w": "will",
-      "start": 41.785,
-      "end": 41.913
-    },
-    {
-      "w": "fail.",
-      "start": 41.948,
-      "end": 42.25
-    },
-    {
-      "w": "He",
-      "start": 42.354,
-      "end": 42.482
-    },
-    {
-      "w": "says",
-      "start": 42.563,
-      "end": 42.772
-    },
-    {
-      "w": "rescue",
-      "start": 42.877,
-      "end": 43.202
-    },
-    {
-      "w": "is",
-      "start": 43.225,
-      "end": 43.294
-    },
-    {
-      "w": "coming",
-      "start": 43.341,
-      "end": 43.643
-    },
-    {
-      "w": "and",
-      "start": 43.701,
-      "end": 43.817
-    },
-    {
-      "w": "you",
-      "start": 43.875,
-      "end": 43.956
-    },
-    {
-      "w": "might",
-      "start": 44.026,
-      "end": 44.212
-    },
-    {
-      "w": "miss",
-      "start": 44.247,
-      "end": 44.421
-    },
-    {
-      "w": "it.",
-      "start": 44.479,
-      "end": 44.699
-    },
-    {
-      "w": "\"And",
-      "start": 44.943,
-      "end": 45.117
-    },
-    {
-      "w": "who",
-      "start": 45.187,
-      "end": 45.349
-    },
-    {
-      "w": "knoweth",
-      "start": 45.384,
-      "end": 45.686
-    },
-    {
-      "w": "whether",
-      "start": 45.721,
-      "end": 45.953
-    },
-    {
-      "w": "thou",
-      "start": 46,
-      "end": 46.174
-    },
-    {
-      "w": "art",
-      "start": 46.243,
-      "end": 46.371
+      "start": 8.197,
+      "end": 8.324
     },
     {
       "w": "come",
-      "start": 46.406,
-      "end": 46.569
+      "start": 8.382,
+      "end": 8.522
     },
     {
       "w": "to",
-      "start": 46.592,
-      "end": 46.638
+      "start": 8.545,
+      "end": 8.591
     },
     {
       "w": "the",
-      "start": 46.685,
-      "end": 46.754
-    },
-    {
-      "w": "kingdom",
-      "start": 46.789,
-      "end": 47.079
-    },
-    {
-      "w": "for",
-      "start": 47.126,
-      "end": 47.23
-    },
-    {
-      "w": "such",
-      "start": 47.288,
-      "end": 47.497
-    },
-    {
-      "w": "a",
-      "start": 47.532,
-      "end": 47.555
-    },
-    {
-      "w": "time",
-      "start": 47.602,
-      "end": 47.788
-    },
-    {
-      "w": "as",
-      "start": 47.822,
-      "end": 47.892
-    },
-    {
-      "w": "this?\"",
-      "start": 47.95,
-      "end": 48.472
-    },
-    {
-      "w": "A",
-      "start": 48.797,
-      "end": 48.867
-    },
-    {
-      "w": "question.",
-      "start": 48.937,
-      "end": 49.436
-    },
-    {
-      "w": "Not",
-      "start": 49.54,
-      "end": 49.691
-    },
-    {
-      "w": "a",
-      "start": 49.726,
-      "end": 49.761
-    },
-    {
-      "w": "command.",
-      "start": 49.796,
-      "end": 50.411
-    },
-    {
-      "w": "He",
-      "start": 50.934,
-      "end": 51.038
-    },
-    {
-      "w": "leaves",
-      "start": 51.085,
-      "end": 51.27
-    },
-    {
-      "w": "her",
-      "start": 51.305,
-      "end": 51.386
-    },
-    {
-      "w": "free.",
-      "start": 51.421,
-      "end": 51.793
-    },
-    {
-      "w": "So",
-      "start": 52.037,
-      "end": 52.269
-    },
-    {
-      "w": "she",
-      "start": 52.338,
-      "end": 52.466
-    },
-    {
-      "w": "fasts",
-      "start": 52.547,
-      "end": 52.826
-    },
-    {
-      "w": "three",
-      "start": 52.861,
-      "end": 53.035
-    },
-    {
-      "w": "days",
-      "start": 53.07,
-      "end": 53.267
-    },
-    {
-      "w": "and",
-      "start": 53.302,
-      "end": 53.395
-    },
-    {
-      "w": "sends",
-      "start": 53.43,
-      "end": 53.627
-    },
-    {
-      "w": "back,",
-      "start": 53.674,
-      "end": 53.999
-    },
-    {
-      "w": "\"If",
-      "start": 54.242,
-      "end": 54.405
-    },
-    {
-      "w": "I",
-      "start": 54.475,
-      "end": 54.51
-    },
-    {
-      "w": "perish,",
-      "start": 54.614,
-      "end": 54.951
-    },
-    {
-      "w": "I",
-      "start": 54.997,
-      "end": 55.067
-    },
-    {
-      "w": "perish.\"",
-      "start": 55.195,
-      "end": 55.81
-    },
-    {
-      "w": "Third",
-      "start": 55.914,
-      "end": 56.135
-    },
-    {
-      "w": "day,",
-      "start": 56.17,
-      "end": 56.472
-    },
-    {
-      "w": "royal",
-      "start": 56.576,
-      "end": 56.82
-    },
-    {
-      "w": "apparel,",
-      "start": 56.855,
-      "end": 57.319
-    },
-    {
-      "w": "inner",
-      "start": 57.354,
-      "end": 57.563
-    },
-    {
-      "w": "court.",
-      "start": 57.621,
-      "end": 58.027
-    },
-    {
-      "w": "And",
-      "start": 58.236,
-      "end": 58.352
-    },
-    {
-      "w": "the",
-      "start": 58.387,
-      "end": 58.457
+      "start": 8.626,
+      "end": 8.696
     },
     {
       "w": "king",
-      "start": 58.503,
-      "end": 58.724
+      "start": 8.731,
+      "end": 8.928
+    },
+    {
+      "w": "unsummoned,",
+      "start": 8.986,
+      "end": 9.659
+    },
+    {
+      "w": "you",
+      "start": 10.101,
+      "end": 10.205
+    },
+    {
+      "w": "die.",
+      "start": 10.252,
+      "end": 10.728
+    },
+    {
+      "w": "Unless",
+      "start": 11.552,
+      "end": 11.807
+    },
+    {
+      "w": "he",
+      "start": 11.831,
+      "end": 11.889
     },
     {
       "w": "holds",
-      "start": 58.782,
-      "end": 58.968
+      "start": 11.935,
+      "end": 12.121
     },
     {
       "w": "out",
-      "start": 59.003,
-      "end": 59.107
+      "start": 12.156,
+      "end": 12.26
     },
     {
       "w": "the",
-      "start": 59.142,
-      "end": 59.212
+      "start": 12.295,
+      "end": 12.365
+    },
+    {
+      "w": "golden",
+      "start": 12.399,
+      "end": 12.632
     },
     {
       "w": "sceptre.",
-      "start": 59.246,
-      "end": 59.711
-    },
-    {
-      "w": "She",
-      "start": 59.815,
-      "end": 59.943
-    },
-    {
-      "w": "lives.",
-      "start": 60.001,
-      "end": 60.419
+      "start": 12.666,
+      "end": 13.259
     },
     {
       "w": "And",
-      "start": 60.523,
-      "end": 60.628
+      "start": 13.955,
+      "end": 14.083
     },
     {
-      "w": "then",
-      "start": 60.663,
-      "end": 60.779
+      "w": "Esther",
+      "start": 14.129,
+      "end": 14.396
     },
     {
-      "w": "she",
-      "start": 60.825,
-      "end": 60.941
+      "w": "tells",
+      "start": 14.443,
+      "end": 14.629
     },
     {
-      "w": "throws",
-      "start": 60.999,
-      "end": 61.232
+      "w": "Mordecai",
+      "start": 14.675,
+      "end": 15.035
     },
     {
       "w": "the",
-      "start": 61.267,
-      "end": 61.336
+      "start": 15.082,
+      "end": 15.151
     },
     {
-      "w": "dinner",
-      "start": 61.371,
-      "end": 61.568
-    },
-    {
-      "w": "party",
-      "start": 61.615,
-      "end": 61.789
+      "w": "part",
+      "start": 15.186,
+      "end": 15.349
     },
     {
       "w": "that",
-      "start": 61.824,
-      "end": 61.94
+      "start": 15.384,
+      "end": 15.5
     },
     {
-      "w": "flips",
-      "start": 61.975,
-      "end": 62.172
+      "w": "kept",
+      "start": 15.546,
+      "end": 15.72
+    },
+    {
+      "w": "her",
+      "start": 15.755,
+      "end": 15.825
+    },
+    {
+      "w": "up",
+      "start": 15.871,
+      "end": 15.941
+    },
+    {
+      "w": "at",
+      "start": 15.987,
+      "end": 16.045
+    },
+    {
+      "w": "night.",
+      "start": 16.08,
+      "end": 16.405
+    },
+    {
+      "w": "\"I",
+      "start": 17.369,
+      "end": 17.497
+    },
+    {
+      "w": "have",
+      "start": 17.601,
+      "end": 17.729
+    },
+    {
+      "w": "not",
+      "start": 17.764,
+      "end": 17.868
+    },
+    {
+      "w": "been",
+      "start": 17.903,
+      "end": 18.019
+    },
+    {
+      "w": "called",
+      "start": 18.054,
+      "end": 18.275
+    },
+    {
+      "w": "to",
+      "start": 18.309,
+      "end": 18.367
+    },
+    {
+      "w": "come",
+      "start": 18.414,
+      "end": 18.553
+    },
+    {
+      "w": "in",
+      "start": 18.588,
+      "end": 18.646
+    },
+    {
+      "w": "unto",
+      "start": 18.692,
+      "end": 18.832
+    },
+    {
+      "w": "the",
+      "start": 18.878,
+      "end": 18.948
+    },
+    {
+      "w": "king",
+      "start": 19.006,
+      "end": 19.261
+    },
+    {
+      "w": "these",
+      "start": 19.343,
+      "end": 19.61
+    },
+    {
+      "w": "thirty",
+      "start": 19.645,
+      "end": 19.877
+    },
+    {
+      "w": "days.\"",
+      "start": 19.923,
+      "end": 20.48
+    },
+    {
+      "w": "Thirty",
+      "start": 21.444,
+      "end": 21.711
+    },
+    {
+      "w": "days.",
+      "start": 21.746,
+      "end": 22.268
+    },
+    {
+      "w": "She",
+      "start": 22.512,
+      "end": 22.64
+    },
+    {
+      "w": "is",
+      "start": 22.686,
+      "end": 22.768
+    },
+    {
+      "w": "the",
+      "start": 22.814,
+      "end": 22.884
+    },
+    {
+      "w": "queen.",
+      "start": 22.919,
+      "end": 23.371
+    },
+    {
+      "w": "And",
+      "start": 23.522,
+      "end": 23.662
+    },
+    {
+      "w": "she",
+      "start": 23.708,
+      "end": 23.801
+    },
+    {
+      "w": "has",
+      "start": 23.836,
+      "end": 23.94
+    },
+    {
+      "w": "no",
+      "start": 24.01,
+      "end": 24.114
+    },
+    {
+      "w": "idea",
+      "start": 24.172,
+      "end": 24.381
+    },
+    {
+      "w": "where",
+      "start": 24.416,
+      "end": 24.567
+    },
+    {
+      "w": "she",
+      "start": 24.602,
+      "end": 24.695
+    },
+    {
+      "w": "stands.",
+      "start": 24.741,
+      "end": 25.345
+    },
+    {
+      "w": "Mordecai's",
+      "start": 26.309,
+      "end": 26.703
+    },
+    {
+      "w": "reply",
+      "start": 26.727,
+      "end": 27.052
+    },
+    {
+      "w": "is",
+      "start": 27.156,
+      "end": 27.261
+    },
+    {
+      "w": "brutal",
+      "start": 27.342,
+      "end": 27.667
+    },
+    {
+      "w": "and",
+      "start": 27.725,
+      "end": 27.83
+    },
+    {
+      "w": "kind",
+      "start": 27.888,
+      "end": 28.143
+    },
+    {
+      "w": "at",
+      "start": 28.178,
+      "end": 28.248
+    },
+    {
+      "w": "once.",
+      "start": 28.306,
+      "end": 28.77
+    },
+    {
+      "w": "\"Think",
+      "start": 29.594,
+      "end": 29.919
+    },
+    {
+      "w": "not",
+      "start": 29.989,
+      "end": 30.128
+    },
+    {
+      "w": "with",
+      "start": 30.163,
+      "end": 30.302
+    },
+    {
+      "w": "thyself",
+      "start": 30.337,
+      "end": 30.802
+    },
+    {
+      "w": "that",
+      "start": 30.848,
+      "end": 30.964
+    },
+    {
+      "w": "thou",
+      "start": 30.999,
+      "end": 31.127
+    },
+    {
+      "w": "shalt",
+      "start": 31.173,
+      "end": 31.359
+    },
+    {
+      "w": "escape",
+      "start": 31.394,
+      "end": 31.672
+    },
+    {
+      "w": "in",
+      "start": 31.707,
+      "end": 31.765
+    },
+    {
+      "w": "the",
+      "start": 31.8,
+      "end": 31.87
+    },
+    {
+      "w": "king's",
+      "start": 31.905,
+      "end": 32.125
+    },
+    {
+      "w": "house,",
+      "start": 32.16,
+      "end": 32.485
+    },
+    {
+      "w": "more",
+      "start": 32.543,
+      "end": 32.717
+    },
+    {
+      "w": "than",
+      "start": 32.752,
+      "end": 32.868
+    },
+    {
+      "w": "all",
+      "start": 32.891,
+      "end": 32.996
+    },
+    {
+      "w": "the",
+      "start": 33.031,
+      "end": 33.1
+    },
+    {
+      "w": "Jews.\"",
+      "start": 33.135,
+      "end": 33.739
+    },
+    {
+      "w": "You",
+      "start": 34.865,
+      "end": 34.981
+    },
+    {
+      "w": "are",
+      "start": 35.028,
+      "end": 35.12
+    },
+    {
+      "w": "not",
+      "start": 35.155,
+      "end": 35.26
+    },
+    {
+      "w": "safe.",
+      "start": 35.318,
+      "end": 35.794
+    },
+    {
+      "w": "The",
+      "start": 35.922,
+      "end": 36.038
+    },
+    {
+      "w": "palace",
+      "start": 36.073,
+      "end": 36.409
+    },
+    {
+      "w": "is",
+      "start": 36.444,
+      "end": 36.514
+    },
+    {
+      "w": "not",
+      "start": 36.56,
+      "end": 36.665
+    },
+    {
+      "w": "a",
+      "start": 36.699,
+      "end": 36.734
+    },
+    {
+      "w": "shelter.",
+      "start": 36.769,
+      "end": 37.326
+    },
+    {
+      "w": "Then:",
+      "start": 37.57,
+      "end": 37.988
+    },
+    {
+      "w": "if",
+      "start": 38.511,
+      "end": 38.627
+    },
+    {
+      "w": "you",
+      "start": 38.685,
+      "end": 38.778
+    },
+    {
+      "w": "stay",
+      "start": 38.824,
+      "end": 38.987
+    },
+    {
+      "w": "silent,",
+      "start": 39.033,
+      "end": 39.428
+    },
+    {
+      "w": "deliverance",
+      "start": 39.463,
+      "end": 39.881
+    },
+    {
+      "w": "will",
+      "start": 39.904,
+      "end": 40.02
+    },
+    {
+      "w": "arise",
+      "start": 40.055,
+      "end": 40.322
+    },
+    {
+      "w": "from",
+      "start": 40.345,
+      "end": 40.473
+    },
+    {
+      "w": "another",
+      "start": 40.508,
+      "end": 40.728
+    },
+    {
+      "w": "place,",
+      "start": 40.763,
+      "end": 41.158
+    },
+    {
+      "w": "but",
+      "start": 41.193,
+      "end": 41.332
+    },
+    {
+      "w": "you",
+      "start": 41.39,
+      "end": 41.494
+    },
+    {
+      "w": "and",
+      "start": 41.552,
+      "end": 41.622
+    },
+    {
+      "w": "your",
+      "start": 41.657,
+      "end": 41.761
+    },
+    {
+      "w": "father's",
+      "start": 41.796,
+      "end": 42.075
+    },
+    {
+      "w": "house",
+      "start": 42.11,
+      "end": 42.318
+    },
+    {
+      "w": "will",
+      "start": 42.342,
+      "end": 42.458
+    },
+    {
+      "w": "be",
+      "start": 42.493,
+      "end": 42.551
+    },
+    {
+      "w": "destroyed.",
+      "start": 42.586,
+      "end": 43.224
+    },
+    {
+      "w": "Hear",
+      "start": 44.188,
+      "end": 44.362
+    },
+    {
+      "w": "that.",
+      "start": 44.397,
+      "end": 44.733
+    },
+    {
+      "w": "He",
+      "start": 45.43,
+      "end": 45.523
+    },
+    {
+      "w": "never",
+      "start": 45.593,
+      "end": 45.767
+    },
+    {
+      "w": "says",
+      "start": 45.813,
+      "end": 45.964
+    },
+    {
+      "w": "God",
+      "start": 46.01,
+      "end": 46.161
+    },
+    {
+      "w": "will",
+      "start": 46.196,
+      "end": 46.324
+    },
+    {
+      "w": "fail.",
+      "start": 46.359,
+      "end": 46.788
+    },
+    {
+      "w": "He",
+      "start": 47.171,
+      "end": 47.264
+    },
+    {
+      "w": "says",
+      "start": 47.299,
+      "end": 47.439
+    },
+    {
+      "w": "rescue",
+      "start": 47.497,
+      "end": 47.752
+    },
+    {
+      "w": "is",
+      "start": 47.787,
+      "end": 47.856
+    },
+    {
+      "w": "coming",
+      "start": 47.903,
+      "end": 48.17
+    },
+    {
+      "w": "and",
+      "start": 48.228,
+      "end": 48.309
+    },
+    {
+      "w": "you",
+      "start": 48.344,
+      "end": 48.414
+    },
+    {
+      "w": "might",
+      "start": 48.46,
+      "end": 48.611
+    },
+    {
+      "w": "not",
+      "start": 48.634,
+      "end": 48.739
+    },
+    {
+      "w": "be",
+      "start": 48.774,
+      "end": 48.843
+    },
+    {
+      "w": "in",
+      "start": 48.89,
+      "end": 48.948
+    },
+    {
+      "w": "it.",
+      "start": 48.983,
+      "end": 49.25
+    },
+    {
+      "w": "\"And",
+      "start": 49.946,
+      "end": 50.178
+    },
+    {
+      "w": "who",
+      "start": 50.237,
+      "end": 50.353
+    },
+    {
+      "w": "knoweth",
+      "start": 50.399,
+      "end": 50.666
+    },
+    {
+      "w": "whether",
+      "start": 50.701,
+      "end": 50.921
+    },
+    {
+      "w": "thou",
+      "start": 50.968,
+      "end": 51.189
+    },
+    {
+      "w": "art",
+      "start": 51.293,
+      "end": 51.432
+    },
+    {
+      "w": "come",
+      "start": 51.479,
+      "end": 51.63
+    },
+    {
+      "w": "to",
+      "start": 51.665,
+      "end": 51.711
+    },
+    {
+      "w": "the",
+      "start": 51.757,
+      "end": 51.827
+    },
+    {
+      "w": "kingdom",
+      "start": 51.862,
+      "end": 52.152
+    },
+    {
+      "w": "for",
+      "start": 52.21,
+      "end": 52.315
+    },
+    {
+      "w": "such",
+      "start": 52.361,
+      "end": 52.512
+    },
+    {
+      "w": "a",
+      "start": 52.547,
+      "end": 52.57
+    },
+    {
+      "w": "time",
+      "start": 52.605,
+      "end": 52.744
+    },
+    {
+      "w": "as",
+      "start": 52.767,
+      "end": 52.837
+    },
+    {
+      "w": "this?\"",
+      "start": 52.884,
+      "end": 53.406
+    },
+    {
+      "w": "A",
+      "start": 54.23,
+      "end": 54.288
+    },
+    {
+      "w": "question.",
+      "start": 54.335,
+      "end": 54.915
+    },
+    {
+      "w": "Not",
+      "start": 55.124,
+      "end": 55.264
+    },
+    {
+      "w": "a",
+      "start": 55.298,
+      "end": 55.333
+    },
+    {
+      "w": "command.",
+      "start": 55.368,
+      "end": 55.948
+    },
+    {
+      "w": "So",
+      "start": 56.552,
+      "end": 56.656
+    },
+    {
+      "w": "she",
+      "start": 56.691,
+      "end": 56.772
+    },
+    {
+      "w": "fasts",
+      "start": 56.831,
+      "end": 57.19
+    },
+    {
+      "w": "three",
+      "start": 57.237,
+      "end": 57.423
+    },
+    {
+      "w": "days",
+      "start": 57.457,
+      "end": 57.666
+    },
+    {
+      "w": "and",
+      "start": 57.701,
+      "end": 57.783
+    },
+    {
+      "w": "sends",
+      "start": 57.817,
+      "end": 58.003
+    },
+    {
+      "w": "back",
+      "start": 58.038,
+      "end": 58.177
+    },
+    {
+      "w": "four",
+      "start": 58.235,
+      "end": 58.386
+    },
+    {
+      "w": "words:",
+      "start": 58.421,
+      "end": 58.909
+    },
+    {
+      "w": "\"If",
+      "start": 59.153,
+      "end": 59.315
+    },
+    {
+      "w": "I",
+      "start": 59.396,
+      "end": 59.454
+    },
+    {
+      "w": "perish,",
+      "start": 59.559,
+      "end": 60.035
+    },
+    {
+      "w": "I",
+      "start": 60.105,
+      "end": 60.139
+    },
+    {
+      "w": "perish.\"",
+      "start": 60.244,
+      "end": 60.813
+    },
+    {
+      "w": "Third",
+      "start": 61.637,
+      "end": 61.834
+    },
+    {
+      "w": "day.",
+      "start": 61.869,
+      "end": 62.241
+    },
+    {
+      "w": "Royal",
+      "start": 62.624,
+      "end": 62.879
+    },
+    {
+      "w": "apparel.",
+      "start": 62.914,
+      "end": 63.425
+    },
+    {
+      "w": "Inner",
+      "start": 63.506,
+      "end": 63.715
+    },
+    {
+      "w": "court.",
+      "start": 63.762,
+      "end": 64.156
+    },
+    {
+      "w": "And",
+      "start": 64.598,
+      "end": 64.714
+    },
+    {
+      "w": "the",
+      "start": 64.749,
+      "end": 64.818
+    },
+    {
+      "w": "king",
+      "start": 64.853,
+      "end": 65.016
+    },
+    {
+      "w": "holds",
+      "start": 65.062,
+      "end": 65.225
+    },
+    {
+      "w": "out",
+      "start": 65.248,
+      "end": 65.341
+    },
+    {
+      "w": "the",
+      "start": 65.375,
+      "end": 65.445
+    },
+    {
+      "w": "sceptre.",
+      "start": 65.468,
+      "end": 66.002
+    },
+    {
+      "w": "She",
+      "start": 66.444,
+      "end": 66.56
+    },
+    {
+      "w": "lives.",
+      "start": 66.618,
+      "end": 67.105
+    },
+    {
+      "w": "And",
+      "start": 67.43,
+      "end": 67.558
+    },
+    {
+      "w": "then",
+      "start": 67.593,
+      "end": 67.709
+    },
+    {
+      "w": "she",
+      "start": 67.744,
+      "end": 67.837
+    },
+    {
+      "w": "throws",
+      "start": 67.872,
+      "end": 68.092
+    },
+    {
+      "w": "the",
+      "start": 68.127,
+      "end": 68.197
+    },
+    {
+      "w": "dinner",
+      "start": 68.232,
+      "end": 68.429
+    },
+    {
+      "w": "party",
+      "start": 68.464,
+      "end": 68.684
+    },
+    {
+      "w": "that",
+      "start": 68.731,
+      "end": 68.858
+    },
+    {
+      "w": "ends",
+      "start": 68.905,
+      "end": 69.056
     },
     {
       "w": "an",
-      "start": 62.207,
-      "end": 62.265
+      "start": 69.091,
+      "end": 69.149
     },
     {
-      "w": "empire.",
-      "start": 62.3,
-      "end": 63.02
+      "w": "empire's",
+      "start": 69.195,
+      "end": 69.578
+    },
+    {
+      "w": "second",
+      "start": 69.613,
+      "end": 69.845
+    },
+    {
+      "w": "in",
+      "start": 69.88,
+      "end": 69.95
+    },
+    {
+      "w": "command.",
+      "start": 70.008,
+      "end": 70.681
     }
   ],
-  "renderedAt": 1785322180749
+  "renderedAt": 1785480482525
 }

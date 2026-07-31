@@ -1,1039 +1,1131 @@
 {
   "kind": "tea",
   "teaId": "priscilla-teach",
-  "text": "A woman took the most famous preacher in the city aside and corrected his theology.\n\nActs eighteen. A man named Apollos shows up in Ephesus. Born in Alexandria. The text calls him eloquent, and mighty in the scriptures. He teaches diligently the things of the Lord.\n\nHe's genuinely gifted. And then one clause changes everything.\n\n\"Knowing only the baptism of John.\"\n\nHe's brilliant, and he's behind. He's got maybe eighty percent of it, preaching with total confidence.\n\nSo he starts speaking boldly in the synagogue, and Aquila and Priscilla hear him.\n\nAnd here is the move. They do not stand up in the middle of the synagogue and correct him publicly. They do not subtweet him.\n\n\"Whom when Aquila and Priscilla had heard, they took him unto them, and expounded unto him the way of God more perfectly.\"\n\nTook him aside. Filled in what was missing. Protected his ministry while they fixed it.\n\nAnd Apollos goes on to help the believers enormously and convince people publicly.\n\nSmall thing readers have made a lot of. In several places her name is listed first, including this one. Luke never tells us why, so treat the theories as theories.\n\nWhat we can see is that she taught the teacher.",
+  "mood": "dark",
+  "heat": 2,
+  "text": "The most eloquent preacher in the city was about eighty percent right. She took him aside and fixed it. Acts eighteen. A man named Apollos shows up in Ephesus. Born in Alexandria. The text calls him eloquent, and mighty in the scriptures. He teaches diligently the things of the Lord. He is genuinely gifted. And then one clause changes everything. \"Knowing only the baptism of John.\" He is brilliant, and he is behind. He has most of it, and he is preaching with total confidence. So he starts speaking boldly in the synagogue. And Aquila and Priscilla hear him. And here is the move. They do not stand up in the middle of the synagogue and correct him publicly. They do not go home and subtweet him. \"Whom when Aquila and Priscilla had heard, they took him unto them, and expounded unto him the way of God more perfectly.\" Took him aside. Filled in what was missing. Protected the ministry while they fixed it. And Apollos goes on to help the believers enormously and to convince people publicly. One more thing, and I want to be straight with you. In several places her name is listed first. Including this one. Luke never tells us why, so treat the theories as theories. What you can see on the page is that she taught the teacher.",
   "voice": "FGY2WhTYpPnrIDTdsKH5",
   "words": [
     {
-      "w": "A",
+      "w": "The",
       "start": 0,
-      "end": 0.081
-    },
-    {
-      "w": "woman",
-      "start": 0.139,
-      "end": 0.337
-    },
-    {
-      "w": "took",
-      "start": 0.372,
-      "end": 0.511
-    },
-    {
-      "w": "the",
-      "start": 0.546,
-      "end": 0.615
+      "end": 0.151
     },
     {
       "w": "most",
-      "start": 0.65,
-      "end": 0.801
+      "start": 0.197,
+      "end": 0.372
     },
     {
-      "w": "famous",
-      "start": 0.836,
-      "end": 1.103
+      "w": "eloquent",
+      "start": 0.43,
+      "end": 0.766
     },
     {
       "w": "preacher",
-      "start": 1.149,
-      "end": 1.509
+      "start": 0.801,
+      "end": 1.068
     },
     {
       "w": "in",
-      "start": 1.591,
-      "end": 1.66
+      "start": 1.103,
+      "end": 1.161
     },
     {
       "w": "the",
-      "start": 1.695,
-      "end": 1.776
+      "start": 1.196,
+      "end": 1.265
     },
     {
       "w": "city",
-      "start": 1.834,
-      "end": 2.043
-    },
-    {
-      "w": "aside",
-      "start": 2.09,
-      "end": 2.38
-    },
-    {
-      "w": "and",
-      "start": 2.415,
-      "end": 2.485
-    },
-    {
-      "w": "corrected",
-      "start": 2.519,
-      "end": 2.856
-    },
-    {
-      "w": "his",
-      "start": 2.891,
-      "end": 2.995
-    },
-    {
-      "w": "theology.",
-      "start": 3.053,
-      "end": 3.796
-    },
-    {
-      "w": "Acts",
-      "start": 4.319,
-      "end": 4.551
-    },
-    {
-      "w": "eighteen.",
-      "start": 4.621,
-      "end": 5.155
-    },
-    {
-      "w": "A",
-      "start": 5.224,
-      "end": 5.294
-    },
-    {
-      "w": "man",
-      "start": 5.399,
-      "end": 5.573
-    },
-    {
-      "w": "named",
-      "start": 5.619,
-      "end": 5.817
-    },
-    {
-      "w": "Apollos",
-      "start": 5.851,
-      "end": 6.269
-    },
-    {
-      "w": "shows",
-      "start": 6.304,
-      "end": 6.49
-    },
-    {
-      "w": "up",
-      "start": 6.536,
-      "end": 6.606
-    },
-    {
-      "w": "in",
-      "start": 6.641,
-      "end": 6.687
-    },
-    {
-      "w": "Ephesus.",
-      "start": 6.745,
-      "end": 7.361
-    },
-    {
-      "w": "Born",
-      "start": 7.407,
-      "end": 7.639
-    },
-    {
-      "w": "in",
-      "start": 7.674,
-      "end": 7.744
-    },
-    {
-      "w": "Alexandria.",
-      "start": 7.814,
-      "end": 8.742
-    },
-    {
-      "w": "The",
-      "start": 8.986,
-      "end": 9.079
-    },
-    {
-      "w": "text",
-      "start": 9.125,
-      "end": 9.346
-    },
-    {
-      "w": "calls",
-      "start": 9.381,
-      "end": 9.625
-    },
-    {
-      "w": "him",
-      "start": 9.66,
-      "end": 9.787
-    },
-    {
-      "w": "eloquent,",
-      "start": 9.868,
-      "end": 10.333
-    },
-    {
-      "w": "and",
-      "start": 10.368,
-      "end": 10.472
-    },
-    {
-      "w": "mighty",
-      "start": 10.53,
-      "end": 10.762
-    },
-    {
-      "w": "in",
-      "start": 10.797,
-      "end": 10.855
-    },
-    {
-      "w": "the",
-      "start": 10.89,
-      "end": 10.96
-    },
-    {
-      "w": "scriptures.",
-      "start": 10.983,
-      "end": 11.552
-    },
-    {
-      "w": "He",
-      "start": 11.761,
-      "end": 11.865
-    },
-    {
-      "w": "teaches",
-      "start": 11.923,
-      "end": 12.237
-    },
-    {
-      "w": "diligently",
-      "start": 12.283,
-      "end": 12.759
-    },
-    {
-      "w": "the",
-      "start": 12.817,
-      "end": 12.887
-    },
-    {
-      "w": "things",
-      "start": 12.922,
-      "end": 13.143
-    },
-    {
-      "w": "of",
-      "start": 13.177,
-      "end": 13.235
-    },
-    {
-      "w": "the",
-      "start": 13.27,
-      "end": 13.34
-    },
-    {
-      "w": "Lord.",
-      "start": 13.386,
-      "end": 13.7
-    },
-    {
-      "w": "He's",
-      "start": 13.828,
-      "end": 14.095
-    },
-    {
-      "w": "genuinely",
-      "start": 14.176,
-      "end": 14.594
-    },
-    {
-      "w": "gifted.",
-      "start": 14.652,
-      "end": 15.174
-    },
-    {
-      "w": "And",
-      "start": 15.325,
-      "end": 15.441
-    },
-    {
-      "w": "then",
-      "start": 15.476,
-      "end": 15.604
-    },
-    {
-      "w": "one",
-      "start": 15.732,
-      "end": 15.975
-    },
-    {
-      "w": "clause",
-      "start": 16.01,
-      "end": 16.312
-    },
-    {
-      "w": "changes",
-      "start": 16.347,
-      "end": 16.637
-    },
-    {
-      "w": "everything.",
-      "start": 16.684,
-      "end": 17.194
-    },
-    {
-      "w": "\"Knowing",
-      "start": 17.299,
-      "end": 17.659
-    },
-    {
-      "w": "only",
-      "start": 17.763,
-      "end": 18.03
-    },
-    {
-      "w": "the",
-      "start": 18.077,
-      "end": 18.146
-    },
-    {
-      "w": "baptism",
-      "start": 18.181,
-      "end": 18.553
-    },
-    {
-      "w": "of",
-      "start": 18.588,
-      "end": 18.646
-    },
-    {
-      "w": "John.\"",
-      "start": 18.692,
-      "end": 19.098
-    },
-    {
-      "w": "He's",
-      "start": 19.249,
-      "end": 19.505
-    },
-    {
-      "w": "brilliant,",
-      "start": 19.586,
-      "end": 20.225
-    },
-    {
-      "w": "and",
-      "start": 20.294,
-      "end": 20.526
-    },
-    {
-      "w": "he's",
-      "start": 20.596,
-      "end": 20.747
-    },
-    {
-      "w": "behind.",
-      "start": 20.794,
-      "end": 21.304
-    },
-    {
-      "w": "He's",
-      "start": 21.386,
-      "end": 21.56
-    },
-    {
-      "w": "got",
-      "start": 21.595,
-      "end": 21.711
-    },
-    {
-      "w": "maybe",
-      "start": 21.746,
-      "end": 22.001
-    },
-    {
-      "w": "eighty",
-      "start": 22.059,
-      "end": 22.268
-    },
-    {
-      "w": "percent",
-      "start": 22.303,
-      "end": 22.558
-    },
-    {
-      "w": "of",
-      "start": 22.581,
-      "end": 22.64
-    },
-    {
-      "w": "it,",
-      "start": 22.698,
-      "end": 22.883
-    },
-    {
-      "w": "preaching",
-      "start": 23.011,
-      "end": 23.313
-    },
-    {
-      "w": "with",
-      "start": 23.348,
-      "end": 23.487
-    },
-    {
-      "w": "total",
-      "start": 23.556,
-      "end": 23.812
-    },
-    {
-      "w": "confidence.",
-      "start": 23.858,
-      "end": 24.439
-    },
-    {
-      "w": "So",
-      "start": 24.59,
-      "end": 24.787
-    },
-    {
-      "w": "he",
-      "start": 24.892,
-      "end": 24.973
-    },
-    {
-      "w": "starts",
-      "start": 25.031,
-      "end": 25.263
-    },
-    {
-      "w": "speaking",
-      "start": 25.298,
-      "end": 25.6
-    },
-    {
-      "w": "boldly",
-      "start": 25.658,
-      "end": 25.971
-    },
-    {
-      "w": "in",
-      "start": 26.006,
-      "end": 26.064
-    },
-    {
-      "w": "the",
-      "start": 26.099,
-      "end": 26.169
-    },
-    {
-      "w": "synagogue,",
-      "start": 26.192,
-      "end": 26.761
-    },
-    {
-      "w": "and",
-      "start": 26.796,
-      "end": 26.912
-    },
-    {
-      "w": "Aquila",
-      "start": 26.947,
-      "end": 27.399
-    },
-    {
-      "w": "and",
-      "start": 27.527,
-      "end": 27.69
-    },
-    {
-      "w": "Priscilla",
-      "start": 27.724,
-      "end": 28.038
-    },
-    {
-      "w": "hear",
-      "start": 28.084,
-      "end": 28.212
-    },
-    {
-      "w": "him.",
-      "start": 28.259,
-      "end": 28.468
-    },
-    {
-      "w": "And",
-      "start": 28.746,
-      "end": 28.955
-    },
-    {
-      "w": "here",
-      "start": 29.013,
-      "end": 29.152
-    },
-    {
-      "w": "is",
-      "start": 29.187,
-      "end": 29.257
-    },
-    {
-      "w": "the",
-      "start": 29.292,
-      "end": 29.361
-    },
-    {
-      "w": "move.",
-      "start": 29.396,
-      "end": 29.779
-    },
-    {
-      "w": "They",
-      "start": 29.988,
-      "end": 30.116
-    },
-    {
-      "w": "do",
-      "start": 30.151,
-      "end": 30.209
-    },
-    {
-      "w": "not",
-      "start": 30.255,
-      "end": 30.36
-    },
-    {
-      "w": "stand",
-      "start": 30.395,
-      "end": 30.639
-    },
-    {
-      "w": "up",
-      "start": 30.685,
-      "end": 30.778
-    },
-    {
-      "w": "in",
-      "start": 30.824,
-      "end": 30.894
-    },
-    {
-      "w": "the",
-      "start": 30.929,
-      "end": 30.998
-    },
-    {
-      "w": "middle",
-      "start": 31.033,
-      "end": 31.254
-    },
-    {
-      "w": "of",
-      "start": 31.289,
-      "end": 31.358
-    },
-    {
-      "w": "the",
-      "start": 31.393,
-      "end": 31.463
-    },
-    {
-      "w": "synagogue",
-      "start": 31.498,
-      "end": 31.939
-    },
-    {
-      "w": "and",
-      "start": 31.974,
-      "end": 32.067
-    },
-    {
-      "w": "correct",
-      "start": 32.125,
-      "end": 32.38
-    },
-    {
-      "w": "him",
-      "start": 32.415,
-      "end": 32.508
-    },
-    {
-      "w": "publicly.",
-      "start": 32.543,
-      "end": 33.088
-    },
-    {
-      "w": "They",
-      "start": 33.332,
-      "end": 33.471
-    },
-    {
-      "w": "do",
-      "start": 33.506,
-      "end": 33.576
-    },
-    {
-      "w": "not",
-      "start": 33.646,
-      "end": 33.808
-    },
-    {
-      "w": "subtweet",
-      "start": 33.878,
-      "end": 34.214
-    },
-    {
-      "w": "him.",
-      "start": 34.249,
-      "end": 34.505
-    },
-    {
-      "w": "\"Whom",
-      "start": 34.633,
-      "end": 34.877
-    },
-    {
-      "w": "when",
-      "start": 34.911,
-      "end": 35.039
-    },
-    {
-      "w": "Aquila",
-      "start": 35.085,
-      "end": 35.434
-    },
-    {
-      "w": "and",
-      "start": 35.48,
-      "end": 35.562
-    },
-    {
-      "w": "Priscilla",
-      "start": 35.608,
-      "end": 35.933
-    },
-    {
-      "w": "had",
-      "start": 35.979,
-      "end": 36.084
-    },
-    {
-      "w": "heard,",
-      "start": 36.119,
-      "end": 36.374
-    },
-    {
-      "w": "they",
-      "start": 36.421,
-      "end": 36.572
-    },
-    {
-      "w": "took",
-      "start": 36.63,
-      "end": 36.781
-    },
-    {
-      "w": "him",
-      "start": 36.815,
-      "end": 36.908
-    },
-    {
-      "w": "unto",
-      "start": 36.966,
-      "end": 37.14
-    },
-    {
-      "w": "them,",
-      "start": 37.187,
-      "end": 37.407
-    },
-    {
-      "w": "and",
-      "start": 37.466,
-      "end": 37.582
-    },
-    {
-      "w": "expounded",
-      "start": 37.616,
-      "end": 38.174
-    },
-    {
-      "w": "unto",
-      "start": 38.243,
-      "end": 38.429
-    },
-    {
-      "w": "him",
-      "start": 38.499,
-      "end": 38.65
-    },
-    {
-      "w": "the",
-      "start": 38.708,
-      "end": 38.777
-    },
-    {
-      "w": "way",
-      "start": 38.824,
-      "end": 38.952
-    },
-    {
-      "w": "of",
-      "start": 38.986,
-      "end": 39.044
-    },
-    {
-      "w": "God",
-      "start": 39.091,
-      "end": 39.253
-    },
-    {
-      "w": "more",
-      "start": 39.288,
-      "end": 39.428
-    },
-    {
-      "w": "perfectly.\"",
-      "start": 39.462,
-      "end": 40.066
-    },
-    {
-      "w": "Took",
-      "start": 40.217,
-      "end": 40.391
-    },
-    {
-      "w": "him",
-      "start": 40.414,
-      "end": 40.507
-    },
-    {
-      "w": "aside.",
-      "start": 40.542,
-      "end": 41.065
-    },
-    {
-      "w": "Filled",
-      "start": 41.308,
-      "end": 41.529
-    },
-    {
-      "w": "in",
-      "start": 41.575,
-      "end": 41.657
-    },
-    {
-      "w": "what",
-      "start": 41.703,
-      "end": 41.831
+      "start": 1.3,
+      "end": 1.567
     },
     {
       "w": "was",
-      "start": 41.866,
-      "end": 41.97
+      "start": 1.718,
+      "end": 1.858
     },
     {
-      "w": "missing.",
-      "start": 42.04,
-      "end": 42.527
+      "w": "about",
+      "start": 1.892,
+      "end": 2.125
     },
     {
-      "w": "Protected",
-      "start": 42.736,
-      "end": 43.131
+      "w": "eighty",
+      "start": 2.183,
+      "end": 2.415
     },
     {
-      "w": "his",
-      "start": 43.166,
-      "end": 43.259
+      "w": "percent",
+      "start": 2.473,
+      "end": 2.752
     },
     {
-      "w": "ministry",
-      "start": 43.317,
-      "end": 43.642
+      "w": "right.",
+      "start": 2.798,
+      "end": 3.135
     },
     {
-      "w": "while",
-      "start": 43.677,
-      "end": 43.816
+      "w": "She",
+      "start": 3.204,
+      "end": 3.309
     },
     {
-      "w": "they",
-      "start": 43.839,
-      "end": 43.944
+      "w": "took",
+      "start": 3.344,
+      "end": 3.46
     },
     {
-      "w": "fixed",
-      "start": 43.979,
-      "end": 44.211
+      "w": "him",
+      "start": 3.495,
+      "end": 3.576
     },
     {
-      "w": "it.",
-      "start": 44.246,
-      "end": 44.513
-    },
-    {
-      "w": "And",
-      "start": 44.757,
-      "end": 44.861
-    },
-    {
-      "w": "Apollos",
-      "start": 44.919,
-      "end": 45.279
-    },
-    {
-      "w": "goes",
-      "start": 45.337,
-      "end": 45.488
-    },
-    {
-      "w": "on",
-      "start": 45.523,
-      "end": 45.604
-    },
-    {
-      "w": "to",
-      "start": 45.639,
-      "end": 45.685
-    },
-    {
-      "w": "help",
-      "start": 45.743,
-      "end": 45.871
-    },
-    {
-      "w": "the",
-      "start": 45.906,
-      "end": 45.975
-    },
-    {
-      "w": "believers",
-      "start": 46.01,
-      "end": 46.382
-    },
-    {
-      "w": "enormously",
-      "start": 46.451,
-      "end": 47.009
+      "w": "aside",
+      "start": 3.611,
+      "end": 3.936
     },
     {
       "w": "and",
-      "start": 47.067,
-      "end": 47.171
+      "start": 3.971,
+      "end": 4.052
     },
     {
-      "w": "convince",
-      "start": 47.229,
-      "end": 47.566
+      "w": "fixed",
+      "start": 4.098,
+      "end": 4.331
     },
     {
-      "w": "people",
-      "start": 47.601,
-      "end": 47.81
+      "w": "it.",
+      "start": 4.377,
+      "end": 4.598
+    },
+    {
+      "w": "Acts",
+      "start": 4.923,
+      "end": 5.178
+    },
+    {
+      "w": "eighteen.",
+      "start": 5.224,
+      "end": 5.793
+    },
+    {
+      "w": "A",
+      "start": 5.944,
+      "end": 6.002
+    },
+    {
+      "w": "man",
+      "start": 6.084,
+      "end": 6.235
+    },
+    {
+      "w": "named",
+      "start": 6.281,
+      "end": 6.478
+    },
+    {
+      "w": "Apollos",
+      "start": 6.513,
+      "end": 6.954
+    },
+    {
+      "w": "shows",
+      "start": 7.001,
+      "end": 7.221
+    },
+    {
+      "w": "up",
+      "start": 7.268,
+      "end": 7.349
+    },
+    {
+      "w": "in",
+      "start": 7.396,
+      "end": 7.465
+    },
+    {
+      "w": "Ephesus.",
+      "start": 7.5,
+      "end": 8.069
+    },
+    {
+      "w": "Born",
+      "start": 8.22,
+      "end": 8.499
+    },
+    {
+      "w": "in",
+      "start": 8.533,
+      "end": 8.603
+    },
+    {
+      "w": "Alexandria.",
+      "start": 8.684,
+      "end": 9.509
+    },
+    {
+      "w": "The",
+      "start": 9.834,
+      "end": 9.927
+    },
+    {
+      "w": "text",
+      "start": 9.973,
+      "end": 10.205
+    },
+    {
+      "w": "calls",
+      "start": 10.24,
+      "end": 10.507
+    },
+    {
+      "w": "him",
+      "start": 10.542,
+      "end": 10.67
+    },
+    {
+      "w": "eloquent,",
+      "start": 10.751,
+      "end": 11.134
+    },
+    {
+      "w": "and",
+      "start": 11.169,
+      "end": 11.262
+    },
+    {
+      "w": "mighty",
+      "start": 11.32,
+      "end": 11.54
+    },
+    {
+      "w": "in",
+      "start": 11.575,
+      "end": 11.622
+    },
+    {
+      "w": "the",
+      "start": 11.656,
+      "end": 11.726
+    },
+    {
+      "w": "scriptures.",
+      "start": 11.749,
+      "end": 12.318
+    },
+    {
+      "w": "He",
+      "start": 12.597,
+      "end": 12.701
+    },
+    {
+      "w": "teaches",
+      "start": 12.748,
+      "end": 13.061
+    },
+    {
+      "w": "diligently",
+      "start": 13.108,
+      "end": 13.549
+    },
+    {
+      "w": "the",
+      "start": 13.595,
+      "end": 13.677
+    },
+    {
+      "w": "things",
+      "start": 13.758,
+      "end": 14.106
+    },
+    {
+      "w": "of",
+      "start": 14.176,
+      "end": 14.257
+    },
+    {
+      "w": "the",
+      "start": 14.304,
+      "end": 14.373
+    },
+    {
+      "w": "Lord.",
+      "start": 14.431,
+      "end": 14.826
+    },
+    {
+      "w": "He",
+      "start": 14.931,
+      "end": 15.035
+    },
+    {
+      "w": "is",
+      "start": 15.082,
+      "end": 15.174
+    },
+    {
+      "w": "genuinely",
+      "start": 15.279,
+      "end": 15.732
+    },
+    {
+      "w": "gifted.",
+      "start": 15.766,
+      "end": 16.219
+    },
+    {
+      "w": "And",
+      "start": 16.428,
+      "end": 16.568
+    },
+    {
+      "w": "then",
+      "start": 16.614,
+      "end": 16.753
+    },
+    {
+      "w": "one",
+      "start": 16.835,
+      "end": 17.009
+    },
+    {
+      "w": "clause",
+      "start": 17.044,
+      "end": 17.357
+    },
+    {
+      "w": "changes",
+      "start": 17.392,
+      "end": 17.659
+    },
+    {
+      "w": "everything.",
+      "start": 17.694,
+      "end": 18.205
+    },
+    {
+      "w": "\"Knowing",
+      "start": 18.483,
+      "end": 18.797
+    },
+    {
+      "w": "only",
+      "start": 18.843,
+      "end": 19.099
+    },
+    {
+      "w": "the",
+      "start": 19.145,
+      "end": 19.215
+    },
+    {
+      "w": "baptism",
+      "start": 19.284,
+      "end": 19.76
+    },
+    {
+      "w": "of",
+      "start": 19.807,
+      "end": 19.865
+    },
+    {
+      "w": "John.\"",
+      "start": 19.911,
+      "end": 20.41
+    },
+    {
+      "w": "He",
+      "start": 20.515,
+      "end": 20.608
+    },
+    {
+      "w": "is",
+      "start": 20.654,
+      "end": 20.736
+    },
+    {
+      "w": "brilliant,",
+      "start": 20.794,
+      "end": 21.223
+    },
+    {
+      "w": "and",
+      "start": 21.258,
+      "end": 21.363
+    },
+    {
+      "w": "he",
+      "start": 21.432,
+      "end": 21.571
+    },
+    {
+      "w": "is",
+      "start": 21.641,
+      "end": 21.757
+    },
+    {
+      "w": "behind.",
+      "start": 21.815,
+      "end": 22.431
+    },
+    {
+      "w": "He",
+      "start": 22.709,
+      "end": 22.802
+    },
+    {
+      "w": "has",
+      "start": 22.837,
+      "end": 22.941
+    },
+    {
+      "w": "most",
+      "start": 23,
+      "end": 23.162
+    },
+    {
+      "w": "of",
+      "start": 23.197,
+      "end": 23.255
+    },
+    {
+      "w": "it,",
+      "start": 23.301,
+      "end": 23.51
+    },
+    {
+      "w": "and",
+      "start": 23.557,
+      "end": 23.684
+    },
+    {
+      "w": "he",
+      "start": 23.731,
+      "end": 23.777
+    },
+    {
+      "w": "is",
+      "start": 23.812,
+      "end": 23.894
+    },
+    {
+      "w": "preaching",
+      "start": 23.963,
+      "end": 24.3
+    },
+    {
+      "w": "with",
+      "start": 24.335,
+      "end": 24.463
+    },
+    {
+      "w": "total",
+      "start": 24.498,
+      "end": 24.73
+    },
+    {
+      "w": "confidence.",
+      "start": 24.776,
+      "end": 25.368
+    },
+    {
+      "w": "So",
+      "start": 25.519,
+      "end": 25.635
+    },
+    {
+      "w": "he",
+      "start": 25.682,
+      "end": 25.751
+    },
+    {
+      "w": "starts",
+      "start": 25.809,
+      "end": 26.065
+    },
+    {
+      "w": "speaking",
+      "start": 26.1,
+      "end": 26.425
+    },
+    {
+      "w": "boldly",
+      "start": 26.483,
+      "end": 26.866
+    },
+    {
+      "w": "in",
+      "start": 26.947,
+      "end": 27.017
+    },
+    {
+      "w": "the",
+      "start": 27.052,
+      "end": 27.133
+    },
+    {
+      "w": "synagogue.",
+      "start": 27.179,
+      "end": 27.644
+    },
+    {
+      "w": "And",
+      "start": 27.853,
+      "end": 27.981
+    },
+    {
+      "w": "Aquila",
+      "start": 28.062,
+      "end": 28.422
+    },
+    {
+      "w": "and",
+      "start": 28.48,
+      "end": 28.573
+    },
+    {
+      "w": "Priscilla",
+      "start": 28.607,
+      "end": 28.933
+    },
+    {
+      "w": "hear",
+      "start": 28.991,
+      "end": 29.13
+    },
+    {
+      "w": "him.",
+      "start": 29.165,
+      "end": 29.397
+    },
+    {
+      "w": "And",
+      "start": 29.722,
+      "end": 29.873
+    },
+    {
+      "w": "here",
+      "start": 29.943,
+      "end": 30.105
+    },
+    {
+      "w": "is",
+      "start": 30.14,
+      "end": 30.21
+    },
+    {
+      "w": "the",
+      "start": 30.244,
+      "end": 30.314
+    },
+    {
+      "w": "move.",
+      "start": 30.349,
+      "end": 30.732
+    },
+    {
+      "w": "They",
+      "start": 30.837,
+      "end": 30.988
+    },
+    {
+      "w": "do",
+      "start": 31.034,
+      "end": 31.127
+    },
+    {
+      "w": "not",
+      "start": 31.185,
+      "end": 31.301
+    },
+    {
+      "w": "stand",
+      "start": 31.359,
+      "end": 31.591
+    },
+    {
+      "w": "up",
+      "start": 31.649,
+      "end": 31.742
+    },
+    {
+      "w": "in",
+      "start": 31.777,
+      "end": 31.835
+    },
+    {
+      "w": "the",
+      "start": 31.87,
+      "end": 31.94
+    },
+    {
+      "w": "middle",
+      "start": 31.974,
+      "end": 32.183
+    },
+    {
+      "w": "of",
+      "start": 32.218,
+      "end": 32.276
+    },
+    {
+      "w": "the",
+      "start": 32.311,
+      "end": 32.381
+    },
+    {
+      "w": "synagogue",
+      "start": 32.416,
+      "end": 32.88
+    },
+    {
+      "w": "and",
+      "start": 32.915,
+      "end": 33.019
+    },
+    {
+      "w": "correct",
+      "start": 33.089,
+      "end": 33.368
+    },
+    {
+      "w": "him",
+      "start": 33.402,
+      "end": 33.495
     },
     {
       "w": "publicly.",
-      "start": 47.845,
-      "end": 48.39
+      "start": 33.53,
+      "end": 34.076
     },
     {
-      "w": "Small",
-      "start": 48.518,
-      "end": 48.785
+      "w": "They",
+      "start": 34.262,
+      "end": 34.401
     },
     {
-      "w": "thing",
-      "start": 48.82,
-      "end": 49.029
+      "w": "do",
+      "start": 34.436,
+      "end": 34.517
     },
     {
-      "w": "readers",
-      "start": 49.099,
-      "end": 49.342
+      "w": "not",
+      "start": 34.575,
+      "end": 34.68
     },
     {
-      "w": "have",
-      "start": 49.377,
-      "end": 49.493
+      "w": "go",
+      "start": 34.715,
+      "end": 34.796
     },
     {
-      "w": "made",
-      "start": 49.528,
-      "end": 49.656
+      "w": "home",
+      "start": 34.854,
+      "end": 35.051
     },
     {
-      "w": "a",
-      "start": 49.679,
-      "end": 49.702
+      "w": "and",
+      "start": 35.098,
+      "end": 35.202
     },
     {
-      "w": "lot",
-      "start": 49.737,
-      "end": 49.9
+      "w": "subtweet",
+      "start": 35.249,
+      "end": 35.609
     },
     {
-      "w": "of.",
-      "start": 49.934,
-      "end": 50.19
+      "w": "him.",
+      "start": 35.643,
+      "end": 35.876
+    },
+    {
+      "w": "\"Whom",
+      "start": 36.085,
+      "end": 36.34
+    },
+    {
+      "w": "when",
+      "start": 36.398,
+      "end": 36.561
+    },
+    {
+      "w": "Aquila",
+      "start": 36.642,
+      "end": 37.153
+    },
+    {
+      "w": "and",
+      "start": 37.222,
+      "end": 37.362
+    },
+    {
+      "w": "Priscilla",
+      "start": 37.408,
+      "end": 37.768
+    },
+    {
+      "w": "had",
+      "start": 37.815,
+      "end": 37.931
+    },
+    {
+      "w": "heard,",
+      "start": 37.989,
+      "end": 38.407
+    },
+    {
+      "w": "they",
+      "start": 38.592,
+      "end": 38.72
+    },
+    {
+      "w": "took",
+      "start": 38.755,
+      "end": 38.883
+    },
+    {
+      "w": "him",
+      "start": 38.917,
+      "end": 38.999
+    },
+    {
+      "w": "unto",
+      "start": 39.045,
+      "end": 39.196
+    },
+    {
+      "w": "them,",
+      "start": 39.254,
+      "end": 39.556
+    },
+    {
+      "w": "and",
+      "start": 39.591,
+      "end": 39.707
+    },
+    {
+      "w": "expounded",
+      "start": 39.753,
+      "end": 40.183
+    },
+    {
+      "w": "unto",
+      "start": 40.229,
+      "end": 40.415
+    },
+    {
+      "w": "him",
+      "start": 40.496,
+      "end": 40.613
+    },
+    {
+      "w": "the",
+      "start": 40.671,
+      "end": 40.74
+    },
+    {
+      "w": "way",
+      "start": 40.787,
+      "end": 40.914
+    },
+    {
+      "w": "of",
+      "start": 40.949,
+      "end": 40.996
+    },
+    {
+      "w": "God",
+      "start": 41.054,
+      "end": 41.239
+    },
+    {
+      "w": "more",
+      "start": 41.286,
+      "end": 41.414
+    },
+    {
+      "w": "perfectly.\"",
+      "start": 41.448,
+      "end": 42.099
+    },
+    {
+      "w": "Took",
+      "start": 42.795,
+      "end": 42.958
+    },
+    {
+      "w": "him",
+      "start": 42.993,
+      "end": 43.085
+    },
+    {
+      "w": "aside.",
+      "start": 43.12,
+      "end": 43.608
+    },
+    {
+      "w": "Filled",
+      "start": 43.759,
+      "end": 44.014
+    },
+    {
+      "w": "in",
+      "start": 44.072,
+      "end": 44.154
+    },
+    {
+      "w": "what",
+      "start": 44.2,
+      "end": 44.339
+    },
+    {
+      "w": "was",
+      "start": 44.386,
+      "end": 44.502
+    },
+    {
+      "w": "missing.",
+      "start": 44.56,
+      "end": 45.059
+    },
+    {
+      "w": "Protected",
+      "start": 45.303,
+      "end": 45.686
+    },
+    {
+      "w": "the",
+      "start": 45.721,
+      "end": 45.791
+    },
+    {
+      "w": "ministry",
+      "start": 45.825,
+      "end": 46.174
+    },
+    {
+      "w": "while",
+      "start": 46.209,
+      "end": 46.371
+    },
+    {
+      "w": "they",
+      "start": 46.394,
+      "end": 46.499
+    },
+    {
+      "w": "fixed",
+      "start": 46.534,
+      "end": 46.754
+    },
+    {
+      "w": "it.",
+      "start": 46.789,
+      "end": 47.044
+    },
+    {
+      "w": "And",
+      "start": 47.172,
+      "end": 47.288
+    },
+    {
+      "w": "Apollos",
+      "start": 47.335,
+      "end": 47.718
+    },
+    {
+      "w": "goes",
+      "start": 47.764,
+      "end": 47.904
+    },
+    {
+      "w": "on",
+      "start": 47.938,
+      "end": 48.02
+    },
+    {
+      "w": "to",
+      "start": 48.055,
+      "end": 48.101
+    },
+    {
+      "w": "help",
+      "start": 48.159,
+      "end": 48.298
+    },
+    {
+      "w": "the",
+      "start": 48.356,
+      "end": 48.426
+    },
+    {
+      "w": "believers",
+      "start": 48.473,
+      "end": 48.856
+    },
+    {
+      "w": "enormously",
+      "start": 48.937,
+      "end": 49.645
+    },
+    {
+      "w": "and",
+      "start": 49.715,
+      "end": 49.819
+    },
+    {
+      "w": "to",
+      "start": 49.854,
+      "end": 49.924
+    },
+    {
+      "w": "convince",
+      "start": 49.97,
+      "end": 50.26
+    },
+    {
+      "w": "people",
+      "start": 50.284,
+      "end": 50.504
+    },
+    {
+      "w": "publicly.",
+      "start": 50.539,
+      "end": 51.085
+    },
+    {
+      "w": "One",
+      "start": 51.271,
+      "end": 51.421
+    },
+    {
+      "w": "more",
+      "start": 51.445,
+      "end": 51.572
+    },
+    {
+      "w": "thing,",
+      "start": 51.607,
+      "end": 51.816
+    },
+    {
+      "w": "and",
+      "start": 51.851,
+      "end": 51.956
+    },
+    {
+      "w": "I",
+      "start": 52.014,
+      "end": 52.037
+    },
+    {
+      "w": "want",
+      "start": 52.106,
+      "end": 52.234
+    },
+    {
+      "w": "to",
+      "start": 52.257,
+      "end": 52.304
+    },
+    {
+      "w": "be",
+      "start": 52.339,
+      "end": 52.408
+    },
+    {
+      "w": "straight",
+      "start": 52.443,
+      "end": 52.675
+    },
+    {
+      "w": "with",
+      "start": 52.699,
+      "end": 52.815
+    },
+    {
+      "w": "you.",
+      "start": 52.861,
+      "end": 53.117
     },
     {
       "w": "In",
-      "start": 50.341,
-      "end": 50.445
+      "start": 53.36,
+      "end": 53.534
     },
     {
       "w": "several",
-      "start": 50.492,
-      "end": 50.736
+      "start": 53.604,
+      "end": 53.871
     },
     {
       "w": "places",
-      "start": 50.782,
-      "end": 51.095
+      "start": 53.906,
+      "end": 54.231
     },
     {
       "w": "her",
-      "start": 51.142,
-      "end": 51.223
+      "start": 54.289,
+      "end": 54.394
     },
     {
       "w": "name",
-      "start": 51.258,
-      "end": 51.386
+      "start": 54.452,
+      "end": 54.603
     },
     {
       "w": "is",
-      "start": 51.421,
-      "end": 51.49
+      "start": 54.637,
+      "end": 54.707
     },
     {
       "w": "listed",
-      "start": 51.548,
-      "end": 51.815
+      "start": 54.777,
+      "end": 55.09
     },
     {
-      "w": "first,",
-      "start": 51.85,
-      "end": 52.291
+      "w": "first.",
+      "start": 55.137,
+      "end": 55.601
     },
     {
-      "w": "including",
-      "start": 52.314,
-      "end": 52.767
+      "w": "Including",
+      "start": 55.88,
+      "end": 56.332
     },
     {
       "w": "this",
-      "start": 52.802,
-      "end": 52.93
+      "start": 56.367,
+      "end": 56.495
     },
     {
       "w": "one.",
-      "start": 52.988,
-      "end": 53.301
+      "start": 56.553,
+      "end": 56.843
     },
     {
       "w": "Luke",
-      "start": 53.452,
-      "end": 53.684
+      "start": 57.052,
+      "end": 57.238
     },
     {
       "w": "never",
-      "start": 53.708,
-      "end": 53.882
+      "start": 57.261,
+      "end": 57.424
     },
     {
       "w": "tells",
-      "start": 53.917,
-      "end": 54.091
+      "start": 57.459,
+      "end": 57.633
     },
     {
       "w": "us",
-      "start": 54.126,
-      "end": 54.195
+      "start": 57.668,
+      "end": 57.737
     },
     {
       "w": "why,",
-      "start": 54.23,
-      "end": 54.59
+      "start": 57.772,
+      "end": 58.155
     },
     {
       "w": "so",
-      "start": 54.648,
-      "end": 54.787
+      "start": 58.225,
+      "end": 58.388
     },
     {
       "w": "treat",
-      "start": 54.845,
-      "end": 55.031
+      "start": 58.446,
+      "end": 58.655
     },
     {
       "w": "the",
-      "start": 55.066,
-      "end": 55.136
+      "start": 58.69,
+      "end": 58.759
     },
     {
       "w": "theories",
-      "start": 55.182,
-      "end": 55.496
+      "start": 58.794,
+      "end": 59.131
     },
     {
       "w": "as",
-      "start": 55.542,
-      "end": 55.612
+      "start": 59.2,
+      "end": 59.398
     },
     {
       "w": "theories.",
-      "start": 55.681,
-      "end": 56.25
+      "start": 59.456,
+      "end": 59.955
     },
     {
       "w": "What",
-      "start": 56.32,
-      "end": 56.471
+      "start": 60.164,
+      "end": 60.315
     },
     {
-      "w": "we",
-      "start": 56.506,
-      "end": 56.575
+      "w": "you",
+      "start": 60.35,
+      "end": 60.419
     },
     {
       "w": "can",
-      "start": 56.61,
-      "end": 56.715
+      "start": 60.466,
+      "end": 60.582
     },
     {
       "w": "see",
-      "start": 56.773,
-      "end": 56.912
+      "start": 60.64,
+      "end": 60.756
     },
     {
-      "w": "is",
-      "start": 56.947,
-      "end": 57.017
-    },
-    {
-      "w": "that",
-      "start": 57.051,
-      "end": 57.167
-    },
-    {
-      "w": "she",
-      "start": 57.202,
-      "end": 57.307
-    },
-    {
-      "w": "taught",
-      "start": 57.353,
-      "end": 57.551
+      "w": "on",
+      "start": 60.791,
+      "end": 60.849
     },
     {
       "w": "the",
-      "start": 57.585,
-      "end": 57.655
+      "start": 60.884,
+      "end": 60.953
+    },
+    {
+      "w": "page",
+      "start": 60.988,
+      "end": 61.279
+    },
+    {
+      "w": "is",
+      "start": 61.313,
+      "end": 61.371
+    },
+    {
+      "w": "that",
+      "start": 61.406,
+      "end": 61.511
+    },
+    {
+      "w": "she",
+      "start": 61.546,
+      "end": 61.65
+    },
+    {
+      "w": "taught",
+      "start": 61.708,
+      "end": 61.952
+    },
+    {
+      "w": "the",
+      "start": 61.987,
+      "end": 62.056
     },
     {
       "w": "teacher.",
-      "start": 57.69,
-      "end": 58.328
+      "start": 62.091,
+      "end": 62.695
     }
   ],
-  "renderedAt": 1785322285612
+  "renderedAt": 1785479577975
 }

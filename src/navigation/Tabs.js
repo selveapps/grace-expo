@@ -14,7 +14,29 @@ import YouStack from './YouStack';
 
 const Tab = createBottomTabNavigator();
 const ICONS = { Today: 'today', Stories: 'stories', Reading: 'reading', You: 'you' };
-const tapTick = { tabPress: () => Haptics.selectionAsync() };
+
+/**
+ * Tapping a tab always returns that tab to its own root.
+ *
+ * Without this, a tab remembers wherever you left it: open the player from
+ * Home's listen card and the Stories tab kept showing the player, so the
+ * Stories list and the Tea segment became unreachable. Tapping the tab you are
+ * already on is the universal "take me back to the top of this section"
+ * gesture, and it is what makes every collection reachable again.
+ */
+const tabListeners = ({ navigation, route }) => ({
+  tabPress: (e) => {
+    Haptics.selectionAsync();
+    const state = navigation.getState();
+    const nested = state?.routes?.find((r) => r.name === route.name)?.state;
+    // Only intervene when this tab is already showing something above its root.
+    if (!nested || !nested.index) return;
+    // The default tabPress action re-applies the tab's stored state, which is
+    // what put the player back on screen. Replace it rather than racing it.
+    e.preventDefault();
+    navigation.navigate(route.name, { screen: nested.routeNames[0], params: undefined });
+  },
+});
 
 // The old bar had a hard 1px top line plus a brass pill behind the active icon,
 // which is the "clear demarcation" the feedback flagged. Now the bar reads as
@@ -48,10 +70,10 @@ export default function Tabs() {
         ),
       })}
     >
-      <Tab.Screen name="Today" component={TodayScreen} listeners={tapTick} />
-      <Tab.Screen name="Stories" component={StoriesStack} listeners={tapTick} />
-      <Tab.Screen name="Reading" component={ReadingStack} listeners={tapTick} />
-      <Tab.Screen name="You" component={YouStack} listeners={tapTick} />
+      <Tab.Screen name="Today" component={TodayScreen} listeners={tabListeners} />
+      <Tab.Screen name="Stories" component={StoriesStack} listeners={tabListeners} />
+      <Tab.Screen name="Reading" component={ReadingStack} listeners={tabListeners} />
+      <Tab.Screen name="You" component={YouStack} listeners={tabListeners} />
     </Tab.Navigator>
   );
 }

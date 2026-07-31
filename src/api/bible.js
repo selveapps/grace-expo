@@ -80,26 +80,55 @@ export async function getPassage(ref) {
   } catch {
     const cached = await StorageService.get(cacheKey, null);
     if (cached) return { ...cached, online: false };
-    return { ref: 'Psalm 23:1', text: 'The Lord is my shepherd; I shall not want.', online: false };
+    // Last resort, fully offline. Still a passage rather than one clause, so an
+    // offline first run does not hand her the single most generic line there is.
+    return {
+      ref: 'Psalm 23:1-4',
+      text: PSALM_23.slice(0, 4).map((v) => v.t).join(' '),
+      online: false,
+    };
   }
 }
+
+// Mirror of backend/src/lib/scriptureMeta.ts — keep the two in sync.
+//
+// Passages rather than single lines, and every choice on both onboarding
+// screens is covered. Previously the reflection words (Courage, Trust,
+// Stillness, Mercy) were absent, so choosing Courage silently fell through to
+// Psalm 23:1 and the "chosen for you" verse was the most generic one there is.
+const CARRY_VERSE = {
+  Peace: 'John 14:25-27',
+  Worry: 'Matthew 6:25-27',
+  Gratitude: 'Psalm 100:1-5',
+  Grief: 'Psalm 34:17-19',
+  Direction: 'Proverbs 3:5-8',
+  Rest: 'Matthew 11:28-30',
+  Forgiveness: 'Colossians 3:12-14',
+  Hope: 'Isaiah 40:29-31',
+  Trust: 'Psalm 62:5-8',
+  Stillness: 'Psalm 46:1-3',
+  Courage: 'Psalm 27:1-3',
+  Mercy: 'Lamentations 3:22-26',
+};
+const FALLBACK_REF = 'Psalm 23:1-4';
 
 export async function verseForCarrying(carrying = []) {
   const tags = carrying.filter(Boolean).join(',');
   const data = await getPrivate(`/verse/for-carrying?tags=${encodeURIComponent(tags)}`);
   if (data?.text) return { ref: data.ref, text: data.text, online: true };
-  const key = carrying.find((c) => c) || null;
-  const CARRY = {
-    Peace: 'John 14:27', Worry: 'Philippians 4:6-7', Gratitude: 'Psalm 100:4', Grief: 'Psalm 34:18',
-    Direction: 'Proverbs 3:5-6', Rest: 'Matthew 11:28', Forgiveness: 'Colossians 3:13', Hope: 'Romans 15:13',
-  };
-  return getPassage(key && CARRY[key] ? CARRY[key] : 'Psalm 23:1');
+  // Match on the first tag we actually have a passage for, rather than only
+  // ever looking at carrying[0].
+  const key = carrying.find((c) => CARRY_VERSE[c]);
+  return getPassage(key ? CARRY_VERSE[key] : FALLBACK_REF);
 }
 
 export async function todaysVerse() {
   const data = await getPrivate('/today/verse');
   if (data?.text) return { ref: data.ref, text: data.text, online: true };
-  const DAILY = ['Psalm 23:1', 'Isaiah 40:31', 'Philippians 4:13', 'Psalm 46:10', 'Lamentations 3:22-23', 'Proverbs 3:5-6', 'John 1:5'];
+  const DAILY = [
+    'Psalm 23:1-4', 'Isaiah 40:29-31', 'Philippians 4:11-13', 'Psalm 46:1-3',
+    'Lamentations 3:22-26', 'Proverbs 3:5-8', 'John 1:1-5',
+  ];
   const day = Math.floor(Date.now() / 86400000);
   return getPassage(DAILY[day % DAILY.length]);
 }
