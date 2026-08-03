@@ -99,7 +99,10 @@ Legend: **P** = pass · **F** = fail · put anything odd in Notes even if it pas
 | 6.15 | Next tea | Loads the next one with its title carried in | ☐ | |
 | 6.16 | Like / Save | Toggle and persist across app restart | ☐ | |
 | 6.17 | Sample 5 clips end-to-end | Voice is energetic/conversational; audio matches on-screen captions | ☐ | |
-| 6.18 | Old-style clips | 10 clips are the previous narration style (see release notes). Confirm they still play and caption correctly | ☐ | |
+| 6.18 | Old-style clips | 6 clips are the previous narration style: `priscilla-teach`, `hagar-seen`, `zelophehad`, `widow-mite`, `joanna-fund`, `dorcas-needle`. Confirm they still play and caption correctly | ☐ | |
+| 6.19 | **End of any clip** | The last caption is the last words of the script. A literal `---` must **never** appear | ☐ | |
+| 6.20 | The 7 rewritten clips | `phoebe-letter`, `magdalene-first`, `canaanite-mother`, `bleeding-woman`, `sarah-laugh`, `huldah-scroll`, `mary-perfume` — audio matches captions word for word | ☐ | |
+| 6.21 | Quoted scripture | Quotes inside the narration are KJV wording ("Truth, Lord…", "Nay; but thou didst laugh") | ☐ | |
 
 ## 7. Mini player
 
@@ -159,14 +162,38 @@ Legend: **P** = pass · **F** = fail · put anything odd in Notes even if it pas
 | 10.10 | Long-press a verse | Options sheet (save, copy, highlight) | ☐ | |
 | 10.11 | Save a verse | Appears in You → Saved | ☐ | |
 
-## 11. Search
+### 10a. Browse by theme (new — these chips did nothing before)
 
 | # | Test | Expected | P/F | Notes |
 |---|---|---|---|---|
-| 11.1 | Search "peace" | Results in OT and/or NT | ☐ | |
-| 11.2 | Tap a result | Opens that passage | ☐ | |
-| 11.3 | Search gibberish | Calm empty state, no crash | ☐ | |
-| 11.4 | Empty query | No crash | ☐ | |
+| 10a.1 | Tap **Courage** | Theme screen opens. It must *navigate*, not just buzz | ☐ | |
+| 10a.2 | Passage list | 8 passages, each with reference, verse text and a one-line note | ☐ | |
+| 10a.3 | Verse text | Real KJV text, not a spinner that never resolves | ☐ | |
+| 10a.4 | Tap **Psalm 27:1-3** | Opens Psalms 27 **scrolled to verse 1**, lightly highlighted | ☐ | |
+| 10a.5 | Back | Returns to Reading, not out of the tab | ☐ | |
+| 10a.6 | All 8 chips | Comfort, Anxiety, Grief, Hope, Forgiveness, Courage, Rest, Gratitude each open a populated screen | ☐ | |
+| 10a.7 | Airplane mode | References and notes still render; verse text degrades without crashing | ☐ | |
+
+## 11. Search
+
+Every one of these returned "No verses found" before this build.
+
+| # | Test | Expected | P/F | Notes |
+|---|---|---|---|---|
+| 11.1 | Search "peace" | Results in **both** OT and NT | ☐ | |
+| 11.2 | Type, do not press Go | Results appear on their own (~350ms) | ☐ | |
+| 11.3 | Matched words | Highlighted in brass inside each verse | ☐ | |
+| 11.4 | Result count | Reads "Showing 100 of 420 verses", not "100 verses" | ☐ | |
+| 11.5 | **Search "John 3:16"** | Returns that exact verse | ☐ | |
+| 11.6 | Search "Psalm 23" | Returns all 6 verses of the psalm | ☐ | |
+| 11.7 | Search "ps 23:1-4" | Abbreviation and range both resolve | ☐ | |
+| 11.8 | Search "faith hope charity" | Finds 1 Corinthians 13:13 (all words, not one phrase) | ☐ | |
+| 11.9 | Tap a result | Opens that chapter at that verse | ☐ | |
+| 11.10 | Suggestion chips | Shown before first search; tapping one runs it | ☐ | |
+| 11.11 | Clear (✕) | Returns to suggestions | ☐ | |
+| 11.12 | Search gibberish | "No verses found for …", calm, no crash | ☐ | |
+| 11.13 | Empty / one character | No request fired, no crash | ☐ | |
+| 11.14 | **Airplane mode, then search** | Says the library is unreachable — must **not** say "No verses found" | ☐ | |
 
 ## 12. You / Settings
 

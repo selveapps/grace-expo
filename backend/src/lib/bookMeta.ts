@@ -10,3 +10,8 @@ export const BOOK_NAMES = [
   '2 Timothy', 'Titus', 'Philemon', 'Hebrews', 'James', '1 Peter', '2 Peter', '1 John', '2 John',
   '3 John', 'Jude', 'Revelation',
 ] as const;
+
+/** Matthew onward. The OT is the preceding 39, so one split point covers both. */
+const OT_COUNT = 39;
+export const OT_BOOKS: readonly string[] = BOOK_NAMES.slice(0, OT_COUNT);
+export const NT_BOOKS: readonly string[] = BOOK_NAMES.slice(OT_COUNT);

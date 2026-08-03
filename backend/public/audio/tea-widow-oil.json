@@ -1,1 +1,746 @@
-{"kind":"tea","teaId":"widow-oil","mood":"light","heat":1,"text":"The miracle stopped exactly when the jars ran out and that detail is everything… … A widow’s husband dies. The creditor is coming, not for the furniture, for her two sons. They’re about to be taken as slaves to pay the debt. Elisha asks her what she has in the house. She says nothing… except a little jar of oil. He tells her to go borrow empty vessels from all her neighbors. And then he says the line: “borrow not a few.” She shuts the door with her sons and starts pouring. The oil keeps coming. Vessel after vessel. Until she asks for one more and her son says there are no more left. The oil stops exactly when the containers run out. She sells it, pays the debt, keeps her sons, and lives on the rest. The miracle matched the size of her vessels. I’m soft. ---","voice":"cgSgspJ2msm6clMCkdW9","words":[{"w":"The","start":0,"end":0.139},{"w":"miracle","start":0.186,"end":0.534},{"w":"stopped","start":0.569,"end":0.871},{"w":"exactly","start":0.917,"end":1.451},{"w":"when","start":1.486,"end":1.602},{"w":"the","start":1.637,"end":1.707},{"w":"jars","start":1.741,"end":2.009},{"w":"ran","start":2.043,"end":2.171},{"w":"out","start":2.218,"end":2.368},{"w":"and","start":2.415,"end":2.519},{"w":"that","start":2.566,"end":2.705},{"w":"detail","start":2.74,"end":3.088},{"w":"is","start":3.158,"end":3.239},{"w":"everything…","start":3.297,"end":3.889},{"w":"…","start":4.493,"end":4.656},{"w":"A","start":4.841,"end":4.923},{"w":"widow’s","start":4.992,"end":5.283},{"w":"husband","start":5.317,"end":5.689},{"w":"dies.","start":5.793,"end":6.351},{"w":"The","start":6.56,"end":6.664},{"w":"creditor","start":6.711,"end":7.047},{"w":"is","start":7.094,"end":7.175},{"w":"coming,","start":7.221,"end":7.5},{"w":"not","start":7.837,"end":7.976},{"w":"for","start":8.011,"end":8.115},{"w":"the","start":8.15,"end":8.22},{"w":"furniture,","start":8.255,"end":8.8},{"w":"for","start":8.905,"end":9.021},{"w":"her","start":9.067,"end":9.149},{"w":"two","start":9.183,"end":9.288},{"w":"sons.","start":9.334,"end":9.81},{"w":"They’re","start":10.089,"end":10.298},{"w":"about","start":10.321,"end":10.484},{"w":"to","start":10.519,"end":10.565},{"w":"be","start":10.612,"end":10.681},{"w":"taken","start":10.716,"end":10.96},{"w":"as","start":10.995,"end":11.064},{"w":"slaves","start":11.111,"end":11.447},{"w":"to","start":11.482,"end":11.54},{"w":"pay","start":11.575,"end":11.68},{"w":"the","start":11.714,"end":11.784},{"w":"debt.","start":11.819,"end":12.249},{"w":"Elisha","start":12.945,"end":13.34},{"w":"asks","start":13.387,"end":13.63},{"w":"her","start":13.665,"end":13.747},{"w":"what","start":13.781,"end":13.909},{"w":"she","start":13.932,"end":14.025},{"w":"has","start":14.072,"end":14.199},{"w":"in","start":14.234,"end":14.292},{"w":"the","start":14.315,"end":14.385},{"w":"house.","start":14.42,"end":14.908},{"w":"She","start":15.349,"end":15.453},{"w":"says","start":15.5,"end":15.651},{"w":"nothing…","start":15.709,"end":16.243},{"w":"except","start":16.428,"end":16.672},{"w":"a","start":16.707,"end":16.73},{"w":"little","start":16.765,"end":16.974},{"w":"jar","start":16.997,"end":17.183},{"w":"of","start":17.23,"end":17.288},{"w":"oil.","start":17.369,"end":17.891},{"w":"He","start":18.414,"end":18.518},{"w":"tells","start":18.565,"end":18.739},{"w":"her","start":18.774,"end":18.843},{"w":"to","start":18.878,"end":18.925},{"w":"go","start":18.959,"end":19.041},{"w":"borrow","start":19.099,"end":19.343},{"w":"empty","start":19.401,"end":19.598},{"w":"vessels","start":19.644,"end":19.958},{"w":"from","start":19.993,"end":20.12},{"w":"all","start":20.19,"end":20.341},{"w":"her","start":20.399,"end":20.492},{"w":"neighbors.","start":20.538,"end":21.223},{"w":"And","start":21.746,"end":21.874},{"w":"then","start":21.908,"end":22.013},{"w":"he","start":22.048,"end":22.094},{"w":"says","start":22.129,"end":22.268},{"w":"the","start":22.303,"end":22.373},{"w":"line:","start":22.408,"end":22.802},{"w":"“borrow","start":23.127,"end":23.58},{"w":"not","start":23.638,"end":23.754},{"w":"a","start":23.789,"end":23.812},{"w":"few.”","start":23.847,"end":24.312},{"w":"She","start":25.008,"end":25.113},{"w":"shuts","start":25.148,"end":25.345},{"w":"the","start":25.38,"end":25.449},{"w":"door","start":25.484,"end":25.624},{"w":"with","start":25.659,"end":25.775},{"w":"her","start":25.81,"end":25.902},{"w":"sons","start":25.949,"end":26.216},{"w":"and","start":26.251,"end":26.344},{"w":"starts","start":26.378,"end":26.587},{"w":"pouring.","start":26.634,"end":27.156},{"w":"The","start":27.853,"end":27.957},{"w":"oil","start":28.015,"end":28.19},{"w":"keeps","start":28.236,"end":28.41},{"w":"coming.","start":28.445,"end":28.875},{"w":"Vessel","start":29.118,"end":29.432},{"w":"after","start":29.502,"end":29.745},{"w":"vessel.","start":29.78,"end":30.303},{"w":"Until","start":30.744,"end":30.941},{"w":"she","start":30.976,"end":31.057},{"w":"asks","start":31.104,"end":31.371},{"w":"for","start":31.417,"end":31.522},{"w":"one","start":31.58,"end":31.707},{"w":"more","start":31.742,"end":31.951},{"w":"and","start":32.009,"end":32.114},{"w":"her","start":32.149,"end":32.23},{"w":"son","start":32.265,"end":32.427},{"w":"says","start":32.509,"end":32.718},{"w":"there","start":32.776,"end":32.915},{"w":"are","start":32.95,"end":33.066},{"w":"no","start":33.124,"end":33.205},{"w":"more","start":33.252,"end":33.391},{"w":"left.","start":33.426,"end":33.913},{"w":"The","start":34.436,"end":34.552},{"w":"oil","start":34.622,"end":34.807},{"w":"stops","start":34.865,"end":35.167},{"w":"exactly","start":35.225,"end":35.771},{"w":"when","start":35.806,"end":35.899},{"w":"the","start":35.922,"end":35.992},{"w":"containers","start":36.015,"end":36.351},{"w":"run","start":36.386,"end":36.491},{"w":"out.","start":36.526,"end":36.839},{"w":"She","start":37.536,"end":37.64},{"w":"sells","start":37.675,"end":37.872},{"w":"it,","start":37.93,"end":38.058},{"w":"pays","start":38.093,"end":38.314},{"w":"the","start":38.372,"end":38.441},{"w":"debt,","start":38.476,"end":38.731},{"w":"keeps","start":38.859,"end":39.079},{"w":"her","start":39.114,"end":39.207},{"w":"sons,","start":39.242,"end":39.579},{"w":"and","start":39.613,"end":39.718},{"w":"lives","start":39.764,"end":39.915},{"w":"on","start":39.938,"end":39.996},{"w":"the","start":40.031,"end":40.101},{"w":"rest.","start":40.136,"end":40.542},{"w":"The","start":41.065,"end":41.157},{"w":"miracle","start":41.192,"end":41.483},{"w":"matched","start":41.517,"end":41.75},{"w":"the","start":41.773,"end":41.842},{"w":"size","start":41.889,"end":42.144},{"w":"of","start":42.179,"end":42.226},{"w":"her","start":42.26,"end":42.33},{"w":"vessels.","start":42.365,"end":42.957},{"w":"I’m","start":43.561,"end":43.688},{"w":"soft.","start":43.758,"end":44.397},{"w":"---","start":44.431,"end":44.861}],"renderedAt":1785530372751}
+{
+  "kind": "tea",
+  "teaId": "widow-oil",
+  "mood": "light",
+  "heat": 1,
+  "text": "The miracle stopped exactly when the jars ran out and that detail is everything… … A widow’s husband dies. The creditor is coming, not for the furniture, for her two sons. They’re about to be taken as slaves to pay the debt. Elisha asks her what she has in the house. She says nothing… except a little jar of oil. He tells her to go borrow empty vessels from all her neighbors. And then he says the line: “borrow not a few.” She shuts the door with her sons and starts pouring. The oil keeps coming. Vessel after vessel. Until she asks for one more and her son says there are no more left. The oil stops exactly when the containers run out. She sells it, pays the debt, keeps her sons, and lives on the rest. The miracle matched the size of her vessels. I’m soft.",
+  "voice": "cgSgspJ2msm6clMCkdW9",
+  "words": [
+    {
+      "w": "The",
+      "start": 0,
+      "end": 0.139
+    },
+    {
+      "w": "miracle",
+      "start": 0.186,
+      "end": 0.534
+    },
+    {
+      "w": "stopped",
+      "start": 0.569,
+      "end": 0.871
+    },
+    {
+      "w": "exactly",
+      "start": 0.917,
+      "end": 1.451
+    },
+    {
+      "w": "when",
+      "start": 1.486,
+      "end": 1.602
+    },
+    {
+      "w": "the",
+      "start": 1.637,
+      "end": 1.707
+    },
+    {
+      "w": "jars",
+      "start": 1.741,
+      "end": 2.009
+    },
+    {
+      "w": "ran",
+      "start": 2.043,
+      "end": 2.171
+    },
+    {
+      "w": "out",
+      "start": 2.218,
+      "end": 2.368
+    },
+    {
+      "w": "and",
+      "start": 2.415,
+      "end": 2.519
+    },
+    {
+      "w": "that",
+      "start": 2.566,
+      "end": 2.705
+    },
+    {
+      "w": "detail",
+      "start": 2.74,
+      "end": 3.088
+    },
+    {
+      "w": "is",
+      "start": 3.158,
+      "end": 3.239
+    },
+    {
+      "w": "everything…",
+      "start": 3.297,
+      "end": 3.889
+    },
+    {
+      "w": "…",
+      "start": 4.493,
+      "end": 4.656
+    },
+    {
+      "w": "A",
+      "start": 4.841,
+      "end": 4.923
+    },
+    {
+      "w": "widow’s",
+      "start": 4.992,
+      "end": 5.283
+    },
+    {
+      "w": "husband",
+      "start": 5.317,
+      "end": 5.689
+    },
+    {
+      "w": "dies.",
+      "start": 5.793,
+      "end": 6.351
+    },
+    {
+      "w": "The",
+      "start": 6.56,
+      "end": 6.664
+    },
+    {
+      "w": "creditor",
+      "start": 6.711,
+      "end": 7.047
+    },
+    {
+      "w": "is",
+      "start": 7.094,
+      "end": 7.175
+    },
+    {
+      "w": "coming,",
+      "start": 7.221,
+      "end": 7.5
+    },
+    {
+      "w": "not",
+      "start": 7.837,
+      "end": 7.976
+    },
+    {
+      "w": "for",
+      "start": 8.011,
+      "end": 8.115
+    },
+    {
+      "w": "the",
+      "start": 8.15,
+      "end": 8.22
+    },
+    {
+      "w": "furniture,",
+      "start": 8.255,
+      "end": 8.8
+    },
+    {
+      "w": "for",
+      "start": 8.905,
+      "end": 9.021
+    },
+    {
+      "w": "her",
+      "start": 9.067,
+      "end": 9.149
+    },
+    {
+      "w": "two",
+      "start": 9.183,
+      "end": 9.288
+    },
+    {
+      "w": "sons.",
+      "start": 9.334,
+      "end": 9.81
+    },
+    {
+      "w": "They’re",
+      "start": 10.089,
+      "end": 10.298
+    },
+    {
+      "w": "about",
+      "start": 10.321,
+      "end": 10.484
+    },
+    {
+      "w": "to",
+      "start": 10.519,
+      "end": 10.565
+    },
+    {
+      "w": "be",
+      "start": 10.612,
+      "end": 10.681
+    },
+    {
+      "w": "taken",
+      "start": 10.716,
+      "end": 10.96
+    },
+    {
+      "w": "as",
+      "start": 10.995,
+      "end": 11.064
+    },
+    {
+      "w": "slaves",
+      "start": 11.111,
+      "end": 11.447
+    },
+    {
+      "w": "to",
+      "start": 11.482,
+      "end": 11.54
+    },
+    {
+      "w": "pay",
+      "start": 11.575,
+      "end": 11.68
+    },
+    {
+      "w": "the",
+      "start": 11.714,
+      "end": 11.784
+    },
+    {
+      "w": "debt.",
+      "start": 11.819,
+      "end": 12.249
+    },
+    {
+      "w": "Elisha",
+      "start": 12.945,
+      "end": 13.34
+    },
+    {
+      "w": "asks",
+      "start": 13.387,
+      "end": 13.63
+    },
+    {
+      "w": "her",
+      "start": 13.665,
+      "end": 13.747
+    },
+    {
+      "w": "what",
+      "start": 13.781,
+      "end": 13.909
+    },
+    {
+      "w": "she",
+      "start": 13.932,
+      "end": 14.025
+    },
+    {
+      "w": "has",
+      "start": 14.072,
+      "end": 14.199
+    },
+    {
+      "w": "in",
+      "start": 14.234,
+      "end": 14.292
+    },
+    {
+      "w": "the",
+      "start": 14.315,
+      "end": 14.385
+    },
+    {
+      "w": "house.",
+      "start": 14.42,
+      "end": 14.908
+    },
+    {
+      "w": "She",
+      "start": 15.349,
+      "end": 15.453
+    },
+    {
+      "w": "says",
+      "start": 15.5,
+      "end": 15.651
+    },
+    {
+      "w": "nothing…",
+      "start": 15.709,
+      "end": 16.243
+    },
+    {
+      "w": "except",
+      "start": 16.428,
+      "end": 16.672
+    },
+    {
+      "w": "a",
+      "start": 16.707,
+      "end": 16.73
+    },
+    {
+      "w": "little",
+      "start": 16.765,
+      "end": 16.974
+    },
+    {
+      "w": "jar",
+      "start": 16.997,
+      "end": 17.183
+    },
+    {
+      "w": "of",
+      "start": 17.23,
+      "end": 17.288
+    },
+    {
+      "w": "oil.",
+      "start": 17.369,
+      "end": 17.891
+    },
+    {
+      "w": "He",
+      "start": 18.414,
+      "end": 18.518
+    },
+    {
+      "w": "tells",
+      "start": 18.565,
+      "end": 18.739
+    },
+    {
+      "w": "her",
+      "start": 18.774,
+      "end": 18.843
+    },
+    {
+      "w": "to",
+      "start": 18.878,
+      "end": 18.925
+    },
+    {
+      "w": "go",
+      "start": 18.959,
+      "end": 19.041
+    },
+    {
+      "w": "borrow",
+      "start": 19.099,
+      "end": 19.343
+    },
+    {
+      "w": "empty",
+      "start": 19.401,
+      "end": 19.598
+    },
+    {
+      "w": "vessels",
+      "start": 19.644,
+      "end": 19.958
+    },
+    {
+      "w": "from",
+      "start": 19.993,
+      "end": 20.12
+    },
+    {
+      "w": "all",
+      "start": 20.19,
+      "end": 20.341
+    },
+    {
+      "w": "her",
+      "start": 20.399,
+      "end": 20.492
+    },
+    {
+      "w": "neighbors.",
+      "start": 20.538,
+      "end": 21.223
+    },
+    {
+      "w": "And",
+      "start": 21.746,
+      "end": 21.874
+    },
+    {
+      "w": "then",
+      "start": 21.908,
+      "end": 22.013
+    },
+    {
+      "w": "he",
+      "start": 22.048,
+      "end": 22.094
+    },
+    {
+      "w": "says",
+      "start": 22.129,
+      "end": 22.268
+    },
+    {
+      "w": "the",
+      "start": 22.303,
+      "end": 22.373
+    },
+    {
+      "w": "line:",
+      "start": 22.408,
+      "end": 22.802
+    },
+    {
+      "w": "“borrow",
+      "start": 23.127,
+      "end": 23.58
+    },
+    {
+      "w": "not",
+      "start": 23.638,
+      "end": 23.754
+    },
+    {
+      "w": "a",
+      "start": 23.789,
+      "end": 23.812
+    },
+    {
+      "w": "few.”",
+      "start": 23.847,
+      "end": 24.312
+    },
+    {
+      "w": "She",
+      "start": 25.008,
+      "end": 25.113
+    },
+    {
+      "w": "shuts",
+      "start": 25.148,
+      "end": 25.345
+    },
+    {
+      "w": "the",
+      "start": 25.38,
+      "end": 25.449
+    },
+    {
+      "w": "door",
+      "start": 25.484,
+      "end": 25.624
+    },
+    {
+      "w": "with",
+      "start": 25.659,
+      "end": 25.775
+    },
+    {
+      "w": "her",
+      "start": 25.81,
+      "end": 25.902
+    },
+    {
+      "w": "sons",
+      "start": 25.949,
+      "end": 26.216
+    },
+    {
+      "w": "and",
+      "start": 26.251,
+      "end": 26.344
+    },
+    {
+      "w": "starts",
+      "start": 26.378,
+      "end": 26.587
+    },
+    {
+      "w": "pouring.",
+      "start": 26.634,
+      "end": 27.156
+    },
+    {
+      "w": "The",
+      "start": 27.853,
+      "end": 27.957
+    },
+    {
+      "w": "oil",
+      "start": 28.015,
+      "end": 28.19
+    },
+    {
+      "w": "keeps",
+      "start": 28.236,
+      "end": 28.41
+    },
+    {
+      "w": "coming.",
+      "start": 28.445,
+      "end": 28.875
+    },
+    {
+      "w": "Vessel",
+      "start": 29.118,
+      "end": 29.432
+    },
+    {
+      "w": "after",
+      "start": 29.502,
+      "end": 29.745
+    },
+    {
+      "w": "vessel.",
+      "start": 29.78,
+      "end": 30.303
+    },
+    {
+      "w": "Until",
+      "start": 30.744,
+      "end": 30.941
+    },
+    {
+      "w": "she",
+      "start": 30.976,
+      "end": 31.057
+    },
+    {
+      "w": "asks",
+      "start": 31.104,
+      "end": 31.371
+    },
+    {
+      "w": "for",
+      "start": 31.417,
+      "end": 31.522
+    },
+    {
+      "w": "one",
+      "start": 31.58,
+      "end": 31.707
+    },
+    {
+      "w": "more",
+      "start": 31.742,
+      "end": 31.951
+    },
+    {
+      "w": "and",
+      "start": 32.009,
+      "end": 32.114
+    },
+    {
+      "w": "her",
+      "start": 32.149,
+      "end": 32.23
+    },
+    {
+      "w": "son",
+      "start": 32.265,
+      "end": 32.427
+    },
+    {
+      "w": "says",
+      "start": 32.509,
+      "end": 32.718
+    },
+    {
+      "w": "there",
+      "start": 32.776,
+      "end": 32.915
+    },
+    {
+      "w": "are",
+      "start": 32.95,
+      "end": 33.066
+    },
+    {
+      "w": "no",
+      "start": 33.124,
+      "end": 33.205
+    },
+    {
+      "w": "more",
+      "start": 33.252,
+      "end": 33.391
+    },
+    {
+      "w": "left.",
+      "start": 33.426,
+      "end": 33.913
+    },
+    {
+      "w": "The",
+      "start": 34.436,
+      "end": 34.552
+    },
+    {
+      "w": "oil",
+      "start": 34.622,
+      "end": 34.807
+    },
+    {
+      "w": "stops",
+      "start": 34.865,
+      "end": 35.167
+    },
+    {
+      "w": "exactly",
+      "start": 35.225,
+      "end": 35.771
+    },
+    {
+      "w": "when",
+      "start": 35.806,
+      "end": 35.899
+    },
+    {
+      "w": "the",
+      "start": 35.922,
+      "end": 35.992
+    },
+    {
+      "w": "containers",
+      "start": 36.015,
+      "end": 36.351
+    },
+    {
+      "w": "run",
+      "start": 36.386,
+      "end": 36.491
+    },
+    {
+      "w": "out.",
+      "start": 36.526,
+      "end": 36.839
+    },
+    {
+      "w": "She",
+      "start": 37.536,
+      "end": 37.64
+    },
+    {
+      "w": "sells",
+      "start": 37.675,
+      "end": 37.872
+    },
+    {
+      "w": "it,",
+      "start": 37.93,
+      "end": 38.058
+    },
+    {
+      "w": "pays",
+      "start": 38.093,
+      "end": 38.314
+    },
+    {
+      "w": "the",
+      "start": 38.372,
+      "end": 38.441
+    },
+    {
+      "w": "debt,",
+      "start": 38.476,
+      "end": 38.731
+    },
+    {
+      "w": "keeps",
+      "start": 38.859,
+      "end": 39.079
+    },
+    {
+      "w": "her",
+      "start": 39.114,
+      "end": 39.207
+    },
+    {
+      "w": "sons,",
+      "start": 39.242,
+      "end": 39.579
+    },
+    {
+      "w": "and",
+      "start": 39.613,
+      "end": 39.718
+    },
+    {
+      "w": "lives",
+      "start": 39.764,
+      "end": 39.915
+    },
+    {
+      "w": "on",
+      "start": 39.938,
+      "end": 39.996
+    },
+    {
+      "w": "the",
+      "start": 40.031,
+      "end": 40.101
+    },
+    {
+      "w": "rest.",
+      "start": 40.136,
+      "end": 40.542
+    },
+    {
+      "w": "The",
+      "start": 41.065,
+      "end": 41.157
+    },
+    {
+      "w": "miracle",
+      "start": 41.192,
+      "end": 41.483
+    },
+    {
+      "w": "matched",
+      "start": 41.517,
+      "end": 41.75
+    },
+    {
+      "w": "the",
+      "start": 41.773,
+      "end": 41.842
+    },
+    {
+      "w": "size",
+      "start": 41.889,
+      "end": 42.144
+    },
+    {
+      "w": "of",
+      "start": 42.179,
+      "end": 42.226
+    },
+    {
+      "w": "her",
+      "start": 42.26,
+      "end": 42.33
+    },
+    {
+      "w": "vessels.",
+      "start": 42.365,
+      "end": 42.957
+    },
+    {
+      "w": "I’m",
+      "start": 43.561,
+      "end": 43.688
+    },
+    {
+      "w": "soft.",
+      "start": 43.758,
+      "end": 44.397
+    }
+  ],
+  "renderedAt": 1785530372751
+}

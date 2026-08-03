@@ -49,6 +49,9 @@ export const schemas = {
         properties: {
           ot: { type: 'array', items: { type: 'object', additionalProperties: true } },
           nt: { type: 'array', items: { type: 'object', additionalProperties: true } },
+          // Results are capped, so the client needs the unclipped count to be
+          // able to say "showing 100 of 428" rather than implying 100 is all.
+          total: { type: 'integer' },
         },
       },
     },

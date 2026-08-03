@@ -86,6 +86,17 @@ describe('Tea catalog (v3)', () => {
     }
   });
 
+  // "---" was a separator in the original drafting format. It survived into the
+  // narration of 17 teas, which meant it was sent to TTS and came back as a
+  // trailing word timing, so every one of those clips ended by drawing a literal
+  // "---" caption over the artwork.
+  test('no drafting markers survive in the narration', () => {
+    for (const t of TEAS) {
+      assert.ok(!t.tea.includes('---'), `${t.id} tea still contains a --- marker`);
+      assert.ok(!t.hook.includes('---'), `${t.id} hook still contains a --- marker`);
+    }
+  });
+
   test('no em-dashes in user-facing copy', () => {
     for (const t of TEAS) {
       assert.ok(!t.hook.includes('—'), `${t.id} hook has an em-dash`);

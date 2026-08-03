@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable, ActivityIndicator, Modal, Share } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
@@ -48,6 +48,10 @@ function ActionSheet({ verse, refStr, saved, highlighted, onClose, onAction }) {
 export default function ChapterScreen({ route, navigation }) {
   const book = route.params?.book || 'Psalms';
   const chapter = route.params?.chapter || 23;
+  // Set when we arrive from a theme list or a search hit, which point at one
+  // verse rather than the chapter. Without this the reader opens at verse 1 and
+  // she has to hunt for the line she just tapped.
+  const focusVerse = route.params?.verse ?? null;
   const { saveVerse, removeVerse, isSaved, addReflection, profile, setProfile } = useProfile();
 
   // Reader theme + font size from preferences
@@ -81,6 +85,21 @@ export default function ChapterScreen({ route, navigation }) {
   const [failed, setFailed] = useState(false);
   const [active, setActive] = useState(null); // verse under the action sheet
   const [highlights, setHighlights] = useState({}); // ref -> true (session)
+
+  const scrollRef = useRef(null);
+  const focusY = useRef(null);
+
+  // Scroll to the verse we were sent to, once the chapter has laid out. onLayout
+  // for that row has run by the time `verses` is on screen, so the offset is
+  // real rather than estimated from a row height.
+  useEffect(() => {
+    if (!focusVerse || !verses?.length) return;
+    const t = setTimeout(() => {
+      if (focusY.current == null) return;
+      scrollRef.current?.scrollTo({ y: Math.max(0, focusY.current - 80), animated: true });
+    }, 250);
+    return () => clearTimeout(t);
+  }, [focusVerse, verses]);
 
   const load = React.useCallback(() => {
     setVerses(null); setFailed(false);
@@ -169,13 +188,25 @@ export default function ChapterScreen({ route, navigation }) {
       </View>
 
       {verses ? (
-        <ScrollView contentContainerStyle={styles.body} showsVerticalScrollIndicator={false}>
+        <ScrollView
+          ref={scrollRef}
+          contentContainerStyle={styles.body}
+          showsVerticalScrollIndicator={false}
+        >
           {verses.map((v) => {
             const refStr = refOf(v);
             const hl = highlights[refStr];
+            const focused = focusVerse === v.n;
             return (
-              <Pressable key={v.n} onLongPress={() => openSheet(v)} delayLongPress={220}>
-                <Text style={[styles.verse, { fontSize: fs, lineHeight: fs * 1.62, color: THEME.ink }, hl && styles.verseHl]}>
+              <Pressable
+                key={v.n}
+                onLongPress={() => openSheet(v)}
+                delayLongPress={220}
+                // Measure where this verse sits so we can scroll to it once the
+                // chapter has laid out.
+                onLayout={focused ? (e) => { focusY.current = e.nativeEvent.layout.y; } : undefined}
+              >
+                <Text style={[styles.verse, { fontSize: fs, lineHeight: fs * 1.62, color: THEME.ink }, hl && styles.verseHl, focused && styles.verseFocus]}>
                   <Text style={styles.vnum}>{v.n} </Text>{v.t}
                   {isSaved(refStr) ? <Text style={styles.mark}>  ·</Text> : null}
                 </Text>
@@ -224,6 +255,9 @@ const styles = StyleSheet.create({
   body: { paddingHorizontal: 26, paddingTop: 22, paddingBottom: 20 },
   verse: { fontFamily: fonts.serif, fontSize: 21, lineHeight: 34, color: colors.ink, marginBottom: 14 },
   verseHl: { backgroundColor: 'rgba(230,207,148,0.4)', borderRadius: 6 },
+  // Lighter than a user highlight: this marks "here is the verse you tapped",
+  // not "you saved this".
+  verseFocus: { backgroundColor: 'rgba(230,207,148,0.22)', borderRadius: 6 },
   vnum: { fontFamily: fonts.sansBold, fontSize: 11, color: colors.brass },
   mark: { color: colors.brass },
   bloom: { alignItems: 'center', marginVertical: 12 },

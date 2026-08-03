@@ -3,1149 +3,1089 @@
   "teaId": "phoebe-letter",
   "mood": "dark",
   "heat": 2,
-  "text": "Paul opens the last chapter of Romans by telling an entire church to give this woman whatever she asks for. Romans sixteen. The final chapter. And he starts it with a personal commendation. \"I commend unto you Phebe our sister, which is a servant of the church which is at Cenchrea.\" Now. That word servant. In Greek it is diakonos. Elsewhere in the New Testament translators render that exact same word deacon. Or minister. Here, historically, a lot of them chose servant. Scholars have gone back and forth on it for centuries, and you should know that is a translation decision, not a settled fact. Then Paul asks the Roman church to receive her, and, \"that ye assist her in whatsoever business she hath need of you.\" Whatever she needs. Give it to her. And then his reason. \"For she hath been a succourer of many, and of myself also.\" A patron. A protector. She had backed Paul personally. One more thing, and I want to be straight with you. You will often hear that Phoebe carried the letter to Rome. That is a very old and very reasonable inference, because she is commended first, right at the front. It is not stated in the text. Inference. Not chapter and verse. What is chapter and verse is that Paul told a whole church to do what she asked.",
+  "text": "Girl, pause the scroll… Paul is finishing Romans and casually name-drops her like it is nothing… … Phoebe. Romans sixteen, the final chapter. \"I commend unto you Phebe our sister, which is a servant of the church which is at Cenchrea.\" That word servant is diakonos in the Greek, the same word rendered deacon and minister elsewhere in the New Testament. Which one it means here is a translation call, not a settled fact. Then Paul tells an entire church what to do about her. \"That ye receive her in the Lord, as becometh saints, and that ye assist her in whatsoever business she hath need of you.\" Whatever she needs. Give it to her. And then the line that lands. \"For she hath been a succourer of many, and of myself also.\" A patron. A protector. She is the one who showed up with cover and connections, and Paul is saying he was one of the people she showed up for. She is commended first, right at the front of the chapter, which is why so many believe she is the one who carried the letter to Rome. That part is inference, not chapter and verse. What is chapter and verse is that Paul made sure nobody got to treat her like a side character.",
   "voice": "FGY2WhTYpPnrIDTdsKH5",
   "words": [
     {
-      "w": "Paul",
+      "w": "Girl,",
       "start": 0,
-      "end": 0.244
+      "end": 0.29
     },
     {
-      "w": "opens",
-      "start": 0.313,
-      "end": 0.592
-    },
-    {
-      "w": "the",
-      "start": 0.639,
-      "end": 0.72
-    },
-    {
-      "w": "last",
-      "start": 0.778,
-      "end": 1.022
-    },
-    {
-      "w": "chapter",
-      "start": 1.057,
-      "end": 1.347
-    },
-    {
-      "w": "of",
-      "start": 1.382,
-      "end": 1.428
-    },
-    {
-      "w": "Romans",
-      "start": 1.509,
-      "end": 1.846
-    },
-    {
-      "w": "by",
-      "start": 1.904,
-      "end": 2.009
-    },
-    {
-      "w": "telling",
-      "start": 2.055,
-      "end": 2.299
-    },
-    {
-      "w": "an",
-      "start": 2.334,
-      "end": 2.38
-    },
-    {
-      "w": "entire",
-      "start": 2.426,
-      "end": 2.833
-    },
-    {
-      "w": "church",
-      "start": 2.868,
-      "end": 3.111
-    },
-    {
-      "w": "to",
-      "start": 3.158,
-      "end": 3.228
-    },
-    {
-      "w": "give",
-      "start": 3.274,
-      "end": 3.413
-    },
-    {
-      "w": "this",
-      "start": 3.448,
-      "end": 3.576
-    },
-    {
-      "w": "woman",
-      "start": 3.634,
-      "end": 3.889
-    },
-    {
-      "w": "whatever",
-      "start": 3.971,
-      "end": 4.331
-    },
-    {
-      "w": "she",
-      "start": 4.389,
-      "end": 4.505
-    },
-    {
-      "w": "asks",
-      "start": 4.574,
-      "end": 4.876
-    },
-    {
-      "w": "for.",
-      "start": 4.923,
-      "end": 5.329
-    },
-    {
-      "w": "Romans",
-      "start": 5.712,
-      "end": 6.026
-    },
-    {
-      "w": "sixteen.",
-      "start": 6.06,
-      "end": 6.641
-    },
-    {
-      "w": "The",
-      "start": 6.792,
-      "end": 6.896
-    },
-    {
-      "w": "final",
-      "start": 6.931,
-      "end": 7.175
-    },
-    {
-      "w": "chapter.",
-      "start": 7.21,
-      "end": 7.744
-    },
-    {
-      "w": "And",
-      "start": 8.069,
-      "end": 8.173
-    },
-    {
-      "w": "he",
-      "start": 8.208,
-      "end": 8.266
-    },
-    {
-      "w": "starts",
-      "start": 8.313,
-      "end": 8.568
-    },
-    {
-      "w": "it",
-      "start": 8.615,
-      "end": 8.684
-    },
-    {
-      "w": "with",
-      "start": 8.719,
-      "end": 8.835
-    },
-    {
-      "w": "a",
-      "start": 8.87,
-      "end": 8.905
-    },
-    {
-      "w": "personal",
-      "start": 8.975,
-      "end": 9.334
-    },
-    {
-      "w": "commendation.",
-      "start": 9.381,
-      "end": 10.101
-    },
-    {
-      "w": "\"I",
-      "start": 10.484,
-      "end": 10.693
-    },
-    {
-      "w": "commend",
-      "start": 10.797,
-      "end": 11.053
-    },
-    {
-      "w": "unto",
-      "start": 11.111,
-      "end": 11.25
-    },
-    {
-      "w": "you",
-      "start": 11.297,
-      "end": 11.389
-    },
-    {
-      "w": "Phebe",
-      "start": 11.447,
-      "end": 11.738
-    },
-    {
-      "w": "our",
-      "start": 11.796,
-      "end": 11.981
-    },
-    {
-      "w": "sister,",
-      "start": 12.063,
-      "end": 12.411
-    },
-    {
-      "w": "which",
-      "start": 12.434,
-      "end": 12.608
-    },
-    {
-      "w": "is",
-      "start": 12.643,
-      "end": 12.713
-    },
-    {
-      "w": "a",
-      "start": 12.759,
-      "end": 12.794
-    },
-    {
-      "w": "servant",
-      "start": 12.84,
-      "end": 13.096
-    },
-    {
-      "w": "of",
-      "start": 13.119,
-      "end": 13.177
+      "w": "pause",
+      "start": 0.325,
+      "end": 0.569
     },
     {
       "w": "the",
-      "start": 13.212,
-      "end": 13.282
+      "start": 0.604,
+      "end": 0.685
     },
     {
-      "w": "church",
-      "start": 13.316,
-      "end": 13.583
-    },
-    {
-      "w": "which",
-      "start": 13.618,
-      "end": 13.781
-    },
-    {
-      "w": "is",
-      "start": 13.816,
-      "end": 13.885
-    },
-    {
-      "w": "at",
-      "start": 13.92,
-      "end": 13.978
-    },
-    {
-      "w": "Cenchrea.\"",
-      "start": 14.013,
-      "end": 14.756
-    },
-    {
-      "w": "Now.",
-      "start": 15.882,
-      "end": 16.242
-    },
-    {
-      "w": "That",
-      "start": 16.3,
-      "end": 16.463
-    },
-    {
-      "w": "word",
-      "start": 16.498,
-      "end": 16.648
-    },
-    {
-      "w": "servant.",
-      "start": 16.683,
-      "end": 17.124
-    },
-    {
-      "w": "In",
-      "start": 17.229,
-      "end": 17.368
-    },
-    {
-      "w": "Greek",
-      "start": 17.426,
-      "end": 17.67
-    },
-    {
-      "w": "it",
-      "start": 17.728,
-      "end": 17.809
-    },
-    {
-      "w": "is",
-      "start": 17.844,
-      "end": 17.902
-    },
-    {
-      "w": "diakonos.",
-      "start": 17.937,
-      "end": 18.645
-    },
-    {
-      "w": "Elsewhere",
-      "start": 18.669,
-      "end": 19.029
-    },
-    {
-      "w": "in",
-      "start": 19.052,
-      "end": 19.098
-    },
-    {
-      "w": "the",
-      "start": 19.133,
-      "end": 19.203
-    },
-    {
-      "w": "New",
-      "start": 19.237,
-      "end": 19.33
-    },
-    {
-      "w": "Testament",
-      "start": 19.365,
-      "end": 19.725
-    },
-    {
-      "w": "translators",
-      "start": 19.76,
-      "end": 20.224
-    },
-    {
-      "w": "render",
-      "start": 20.282,
-      "end": 20.48
-    },
-    {
-      "w": "that",
-      "start": 20.526,
-      "end": 20.654
-    },
-    {
-      "w": "exact",
-      "start": 20.712,
-      "end": 21.049
-    },
-    {
-      "w": "same",
-      "start": 21.095,
-      "end": 21.281
-    },
-    {
-      "w": "word",
-      "start": 21.316,
-      "end": 21.606
-    },
-    {
-      "w": "deacon.",
-      "start": 21.687,
-      "end": 22.175
-    },
-    {
-      "w": "Or",
-      "start": 22.453,
-      "end": 22.593
-    },
-    {
-      "w": "minister.",
-      "start": 22.639,
-      "end": 23.15
-    },
-    {
-      "w": "Here,",
-      "start": 23.359,
-      "end": 23.568
-    },
-    {
-      "w": "historically,",
-      "start": 23.591,
-      "end": 24.056
-    },
-    {
-      "w": "a",
-      "start": 24.09,
-      "end": 24.125
-    },
-    {
-      "w": "lot",
-      "start": 24.195,
-      "end": 24.311
-    },
-    {
-      "w": "of",
-      "start": 24.334,
-      "end": 24.381
-    },
-    {
-      "w": "them",
-      "start": 24.416,
-      "end": 24.52
-    },
-    {
-      "w": "chose",
-      "start": 24.567,
-      "end": 24.776
-    },
-    {
-      "w": "servant.",
-      "start": 24.811,
-      "end": 25.182
-    },
-    {
-      "w": "Scholars",
-      "start": 25.31,
-      "end": 25.646
-    },
-    {
-      "w": "have",
-      "start": 25.681,
-      "end": 25.797
-    },
-    {
-      "w": "gone",
-      "start": 25.821,
-      "end": 25.972
-    },
-    {
-      "w": "back",
-      "start": 26.006,
-      "end": 26.146
-    },
-    {
-      "w": "and",
-      "start": 26.181,
-      "end": 26.25
-    },
-    {
-      "w": "forth",
-      "start": 26.285,
-      "end": 26.471
-    },
-    {
-      "w": "on",
-      "start": 26.506,
-      "end": 26.575
-    },
-    {
-      "w": "it",
-      "start": 26.61,
-      "end": 26.68
-    },
-    {
-      "w": "for",
-      "start": 26.715,
-      "end": 26.807
-    },
-    {
-      "w": "centuries,",
-      "start": 26.842,
-      "end": 27.295
-    },
-    {
-      "w": "and",
-      "start": 27.318,
-      "end": 27.423
-    },
-    {
-      "w": "you",
-      "start": 27.469,
-      "end": 27.562
-    },
-    {
-      "w": "should",
-      "start": 27.597,
-      "end": 27.783
-    },
-    {
-      "w": "know",
-      "start": 27.818,
-      "end": 27.968
-    },
-    {
-      "w": "that",
-      "start": 28.027,
-      "end": 28.154
-    },
-    {
-      "w": "is",
-      "start": 28.201,
-      "end": 28.282
-    },
-    {
-      "w": "a",
-      "start": 28.328,
-      "end": 28.352
-    },
-    {
-      "w": "translation",
-      "start": 28.386,
-      "end": 28.92
-    },
-    {
-      "w": "decision,",
-      "start": 28.955,
-      "end": 29.42
-    },
-    {
-      "w": "not",
-      "start": 29.571,
-      "end": 29.722
-    },
-    {
-      "w": "a",
-      "start": 29.768,
-      "end": 29.791
-    },
-    {
-      "w": "settled",
-      "start": 29.838,
-      "end": 30.093
-    },
-    {
-      "w": "fact.",
-      "start": 30.128,
-      "end": 30.488
-    },
-    {
-      "w": "Then",
-      "start": 30.523,
-      "end": 30.674
+      "w": "scroll…",
+      "start": 0.731,
+      "end": 1.207
     },
     {
       "w": "Paul",
-      "start": 30.732,
-      "end": 30.894
+      "start": 1.486,
+      "end": 1.672
     },
     {
-      "w": "asks",
-      "start": 30.952,
-      "end": 31.115
+      "w": "is",
+      "start": 1.718,
+      "end": 1.788
     },
     {
-      "w": "the",
-      "start": 31.15,
-      "end": 31.219
+      "w": "finishing",
+      "start": 1.834,
+      "end": 2.148
     },
     {
-      "w": "Roman",
-      "start": 31.277,
-      "end": 31.51
+      "w": "Romans",
+      "start": 2.218,
+      "end": 2.682
     },
     {
-      "w": "church",
-      "start": 31.556,
-      "end": 31.788
+      "w": "and",
+      "start": 2.717,
+      "end": 2.81
     },
     {
-      "w": "to",
-      "start": 31.823,
-      "end": 31.881
+      "w": "casually",
+      "start": 2.856,
+      "end": 3.239
     },
     {
-      "w": "receive",
-      "start": 31.939,
-      "end": 32.195
-    },
-    {
-      "w": "her,",
-      "start": 32.229,
-      "end": 32.45
-    },
-    {
-      "w": "and,",
-      "start": 32.485,
-      "end": 32.775
-    },
-    {
-      "w": "\"that",
-      "start": 32.798,
-      "end": 32.984
-    },
-    {
-      "w": "ye",
-      "start": 33.019,
-      "end": 33.1
-    },
-    {
-      "w": "assist",
-      "start": 33.147,
-      "end": 33.379
+      "w": "name-drops",
+      "start": 3.286,
+      "end": 3.715
     },
     {
       "w": "her",
-      "start": 33.414,
-      "end": 33.518
+      "start": 3.75,
+      "end": 3.878
     },
     {
-      "w": "in",
-      "start": 33.576,
-      "end": 33.634
-    },
-    {
-      "w": "whatsoever",
-      "start": 33.669,
-      "end": 34.017
-    },
-    {
-      "w": "business",
-      "start": 34.075,
-      "end": 34.4
-    },
-    {
-      "w": "she",
-      "start": 34.435,
-      "end": 34.516
-    },
-    {
-      "w": "hath",
-      "start": 34.551,
-      "end": 34.667
-    },
-    {
-      "w": "need",
-      "start": 34.702,
-      "end": 34.841
-    },
-    {
-      "w": "of",
-      "start": 34.876,
-      "end": 34.923
-    },
-    {
-      "w": "you.\"",
-      "start": 34.957,
-      "end": 35.213
-    },
-    {
-      "w": "Whatever",
-      "start": 35.422,
-      "end": 35.689
-    },
-    {
-      "w": "she",
-      "start": 35.735,
-      "end": 35.828
-    },
-    {
-      "w": "needs.",
-      "start": 35.886,
-      "end": 36.258
-    },
-    {
-      "w": "Give",
-      "start": 36.304,
-      "end": 36.443
+      "w": "like",
+      "start": 3.947,
+      "end": 4.145
     },
     {
       "w": "it",
-      "start": 36.478,
-      "end": 36.536
+      "start": 4.18,
+      "end": 4.261
     },
     {
-      "w": "to",
-      "start": 36.56,
-      "end": 36.606
+      "w": "is",
+      "start": 4.296,
+      "end": 4.354
     },
     {
-      "w": "her.",
-      "start": 36.664,
-      "end": 36.978
+      "w": "nothing…",
+      "start": 4.423,
+      "end": 4.946
     },
     {
-      "w": "And",
-      "start": 38.104,
-      "end": 38.231
+      "w": "…",
+      "start": 5.329,
+      "end": 5.457
     },
     {
-      "w": "then",
-      "start": 38.266,
-      "end": 38.382
+      "w": "Phoebe.",
+      "start": 5.666,
+      "end": 6.223
     },
     {
-      "w": "his",
-      "start": 38.452,
-      "end": 38.568
+      "w": "Romans",
+      "start": 6.502,
+      "end": 6.803
     },
     {
-      "w": "reason.",
-      "start": 38.626,
-      "end": 39.149
+      "w": "sixteen,",
+      "start": 6.838,
+      "end": 7.407
     },
     {
-      "w": "\"For",
-      "start": 39.845,
-      "end": 40.066
+      "w": "the",
+      "start": 7.477,
+      "end": 7.57
     },
     {
-      "w": "she",
-      "start": 40.101,
-      "end": 40.182
+      "w": "final",
+      "start": 7.605,
+      "end": 7.814
     },
     {
-      "w": "hath",
-      "start": 40.217,
-      "end": 40.333
+      "w": "chapter.",
+      "start": 7.848,
+      "end": 8.336
     },
     {
-      "w": "been",
-      "start": 40.368,
-      "end": 40.495
+      "w": "\"I",
+      "start": 8.661,
+      "end": 8.754
+    },
+    {
+      "w": "commend",
+      "start": 8.858,
+      "end": 9.125
+    },
+    {
+      "w": "unto",
+      "start": 9.183,
+      "end": 9.346
+    },
+    {
+      "w": "you",
+      "start": 9.416,
+      "end": 9.613
+    },
+    {
+      "w": "Phebe",
+      "start": 9.799,
+      "end": 10.275
+    },
+    {
+      "w": "our",
+      "start": 10.344,
+      "end": 10.472
+    },
+    {
+      "w": "sister,",
+      "start": 10.553,
+      "end": 11.111
+    },
+    {
+      "w": "which",
+      "start": 11.134,
+      "end": 11.308
+    },
+    {
+      "w": "is",
+      "start": 11.343,
+      "end": 11.413
     },
     {
       "w": "a",
-      "start": 40.519,
-      "end": 40.542
+      "start": 11.459,
+      "end": 11.482
     },
     {
-      "w": "succourer",
-      "start": 40.588,
-      "end": 40.925
+      "w": "servant",
+      "start": 11.54,
+      "end": 11.807
     },
     {
       "w": "of",
-      "start": 40.995,
-      "end": 41.064
-    },
-    {
-      "w": "many,",
-      "start": 41.122,
-      "end": 41.471
-    },
-    {
-      "w": "and",
-      "start": 41.575,
-      "end": 41.749
-    },
-    {
-      "w": "of",
-      "start": 41.784,
-      "end": 41.83
-    },
-    {
-      "w": "myself",
-      "start": 41.865,
-      "end": 42.121
-    },
-    {
-      "w": "also.\"",
-      "start": 42.156,
-      "end": 42.736
-    },
-    {
-      "w": "A",
-      "start": 43.433,
-      "end": 43.502
-    },
-    {
-      "w": "patron.",
-      "start": 43.549,
-      "end": 44.071
-    },
-    {
-      "w": "A",
-      "start": 44.222,
-      "end": 44.292
-    },
-    {
-      "w": "protector.",
-      "start": 44.35,
-      "end": 44.954
-    },
-    {
-      "w": "She",
-      "start": 45.279,
-      "end": 45.383
-    },
-    {
-      "w": "had",
-      "start": 45.418,
-      "end": 45.499
-    },
-    {
-      "w": "backed",
-      "start": 45.534,
-      "end": 45.731
-    },
-    {
-      "w": "Paul",
-      "start": 45.766,
-      "end": 45.917
-    },
-    {
-      "w": "personally.",
-      "start": 45.964,
-      "end": 46.533
-    },
-    {
-      "w": "One",
-      "start": 46.974,
-      "end": 47.159
-    },
-    {
-      "w": "more",
-      "start": 47.194,
-      "end": 47.31
-    },
-    {
-      "w": "thing,",
-      "start": 47.345,
-      "end": 47.542
-    },
-    {
-      "w": "and",
-      "start": 47.565,
-      "end": 47.635
-    },
-    {
-      "w": "I",
-      "start": 47.67,
-      "end": 47.693
-    },
-    {
-      "w": "want",
-      "start": 47.74,
-      "end": 47.867
-    },
-    {
-      "w": "to",
-      "start": 47.891,
-      "end": 47.937
-    },
-    {
-      "w": "be",
-      "start": 47.972,
-      "end": 48.041
-    },
-    {
-      "w": "straight",
-      "start": 48.076,
-      "end": 48.297
-    },
-    {
-      "w": "with",
-      "start": 48.32,
-      "end": 48.436
-    },
-    {
-      "w": "you.",
-      "start": 48.471,
-      "end": 48.668
-    },
-    {
-      "w": "You",
-      "start": 48.75,
-      "end": 48.843
-    },
-    {
-      "w": "will",
-      "start": 48.877,
-      "end": 49.005
-    },
-    {
-      "w": "often",
-      "start": 49.063,
-      "end": 49.319
-    },
-    {
-      "w": "hear",
-      "start": 49.377,
-      "end": 49.516
-    },
-    {
-      "w": "that",
-      "start": 49.551,
-      "end": 49.667
-    },
-    {
-      "w": "Phoebe",
-      "start": 49.702,
-      "end": 49.934
-    },
-    {
-      "w": "carried",
-      "start": 49.969,
-      "end": 50.224
+      "start": 11.831,
+      "end": 11.889
     },
     {
       "w": "the",
-      "start": 50.247,
-      "end": 50.317
-    },
-    {
-      "w": "letter",
-      "start": 50.363,
-      "end": 50.572
-    },
-    {
-      "w": "to",
-      "start": 50.607,
-      "end": 50.677
-    },
-    {
-      "w": "Rome.",
-      "start": 50.747,
-      "end": 51.165
-    },
-    {
-      "w": "That",
-      "start": 51.374,
-      "end": 51.513
-    },
-    {
-      "w": "is",
-      "start": 51.548,
-      "end": 51.617
-    },
-    {
-      "w": "a",
-      "start": 51.652,
-      "end": 51.687
-    },
-    {
-      "w": "very",
-      "start": 51.722,
-      "end": 51.896
-    },
-    {
-      "w": "old",
-      "start": 51.977,
-      "end": 52.186
-    },
-    {
-      "w": "and",
-      "start": 52.233,
-      "end": 52.314
-    },
-    {
-      "w": "very",
-      "start": 52.36,
-      "end": 52.546
-    },
-    {
-      "w": "reasonable",
-      "start": 52.627,
-      "end": 53.022
-    },
-    {
-      "w": "inference,",
-      "start": 53.057,
-      "end": 53.417
-    },
-    {
-      "w": "because",
-      "start": 53.44,
-      "end": 53.684
-    },
-    {
-      "w": "she",
-      "start": 53.707,
-      "end": 53.788
-    },
-    {
-      "w": "is",
-      "start": 53.823,
-      "end": 53.893
-    },
-    {
-      "w": "commended",
-      "start": 53.951,
-      "end": 54.311
-    },
-    {
-      "w": "first,",
-      "start": 54.357,
-      "end": 54.775
-    },
-    {
-      "w": "right",
-      "start": 54.88,
-      "end": 55.054
-    },
-    {
-      "w": "at",
-      "start": 55.089,
-      "end": 55.147
-    },
-    {
-      "w": "the",
-      "start": 55.17,
-      "end": 55.24
-    },
-    {
-      "w": "front.",
-      "start": 55.274,
-      "end": 55.634
-    },
-    {
-      "w": "It",
-      "start": 55.704,
-      "end": 55.797
-    },
-    {
-      "w": "is",
-      "start": 55.832,
-      "end": 55.901
-    },
-    {
-      "w": "not",
-      "start": 55.959,
-      "end": 56.087
-    },
-    {
-      "w": "stated",
-      "start": 56.134,
-      "end": 56.435
-    },
-    {
-      "w": "in",
-      "start": 56.47,
-      "end": 56.517
-    },
-    {
-      "w": "the",
-      "start": 56.552,
-      "end": 56.621
-    },
-    {
-      "w": "text.",
-      "start": 56.644,
-      "end": 57.167
-    },
-    {
-      "w": "Inference.",
-      "start": 57.295,
-      "end": 57.805
-    },
-    {
-      "w": "Not",
-      "start": 57.933,
-      "end": 58.084
-    },
-    {
-      "w": "chapter",
-      "start": 58.119,
-      "end": 58.386
-    },
-    {
-      "w": "and",
-      "start": 58.421,
-      "end": 58.49
-    },
-    {
-      "w": "verse.",
-      "start": 58.525,
-      "end": 58.874
-    },
-    {
-      "w": "What",
-      "start": 59.024,
-      "end": 59.152
-    },
-    {
-      "w": "is",
-      "start": 59.187,
-      "end": 59.245
-    },
-    {
-      "w": "chapter",
-      "start": 59.28,
-      "end": 59.535
-    },
-    {
-      "w": "and",
-      "start": 59.57,
-      "end": 59.64
-    },
-    {
-      "w": "verse",
-      "start": 59.675,
-      "end": 59.907
-    },
-    {
-      "w": "is",
-      "start": 59.942,
-      "end": 60
-    },
-    {
-      "w": "that",
-      "start": 60.035,
-      "end": 60.139
-    },
-    {
-      "w": "Paul",
-      "start": 60.174,
-      "end": 60.348
-    },
-    {
-      "w": "told",
-      "start": 60.394,
-      "end": 60.592
-    },
-    {
-      "w": "a",
-      "start": 60.627,
-      "end": 60.65
-    },
-    {
-      "w": "whole",
-      "start": 60.685,
-      "end": 60.859
+      "start": 11.923,
+      "end": 11.993
     },
     {
       "w": "church",
-      "start": 60.882,
-      "end": 61.126
+      "start": 12.028,
+      "end": 12.353
     },
     {
-      "w": "to",
-      "start": 61.184,
-      "end": 61.265
+      "w": "which",
+      "start": 12.399,
+      "end": 12.55
     },
     {
-      "w": "do",
-      "start": 61.335,
-      "end": 61.405
+      "w": "is",
+      "start": 12.585,
+      "end": 12.655
+    },
+    {
+      "w": "at",
+      "start": 12.69,
+      "end": 12.748
+    },
+    {
+      "w": "Cenchrea.\"",
+      "start": 12.783,
+      "end": 13.502
+    },
+    {
+      "w": "That",
+      "start": 13.746,
+      "end": 13.932
+    },
+    {
+      "w": "word",
+      "start": 13.967,
+      "end": 14.176
+    },
+    {
+      "w": "servant",
+      "start": 14.257,
+      "end": 14.687
+    },
+    {
+      "w": "is",
+      "start": 14.733,
+      "end": 14.872
+    },
+    {
+      "w": "diakonos",
+      "start": 14.942,
+      "end": 15.488
+    },
+    {
+      "w": "in",
+      "start": 15.546,
+      "end": 15.604
+    },
+    {
+      "w": "the",
+      "start": 15.639,
+      "end": 15.708
+    },
+    {
+      "w": "Greek,",
+      "start": 15.743,
+      "end": 16.057
+    },
+    {
+      "w": "the",
+      "start": 16.184,
+      "end": 16.289
+    },
+    {
+      "w": "same",
+      "start": 16.335,
+      "end": 16.509
+    },
+    {
+      "w": "word",
+      "start": 16.544,
+      "end": 16.707
+    },
+    {
+      "w": "rendered",
+      "start": 16.776,
+      "end": 17.043
+    },
+    {
+      "w": "deacon",
+      "start": 17.078,
+      "end": 17.334
+    },
+    {
+      "w": "and",
+      "start": 17.368,
+      "end": 17.438
+    },
+    {
+      "w": "minister",
+      "start": 17.461,
+      "end": 17.798
+    },
+    {
+      "w": "elsewhere",
+      "start": 17.903,
+      "end": 18.274
+    },
+    {
+      "w": "in",
+      "start": 18.297,
+      "end": 18.355
+    },
+    {
+      "w": "the",
+      "start": 18.39,
+      "end": 18.46
+    },
+    {
+      "w": "New",
+      "start": 18.495,
+      "end": 18.599
+    },
+    {
+      "w": "Testament.",
+      "start": 18.634,
+      "end": 19.238
+    },
+    {
+      "w": "Which",
+      "start": 19.481,
+      "end": 19.667
+    },
+    {
+      "w": "one",
+      "start": 19.714,
+      "end": 19.83
+    },
+    {
+      "w": "it",
+      "start": 19.865,
+      "end": 19.923
+    },
+    {
+      "w": "means",
+      "start": 19.958,
+      "end": 20.143
+    },
+    {
+      "w": "here",
+      "start": 20.19,
+      "end": 20.422
+    },
+    {
+      "w": "is",
+      "start": 20.48,
+      "end": 20.561
+    },
+    {
+      "w": "a",
+      "start": 20.608,
+      "end": 20.642
+    },
+    {
+      "w": "translation",
+      "start": 20.677,
+      "end": 21.235
+    },
+    {
+      "w": "call,",
+      "start": 21.281,
+      "end": 21.571
+    },
+    {
+      "w": "not",
+      "start": 21.699,
+      "end": 21.931
+    },
+    {
+      "w": "a",
+      "start": 21.978,
+      "end": 22.012
+    },
+    {
+      "w": "settled",
+      "start": 22.071,
+      "end": 22.314
+    },
+    {
+      "w": "fact.",
+      "start": 22.349,
+      "end": 22.814
+    },
+    {
+      "w": "Then",
+      "start": 23.336,
+      "end": 23.475
+    },
+    {
+      "w": "Paul",
+      "start": 23.522,
+      "end": 23.684
+    },
+    {
+      "w": "tells",
+      "start": 23.719,
+      "end": 23.94
+    },
+    {
+      "w": "an",
+      "start": 23.975,
+      "end": 24.033
+    },
+    {
+      "w": "entire",
+      "start": 24.067,
+      "end": 24.451
+    },
+    {
+      "w": "church",
+      "start": 24.497,
+      "end": 24.706
     },
     {
       "w": "what",
-      "start": 61.439,
-      "end": 61.544
+      "start": 24.741,
+      "end": 24.869
+    },
+    {
+      "w": "to",
+      "start": 24.904,
+      "end": 24.95
+    },
+    {
+      "w": "do",
+      "start": 24.996,
+      "end": 25.066
+    },
+    {
+      "w": "about",
+      "start": 25.113,
+      "end": 25.298
+    },
+    {
+      "w": "her.",
+      "start": 25.333,
+      "end": 25.681
+    },
+    {
+      "w": "\"That",
+      "start": 26.123,
+      "end": 26.39
+    },
+    {
+      "w": "ye",
+      "start": 26.436,
+      "end": 26.552
+    },
+    {
+      "w": "receive",
+      "start": 26.622,
+      "end": 26.924
+    },
+    {
+      "w": "her",
+      "start": 26.959,
+      "end": 27.086
+    },
+    {
+      "w": "in",
+      "start": 27.168,
+      "end": 27.237
+    },
+    {
+      "w": "the",
+      "start": 27.272,
+      "end": 27.342
+    },
+    {
+      "w": "Lord,",
+      "start": 27.377,
+      "end": 27.725
+    },
+    {
+      "w": "as",
+      "start": 27.76,
+      "end": 27.853
+    },
+    {
+      "w": "becometh",
+      "start": 27.911,
+      "end": 28.271
+    },
+    {
+      "w": "saints,",
+      "start": 28.317,
+      "end": 28.851
+    },
+    {
+      "w": "and",
+      "start": 29.037,
+      "end": 29.141
+    },
+    {
+      "w": "that",
+      "start": 29.176,
+      "end": 29.281
+    },
+    {
+      "w": "ye",
+      "start": 29.315,
+      "end": 29.385
+    },
+    {
+      "w": "assist",
+      "start": 29.443,
+      "end": 29.768
+    },
+    {
+      "w": "her",
+      "start": 29.815,
+      "end": 29.942
+    },
+    {
+      "w": "in",
+      "start": 30.047,
+      "end": 30.128
+    },
+    {
+      "w": "whatsoever",
+      "start": 30.186,
+      "end": 30.627
+    },
+    {
+      "w": "business",
+      "start": 30.685,
+      "end": 31.08
     },
     {
       "w": "she",
-      "start": 61.579,
-      "end": 61.672
+      "start": 31.15,
+      "end": 31.301
     },
     {
-      "w": "asked.",
-      "start": 61.741,
-      "end": 62.322
+      "w": "hath",
+      "start": 31.359,
+      "end": 31.498
+    },
+    {
+      "w": "need",
+      "start": 31.533,
+      "end": 31.661
+    },
+    {
+      "w": "of",
+      "start": 31.695,
+      "end": 31.742
+    },
+    {
+      "w": "you.\"",
+      "start": 31.777,
+      "end": 32.09
+    },
+    {
+      "w": "Whatever",
+      "start": 32.415,
+      "end": 32.764
+    },
+    {
+      "w": "she",
+      "start": 32.81,
+      "end": 32.915
+    },
+    {
+      "w": "needs.",
+      "start": 32.984,
+      "end": 33.53
+    },
+    {
+      "w": "Give",
+      "start": 33.855,
+      "end": 34.017
+    },
+    {
+      "w": "it",
+      "start": 34.052,
+      "end": 34.122
+    },
+    {
+      "w": "to",
+      "start": 34.157,
+      "end": 34.226
+    },
+    {
+      "w": "her.",
+      "start": 34.308,
+      "end": 34.575
+    },
+    {
+      "w": "And",
+      "start": 34.76,
+      "end": 34.9
+    },
+    {
+      "w": "then",
+      "start": 34.946,
+      "end": 35.086
+    },
+    {
+      "w": "the",
+      "start": 35.132,
+      "end": 35.213
+    },
+    {
+      "w": "line",
+      "start": 35.271,
+      "end": 35.422
+    },
+    {
+      "w": "that",
+      "start": 35.457,
+      "end": 35.562
+    },
+    {
+      "w": "lands.",
+      "start": 35.608,
+      "end": 36.142
+    },
+    {
+      "w": "\"For",
+      "start": 36.665,
+      "end": 36.862
+    },
+    {
+      "w": "she",
+      "start": 36.943,
+      "end": 37.071
+    },
+    {
+      "w": "hath",
+      "start": 37.129,
+      "end": 37.257
+    },
+    {
+      "w": "been",
+      "start": 37.291,
+      "end": 37.419
+    },
+    {
+      "w": "a",
+      "start": 37.454,
+      "end": 37.477
+    },
+    {
+      "w": "succourer",
+      "start": 37.535,
+      "end": 37.93
+    },
+    {
+      "w": "of",
+      "start": 38.034,
+      "end": 38.116
+    },
+    {
+      "w": "many,",
+      "start": 38.22,
+      "end": 38.638
+    },
+    {
+      "w": "and",
+      "start": 38.789,
+      "end": 38.94
+    },
+    {
+      "w": "of",
+      "start": 39.01,
+      "end": 39.103
+    },
+    {
+      "w": "myself",
+      "start": 39.172,
+      "end": 39.532
+    },
+    {
+      "w": "also.\"",
+      "start": 39.59,
+      "end": 40.182
+    },
+    {
+      "w": "A",
+      "start": 40.217,
+      "end": 40.287
+    },
+    {
+      "w": "patron.",
+      "start": 40.345,
+      "end": 40.809
+    },
+    {
+      "w": "A",
+      "start": 40.891,
+      "end": 40.949
+    },
+    {
+      "w": "protector.",
+      "start": 40.995,
+      "end": 41.564
+    },
+    {
+      "w": "She",
+      "start": 41.843,
+      "end": 41.982
+    },
+    {
+      "w": "is",
+      "start": 42.028,
+      "end": 42.11
+    },
+    {
+      "w": "the",
+      "start": 42.156,
+      "end": 42.226
+    },
+    {
+      "w": "one",
+      "start": 42.284,
+      "end": 42.4
+    },
+    {
+      "w": "who",
+      "start": 42.435,
+      "end": 42.516
+    },
+    {
+      "w": "showed",
+      "start": 42.551,
+      "end": 42.748
+    },
+    {
+      "w": "up",
+      "start": 42.783,
+      "end": 42.853
+    },
+    {
+      "w": "with",
+      "start": 42.887,
+      "end": 43.015
+    },
+    {
+      "w": "cover",
+      "start": 43.062,
+      "end": 43.352
+    },
+    {
+      "w": "and",
+      "start": 43.41,
+      "end": 43.503
+    },
+    {
+      "w": "connections,",
+      "start": 43.561,
+      "end": 44.211
+    },
+    {
+      "w": "and",
+      "start": 44.397,
+      "end": 44.501
+    },
+    {
+      "w": "Paul",
+      "start": 44.536,
+      "end": 44.699
+    },
+    {
+      "w": "is",
+      "start": 44.745,
+      "end": 44.815
+    },
+    {
+      "w": "saying",
+      "start": 44.85,
+      "end": 45.047
+    },
+    {
+      "w": "he",
+      "start": 45.117,
+      "end": 45.186
+    },
+    {
+      "w": "was",
+      "start": 45.244,
+      "end": 45.349
+    },
+    {
+      "w": "one",
+      "start": 45.395,
+      "end": 45.5
+    },
+    {
+      "w": "of",
+      "start": 45.523,
+      "end": 45.581
+    },
+    {
+      "w": "the",
+      "start": 45.616,
+      "end": 45.685
+    },
+    {
+      "w": "people",
+      "start": 45.755,
+      "end": 46.127
+    },
+    {
+      "w": "she",
+      "start": 46.161,
+      "end": 46.266
+    },
+    {
+      "w": "showed",
+      "start": 46.324,
+      "end": 46.545
+    },
+    {
+      "w": "up",
+      "start": 46.579,
+      "end": 46.649
+    },
+    {
+      "w": "for.",
+      "start": 46.696,
+      "end": 47.009
+    },
+    {
+      "w": "She",
+      "start": 47.195,
+      "end": 47.299
+    },
+    {
+      "w": "is",
+      "start": 47.346,
+      "end": 47.427
+    },
+    {
+      "w": "commended",
+      "start": 47.473,
+      "end": 47.787
+    },
+    {
+      "w": "first,",
+      "start": 47.833,
+      "end": 48.344
+    },
+    {
+      "w": "right",
+      "start": 48.449,
+      "end": 48.623
+    },
+    {
+      "w": "at",
+      "start": 48.646,
+      "end": 48.704
+    },
+    {
+      "w": "the",
+      "start": 48.727,
+      "end": 48.797
+    },
+    {
+      "w": "front",
+      "start": 48.832,
+      "end": 48.994
+    },
+    {
+      "w": "of",
+      "start": 49.018,
+      "end": 49.076
+    },
+    {
+      "w": "the",
+      "start": 49.11,
+      "end": 49.18
+    },
+    {
+      "w": "chapter,",
+      "start": 49.203,
+      "end": 49.749
+    },
+    {
+      "w": "which",
+      "start": 49.877,
+      "end": 50.062
+    },
+    {
+      "w": "is",
+      "start": 50.097,
+      "end": 50.167
+    },
+    {
+      "w": "why",
+      "start": 50.225,
+      "end": 50.457
+    },
+    {
+      "w": "so",
+      "start": 50.538,
+      "end": 50.655
+    },
+    {
+      "w": "many",
+      "start": 50.713,
+      "end": 50.84
+    },
+    {
+      "w": "believe",
+      "start": 50.887,
+      "end": 51.165
+    },
+    {
+      "w": "she",
+      "start": 51.189,
+      "end": 51.281
+    },
+    {
+      "w": "is",
+      "start": 51.316,
+      "end": 51.386
+    },
+    {
+      "w": "the",
+      "start": 51.421,
+      "end": 51.49
+    },
+    {
+      "w": "one",
+      "start": 51.548,
+      "end": 51.676
+    },
+    {
+      "w": "who",
+      "start": 51.699,
+      "end": 51.804
+    },
+    {
+      "w": "carried",
+      "start": 51.85,
+      "end": 52.094
+    },
+    {
+      "w": "the",
+      "start": 52.117,
+      "end": 52.187
+    },
+    {
+      "w": "letter",
+      "start": 52.233,
+      "end": 52.419
+    },
+    {
+      "w": "to",
+      "start": 52.466,
+      "end": 52.524
+    },
+    {
+      "w": "Rome.",
+      "start": 52.582,
+      "end": 53.046
+    },
+    {
+      "w": "That",
+      "start": 53.429,
+      "end": 53.615
+    },
+    {
+      "w": "part",
+      "start": 53.662,
+      "end": 53.87
+    },
+    {
+      "w": "is",
+      "start": 53.929,
+      "end": 54.01
+    },
+    {
+      "w": "inference,",
+      "start": 54.068,
+      "end": 54.602
+    },
+    {
+      "w": "not",
+      "start": 54.788,
+      "end": 54.962
+    },
+    {
+      "w": "chapter",
+      "start": 54.997,
+      "end": 55.275
+    },
+    {
+      "w": "and",
+      "start": 55.31,
+      "end": 55.38
+    },
+    {
+      "w": "verse.",
+      "start": 55.415,
+      "end": 55.891
+    },
+    {
+      "w": "What",
+      "start": 56.018,
+      "end": 56.169
+    },
+    {
+      "w": "is",
+      "start": 56.204,
+      "end": 56.262
+    },
+    {
+      "w": "chapter",
+      "start": 56.297,
+      "end": 56.576
+    },
+    {
+      "w": "and",
+      "start": 56.622,
+      "end": 56.692
+    },
+    {
+      "w": "verse",
+      "start": 56.738,
+      "end": 57.028
+    },
+    {
+      "w": "is",
+      "start": 57.063,
+      "end": 57.133
+    },
+    {
+      "w": "that",
+      "start": 57.168,
+      "end": 57.295
+    },
+    {
+      "w": "Paul",
+      "start": 57.342,
+      "end": 57.551
+    },
+    {
+      "w": "made",
+      "start": 57.597,
+      "end": 57.748
+    },
+    {
+      "w": "sure",
+      "start": 57.783,
+      "end": 57.957
+    },
+    {
+      "w": "nobody",
+      "start": 58.027,
+      "end": 58.306
+    },
+    {
+      "w": "got",
+      "start": 58.34,
+      "end": 58.468
+    },
+    {
+      "w": "to",
+      "start": 58.503,
+      "end": 58.561
+    },
+    {
+      "w": "treat",
+      "start": 58.607,
+      "end": 58.782
+    },
+    {
+      "w": "her",
+      "start": 58.828,
+      "end": 58.909
+    },
+    {
+      "w": "like",
+      "start": 58.967,
+      "end": 59.107
+    },
+    {
+      "w": "a",
+      "start": 59.13,
+      "end": 59.153
+    },
+    {
+      "w": "side",
+      "start": 59.199,
+      "end": 59.362
+    },
+    {
+      "w": "character.",
+      "start": 59.385,
+      "end": 60.001
     }
   ],
-  "renderedAt": 1785479657565
+  "renderedAt": 1785789161746
 }

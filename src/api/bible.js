@@ -148,11 +148,15 @@ export async function todaysVerse() {
   return getPassage(DAILY[day % DAILY.length]);
 }
 
+/**
+ * Deliberately lets a transport failure throw.
+ *
+ * This used to swallow the error and return an empty result, which the screen
+ * could only render as "No verses found" — so an unreachable API was
+ * indistinguishable from a word that genuinely is not in the Bible. The caller
+ * needs to be able to tell those apart to say something true.
+ */
 export async function searchScripture(query) {
-  try {
-    const res = await api.get(`/bible/search?q=${encodeURIComponent(query)}`, { auth: false });
-    return res.data;
-  } catch {
-    return { ot: [], nt: [] };
-  }
+  const res = await api.get(`/bible/search?q=${encodeURIComponent(query)}`, { auth: false });
+  return res.data ?? { ot: [], nt: [], total: 0 };
 }

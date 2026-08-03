@@ -88,18 +88,34 @@ Required env:
 | `ELEVENLABS_API_KEY` | Optional. Only the live-TTS fallback; Tea and Stories play pre-rendered MP3s. |
 | `OPENAI_API_KEY` | Optional. Legacy narrative route; nothing calls it. |
 
-### Seed the Bible text
+### Seed the Bible text — now optional
 
-`/verse/for-carrying` and `/bible/*` read `bible_verse`. Staging's table is
-incomplete, which is why `Courage` returned Psalm 23:1 until the client learned
-to distrust that fallback. Seed production properly:
+**The full KJV ships with the API** as `backend/data/kjv.full.json` (4.2 MB, 66
+books, 31,100 verses, public domain). `bibleService` reads Postgres first and
+falls back to that file when a query returns no rows *or* the database errors.
 
-```
-npm run seed:prepare:full && npm run seed:bible
-```
+This was not a nicety. `bible_verse` was **empty** on staging, so `/bible/search`
+returned `{"ot":[],"nt":[]}` for every query, `/bible/:book/:chapter` 404'd for
+every chapter, and `/verse/for-carrying` fell through to its hardcoded Psalm
+23:1. The reader only looked alive because the *client* silently falls back to
+`bible-api.com` one chapter at a time.
 
-Then confirm `GET /verse/for-carrying?tags=Courage` returns **Psalm 27:1-3**, not
-Psalm 23:1. If it returns Psalm 23:1 the seed is incomplete.
+Consequences for you:
+
+- Scripture works on a fresh deploy with no seed step and no third-party API.
+- Seeding is now an optimisation, not a prerequisite. If you want the database
+  path (Postgres full-text search scales better than a linear scan if this ever
+  grows), `npm run seed:prepare:full && npm run seed:bible` still works — but see
+  the note below, the crawl is rate-limited.
+- Reading survives a Postgres outage.
+
+Verify either way: `GET /verse/for-carrying?tags=Courage` must return **Psalm
+27:1-3**. It does today, from the bundled file.
+
+> The `seed:prepare:full` crawl fetches 1,189 chapters from bible-api.com at
+> 120 ms intervals and gets HTTP 429 after about 15. That is why the table was
+> never populated. If you do want to seed, source the text in bulk rather than
+> per chapter — `backend/data/kjv.full.json` is already exactly that.
 
 ### Deploy order
 
@@ -184,14 +200,16 @@ that "Continue with email" needs no password. **Do not ship without this.**
 
 ## 6. Remaining backend work
 
-1. **Tea audio — 10 clips outstanding.** 20 of 30 are the new voice-note style.
-   The ElevenLabs quota fell 6,338 characters short. Quota resets 29 Aug 2026, or
-   top up. To finish:
-   `cd backend && ONLY=<id> npx tsx --env-file-if-exists=.env scripts/generate-audio.ts`
-   for each of `priscilla-teach`, `sarah-laugh`, `hagar-seen`, `zelophehad`,
-   `huldah-scroll`, `widow-mite`, `joanna-fund`, `dorcas-needle`,
-   `phoebe-letter`, `mary-perfume` — then `npm run sync:durations`. Their catalog
-   text must be updated **in the same pass** or captions will drift.
+1. **Tea audio — 6 clips outstanding.** 24 of 30 are the current style. The six
+   still on the earlier narration are `priscilla-teach`, `hagar-seen`,
+   `zelophehad`, `widow-mite`, `joanna-fund`, `dorcas-needle`. Each is internally
+   consistent (text, audio and captions all agree), so nothing is broken; they
+   just read differently from the rest. ~5,000 ElevenLabs characters remain this
+   period; quota resets 29 Aug 2026. To do one:
+   `cd backend && FORCE=1 ONLY=<id> npx tsx --env-file-if-exists=.env scripts/generate-audio.ts`
+   then `npm run sync:durations && npm run sync:tea-fallback && npm run verify:audio`.
+   Catalog text must be updated **in the same pass** as the render or captions
+   drift — `verify:audio` is what catches that.
 2. **Story content.** Only 5 stories; `Jesus' Parables` is empty and no
    collection reaches 10. A 26-story plan with a verified coverage matrix and
    costings is ready and unstarted.

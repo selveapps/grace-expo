@@ -37,7 +37,20 @@ export default function ReadingScreen({ navigation }) {
 
         <Text style={styles.section}>BROWSE BY THEME</Text>
         <View style={styles.chips}>
-          {THEMES.map((t) => (<Pressable key={t} onPress={tick} style={styles.chip}><Text style={styles.chipText}>{t}</Text></Pressable>))}
+          {/* These used to fire a haptic and go nowhere. Each one now opens a
+              curated set of passages for that theme. */}
+          {THEMES.map((t) => (
+            <Pressable
+              key={t}
+              onPress={() => go('Theme', { theme: t })}
+              style={styles.chip}
+              accessibilityRole="button"
+              accessibilityLabel={`Browse ${t} passages`}
+              testID={`theme-chip-${t}`}
+            >
+              <Text style={styles.chipText}>{t}</Text>
+            </Pressable>
+          ))}
         </View>
       </ScrollView>
     </Screen>
