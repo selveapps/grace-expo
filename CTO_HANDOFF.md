@@ -62,12 +62,39 @@ No code changes required. Rebuild and the button appears.
 
 ## 2. Production Railway deployment
 
-**Nothing is deployed to production.** Today:
+**Nothing current is deployed to production.**
 
-| Host | What it is |
-|---|---|
-| `grace-expo-production.up.railway.app` | The **staging** API. Railway project `grace-api-staging`, service `grace-expo` — the hostname reads like the Expo app but serves the API. Healthy, DB connected, current. |
-| `grace-api-production.up.railway.app` | An older deployment. **Stale**: v1 Tea copy, no `/auth/google`, no byte-range audio. Do not point a build at it without deploying first. |
+The topology is confusing and worth reading carefully, because two names point
+the opposite way to how they read. There is **one** Railway project, `grace`,
+with **one** environment, misleadingly called `production`. The staging/prod
+split is in the *service* names inside it:
+
+| Service | Host | Role |
+|---|---|---|
+| `grace-api-staging` | `grace-expo-production.up.railway.app` | **Staging.** What the app builds point at. Auto-deploys on every push to `feat/tf-v1-feedback`. |
+| `postgres-staging` | — | Staging database. |
+| `grace-api-prod` | `grace-api-production.up.railway.app` | **Production. Currently returning 502.** Stale: last deployed 31 Jul 2026 from `75385ce` — v1 Tea copy, no `/auth/google`, no byte-range audio, no bundled KJV. Do not point a build at it without redeploying. |
+| `postgres-prod` | — | Production database. |
+
+So `grace-expo-production...` is staging and `grace-api-production...` is
+production — the reverse of what the hostnames suggest. Renaming the environment
+and the hosts before anyone else joins the project would be a kindness.
+
+⚠️ **The Railway CLI in this repo is linked to the environment named
+`production`, which contains both.** `railway up` from a default link targets
+whatever service is linked. Check `railway status` and confirm the *service*
+before running anything that deploys.
+
+Note also that pushing to `feat/tf-v1-feedback` deploys staging automatically.
+That is convenient now and will be surprising later; consider pointing staging at
+a long-lived branch instead.
+
+**`grace-api-prod` is down.** `GET /health` returns Railway's 502 "Application
+failed to respond", so the process is not answering — most likely a boot failure
+(missing `DATABASE_URL` or `JWT_SECRET`) rather than anything in the code. Its
+last deploy reports SUCCESS, which only means the *build* succeeded. Nothing
+points at this host today, so nothing is broken for users, but it needs fixing
+before it can serve a release. Check the service's deploy logs and env first.
 
 ### Provision production
 
@@ -251,8 +278,10 @@ that "Continue with email" needs no password. **Do not ship without this.**
 | | |
 |---|---|
 | Branch | `feat/tf-v1-feedback` |
-| Staging API | `https://grace-expo-production.up.railway.app` |
-| Railway project | `grace-api-staging` / service `grace-expo` (auto-deploys on push) |
+| Staging API | `https://grace-expo-production.up.railway.app` (service `grace-api-staging`) |
+| Production API | `https://grace-api-production.up.railway.app` (service `grace-api-prod`, stale) |
+| Railway | One project `grace`, one environment `production`, four services (see §2) |
+| Staging deploys | Automatic on push to `feat/tf-v1-feedback` |
 | EAS project | `0683c24c-9b77-4f1e-a9ec-54d6105dcb0c` |
 | Expo account | `selveapps` |
 | Latest build | 10 (staging profile) |

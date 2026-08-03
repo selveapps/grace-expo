@@ -3,7 +3,12 @@
 **Changes since Build 10** · branch `feat/tf-v1-feedback`
 
 > No TestFlight build has been cut for this work yet. Everything below is
-> committed and verified locally; `eas build` has not been run.
+> committed, and the API half is **live on staging** (`grace-api-staging`,
+> commit `f36c43e`) — pushing this branch deploys staging automatically. The
+> client half needs `eas build`, which has not been run.
+>
+> The production service `grace-api-prod` was **not** touched; it remains on
+> `75385ce` and is currently returning 502 (see `CTO_HANDOFF.md` §2).
 
 ---
 
@@ -138,7 +143,13 @@ Two files claimed to be generated and were not, so both had drifted:
 | KJV fidelity of the 7 scripts | 0 non-verbatim quotes |
 | Theme references resolve | 64/64 |
 | e2e — themes and search | 8 passed |
+| e2e — regression (tabs, screens, tea titles) | 7 passed |
 | Scripture routes with **no database at all** | search, chapters and carry-verse all correct |
+
+Confirmed on staging after deploy: `search "peace"` → 420 total, 50 OT + 50 NT;
+`"faith hope charity"` → 1 Corinthians 13:13; `"ps 23:1-4"` → 4 verses;
+`/bible/Psalms/23` and `/bible/Genesis/1` → 200; `/verse/for-carrying?tags=Courage`
+→ Psalm 27:1-3; audio Range → 206; 30 teas, 0 `---` markers, new durations live.
 
 Integration tests still need Postgres and were not run; there is no Docker in
 this environment.
