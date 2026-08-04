@@ -1,11 +1,13 @@
-# Grace — release notes
+# Grace — TestFlight release notes
 
-**Changes since Build 10** · branch `feat/tf-v1-feedback`
+**Build 11** · staging profile · branch `feat/tf-v1-feedback` · commit `8da7b62`
+API: `https://grace-expo-production.up.railway.app` (service `grace-api-staging`)
 
-> No TestFlight build has been cut for this work yet. Everything below is
-> committed, and the API half is **live on staging** (`grace-api-staging`,
-> commit `f36c43e`) — pushing this branch deploys staging automatically. The
-> client half needs `eas build`, which has not been run.
+Supersedes **Build 10**.
+
+> The API half of this work is also **live on staging** at the same commit —
+> pushing this branch deploys staging automatically — so the app and the API it
+> talks to are in step.
 >
 > The production service `grace-api-prod` was **not** touched; it remains on
 > `75385ce` and is currently returning 502 (see `CTO_HANDOFF.md` §2).
