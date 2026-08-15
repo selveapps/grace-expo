@@ -4,6 +4,7 @@
 //
 // House style: no em-dashes anywhere in this file's user-facing copy. Use a
 // comma, a period, or "and".
+import { teaDayIndex } from './teaDayIndex.js';
 export type Tea = {
   id: string;
   /**
@@ -118,11 +119,12 @@ export function getTea(id: string) {
 }
 
 /**
- * Stable per calendar day, with no repeat inside a 30-day cycle. Uses whole days
- * since the epoch, so every client that agrees on the date agrees on the tea.
+ * Stable per calendar day in the given IANA timezone, with no repeat inside a
+ * 30-day cycle. Client and server both call teaDayIndex with the same tz so
+ * offline fallback matches GET /tea/today.
  */
-export function teaOfDay(d: Date = new Date()): Tea {
-  const day = Math.floor(d.getTime() / 86_400_000);
+export function teaOfDay(d: Date = new Date(), timeZone = 'UTC'): Tea {
+  const day = teaDayIndex(d, timeZone);
   const ordered = [...TEAS].sort((a, b) => a.order - b.order);
   return ordered[((day % ordered.length) + ordered.length) % ordered.length];
 }

@@ -2,6 +2,16 @@ import { prisma } from '../db.js';
 import { ACCESS_EXPIRES_IN, signAccessToken, signRefreshToken, verifyToken } from '../lib/jwt.js';
 import { resolveSubscription } from './subscriptionService.js';
 
+async function assertTokenVersion(userId: string, tokenVersion: number) {
+  const user = await prisma.user.findUnique({
+    where: { id: userId },
+    select: { tokenVersion: true },
+  });
+  if (!user || user.tokenVersion !== tokenVersion) {
+    throw new Error('Invalid token');
+  }
+}
+
 export async function guestLogin(deviceId: string) {
   if (!deviceId?.trim()) throw new Error('deviceId required');
 
@@ -15,8 +25,8 @@ export async function guestLogin(deviceId: string) {
     include: { profile: true },
   });
 
-  const accessToken = await signAccessToken(user.id);
-  const refreshToken = await signRefreshToken(user.id);
+  const accessToken = await signAccessToken(user.id, user.tokenVersion);
+  const refreshToken = await signRefreshToken(user.id, user.tokenVersion);
 
   return {
     session: {
@@ -35,17 +45,18 @@ export async function guestLogin(deviceId: string) {
 }
 
 export async function refreshSession(refresh: string) {
-  const userId = await verifyToken(refresh, 'refresh');
+  const { sub: userId, tv } = await verifyToken(refresh, 'refresh');
+  await assertTokenVersion(userId, tv);
   const user = await prisma.user.findUnique({ where: { id: userId } });
   if (!user) throw new Error('User not found');
 
-  const accessToken = await signAccessToken(user.id);
-  const refreshToken = await signRefreshToken(user.id);
+  const accessToken = await signAccessToken(user.id, user.tokenVersion);
+  const newRefresh = await signRefreshToken(user.id, user.tokenVersion);
 
   return {
     session: {
       accessToken,
-      refreshToken,
+      refreshToken: newRefresh,
       expiresIn: ACCESS_EXPIRES_IN,
     },
   };
@@ -60,5 +71,17 @@ export async function getUserWithProfile(userId: string) {
 }
 
 export async function verifyAccessToken(token: string): Promise<string> {
-  return verifyToken(token, 'access');
+  const { sub, tv } = await verifyToken(token, 'access');
+  await assertTokenVersion(sub, tv);
+  return sub;
+}
+
+export async function sessionForUser(user: { id: string; tokenVersion: number }) {
+  const accessToken = await signAccessToken(user.id, user.tokenVersion);
+  const refreshToken = await signRefreshToken(user.id, user.tokenVersion);
+  return {
+    accessToken,
+    refreshToken,
+    expiresIn: ACCESS_EXPIRES_IN,
+  };
 }

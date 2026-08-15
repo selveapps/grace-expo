@@ -4,22 +4,18 @@ export async function patchMe(
   userId: string,
   data: {
     name?: string;
-    email?: string;
     carrying?: string[];
     gentleness?: string;
     rhythm?: string;
     onboarded?: boolean;
   },
 ) {
-  const { name, email, ...profileFields } = data;
+  const { name, ...profileFields } = data;
 
-  if (name !== undefined || email !== undefined) {
+  if (name !== undefined) {
     await prisma.user.update({
       where: { id: userId },
-      data: {
-        ...(name !== undefined ? { name } : {}),
-        ...(email !== undefined ? { email } : {}),
-      },
+      data: { name },
     });
   }
 

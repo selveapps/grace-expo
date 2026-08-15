@@ -12,10 +12,11 @@ function secret(): Uint8Array {
 export type TokenPayload = {
   sub: string;
   type: 'access' | 'refresh';
+  tv: number;
 };
 
-export async function signAccessToken(userId: string): Promise<string> {
-  return new jose.SignJWT({ type: 'access' })
+export async function signAccessToken(userId: string, tokenVersion: number): Promise<string> {
+  return new jose.SignJWT({ type: 'access', tv: tokenVersion })
     .setProtectedHeader({ alg: 'HS256' })
     .setSubject(userId)
     .setIssuedAt()
@@ -23,8 +24,8 @@ export async function signAccessToken(userId: string): Promise<string> {
     .sign(secret());
 }
 
-export async function signRefreshToken(userId: string): Promise<string> {
-  return new jose.SignJWT({ type: 'refresh' })
+export async function signRefreshToken(userId: string, tokenVersion: number): Promise<string> {
+  return new jose.SignJWT({ type: 'refresh', tv: tokenVersion })
     .setProtectedHeader({ alg: 'HS256' })
     .setSubject(userId)
     .setIssuedAt()
@@ -32,12 +33,19 @@ export async function signRefreshToken(userId: string): Promise<string> {
     .sign(secret());
 }
 
-export async function verifyToken(token: string, expectedType: 'access' | 'refresh'): Promise<string> {
+export async function verifyToken(
+  token: string,
+  expectedType: 'access' | 'refresh',
+): Promise<{ sub: string; tv: number }> {
   const { payload } = await jose.jwtVerify(token, secret());
   if (payload.type !== expectedType || typeof payload.sub !== 'string') {
     throw new Error('Invalid token');
   }
-  return payload.sub;
+  const tv = payload.tv;
+  if (typeof tv !== 'number' || !Number.isInteger(tv) || tv < 0) {
+    throw new Error('Invalid token');
+  }
+  return { sub: payload.sub, tv };
 }
 
 export const ACCESS_EXPIRES_IN = 3600;

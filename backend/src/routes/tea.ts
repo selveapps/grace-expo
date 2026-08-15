@@ -3,6 +3,7 @@ import { readFile } from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { TEAS, getTea, teaForClient, teaOfDay } from '../lib/teaCatalog.js';
+import { DEFAULT_TEA_TIMEZONE } from '../lib/teaDayIndex.js';
 import { requireAuth } from '../middleware/auth.js';
 import * as library from '../services/libraryService.js';
 
@@ -35,11 +36,11 @@ export async function registerTeaRoutes(app: FastifyInstance) {
     tea: [...TEAS].sort((a, b) => a.order - b.order).map(teaForClient),
   }));
 
-  // The daily sermon. Stable for the whole calendar day, so the hero card does
-  // not change under her while she is reading it.
-  app.get('/tea/today', async (_req, reply) => {
+  // The daily sermon. Stable for the whole calendar day in the client's timezone.
+  app.get('/tea/today', async (req, reply) => {
+    const tz = (req.query as { tz?: string }).tz?.trim() || DEFAULT_TEA_TIMEZONE;
     reply.header('Cache-Control', 'public, max-age=900');
-    return { tea: teaForClient(teaOfDay()) };
+    return { tea: teaForClient(teaOfDay(new Date(), tz)) };
   });
 
   app.get('/tea/saved', { preHandler: requireAuth }, async (req) => library.listSavedTea(req.userId!));
