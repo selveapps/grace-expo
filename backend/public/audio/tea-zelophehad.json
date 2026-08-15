@@ -1,1026 +1,1026 @@
 {
-  "kind": "tea",
-  "teaId": "zelophehad",
-  "mood": "light",
-  "heat": 3,
-  "text": "Five sisters argued property law in front of the entire nation. God said they were right. Numbers twenty-seven. Their names are Mahlah, Noah, Hoglah, Milcah and Tirzah. Scripture lists every single one. Their father died in the wilderness with no sons. Under the rules as they stood, land moved through sons. So his name and his portion simply vanish. And these five women do not petition quietly. They stood before Moses. And before Eleazar the priest. And before the princes and all the congregation. At the door of the tabernacle. That is the entire leadership of the nation, plus everybody else, and five sisters walk up and make a legal argument. \"Why should the name of our father be done away from among his family, because he hath no son? Give unto us therefore a possession among the brethren of our father.\" And Moses does not rule on it. He does not wing it. He does not send them home. \"And Moses brought their cause before the Lord.\" And the answer comes back. \"The daughters of Zelophehad speak right.\" Speak right. God agreed with them. On the record. And the inheritance law of Israel was rewritten because five women showed up and asked.",
-  "voice": "cgSgspJ2msm6clMCkdW9",
-  "words": [
-    {
-      "w": "Five",
-      "start": 0,
-      "end": 0.302
-    },
-    {
-      "w": "sisters",
-      "start": 0.337,
-      "end": 0.673
-    },
-    {
-      "w": "argued",
-      "start": 0.743,
-      "end": 1.068
-    },
-    {
-      "w": "property",
-      "start": 1.091,
-      "end": 1.405
-    },
-    {
-      "w": "law",
-      "start": 1.451,
-      "end": 1.602
-    },
-    {
-      "w": "in",
-      "start": 1.637,
-      "end": 1.707
-    },
-    {
-      "w": "front",
-      "start": 1.776,
-      "end": 1.95
-    },
-    {
-      "w": "of",
-      "start": 1.985,
-      "end": 2.032
-    },
-    {
-      "w": "the",
-      "start": 2.067,
-      "end": 2.136
-    },
-    {
-      "w": "entire",
-      "start": 2.171,
-      "end": 2.519
-    },
-    {
-      "w": "nation.",
-      "start": 2.554,
-      "end": 3.111
-    },
-    {
-      "w": "God",
-      "start": 3.553,
-      "end": 3.796
-    },
-    {
-      "w": "said",
-      "start": 3.843,
-      "end": 4.063
-    },
-    {
-      "w": "they",
-      "start": 4.098,
-      "end": 4.203
-    },
-    {
-      "w": "were",
-      "start": 4.238,
-      "end": 4.354
-    },
-    {
-      "w": "right.",
-      "start": 4.389,
-      "end": 4.83
-    },
-    {
-      "w": "Numbers",
-      "start": 5.352,
-      "end": 5.724
-    },
-    {
-      "w": "twenty-seven.",
-      "start": 5.77,
-      "end": 6.536
-    },
-    {
-      "w": "Their",
-      "start": 6.978,
-      "end": 7.152
-    },
-    {
-      "w": "names",
-      "start": 7.187,
-      "end": 7.396
-    },
-    {
-      "w": "are",
-      "start": 7.43,
-      "end": 7.523
-    },
-    {
-      "w": "Mahlah,",
-      "start": 7.558,
-      "end": 8.057
-    },
-    {
-      "w": "Noah,",
-      "start": 8.162,
-      "end": 8.719
-    },
-    {
-      "w": "Hoglah,",
-      "start": 8.766,
-      "end": 9.369
-    },
-    {
-      "w": "Milcah",
-      "start": 9.451,
-      "end": 9.903
-    },
-    {
-      "w": "and",
-      "start": 9.961,
-      "end": 10.147
-    },
-    {
-      "w": "Tirzah.",
-      "start": 10.182,
-      "end": 10.844
-    },
-    {
-      "w": "Scripture",
-      "start": 11.54,
-      "end": 11.889
-    },
-    {
-      "w": "lists",
-      "start": 11.923,
-      "end": 12.156
-    },
-    {
-      "w": "every",
-      "start": 12.214,
-      "end": 12.411
-    },
-    {
-      "w": "single",
-      "start": 12.446,
-      "end": 12.678
-    },
-    {
-      "w": "one.",
-      "start": 12.713,
-      "end": 13.096
-    },
-    {
-      "w": "Their",
-      "start": 13.537,
-      "end": 13.711
-    },
-    {
-      "w": "father",
-      "start": 13.746,
-      "end": 13.978
-    },
-    {
-      "w": "died",
-      "start": 14.025,
-      "end": 14.257
-    },
-    {
-      "w": "in",
-      "start": 14.292,
-      "end": 14.338
-    },
-    {
-      "w": "the",
-      "start": 14.373,
-      "end": 14.443
-    },
-    {
-      "w": "wilderness",
-      "start": 14.466,
-      "end": 14.873
-    },
-    {
-      "w": "with",
-      "start": 14.907,
-      "end": 15.035
-    },
-    {
-      "w": "no",
-      "start": 15.07,
-      "end": 15.163
-    },
-    {
-      "w": "sons.",
-      "start": 15.221,
-      "end": 15.825
-    },
-    {
-      "w": "Under",
-      "start": 16.208,
-      "end": 16.405
-    },
-    {
-      "w": "the",
-      "start": 16.44,
-      "end": 16.51
-    },
-    {
-      "w": "rules",
-      "start": 16.544,
-      "end": 16.765
-    },
-    {
-      "w": "as",
-      "start": 16.8,
-      "end": 16.869
-    },
-    {
-      "w": "they",
-      "start": 16.904,
-      "end": 17.009
-    },
-    {
-      "w": "stood,",
-      "start": 17.044,
-      "end": 17.427
-    },
-    {
-      "w": "land",
-      "start": 17.531,
-      "end": 17.763
-    },
-    {
-      "w": "moved",
-      "start": 17.81,
-      "end": 18.054
-    },
-    {
-      "w": "through",
-      "start": 18.089,
-      "end": 18.321
-    },
-    {
-      "w": "sons.",
-      "start": 18.356,
-      "end": 18.843
-    },
-    {
-      "w": "So",
-      "start": 19.052,
-      "end": 19.168
-    },
-    {
-      "w": "his",
-      "start": 19.215,
-      "end": 19.319
-    },
-    {
-      "w": "name",
-      "start": 19.377,
-      "end": 19.633
-    },
-    {
-      "w": "and",
-      "start": 19.679,
-      "end": 19.807
-    },
-    {
-      "w": "his",
-      "start": 19.865,
-      "end": 19.958
-    },
-    {
-      "w": "portion",
-      "start": 20.004,
-      "end": 20.318
-    },
-    {
-      "w": "simply",
-      "start": 20.387,
-      "end": 20.631
-    },
-    {
-      "w": "vanish.",
-      "start": 20.678,
-      "end": 21.154
-    },
-    {
-      "w": "And",
-      "start": 21.432,
-      "end": 21.56
-    },
-    {
-      "w": "these",
-      "start": 21.595,
-      "end": 21.746
-    },
-    {
-      "w": "five",
-      "start": 21.781,
-      "end": 21.966
-    },
-    {
-      "w": "women",
-      "start": 22.001,
-      "end": 22.233
-    },
-    {
-      "w": "do",
-      "start": 22.28,
-      "end": 22.349
-    },
-    {
-      "w": "not",
-      "start": 22.407,
-      "end": 22.512
-    },
-    {
-      "w": "petition",
-      "start": 22.558,
-      "end": 22.86
-    },
-    {
-      "w": "quietly.",
-      "start": 22.895,
-      "end": 23.557
-    },
-    {
-      "w": "They",
-      "start": 23.835,
-      "end": 23.963
-    },
-    {
-      "w": "stood",
-      "start": 23.998,
-      "end": 24.161
-    },
-    {
-      "w": "before",
-      "start": 24.195,
-      "end": 24.404
-    },
-    {
-      "w": "Moses.",
-      "start": 24.439,
-      "end": 25.066
-    },
-    {
-      "w": "And",
-      "start": 25.391,
-      "end": 25.519
-    },
-    {
-      "w": "before",
-      "start": 25.554,
-      "end": 25.763
-    },
-    {
-      "w": "Eleazar",
-      "start": 25.798,
-      "end": 26.192
-    },
-    {
-      "w": "the",
-      "start": 26.239,
-      "end": 26.308
-    },
-    {
-      "w": "priest.",
-      "start": 26.343,
-      "end": 26.889
-    },
-    {
-      "w": "And",
-      "start": 27.098,
-      "end": 27.202
-    },
-    {
-      "w": "before",
-      "start": 27.249,
-      "end": 27.493
-    },
-    {
-      "w": "the",
-      "start": 27.539,
-      "end": 27.609
-    },
-    {
-      "w": "princes",
-      "start": 27.644,
-      "end": 27.992
-    },
-    {
-      "w": "and",
-      "start": 28.038,
-      "end": 28.12
-    },
-    {
-      "w": "all",
-      "start": 28.166,
-      "end": 28.317
-    },
-    {
-      "w": "the",
-      "start": 28.363,
-      "end": 28.433
-    },
-    {
-      "w": "congregation.",
-      "start": 28.468,
-      "end": 29.223
-    },
-    {
-      "w": "At",
-      "start": 29.606,
-      "end": 29.71
-    },
-    {
-      "w": "the",
-      "start": 29.745,
-      "end": 29.815
-    },
-    {
-      "w": "door",
-      "start": 29.85,
-      "end": 30
-    },
-    {
-      "w": "of",
-      "start": 30.035,
-      "end": 30.093
-    },
-    {
-      "w": "the",
-      "start": 30.128,
-      "end": 30.198
-    },
-    {
-      "w": "tabernacle.",
-      "start": 30.221,
-      "end": 30.941
-    },
-    {
-      "w": "That",
-      "start": 31.324,
-      "end": 31.463
-    },
-    {
-      "w": "is",
-      "start": 31.498,
-      "end": 31.568
-    },
-    {
-      "w": "the",
-      "start": 31.603,
-      "end": 31.672
-    },
-    {
-      "w": "entire",
-      "start": 31.719,
-      "end": 32.09
-    },
-    {
-      "w": "leadership",
-      "start": 32.125,
-      "end": 32.473
-    },
-    {
-      "w": "of",
-      "start": 32.508,
-      "end": 32.555
-    },
-    {
-      "w": "the",
-      "start": 32.59,
-      "end": 32.659
-    },
-    {
-      "w": "nation,",
-      "start": 32.694,
-      "end": 32.996
-    },
-    {
-      "w": "plus",
-      "start": 33.031,
-      "end": 33.193
-    },
-    {
-      "w": "everybody",
-      "start": 33.263,
-      "end": 33.6
-    },
-    {
-      "w": "else,",
-      "start": 33.658,
-      "end": 33.913
-    },
-    {
-      "w": "and",
-      "start": 33.948,
-      "end": 34.052
-    },
-    {
-      "w": "five",
-      "start": 34.11,
-      "end": 34.343
-    },
-    {
-      "w": "sisters",
-      "start": 34.389,
-      "end": 34.749
-    },
-    {
-      "w": "walk",
-      "start": 34.795,
-      "end": 34.958
-    },
-    {
-      "w": "up",
-      "start": 35.039,
-      "end": 35.155
-    },
-    {
-      "w": "and",
-      "start": 35.19,
-      "end": 35.271
-    },
-    {
-      "w": "make",
-      "start": 35.306,
-      "end": 35.446
-    },
-    {
-      "w": "a",
-      "start": 35.469,
-      "end": 35.492
-    },
-    {
-      "w": "legal",
-      "start": 35.55,
-      "end": 35.759
-    },
-    {
-      "w": "argument.",
-      "start": 35.794,
-      "end": 36.328
-    },
-    {
-      "w": "\"Why",
-      "start": 37.025,
-      "end": 37.245
-    },
-    {
-      "w": "should",
-      "start": 37.28,
-      "end": 37.431
-    },
-    {
-      "w": "the",
-      "start": 37.454,
-      "end": 37.524
-    },
-    {
-      "w": "name",
-      "start": 37.559,
-      "end": 37.709
-    },
-    {
-      "w": "of",
-      "start": 37.744,
-      "end": 37.802
-    },
-    {
-      "w": "our",
-      "start": 37.837,
-      "end": 37.942
-    },
-    {
-      "w": "father",
-      "start": 37.977,
-      "end": 38.209
-    },
-    {
-      "w": "be",
-      "start": 38.267,
-      "end": 38.337
-    },
-    {
-      "w": "done",
-      "start": 38.372,
-      "end": 38.534
-    },
-    {
-      "w": "away",
-      "start": 38.569,
-      "end": 38.72
-    },
-    {
-      "w": "from",
-      "start": 38.755,
-      "end": 38.871
-    },
-    {
-      "w": "among",
-      "start": 38.917,
-      "end": 39.103
-    },
-    {
-      "w": "his",
-      "start": 39.149,
-      "end": 39.242
-    },
-    {
-      "w": "family,",
-      "start": 39.289,
-      "end": 39.625
-    },
-    {
-      "w": "because",
-      "start": 39.66,
-      "end": 39.904
-    },
-    {
-      "w": "he",
-      "start": 39.939,
-      "end": 39.985
-    },
-    {
-      "w": "hath",
-      "start": 40.043,
-      "end": 40.194
-    },
-    {
-      "w": "no",
-      "start": 40.241,
-      "end": 40.31
-    },
-    {
-      "w": "son?",
-      "start": 40.368,
-      "end": 40.856
-    },
-    {
-      "w": "Give",
-      "start": 41.82,
-      "end": 42.017
-    },
-    {
-      "w": "unto",
-      "start": 42.052,
-      "end": 42.203
-    },
-    {
-      "w": "us",
-      "start": 42.284,
-      "end": 42.389
-    },
-    {
-      "w": "therefore",
-      "start": 42.423,
-      "end": 42.795
-    },
-    {
-      "w": "a",
-      "start": 42.841,
-      "end": 42.876
-    },
-    {
-      "w": "possession",
-      "start": 42.934,
-      "end": 43.329
-    },
-    {
-      "w": "among",
-      "start": 43.364,
-      "end": 43.55
-    },
-    {
-      "w": "the",
-      "start": 43.584,
-      "end": 43.654
-    },
-    {
-      "w": "brethren",
-      "start": 43.689,
-      "end": 43.968
-    },
-    {
-      "w": "of",
-      "start": 44.002,
-      "end": 44.049
-    },
-    {
-      "w": "our",
-      "start": 44.095,
-      "end": 44.188
-    },
-    {
-      "w": "father.\"",
-      "start": 44.223,
-      "end": 44.757
-    },
-    {
-      "w": "And",
-      "start": 45.361,
-      "end": 45.5
-    },
-    {
-      "w": "Moses",
-      "start": 45.535,
-      "end": 45.814
-    },
-    {
-      "w": "does",
-      "start": 45.848,
-      "end": 45.976
-    },
-    {
-      "w": "not",
-      "start": 46.011,
-      "end": 46.115
-    },
-    {
-      "w": "rule",
-      "start": 46.15,
-      "end": 46.301
-    },
-    {
-      "w": "on",
-      "start": 46.336,
-      "end": 46.406
-    },
-    {
-      "w": "it.",
-      "start": 46.441,
-      "end": 46.789
-    },
-    {
-      "w": "He",
-      "start": 47.613,
-      "end": 47.706
-    },
-    {
-      "w": "does",
-      "start": 47.752,
-      "end": 47.869
-    },
-    {
-      "w": "not",
-      "start": 47.903,
-      "end": 48.008
-    },
-    {
-      "w": "wing",
-      "start": 48.043,
-      "end": 48.182
-    },
-    {
-      "w": "it.",
-      "start": 48.228,
-      "end": 48.519
-    },
-    {
-      "w": "He",
-      "start": 49.215,
-      "end": 49.308
-    },
-    {
-      "w": "does",
-      "start": 49.355,
-      "end": 49.482
-    },
-    {
-      "w": "not",
-      "start": 49.517,
-      "end": 49.622
-    },
-    {
-      "w": "send",
-      "start": 49.656,
-      "end": 49.784
-    },
-    {
-      "w": "them",
-      "start": 49.807,
-      "end": 49.912
-    },
-    {
-      "w": "home.",
-      "start": 49.958,
-      "end": 50.434
-    },
-    {
-      "w": "\"And",
-      "start": 50.957,
-      "end": 51.212
-    },
-    {
-      "w": "Moses",
-      "start": 51.247,
-      "end": 51.537
-    },
-    {
-      "w": "brought",
-      "start": 51.572,
-      "end": 51.757
-    },
-    {
-      "w": "their",
-      "start": 51.792,
-      "end": 51.932
-    },
-    {
-      "w": "cause",
-      "start": 51.978,
-      "end": 52.199
-    },
-    {
-      "w": "before",
-      "start": 52.233,
-      "end": 52.442
-    },
-    {
-      "w": "the",
-      "start": 52.477,
-      "end": 52.547
-    },
-    {
-      "w": "Lord.\"",
-      "start": 52.593,
-      "end": 53.104
-    },
-    {
-      "w": "And",
-      "start": 53.801,
-      "end": 53.905
-    },
-    {
-      "w": "the",
-      "start": 53.94,
-      "end": 54.01
-    },
-    {
-      "w": "answer",
-      "start": 54.045,
-      "end": 54.242
-    },
-    {
-      "w": "comes",
-      "start": 54.277,
-      "end": 54.439
-    },
-    {
-      "w": "back.",
-      "start": 54.486,
-      "end": 54.892
-    },
-    {
-      "w": "\"The",
-      "start": 55.333,
-      "end": 55.6
-    },
-    {
-      "w": "daughters",
-      "start": 55.647,
-      "end": 55.949
-    },
-    {
-      "w": "of",
-      "start": 55.983,
-      "end": 56.03
-    },
-    {
-      "w": "Zelophehad",
-      "start": 56.065,
-      "end": 56.703
-    },
-    {
-      "w": "speak",
-      "start": 57.086,
-      "end": 57.307
-    },
-    {
-      "w": "right.\"",
-      "start": 57.353,
-      "end": 57.795
-    },
-    {
-      "w": "Speak",
-      "start": 58.491,
-      "end": 58.735
-    },
-    {
-      "w": "right.",
-      "start": 58.77,
-      "end": 59.199
-    },
-    {
-      "w": "God",
-      "start": 59.641,
-      "end": 59.803
-    },
-    {
-      "w": "agreed",
-      "start": 59.838,
-      "end": 60.047
-    },
-    {
-      "w": "with",
-      "start": 60.07,
-      "end": 60.175
-    },
-    {
-      "w": "them.",
-      "start": 60.209,
-      "end": 60.558
-    },
-    {
-      "w": "On",
-      "start": 61.254,
-      "end": 61.359
-    },
-    {
-      "w": "the",
-      "start": 61.394,
-      "end": 61.463
-    },
-    {
-      "w": "record.",
-      "start": 61.498,
-      "end": 62.009
-    },
-    {
-      "w": "And",
-      "start": 62.833,
-      "end": 62.949
-    },
-    {
-      "w": "the",
-      "start": 62.984,
-      "end": 63.054
-    },
-    {
-      "w": "inheritance",
-      "start": 63.1,
-      "end": 63.576
-    },
-    {
-      "w": "law",
-      "start": 63.611,
-      "end": 63.727
-    },
-    {
-      "w": "of",
-      "start": 63.762,
-      "end": 63.809
-    },
-    {
-      "w": "Israel",
-      "start": 63.855,
-      "end": 64.134
-    },
-    {
-      "w": "was",
-      "start": 64.168,
-      "end": 64.273
-    },
-    {
-      "w": "rewritten",
-      "start": 64.331,
-      "end": 64.679
-    },
-    {
-      "w": "because",
-      "start": 64.714,
-      "end": 64.958
-    },
-    {
-      "w": "five",
-      "start": 64.993,
-      "end": 65.271
-    },
-    {
-      "w": "women",
-      "start": 65.306,
-      "end": 65.504
-    },
-    {
-      "w": "showed",
-      "start": 65.55,
-      "end": 65.747
-    },
-    {
-      "w": "up",
-      "start": 65.794,
-      "end": 65.91
-    },
-    {
-      "w": "and",
-      "start": 65.98,
-      "end": 66.096
-    },
-    {
-      "w": "asked.",
-      "start": 66.154,
-      "end": 66.781
-    }
-  ],
-  "renderedAt": 1785479608784
+ "kind": "tea",
+ "teaId": "zelophehad",
+ "mood": "light",
+ "heat": 3,
+ "text": "Five sisters argued property law in front of the entire nation. God said they were right. Numbers twenty-seven. Their names are Mahlah, Noah, Hoglah, Milcah and Tirzah. Scripture lists every single one. Their father died in the wilderness with no sons. Under the rules as they stood, land moved through sons. So his name and his portion simply vanish. And these five women do not petition quietly. They stood before Moses. And before Eleazar the priest. And before the princes and all the congregation. At the door of the tabernacle. That is the entire leadership of the nation, plus everybody else, and five sisters walk up and make a legal argument. \"Why should the name of our father be done away from among his family, because he hath no son? Give unto us therefore a possession among the brethren of our father.\" And Moses does not rule on it. He does not wing it. He does not send them home. \"And Moses brought their cause before the Lord.\" And the answer comes back. \"The daughters of Zelophehad speak right.\" Speak right. God agreed with them. On the record. And the inheritance law of Israel was rewritten because five women showed up and asked.",
+ "voice": "human",
+ "words": [
+  {
+   "w": "Five",
+   "start": 0.0,
+   "end": 0.28
+  },
+  {
+   "w": "sisters",
+   "start": 0.28,
+   "end": 0.64
+  },
+  {
+   "w": "argued",
+   "start": 0.64,
+   "end": 1.1
+  },
+  {
+   "w": "property",
+   "start": 1.1,
+   "end": 1.54
+  },
+  {
+   "w": "law",
+   "start": 1.54,
+   "end": 1.78
+  },
+  {
+   "w": "in",
+   "start": 1.78,
+   "end": 1.96
+  },
+  {
+   "w": "front",
+   "start": 1.96,
+   "end": 2.2
+  },
+  {
+   "w": "of",
+   "start": 2.2,
+   "end": 2.36
+  },
+  {
+   "w": "the",
+   "start": 2.36,
+   "end": 2.44
+  },
+  {
+   "w": "entire",
+   "start": 2.44,
+   "end": 2.8
+  },
+  {
+   "w": "nation.",
+   "start": 2.8,
+   "end": 3.28
+  },
+  {
+   "w": "God",
+   "start": 4.0,
+   "end": 4.18
+  },
+  {
+   "w": "said",
+   "start": 4.18,
+   "end": 4.54
+  },
+  {
+   "w": "they",
+   "start": 4.54,
+   "end": 5.02
+  },
+  {
+   "w": "were",
+   "start": 5.02,
+   "end": 5.38
+  },
+  {
+   "w": "right.",
+   "start": 5.38,
+   "end": 5.82
+  },
+  {
+   "w": "Numbers",
+   "start": 7.02,
+   "end": 7.02
+  },
+  {
+   "w": "twenty-seven.",
+   "start": 7.66,
+   "end": 8.3
+  },
+  {
+   "w": "Their",
+   "start": 8.3,
+   "end": 8.38
+  },
+  {
+   "w": "names",
+   "start": 8.38,
+   "end": 8.64
+  },
+  {
+   "w": "are",
+   "start": 8.64,
+   "end": 9.0
+  },
+  {
+   "w": "Mahlah,",
+   "start": 9.5,
+   "end": 10.0
+  },
+  {
+   "w": "Noah,",
+   "start": 10.0,
+   "end": 10.34
+  },
+  {
+   "w": "Hoglah,",
+   "start": 11.12,
+   "end": 11.9
+  },
+  {
+   "w": "Milcah",
+   "start": 11.9,
+   "end": 12.68
+  },
+  {
+   "w": "and",
+   "start": 12.68,
+   "end": 12.76
+  },
+  {
+   "w": "Tirzah.",
+   "start": 12.76,
+   "end": 13.44
+  },
+  {
+   "w": "Scripture",
+   "start": 14.16,
+   "end": 14.18
+  },
+  {
+   "w": "lists",
+   "start": 14.18,
+   "end": 14.68
+  },
+  {
+   "w": "every",
+   "start": 14.68,
+   "end": 15.2
+  },
+  {
+   "w": "single",
+   "start": 15.2,
+   "end": 15.6
+  },
+  {
+   "w": "one.",
+   "start": 15.6,
+   "end": 15.92
+  },
+  {
+   "w": "Their",
+   "start": 16.54,
+   "end": 16.64
+  },
+  {
+   "w": "father",
+   "start": 16.64,
+   "end": 16.88
+  },
+  {
+   "w": "died",
+   "start": 16.88,
+   "end": 17.2
+  },
+  {
+   "w": "in",
+   "start": 17.2,
+   "end": 17.38
+  },
+  {
+   "w": "the",
+   "start": 17.38,
+   "end": 17.48
+  },
+  {
+   "w": "wilderness",
+   "start": 17.48,
+   "end": 17.8
+  },
+  {
+   "w": "with",
+   "start": 17.8,
+   "end": 18.06
+  },
+  {
+   "w": "no",
+   "start": 18.06,
+   "end": 18.34
+  },
+  {
+   "w": "sons.",
+   "start": 18.34,
+   "end": 18.62
+  },
+  {
+   "w": "Under",
+   "start": 19.42,
+   "end": 19.52
+  },
+  {
+   "w": "the",
+   "start": 19.52,
+   "end": 19.68
+  },
+  {
+   "w": "rules",
+   "start": 19.68,
+   "end": 19.92
+  },
+  {
+   "w": "as",
+   "start": 20.1,
+   "end": 20.18
+  },
+  {
+   "w": "they",
+   "start": 20.18,
+   "end": 20.38
+  },
+  {
+   "w": "stood,",
+   "start": 20.38,
+   "end": 20.7
+  },
+  {
+   "w": "land",
+   "start": 21.06,
+   "end": 21.2
+  },
+  {
+   "w": "moved",
+   "start": 21.2,
+   "end": 21.58
+  },
+  {
+   "w": "through",
+   "start": 21.58,
+   "end": 21.96
+  },
+  {
+   "w": "sons.",
+   "start": 21.96,
+   "end": 22.28
+  },
+  {
+   "w": "So",
+   "start": 22.96,
+   "end": 23.18
+  },
+  {
+   "w": "his",
+   "start": 23.52,
+   "end": 23.78
+  },
+  {
+   "w": "name",
+   "start": 23.78,
+   "end": 24.04
+  },
+  {
+   "w": "and",
+   "start": 24.04,
+   "end": 24.3
+  },
+  {
+   "w": "his",
+   "start": 24.3,
+   "end": 24.48
+  },
+  {
+   "w": "portion",
+   "start": 24.48,
+   "end": 24.8
+  },
+  {
+   "w": "simply",
+   "start": 24.8,
+   "end": 25.24
+  },
+  {
+   "w": "vanish.",
+   "start": 25.24,
+   "end": 25.56
+  },
+  {
+   "w": "And",
+   "start": 26.22,
+   "end": 26.38
+  },
+  {
+   "w": "these",
+   "start": 26.38,
+   "end": 26.58
+  },
+  {
+   "w": "five",
+   "start": 26.58,
+   "end": 26.8
+  },
+  {
+   "w": "women",
+   "start": 26.8,
+   "end": 27.14
+  },
+  {
+   "w": "do",
+   "start": 27.14,
+   "end": 27.52
+  },
+  {
+   "w": "not",
+   "start": 27.52,
+   "end": 27.86
+  },
+  {
+   "w": "petition",
+   "start": 27.86,
+   "end": 28.22
+  },
+  {
+   "w": "quietly.",
+   "start": 28.22,
+   "end": 28.76
+  },
+  {
+   "w": "They",
+   "start": 29.38,
+   "end": 29.66
+  },
+  {
+   "w": "stood",
+   "start": 29.66,
+   "end": 29.92
+  },
+  {
+   "w": "before",
+   "start": 29.92,
+   "end": 30.26
+  },
+  {
+   "w": "Moses.",
+   "start": 30.26,
+   "end": 30.68
+  },
+  {
+   "w": "And",
+   "start": 31.28,
+   "end": 31.32
+  },
+  {
+   "w": "before",
+   "start": 31.32,
+   "end": 31.62
+  },
+  {
+   "w": "Eleazar",
+   "start": 31.86,
+   "end": 32.1
+  },
+  {
+   "w": "the",
+   "start": 32.1,
+   "end": 32.38
+  },
+  {
+   "w": "priest.",
+   "start": 32.38,
+   "end": 32.62
+  },
+  {
+   "w": "And",
+   "start": 33.16,
+   "end": 33.28
+  },
+  {
+   "w": "before",
+   "start": 33.28,
+   "end": 33.54
+  },
+  {
+   "w": "the",
+   "start": 33.54,
+   "end": 33.74
+  },
+  {
+   "w": "princes",
+   "start": 33.74,
+   "end": 34.14
+  },
+  {
+   "w": "and",
+   "start": 34.74,
+   "end": 34.96
+  },
+  {
+   "w": "all",
+   "start": 34.96,
+   "end": 35.3
+  },
+  {
+   "w": "the",
+   "start": 35.3,
+   "end": 35.52
+  },
+  {
+   "w": "congregation.",
+   "start": 35.52,
+   "end": 36.02
+  },
+  {
+   "w": "At",
+   "start": 36.54,
+   "end": 36.9
+  },
+  {
+   "w": "the",
+   "start": 36.9,
+   "end": 37.02
+  },
+  {
+   "w": "door",
+   "start": 37.02,
+   "end": 37.2
+  },
+  {
+   "w": "of",
+   "start": 37.2,
+   "end": 37.42
+  },
+  {
+   "w": "the",
+   "start": 37.42,
+   "end": 37.54
+  },
+  {
+   "w": "tabernacle.",
+   "start": 37.54,
+   "end": 38.08
+  },
+  {
+   "w": "That",
+   "start": 38.62,
+   "end": 38.9
+  },
+  {
+   "w": "is",
+   "start": 38.9,
+   "end": 39.22
+  },
+  {
+   "w": "the",
+   "start": 39.22,
+   "end": 39.38
+  },
+  {
+   "w": "entire",
+   "start": 39.38,
+   "end": 39.8
+  },
+  {
+   "w": "leadership",
+   "start": 39.8,
+   "end": 40.14
+  },
+  {
+   "w": "of",
+   "start": 40.14,
+   "end": 40.4
+  },
+  {
+   "w": "the",
+   "start": 40.4,
+   "end": 40.52
+  },
+  {
+   "w": "nation,",
+   "start": 40.52,
+   "end": 40.8
+  },
+  {
+   "w": "plus",
+   "start": 41.22,
+   "end": 41.36
+  },
+  {
+   "w": "everybody",
+   "start": 41.36,
+   "end": 41.72
+  },
+  {
+   "w": "else,",
+   "start": 41.72,
+   "end": 42.08
+  },
+  {
+   "w": "and",
+   "start": 42.08,
+   "end": 42.78
+  },
+  {
+   "w": "five",
+   "start": 42.78,
+   "end": 43.0
+  },
+  {
+   "w": "sisters",
+   "start": 43.0,
+   "end": 43.38
+  },
+  {
+   "w": "walk",
+   "start": 43.38,
+   "end": 43.66
+  },
+  {
+   "w": "up",
+   "start": 43.66,
+   "end": 43.9
+  },
+  {
+   "w": "and",
+   "start": 43.9,
+   "end": 44.34
+  },
+  {
+   "w": "make",
+   "start": 44.34,
+   "end": 44.48
+  },
+  {
+   "w": "a",
+   "start": 44.48,
+   "end": 44.64
+  },
+  {
+   "w": "legal",
+   "start": 44.64,
+   "end": 44.9
+  },
+  {
+   "w": "argument.",
+   "start": 44.9,
+   "end": 45.38
+  },
+  {
+   "w": "\"Why",
+   "start": 46.14,
+   "end": 46.26
+  },
+  {
+   "w": "should",
+   "start": 46.26,
+   "end": 46.46
+  },
+  {
+   "w": "the",
+   "start": 46.46,
+   "end": 46.6
+  },
+  {
+   "w": "name",
+   "start": 46.6,
+   "end": 46.68
+  },
+  {
+   "w": "of",
+   "start": 46.68,
+   "end": 46.82
+  },
+  {
+   "w": "our",
+   "start": 46.82,
+   "end": 46.96
+  },
+  {
+   "w": "father",
+   "start": 46.96,
+   "end": 47.2
+  },
+  {
+   "w": "be",
+   "start": 47.2,
+   "end": 47.38
+  },
+  {
+   "w": "done",
+   "start": 47.38,
+   "end": 47.64
+  },
+  {
+   "w": "away",
+   "start": 47.64,
+   "end": 47.92
+  },
+  {
+   "w": "from",
+   "start": 47.92,
+   "end": 48.16
+  },
+  {
+   "w": "among",
+   "start": 48.16,
+   "end": 48.44
+  },
+  {
+   "w": "his",
+   "start": 48.44,
+   "end": 48.68
+  },
+  {
+   "w": "family,",
+   "start": 48.68,
+   "end": 49.1
+  },
+  {
+   "w": "because",
+   "start": 49.1,
+   "end": 49.46
+  },
+  {
+   "w": "he",
+   "start": 49.46,
+   "end": 49.62
+  },
+  {
+   "w": "hath",
+   "start": 49.62,
+   "end": 49.82
+  },
+  {
+   "w": "no",
+   "start": 49.82,
+   "end": 50.14
+  },
+  {
+   "w": "son?",
+   "start": 50.14,
+   "end": 50.5
+  },
+  {
+   "w": "Give",
+   "start": 51.26,
+   "end": 51.4
+  },
+  {
+   "w": "unto",
+   "start": 51.4,
+   "end": 51.66
+  },
+  {
+   "w": "us",
+   "start": 51.66,
+   "end": 52.0
+  },
+  {
+   "w": "therefore",
+   "start": 52.14,
+   "end": 52.4
+  },
+  {
+   "w": "a",
+   "start": 52.76,
+   "end": 52.76
+  },
+  {
+   "w": "possession",
+   "start": 52.76,
+   "end": 53.2
+  },
+  {
+   "w": "among",
+   "start": 53.2,
+   "end": 53.64
+  },
+  {
+   "w": "the",
+   "start": 53.64,
+   "end": 53.86
+  },
+  {
+   "w": "brethren",
+   "start": 53.86,
+   "end": 54.06
+  },
+  {
+   "w": "of",
+   "start": 54.06,
+   "end": 54.44
+  },
+  {
+   "w": "our",
+   "start": 54.44,
+   "end": 54.72
+  },
+  {
+   "w": "father.\"",
+   "start": 54.72,
+   "end": 55.16
+  },
+  {
+   "w": "And",
+   "start": 55.7,
+   "end": 56.18
+  },
+  {
+   "w": "Moses",
+   "start": 56.18,
+   "end": 56.5
+  },
+  {
+   "w": "does",
+   "start": 56.5,
+   "end": 56.82
+  },
+  {
+   "w": "not",
+   "start": 56.82,
+   "end": 57.18
+  },
+  {
+   "w": "rule",
+   "start": 57.18,
+   "end": 57.46
+  },
+  {
+   "w": "on",
+   "start": 57.46,
+   "end": 57.66
+  },
+  {
+   "w": "it.",
+   "start": 57.66,
+   "end": 57.84
+  },
+  {
+   "w": "He",
+   "start": 57.84,
+   "end": 58.3
+  },
+  {
+   "w": "does",
+   "start": 58.3,
+   "end": 58.48
+  },
+  {
+   "w": "not",
+   "start": 58.48,
+   "end": 58.76
+  },
+  {
+   "w": "wing",
+   "start": 58.76,
+   "end": 59.02
+  },
+  {
+   "w": "it.",
+   "start": 59.02,
+   "end": 59.26
+  },
+  {
+   "w": "He",
+   "start": 59.48,
+   "end": 59.74
+  },
+  {
+   "w": "does",
+   "start": 59.74,
+   "end": 59.88
+  },
+  {
+   "w": "not",
+   "start": 59.88,
+   "end": 60.14
+  },
+  {
+   "w": "send",
+   "start": 60.14,
+   "end": 60.34
+  },
+  {
+   "w": "them",
+   "start": 60.34,
+   "end": 60.54
+  },
+  {
+   "w": "home.",
+   "start": 60.54,
+   "end": 60.82
+  },
+  {
+   "w": "\"And",
+   "start": 61.26,
+   "end": 61.52
+  },
+  {
+   "w": "Moses",
+   "start": 61.52,
+   "end": 61.78
+  },
+  {
+   "w": "brought",
+   "start": 61.78,
+   "end": 62.12
+  },
+  {
+   "w": "their",
+   "start": 62.12,
+   "end": 62.36
+  },
+  {
+   "w": "cause",
+   "start": 62.36,
+   "end": 62.62
+  },
+  {
+   "w": "before",
+   "start": 62.62,
+   "end": 62.98
+  },
+  {
+   "w": "the",
+   "start": 62.98,
+   "end": 63.16
+  },
+  {
+   "w": "Lord.\"",
+   "start": 63.16,
+   "end": 63.42
+  },
+  {
+   "w": "And",
+   "start": 64.12,
+   "end": 64.3
+  },
+  {
+   "w": "the",
+   "start": 64.3,
+   "end": 64.42
+  },
+  {
+   "w": "answer",
+   "start": 64.42,
+   "end": 64.74
+  },
+  {
+   "w": "comes",
+   "start": 64.74,
+   "end": 65.16
+  },
+  {
+   "w": "back.",
+   "start": 65.16,
+   "end": 65.6
+  },
+  {
+   "w": "\"The",
+   "start": 66.22,
+   "end": 66.48
+  },
+  {
+   "w": "daughters",
+   "start": 66.48,
+   "end": 66.94
+  },
+  {
+   "w": "of",
+   "start": 66.94,
+   "end": 67.36
+  },
+  {
+   "w": "Zelophehad",
+   "start": 67.72,
+   "end": 68.08
+  },
+  {
+   "w": "speak",
+   "start": 68.08,
+   "end": 68.44
+  },
+  {
+   "w": "right.\"",
+   "start": 68.44,
+   "end": 68.9
+  },
+  {
+   "w": "Speak",
+   "start": 69.52,
+   "end": 69.88
+  },
+  {
+   "w": "right.",
+   "start": 69.88,
+   "end": 70.3
+  },
+  {
+   "w": "God",
+   "start": 70.82,
+   "end": 71.0
+  },
+  {
+   "w": "agreed",
+   "start": 71.0,
+   "end": 71.56
+  },
+  {
+   "w": "with",
+   "start": 71.56,
+   "end": 71.76
+  },
+  {
+   "w": "them.",
+   "start": 71.76,
+   "end": 72.02
+  },
+  {
+   "w": "On",
+   "start": 72.44,
+   "end": 72.74
+  },
+  {
+   "w": "the",
+   "start": 72.74,
+   "end": 73.12
+  },
+  {
+   "w": "record.",
+   "start": 73.12,
+   "end": 73.64
+  },
+  {
+   "w": "And",
+   "start": 74.28,
+   "end": 74.6
+  },
+  {
+   "w": "the",
+   "start": 74.6,
+   "end": 74.86
+  },
+  {
+   "w": "inheritance",
+   "start": 74.86,
+   "end": 75.3
+  },
+  {
+   "w": "law",
+   "start": 75.3,
+   "end": 75.82
+  },
+  {
+   "w": "of",
+   "start": 75.82,
+   "end": 76.02
+  },
+  {
+   "w": "Israel",
+   "start": 76.02,
+   "end": 76.4
+  },
+  {
+   "w": "was",
+   "start": 76.4,
+   "end": 76.62
+  },
+  {
+   "w": "rewritten",
+   "start": 76.62,
+   "end": 77.08
+  },
+  {
+   "w": "because",
+   "start": 77.08,
+   "end": 77.8
+  },
+  {
+   "w": "five",
+   "start": 77.8,
+   "end": 78.24
+  },
+  {
+   "w": "women",
+   "start": 78.24,
+   "end": 78.7
+  },
+  {
+   "w": "showed",
+   "start": 78.7,
+   "end": 79.2
+  },
+  {
+   "w": "up",
+   "start": 79.2,
+   "end": 79.6
+  },
+  {
+   "w": "and",
+   "start": 79.6,
+   "end": 80.28
+  },
+  {
+   "w": "asked.",
+   "start": 80.28,
+   "end": 80.8
+  }
+ ],
+ "renderedAt": 1785479608784
 }
