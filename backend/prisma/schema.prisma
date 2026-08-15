@@ -10,8 +10,9 @@ datasource db {
 model User {
   id              String   @id @default(uuid()) @db.Uuid
   guestDeviceId   String?  @unique @map("guest_device_id")
-  appleSub        String?  @map("apple_sub")
-  googleSub       String?  @map("google_sub")
+  appleSub        String?  @unique @map("apple_sub")
+  googleSub       String?  @unique @map("google_sub")
+  authProvider    String   @default("guest") @map("auth_provider")
   email           String?
   name            String?
   createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
@@ -25,8 +26,22 @@ model User {
   storyProgress   StoryProgress[]
   supportTickets  SupportTicket[]
   teaEngagements  TeaEngagement[]
+  reviewPrompts   ReviewPrompt[]
 
   @@map("user")
+}
+
+model ReviewPrompt {
+  id        String   @id @default(uuid()) @db.Uuid
+  userId    String   @map("user_id") @db.Uuid
+  surface   String // 'onboarding' | 'post-story' | 'day7'
+  action    String // 'prompted' | 'declined' | 'completed'
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("review_prompt")
 }
 
 model Profile {

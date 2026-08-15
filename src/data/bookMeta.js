@@ -36,10 +36,10 @@ const ABBR = {
 
 // Short intros for book-detail screens (extend as desired).
 export const BOOK_INTROS = {
-  Psalms: '150 songs of lament, praise and trust — the prayer book of the Bible.',
+  Psalms: '150 songs of lament, praise and trust, the prayer book of the Bible.',
   Ruth: 'A story of loyalty and redemption in the harvest fields of Bethlehem.',
-  Esther: 'Courage in a foreign palace — "for such a time as this."',
-  John: "The fourth Gospel — that you might believe, and have life.",
+  Esther: 'Courage in a foreign palace. For such a time as this.',
+  John: "The fourth Gospel, that you might believe, and have life.",
   Philippians: "Paul's letter of joy, written from prison.",
 };
 

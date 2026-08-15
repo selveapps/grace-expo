@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
+    "dev": "tsx --env-file-if-exists=.env watch src/index.ts",
     "build": "prisma generate && tsc",
     "start": "node dist/index.js",
     "typecheck": "tsc --noEmit",
@@ -12,11 +12,11 @@
     "db:down": "docker compose down",
     "migrate": "prisma migrate deploy",
     "migrate:dev": "prisma migrate dev",
-    "seed:prepare": "tsx scripts/prepare-kjv.ts",
-    "seed:prepare:full": "tsx scripts/prepare-kjv.ts --full",
-    "seed:bible": "tsx scripts/seed-bible.ts",
-    "generate:audio": "tsx scripts/generate-audio.ts",
-    "generate:audio:placeholder": "tsx scripts/generate-placeholder-audio.ts",
+    "seed:prepare": "tsx --env-file-if-exists=.env scripts/prepare-kjv.ts",
+    "seed:prepare:full": "tsx --env-file-if-exists=.env scripts/prepare-kjv.ts --full",
+    "seed:bible": "tsx --env-file-if-exists=.env scripts/seed-bible.ts",
+    "generate:audio": "tsx --env-file-if-exists=.env scripts/generate-audio.ts",
+    "generate:audio:placeholder": "tsx --env-file-if-exists=.env scripts/generate-placeholder-audio.ts",
     "test": "tsx --test test/**/*.test.ts",
     "verify:phase1": "bash scripts/verify-phase1.sh",
     "verify:phase2": "bash scripts/verify-phase2.sh",
@@ -32,7 +32,12 @@
     "record:phase4": "bash scripts/record-e2e.sh phase4",
     "verify:phase5": "bash scripts/verify-phase5.sh",
     "record:phase5": "bash scripts/record-e2e.sh phase5",
-    "setup:railway": "bash scripts/setup-railway.sh"
+    "setup:railway": "bash scripts/setup-railway.sh",
+    "verify:audio": "tsx --env-file-if-exists=.env scripts/verify-audio.ts",
+    "sync:durations": "tsx --env-file-if-exists=.env scripts/sync-durations.ts",
+    "tea:ab": "tsx --env-file-if-exists=.env scripts/tea-voice-ab.ts",
+    "sync:tea-fallback": "tsx --env-file-if-exists=.env scripts/sync-tea-fallback.ts",
+    "sync:tea-doc": "tsx --env-file-if-exists=.env scripts/sync-tea-scripts-doc.ts"
   },
   "engines": {
     "node": ">=20"

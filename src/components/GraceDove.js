@@ -3,6 +3,7 @@ import { Animated, Easing, View } from 'react-native';
 import Svg, {
   Defs, RadialGradient, LinearGradient, Stop, G, Circle, Ellipse, Path, Line,
 } from 'react-native-svg';
+import { useProfile } from '../state/profile';
 
 /**
  * GraceDove — the animated mascot.
@@ -19,23 +20,45 @@ import Svg, {
  */
 const AG = Animated.createAnimatedComponent(G);
 const AEllipse = Animated.createAnimatedComponent(Ellipse);
+const ACircle = Animated.createAnimatedComponent(Circle);
+
+// The lid closes by shrinking the eye's own `ry` radius, never by a transform.
+// react-native-svg honours `origin` for its scale/rotation *props*; a
+// style.transform is applied at the view level about the viewBox origin (0,0),
+// which used to drag the pupil up and out of the head. Animating the radius
+// keeps the centre fixed, so she blinks in place. Requires useNativeDriver:false.
+const EYE_RY = 13.5;
 
 export default function GraceDove({ size = 200, wings = 'open', motion = 'float', crop = 'none' }) {
+  const { profile } = useProfile();
+  const reducedMotion = !!profile?.reducedMotion;
   const t = useRef(new Animated.Value(0)).current;      // 0..1 loop
   const halo = useRef(new Animated.Value(0)).current;    // halo glint rotation 0..1
-  const blink = useRef(new Animated.Value(1)).current;   // eye scaleY: 1 open, ~0.1 shut
+  const lid = useRef(new Animated.Value(EYE_RY)).current;    // eye ry: open -> thin line
+  const lidOpacity = useRef(new Animated.Value(1)).current;  // catchlight fades with the lid
   const flap = useRef(new Animated.Value(0)).current;    // open-wing flap 0..1
 
-  // Eye-blink runs on every screen Grace appears — staggered, ~every 3s.
+  // Eye-blink runs on every screen Grace appears — staggered so she never
+  // blinks metronomically. Reduced motion leaves the eyes open.
   useEffect(() => {
+    if (reducedMotion) return undefined;
+    const blinkOnce = Animated.parallel([
+      Animated.sequence([
+        Animated.timing(lid, { toValue: 1.2, duration: 90, easing: Easing.in(Easing.quad), useNativeDriver: false }),
+        Animated.timing(lid, { toValue: EYE_RY, duration: 130, easing: Easing.out(Easing.quad), useNativeDriver: false }),
+      ]),
+      Animated.sequence([
+        Animated.timing(lidOpacity, { toValue: 0, duration: 90, useNativeDriver: false }),
+        Animated.timing(lidOpacity, { toValue: 1, duration: 130, useNativeDriver: false }),
+      ]),
+    ]);
     const loop = Animated.loop(Animated.sequence([
-      Animated.delay(2600 + Math.random() * 1400),
-      Animated.timing(blink, { toValue: 0.1, duration: 90, useNativeDriver: true }),
-      Animated.timing(blink, { toValue: 1, duration: 110, useNativeDriver: true }),
+      Animated.delay(2400 + Math.random() * 1600),
+      blinkOnce,
     ]));
     loop.start();
     return () => loop.stop();
-  }, []);
+  }, [reducedMotion]);
 
   // Wing-flap — pages of the open "Bible" wings turning (keep-place / arrival).
   useEffect(() => {
@@ -187,10 +210,10 @@ export default function GraceDove({ size = 200, wings = 'open', motion = 'float'
 
         {/* Head + face */}
         <Circle cx="220" cy="185" r="64" fill="url(#head)" />
-        <AEllipse cx="194" cy="188" rx="10.5" ry="13.5" fill="#20211f" origin="194, 188" style={{ transform: [{ scaleY: blink }] }} />
-        <Circle cx="191" cy="183" r="3.5" fill="#fff" />
-        <AEllipse cx="246" cy="188" rx="10.5" ry="13.5" fill="#20211f" origin="246, 188" style={{ transform: [{ scaleY: blink }] }} />
-        <Circle cx="243" cy="183" r="3.5" fill="#fff" />
+        <AEllipse cx="194" cy="188" rx="10.5" ry={lid} fill="#20211f" />
+        <ACircle cx="191" cy="183" r="3.5" fill="#fff" opacity={lidOpacity} />
+        <AEllipse cx="246" cy="188" rx="10.5" ry={lid} fill="#20211f" />
+        <ACircle cx="243" cy="183" r="3.5" fill="#fff" opacity={lidOpacity} />
         <Path d="M 220 205 C 210 205 206 214 212 221 C 216 225 224 225 228 221 C 234 214 230 205 220 205 Z" fill="#d99b4c" />
       </Svg>
     </Animated.View>

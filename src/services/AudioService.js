@@ -19,6 +19,12 @@ let state = {
   error: null,
 };
 
+// The catalog's durationSeconds for the loaded track. expo-av reports
+// durationMillis as undefined for a streamed MP3 with no reliable header, so
+// this is what keeps the remaining-time stamp and the skip buttons honest when
+// the file itself will not say how long it is.
+let metaDuration = 0;
+
 const listeners = new Set();
 const emit = () => listeners.forEach((l) => l({ ...state }));
 
@@ -56,7 +62,14 @@ function onPlaybackStatusUpdate(status) {
     return;
   }
 
-  state.duration = (status.durationMillis ?? 0) / 1000;
+  // Only accept a duration the player actually knows. This used to assign
+  // `(status.durationMillis ?? 0) / 1000` on every tick, so a stream that omits
+  // durationMillis reset a good duration back to 0 twice a second. That is what
+  // made the right-hand stamp read -0:00 forever and made seek() clamp every
+  // ±15s skip to position 0, so the skip buttons appeared dead.
+  const reported = status.durationMillis != null ? status.durationMillis / 1000 : 0;
+  if (reported > 0) state.duration = reported;
+  else if (!state.duration && metaDuration > 0) state.duration = metaDuration;
   state.position = (status.positionMillis ?? 0) / 1000;
   state.playing = status.isPlaying;
 
@@ -118,15 +131,15 @@ export const AudioService = {
 
     const story = await StoryService.getStory(storyId);
     const prog = await StoryService.getProgress(storyId);
+    // Catalog duration is the floor for everything below: it is what we fall
+    // back to whenever the file will not report its own length.
+    metaDuration = story?.durationSeconds ?? 0;
 
-    let narrative = null;
-    try {
-      const res = await StoryService.getNarrative(storyId, part);
-      narrative = res.content;
-    } catch {
-      narrative = null;
-    }
-
+    // The transcript now comes from the render's own sidecar
+    // (GET /stories/:id/transcript), so the old LLM narrative fetch is dead
+    // weight: it fired POST /ai/stories/:id/narrative on every load and, with no
+    // OPENAI_API_KEY on the server, returned a placeholder string that was never
+    // shown. Removed. Duration comes from the audio file itself.
     try {
       const uri = await resolveAudioUri(story, part);
       const { sound: created } = await Audio.Sound.createAsync(
@@ -137,9 +150,13 @@ export const AudioService = {
       sound = created;
 
       const status = await sound.getStatusAsync();
-      const durationSec = status.isLoaded
-        ? (status.durationMillis ?? 0) / 1000
-        : (story?.durationSeconds ?? 0);
+      // A loaded sound can still report no duration (streamed MP3, missing
+      // header), so the catalog value backs it up rather than only covering the
+      // not-loaded case.
+      const reported = status.isLoaded && status.durationMillis != null
+        ? status.durationMillis / 1000
+        : 0;
+      const durationSec = reported > 0 ? reported : metaDuration;
 
       const resumeAt = Math.min(prog.seconds || 0, durationSec || prog.seconds || 0);
       if (resumeAt > 0) {
@@ -153,7 +170,6 @@ export const AudioService = {
         duration: durationSec,
         rate: state.rate,
         status: 'ready',
-        narrative,
         part,
         error: null,
       };
@@ -164,12 +180,9 @@ export const AudioService = {
         storyId,
         playing: false,
         position: prog.seconds || 0,
-        duration: narrative
-          ? StoryService.estimateDurationFromText(narrative, story?.durationSeconds ?? 300)
-          : (story?.durationSeconds ?? 0),
+        duration: story?.durationSeconds ?? 0,
         rate: state.rate,
         status: 'error',
-        narrative,
         part,
         error: e.message || 'Could not load audio',
       };
@@ -197,7 +210,13 @@ export const AudioService = {
   },
 
   async seek(seconds) {
-    const target = Math.max(0, Math.min(state.duration, seconds));
+    // Only clamp to the end when we actually know where the end is. Clamping
+    // against a 0 duration pinned every seek to the start, which is what made
+    // the ±15s buttons look broken.
+    const limit = state.duration > 0 ? state.duration : metaDuration;
+    const target = limit > 0
+      ? Math.max(0, Math.min(limit, seconds))
+      : Math.max(0, seconds);
     if (sound) await sound.setPositionAsync(target * 1000);
     state.position = target;
     emit();
@@ -214,6 +233,7 @@ export const AudioService = {
       await StoryService.saveProgress(state.storyId, Math.floor(state.position));
     }
     await unloadSound();
+    metaDuration = 0;
     state = {
       storyId: null,
       playing: false,

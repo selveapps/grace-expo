@@ -3,11 +3,11 @@ import { api, LLM_REQUEST_OPTS } from '../api/client';
 import { StorageService, KEYS } from './StorageService';
 
 const FALLBACK_STORIES = [
-  { id: 'ruth-stays', title: 'Ruth stays', subtitle: 'Loyalty in the harvest', hook: 'She had every reason to leave. She stayed.', scriptureRange: 'Ruth 1–4', testament: 'old', books: ['Ruth'], durationSeconds: 540, audioUrl: null, coverTint: '#6B5D4E', tags: ['Women of the Bible', 'Loyalty'], isPremium: true, parts: 4 },
-  { id: 'esther-uninvited', title: 'Esther walks in uninvited', subtitle: 'Courage in the palace', hook: 'For such a time as this.', scriptureRange: 'Esther 4–5', testament: 'old', books: ['Esther'], durationSeconds: 540, audioUrl: null, coverTint: '#5A4632', tags: ['Women of the Bible', 'Courage'], isPremium: true, parts: 4 },
-  { id: 'davids-rooftop', title: "David's rooftop era", subtitle: 'A king, a mistake, a mercy', hook: 'Power looked away. Grace did not.', scriptureRange: '2 Samuel 11–12', testament: 'old', books: ['2 Samuel'], durationSeconds: 620, audioUrl: null, coverTint: '#4A382C', tags: ['Kings', 'Mercy'], isPremium: true, parts: 3 },
-  { id: 'hannah-prayer', title: 'Hannah', subtitle: 'A prayer answered', hook: 'She prayed so hard they thought her drunk.', scriptureRange: '1 Samuel 1–2', testament: 'old', books: ['1 Samuel'], durationSeconds: 480, audioUrl: null, coverTint: '#6B5D4E', tags: ['Women of the Bible', 'Prayer'], isPremium: true, parts: 2 },
-  { id: 'mary-annunciation', title: 'Mary', subtitle: 'The annunciation', hook: 'A teenager said yes to the impossible.', scriptureRange: 'Luke 1', testament: 'new', books: ['Luke'], durationSeconds: 500, audioUrl: null, coverTint: '#5A4632', tags: ['Women of the Bible', 'Faith'], isPremium: false, parts: 3 },
+  { id: 'ruth-stays', title: 'Ruth stays', subtitle: 'Loyalty in the harvest', hook: 'She had every reason to leave. She stayed.', scriptureRange: 'Ruth 1–4', testament: 'old', books: ['Ruth'], durationSeconds: 190, audioUrl: null, coverTint: '#6B5D4E', tags: ['Women of the Bible', 'Grief & Hope', 'Wilderness Seasons', 'Loyalty'], isPremium: true, parts: 4 },
+  { id: 'esther-uninvited', title: 'Esther walks in uninvited', subtitle: 'Courage in the palace', hook: 'For such a time as this.', scriptureRange: 'Esther 3–7', testament: 'old', books: ['Esther'], durationSeconds: 203, audioUrl: null, coverTint: '#5A4632', tags: ['Women of the Bible', 'Courage'], isPremium: true, parts: 4 },
+  { id: 'davids-rooftop', title: "David's rooftop era", subtitle: 'A king, a mistake, a mercy', hook: 'Power looked away. Grace did not.', scriptureRange: '2 Samuel 11–12', testament: 'old', books: ['2 Samuel'], durationSeconds: 201, audioUrl: null, coverTint: '#4A382C', tags: ['Grief & Hope', 'Kings', 'Mercy'], isPremium: true, parts: 3 },
+  { id: 'hannah-prayer', title: 'Hannah', subtitle: 'A prayer answered', hook: 'She prayed so hard they thought her drunk.', scriptureRange: '1 Samuel 1–2', testament: 'old', books: ['1 Samuel'], durationSeconds: 211, audioUrl: null, coverTint: '#6B5D4E', tags: ['Women of the Bible', 'Prayer Stories'], isPremium: true, parts: 2 },
+  { id: 'mary-annunciation', title: 'Mary', subtitle: 'The annunciation', hook: 'She said yes to the impossible.', scriptureRange: 'Luke 1', testament: 'new', books: ['Luke'], durationSeconds: 197, audioUrl: null, coverTint: '#5A4632', tags: ['Women of the Bible', 'Courage', 'Faith'], isPremium: false, parts: 3 },
 ];
 
 const FALLBACK_COLLECTIONS = [
@@ -98,9 +98,35 @@ export const StoryService = {
       return FALLBACK_STORIES.find((s) => s.id === id) || null;
     }
   },
+  /**
+   * Legacy on-demand LLM narrative. No screen calls this any more: display text
+   * comes from the render's sidecar via getTranscript, so nothing in the app
+   * triggers an OpenAI request. Retained only for the /ai route's own tests.
+   */
   async getNarrative(id, part = 1) {
     const { data } = await api.post(`/ai/stories/${id}/narrative`, { part }, LLM_REQUEST_OPTS);
     return data;
+  },
+
+  /**
+   * The transcript of the rendered audio: the exact words that were sent to TTS,
+   * plus word timings when the render captured them. Cached so it still shows
+   * offline after the first view. Returns null when no sidecar exists, and the
+   * player shows a calm empty state rather than text the audio does not say.
+   */
+  async getTranscript(id, part = 1) {
+    const key = `${id}#${part}`;
+    const cache = await StorageService.get(KEYS.transcripts, {});
+    try {
+      const { data } = await api.get(`/stories/${encodeURIComponent(id)}/transcript?part=${part}`, { auth: false });
+      cache[key] = data;
+      await StorageService.set(KEYS.transcripts, cache);
+      return data;
+    } catch (e) {
+      // A 404 is a real "not rendered yet"; anything else may just be offline.
+      if (e?.status === 404) return cache[key] || null;
+      return cache[key] || null;
+    }
   },
   estimateDurationFromText,
   async getContinue() {

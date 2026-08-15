@@ -43,10 +43,10 @@ export default function ReflectionScreen({ navigation }) {
 const styles = StyleSheet.create({
   wrap: { paddingHorizontal: 28, paddingTop: 30, paddingBottom: 24 },
   title: { fontFamily: fonts.serif, fontSize: 38, color: colors.ink, lineHeight: 42 },
-  sub: { fontFamily: fonts.sans, fontSize: 15, color: colors.textMuted, marginTop: 8 },
+  sub: { fontFamily: fonts.sans, fontSize: 16, lineHeight: 24, color: colors.textMuted, marginTop: 8 },
   opt: { paddingVertical: 18, paddingHorizontal: 24, borderRadius: radius.md, backgroundColor: colors.white, borderWidth: 1.5, borderColor: colors.sandLine, alignItems: 'center' },
   optOn: { backgroundColor: 'rgba(230,207,148,0.22)', borderColor: colors.brass },
   optText: { fontFamily: fonts.serifSemi, fontSize: 26, color: colors.ink },
   optTextOn: { color: colors.brassDeep },
-  skip: { fontFamily: fonts.sansSemi, fontSize: 16, color: colors.textFaint, textAlign: 'center' },
+  skip: { fontFamily: fonts.sansSemi, fontSize: 16, color: colors.textMuted, textAlign: 'center' },
 });

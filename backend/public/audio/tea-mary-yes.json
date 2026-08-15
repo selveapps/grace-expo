@@ -1,0 +1,671 @@
+{
+  "kind": "tea",
+  "teaId": "mary-yes",
+  "mood": "dark",
+  "heat": 1,
+  "text": "Bestie she said yes to a plan that could’ve gotten her killed and I’m still not over it… … Gabriel shows up in a random village nobody cares about and tells a girl who’s engaged (not married) that she’s about to get pregnant by the Holy Spirit and her son will be the forever king. She’s troubled by the greeting first, not even the angel. Then when the actual news lands her only question is “how, since I’ve never been with a man?” She’s not asking for proof. She’s asking logistics. In her village this could ruin her life or get her killed. And she still says yes. “Be it unto me according to thy word.” Yes to a plan she couldn’t verify, in a town that could count. I’m not okay.",
+  "voice": "FGY2WhTYpPnrIDTdsKH5",
+  "words": [
+    {
+      "w": "Bestie",
+      "start": 0,
+      "end": 0.395
+    },
+    {
+      "w": "she",
+      "start": 0.441,
+      "end": 0.546
+    },
+    {
+      "w": "said",
+      "start": 0.604,
+      "end": 0.755
+    },
+    {
+      "w": "yes",
+      "start": 0.801,
+      "end": 0.964
+    },
+    {
+      "w": "to",
+      "start": 1.033,
+      "end": 1.103
+    },
+    {
+      "w": "a",
+      "start": 1.173,
+      "end": 1.207
+    },
+    {
+      "w": "plan",
+      "start": 1.242,
+      "end": 1.486
+    },
+    {
+      "w": "that",
+      "start": 1.521,
+      "end": 1.625
+    },
+    {
+      "w": "could’ve",
+      "start": 1.66,
+      "end": 1.916
+    },
+    {
+      "w": "gotten",
+      "start": 1.95,
+      "end": 2.159
+    },
+    {
+      "w": "her",
+      "start": 2.194,
+      "end": 2.276
+    },
+    {
+      "w": "killed",
+      "start": 2.31,
+      "end": 2.601
+    },
+    {
+      "w": "and",
+      "start": 2.67,
+      "end": 2.949
+    },
+    {
+      "w": "I’m",
+      "start": 3.1,
+      "end": 3.262
+    },
+    {
+      "w": "still",
+      "start": 3.332,
+      "end": 3.518
+    },
+    {
+      "w": "not",
+      "start": 3.576,
+      "end": 3.715
+    },
+    {
+      "w": "over",
+      "start": 3.762,
+      "end": 3.959
+    },
+    {
+      "w": "it…",
+      "start": 4.029,
+      "end": 4.447
+    },
+    {
+      "w": "…",
+      "start": 4.725,
+      "end": 4.841
+    },
+    {
+      "w": "Gabriel",
+      "start": 5.085,
+      "end": 5.445
+    },
+    {
+      "w": "shows",
+      "start": 5.492,
+      "end": 5.689
+    },
+    {
+      "w": "up",
+      "start": 5.759,
+      "end": 5.875
+    },
+    {
+      "w": "in",
+      "start": 5.933,
+      "end": 6.002
+    },
+    {
+      "w": "a",
+      "start": 6.049,
+      "end": 6.072
+    },
+    {
+      "w": "random",
+      "start": 6.118,
+      "end": 6.444
+    },
+    {
+      "w": "village",
+      "start": 6.502,
+      "end": 6.838
+    },
+    {
+      "w": "nobody",
+      "start": 6.943,
+      "end": 7.233
+    },
+    {
+      "w": "cares",
+      "start": 7.268,
+      "end": 7.465
+    },
+    {
+      "w": "about",
+      "start": 7.5,
+      "end": 7.744
+    },
+    {
+      "w": "and",
+      "start": 7.79,
+      "end": 7.895
+    },
+    {
+      "w": "tells",
+      "start": 7.941,
+      "end": 8.15
+    },
+    {
+      "w": "a",
+      "start": 8.197,
+      "end": 8.231
+    },
+    {
+      "w": "girl",
+      "start": 8.266,
+      "end": 8.452
+    },
+    {
+      "w": "who’s",
+      "start": 8.487,
+      "end": 8.673
+    },
+    {
+      "w": "engaged",
+      "start": 8.719,
+      "end": 9.172
+    },
+    {
+      "w": "(not",
+      "start": 9.3,
+      "end": 9.578
+    },
+    {
+      "w": "married)",
+      "start": 9.613,
+      "end": 10.043
+    },
+    {
+      "w": "that",
+      "start": 10.194,
+      "end": 10.333
+    },
+    {
+      "w": "she’s",
+      "start": 10.356,
+      "end": 10.53
+    },
+    {
+      "w": "about",
+      "start": 10.565,
+      "end": 10.739
+    },
+    {
+      "w": "to",
+      "start": 10.762,
+      "end": 10.809
+    },
+    {
+      "w": "get",
+      "start": 10.844,
+      "end": 10.948
+    },
+    {
+      "w": "pregnant",
+      "start": 10.983,
+      "end": 11.331
+    },
+    {
+      "w": "by",
+      "start": 11.366,
+      "end": 11.435
+    },
+    {
+      "w": "the",
+      "start": 11.47,
+      "end": 11.54
+    },
+    {
+      "w": "Holy",
+      "start": 11.598,
+      "end": 11.795
+    },
+    {
+      "w": "Spirit",
+      "start": 11.842,
+      "end": 12.155
+    },
+    {
+      "w": "and",
+      "start": 12.202,
+      "end": 12.295
+    },
+    {
+      "w": "her",
+      "start": 12.353,
+      "end": 12.446
+    },
+    {
+      "w": "son",
+      "start": 12.492,
+      "end": 12.701
+    },
+    {
+      "w": "will",
+      "start": 12.771,
+      "end": 12.898
+    },
+    {
+      "w": "be",
+      "start": 12.933,
+      "end": 12.991
+    },
+    {
+      "w": "the",
+      "start": 13.026,
+      "end": 13.096
+    },
+    {
+      "w": "forever",
+      "start": 13.131,
+      "end": 13.398
+    },
+    {
+      "w": "king.",
+      "start": 13.444,
+      "end": 13.804
+    },
+    {
+      "w": "She’s",
+      "start": 14.083,
+      "end": 14.292
+    },
+    {
+      "w": "troubled",
+      "start": 14.338,
+      "end": 14.64
+    },
+    {
+      "w": "by",
+      "start": 14.675,
+      "end": 14.756
+    },
+    {
+      "w": "the",
+      "start": 14.791,
+      "end": 14.86
+    },
+    {
+      "w": "greeting",
+      "start": 14.907,
+      "end": 15.197
+    },
+    {
+      "w": "first,",
+      "start": 15.267,
+      "end": 15.696
+    },
+    {
+      "w": "not",
+      "start": 15.754,
+      "end": 15.917
+    },
+    {
+      "w": "even",
+      "start": 15.952,
+      "end": 16.079
+    },
+    {
+      "w": "the",
+      "start": 16.103,
+      "end": 16.172
+    },
+    {
+      "w": "angel.",
+      "start": 16.207,
+      "end": 16.66
+    },
+    {
+      "w": "Then",
+      "start": 17.043,
+      "end": 17.322
+    },
+    {
+      "w": "when",
+      "start": 17.426,
+      "end": 17.577
+    },
+    {
+      "w": "the",
+      "start": 17.612,
+      "end": 17.682
+    },
+    {
+      "w": "actual",
+      "start": 17.763,
+      "end": 18.111
+    },
+    {
+      "w": "news",
+      "start": 18.192,
+      "end": 18.367
+    },
+    {
+      "w": "lands",
+      "start": 18.425,
+      "end": 18.657
+    },
+    {
+      "w": "her",
+      "start": 18.703,
+      "end": 18.785
+    },
+    {
+      "w": "only",
+      "start": 18.819,
+      "end": 18.959
+    },
+    {
+      "w": "question",
+      "start": 18.994,
+      "end": 19.353
+    },
+    {
+      "w": "is",
+      "start": 19.423,
+      "end": 19.597
+    },
+    {
+      "w": "“how,",
+      "start": 19.783,
+      "end": 20.282
+    },
+    {
+      "w": "since",
+      "start": 20.329,
+      "end": 20.538
+    },
+    {
+      "w": "I’ve",
+      "start": 20.561,
+      "end": 20.677
+    },
+    {
+      "w": "never",
+      "start": 20.7,
+      "end": 20.874
+    },
+    {
+      "w": "been",
+      "start": 20.909,
+      "end": 21.037
+    },
+    {
+      "w": "with",
+      "start": 21.072,
+      "end": 21.188
+    },
+    {
+      "w": "a",
+      "start": 21.223,
+      "end": 21.246
+    },
+    {
+      "w": "man?”",
+      "start": 21.292,
+      "end": 21.71
+    },
+    {
+      "w": "She’s",
+      "start": 21.919,
+      "end": 22.105
+    },
+    {
+      "w": "not",
+      "start": 22.14,
+      "end": 22.244
+    },
+    {
+      "w": "asking",
+      "start": 22.279,
+      "end": 22.546
+    },
+    {
+      "w": "for",
+      "start": 22.604,
+      "end": 22.709
+    },
+    {
+      "w": "proof.",
+      "start": 22.755,
+      "end": 23.196
+    },
+    {
+      "w": "She’s",
+      "start": 23.475,
+      "end": 23.649
+    },
+    {
+      "w": "asking",
+      "start": 23.684,
+      "end": 23.939
+    },
+    {
+      "w": "logistics.",
+      "start": 23.997,
+      "end": 24.706
+    },
+    {
+      "w": "In",
+      "start": 24.984,
+      "end": 25.089
+    },
+    {
+      "w": "her",
+      "start": 25.124,
+      "end": 25.205
+    },
+    {
+      "w": "village",
+      "start": 25.251,
+      "end": 25.518
+    },
+    {
+      "w": "this",
+      "start": 25.553,
+      "end": 25.681
+    },
+    {
+      "w": "could",
+      "start": 25.716,
+      "end": 25.867
+    },
+    {
+      "w": "ruin",
+      "start": 25.913,
+      "end": 26.11
+    },
+    {
+      "w": "her",
+      "start": 26.18,
+      "end": 26.261
+    },
+    {
+      "w": "life",
+      "start": 26.331,
+      "end": 26.552
+    },
+    {
+      "w": "or",
+      "start": 26.586,
+      "end": 26.737
+    },
+    {
+      "w": "get",
+      "start": 26.795,
+      "end": 26.912
+    },
+    {
+      "w": "her",
+      "start": 26.958,
+      "end": 27.039
+    },
+    {
+      "w": "killed.",
+      "start": 27.097,
+      "end": 27.539
+    },
+    {
+      "w": "And",
+      "start": 27.666,
+      "end": 27.771
+    },
+    {
+      "w": "she",
+      "start": 27.829,
+      "end": 27.933
+    },
+    {
+      "w": "still",
+      "start": 27.991,
+      "end": 28.177
+    },
+    {
+      "w": "says",
+      "start": 28.212,
+      "end": 28.363
+    },
+    {
+      "w": "yes.",
+      "start": 28.421,
+      "end": 28.862
+    },
+    {
+      "w": "“Be",
+      "start": 29.559,
+      "end": 29.895
+    },
+    {
+      "w": "it",
+      "start": 29.93,
+      "end": 30
+    },
+    {
+      "w": "unto",
+      "start": 30.046,
+      "end": 30.22
+    },
+    {
+      "w": "me",
+      "start": 30.29,
+      "end": 30.522
+    },
+    {
+      "w": "according",
+      "start": 30.557,
+      "end": 30.894
+    },
+    {
+      "w": "to",
+      "start": 30.929,
+      "end": 30.975
+    },
+    {
+      "w": "thy",
+      "start": 31.022,
+      "end": 31.138
+    },
+    {
+      "w": "word.”",
+      "start": 31.184,
+      "end": 31.66
+    },
+    {
+      "w": "Yes",
+      "start": 31.939,
+      "end": 32.252
+    },
+    {
+      "w": "to",
+      "start": 32.357,
+      "end": 32.461
+    },
+    {
+      "w": "a",
+      "start": 32.542,
+      "end": 32.577
+    },
+    {
+      "w": "plan",
+      "start": 32.612,
+      "end": 32.844
+    },
+    {
+      "w": "she",
+      "start": 32.902,
+      "end": 32.995
+    },
+    {
+      "w": "couldn’t",
+      "start": 33.042,
+      "end": 33.274
+    },
+    {
+      "w": "verify,",
+      "start": 33.297,
+      "end": 33.808
+    },
+    {
+      "w": "in",
+      "start": 33.843,
+      "end": 33.924
+    },
+    {
+      "w": "a",
+      "start": 33.959,
+      "end": 33.982
+    },
+    {
+      "w": "town",
+      "start": 34.028,
+      "end": 34.203
+    },
+    {
+      "w": "that",
+      "start": 34.237,
+      "end": 34.342
+    },
+    {
+      "w": "could",
+      "start": 34.377,
+      "end": 34.504
+    },
+    {
+      "w": "count.",
+      "start": 34.539,
+      "end": 34.922
+    },
+    {
+      "w": "I’m",
+      "start": 35.166,
+      "end": 35.306
+    },
+    {
+      "w": "not",
+      "start": 35.352,
+      "end": 35.503
+    },
+    {
+      "w": "okay.",
+      "start": 35.549,
+      "end": 35.991
+    }
+  ],
+  "renderedAt": 1785530289940
+}

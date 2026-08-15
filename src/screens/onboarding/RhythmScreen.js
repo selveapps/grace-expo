@@ -35,7 +35,7 @@ export default function RhythmScreen({ navigation }) {
 const styles = StyleSheet.create({
   wrap: { paddingHorizontal: 26, paddingTop: 30, paddingBottom: 30 },
   title: { fontFamily: fonts.serif, fontSize: 38, color: colors.ink, lineHeight: 42 },
-  sub: { fontFamily: fonts.sans, fontSize: 15, color: colors.textMuted, marginTop: 8 },
+  sub: { fontFamily: fonts.sans, fontSize: 16, lineHeight: 24, color: colors.textMuted, marginTop: 8 },
   row: { flexDirection: 'row', alignItems: 'center', paddingVertical: 20, paddingHorizontal: 22, borderRadius: radius.lg, backgroundColor: colors.white, borderWidth: 1.5, borderColor: colors.sandLine },
   rowOn: { backgroundColor: 'rgba(230,207,148,0.16)', borderColor: colors.brass },
   rowText: { flex: 1, fontFamily: fonts.sansSemi, fontSize: 18, color: colors.ink },

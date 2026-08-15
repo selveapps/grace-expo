@@ -1,0 +1,851 @@
+{
+  "kind": "tea",
+  "teaId": "hannah-prayer",
+  "mood": "dark",
+  "heat": 1,
+  "text": "The priest really called her drunk for praying too hard and I’m not over it… … Hannah can’t have kids. Her husband’s other wife has plenty and provokes her about it every single year at the place of worship. Hannah stops eating and just weeps. Her husband tries to comfort her with the most well-meaning terrible line ever: “Am I not better to you than ten sons?” She gets up, goes to the temple, and prays so hard that only her lips are moving. No sound. The priest watches her and decides she’s drunk. Out loud. “How long will you be drunk? Put away your wine.” She doesn’t shrink. She just says, “No my lord, I’m a woman of a sorrowful spirit. I haven’t had anything to drink. I’ve been pouring out my soul before the Lord.” Most honest prayer in the building and the priest called her a drunk. She walks out still childless… but the text says her face wasn’t sad anymore. I’m soft for her.",
+  "voice": "FGY2WhTYpPnrIDTdsKH5",
+  "words": [
+    {
+      "w": "The",
+      "start": 0,
+      "end": 0.163
+    },
+    {
+      "w": "priest",
+      "start": 0.197,
+      "end": 0.418
+    },
+    {
+      "w": "really",
+      "start": 0.453,
+      "end": 0.65
+    },
+    {
+      "w": "called",
+      "start": 0.685,
+      "end": 0.882
+    },
+    {
+      "w": "her",
+      "start": 0.917,
+      "end": 1.022
+    },
+    {
+      "w": "drunk",
+      "start": 1.091,
+      "end": 1.37
+    },
+    {
+      "w": "for",
+      "start": 1.416,
+      "end": 1.521
+    },
+    {
+      "w": "praying",
+      "start": 1.556,
+      "end": 1.788
+    },
+    {
+      "w": "too",
+      "start": 1.834,
+      "end": 1.95
+    },
+    {
+      "w": "hard",
+      "start": 2.009,
+      "end": 2.252
+    },
+    {
+      "w": "and",
+      "start": 2.287,
+      "end": 2.368
+    },
+    {
+      "w": "I’m",
+      "start": 2.415,
+      "end": 2.519
+    },
+    {
+      "w": "not",
+      "start": 2.554,
+      "end": 2.67
+    },
+    {
+      "w": "over",
+      "start": 2.717,
+      "end": 2.902
+    },
+    {
+      "w": "it…",
+      "start": 3.007,
+      "end": 3.367
+    },
+    {
+      "w": "…",
+      "start": 3.518,
+      "end": 3.657
+    },
+    {
+      "w": "Hannah",
+      "start": 4.261,
+      "end": 4.563
+    },
+    {
+      "w": "can’t",
+      "start": 4.598,
+      "end": 4.795
+    },
+    {
+      "w": "have",
+      "start": 4.83,
+      "end": 4.969
+    },
+    {
+      "w": "kids.",
+      "start": 5.004,
+      "end": 5.48
+    },
+    {
+      "w": "Her",
+      "start": 5.515,
+      "end": 5.631
+    },
+    {
+      "w": "husband’s",
+      "start": 5.677,
+      "end": 6.002
+    },
+    {
+      "w": "other",
+      "start": 6.037,
+      "end": 6.188
+    },
+    {
+      "w": "wife",
+      "start": 6.235,
+      "end": 6.455
+    },
+    {
+      "w": "has",
+      "start": 6.49,
+      "end": 6.583
+    },
+    {
+      "w": "plenty",
+      "start": 6.641,
+      "end": 6.896
+    },
+    {
+      "w": "and",
+      "start": 6.931,
+      "end": 7.001
+    },
+    {
+      "w": "provokes",
+      "start": 7.036,
+      "end": 7.361
+    },
+    {
+      "w": "her",
+      "start": 7.396,
+      "end": 7.477
+    },
+    {
+      "w": "about",
+      "start": 7.512,
+      "end": 7.709
+    },
+    {
+      "w": "it",
+      "start": 7.744,
+      "end": 7.825
+    },
+    {
+      "w": "every",
+      "start": 7.895,
+      "end": 8.22
+    },
+    {
+      "w": "single",
+      "start": 8.278,
+      "end": 8.533
+    },
+    {
+      "w": "year",
+      "start": 8.568,
+      "end": 8.707
+    },
+    {
+      "w": "at",
+      "start": 8.742,
+      "end": 8.812
+    },
+    {
+      "w": "the",
+      "start": 8.847,
+      "end": 8.916
+    },
+    {
+      "w": "place",
+      "start": 8.951,
+      "end": 9.172
+    },
+    {
+      "w": "of",
+      "start": 9.207,
+      "end": 9.253
+    },
+    {
+      "w": "worship.",
+      "start": 9.323,
+      "end": 9.961
+    },
+    {
+      "w": "Hannah",
+      "start": 10.344,
+      "end": 10.623
+    },
+    {
+      "w": "stops",
+      "start": 10.658,
+      "end": 10.925
+    },
+    {
+      "w": "eating",
+      "start": 10.96,
+      "end": 11.25
+    },
+    {
+      "w": "and",
+      "start": 11.354,
+      "end": 11.505
+    },
+    {
+      "w": "just",
+      "start": 11.552,
+      "end": 11.714
+    },
+    {
+      "w": "weeps.",
+      "start": 11.772,
+      "end": 12.376
+    },
+    {
+      "w": "Her",
+      "start": 12.759,
+      "end": 12.864
+    },
+    {
+      "w": "husband",
+      "start": 12.922,
+      "end": 13.2
+    },
+    {
+      "w": "tries",
+      "start": 13.235,
+      "end": 13.409
+    },
+    {
+      "w": "to",
+      "start": 13.444,
+      "end": 13.491
+    },
+    {
+      "w": "comfort",
+      "start": 13.549,
+      "end": 13.804
+    },
+    {
+      "w": "her",
+      "start": 13.839,
+      "end": 13.932
+    },
+    {
+      "w": "with",
+      "start": 13.978,
+      "end": 14.094
+    },
+    {
+      "w": "the",
+      "start": 14.118,
+      "end": 14.187
+    },
+    {
+      "w": "most",
+      "start": 14.222,
+      "end": 14.419
+    },
+    {
+      "w": "well-meaning",
+      "start": 14.501,
+      "end": 14.953
+    },
+    {
+      "w": "terrible",
+      "start": 15.104,
+      "end": 15.569
+    },
+    {
+      "w": "line",
+      "start": 15.604,
+      "end": 15.882
+    },
+    {
+      "w": "ever:",
+      "start": 15.952,
+      "end": 16.416
+    },
+    {
+      "w": "“Am",
+      "start": 16.939,
+      "end": 17.229
+    },
+    {
+      "w": "I",
+      "start": 17.299,
+      "end": 17.322
+    },
+    {
+      "w": "not",
+      "start": 17.426,
+      "end": 17.566
+    },
+    {
+      "w": "better",
+      "start": 17.601,
+      "end": 17.81
+    },
+    {
+      "w": "to",
+      "start": 17.868,
+      "end": 17.937
+    },
+    {
+      "w": "you",
+      "start": 18.019,
+      "end": 18.135
+    },
+    {
+      "w": "than",
+      "start": 18.216,
+      "end": 18.344
+    },
+    {
+      "w": "ten",
+      "start": 18.402,
+      "end": 18.564
+    },
+    {
+      "w": "sons?”",
+      "start": 18.634,
+      "end": 19.18
+    },
+    {
+      "w": "She",
+      "start": 19.423,
+      "end": 19.539
+    },
+    {
+      "w": "gets",
+      "start": 19.586,
+      "end": 19.737
+    },
+    {
+      "w": "up,",
+      "start": 19.795,
+      "end": 19.969
+    },
+    {
+      "w": "goes",
+      "start": 20.05,
+      "end": 20.236
+    },
+    {
+      "w": "to",
+      "start": 20.271,
+      "end": 20.329
+    },
+    {
+      "w": "the",
+      "start": 20.399,
+      "end": 20.468
+    },
+    {
+      "w": "temple,",
+      "start": 20.503,
+      "end": 20.863
+    },
+    {
+      "w": "and",
+      "start": 20.898,
+      "end": 20.979
+    },
+    {
+      "w": "prays",
+      "start": 21.037,
+      "end": 21.234
+    },
+    {
+      "w": "so",
+      "start": 21.269,
+      "end": 21.409
+    },
+    {
+      "w": "hard",
+      "start": 21.49,
+      "end": 21.722
+    },
+    {
+      "w": "that",
+      "start": 21.757,
+      "end": 21.885
+    },
+    {
+      "w": "only",
+      "start": 21.943,
+      "end": 22.187
+    },
+    {
+      "w": "her",
+      "start": 22.245,
+      "end": 22.326
+    },
+    {
+      "w": "lips",
+      "start": 22.384,
+      "end": 22.57
+    },
+    {
+      "w": "are",
+      "start": 22.604,
+      "end": 22.697
+    },
+    {
+      "w": "moving.",
+      "start": 22.732,
+      "end": 23.162
+    },
+    {
+      "w": "No",
+      "start": 23.313,
+      "end": 23.475
+    },
+    {
+      "w": "sound.",
+      "start": 23.545,
+      "end": 24.021
+    },
+    {
+      "w": "The",
+      "start": 24.346,
+      "end": 24.439
+    },
+    {
+      "w": "priest",
+      "start": 24.474,
+      "end": 24.694
+    },
+    {
+      "w": "watches",
+      "start": 24.729,
+      "end": 25.031
+    },
+    {
+      "w": "her",
+      "start": 25.089,
+      "end": 25.228
+    },
+    {
+      "w": "and",
+      "start": 25.298,
+      "end": 25.403
+    },
+    {
+      "w": "decides",
+      "start": 25.437,
+      "end": 25.728
+    },
+    {
+      "w": "she’s",
+      "start": 25.762,
+      "end": 25.937
+    },
+    {
+      "w": "drunk.",
+      "start": 25.971,
+      "end": 26.378
+    },
+    {
+      "w": "Out",
+      "start": 26.482,
+      "end": 26.633
+    },
+    {
+      "w": "loud.",
+      "start": 26.668,
+      "end": 27.005
+    },
+    {
+      "w": "“How",
+      "start": 27.33,
+      "end": 27.516
+    },
+    {
+      "w": "long",
+      "start": 27.574,
+      "end": 27.713
+    },
+    {
+      "w": "will",
+      "start": 27.736,
+      "end": 27.875
+    },
+    {
+      "w": "you",
+      "start": 27.91,
+      "end": 27.992
+    },
+    {
+      "w": "be",
+      "start": 28.061,
+      "end": 28.154
+    },
+    {
+      "w": "drunk?",
+      "start": 28.201,
+      "end": 28.711
+    },
+    {
+      "w": "Put",
+      "start": 28.816,
+      "end": 28.967
+    },
+    {
+      "w": "away",
+      "start": 28.99,
+      "end": 29.129
+    },
+    {
+      "w": "your",
+      "start": 29.176,
+      "end": 29.303
+    },
+    {
+      "w": "wine.”",
+      "start": 29.362,
+      "end": 29.826
+    },
+    {
+      "w": "She",
+      "start": 30.07,
+      "end": 30.163
+    },
+    {
+      "w": "doesn’t",
+      "start": 30.197,
+      "end": 30.441
+    },
+    {
+      "w": "shrink.",
+      "start": 30.476,
+      "end": 30.813
+    },
+    {
+      "w": "She",
+      "start": 30.917,
+      "end": 31.045
+    },
+    {
+      "w": "just",
+      "start": 31.091,
+      "end": 31.219
+    },
+    {
+      "w": "says,",
+      "start": 31.254,
+      "end": 31.649
+    },
+    {
+      "w": "“No",
+      "start": 31.753,
+      "end": 31.974
+    },
+    {
+      "w": "my",
+      "start": 32.02,
+      "end": 32.09
+    },
+    {
+      "w": "lord,",
+      "start": 32.136,
+      "end": 32.508
+    },
+    {
+      "w": "I’m",
+      "start": 32.566,
+      "end": 32.694
+    },
+    {
+      "w": "a",
+      "start": 32.74,
+      "end": 32.763
+    },
+    {
+      "w": "woman",
+      "start": 32.81,
+      "end": 33.042
+    },
+    {
+      "w": "of",
+      "start": 33.077,
+      "end": 33.123
+    },
+    {
+      "w": "a",
+      "start": 33.17,
+      "end": 33.193
+    },
+    {
+      "w": "sorrowful",
+      "start": 33.262,
+      "end": 33.611
+    },
+    {
+      "w": "spirit.",
+      "start": 33.669,
+      "end": 34.145
+    },
+    {
+      "w": "I",
+      "start": 34.296,
+      "end": 34.354
+    },
+    {
+      "w": "haven’t",
+      "start": 34.458,
+      "end": 34.691
+    },
+    {
+      "w": "had",
+      "start": 34.725,
+      "end": 34.841
+    },
+    {
+      "w": "anything",
+      "start": 34.888,
+      "end": 35.19
+    },
+    {
+      "w": "to",
+      "start": 35.225,
+      "end": 35.283
+    },
+    {
+      "w": "drink.",
+      "start": 35.318,
+      "end": 35.724
+    },
+    {
+      "w": "I’ve",
+      "start": 36.003,
+      "end": 36.154
+    },
+    {
+      "w": "been",
+      "start": 36.177,
+      "end": 36.281
+    },
+    {
+      "w": "pouring",
+      "start": 36.316,
+      "end": 36.572
+    },
+    {
+      "w": "out",
+      "start": 36.606,
+      "end": 36.699
+    },
+    {
+      "w": "my",
+      "start": 36.734,
+      "end": 36.804
+    },
+    {
+      "w": "soul",
+      "start": 36.873,
+      "end": 37.036
+    },
+    {
+      "w": "before",
+      "start": 37.082,
+      "end": 37.291
+    },
+    {
+      "w": "the",
+      "start": 37.326,
+      "end": 37.396
+    },
+    {
+      "w": "Lord.”",
+      "start": 37.431,
+      "end": 37.849
+    },
+    {
+      "w": "Most",
+      "start": 38.127,
+      "end": 38.325
+    },
+    {
+      "w": "honest",
+      "start": 38.371,
+      "end": 38.592
+    },
+    {
+      "w": "prayer",
+      "start": 38.627,
+      "end": 38.824
+    },
+    {
+      "w": "in",
+      "start": 38.847,
+      "end": 38.905
+    },
+    {
+      "w": "the",
+      "start": 38.94,
+      "end": 39.01
+    },
+    {
+      "w": "building",
+      "start": 39.033,
+      "end": 39.381
+    },
+    {
+      "w": "and",
+      "start": 39.451,
+      "end": 39.555
+    },
+    {
+      "w": "the",
+      "start": 39.59,
+      "end": 39.66
+    },
+    {
+      "w": "priest",
+      "start": 39.695,
+      "end": 39.95
+    },
+    {
+      "w": "called",
+      "start": 40.008,
+      "end": 40.229
+    },
+    {
+      "w": "her",
+      "start": 40.252,
+      "end": 40.333
+    },
+    {
+      "w": "a",
+      "start": 40.368,
+      "end": 40.391
+    },
+    {
+      "w": "drunk.",
+      "start": 40.426,
+      "end": 40.867
+    },
+    {
+      "w": "She",
+      "start": 41.146,
+      "end": 41.25
+    },
+    {
+      "w": "walks",
+      "start": 41.308,
+      "end": 41.517
+    },
+    {
+      "w": "out",
+      "start": 41.552,
+      "end": 41.68
+    },
+    {
+      "w": "still",
+      "start": 41.715,
+      "end": 41.901
+    },
+    {
+      "w": "childless…",
+      "start": 41.959,
+      "end": 42.667
+    },
+    {
+      "w": "but",
+      "start": 42.945,
+      "end": 43.085
+    },
+    {
+      "w": "the",
+      "start": 43.12,
+      "end": 43.189
+    },
+    {
+      "w": "text",
+      "start": 43.224,
+      "end": 43.456
+    },
+    {
+      "w": "says",
+      "start": 43.491,
+      "end": 43.723
+    },
+    {
+      "w": "her",
+      "start": 43.781,
+      "end": 43.863
+    },
+    {
+      "w": "face",
+      "start": 43.909,
+      "end": 44.095
+    },
+    {
+      "w": "wasn’t",
+      "start": 44.13,
+      "end": 44.35
+    },
+    {
+      "w": "sad",
+      "start": 44.385,
+      "end": 44.559
+    },
+    {
+      "w": "anymore.",
+      "start": 44.594,
+      "end": 45.116
+    },
+    {
+      "w": "I’m",
+      "start": 45.267,
+      "end": 45.395
+    },
+    {
+      "w": "soft",
+      "start": 45.442,
+      "end": 45.674
+    },
+    {
+      "w": "for",
+      "start": 45.72,
+      "end": 45.825
+    },
+    {
+      "w": "her.",
+      "start": 45.883,
+      "end": 46.243
+    }
+  ],
+  "renderedAt": 1785530321340
+}

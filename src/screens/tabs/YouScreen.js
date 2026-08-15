@@ -18,7 +18,7 @@ const RHYTHM_LABEL = { morning: 'Meeting each morning', evening: 'Meeting each e
 export default function YouScreen({ navigation }) {
   const { profile } = useProfile();
   const name = profile.name || 'friend';
-  const carrying = (profile.carrying && profile.carrying[0]) || '—';
+  const carrying = (profile.carrying && profile.carrying[0]) || '·';
   const kept = profile.savedVerses ? profile.savedVerses.length : 0;
   return (
     <Screen gradient={['#2B2740', '#3A2C22']} edges={['top']} style={{ paddingHorizontal: 0 }} ambient>
@@ -45,7 +45,8 @@ export default function YouScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  body: { paddingHorizontal: 22, paddingTop: 12, paddingBottom: 30 },
+  // the tab bar floats over the content, so leave room for it
+  body: { paddingHorizontal: 22, paddingTop: 12, paddingBottom: 110 },
   head: { flexDirection: 'row', alignItems: 'center', gap: 16 },
   name: { fontFamily: fonts.serif, fontSize: 32, color: colors.onDark },
   meeting: { fontFamily: fonts.sans, fontSize: 14, color: '#B9AC9A' },

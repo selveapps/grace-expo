@@ -348,3 +348,117 @@ Ship **Tea** as a simple 2-column grid of 10 placeholder cards under a `Stories 
 - Copy is a draft — needs product/theology review before ship.
 - Tea audio uses the same pre-rendered-MP3 contract (`/audio/{teaId}.mp3`); narration renders via `generate-audio.ts` with `pickVoice({ kind: 'tea' })`.
 - Share uses React Native's built-in `Share` (text), avoiding a new native `expo-sharing` dependency so Expo Go keeps working.
+
+---
+
+## DEC-012 — Blink animates `ry`, never a transform (2026-07-29)
+
+**Tickets:** v3 feedback #2
+**Status:** accepted
+
+### Context
+Grace's eyes flew up out of her head on every screen. `GraceDove` animated each eye with
+`<AEllipse origin="194, 188" style={{ transform: [{ scaleY: blink }] }} />`.
+
+### Decision
+Animate the SVG `ry` attribute directly (13.5 → 1.2 → 13.5, `useNativeDriver: false`) and fade
+the catchlight with `opacity`. Delete the `blink` value and every `scaleY` usage.
+
+### Rationale
+`react-native-svg` honours `origin` for an element's own `scale`/`rotation` **props**. A
+`style.transform` is applied as a *view* transform, which ignores `origin` and therefore scales
+about the viewBox origin `(0, 0)` — so scaling Y translated the ellipse upward. Animating the
+radius keeps the centre fixed by construction, so it cannot drift no matter what else moves.
+
+### Consequences
+- That one driver is off the native driver. The outer float/breathe/celebrate loop keeps its own
+  `Animated.Value` on the native driver, so they do not conflict.
+- `profile.reducedMotion` now suppresses the blink (the dove reads the profile directly, as
+  `AmbientBackdrop` already did).
+
+---
+
+## DEC-013 — The transcript is the render's own sidecar (2026-07-29)
+
+**Tickets:** v3 feedback #8
+**Status:** accepted
+
+### Context
+The transcript drifted from the audio because the displayed text was an LLM narrative regenerated
+per request, while the MP3 had been rendered from a different generation. There were also no
+timings, so nothing could highlight or seek.
+
+### Decision
+`generate-audio.ts` writes a `<base>.json` sidecar beside every MP3 containing the **exact** text
+sent to TTS plus word timings from ElevenLabs `/v1/text-to-speech/{voice}/with-timestamps`
+(character alignment collapsed to word spans). `GET /stories/:id/transcript` serves only that
+sidecar. No path regenerates narrative text for display. Missing sidecar → 404 → the app shows a
+calm empty state rather than words the audio does not say.
+
+### Consequences
+- Transcript accuracy is now structural, not best-effort: the text *is* the render's input.
+- Tap-to-seek works wherever timings exist; without them the sheet still shows correct text with
+  no highlight and no seek.
+- Sidecars must ship next to the MP3s on the CDN. Re-rendering narration regenerates both.
+- Providers without timestamp support degrade to `words: null` instead of failing the render.
+
+---
+
+## DEC-014 — Tea becomes a daily sermon, 30 to start (2026-07-29)
+
+**Tickets:** v3 feedback #9, #10, #11
+**Status:** accepted — supersedes the grid half of DEC-011
+
+### Context
+Ten cards in a flat grid gave no reason to return. Feedback asked for a daily rhythm, more cards,
+a wilder tone and real imagery.
+
+### Decision
+Thirty entries with a `heat` level (1 warm / 2 spicy / 3 wild), an `image` and a
+`durationSeconds`. `teaOfDay()` picks by whole days since the epoch modulo the catalog length, so
+every client that agrees on the date agrees on the tea and a 30-day window never repeats.
+`GET /tea/today` serves the hero; `GET /tea` still serves the archive. The app mirrors the same
+day rule locally so offline picks the same card as online.
+
+### Consequences
+- The app's offline fallback catalog is **generated from** `teaCatalog.ts`, so the two cannot drift.
+- Tea ids changed from `tea-01…10` to semantic slugs and audio moved to `/audio/tea-<id>.mp3`.
+  The copy was rewritten, so the ten existing MP3s no longer match their text and are stale;
+  all 30 need rendering before ship. `TeaDetailScreen` already handles absent audio calmly.
+- Card art is not licensed yet. `TeaImage` derives a deterministic gradient from the id (espresso
+  for `heat: 3`), so the layout is honest and a missing still never shows as a broken image.
+- Copy is deliberately bold. It still needs product/theology review before ship.
+
+---
+
+## DEC-015 — Apple sign-in verified with `jose`; IAP deliberately not wired (2026-07-29)
+
+**Tickets:** v3 feedback #14
+**Status:** accepted
+
+### Context
+Guideline 4.8 requires Sign in with Apple wherever Google is offered, and 5.1.1(v) requires in-app
+account deletion. The spec shipped reference code using `jsonwebtoken` plus a hand-rolled
+JWK→PEM conversion, and named `expo-in-app-purchases` for StoreKit.
+
+### Decision
+1. **Apple auth** verifies the identityToken with `jose`'s `createRemoteJWKSet`, which this backend
+   already depends on and which handles JWKS fetch, caching and key rotation natively. No new
+   dependency, no DER encoding to hand-write.
+2. The guest to migrate is read from the caller's **own bearer token**, never from a
+   `guestUserId` in the request body as the reference sketch did — that would let anyone claim
+   another user's saved verses and reflections.
+3. `DELETE /me` relies on the schema's existing `onDelete: Cascade` rather than enumerating tables,
+   so it cannot silently miss a table added later.
+4. **IAP is not wired.** `expo-in-app-purchases` is absent from the Expo SDK 54 native-module list
+   (Expo retired it after SDK 49); installing it would break a working build.
+   `SubscriptionService.purchase()` instead normalises to `{ status }` —
+   `trialing | active | free | cancelled | failed` — which is the contract the paywall branches on,
+   with a documented seam for a maintained module.
+
+### Consequences
+- Collision-safe guest migration: rows keyed `(userId, book|storyId|teaId|ref)` are moved only when
+  the account does not already own that key; the account's own row wins.
+- Choosing the IAP module (`expo-iap` vs `react-native-iap`) and building server-side receipt
+  validation (`POST /purchase/validate` against the App Store Server API) remain open. They are
+  blocked on the Paid Apps agreement and the ASC product setup regardless.

@@ -12,3 +12,4 @@ export { SubscriptionService } from './SubscriptionService';
 export { NotificationService } from './NotificationService';
 export { SupportService, SUPPORT_CATEGORIES } from './SupportService';
 export { TodayService } from './TodayService';
+export { ReviewService } from './ReviewService';

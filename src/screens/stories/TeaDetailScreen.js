@@ -1,187 +1,399 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { View, Text, StyleSheet, Pressable, ScrollView, Share, ActivityIndicator } from 'react-native';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { View, Text, StyleSheet, Pressable, Share, ActivityIndicator, Dimensions, Animated, Easing, StatusBar } from 'react-native';
+import { useFocusEffect } from '@react-navigation/native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Audio } from 'expo-av';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
 import GraceDove from '../../components/GraceDove';
+import TeaImage from '../../components/TeaImage';
+import GIcon from '../../components/GIcon';
+import LiveCaptions from '../../components/LiveCaptions';
 import { TeaService } from '../../services';
-import { resolveStaticAudioUrl } from '../../api/audio';
+import { TeaAudioService } from '../../services/TeaAudioService';
 import { colors, fonts, radius, shadow } from '../../theme';
 
-const GRAD = {
-  dark: ['#3A2C22', '#2B2015'],
-  light: ['#FBF1DA', '#EFE0C0'],
-};
+// Tea Detail doubles as a recording surface: someone screen-records this with
+// audio and posts the clip straight to a vertical feed. That drives the layout.
+//
+//   - The art is full-bleed behind everything, so the frame is never a flat
+//     panel. Title, art and live captions are the hero; chrome is pushed to the
+//     edges and kept inside the safe areas so it does not compete.
+//   - Captions come from the render's real word timings, so a recording stays
+//     in sync with the audio with no editing afterwards.
+//
+// The surface runs LIGHT. It was previously espresso with a dark scrim and a
+// dark legibility gradient on top of that, which is why a recording of it was a
+// near-black frame with a brown smudge behind the words. A light frame also
+// shares better: it survives being reposted onto a white feed, and the serif
+// hook in ink is legible in a thumbnail.
+//
+// Deliberately not Instagram-branded and not an Instagram UI clone; this is the
+// Grace palette and type, arranged for a phone-shaped video.
+
+const HEAT_LABEL = { 1: null, 2: null, 3: 'Wild' };
+const { height: SCREEN_H } = Dimensions.get('window');
 
 export default function TeaDetailScreen({ route, navigation }) {
-  const { id } = route.params || {};
+  // `cardTitle` and `ref` arrive with the tap so the first frame already carries
+  // the line she pressed. Without them this screen opened on a spinner and the
+  // title reappeared later somewhere else, which read as a hard jump.
+  const { id, cardTitle: handoffTitle, ref: handoffRef } = route.params || {};
   const [tea, setTea] = useState(null);
   const [loading, setLoading] = useState(true);
   const [teas, setTeas] = useState([]);
   const [eng, setEng] = useState({ liked: false, saved: false });
-  const [audio, setAudio] = useState('idle'); // idle | loading | playing | error
-  const soundRef = useRef(null);
+  const [tr, setTr] = useState(null);
+  // Playback lives in TeaAudioService so a clip survives leaving this screen;
+  // the mini player above the tab bar is what stops it from elsewhere.
+  const [snd, setSnd] = useState(() => TeaAudioService.getState());
+  useEffect(() => TeaAudioService.subscribe(setSnd), []);
+  const mine = snd.tea?.id === id;
+  const audio = mine ? snd.status : 'idle';
+  const position = mine ? snd.position : 0;
+  const duration = mine ? snd.duration : 0;
+  // Chrome recedes while the clip plays. A screen recording then shows art,
+  // hook and captions, with the app's own controls out of the way. Tapping the
+  // frame brings them back, so nothing becomes unreachable.
+  const chrome = useRef(new Animated.Value(1)).current;
+  const [chromeHeld, setChromeHeld] = useState(false);
+  // The hero arriving. Same timing language as the Stories/Tea cross-fade
+  // (short, eased, no spring), so this reads as the same product rather than a
+  // new animation system. Only used when we arrived without a card title, e.g.
+  // a deep link; otherwise the hook crossfades off `depart` instead.
+  const settle = useRef(new Animated.Value(0)).current;
+  // The card title's exit, on its own clock. It holds long enough to be read as
+  // the thing that was tapped, then lifts away; sharing `settle` made it vanish
+  // inside ~120ms, which reads as a flash rather than a handover.
+  const depart = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
     let alive = true;
     setLoading(true);
-    setAudio('idle');
+    setTr(null);
     TeaService.getOne(id)
       .then((t) => { if (alive) setTea(t); })
       .finally(() => { if (alive) setLoading(false); });
     TeaService.getEngagement(id).then((e) => { if (alive) setEng(e); });
     TeaService.getAll().then((all) => { if (alive) setTeas(all); });
-    return () => {
-      alive = false;
-      if (soundRef.current) { soundRef.current.unloadAsync().catch(() => {}); soundRef.current = null; }
-    };
+    TeaService.getTranscript(id).then((t) => { if (alive) setTr(t); });
+    // Settle the hero as the screen arrives, not when the fetch returns.
+    settle.setValue(0);
+    depart.setValue(0);
+    Animated.timing(settle, {
+      toValue: 1, duration: 260, easing: Easing.out(Easing.cubic), useNativeDriver: true,
+    }).start();
+    Animated.sequence([
+      Animated.delay(240),
+      Animated.timing(depart, {
+        toValue: 1, duration: 420, easing: Easing.inOut(Easing.ease), useNativeDriver: true,
+      }),
+    ]).start();
+    return () => { alive = false; };
   }, [id]);
 
-  const dark = tea?.mood === 'dark';
-  const fg = dark ? colors.onDark : colors.ink;
-  const muted = dark ? colors.textFaintOnDark : colors.textMuted;
+  // Tell the service when this screen is on top, so the bar does not double up
+  // with the full controls, and stop the clip when the tea itself changes.
+  useFocusEffect(useCallback(() => {
+    if (tea) TeaAudioService.setDetailVisible(tea, true);
+    return () => TeaAudioService.setDetailVisible(tea, false);
+  }, [tea]));
 
   const togglePlay = async () => {
+    if (!tea) return;
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Soft);
-    if (soundRef.current) {
-      const status = await soundRef.current.getStatusAsync();
-      if (status.isLoaded && status.isPlaying) { await soundRef.current.pauseAsync(); setAudio('idle'); return; }
-      if (status.isLoaded) { await soundRef.current.playAsync(); setAudio('playing'); return; }
-    }
-    setAudio('loading');
-    try {
-      await Audio.setAudioModeAsync({ playsInSilentModeIOS: true, staysActiveInBackground: true });
-      const uri = await resolveStaticAudioUrl(tea.audioUrl || `/audio/${tea.id}.mp3`);
-      if (!uri) { setAudio('error'); return; }
-      const { sound } = await Audio.Sound.createAsync({ uri }, { shouldPlay: true }, (s) => {
-        if (!s.isLoaded) { if (s.error) setAudio('error'); return; }
-        if (s.didJustFinish) setAudio('idle');
-      });
-      soundRef.current = sound;
-      setAudio('playing');
-    } catch {
-      setAudio('error');
-    }
+    await TeaAudioService.toggle(tea);
+  };
+
+  const replay = async () => {
+    if (!tea) return;
+    Haptics.selectionAsync();
+    if (!mine) return TeaAudioService.play(tea);
+    await TeaAudioService.restart();
   };
 
   const like = async () => { Haptics.selectionAsync(); setEng(await TeaService.toggleLike(id)); };
   const save = async () => { Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium); setEng(await TeaService.save(id)); };
   const share = async () => {
+    if (!tea) return;
     Haptics.selectionAsync();
     try {
-      await Share.share({ message: `${tea.hook}\n\n${tea.ref} · via Grace` });
+      await Share.share({ message: `${tea.hook}\n\n${tea.ref} · Tea from Grace` });
     } catch { /* dismissed */ }
   };
   const openScripture = () => {
+    if (!tea?.book) return;
     Haptics.selectionAsync();
-    navigation.getParent()?.navigate('Reading', { screen: 'Book', params: { book: tea.book } });
+    // `initial: false` keeps the Reading tab's own home beneath this book, so
+    // back leaves for the book list rather than dead-ending.
+    navigation.getParent()?.navigate('Reading', {
+      screen: 'Book',
+      params: { book: tea.book },
+      initial: false,
+    });
   };
   const nextTea = () => {
     if (!teas.length) return;
     const i = teas.findIndex((t) => t.id === id);
-    const next = teas[(i + 1) % teas.length];
     Haptics.selectionAsync();
-    navigation.replace('TeaDetail', { id: next.id });
+    const next = teas[(i + 1) % teas.length];
+    // Carry the title forward so the next card lands the same way this one did.
+    navigation.replace('TeaDetail', { id: next.id, cardTitle: next.cardTitle, ref: next.ref });
   };
 
-  if (loading) {
-    return <Screen bg={colors.ivory}><View style={styles.loading}><ActivityIndicator color={colors.brass} /></View></Screen>;
+  const playing = audio === 'playing';
+
+  useEffect(() => {
+    Animated.timing(chrome, {
+      toValue: playing && !chromeHeld ? 0 : 1,
+      duration: playing && !chromeHeld ? 520 : 200,
+      easing: Easing.out(Easing.ease),
+      useNativeDriver: true,
+    }).start();
+  }, [playing, chromeHeld]);
+
+  // Any tap on the frame reveals the controls again for a while.
+  const revealChrome = () => {
+    setChromeHeld(true);
+    clearTimeout(revealChrome._t);
+    revealChrome._t = setTimeout(() => setChromeHeld(false), 3200);
+  };
+  const captionWords = tr?.words ?? null;
+  const remaining = Math.max(0, Math.round((duration || tea?.durationSeconds || 0) - position));
+
+  const heat = useMemo(() => HEAT_LABEL[tea?.heat] ?? tea?.badge, [tea]);
+
+  // The tea we can draw right now. Until the fetch lands that is whatever the
+  // card handed over, which is enough for the art, the title and the reference.
+  const display = tea || (handoffTitle ? { id, cardTitle: handoffTitle, ref: handoffRef } : null);
+
+  // Only spin when we arrived with nothing to show, e.g. a deep link.
+  if (loading && !display) {
+    return <Screen bg={colors.ivory}><View style={styles.center}><ActivityIndicator color={colors.brass} /></View></Screen>;
   }
-  if (!tea) {
+  if (!loading && !tea) {
     return (
-      <Screen bg={colors.ivory} edges={['top', 'bottom']} style={styles.scroll}>
+      <Screen bg={colors.ivory} edges={['top', 'bottom']} style={styles.pad}>
         <Pressable onPress={() => navigation.goBack()} hitSlop={12}><Text style={styles.back}>‹ Tea</Text></Pressable>
-        <View style={styles.loading}>
+        <View style={styles.center}>
           <GraceDove size={90} crop="head" motion="peek" />
           <Text style={styles.emptyTitle}>This tea has gone cold.</Text>
-          <Text style={styles.emptyText}>We couldn’t find that one. Try another from the grid.</Text>
+          <Text style={styles.emptyText}>We couldn’t find that one. Try another from the archive.</Text>
         </View>
       </Screen>
     );
   }
 
   return (
-    <Screen bg={dark ? '#2B2015' : colors.ivory} edges={['top', 'bottom']} style={{ paddingHorizontal: 0 }}>
-      <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
+    <View style={styles.root}>
+      <StatusBar barStyle="dark-content" />
+      {/* Full-bleed art behind everything, so the frame reads as a picture. */}
+      <TeaImage tea={display} style={StyleSheet.absoluteFill} scrim="rgba(253,247,234,0.18)" />
+      {/* Legibility wash only where text sits, keeping the art visible between. */}
+      <LinearGradient
+        colors={['rgba(253,247,234,0.72)', 'rgba(253,247,234,0.06)', 'rgba(250,242,226,0.9)']}
+        locations={[0, 0.36, 0.78]}
+        style={StyleSheet.absoluteFill}
+        pointerEvents="none"
+      />
+
+      <Screen bg="transparent" edges={['top', 'bottom']} style={styles.frame}>
         <View style={styles.topBar}>
-          <Pressable onPress={() => navigation.goBack()} hitSlop={12}>
-            <Text style={[styles.back, { color: muted }]}>‹ Tea</Text>
-          </Pressable>
-        </View>
-
-        <LinearGradient colors={GRAD[tea.mood]} style={styles.card}>
-          <View style={[styles.badge, tea.mood === 'light' && styles.badgeLight]}>
-            <Text style={[styles.badgeText, { color: tea.mood === 'light' ? colors.brassDeep : colors.gold }]}>{tea.badge}</Text>
-          </View>
-          <Text style={[styles.hook, { color: fg }]}>{tea.hook}</Text>
-          <Text style={[styles.tea, { color: muted }]}>{tea.tea}</Text>
-
-          <Pressable style={[styles.chip, dark && styles.chipDark]} onPress={openScripture}>
-            <Text style={[styles.chipText, { color: dark ? colors.gold : colors.brassDeep }]}>{tea.ref} ›</Text>
-          </Pressable>
-
-          <View style={styles.narrator}>
-            <GraceDove size={40} crop="head" motion="peek" />
-            <Text style={[styles.narratorText, { color: muted }]}>Grace reads this</Text>
-            <Pressable style={styles.playBtn} onPress={togglePlay}>
-              {audio === 'loading'
-                ? <ActivityIndicator color={colors.espresso} size="small" />
-                : <Text style={styles.playIcon}>{audio === 'playing' ? '❚❚' : '▶'}</Text>}
+          {/* Controls recede while the clip plays, so a recording shows art and
+              captions rather than app chrome. */}
+          <Animated.View style={{ opacity: chrome }}>
+            <Pressable onPress={() => navigation.goBack()} hitSlop={12} style={styles.iconBtn} accessibilityRole="button" accessibilityLabel="Back to Tea">
+              <GIcon name="chevronDown" size={20} color={colors.espresso} />
             </Pressable>
-          </View>
-          {audio === 'error' && <Text style={styles.err}>Audio isn’t ready yet — tap play to try again.</Text>}
-        </LinearGradient>
+          </Animated.View>
 
-        <View style={styles.actions}>
-          <Pressable style={styles.action} onPress={like}>
-            <Text style={[styles.actionIcon, eng.liked && styles.actionOn]}>{eng.liked ? '♥' : '♡'}</Text>
-            <Text style={styles.actionLabel}>Like</Text>
-          </Pressable>
-          <Pressable style={styles.action} onPress={save}>
-            <Text style={[styles.actionIcon, eng.saved && styles.actionOn]}>{eng.saved ? '★' : '☆'}</Text>
-            <Text style={styles.actionLabel}>{eng.saved ? 'Saved' : 'Save'}</Text>
-          </Pressable>
-          <Pressable style={styles.action} onPress={share}>
-            <Text style={styles.actionIcon}>⤴</Text>
-            <Text style={styles.actionLabel}>Share</Text>
-          </Pressable>
+          {/* The single Grace lockup: bird over wordmark, dead centre. It is
+              deliberately OUTSIDE the chrome fade. Playback is exactly when
+              someone is recording for a feed, so that is the moment the mark has
+              to stay on screen; fading it out with the controls meant every clip
+              anyone captured was unbranded. */}
+          <View style={styles.mark} pointerEvents="none">
+            <GraceDove size={65} crop="head" motion="none" />
+            <Text style={styles.markText}>Grace</Text>
+          </View>
+
+          <Animated.View style={{ opacity: chrome }}>
+            <Pressable onPress={share} hitSlop={12} style={styles.shareBtn} accessibilityRole="button" accessibilityLabel="Share">
+              <GIcon name="share" size={17} color={colors.espresso} />
+              <Text style={styles.shareText}>Share</Text>
+            </Pressable>
+          </Animated.View>
         </View>
 
-        <Pressable onPress={nextTea} style={styles.next}>
-          <Text style={styles.nextText}>Next tea →</Text>
-        </Pressable>
-      </ScrollView>
-    </Screen>
+        {/* Tapping the empty middle restores the controls mid-playback. */}
+        <Pressable style={{ flex: 1 }} onPress={revealChrome} accessibilityLabel="Show controls" />
+
+        {/* HERO: hook, then live captions, over the artwork. This is what a
+            recording shows.
+
+            The card's preview title is NOT a heading here. It is painted on the
+            first frame so the tap has something to hold on to, then lifts away
+            as the hero settles: the card title disappears instead of becoming a
+            second, competing headline. Absolutely positioned so its exit does
+            not reflow the hook underneath it. */}
+        <View style={styles.hero}>
+          {display.cardTitle ? (
+            <Animated.Text
+              style={[
+                styles.handoff,
+                {
+                  opacity: depart.interpolate({ inputRange: [0, 1], outputRange: [1, 0] }),
+                  transform: [{
+                    translateY: depart.interpolate({ inputRange: [0, 1], outputRange: [0, -20] }),
+                  }],
+                },
+              ]}
+              numberOfLines={2}
+              pointerEvents="none"
+              accessibilityElementsHidden
+            >
+              {display.cardTitle}
+            </Animated.Text>
+          ) : null}
+
+          {/* Crossfades in exactly where the card title was, so the eye stays
+              put while the title hands over to the words being spoken.
+
+              There is deliberately no hook heading here any more. It restated
+              the opening of the narration that the captions were already
+              showing, one truncated line above the other, which is the
+              duplication the brief rules out. Captions are the text. */}
+          <Animated.View style={{ opacity: display.cardTitle ? depart : settle }}>
+            {captionWords ? (
+              <LiveCaptions
+                words={captionWords}
+                position={position}
+                playing={playing}
+                tone="onLight"
+                style={styles.captions}
+              />
+            ) : (
+              // No sidecar: show the body rather than captions that would drift.
+              <Text style={styles.body} numberOfLines={6}>{tea?.tea ?? ''}</Text>
+            )}
+          </Animated.View>
+
+          {/* The reference, and the heat badge when a tea earns one. The Grace
+              lockup that used to sit here has moved to the top centre, so the
+              brand appears exactly once on this screen. */}
+          <View style={styles.heroFoot}>
+            <Pressable style={styles.chip} onPress={openScripture} accessibilityRole="button">
+              <Text style={styles.chipText}>{display.ref}</Text>
+              <GIcon name="chevronRight" size={13} color={colors.brassDeep} />
+            </Pressable>
+            {heat ? (
+              <View style={[styles.badge, display.heat === 3 && styles.badgeWild]}>
+                <Text style={styles.badgeText}>{heat}</Text>
+              </View>
+            ) : null}
+          </View>
+        </View>
+
+        {/* Controls sit low and quiet, inside the safe area. */}
+        <Animated.View style={[styles.controls, { opacity: chrome }]}>
+          <Pressable
+            onPress={togglePlay}
+            disabled={!tea}
+            style={[styles.playBtn, !tea && styles.playBtnWaiting]}
+            accessibilityRole="button"
+            accessibilityLabel={playing ? 'Pause' : 'Play this tea'}
+            testID="tea-play"
+          >
+            {audio === 'loading'
+              ? <ActivityIndicator color={colors.espresso} size="small" />
+              : <GIcon name={playing ? 'pause' : 'play'} size={22} color={colors.espresso} filled={!playing} strokeWidth={2.2} />}
+          </Pressable>
+
+          <View style={styles.meta}>
+            <Text style={styles.metaTop}>{playing ? 'Grace is reading' : 'Grace reads this'}</Text>
+            <Text style={styles.metaSub}>{remaining > 0 ? `${remaining}s left` : `${Math.round(tea?.durationSeconds || 60)}s`}</Text>
+          </View>
+
+          <Pressable onPress={replay} hitSlop={10} style={styles.iconBtn} accessibilityRole="button" accessibilityLabel="Replay from the start">
+            <GIcon name="back15" size={21} color={colors.textMuted} />
+          </Pressable>
+          <Pressable onPress={like} hitSlop={10} style={styles.iconBtn} accessibilityRole="button" accessibilityLabel="Like">
+            <GIcon name="heart" size={21} color={eng.liked ? colors.brass : colors.textMuted} filled={eng.liked} />
+          </Pressable>
+          <Pressable onPress={save} hitSlop={10} style={styles.iconBtn} accessibilityRole="button" accessibilityLabel={eng.saved ? 'Saved' : 'Save'}>
+            <GIcon name={eng.saved ? 'check' : 'bookmark'} size={21} color={eng.saved ? colors.brass : colors.textMuted} />
+          </Pressable>
+        </Animated.View>
+
+        {audio === 'error' ? <Text style={styles.err}>Audio isn’t ready yet. Tap play to try again.</Text> : null}
+
+        <Animated.View style={{ opacity: chrome }}>
+          <Pressable onPress={nextTea} style={styles.next} accessibilityRole="button">
+            <Text style={styles.nextText}>Next tea</Text>
+            <GIcon name="chevronRight" size={15} color={colors.brassDeep} />
+          </Pressable>
+        </Animated.View>
+      </Screen>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  loading: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: 12, paddingHorizontal: 30 },
+  root: { flex: 1, backgroundColor: colors.ivoryWarm },
+  // The tab bar floats over this screen, so the controls and the next-tea row
+  // need room to clear it. Adding the carried-through title pushed the hero
+  // down far enough that the play button was landing underneath the bar.
+  // paddingTop clears the dove's halo, which was being cropped by the safe-area
+  // edge once the lockup moved to the top bar.
+  frame: { paddingHorizontal: 22, paddingTop: 12, paddingBottom: 96 },
+  pad: { paddingHorizontal: 22 },
+  center: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: 12, paddingHorizontal: 30 },
   emptyTitle: { fontFamily: fonts.serif, fontSize: 26, color: colors.ink, textAlign: 'center', marginTop: 8 },
-  emptyText: { fontFamily: fonts.sans, fontSize: 15, color: colors.textMuted, textAlign: 'center' },
-  scroll: { paddingHorizontal: 22, paddingTop: 8, paddingBottom: 30 },
-  topBar: { marginBottom: 12 },
-  back: { fontFamily: fonts.sans, fontSize: 14 },
-  card: { borderRadius: radius.xl, padding: 24, ...shadow.card },
-  badge: { alignSelf: 'flex-start', backgroundColor: 'rgba(230,207,148,0.18)', borderRadius: radius.pill, paddingHorizontal: 12, paddingVertical: 5 },
-  badgeLight: { backgroundColor: 'rgba(181,138,63,0.14)' },
-  badgeText: { fontFamily: fonts.sansSemi, fontSize: 11, letterSpacing: 0.5 },
-  hook: { fontFamily: fonts.serifSemi, fontSize: 30, lineHeight: 37, marginTop: 16 },
-  tea: { fontFamily: fonts.sans, fontSize: 16, lineHeight: 25, marginTop: 16 },
-  chip: { alignSelf: 'flex-start', marginTop: 20, backgroundColor: 'rgba(181,138,63,0.12)', borderRadius: radius.pill, paddingHorizontal: 14, paddingVertical: 8 },
-  chipDark: { backgroundColor: 'rgba(230,207,148,0.14)' },
-  chipText: { fontFamily: fonts.sansSemi, fontSize: 13, letterSpacing: 0.3 },
-  narrator: { flexDirection: 'row', alignItems: 'center', gap: 12, marginTop: 22 },
-  narratorText: { flex: 1, fontFamily: fonts.serifItalic, fontSize: 16 },
-  playBtn: { width: 46, height: 46, borderRadius: 23, backgroundColor: colors.gold, alignItems: 'center', justifyContent: 'center' },
-  playIcon: { fontSize: 17, color: colors.espresso },
-  err: { fontFamily: fonts.sans, fontSize: 12, color: '#E8A598', marginTop: 12 },
-  actions: { flexDirection: 'row', justifyContent: 'space-around', marginTop: 22, backgroundColor: colors.white, borderWidth: 1, borderColor: colors.sandLine, borderRadius: radius.lg, paddingVertical: 16 },
-  action: { alignItems: 'center', gap: 4, minWidth: 64 },
-  actionIcon: { fontSize: 22, color: colors.textMuted },
-  actionOn: { color: colors.brass },
-  actionLabel: { fontFamily: fonts.sansMed, fontSize: 12, color: colors.textMuted },
-  next: { alignItems: 'center', paddingVertical: 20 },
+  emptyText: { fontFamily: fonts.sans, fontSize: 16, lineHeight: 24, color: colors.textMuted, textAlign: 'center' },
+  back: { fontFamily: fonts.sans, fontSize: 14, color: colors.textMuted, minHeight: 44 },
+
+  // Back and Share are fixed-width so the centre lockup is optically centred on
+  // the screen rather than centred in the space left over between them.
+  topBar: { flexDirection: 'row', alignItems: 'flex-start', justifyContent: 'space-between', minHeight: 128 },
+  iconBtn: { minWidth: 44, minHeight: 44, alignItems: 'center', justifyContent: 'center' },
+  // Share is the point of this screen, so it is a labelled affordance rather
+  // than one more unlabelled glyph in a row.
+  shareBtn: {
+    flexDirection: 'row', alignItems: 'center', gap: 6, minHeight: 40,
+    paddingHorizontal: 14, borderRadius: radius.pill,
+    backgroundColor: 'rgba(255,253,249,0.78)', borderWidth: 1, borderColor: colors.cardBorder,
+  },
+  shareText: { fontFamily: fonts.sansSemi, fontSize: 13, color: colors.espresso },
+  badge: { backgroundColor: 'rgba(255,253,249,0.8)', borderWidth: 1, borderColor: colors.cardBorder, borderRadius: radius.pill, paddingHorizontal: 12, paddingVertical: 5 },
+  badgeWild: { backgroundColor: colors.brassDeep, borderColor: colors.brassDeep },
+  badgeText: { fontFamily: fonts.sansSemi, fontSize: 11, letterSpacing: 1, color: colors.brassDeep, textTransform: 'uppercase' },
+
+  hero: { paddingBottom: 10 },
+  // The card's title as it leaves. Absolute so its exit costs no layout, and
+  // anchored where the hook begins so the two read as the same place.
+  handoff: {
+    position: 'absolute', left: 0, right: 0, top: 0,
+    fontFamily: fonts.serifSemi, fontSize: SCREEN_H > 800 ? 34 : 30,
+    lineHeight: SCREEN_H > 800 ? 39 : 35, color: colors.ink,
+  },
+  captions: { marginTop: 20 },
+  body: { fontFamily: fonts.sans, fontSize: 17, lineHeight: 26, color: colors.textMuted, marginTop: 18 },
+  chip: { flexDirection: 'row', alignItems: 'center', gap: 5, alignSelf: 'flex-start', marginTop: 18, minHeight: 40, paddingHorizontal: 14, borderRadius: radius.pill, backgroundColor: 'rgba(181,138,63,0.14)', borderWidth: 1, borderColor: 'rgba(181,138,63,0.28)' },
+  chipText: { fontFamily: fonts.sansSemi, fontSize: 13, letterSpacing: 0.3, color: colors.brassDeep },
+  heroFoot: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
+  // Top-centre lockup: bird above the wordmark. Absolute, so it centres on the
+  // SCREEN rather than in the gap left between Back and the wider Share button.
+  // Dropped clear of the notch/safe-area edge so the halo has air above it, and
+  // sized to read as a brand in a screen recording.
+  mark: { position: 'absolute', left: 0, right: 0, top: 22, alignItems: 'center', justifyContent: 'center' },
+  markText: { fontFamily: fonts.serifSemi, fontSize: 25, color: colors.ink, letterSpacing: 0.5, marginTop: 0 },
+
+  controls: { flexDirection: 'row', alignItems: 'center', gap: 10, marginTop: 18 },
+  playBtn: { width: 60, height: 60, borderRadius: 30, backgroundColor: colors.gold, alignItems: 'center', justifyContent: 'center', ...shadow.card },
+  playBtnWaiting: { opacity: 0.5 },
+  meta: { flex: 1, marginLeft: 4 },
+  metaTop: { fontFamily: fonts.serifItalic, fontSize: 17, color: colors.ink },
+  metaSub: { fontFamily: fonts.sans, fontSize: 12, color: colors.textFaint, marginTop: 2 },
+  err: { fontFamily: fonts.sans, fontSize: 13, color: colors.danger, marginTop: 10 },
+  next: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 4, minHeight: 44 },
   nextText: { fontFamily: fonts.sansSemi, fontSize: 15, color: colors.brassDeep },
 });

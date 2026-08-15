@@ -90,7 +90,7 @@ export default function RemindersScreen({ navigation }) {
         <Text style={styles.denied}>Notifications are off in system settings. You can still keep your rhythm here; turn them on in Settings anytime.</Text>
       )}
       {!NotificationService.available() && (
-        <Text style={styles.note}>Live notifications need a dev build — your rhythm is saved and will schedule there.</Text>
+        <Text style={styles.note}>Live notifications need a dev build. Your rhythm is saved and will schedule there.</Text>
       )}
     </Screen>
   );

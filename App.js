@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { View, ActivityIndicator } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
+import * as SplashScreen from 'expo-splash-screen';
 import {
   useFonts,
   CormorantGaramond_500Medium,
@@ -19,6 +19,12 @@ import RootNavigator from './src/navigation/RootNavigator';
 import { ProfileProvider } from './src/state/profile';
 import { AuthService } from './src/services/AuthService';
 import { colors } from './src/theme';
+
+// Hold the native splash until fonts and the guest session are ready. Without
+// this the splash auto-hides the moment JS boots, exposing a spinner on a
+// different background: launch read as three screens (dark icon plate, ivory
+// spinner, then the dove). One surface, one branded moment.
+SplashScreen.preventAutoHideAsync().catch(() => {});
 
 export default function App() {
   const [loaded] = useFonts({
@@ -40,13 +46,12 @@ export default function App() {
     return () => { cancelled = true; };
   }, []);
 
-  if (!loaded || !booted) {
-    return (
-      <View style={{ flex: 1, backgroundColor: colors.ivory, alignItems: 'center', justifyContent: 'center' }}>
-        <ActivityIndicator color={colors.brass} />
-      </View>
-    );
-  }
+  useEffect(() => {
+    if (loaded && booted) SplashScreen.hideAsync().catch(() => {});
+  }, [loaded, booted]);
+
+  // Native splash is still up; rendering nothing avoids a second background.
+  if (!loaded || !booted) return null;
 
   return (
     <SafeAreaProvider>

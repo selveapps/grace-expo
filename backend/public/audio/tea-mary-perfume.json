@@ -1,0 +1,1026 @@
+{
+  "kind": "tea",
+  "teaId": "mary-perfume",
+  "mood": "light",
+  "heat": 3,
+  "text": "Okay bestie, the drama… she poured a year of wages on the floor and the man complaining was stealing… … Bethany, six days before the Passover. \"Then took Mary a pound of ointment of spikenard, very costly, and anointed the feet of Jesus, and wiped his feet with her hair: and the house was filled with the odour of the ointment.\" Everybody in that room knows exactly what it cost, because they can smell it. Then Judas objects, and he uses the language of charity. \"Why was not this ointment sold for three hundred pence, and given to the poor?\" Three hundred pence. A penny is a day's wage elsewhere in the Gospels, so that is roughly a year of work, poured out on the floor. And John tells you his motive outright. \"This he said, not that he cared for the poor; but because he was a thief, and had the bag, and bare what was put therein.\" The man doing the maths on her devotion was skimming the fund. And Jesus shuts it down in the room. \"Let her alone: against the day of my burying hath she kept this.\" She understood the assignment while the men were still doing arithmetic.",
+  "voice": "cgSgspJ2msm6clMCkdW9",
+  "words": [
+    {
+      "w": "Okay",
+      "start": 0,
+      "end": 0.232
+    },
+    {
+      "w": "bestie,",
+      "start": 0.267,
+      "end": 0.848
+    },
+    {
+      "w": "the",
+      "start": 1.173,
+      "end": 1.277
+    },
+    {
+      "w": "drama…",
+      "start": 1.312,
+      "end": 1.95
+    },
+    {
+      "w": "she",
+      "start": 2.554,
+      "end": 2.659
+    },
+    {
+      "w": "poured",
+      "start": 2.705,
+      "end": 2.902
+    },
+    {
+      "w": "a",
+      "start": 2.926,
+      "end": 2.961
+    },
+    {
+      "w": "year",
+      "start": 3.007,
+      "end": 3.17
+    },
+    {
+      "w": "of",
+      "start": 3.216,
+      "end": 3.274
+    },
+    {
+      "w": "wages",
+      "start": 3.332,
+      "end": 3.622
+    },
+    {
+      "w": "on",
+      "start": 3.669,
+      "end": 3.738
+    },
+    {
+      "w": "the",
+      "start": 3.773,
+      "end": 3.843
+    },
+    {
+      "w": "floor",
+      "start": 3.878,
+      "end": 4.145
+    },
+    {
+      "w": "and",
+      "start": 4.214,
+      "end": 4.319
+    },
+    {
+      "w": "the",
+      "start": 4.354,
+      "end": 4.423
+    },
+    {
+      "w": "man",
+      "start": 4.458,
+      "end": 4.667
+    },
+    {
+      "w": "complaining",
+      "start": 4.725,
+      "end": 5.143
+    },
+    {
+      "w": "was",
+      "start": 5.19,
+      "end": 5.294
+    },
+    {
+      "w": "stealing…",
+      "start": 5.329,
+      "end": 5.956
+    },
+    {
+      "w": "…",
+      "start": 5.991,
+      "end": 6.188
+    },
+    {
+      "w": "Bethany,",
+      "start": 6.513,
+      "end": 7.129
+    },
+    {
+      "w": "six",
+      "start": 7.407,
+      "end": 7.616
+    },
+    {
+      "w": "days",
+      "start": 7.663,
+      "end": 7.872
+    },
+    {
+      "w": "before",
+      "start": 7.918,
+      "end": 8.139
+    },
+    {
+      "w": "the",
+      "start": 8.173,
+      "end": 8.243
+    },
+    {
+      "w": "Passover.",
+      "start": 8.278,
+      "end": 8.951
+    },
+    {
+      "w": "\"Then",
+      "start": 9.915,
+      "end": 10.228
+    },
+    {
+      "w": "took",
+      "start": 10.286,
+      "end": 10.426
+    },
+    {
+      "w": "Mary",
+      "start": 10.484,
+      "end": 10.693
+    },
+    {
+      "w": "a",
+      "start": 10.728,
+      "end": 10.751
+    },
+    {
+      "w": "pound",
+      "start": 10.797,
+      "end": 10.971
+    },
+    {
+      "w": "of",
+      "start": 11.006,
+      "end": 11.053
+    },
+    {
+      "w": "ointment",
+      "start": 11.088,
+      "end": 11.366
+    },
+    {
+      "w": "of",
+      "start": 11.401,
+      "end": 11.459
+    },
+    {
+      "w": "spikenard,",
+      "start": 11.494,
+      "end": 12.028
+    },
+    {
+      "w": "very",
+      "start": 12.179,
+      "end": 12.376
+    },
+    {
+      "w": "costly,",
+      "start": 12.434,
+      "end": 13.003
+    },
+    {
+      "w": "and",
+      "start": 13.212,
+      "end": 13.351
+    },
+    {
+      "w": "anointed",
+      "start": 13.398,
+      "end": 13.746
+    },
+    {
+      "w": "the",
+      "start": 13.781,
+      "end": 13.85
+    },
+    {
+      "w": "feet",
+      "start": 13.885,
+      "end": 14.036
+    },
+    {
+      "w": "of",
+      "start": 14.071,
+      "end": 14.117
+    },
+    {
+      "w": "Jesus,",
+      "start": 14.164,
+      "end": 14.64
+    },
+    {
+      "w": "and",
+      "start": 14.663,
+      "end": 14.802
+    },
+    {
+      "w": "wiped",
+      "start": 14.86,
+      "end": 15.081
+    },
+    {
+      "w": "his",
+      "start": 15.116,
+      "end": 15.197
+    },
+    {
+      "w": "feet",
+      "start": 15.232,
+      "end": 15.383
+    },
+    {
+      "w": "with",
+      "start": 15.418,
+      "end": 15.522
+    },
+    {
+      "w": "her",
+      "start": 15.557,
+      "end": 15.627
+    },
+    {
+      "w": "hair:",
+      "start": 15.685,
+      "end": 16.045
+    },
+    {
+      "w": "and",
+      "start": 16.288,
+      "end": 16.381
+    },
+    {
+      "w": "the",
+      "start": 16.416,
+      "end": 16.486
+    },
+    {
+      "w": "house",
+      "start": 16.521,
+      "end": 16.718
+    },
+    {
+      "w": "was",
+      "start": 16.753,
+      "end": 16.857
+    },
+    {
+      "w": "filled",
+      "start": 16.927,
+      "end": 17.171
+    },
+    {
+      "w": "with",
+      "start": 17.194,
+      "end": 17.31
+    },
+    {
+      "w": "the",
+      "start": 17.333,
+      "end": 17.403
+    },
+    {
+      "w": "odour",
+      "start": 17.461,
+      "end": 17.682
+    },
+    {
+      "w": "of",
+      "start": 17.716,
+      "end": 17.774
+    },
+    {
+      "w": "the",
+      "start": 17.809,
+      "end": 17.879
+    },
+    {
+      "w": "ointment.\"",
+      "start": 17.914,
+      "end": 18.459
+    },
+    {
+      "w": "Everybody",
+      "start": 19.284,
+      "end": 19.62
+    },
+    {
+      "w": "in",
+      "start": 19.655,
+      "end": 19.713
+    },
+    {
+      "w": "that",
+      "start": 19.748,
+      "end": 19.853
+    },
+    {
+      "w": "room",
+      "start": 19.899,
+      "end": 20.085
+    },
+    {
+      "w": "knows",
+      "start": 20.12,
+      "end": 20.271
+    },
+    {
+      "w": "exactly",
+      "start": 20.317,
+      "end": 20.723
+    },
+    {
+      "w": "what",
+      "start": 20.758,
+      "end": 20.863
+    },
+    {
+      "w": "it",
+      "start": 20.897,
+      "end": 20.956
+    },
+    {
+      "w": "cost,",
+      "start": 20.99,
+      "end": 21.443
+    },
+    {
+      "w": "because",
+      "start": 21.478,
+      "end": 21.768
+    },
+    {
+      "w": "they",
+      "start": 21.791,
+      "end": 21.896
+    },
+    {
+      "w": "can",
+      "start": 21.919,
+      "end": 22.024
+    },
+    {
+      "w": "smell",
+      "start": 22.058,
+      "end": 22.244
+    },
+    {
+      "w": "it.",
+      "start": 22.302,
+      "end": 22.569
+    },
+    {
+      "w": "Then",
+      "start": 23.266,
+      "end": 23.417
+    },
+    {
+      "w": "Judas",
+      "start": 23.452,
+      "end": 23.661
+    },
+    {
+      "w": "objects,",
+      "start": 23.695,
+      "end": 24.171
+    },
+    {
+      "w": "and",
+      "start": 24.195,
+      "end": 24.334
+    },
+    {
+      "w": "he",
+      "start": 24.369,
+      "end": 24.427
+    },
+    {
+      "w": "uses",
+      "start": 24.508,
+      "end": 24.787
+    },
+    {
+      "w": "the",
+      "start": 24.822,
+      "end": 24.891
+    },
+    {
+      "w": "language",
+      "start": 24.937,
+      "end": 25.228
+    },
+    {
+      "w": "of",
+      "start": 25.251,
+      "end": 25.309
+    },
+    {
+      "w": "charity.",
+      "start": 25.344,
+      "end": 25.913
+    },
+    {
+      "w": "\"Why",
+      "start": 26.609,
+      "end": 26.876
+    },
+    {
+      "w": "was",
+      "start": 26.946,
+      "end": 27.062
+    },
+    {
+      "w": "not",
+      "start": 27.109,
+      "end": 27.201
+    },
+    {
+      "w": "this",
+      "start": 27.225,
+      "end": 27.341
+    },
+    {
+      "w": "ointment",
+      "start": 27.387,
+      "end": 27.689
+    },
+    {
+      "w": "sold",
+      "start": 27.724,
+      "end": 27.921
+    },
+    {
+      "w": "for",
+      "start": 27.956,
+      "end": 28.061
+    },
+    {
+      "w": "three",
+      "start": 28.107,
+      "end": 28.27
+    },
+    {
+      "w": "hundred",
+      "start": 28.304,
+      "end": 28.513
+    },
+    {
+      "w": "pence,",
+      "start": 28.548,
+      "end": 28.862
+    },
+    {
+      "w": "and",
+      "start": 28.885,
+      "end": 28.978
+    },
+    {
+      "w": "given",
+      "start": 29.024,
+      "end": 29.198
+    },
+    {
+      "w": "to",
+      "start": 29.233,
+      "end": 29.291
+    },
+    {
+      "w": "the",
+      "start": 29.338,
+      "end": 29.407
+    },
+    {
+      "w": "poor?\"",
+      "start": 29.43,
+      "end": 29.825
+    },
+    {
+      "w": "Three",
+      "start": 30.522,
+      "end": 30.766
+    },
+    {
+      "w": "hundred",
+      "start": 30.812,
+      "end": 31.044
+    },
+    {
+      "w": "pence.",
+      "start": 31.079,
+      "end": 31.602
+    },
+    {
+      "w": "A",
+      "start": 31.985,
+      "end": 32.043
+    },
+    {
+      "w": "penny",
+      "start": 32.112,
+      "end": 32.31
+    },
+    {
+      "w": "is",
+      "start": 32.345,
+      "end": 32.414
+    },
+    {
+      "w": "a",
+      "start": 32.449,
+      "end": 32.472
+    },
+    {
+      "w": "day's",
+      "start": 32.507,
+      "end": 32.705
+    },
+    {
+      "w": "wage",
+      "start": 32.739,
+      "end": 32.983
+    },
+    {
+      "w": "elsewhere",
+      "start": 33.018,
+      "end": 33.366
+    },
+    {
+      "w": "in",
+      "start": 33.39,
+      "end": 33.448
+    },
+    {
+      "w": "the",
+      "start": 33.482,
+      "end": 33.552
+    },
+    {
+      "w": "Gospels,",
+      "start": 33.587,
+      "end": 34.005
+    },
+    {
+      "w": "so",
+      "start": 34.04,
+      "end": 34.109
+    },
+    {
+      "w": "that",
+      "start": 34.156,
+      "end": 34.283
+    },
+    {
+      "w": "is",
+      "start": 34.318,
+      "end": 34.388
+    },
+    {
+      "w": "roughly",
+      "start": 34.446,
+      "end": 34.713
+    },
+    {
+      "w": "a",
+      "start": 34.759,
+      "end": 34.783
+    },
+    {
+      "w": "year",
+      "start": 34.829,
+      "end": 34.968
+    },
+    {
+      "w": "of",
+      "start": 35.015,
+      "end": 35.061
+    },
+    {
+      "w": "work,",
+      "start": 35.119,
+      "end": 35.514
+    },
+    {
+      "w": "poured",
+      "start": 35.665,
+      "end": 35.886
+    },
+    {
+      "w": "out",
+      "start": 35.92,
+      "end": 36.013
+    },
+    {
+      "w": "on",
+      "start": 36.048,
+      "end": 36.106
+    },
+    {
+      "w": "the",
+      "start": 36.141,
+      "end": 36.21
+    },
+    {
+      "w": "floor.",
+      "start": 36.234,
+      "end": 36.721
+    },
+    {
+      "w": "And",
+      "start": 37.104,
+      "end": 37.221
+    },
+    {
+      "w": "John",
+      "start": 37.255,
+      "end": 37.418
+    },
+    {
+      "w": "tells",
+      "start": 37.453,
+      "end": 37.627
+    },
+    {
+      "w": "you",
+      "start": 37.662,
+      "end": 37.731
+    },
+    {
+      "w": "his",
+      "start": 37.766,
+      "end": 37.847
+    },
+    {
+      "w": "motive",
+      "start": 37.905,
+      "end": 38.126
+    },
+    {
+      "w": "outright.",
+      "start": 38.161,
+      "end": 38.649
+    },
+    {
+      "w": "\"This",
+      "start": 39.345,
+      "end": 39.554
+    },
+    {
+      "w": "he",
+      "start": 39.601,
+      "end": 39.659
+    },
+    {
+      "w": "said,",
+      "start": 39.705,
+      "end": 40.274
+    },
+    {
+      "w": "not",
+      "start": 40.483,
+      "end": 40.622
+    },
+    {
+      "w": "that",
+      "start": 40.657,
+      "end": 40.773
+    },
+    {
+      "w": "he",
+      "start": 40.808,
+      "end": 40.854
+    },
+    {
+      "w": "cared",
+      "start": 40.889,
+      "end": 41.087
+    },
+    {
+      "w": "for",
+      "start": 41.121,
+      "end": 41.203
+    },
+    {
+      "w": "the",
+      "start": 41.226,
+      "end": 41.296
+    },
+    {
+      "w": "poor;",
+      "start": 41.33,
+      "end": 41.83
+    },
+    {
+      "w": "but",
+      "start": 42.073,
+      "end": 42.19
+    },
+    {
+      "w": "because",
+      "start": 42.224,
+      "end": 42.445
+    },
+    {
+      "w": "he",
+      "start": 42.468,
+      "end": 42.515
+    },
+    {
+      "w": "was",
+      "start": 42.549,
+      "end": 42.642
+    },
+    {
+      "w": "a",
+      "start": 42.689,
+      "end": 42.712
+    },
+    {
+      "w": "thief,",
+      "start": 42.758,
+      "end": 43.211
+    },
+    {
+      "w": "and",
+      "start": 43.246,
+      "end": 43.362
+    },
+    {
+      "w": "had",
+      "start": 43.42,
+      "end": 43.525
+    },
+    {
+      "w": "the",
+      "start": 43.56,
+      "end": 43.629
+    },
+    {
+      "w": "bag,",
+      "start": 43.664,
+      "end": 44.14
+    },
+    {
+      "w": "and",
+      "start": 44.245,
+      "end": 44.372
+    },
+    {
+      "w": "bare",
+      "start": 44.43,
+      "end": 44.639
+    },
+    {
+      "w": "what",
+      "start": 44.674,
+      "end": 44.802
+    },
+    {
+      "w": "was",
+      "start": 44.837,
+      "end": 44.93
+    },
+    {
+      "w": "put",
+      "start": 44.964,
+      "end": 45.092
+    },
+    {
+      "w": "therein.\"",
+      "start": 45.127,
+      "end": 45.731
+    },
+    {
+      "w": "The",
+      "start": 46.334,
+      "end": 46.439
+    },
+    {
+      "w": "man",
+      "start": 46.474,
+      "end": 46.613
+    },
+    {
+      "w": "doing",
+      "start": 46.659,
+      "end": 46.834
+    },
+    {
+      "w": "the",
+      "start": 46.868,
+      "end": 46.938
+    },
+    {
+      "w": "maths",
+      "start": 46.973,
+      "end": 47.193
+    },
+    {
+      "w": "on",
+      "start": 47.228,
+      "end": 47.298
+    },
+    {
+      "w": "her",
+      "start": 47.333,
+      "end": 47.414
+    },
+    {
+      "w": "devotion",
+      "start": 47.449,
+      "end": 47.809
+    },
+    {
+      "w": "was",
+      "start": 47.855,
+      "end": 47.96
+    },
+    {
+      "w": "skimming",
+      "start": 48.006,
+      "end": 48.296
+    },
+    {
+      "w": "the",
+      "start": 48.331,
+      "end": 48.401
+    },
+    {
+      "w": "fund.",
+      "start": 48.436,
+      "end": 48.924
+    },
+    {
+      "w": "And",
+      "start": 49.202,
+      "end": 49.318
+    },
+    {
+      "w": "Jesus",
+      "start": 49.376,
+      "end": 49.643
+    },
+    {
+      "w": "shuts",
+      "start": 49.678,
+      "end": 49.864
+    },
+    {
+      "w": "it",
+      "start": 49.899,
+      "end": 49.957
+    },
+    {
+      "w": "down",
+      "start": 49.992,
+      "end": 50.131
+    },
+    {
+      "w": "in",
+      "start": 50.166,
+      "end": 50.224
+    },
+    {
+      "w": "the",
+      "start": 50.259,
+      "end": 50.328
+    },
+    {
+      "w": "room.",
+      "start": 50.363,
+      "end": 50.723
+    },
+    {
+      "w": "\"Let",
+      "start": 51.42,
+      "end": 51.687
+    },
+    {
+      "w": "her",
+      "start": 51.71,
+      "end": 51.791
+    },
+    {
+      "w": "alone:",
+      "start": 51.826,
+      "end": 52.302
+    },
+    {
+      "w": "against",
+      "start": 52.488,
+      "end": 52.767
+    },
+    {
+      "w": "the",
+      "start": 52.801,
+      "end": 52.871
+    },
+    {
+      "w": "day",
+      "start": 52.906,
+      "end": 53.022
+    },
+    {
+      "w": "of",
+      "start": 53.057,
+      "end": 53.115
+    },
+    {
+      "w": "my",
+      "start": 53.161,
+      "end": 53.219
+    },
+    {
+      "w": "burying",
+      "start": 53.289,
+      "end": 53.637
+    },
+    {
+      "w": "hath",
+      "start": 53.707,
+      "end": 53.835
+    },
+    {
+      "w": "she",
+      "start": 53.87,
+      "end": 53.951
+    },
+    {
+      "w": "kept",
+      "start": 53.997,
+      "end": 54.148
+    },
+    {
+      "w": "this.\"",
+      "start": 54.171,
+      "end": 54.636
+    },
+    {
+      "w": "She",
+      "start": 55.46,
+      "end": 55.565
+    },
+    {
+      "w": "understood",
+      "start": 55.611,
+      "end": 55.971
+    },
+    {
+      "w": "the",
+      "start": 56.006,
+      "end": 56.075
+    },
+    {
+      "w": "assignment",
+      "start": 56.11,
+      "end": 56.517
+    },
+    {
+      "w": "while",
+      "start": 56.551,
+      "end": 56.691
+    },
+    {
+      "w": "the",
+      "start": 56.714,
+      "end": 56.784
+    },
+    {
+      "w": "men",
+      "start": 56.818,
+      "end": 56.946
+    },
+    {
+      "w": "were",
+      "start": 56.993,
+      "end": 57.109
+    },
+    {
+      "w": "still",
+      "start": 57.144,
+      "end": 57.318
+    },
+    {
+      "w": "doing",
+      "start": 57.353,
+      "end": 57.515
+    },
+    {
+      "w": "arithmetic.",
+      "start": 57.55,
+      "end": 58.374
+    }
+  ],
+  "renderedAt": 1785789214066
+}

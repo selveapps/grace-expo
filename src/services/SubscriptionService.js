@@ -1,4 +1,16 @@
-// SubscriptionService — beta entitlement via Grace API (Expo Go). StoreKit = dev build.
+// SubscriptionService — beta entitlement via Grace API (Expo Go).
+//
+// StoreKit seam: `purchase()` and `restore()` always resolve to a normalized
+// { status } — 'trialing' | 'active' | 'free' | 'cancelled' | 'failed' — because
+// PaywallScreen branches on it and must only celebrate a real purchase.
+//
+// Real StoreKit is NOT wired yet. The v3 spec named `expo-in-app-purchases`, but
+// that module is absent from the Expo SDK 54 native-module list (Expo retired it
+// after SDK 49), so installing it would break this build. When the Paid Apps
+// agreement and the two ASC products are live, drop a maintained module
+// (`expo-iap` or `react-native-iap`) into `storeKitPurchase` below: it must
+// return the transaction receipt, which is then validated server-side by
+// POST /purchase/validate. Entitlement is always re-read from GET /me.
 import { api } from '../api/client';
 import { StorageService, KEYS } from './StorageService';
 
@@ -30,23 +42,35 @@ export const SubscriptionService = {
     }
   },
 
+  /**
+   * Resolves to a normalized { status, ... }. Never throws: the paywall shows
+   * calm copy for 'failed' and stays put for 'cancelled'.
+   */
   async purchase(planId) {
     const plan = OFFERINGS.find((o) => o.id === planId) || OFFERINGS[0];
-    const res = await api.post('/beta/redeem', { code: BETA_CODE });
-    const now = Date.now();
-    const sub = {
-      status: res.data.status || 'trialing',
-      planId: plan.id,
-      trialEndsAt: res.data.expiresAt ? new Date(res.data.expiresAt).getTime() : now + plan.trialDays * 86400000,
-      renewsAt: res.data.expiresAt ? new Date(res.data.expiresAt).getTime() : now + plan.trialDays * 86400000,
-      platform: 'beta',
-    };
-    await StorageService.set(KEYS.subscription, sub);
-    return sub;
+    try {
+      const res = await api.post('/beta/redeem', { code: BETA_CODE });
+      const now = Date.now();
+      const expiresAt = res.data.expiresAt
+        ? new Date(res.data.expiresAt).getTime()
+        : now + plan.trialDays * 86400000;
+      const sub = {
+        status: res.data.status || 'trialing',
+        planId: plan.id,
+        trialEndsAt: expiresAt,
+        renewsAt: expiresAt,
+        platform: 'beta',
+      };
+      await StorageService.set(KEYS.subscription, sub);
+      return sub;
+    } catch (e) {
+      return { status: 'failed', planId: plan.id, error: e?.message || 'purchase_failed' };
+    }
   },
 
   async restore() {
-    return this.getStatus();
+    const sub = await this.getStatus();
+    return sub?.status ? sub : { status: 'free' };
   },
 
   async cancel() {

@@ -1,0 +1,596 @@
+{
+  "kind": "tea",
+  "teaId": "miriam-song",
+  "mood": "light",
+  "heat": 1,
+  "text": "The sea just closed on an entire army and she reached for a tambourine… … Israel just walked through the sea on dry ground and watched the water crash down on the entire Egyptian army. Moses and the people sing first. Then Miriam the prophetess grabs a tambourine. All the women follow her with instruments and dancing. She leads the response: “Sing to the Lord, for he has triumphed gloriously. The horse and his rider he has thrown into the sea.” The text calls her two things in one verse: prophetess, and sister of Aaron. When the water closed and the impossible happened… she was the one who reached for an instrument. I’m soft for that energy.",
+  "voice": "cgSgspJ2msm6clMCkdW9",
+  "words": [
+    {
+      "w": "The",
+      "start": 0,
+      "end": 0.128
+    },
+    {
+      "w": "sea",
+      "start": 0.174,
+      "end": 0.302
+    },
+    {
+      "w": "just",
+      "start": 0.337,
+      "end": 0.464
+    },
+    {
+      "w": "closed",
+      "start": 0.499,
+      "end": 0.824
+    },
+    {
+      "w": "on",
+      "start": 0.859,
+      "end": 0.929
+    },
+    {
+      "w": "an",
+      "start": 0.964,
+      "end": 1.022
+    },
+    {
+      "w": "entire",
+      "start": 1.057,
+      "end": 1.416
+    },
+    {
+      "w": "army",
+      "start": 1.463,
+      "end": 1.753
+    },
+    {
+      "w": "and",
+      "start": 1.823,
+      "end": 1.927
+    },
+    {
+      "w": "she",
+      "start": 1.962,
+      "end": 2.055
+    },
+    {
+      "w": "reached",
+      "start": 2.113,
+      "end": 2.322
+    },
+    {
+      "w": "for",
+      "start": 2.345,
+      "end": 2.438
+    },
+    {
+      "w": "a",
+      "start": 2.473,
+      "end": 2.508
+    },
+    {
+      "w": "tambourine…",
+      "start": 2.554,
+      "end": 3.239
+    },
+    {
+      "w": "…",
+      "start": 3.762,
+      "end": 3.866
+    },
+    {
+      "w": "Israel",
+      "start": 4.017,
+      "end": 4.307
+    },
+    {
+      "w": "just",
+      "start": 4.354,
+      "end": 4.493
+    },
+    {
+      "w": "walked",
+      "start": 4.528,
+      "end": 4.748
+    },
+    {
+      "w": "through",
+      "start": 4.783,
+      "end": 4.992
+    },
+    {
+      "w": "the",
+      "start": 5.016,
+      "end": 5.085
+    },
+    {
+      "w": "sea",
+      "start": 5.132,
+      "end": 5.329
+    },
+    {
+      "w": "on",
+      "start": 5.387,
+      "end": 5.492
+    },
+    {
+      "w": "dry",
+      "start": 5.538,
+      "end": 5.724
+    },
+    {
+      "w": "ground",
+      "start": 5.782,
+      "end": 6.118
+    },
+    {
+      "w": "and",
+      "start": 6.177,
+      "end": 6.281
+    },
+    {
+      "w": "watched",
+      "start": 6.339,
+      "end": 6.583
+    },
+    {
+      "w": "the",
+      "start": 6.606,
+      "end": 6.676
+    },
+    {
+      "w": "water",
+      "start": 6.711,
+      "end": 6.943
+    },
+    {
+      "w": "crash",
+      "start": 7.001,
+      "end": 7.233
+    },
+    {
+      "w": "down",
+      "start": 7.268,
+      "end": 7.442
+    },
+    {
+      "w": "on",
+      "start": 7.488,
+      "end": 7.546
+    },
+    {
+      "w": "the",
+      "start": 7.581,
+      "end": 7.651
+    },
+    {
+      "w": "entire",
+      "start": 7.686,
+      "end": 8.046
+    },
+    {
+      "w": "Egyptian",
+      "start": 8.092,
+      "end": 8.394
+    },
+    {
+      "w": "army.",
+      "start": 8.429,
+      "end": 8.975
+    },
+    {
+      "w": "Moses",
+      "start": 9.671,
+      "end": 9.961
+    },
+    {
+      "w": "and",
+      "start": 9.996,
+      "end": 10.066
+    },
+    {
+      "w": "the",
+      "start": 10.089,
+      "end": 10.159
+    },
+    {
+      "w": "people",
+      "start": 10.182,
+      "end": 10.403
+    },
+    {
+      "w": "sing",
+      "start": 10.437,
+      "end": 10.6
+    },
+    {
+      "w": "first.",
+      "start": 10.658,
+      "end": 11.204
+    },
+    {
+      "w": "Then",
+      "start": 12.028,
+      "end": 12.191
+    },
+    {
+      "w": "Miriam",
+      "start": 12.249,
+      "end": 12.574
+    },
+    {
+      "w": "the",
+      "start": 12.609,
+      "end": 12.678
+    },
+    {
+      "w": "prophetess",
+      "start": 12.713,
+      "end": 13.189
+    },
+    {
+      "w": "grabs",
+      "start": 13.247,
+      "end": 13.456
+    },
+    {
+      "w": "a",
+      "start": 13.491,
+      "end": 13.514
+    },
+    {
+      "w": "tambourine.",
+      "start": 13.549,
+      "end": 14.211
+    },
+    {
+      "w": "All",
+      "start": 14.536,
+      "end": 14.71
+    },
+    {
+      "w": "the",
+      "start": 14.745,
+      "end": 14.815
+    },
+    {
+      "w": "women",
+      "start": 14.85,
+      "end": 15.035
+    },
+    {
+      "w": "follow",
+      "start": 15.07,
+      "end": 15.302
+    },
+    {
+      "w": "her",
+      "start": 15.36,
+      "end": 15.442
+    },
+    {
+      "w": "with",
+      "start": 15.476,
+      "end": 15.604
+    },
+    {
+      "w": "instruments",
+      "start": 15.639,
+      "end": 16.069
+    },
+    {
+      "w": "and",
+      "start": 16.103,
+      "end": 16.185
+    },
+    {
+      "w": "dancing.",
+      "start": 16.219,
+      "end": 16.823
+    },
+    {
+      "w": "She",
+      "start": 17.787,
+      "end": 17.915
+    },
+    {
+      "w": "leads",
+      "start": 18.019,
+      "end": 18.286
+    },
+    {
+      "w": "the",
+      "start": 18.321,
+      "end": 18.391
+    },
+    {
+      "w": "response:",
+      "start": 18.437,
+      "end": 19.076
+    },
+    {
+      "w": "“Sing",
+      "start": 19.598,
+      "end": 20.144
+    },
+    {
+      "w": "to",
+      "start": 20.248,
+      "end": 20.341
+    },
+    {
+      "w": "the",
+      "start": 20.399,
+      "end": 20.469
+    },
+    {
+      "w": "Lord,",
+      "start": 20.538,
+      "end": 21.049
+    },
+    {
+      "w": "for",
+      "start": 21.107,
+      "end": 21.235
+    },
+    {
+      "w": "he",
+      "start": 21.281,
+      "end": 21.351
+    },
+    {
+      "w": "has",
+      "start": 21.398,
+      "end": 21.502
+    },
+    {
+      "w": "triumphed",
+      "start": 21.548,
+      "end": 21.92
+    },
+    {
+      "w": "gloriously.",
+      "start": 21.966,
+      "end": 22.779
+    },
+    {
+      "w": "The",
+      "start": 22.988,
+      "end": 23.081
+    },
+    {
+      "w": "horse",
+      "start": 23.139,
+      "end": 23.348
+    },
+    {
+      "w": "and",
+      "start": 23.371,
+      "end": 23.453
+    },
+    {
+      "w": "his",
+      "start": 23.487,
+      "end": 23.58
+    },
+    {
+      "w": "rider",
+      "start": 23.615,
+      "end": 23.859
+    },
+    {
+      "w": "he",
+      "start": 23.917,
+      "end": 23.975
+    },
+    {
+      "w": "has",
+      "start": 24.021,
+      "end": 24.103
+    },
+    {
+      "w": "thrown",
+      "start": 24.137,
+      "end": 24.335
+    },
+    {
+      "w": "into",
+      "start": 24.37,
+      "end": 24.509
+    },
+    {
+      "w": "the",
+      "start": 24.555,
+      "end": 24.625
+    },
+    {
+      "w": "sea.”",
+      "start": 24.66,
+      "end": 25.147
+    },
+    {
+      "w": "The",
+      "start": 25.844,
+      "end": 25.948
+    },
+    {
+      "w": "text",
+      "start": 25.983,
+      "end": 26.215
+    },
+    {
+      "w": "calls",
+      "start": 26.25,
+      "end": 26.436
+    },
+    {
+      "w": "her",
+      "start": 26.471,
+      "end": 26.564
+    },
+    {
+      "w": "two",
+      "start": 26.622,
+      "end": 26.749
+    },
+    {
+      "w": "things",
+      "start": 26.819,
+      "end": 27.063
+    },
+    {
+      "w": "in",
+      "start": 27.098,
+      "end": 27.156
+    },
+    {
+      "w": "one",
+      "start": 27.202,
+      "end": 27.307
+    },
+    {
+      "w": "verse:",
+      "start": 27.342,
+      "end": 27.841
+    },
+    {
+      "w": "prophetess,",
+      "start": 28.224,
+      "end": 28.735
+    },
+    {
+      "w": "and",
+      "start": 28.758,
+      "end": 28.839
+    },
+    {
+      "w": "sister",
+      "start": 28.897,
+      "end": 29.129
+    },
+    {
+      "w": "of",
+      "start": 29.176,
+      "end": 29.222
+    },
+    {
+      "w": "Aaron.",
+      "start": 29.269,
+      "end": 29.687
+    },
+    {
+      "w": "When",
+      "start": 30.07,
+      "end": 30.198
+    },
+    {
+      "w": "the",
+      "start": 30.221,
+      "end": 30.29
+    },
+    {
+      "w": "water",
+      "start": 30.314,
+      "end": 30.523
+    },
+    {
+      "w": "closed",
+      "start": 30.569,
+      "end": 30.929
+    },
+    {
+      "w": "and",
+      "start": 30.964,
+      "end": 31.057
+    },
+    {
+      "w": "the",
+      "start": 31.092,
+      "end": 31.161
+    },
+    {
+      "w": "impossible",
+      "start": 31.196,
+      "end": 31.591
+    },
+    {
+      "w": "happened…",
+      "start": 31.626,
+      "end": 32.136
+    },
+    {
+      "w": "she",
+      "start": 32.659,
+      "end": 32.752
+    },
+    {
+      "w": "was",
+      "start": 32.798,
+      "end": 32.88
+    },
+    {
+      "w": "the",
+      "start": 32.914,
+      "end": 32.984
+    },
+    {
+      "w": "one",
+      "start": 33.019,
+      "end": 33.123
+    },
+    {
+      "w": "who",
+      "start": 33.147,
+      "end": 33.239
+    },
+    {
+      "w": "reached",
+      "start": 33.286,
+      "end": 33.495
+    },
+    {
+      "w": "for",
+      "start": 33.518,
+      "end": 33.611
+    },
+    {
+      "w": "an",
+      "start": 33.646,
+      "end": 33.704
+    },
+    {
+      "w": "instrument.",
+      "start": 33.739,
+      "end": 34.249
+    },
+    {
+      "w": "I’m",
+      "start": 34.772,
+      "end": 34.888
+    },
+    {
+      "w": "soft",
+      "start": 34.934,
+      "end": 35.12
+    },
+    {
+      "w": "for",
+      "start": 35.143,
+      "end": 35.248
+    },
+    {
+      "w": "that",
+      "start": 35.283,
+      "end": 35.41
+    },
+    {
+      "w": "energy.",
+      "start": 35.445,
+      "end": 35.991
+    }
+  ],
+  "renderedAt": 1785530357613
+}

@@ -24,3 +24,6 @@ android/build/
 
 test-results/
 playwright-report/
+
+# Local spec drop-in, not part of the app source
+grace-branch-spec/

@@ -1,3 +1,5 @@
+import { STORY_REFS } from './narrationScripts.js';
+
 export type StoryMeta = {
   id: string;
   title: string;
@@ -39,12 +41,22 @@ export const STORY_VOICE: Record<string, string> = {
   'mary-annunciation': 'cgSgspJ2msm6clMCkdW9', // Jessica — young, bright, gentle
 };
 
+// Collection membership is driven by these tags, so a typo here is an empty
+// collection in the app. Three were wrong:
+//   - hannah-prayer said 'Prayer' where the collection is named 'Prayer Stories',
+//     so Prayer Stories was empty despite having a story for it.
+//   - davids-rooftop was in no collection at all.
+//   - ruth-stays and mary-annunciation each genuinely belong to more than the
+//     one collection they were carrying (Naomi's bereavement and the famine
+//     exile; Mary's yes at real personal risk).
+// Tags are only added where the passage honestly fits. Jesus' Parables stays
+// empty until the proposed stories are written and rendered.
 export const STORIES: StoryMeta[] = [
-  { id: 'ruth-stays', title: 'Ruth stays', subtitle: 'Loyalty in the harvest', hook: 'She had every reason to leave. She stayed.', scriptureRange: 'Ruth 1–4', testament: 'old', books: ['Ruth'], durationSeconds: 540, coverTint: '#6B5D4E', tags: ['Women of the Bible', 'Loyalty'], isPremium: true, parts: 4, audioUrl: STORY_AUDIO_URL, voice: STORY_VOICE['ruth-stays'] },
-  { id: 'esther-uninvited', title: 'Esther walks in uninvited', subtitle: 'Courage in the palace', hook: 'For such a time as this.', scriptureRange: 'Esther 4–5', testament: 'old', books: ['Esther'], durationSeconds: 540, coverTint: '#5A4632', tags: ['Women of the Bible', 'Courage'], isPremium: true, parts: 4, audioUrl: STORY_AUDIO_URL, voice: STORY_VOICE['esther-uninvited'] },
-  { id: 'davids-rooftop', title: "David's rooftop era", subtitle: 'A king, a mistake, a mercy', hook: 'Power looked away. Grace did not.', scriptureRange: '2 Samuel 11–12', testament: 'old', books: ['2 Samuel'], durationSeconds: 620, coverTint: '#4A382C', tags: ['Kings', 'Mercy'], isPremium: true, parts: 3, audioUrl: STORY_AUDIO_URL, voice: STORY_VOICE['davids-rooftop'] },
-  { id: 'hannah-prayer', title: 'Hannah', subtitle: 'A prayer answered', hook: 'She prayed so hard they thought her drunk.', scriptureRange: '1 Samuel 1–2', testament: 'old', books: ['1 Samuel'], durationSeconds: 480, coverTint: '#6B5D4E', tags: ['Women of the Bible', 'Prayer'], isPremium: true, parts: 2, audioUrl: STORY_AUDIO_URL, voice: STORY_VOICE['hannah-prayer'] },
-  { id: 'mary-annunciation', title: 'Mary', subtitle: 'The annunciation', hook: 'A teenager said yes to the impossible.', scriptureRange: 'Luke 1', testament: 'new', books: ['Luke'], durationSeconds: 500, coverTint: '#5A4632', tags: ['Women of the Bible', 'Faith'], isPremium: false, parts: 3, audioUrl: STORY_AUDIO_URL, voice: STORY_VOICE['mary-annunciation'] },
+  { id: 'ruth-stays', title: 'Ruth stays', subtitle: 'Loyalty in the harvest', hook: 'She had every reason to leave. She stayed.', scriptureRange: 'Ruth 1–4', testament: 'old', books: ['Ruth'], durationSeconds: 190, coverTint: '#6B5D4E', tags: ['Women of the Bible', 'Grief & Hope', 'Wilderness Seasons', 'Loyalty'], isPremium: true, parts: 4, audioUrl: STORY_AUDIO_URL, voice: STORY_VOICE['ruth-stays'] },
+  { id: 'esther-uninvited', title: 'Esther walks in uninvited', subtitle: 'Courage in the palace', hook: 'For such a time as this.', scriptureRange: 'Esther 3–7', testament: 'old', books: ['Esther'], durationSeconds: 201, coverTint: '#5A4632', tags: ['Women of the Bible', 'Courage'], isPremium: true, parts: 4, audioUrl: STORY_AUDIO_URL, voice: STORY_VOICE['esther-uninvited'] },
+  { id: 'davids-rooftop', title: "David's rooftop era", subtitle: 'A king, a mistake, a mercy', hook: 'Power looked away. Grace did not.', scriptureRange: '2 Samuel 11–12', testament: 'old', books: ['2 Samuel'], durationSeconds: 201, coverTint: '#4A382C', tags: ['Grief & Hope', 'Kings', 'Mercy'], isPremium: true, parts: 3, audioUrl: STORY_AUDIO_URL, voice: STORY_VOICE['davids-rooftop'] },
+  { id: 'hannah-prayer', title: 'Hannah', subtitle: 'A prayer answered', hook: 'She prayed so hard they thought her drunk.', scriptureRange: '1 Samuel 1–2', testament: 'old', books: ['1 Samuel'], durationSeconds: 211, coverTint: '#6B5D4E', tags: ['Women of the Bible', 'Prayer Stories'], isPremium: true, parts: 2, audioUrl: STORY_AUDIO_URL, voice: STORY_VOICE['hannah-prayer'] },
+  { id: 'mary-annunciation', title: 'Mary', subtitle: 'The annunciation', hook: 'She said yes to the impossible.', scriptureRange: 'Luke 1', testament: 'new', books: ['Luke'], durationSeconds: 197, coverTint: '#5A4632', tags: ['Women of the Bible', 'Courage', 'Faith'], isPremium: false, parts: 3, audioUrl: STORY_AUDIO_URL, voice: STORY_VOICE['mary-annunciation'] },
 ];
 
 export function getStory(id: string) {
@@ -64,5 +76,7 @@ export function storyForClient(story: StoryMeta) {
     ...story,
     hasAudio: Boolean(audioUrl),
     audioUrl,
+    // The passages each part is retold from, so the basis is visible in-app.
+    scriptureRefs: STORY_REFS[story.id] ?? [],
   };
 }

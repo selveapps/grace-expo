@@ -2,7 +2,15 @@
 import { api } from '../api/client';
 import { VerseService } from './VerseService';
 import { StoryService } from './StoryService';
+import { TeaService } from './TeaService';
 import { ReadingService } from './ReadingService';
+
+// One in-flight payload, shared. Confirmation primes this while she is still
+// reading the blessing, so tapping Enter Grace mounts a Home that already has
+// its data instead of a tab that spins. Keyed by name so a profile change is
+// not served a stale greeting.
+const FRESH_MS = 60_000;
+let cache = null; // { key, at, promise }
 
 function greetingFor(date = new Date()) {
   const h = date.getHours();
@@ -11,20 +19,28 @@ function greetingFor(date = new Date()) {
   return 'Good evening';
 }
 
+const settled = (p, fallback) => Promise.resolve(p).then((v) => v, () => fallback);
+
 async function getTodayLocal(profile = {}) {
+  // allSettled semantics on purpose. With Promise.all, one rejected sub-fetch
+  // took the whole payload down, and Home then sat on "Preparing…" forever
+  // because its listen and continue cards had nothing to render.
   const [saved, cont, prog] = await Promise.all([
-    ReadingService.getSavedVerses(),
-    StoryService.getContinue(),
-    ReadingService.getReadingProgress(),
+    settled(ReadingService.getSavedVerses(), []),
+    settled(StoryService.getContinue(), []),
+    settled(ReadingService.getReadingProgress(), {}),
   ]);
-  const dailyVerse = saved && saved[0] ? saved[0] : await VerseService.getDaily();
+  const [dailyVerse, featured] = await Promise.all([
+    saved && saved[0] ? saved[0] : settled(VerseService.getDaily(), null),
+    settled(StoryService.getFeatured(), null),
+  ]);
   const last = prog && prog.__last;
   return {
     greeting: greetingFor(),
     name: profile.name || 'friend',
     dailyVerse,
     recommendedReading: last || { book: 'Psalms', chapter: 23 },
-    recommendedStory: cont && cont[0] ? cont[0] : await StoryService.getFeatured(),
+    recommendedStory: (cont && cont[0]) || featured,
     reflectionPrompt: 'Where might you need Grace today?',
     userIntention: (profile.carrying && profile.carrying[0]) || profile.reflectionWord || 'Trust',
     rhythm: profile.rhythm || 'morning',
@@ -32,7 +48,39 @@ async function getTodayLocal(profile = {}) {
 }
 
 export const TodayService = {
-  async getToday(profile = {}) {
+  async getToday(profile = {}, { force = false } = {}) {
+    const key = profile.name || '';
+    const fresh = cache && cache.key === key && Date.now() - cache.at < FRESH_MS;
+    if (fresh && !force) return cache.promise;
+    const promise = this.fetchToday(profile).catch((e) => {
+      // A rejected promise must not stay in the cache or every later read fails.
+      if (cache && cache.promise === promise) cache = null;
+      throw e;
+    });
+    cache = { key, at: Date.now(), promise };
+    return promise;
+  },
+
+  /** Drop the cached payload, e.g. after progress changes elsewhere. */
+  invalidate() {
+    cache = null;
+  },
+
+  /**
+   * Warm everything the tab app reads on first paint, without blocking on it.
+   * Called from Confirmation so the navigator remount that Enter Grace triggers
+   * has nothing left to fetch.
+   */
+  prime(profile = {}) {
+    this.getToday(profile).catch(() => {});
+    StoryService.getFeatured().catch(() => {});
+    StoryService.getCollections().catch(() => {});
+    StoryService.getStories().catch(() => {});
+    TeaService.getToday().catch(() => {});
+    TeaService.getAll().catch(() => {});
+  },
+
+  async fetchToday(profile = {}) {
     try {
       await StoryService.hydrateProgress();
       const { data } = await api.get('/today');

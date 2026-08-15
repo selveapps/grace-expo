@@ -1,0 +1,826 @@
+{
+  "kind": "tea",
+  "teaId": "tamar-veil",
+  "mood": "light",
+  "heat": 3,
+  "text": "She took his government ID and then almost got burned alive for it… … Tamar marries Judah’s oldest son. He dies. Next brother. He dies too. Judah has one more son but parks her at her dad’s house “until he’s grown” and then never sends for her. Years pass. She’s stuck with no rights. So she puts on a veil, sits by the road, and when Judah walks past he doesn’t recognize her and propositions her. She says fine, but I need a pledge. He asks what. She says your signet, your bracelets, and your staff. That’s his government ID. Three months later people tell Judah she’s pregnant and he’s ready to have her burned alive. She sends back his own signet and staff with a note that basically says “recognize these?” In front of everyone he has to admit: “She hath been more righteous than I.” She played him so clean he had to say it out loud. I’m on the floor.",
+  "voice": "cgSgspJ2msm6clMCkdW9",
+  "words": [
+    {
+      "w": "She",
+      "start": 0,
+      "end": 0.151
+    },
+    {
+      "w": "took",
+      "start": 0.197,
+      "end": 0.337
+    },
+    {
+      "w": "his",
+      "start": 0.372,
+      "end": 0.464
+    },
+    {
+      "w": "government",
+      "start": 0.499,
+      "end": 0.813
+    },
+    {
+      "w": "ID",
+      "start": 0.848,
+      "end": 1.045
+    },
+    {
+      "w": "and",
+      "start": 1.289,
+      "end": 1.416
+    },
+    {
+      "w": "then",
+      "start": 1.451,
+      "end": 1.567
+    },
+    {
+      "w": "almost",
+      "start": 1.614,
+      "end": 1.858
+    },
+    {
+      "w": "got",
+      "start": 1.892,
+      "end": 2.009
+    },
+    {
+      "w": "burned",
+      "start": 2.043,
+      "end": 2.252
+    },
+    {
+      "w": "alive",
+      "start": 2.287,
+      "end": 2.554
+    },
+    {
+      "w": "for",
+      "start": 2.589,
+      "end": 2.694
+    },
+    {
+      "w": "it…",
+      "start": 2.752,
+      "end": 2.995
+    },
+    {
+      "w": "…",
+      "start": 3.274,
+      "end": 3.518
+    },
+    {
+      "w": "Tamar",
+      "start": 4.04,
+      "end": 4.377
+    },
+    {
+      "w": "marries",
+      "start": 4.458,
+      "end": 4.748
+    },
+    {
+      "w": "Judah’s",
+      "start": 4.807,
+      "end": 5.062
+    },
+    {
+      "w": "oldest",
+      "start": 5.097,
+      "end": 5.341
+    },
+    {
+      "w": "son.",
+      "start": 5.375,
+      "end": 5.828
+    },
+    {
+      "w": "He",
+      "start": 6.954,
+      "end": 7.059
+    },
+    {
+      "w": "dies.",
+      "start": 7.117,
+      "end": 7.663
+    },
+    {
+      "w": "Next",
+      "start": 8.266,
+      "end": 8.464
+    },
+    {
+      "w": "brother.",
+      "start": 8.51,
+      "end": 8.963
+    },
+    {
+      "w": "He",
+      "start": 9.207,
+      "end": 9.3
+    },
+    {
+      "w": "dies",
+      "start": 9.346,
+      "end": 9.532
+    },
+    {
+      "w": "too.",
+      "start": 9.601,
+      "end": 10.066
+    },
+    {
+      "w": "Judah",
+      "start": 10.89,
+      "end": 11.215
+    },
+    {
+      "w": "has",
+      "start": 11.25,
+      "end": 11.378
+    },
+    {
+      "w": "one",
+      "start": 11.482,
+      "end": 11.645
+    },
+    {
+      "w": "more",
+      "start": 11.68,
+      "end": 11.842
+    },
+    {
+      "w": "son",
+      "start": 11.889,
+      "end": 12.086
+    },
+    {
+      "w": "but",
+      "start": 12.156,
+      "end": 12.26
+    },
+    {
+      "w": "parks",
+      "start": 12.295,
+      "end": 12.539
+    },
+    {
+      "w": "her",
+      "start": 12.574,
+      "end": 12.655
+    },
+    {
+      "w": "at",
+      "start": 12.69,
+      "end": 12.759
+    },
+    {
+      "w": "her",
+      "start": 12.794,
+      "end": 12.864
+    },
+    {
+      "w": "dad’s",
+      "start": 12.91,
+      "end": 13.166
+    },
+    {
+      "w": "house",
+      "start": 13.201,
+      "end": 13.491
+    },
+    {
+      "w": "“until",
+      "start": 13.514,
+      "end": 13.839
+    },
+    {
+      "w": "he’s",
+      "start": 13.909,
+      "end": 14.036
+    },
+    {
+      "w": "grown”",
+      "start": 14.083,
+      "end": 14.547
+    },
+    {
+      "w": "and",
+      "start": 14.733,
+      "end": 14.849
+    },
+    {
+      "w": "then",
+      "start": 14.884,
+      "end": 15.012
+    },
+    {
+      "w": "never",
+      "start": 15.081,
+      "end": 15.267
+    },
+    {
+      "w": "sends",
+      "start": 15.325,
+      "end": 15.523
+    },
+    {
+      "w": "for",
+      "start": 15.557,
+      "end": 15.65
+    },
+    {
+      "w": "her.",
+      "start": 15.697,
+      "end": 16.045
+    },
+    {
+      "w": "Years",
+      "start": 16.568,
+      "end": 16.811
+    },
+    {
+      "w": "pass.",
+      "start": 16.858,
+      "end": 17.392
+    },
+    {
+      "w": "She’s",
+      "start": 17.671,
+      "end": 17.856
+    },
+    {
+      "w": "stuck",
+      "start": 17.879,
+      "end": 18.054
+    },
+    {
+      "w": "with",
+      "start": 18.088,
+      "end": 18.205
+    },
+    {
+      "w": "no",
+      "start": 18.239,
+      "end": 18.321
+    },
+    {
+      "w": "rights.",
+      "start": 18.367,
+      "end": 18.878
+    },
+    {
+      "w": "So",
+      "start": 19.319,
+      "end": 19.412
+    },
+    {
+      "w": "she",
+      "start": 19.447,
+      "end": 19.528
+    },
+    {
+      "w": "puts",
+      "start": 19.563,
+      "end": 19.702
+    },
+    {
+      "w": "on",
+      "start": 19.737,
+      "end": 19.807
+    },
+    {
+      "w": "a",
+      "start": 19.842,
+      "end": 19.865
+    },
+    {
+      "w": "veil,",
+      "start": 19.911,
+      "end": 20.283
+    },
+    {
+      "w": "sits",
+      "start": 20.341,
+      "end": 20.538
+    },
+    {
+      "w": "by",
+      "start": 20.573,
+      "end": 20.643
+    },
+    {
+      "w": "the",
+      "start": 20.677,
+      "end": 20.747
+    },
+    {
+      "w": "road,",
+      "start": 20.794,
+      "end": 21.049
+    },
+    {
+      "w": "and",
+      "start": 21.084,
+      "end": 21.177
+    },
+    {
+      "w": "when",
+      "start": 21.223,
+      "end": 21.362
+    },
+    {
+      "w": "Judah",
+      "start": 21.421,
+      "end": 21.641
+    },
+    {
+      "w": "walks",
+      "start": 21.676,
+      "end": 21.885
+    },
+    {
+      "w": "past",
+      "start": 21.931,
+      "end": 22.28
+    },
+    {
+      "w": "he",
+      "start": 22.326,
+      "end": 22.373
+    },
+    {
+      "w": "doesn’t",
+      "start": 22.407,
+      "end": 22.616
+    },
+    {
+      "w": "recognize",
+      "start": 22.651,
+      "end": 23.069
+    },
+    {
+      "w": "her",
+      "start": 23.104,
+      "end": 23.243
+    },
+    {
+      "w": "and",
+      "start": 23.429,
+      "end": 23.592
+    },
+    {
+      "w": "propositions",
+      "start": 23.626,
+      "end": 24.137
+    },
+    {
+      "w": "her.",
+      "start": 24.172,
+      "end": 24.625
+    },
+    {
+      "w": "She",
+      "start": 25.147,
+      "end": 25.252
+    },
+    {
+      "w": "says",
+      "start": 25.287,
+      "end": 25.426
+    },
+    {
+      "w": "fine,",
+      "start": 25.484,
+      "end": 25.983
+    },
+    {
+      "w": "but",
+      "start": 26.169,
+      "end": 26.297
+    },
+    {
+      "w": "I",
+      "start": 26.332,
+      "end": 26.355
+    },
+    {
+      "w": "need",
+      "start": 26.401,
+      "end": 26.529
+    },
+    {
+      "w": "a",
+      "start": 26.564,
+      "end": 26.587
+    },
+    {
+      "w": "pledge.",
+      "start": 26.622,
+      "end": 27.214
+    },
+    {
+      "w": "He",
+      "start": 28.178,
+      "end": 28.294
+    },
+    {
+      "w": "asks",
+      "start": 28.34,
+      "end": 28.619
+    },
+    {
+      "w": "what.",
+      "start": 28.654,
+      "end": 29.095
+    },
+    {
+      "w": "She",
+      "start": 29.617,
+      "end": 29.733
+    },
+    {
+      "w": "says",
+      "start": 29.78,
+      "end": 29.942
+    },
+    {
+      "w": "your",
+      "start": 29.989,
+      "end": 30.105
+    },
+    {
+      "w": "signet,",
+      "start": 30.14,
+      "end": 30.685
+    },
+    {
+      "w": "your",
+      "start": 30.836,
+      "end": 30.964
+    },
+    {
+      "w": "bracelets,",
+      "start": 30.999,
+      "end": 31.719
+    },
+    {
+      "w": "and",
+      "start": 31.962,
+      "end": 32.102
+    },
+    {
+      "w": "your",
+      "start": 32.136,
+      "end": 32.253
+    },
+    {
+      "w": "staff.",
+      "start": 32.287,
+      "end": 32.821
+    },
+    {
+      "w": "That’s",
+      "start": 33.147,
+      "end": 33.367
+    },
+    {
+      "w": "his",
+      "start": 33.402,
+      "end": 33.483
+    },
+    {
+      "w": "government",
+      "start": 33.518,
+      "end": 33.832
+    },
+    {
+      "w": "ID.",
+      "start": 33.866,
+      "end": 34.4
+    },
+    {
+      "w": "Three",
+      "start": 35.364,
+      "end": 35.573
+    },
+    {
+      "w": "months",
+      "start": 35.608,
+      "end": 35.817
+    },
+    {
+      "w": "later",
+      "start": 35.852,
+      "end": 36.107
+    },
+    {
+      "w": "people",
+      "start": 36.212,
+      "end": 36.479
+    },
+    {
+      "w": "tell",
+      "start": 36.513,
+      "end": 36.664
+    },
+    {
+      "w": "Judah",
+      "start": 36.734,
+      "end": 37.024
+    },
+    {
+      "w": "she’s",
+      "start": 37.071,
+      "end": 37.256
+    },
+    {
+      "w": "pregnant",
+      "start": 37.291,
+      "end": 37.686
+    },
+    {
+      "w": "and",
+      "start": 37.732,
+      "end": 37.825
+    },
+    {
+      "w": "he’s",
+      "start": 37.86,
+      "end": 37.988
+    },
+    {
+      "w": "ready",
+      "start": 38.034,
+      "end": 38.209
+    },
+    {
+      "w": "to",
+      "start": 38.243,
+      "end": 38.29
+    },
+    {
+      "w": "have",
+      "start": 38.336,
+      "end": 38.487
+    },
+    {
+      "w": "her",
+      "start": 38.522,
+      "end": 38.626
+    },
+    {
+      "w": "burned",
+      "start": 38.673,
+      "end": 38.882
+    },
+    {
+      "w": "alive.",
+      "start": 38.917,
+      "end": 39.474
+    },
+    {
+      "w": "She",
+      "start": 40.171,
+      "end": 40.275
+    },
+    {
+      "w": "sends",
+      "start": 40.31,
+      "end": 40.496
+    },
+    {
+      "w": "back",
+      "start": 40.531,
+      "end": 40.67
+    },
+    {
+      "w": "his",
+      "start": 40.705,
+      "end": 40.798
+    },
+    {
+      "w": "own",
+      "start": 40.832,
+      "end": 40.948
+    },
+    {
+      "w": "signet",
+      "start": 40.983,
+      "end": 41.227
+    },
+    {
+      "w": "and",
+      "start": 41.262,
+      "end": 41.332
+    },
+    {
+      "w": "staff",
+      "start": 41.378,
+      "end": 41.726
+    },
+    {
+      "w": "with",
+      "start": 41.761,
+      "end": 41.9
+    },
+    {
+      "w": "a",
+      "start": 41.935,
+      "end": 41.97
+    },
+    {
+      "w": "note",
+      "start": 42.051,
+      "end": 42.237
+    },
+    {
+      "w": "that",
+      "start": 42.26,
+      "end": 42.376
+    },
+    {
+      "w": "basically",
+      "start": 42.423,
+      "end": 42.829
+    },
+    {
+      "w": "says",
+      "start": 42.875,
+      "end": 43.166
+    },
+    {
+      "w": "“recognize",
+      "start": 43.688,
+      "end": 44.443
+    },
+    {
+      "w": "these?”",
+      "start": 44.478,
+      "end": 45.081
+    },
+    {
+      "w": "In",
+      "start": 45.778,
+      "end": 45.871
+    },
+    {
+      "w": "front",
+      "start": 45.906,
+      "end": 46.057
+    },
+    {
+      "w": "of",
+      "start": 46.091,
+      "end": 46.138
+    },
+    {
+      "w": "everyone",
+      "start": 46.184,
+      "end": 46.521
+    },
+    {
+      "w": "he",
+      "start": 46.556,
+      "end": 46.625
+    },
+    {
+      "w": "has",
+      "start": 46.672,
+      "end": 46.8
+    },
+    {
+      "w": "to",
+      "start": 46.846,
+      "end": 46.904
+    },
+    {
+      "w": "admit:",
+      "start": 46.951,
+      "end": 47.392
+    },
+    {
+      "w": "“She",
+      "start": 47.775,
+      "end": 47.984
+    },
+    {
+      "w": "hath",
+      "start": 48.03,
+      "end": 48.146
+    },
+    {
+      "w": "been",
+      "start": 48.181,
+      "end": 48.309
+    },
+    {
+      "w": "more",
+      "start": 48.355,
+      "end": 48.495
+    },
+    {
+      "w": "righteous",
+      "start": 48.53,
+      "end": 48.831
+    },
+    {
+      "w": "than",
+      "start": 48.866,
+      "end": 48.982
+    },
+    {
+      "w": "I.”",
+      "start": 49.04,
+      "end": 49.458
+    },
+    {
+      "w": "She",
+      "start": 50.422,
+      "end": 50.526
+    },
+    {
+      "w": "played",
+      "start": 50.561,
+      "end": 50.759
+    },
+    {
+      "w": "him",
+      "start": 50.793,
+      "end": 50.91
+    },
+    {
+      "w": "so",
+      "start": 50.991,
+      "end": 51.142
+    },
+    {
+      "w": "clean",
+      "start": 51.2,
+      "end": 51.397
+    },
+    {
+      "w": "he",
+      "start": 51.432,
+      "end": 51.49
+    },
+    {
+      "w": "had",
+      "start": 51.525,
+      "end": 51.629
+    },
+    {
+      "w": "to",
+      "start": 51.664,
+      "end": 51.711
+    },
+    {
+      "w": "say",
+      "start": 51.745,
+      "end": 51.873
+    },
+    {
+      "w": "it",
+      "start": 51.908,
+      "end": 51.966
+    },
+    {
+      "w": "out",
+      "start": 52.001,
+      "end": 52.094
+    },
+    {
+      "w": "loud.",
+      "start": 52.129,
+      "end": 52.547
+    },
+    {
+      "w": "I’m",
+      "start": 53.069,
+      "end": 53.197
+    },
+    {
+      "w": "on",
+      "start": 53.232,
+      "end": 53.29
+    },
+    {
+      "w": "the",
+      "start": 53.324,
+      "end": 53.394
+    },
+    {
+      "w": "floor.",
+      "start": 53.429,
+      "end": 53.835
+    }
+  ],
+  "renderedAt": 1785530351504
+}

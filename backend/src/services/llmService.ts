@@ -9,7 +9,7 @@ export async function completeChat(messages: ChatMessage[]): Promise<string> {
 
   if (!key) {
     const last = messages.filter((m) => m.role === 'user').pop()?.content ?? '';
-    return `[Grace — configure OPENAI_API_KEY for live responses]\n\n${fallbackReply(last)}`;
+    return `[Grace: configure OPENAI_API_KEY for live responses]\n\n${fallbackReply(last)}`;
   }
 
   const res = await fetch(`${base}/chat/completions`, {
@@ -38,7 +38,7 @@ export async function completeChat(messages: ChatMessage[]): Promise<string> {
 }
 
 function fallbackReply(userText: string): string {
-  return `Thank you for sharing that with me. I'm here with you in this — take a breath, and we'll walk through it gently together.\n\n(Your note: "${userText.slice(0, 120)}")`;
+  return `Thank you for sharing that with me. I'm here with you in this. Take a breath, and we'll walk through it gently together.\n\n(Your note: "${userText.slice(0, 120)}")`;
 }
 
 export type UserContext = {
@@ -54,7 +54,7 @@ function contextLine(ctx: UserContext) {
   if (ctx.carrying?.length) parts.push(`carrying: ${ctx.carrying.join(', ')}`);
   if (ctx.gentleness) parts.push(`gentleness: ${ctx.gentleness}`);
   if (ctx.rhythm) parts.push(`rhythm: ${ctx.rhythm}`);
-  return parts.length ? `User context — ${parts.join('; ')}.` : '';
+  return parts.length ? `User context: ${parts.join('; ')}.` : '';
 }
 
 export async function generateStoryNarrative(

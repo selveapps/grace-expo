@@ -2,9 +2,13 @@ import React, { useState } from 'react';
 import { View, Text, Pressable, StyleSheet } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import { colors, fonts, radius } from '../theme';
+import { useProfile } from '../state/profile';
+import { readingTheme } from '../readingTheme';
 
 // Collapsible accordion of Bible book groups. One group open at a time.
 export default function BookAccordion({ groups, onSelectBook }) {
+  const { profile } = useProfile();
+  const RT = readingTheme(profile);
   const [open, setOpen] = useState(0);
   const toggle = (i) => {
     Haptics.selectionAsync();
