@@ -18,6 +18,7 @@ import {
 import RootNavigator from './src/navigation/RootNavigator';
 import { ProfileProvider } from './src/state/profile';
 import { AuthService } from './src/services/AuthService';
+import { IAPProviders } from './src/iap/IAPProviders';
 import { colors } from './src/theme';
 
 SplashScreen.preventAutoHideAsync().catch(() => {});
@@ -62,12 +63,14 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-      <ProfileProvider booted={guestReady}>
-        <NavigationContainer>
-          <StatusBar style="dark" />
-          <RootNavigator />
-        </NavigationContainer>
-      </ProfileProvider>
+      <IAPProviders>
+        <ProfileProvider booted={guestReady}>
+          <NavigationContainer>
+            <StatusBar style="dark" />
+            <RootNavigator />
+          </NavigationContainer>
+        </ProfileProvider>
+      </IAPProviders>
     </SafeAreaProvider>
   );
 }

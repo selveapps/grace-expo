@@ -9,6 +9,8 @@ export { StoryService } from './StoryService';
 export { TeaService } from './TeaService';
 export { AudioService } from './AudioService';
 export { SubscriptionService } from './SubscriptionService';
+export { RevenueCatService, IAP_ENABLED } from './RevenueCatService';
+export { SuperwallService, PAYWALL_PLACEMENTS } from './SuperwallService';
 export { NotificationService } from './NotificationService';
 export { SupportService, SUPPORT_CATEGORIES } from './SupportService';
 export { TodayService } from './TodayService';

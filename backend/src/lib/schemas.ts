@@ -360,6 +360,21 @@ export const schemas = {
     },
   },
 
+  revenueCatWebhook: {
+    tags: [tags.beta],
+    summary: 'RevenueCat subscription webhook (M11 / GRACE-025)',
+    description:
+      'Primary entitlement sync for real IAP. Configure Authorization header or HMAC signing secret in RevenueCat dashboard.',
+    body: { type: 'object', additionalProperties: true },
+    response: {
+      200: { type: 'object', additionalProperties: true },
+      400: errorResponse,
+      401: errorResponse,
+      500: errorResponse,
+      503: errorResponse,
+    },
+  },
+
   listStories: {
     tags: [tags.stories],
     summary: 'Story catalog (featured, collections, all stories)',

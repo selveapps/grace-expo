@@ -462,3 +462,31 @@ JWK→PEM conversion, and named `expo-in-app-purchases` for StoreKit.
 - Choosing the IAP module (`expo-iap` vs `react-native-iap`) and building server-side receipt
   validation (`POST /purchase/validate` against the App Store Server API) remain open. They are
   blocked on the Paid Apps agreement and the ASC product setup regardless.
+
+---
+
+## DEC-016 — RevenueCat webhook as primary IAP path; Superwall for paywall UI (2026-08-14)
+
+**Tickets:** GRACE-025 · GRACE-026 · SEL-28 · SEL-29 · M11
+**Status:** accepted (scaffold)
+
+### Context
+M11 requires real StoreKit purchases. Custom `POST /purchase/validate` against Apple's App Store
+Server API is viable but duplicates receipt parsing, renewal tracking, and cross-platform logic
+that RevenueCat already provides. Superwall adds remote paywall UI and experiments on top of RC.
+
+### Decision
+1. **RevenueCat (`react-native-purchases`)** handles StoreKit purchase flow and receipt validation
+   client-side. `app_user_id` is the Grace `user.id` UUID from guest/Apple auth.
+2. **Backend entitlement sync** via `POST /webhooks/revenuecat` (Authorization header + optional
+   HMAC). Updates `subscription` + `profile.subscribed`; `GET /me` remains the app gate.
+3. **Superwall (`expo-superwall`)** for paywall presentation and A/B tests; custom PaywallScreen
+   remains until dashboard templates are ready.
+4. **`POST /purchase/validate`** deferred — documented in BACKEND.md as optional fallback only.
+5. **Expo Go** keeps beta redeem (`EXPO_PUBLIC_IAP_ENABLED` unset); EAS dev build required for IAP.
+
+### Consequences
+- Product IDs locked to existing ASC plan: `grace.plus.annual`, `grace.plus.monthly`.
+- Entitlement identifier: `grace_plus`.
+- Setup guide: `docs/IAP_REVENUECAT_SUPERWALL.md`.
+- `react-native.config.js` may be required for RC autolinking on Expo SDK 54 + New Architecture.

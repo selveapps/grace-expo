@@ -1,23 +1,16 @@
-// SubscriptionService — beta entitlement via Grace API (Expo Go).
+// SubscriptionService — entitlement via Grace API.
+//
+// Expo Go (default): beta redeem via POST /beta/redeem.
+// EAS dev build (EXPO_PUBLIC_IAP_ENABLED=true): RevenueCat + Superwall;
+// backend sync via POST /webhooks/revenuecat → GET /me.subscribed.
 //
 // StoreKit seam: `purchase()` and `restore()` always resolve to a normalized
-// { status } — 'trialing' | 'active' | 'free' | 'cancelled' | 'failed' — because
-// PaywallScreen branches on it and must only celebrate a real purchase.
-//
-// Real StoreKit is NOT wired yet. The v3 spec named `expo-in-app-purchases`, but
-// that module is absent from the Expo SDK 54 native-module list (Expo retired it
-// after SDK 49), so installing it would break this build. When the Paid Apps
-// agreement and the two ASC products are live, drop a maintained module
-// (`expo-iap` or `react-native-iap`) into `storeKitPurchase` below: it must
-// return the transaction receipt, which is then validated server-side by
-// POST /purchase/validate. Entitlement is always re-read from GET /me.
+// { status } — 'trialing' | 'active' | 'free' | 'cancelled' | 'failed'.
 import { api } from '../api/client';
 import { StorageService, KEYS } from './StorageService';
+import { IAP_ENABLED, RevenueCatService } from './RevenueCatService';
 
-const OFFERINGS = [
-  { id: 'annual', type: 'annual', price: 69.99, displayPrice: '$69.99', period: 'year', trialDays: 3, badge: 'Best value', platformProductId: 'grace.plus.annual' },
-  { id: 'monthly', type: 'monthly', price: 12.99, displayPrice: '$12.99', period: 'month', trialDays: 3, badge: null, platformProductId: 'grace.plus.monthly' },
-];
+const OFFERINGS = RevenueCatService.getOfferings();
 
 const BETA_CODE = process.env.EXPO_PUBLIC_BETA_REDEEM_CODE || 'grace-beta';
 
@@ -33,7 +26,7 @@ export const SubscriptionService = {
         planId: subscribed ? 'beta' : null,
         trialEndsAt: subscribed ? Date.now() + 3 * 86400000 : null,
         renewsAt: null,
-        platform: 'beta',
+        platform: IAP_ENABLED ? 'ios' : 'beta',
       };
       await StorageService.set(KEYS.subscription, sub);
       return sub;
@@ -47,6 +40,10 @@ export const SubscriptionService = {
    * calm copy for 'failed' and stays put for 'cancelled'.
    */
   async purchase(planId) {
+    if (IAP_ENABLED && RevenueCatService.isAvailable()) {
+      return RevenueCatService.purchase(planId);
+    }
+
     const plan = OFFERINGS.find((o) => o.id === planId) || OFFERINGS[0];
     try {
       const res = await api.post('/beta/redeem', { code: BETA_CODE });
@@ -69,6 +66,9 @@ export const SubscriptionService = {
   },
 
   async restore() {
+    if (IAP_ENABLED && RevenueCatService.isAvailable()) {
+      return RevenueCatService.restore();
+    }
     const sub = await this.getStatus();
     return sub?.status ? sub : { status: 'free' };
   },

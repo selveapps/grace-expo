@@ -38,7 +38,16 @@
     "plugins": [
       "expo-apple-authentication",
       "expo-splash-screen",
-      "expo-web-browser"
+      "expo-web-browser",
+      "expo-dev-client",
+      [
+        "expo-build-properties",
+        {
+          "android": { "minSdkVersion": 26 },
+          "ios": { "deploymentTarget": "15.1" }
+        }
+      ],
+      "expo-superwall"
     ],
     "extra": {
       "eas": {
