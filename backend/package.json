@@ -40,7 +40,7 @@
     "sync:tea-doc": "tsx --env-file-if-exists=.env scripts/sync-tea-scripts-doc.ts"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "dependencies": {
     "@fastify/cors": "^11.0.1",
