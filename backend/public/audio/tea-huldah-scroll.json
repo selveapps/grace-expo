@@ -1,961 +1,551 @@
 {
-  "kind": "tea",
-  "teaId": "huldah-scroll",
-  "mood": "dark",
-  "heat": 2,
-  "text": "Bestie, they skipped every man on the list… and went straight to her… … They find the lost book of the law in the temple. King Josiah hears it read out, tears his clothes, and needs to know what God actually says about the mess Judah is in. So he sends a delegation, and the high priest himself is on it. They do not take the question to a priest. They do not take it to Jeremiah, who is prophesying in Judah in those same years. The text names all five of them, Hilkiah the priest, Ahikam, Achbor, Shaphan and Asahiah, and says they \"went unto Huldah the prophetess.\" A married woman living in Jerusalem. And she does not hedge and she does not soften it. \"Thus saith the LORD God of Israel, Tell the man that sent you to me.\" Tell the man that sent you. Then she delivers it: judgment is coming on this place, but because the king's heart was tender, he will go to his grave in peace. The reform of an entire nation turns on her answer. Scripture never once explains itself for asking her.",
-  "voice": "FGY2WhTYpPnrIDTdsKH5",
-  "words": [
-    {
-      "w": "Bestie,",
-      "start": 0,
-      "end": 0.453
-    },
-    {
-      "w": "they",
-      "start": 0.488,
-      "end": 0.615
-    },
-    {
-      "w": "skipped",
-      "start": 0.673,
-      "end": 0.952
-    },
-    {
-      "w": "every",
-      "start": 1.01,
-      "end": 1.312
-    },
-    {
-      "w": "man",
-      "start": 1.358,
-      "end": 1.556
-    },
-    {
-      "w": "on",
-      "start": 1.614,
-      "end": 1.683
-    },
-    {
-      "w": "the",
-      "start": 1.718,
-      "end": 1.788
-    },
-    {
-      "w": "list…",
-      "start": 1.823,
-      "end": 2.264
-    },
-    {
-      "w": "and",
-      "start": 2.415,
-      "end": 2.519
-    },
-    {
-      "w": "went",
-      "start": 2.566,
-      "end": 2.728
-    },
-    {
-      "w": "straight",
-      "start": 2.775,
-      "end": 3.042
-    },
-    {
-      "w": "to",
-      "start": 3.065,
-      "end": 3.123
-    },
-    {
-      "w": "her…",
-      "start": 3.181,
-      "end": 3.529
-    },
-    {
-      "w": "…",
-      "start": 3.808,
-      "end": 3.982
-    },
-    {
-      "w": "They",
-      "start": 4.365,
-      "end": 4.505
-    },
-    {
-      "w": "find",
-      "start": 4.551,
-      "end": 4.714
-    },
-    {
-      "w": "the",
-      "start": 4.748,
-      "end": 4.818
-    },
-    {
-      "w": "lost",
-      "start": 4.853,
-      "end": 5.074
-    },
-    {
-      "w": "book",
-      "start": 5.108,
-      "end": 5.248
-    },
-    {
-      "w": "of",
-      "start": 5.283,
-      "end": 5.329
-    },
-    {
-      "w": "the",
-      "start": 5.364,
-      "end": 5.433
-    },
-    {
-      "w": "law",
-      "start": 5.468,
-      "end": 5.666
-    },
-    {
-      "w": "in",
-      "start": 5.712,
-      "end": 5.782
-    },
-    {
-      "w": "the",
-      "start": 5.817,
-      "end": 5.886
-    },
-    {
-      "w": "temple.",
-      "start": 5.921,
-      "end": 6.536
-    },
-    {
-      "w": "King",
-      "start": 6.92,
-      "end": 7.105
-    },
-    {
-      "w": "Josiah",
-      "start": 7.14,
-      "end": 7.57
-    },
-    {
-      "w": "hears",
-      "start": 7.605,
-      "end": 7.779
-    },
-    {
-      "w": "it",
-      "start": 7.825,
-      "end": 7.883
-    },
-    {
-      "w": "read",
-      "start": 7.93,
-      "end": 8.046
-    },
-    {
-      "w": "out,",
-      "start": 8.104,
-      "end": 8.382
-    },
-    {
-      "w": "tears",
-      "start": 8.464,
-      "end": 8.696
-    },
-    {
-      "w": "his",
-      "start": 8.731,
-      "end": 8.835
-    },
-    {
-      "w": "clothes,",
-      "start": 8.87,
-      "end": 9.358
-    },
-    {
-      "w": "and",
-      "start": 9.404,
-      "end": 9.52
-    },
-    {
-      "w": "needs",
-      "start": 9.555,
-      "end": 9.729
-    },
-    {
-      "w": "to",
-      "start": 9.776,
-      "end": 9.845
-    },
-    {
-      "w": "know",
-      "start": 9.88,
-      "end": 10.008
-    },
-    {
-      "w": "what",
-      "start": 10.031,
-      "end": 10.147
-    },
-    {
-      "w": "God",
-      "start": 10.182,
-      "end": 10.356
-    },
-    {
-      "w": "actually",
-      "start": 10.391,
-      "end": 10.681
-    },
-    {
-      "w": "says",
-      "start": 10.728,
-      "end": 10.902
-    },
-    {
-      "w": "about",
-      "start": 10.937,
-      "end": 11.122
-    },
-    {
-      "w": "the",
-      "start": 11.157,
-      "end": 11.226
-    },
-    {
-      "w": "mess",
-      "start": 11.284,
-      "end": 11.493
-    },
-    {
-      "w": "Judah",
-      "start": 11.54,
-      "end": 11.819
-    },
-    {
-      "w": "is",
-      "start": 11.853,
-      "end": 11.946
-    },
-    {
-      "w": "in.",
-      "start": 12.016,
-      "end": 12.364
-    },
-    {
-      "w": "So",
-      "start": 12.805,
-      "end": 13.038
-    },
-    {
-      "w": "he",
-      "start": 13.119,
-      "end": 13.223
-    },
-    {
-      "w": "sends",
-      "start": 13.281,
-      "end": 13.49
-    },
-    {
-      "w": "a",
-      "start": 13.525,
-      "end": 13.548
-    },
-    {
-      "w": "delegation,",
-      "start": 13.583,
-      "end": 14.152
-    },
-    {
-      "w": "and",
-      "start": 14.199,
-      "end": 14.303
-    },
-    {
-      "w": "the",
-      "start": 14.338,
-      "end": 14.408
-    },
-    {
-      "w": "high",
-      "start": 14.466,
-      "end": 14.605
-    },
-    {
-      "w": "priest",
-      "start": 14.64,
-      "end": 14.86
-    },
-    {
-      "w": "himself",
-      "start": 14.895,
-      "end": 15.174
-    },
-    {
-      "w": "is",
-      "start": 15.22,
-      "end": 15.29
-    },
-    {
-      "w": "on",
-      "start": 15.348,
-      "end": 15.441
-    },
-    {
-      "w": "it.",
-      "start": 15.487,
-      "end": 15.708
-    },
-    {
-      "w": "They",
-      "start": 15.812,
-      "end": 15.94
-    },
-    {
-      "w": "do",
-      "start": 15.975,
-      "end": 16.045
-    },
-    {
-      "w": "not",
-      "start": 16.114,
-      "end": 16.219
-    },
-    {
-      "w": "take",
-      "start": 16.254,
-      "end": 16.393
-    },
-    {
-      "w": "the",
-      "start": 16.416,
-      "end": 16.486
-    },
-    {
-      "w": "question",
-      "start": 16.521,
-      "end": 16.869
-    },
-    {
-      "w": "to",
-      "start": 16.927,
-      "end": 16.997
-    },
-    {
-      "w": "a",
-      "start": 17.055,
-      "end": 17.078
-    },
-    {
-      "w": "priest.",
-      "start": 17.113,
-      "end": 17.542
-    },
-    {
-      "w": "They",
-      "start": 17.67,
-      "end": 17.809
-    },
-    {
-      "w": "do",
-      "start": 17.844,
-      "end": 17.914
-    },
-    {
-      "w": "not",
-      "start": 17.96,
-      "end": 18.065
-    },
-    {
-      "w": "take",
-      "start": 18.1,
-      "end": 18.25
-    },
-    {
-      "w": "it",
-      "start": 18.285,
-      "end": 18.343
-    },
-    {
-      "w": "to",
-      "start": 18.378,
-      "end": 18.448
-    },
-    {
-      "w": "Jeremiah,",
-      "start": 18.506,
-      "end": 19.052
-    },
-    {
-      "w": "who",
-      "start": 19.075,
-      "end": 19.179
-    },
-    {
-      "w": "is",
-      "start": 19.226,
-      "end": 19.295
-    },
-    {
-      "w": "prophesying",
-      "start": 19.353,
-      "end": 19.899
-    },
-    {
-      "w": "in",
-      "start": 19.946,
-      "end": 19.992
-    },
-    {
-      "w": "Judah",
-      "start": 20.05,
-      "end": 20.271
-    },
-    {
-      "w": "in",
-      "start": 20.294,
-      "end": 20.352
-    },
-    {
-      "w": "those",
-      "start": 20.398,
-      "end": 20.584
-    },
-    {
-      "w": "same",
-      "start": 20.619,
-      "end": 20.781
-    },
-    {
-      "w": "years.",
-      "start": 20.816,
-      "end": 21.246
-    },
-    {
-      "w": "The",
-      "start": 21.768,
-      "end": 21.861
-    },
-    {
-      "w": "text",
-      "start": 21.896,
-      "end": 22.14
-    },
-    {
-      "w": "names",
-      "start": 22.186,
-      "end": 22.465
-    },
-    {
-      "w": "all",
-      "start": 22.569,
-      "end": 22.79
-    },
-    {
-      "w": "five",
-      "start": 22.848,
-      "end": 23.057
-    },
-    {
-      "w": "of",
-      "start": 23.08,
-      "end": 23.15
-    },
-    {
-      "w": "them,",
-      "start": 23.185,
-      "end": 23.498
-    },
-    {
-      "w": "Hilkiah",
-      "start": 23.556,
-      "end": 24.02
-    },
-    {
-      "w": "the",
-      "start": 24.055,
-      "end": 24.125
-    },
-    {
-      "w": "priest,",
-      "start": 24.16,
-      "end": 24.636
-    },
-    {
-      "w": "Ahikam,",
-      "start": 24.717,
-      "end": 25.263
-    },
-    {
-      "w": "Achbor,",
-      "start": 25.367,
-      "end": 25.82
-    },
-    {
-      "w": "Shaphan",
-      "start": 25.855,
-      "end": 26.192
-    },
-    {
-      "w": "and",
-      "start": 26.273,
-      "end": 26.389
-    },
-    {
-      "w": "Asahiah,",
-      "start": 26.447,
-      "end": 27.004
-    },
-    {
-      "w": "and",
-      "start": 27.109,
-      "end": 27.236
-    },
-    {
-      "w": "says",
-      "start": 27.294,
-      "end": 27.469
-    },
-    {
-      "w": "they",
-      "start": 27.515,
-      "end": 27.631
-    },
-    {
-      "w": "\"went",
-      "start": 27.666,
-      "end": 27.863
-    },
-    {
-      "w": "unto",
-      "start": 27.898,
-      "end": 28.072
-    },
-    {
-      "w": "Huldah",
-      "start": 28.119,
-      "end": 28.525
-    },
-    {
-      "w": "the",
-      "start": 28.572,
-      "end": 28.664
-    },
-    {
-      "w": "prophetess.\"",
-      "start": 28.699,
-      "end": 29.396
-    },
-    {
-      "w": "A",
-      "start": 29.721,
-      "end": 29.791
-    },
-    {
-      "w": "married",
-      "start": 29.872,
-      "end": 30.116
-    },
-    {
-      "w": "woman",
-      "start": 30.139,
-      "end": 30.348
-    },
-    {
-      "w": "living",
-      "start": 30.383,
-      "end": 30.58
-    },
-    {
-      "w": "in",
-      "start": 30.615,
-      "end": 30.661
-    },
-    {
-      "w": "Jerusalem.",
-      "start": 30.708,
-      "end": 31.23
-    },
-    {
-      "w": "And",
-      "start": 31.381,
-      "end": 31.486
-    },
-    {
-      "w": "she",
-      "start": 31.521,
-      "end": 31.613
-    },
-    {
-      "w": "does",
-      "start": 31.648,
-      "end": 31.788
-    },
-    {
-      "w": "not",
-      "start": 31.822,
-      "end": 31.95
-    },
-    {
-      "w": "hedge",
-      "start": 31.997,
-      "end": 32.229
-    },
-    {
-      "w": "and",
-      "start": 32.264,
-      "end": 32.356
-    },
-    {
-      "w": "she",
-      "start": 32.403,
-      "end": 32.496
-    },
-    {
-      "w": "does",
-      "start": 32.542,
-      "end": 32.682
-    },
-    {
-      "w": "not",
-      "start": 32.728,
-      "end": 32.856
-    },
-    {
-      "w": "soften",
-      "start": 32.891,
-      "end": 33.158
-    },
-    {
-      "w": "it.",
-      "start": 33.192,
-      "end": 33.436
-    },
-    {
-      "w": "\"Thus",
-      "start": 33.622,
-      "end": 33.854
-    },
-    {
-      "w": "saith",
-      "start": 33.901,
-      "end": 34.168
-    },
-    {
-      "w": "the",
-      "start": 34.202,
-      "end": 34.295
-    },
-    {
-      "w": "LORD",
-      "start": 34.4,
-      "end": 34.702
-    },
-    {
-      "w": "God",
-      "start": 34.76,
-      "end": 34.945
-    },
-    {
-      "w": "of",
-      "start": 34.98,
-      "end": 35.027
-    },
-    {
-      "w": "Israel,",
-      "start": 35.073,
-      "end": 35.421
-    },
-    {
-      "w": "Tell",
-      "start": 35.48,
-      "end": 35.654
-    },
-    {
-      "w": "the",
-      "start": 35.689,
-      "end": 35.758
-    },
-    {
-      "w": "man",
-      "start": 35.793,
-      "end": 35.932
-    },
-    {
-      "w": "that",
-      "start": 35.967,
-      "end": 36.095
-    },
-    {
-      "w": "sent",
-      "start": 36.141,
-      "end": 36.304
-    },
-    {
-      "w": "you",
-      "start": 36.339,
-      "end": 36.42
-    },
-    {
-      "w": "to",
-      "start": 36.478,
-      "end": 36.536
-    },
-    {
-      "w": "me.\"",
-      "start": 36.582,
-      "end": 36.896
-    },
-    {
-      "w": "Tell",
-      "start": 37.221,
-      "end": 37.395
-    },
-    {
-      "w": "the",
-      "start": 37.43,
-      "end": 37.5
-    },
-    {
-      "w": "man",
-      "start": 37.534,
-      "end": 37.639
-    },
-    {
-      "w": "that",
-      "start": 37.674,
-      "end": 37.79
-    },
-    {
-      "w": "sent",
-      "start": 37.825,
-      "end": 37.999
-    },
-    {
-      "w": "you.",
-      "start": 38.034,
-      "end": 38.312
-    },
-    {
-      "w": "Then",
-      "start": 38.417,
-      "end": 38.556
-    },
-    {
-      "w": "she",
-      "start": 38.591,
-      "end": 38.684
-    },
-    {
-      "w": "delivers",
-      "start": 38.73,
-      "end": 39.044
-    },
-    {
-      "w": "it:",
-      "start": 39.102,
-      "end": 39.392
-    },
-    {
-      "w": "judgment",
-      "start": 39.717,
-      "end": 40.054
-    },
-    {
-      "w": "is",
-      "start": 40.089,
-      "end": 40.158
-    },
-    {
-      "w": "coming",
-      "start": 40.205,
-      "end": 40.414
-    },
-    {
-      "w": "on",
-      "start": 40.46,
-      "end": 40.53
-    },
-    {
-      "w": "this",
-      "start": 40.565,
-      "end": 40.692
-    },
-    {
-      "w": "place,",
-      "start": 40.75,
-      "end": 41.145
-    },
-    {
-      "w": "but",
-      "start": 41.192,
-      "end": 41.319
-    },
-    {
-      "w": "because",
-      "start": 41.354,
-      "end": 41.621
-    },
-    {
-      "w": "the",
-      "start": 41.656,
-      "end": 41.726
-    },
-    {
-      "w": "king's",
-      "start": 41.761,
-      "end": 41.97
-    },
-    {
-      "w": "heart",
-      "start": 42.004,
-      "end": 42.155
-    },
-    {
-      "w": "was",
-      "start": 42.19,
-      "end": 42.283
-    },
-    {
-      "w": "tender,",
-      "start": 42.341,
-      "end": 42.701
-    },
-    {
-      "w": "he",
-      "start": 42.771,
-      "end": 42.852
-    },
-    {
-      "w": "will",
-      "start": 42.887,
-      "end": 43.014
-    },
-    {
-      "w": "go",
-      "start": 43.049,
-      "end": 43.119
-    },
-    {
-      "w": "to",
-      "start": 43.154,
-      "end": 43.212
-    },
-    {
-      "w": "his",
-      "start": 43.27,
-      "end": 43.351
-    },
-    {
-      "w": "grave",
-      "start": 43.386,
-      "end": 43.595
-    },
-    {
-      "w": "in",
-      "start": 43.63,
-      "end": 43.676
-    },
-    {
-      "w": "peace.",
-      "start": 43.723,
-      "end": 44.175
-    },
-    {
-      "w": "The",
-      "start": 44.454,
-      "end": 44.547
-    },
-    {
-      "w": "reform",
-      "start": 44.605,
-      "end": 44.872
-    },
-    {
-      "w": "of",
-      "start": 44.918,
-      "end": 44.976
-    },
-    {
-      "w": "an",
-      "start": 45.023,
-      "end": 45.081
-    },
-    {
-      "w": "entire",
-      "start": 45.116,
-      "end": 45.476
-    },
-    {
-      "w": "nation",
-      "start": 45.522,
-      "end": 45.777
-    },
-    {
-      "w": "turns",
-      "start": 45.824,
-      "end": 46.044
-    },
-    {
-      "w": "on",
-      "start": 46.079,
-      "end": 46.149
-    },
-    {
-      "w": "her",
-      "start": 46.195,
-      "end": 46.288
-    },
-    {
-      "w": "answer.",
-      "start": 46.346,
-      "end": 46.729
-    },
-    {
-      "w": "Scripture",
-      "start": 47.113,
-      "end": 47.484
-    },
-    {
-      "w": "never",
-      "start": 47.519,
-      "end": 47.693
-    },
-    {
-      "w": "once",
-      "start": 47.763,
-      "end": 47.96
-    },
-    {
-      "w": "explains",
-      "start": 47.995,
-      "end": 48.355
-    },
-    {
-      "w": "itself",
-      "start": 48.39,
-      "end": 48.633
-    },
-    {
-      "w": "for",
-      "start": 48.668,
-      "end": 48.761
-    },
-    {
-      "w": "asking",
-      "start": 48.819,
-      "end": 49.063
-    },
-    {
-      "w": "her.",
-      "start": 49.121,
-      "end": 49.458
-    }
-  ],
-  "renderedAt": 1785789204903
+ "kind": "tea",
+ "teaId": "huldah-scroll",
+ "mood": "dark",
+ "heat": 2,
+ "text": "Bestie, they skipped the boys. They find the lost book of the law in the temple. King Josiah is shook. Needs to know what God actually says about the mess they're in. They don't go to the priests. They don't go to the male prophets on record. They go straight to Huldah. Huldah the prophetess. Married woman in Jerusalem. She speaks the word of the Lord with zero hesitation: judgment is coming, but because the king's heart was soft there will be peace in his days. The whole reform of Judah hangs on the word of a woman they specifically went looking for. Scripture never apologizes for it.",
+ "voice": "human",
+ "words": [
+  {
+   "w": "Bestie,",
+   "start": 0.0,
+   "end": 0.62
+  },
+  {
+   "w": "they",
+   "start": 0.98,
+   "end": 1.02
+  },
+  {
+   "w": "skipped",
+   "start": 1.02,
+   "end": 1.38
+  },
+  {
+   "w": "the",
+   "start": 1.38,
+   "end": 1.72
+  },
+  {
+   "w": "boys.",
+   "start": 1.72,
+   "end": 2.08
+  },
+  {
+   "w": "They",
+   "start": 3.62,
+   "end": 3.62
+  },
+  {
+   "w": "find",
+   "start": 3.62,
+   "end": 3.98
+  },
+  {
+   "w": "the",
+   "start": 3.98,
+   "end": 4.26
+  },
+  {
+   "w": "lost",
+   "start": 4.26,
+   "end": 4.58
+  },
+  {
+   "w": "book",
+   "start": 4.58,
+   "end": 4.88
+  },
+  {
+   "w": "of",
+   "start": 4.88,
+   "end": 5.1
+  },
+  {
+   "w": "the",
+   "start": 5.1,
+   "end": 5.26
+  },
+  {
+   "w": "law",
+   "start": 5.26,
+   "end": 5.5
+  },
+  {
+   "w": "in",
+   "start": 5.5,
+   "end": 5.74
+  },
+  {
+   "w": "the",
+   "start": 5.74,
+   "end": 5.88
+  },
+  {
+   "w": "temple.",
+   "start": 5.88,
+   "end": 6.22
+  },
+  {
+   "w": "King",
+   "start": 6.98,
+   "end": 7.0
+  },
+  {
+   "w": "Josiah",
+   "start": 7.0,
+   "end": 7.68
+  },
+  {
+   "w": "is",
+   "start": 7.68,
+   "end": 8.04
+  },
+  {
+   "w": "shook.",
+   "start": 8.04,
+   "end": 8.54
+  },
+  {
+   "w": "Needs",
+   "start": 9.22,
+   "end": 9.44
+  },
+  {
+   "w": "to",
+   "start": 9.44,
+   "end": 9.68
+  },
+  {
+   "w": "know",
+   "start": 9.68,
+   "end": 9.84
+  },
+  {
+   "w": "what",
+   "start": 9.84,
+   "end": 10.04
+  },
+  {
+   "w": "God",
+   "start": 10.04,
+   "end": 10.22
+  },
+  {
+   "w": "actually",
+   "start": 10.22,
+   "end": 10.68
+  },
+  {
+   "w": "says",
+   "start": 10.68,
+   "end": 11.0
+  },
+  {
+   "w": "about",
+   "start": 11.0,
+   "end": 11.32
+  },
+  {
+   "w": "the",
+   "start": 11.32,
+   "end": 11.48
+  },
+  {
+   "w": "mess",
+   "start": 11.48,
+   "end": 11.76
+  },
+  {
+   "w": "they're",
+   "start": 11.93,
+   "end": 12.1
+  },
+  {
+   "w": "in.",
+   "start": 12.1,
+   "end": 12.34
+  },
+  {
+   "w": "They",
+   "start": 12.8,
+   "end": 12.98
+  },
+  {
+   "w": "don't",
+   "start": 12.98,
+   "end": 13.2
+  },
+  {
+   "w": "go",
+   "start": 13.2,
+   "end": 13.3
+  },
+  {
+   "w": "to",
+   "start": 13.3,
+   "end": 13.4
+  },
+  {
+   "w": "the",
+   "start": 13.4,
+   "end": 13.54
+  },
+  {
+   "w": "priests.",
+   "start": 13.54,
+   "end": 13.76
+  },
+  {
+   "w": "They",
+   "start": 14.24,
+   "end": 14.44
+  },
+  {
+   "w": "don't",
+   "start": 14.44,
+   "end": 15.02
+  },
+  {
+   "w": "go",
+   "start": 15.02,
+   "end": 15.14
+  },
+  {
+   "w": "to",
+   "start": 15.14,
+   "end": 15.28
+  },
+  {
+   "w": "the",
+   "start": 15.28,
+   "end": 15.36
+  },
+  {
+   "w": "male",
+   "start": 15.36,
+   "end": 15.56
+  },
+  {
+   "w": "prophets",
+   "start": 15.56,
+   "end": 15.88
+  },
+  {
+   "w": "on",
+   "start": 15.88,
+   "end": 16.08
+  },
+  {
+   "w": "record.",
+   "start": 16.08,
+   "end": 16.4
+  },
+  {
+   "w": "They",
+   "start": 17.0,
+   "end": 17.08
+  },
+  {
+   "w": "go",
+   "start": 17.08,
+   "end": 17.24
+  },
+  {
+   "w": "straight",
+   "start": 17.24,
+   "end": 17.56
+  },
+  {
+   "w": "to",
+   "start": 17.56,
+   "end": 17.98
+  },
+  {
+   "w": "Huldah.",
+   "start": 18.38,
+   "end": 18.78
+  },
+  {
+   "w": "Huldah",
+   "start": 18.78,
+   "end": 19.18
+  },
+  {
+   "w": "the",
+   "start": 19.18,
+   "end": 19.42
+  },
+  {
+   "w": "prophetess.",
+   "start": 19.42,
+   "end": 20.04
+  },
+  {
+   "w": "Married",
+   "start": 20.62,
+   "end": 20.82
+  },
+  {
+   "w": "woman",
+   "start": 20.82,
+   "end": 21.12
+  },
+  {
+   "w": "in",
+   "start": 21.12,
+   "end": 21.44
+  },
+  {
+   "w": "Jerusalem.",
+   "start": 21.44,
+   "end": 21.8
+  },
+  {
+   "w": "She",
+   "start": 22.46,
+   "end": 22.64
+  },
+  {
+   "w": "speaks",
+   "start": 22.64,
+   "end": 22.88
+  },
+  {
+   "w": "the",
+   "start": 22.88,
+   "end": 23.2
+  },
+  {
+   "w": "word",
+   "start": 23.2,
+   "end": 23.54
+  },
+  {
+   "w": "of",
+   "start": 23.54,
+   "end": 23.86
+  },
+  {
+   "w": "the",
+   "start": 23.86,
+   "end": 24.04
+  },
+  {
+   "w": "Lord",
+   "start": 24.04,
+   "end": 24.24
+  },
+  {
+   "w": "with",
+   "start": 24.24,
+   "end": 24.58
+  },
+  {
+   "w": "zero",
+   "start": 24.58,
+   "end": 24.88
+  },
+  {
+   "w": "hesitation:",
+   "start": 24.88,
+   "end": 25.42
+  },
+  {
+   "w": "judgment",
+   "start": 26.26,
+   "end": 26.34
+  },
+  {
+   "w": "is",
+   "start": 26.34,
+   "end": 26.64
+  },
+  {
+   "w": "coming,",
+   "start": 26.64,
+   "end": 26.98
+  },
+  {
+   "w": "but",
+   "start": 27.16,
+   "end": 27.54
+  },
+  {
+   "w": "because",
+   "start": 27.54,
+   "end": 27.82
+  },
+  {
+   "w": "the",
+   "start": 27.82,
+   "end": 28.0
+  },
+  {
+   "w": "king's",
+   "start": 28.0,
+   "end": 28.36
+  },
+  {
+   "w": "heart",
+   "start": 28.36,
+   "end": 28.5
+  },
+  {
+   "w": "was",
+   "start": 28.5,
+   "end": 28.72
+  },
+  {
+   "w": "soft",
+   "start": 28.72,
+   "end": 29.08
+  },
+  {
+   "w": "there",
+   "start": 29.08,
+   "end": 29.56
+  },
+  {
+   "w": "will",
+   "start": 29.56,
+   "end": 29.72
+  },
+  {
+   "w": "be",
+   "start": 29.72,
+   "end": 29.9
+  },
+  {
+   "w": "peace",
+   "start": 29.9,
+   "end": 30.18
+  },
+  {
+   "w": "in",
+   "start": 30.18,
+   "end": 30.48
+  },
+  {
+   "w": "his",
+   "start": 30.48,
+   "end": 30.66
+  },
+  {
+   "w": "days.",
+   "start": 30.66,
+   "end": 30.96
+  },
+  {
+   "w": "The",
+   "start": 31.56,
+   "end": 31.7
+  },
+  {
+   "w": "whole",
+   "start": 31.7,
+   "end": 31.92
+  },
+  {
+   "w": "reform",
+   "start": 31.92,
+   "end": 32.4
+  },
+  {
+   "w": "of",
+   "start": 32.4,
+   "end": 32.76
+  },
+  {
+   "w": "Judah",
+   "start": 32.76,
+   "end": 33.12
+  },
+  {
+   "w": "hangs",
+   "start": 33.12,
+   "end": 33.72
+  },
+  {
+   "w": "on",
+   "start": 33.88,
+   "end": 34.04
+  },
+  {
+   "w": "the",
+   "start": 34.04,
+   "end": 34.26
+  },
+  {
+   "w": "word",
+   "start": 34.26,
+   "end": 34.48
+  },
+  {
+   "w": "of",
+   "start": 34.48,
+   "end": 34.7
+  },
+  {
+   "w": "a",
+   "start": 34.7,
+   "end": 34.86
+  },
+  {
+   "w": "woman",
+   "start": 34.86,
+   "end": 35.16
+  },
+  {
+   "w": "they",
+   "start": 35.16,
+   "end": 35.8
+  },
+  {
+   "w": "specifically",
+   "start": 35.8,
+   "end": 36.14
+  },
+  {
+   "w": "went",
+   "start": 36.14,
+   "end": 36.52
+  },
+  {
+   "w": "looking",
+   "start": 36.52,
+   "end": 36.8
+  },
+  {
+   "w": "for.",
+   "start": 36.8,
+   "end": 37.12
+  },
+  {
+   "w": "Scripture",
+   "start": 37.7,
+   "end": 37.72
+  },
+  {
+   "w": "never",
+   "start": 37.72,
+   "end": 38.32
+  },
+  {
+   "w": "apologizes",
+   "start": 38.32,
+   "end": 39.08
+  },
+  {
+   "w": "for",
+   "start": 39.08,
+   "end": 39.38
+  },
+  {
+   "w": "it.",
+   "start": 39.38,
+   "end": 39.54
+  }
+ ],
+ "renderedAt": 1785789204903
 }

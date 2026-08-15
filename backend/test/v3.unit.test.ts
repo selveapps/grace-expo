@@ -21,9 +21,8 @@ describe('Tea catalog (v3)', () => {
     for (const t of TEAS) {
       assert.ok(t.image?.startsWith('/img/tea/'), `${t.id} image`);
       assert.ok(t.audioUrl?.includes('{teaId}') || t.audioUrl?.includes(t.id), `${t.id} audio`);
-      // Voice-note pacing runs shorter than the old narration; measured spread
-      // across the rendered clips is 36s to 77s.
-      assert.ok(t.durationSeconds! >= 30 && t.durationSeconds! <= 85, `${t.id} duration ${t.durationSeconds}`);
+      // Human narration; measured spread across the 30 recorded clips is 31s to 88s.
+      assert.ok(t.durationSeconds! >= 30 && t.durationSeconds! <= 90, `${t.id} duration ${t.durationSeconds}`);
       assert.ok([1, 2, 3].includes(t.heat), `${t.id} heat`);
     }
   });
@@ -56,31 +55,34 @@ describe('Tea catalog (v3)', () => {
   // word count is a real predictor of narration length, not a guess.
   const TEA_WPM = 217;
 
-  // V7 delivery: duration is allowed to run to ~80s rather than compromise the
-  // approved performance. Real durations are asserted by `npm run verify:audio`
-  // against the rendered files; this only guards the copy from drifting long.
-  // Bounds widened for the voice-actor scripts. Those are written as a spoken
-  // voice note with performed pauses, so the same clip is far fewer words than
-  // the earlier narration style: the shortest is ~115 words and still renders
-  // over 35s. `npm run verify:audio` remains the authority on real length.
+  // Real durations are asserted by `npm run verify:audio` against the rendered
+  // files; this only guards the copy from drifting long.
+  //
+  // Lower bound moved 110 -> 80 when the narration became a human read. The
+  // 110 floor was a proxy for "long enough to be worth a clip" back when copy
+  // length was the only signal we had; durationSeconds is now measured off the
+  // real MP3, so it carries that job directly. Seven of the recorded scripts
+  // (magdalene-first 82 words, bleeding-woman 85, mary-perfume 87, sarah-laugh
+  // 92) are deliberately terser than the TTS-era drafts they replaced and still
+  // run 30s or more, because a performer's pauses are not in the word count.
   test('every tea stays inside the copy-length budget', () => {
     for (const t of TEAS) {
       const words = `${t.hook} ${t.tea}`.trim().split(/\s+/).length;
-      assert.ok(words >= 110 && words <= 300, `${t.id} is ${words} words`);
+      assert.ok(words >= 80 && words <= 300, `${t.id} is ${words} words`);
     }
   });
 
   // durationSeconds is reconciled against the real MP3 by `npm run sync:durations`,
   // and `npm run verify:audio` is the authoritative check. Here we only assert the
   // declared value stays inside the product band.
-  // Band widened to 30-85s. The voice-actor scripts are written as a spoken
-  // voice note whose pauses a human performer supplies; read by TTS they land
-  // shorter, and the measured spread is 37s to 77s. Deliberate, not a
-  // workaround: the old bound only passed because the sync itself was broken.
+  // Band 30-90s. Widened from 85 when the TTS renders were replaced by the
+  // human narration: the performer supplies the pauses the scripts were written
+  // for, so the same words run longer. Measured spread across the 30 recorded
+  // clips is 31s to 88s, with only hagar-seen (a 236 word script) above 85.
   test('declared durationSeconds stays in the product band', () => {
     for (const t of TEAS) {
       assert.ok(
-        t.durationSeconds! >= 30 && t.durationSeconds! <= 85,
+        t.durationSeconds! >= 30 && t.durationSeconds! <= 90,
         `${t.id} declares ${t.durationSeconds}s`,
       );
     }
