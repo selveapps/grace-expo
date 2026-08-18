@@ -126,6 +126,37 @@ the 15 second floor.
 
 ---
 
+## Blocking: the paywall does not charge
+
+v1.0 cannot be submitted as it stands. `SubscriptionService.purchase()` calls
+`POST /beta/redeem` and grants a beta entitlement; it never requests a product
+from the store. A subscription app whose paywall does not transact fails
+Guideline 3.1.1, and the two products cannot be reviewed against a build that
+never exercises them.
+
+The client code exists and is not the blocker — see `feat/m11-iap-revenuecat`
+(RevenueCat + Superwall, plus the API webhook) and `docs/IAP_REVENUECAT_SUPERWALL.md`.
+It is held back on App Store Connect setup, in this order, each step gated by the
+one above it:
+
+1. **Paid Applications Agreement active** — Agreements, Tax, and Banking. Needs
+   banking details and tax forms, not just a signature, and verification runs on
+   Apple's clock. This is the long pole.
+2. **Create `grace.plus.annual` and `grace.plus.monthly`** — App Store Connect
+   does not allow in-app purchases to be created until step 1 is active.
+3. **RevenueCat** — entitlement `grace_plus`, offering `default`, webhook
+   secrets on Railway.
+4. **EAS dev build** — IAP has no native module in Expo Go, and
+   `react-native-purchases` is a new native dependency, so this is a full build
+   rather than an OTA update.
+5. **Sandbox purchase**, then confirm the webhook flips `GET /me` to
+   `subscribed: true`.
+
+Also on the checklist and not yet done: the demo account in `LISTING.md` still
+has `[fill in]` for a password.
+
+---
+
 ## Known mismatches with `LISTING.md`
 
 Worth reconciling before submission; neither is fixed here because both are
