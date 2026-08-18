@@ -91,8 +91,8 @@ Three days free, then $12.99 per month or $69.99 per year.
 
 Payment is charged to your Apple Account at confirmation of purchase. Your subscription renews automatically unless cancelled at least 24 hours before the end of the current period. Manage or cancel anytime in your Apple Account settings. Any unused portion of a free trial is forfeited when you purchase a subscription.
 
-Terms of Use: https://selveapps.com/grace/terms
-Privacy Policy: https://selveapps.com/grace/privacy
+Terms of Use: https://www.selveapps.xyz/grace/terms
+Privacy Policy: https://www.selveapps.xyz/grace/privacy
 ```
 
 **Note:** the auto-renew paragraph is not optional decoration. Guideline 3.1.2 requires those exact disclosures, and reviewers check the description as well as the paywall.
@@ -181,7 +181,7 @@ Select **manually release this version**. You want approval and launch to be sep
 ### App Review notes (write this properly, it saves a rejection cycle)
 ```
 Demo account:
-Email: review@selveapps.com
+Email: review@selveapps.xyz
 Password: [fill in]
 
 Notes for the reviewer:
