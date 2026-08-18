@@ -181,7 +181,7 @@ Select **manually release this version**. You want approval and launch to be sep
 ### App Review notes (write this properly, it saves a rejection cycle)
 ```
 Demo account:
-Email: review@selveapps.xyz
+Email: support@selveapps.xyz
 Password: [fill in]
 
 Notes for the reviewer:
