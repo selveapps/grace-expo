@@ -109,6 +109,8 @@ curl http://localhost:3000/health
 
 **Config-as-code:** `backend/railway.toml` — build, migrate, healthcheck on `/health`.
 
+**Runtime:** Node **22 LTS** — `backend/package.json` `engines`, `backend/.nvmrc`, and `NIXPACKS_NODE_VERSION=22` in `railway.toml` `[build.env]` (Nixpacks).
+
 **Recommended** (set in dashboard *or* via `railway.toml`):
 
 ```

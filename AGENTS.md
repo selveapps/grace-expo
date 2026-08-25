@@ -4,7 +4,7 @@ Thin router. Deep docs live in linked files — do not duplicate here.
 
 ## Project
 
-Premium audio-first Bible app (Expo SDK 54) + `backend/` API (Node 20, Fastify, Prisma, Postgres).
+Premium audio-first Bible app (Expo SDK 54) + `backend/` API (Node 22, Fastify, Prisma, Postgres).
 Beta target: Expo Go + guest auth + KJV scripture from own API.
 
 ## Layout
