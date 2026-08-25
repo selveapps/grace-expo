@@ -4,13 +4,23 @@
 // { status } — 'trialing' | 'active' | 'free' | 'cancelled' | 'failed' — because
 // PaywallScreen branches on it and must only celebrate a real purchase.
 //
-// Real StoreKit is NOT wired yet. The v3 spec named `expo-in-app-purchases`, but
-// that module is absent from the Expo SDK 54 native-module list (Expo retired it
-// after SDK 49), so installing it would break this build. When the Paid Apps
-// agreement and the two ASC products are live, drop a maintained module
-// (`expo-iap` or `react-native-iap`) into `storeKitPurchase` below: it must
-// return the transaction receipt, which is then validated server-side by
-// POST /purchase/validate. Entitlement is always re-read from GET /me.
+// Real purchases are NOT wired on this branch, so `purchase()` grants a beta
+// entitlement rather than charging. That cannot ship: App Review needs the
+// subscription products exercised by the build (Guideline 3.1.1).
+//
+// Do not start this from scratch, and do not reach for `expo-in-app-purchases`
+// (Expo retired it after SDK 49) or write a raw StoreKit path. The work is
+// already done on `feat/m11-iap-revenuecat`: RevenueCat + Superwall on the
+// client, a webhook on the API that syncs entitlement into `profile.subscribed`,
+// and `docs/IAP_REVENUECAT_SUPERWALL.md` as the runbook. It is deliberately
+// inert until `EXPO_PUBLIC_IAP_ENABLED` is set, so it can land early.
+//
+// It is held back on account setup, not code. In order: the Paid Applications
+// agreement has to go active (needs banking and tax forms, not just a
+// signature), which is what unblocks creating `grace.plus.annual` and
+// `grace.plus.monthly` in App Store Connect at all; then the RevenueCat
+// offering; then an EAS dev build, since IAP cannot run in Expo Go.
+// Entitlement is always re-read from GET /me.
 import { api } from '../api/client';
 import { StorageService, KEYS } from './StorageService';
 

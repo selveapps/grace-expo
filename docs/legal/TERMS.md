@@ -2,7 +2,7 @@
 
 **Grace: Bible BFF for Women**
 Operated by **Selve App Studio LLP** ("Selve", "we", "us")
-Last updated: 29 July 2026
+Last updated: 17 August 2026
 
 By downloading or using Grace, you agree to these Terms. If you do not agree, please do not use the app.
 
@@ -21,7 +21,7 @@ We grant you a personal, non-exclusive, non-transferable, revocable licence to u
 - **Free trial — 3 days**, once per user, where offered.
 
 Key terms:
-- Payment is charged to your Apple ID or Google account at confirmation of purchase.
+- Payment is charged to your Apple Account or Google account at confirmation of purchase.
 - **Subscriptions renew automatically** at the same price and period unless cancelled at least 24 hours before the current period ends.
 - Your account is charged for renewal within 24 hours before the end of the period.
 - **Cancel anytime** in your device's subscription settings. Cancelling stops future charges; you keep access until the end of the paid period.
@@ -32,7 +32,7 @@ Key terms:
 Manage or cancel: iOS — Settings → your name → Subscriptions. Android — Play Store → Subscriptions.
 
 ## 4. Scripture and content
-Scripture is presented in the **King James Version**, which is in the public domain. Narration, story retellings, Tea, reflections prompts, artwork, the GraceDove character, and the Grace name and design are owned by Selve and protected by copyright and trade mark law.
+Scripture is presented in the **King James Version**, which is in the public domain. Narration, story retellings, Tea, reflection prompts, artwork, the GraceDove character, and the Grace name and design are owned by Selve and protected by copyright and trade mark law.
 
 Grace offers devotional and educational content. **It is not counselling, medical, psychological, legal, or financial advice.** If you are in crisis or need help, please contact a qualified professional or your local emergency service.
 
@@ -69,8 +69,12 @@ These Terms are governed by the laws of India, and the courts of Bengaluru, Karn
 ## 13. Contact us
 
 **Selve App Studio LLP**
-Grievance Officer
-Email: **admin@selveapps.xyz**
-Phone: **+91 82849 00521**
+Email: **support@selveapps.xyz**
+Support: [selveapps.xyz/grace/support](https://selveapps.xyz/grace/support)
+
+**Grievance Officer (India)**
+Aditya Sankhyan
+Email: **support@selveapps.xyz**
+Phone: **+91 90560 72996**
 
 We aim to acknowledge every request within 48 hours.

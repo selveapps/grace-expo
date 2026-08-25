@@ -12,19 +12,13 @@ import { colors, fonts, radius } from '../../theme';
 const OFFERS = SubscriptionService.getOfferings();
 const PRICE = Object.fromEntries(OFFERS.map((o) => [o.id, `${o.displayPrice} / ${o.period}`]));
 
-// Guideline 3.1.2 wants the subscription's name, length and price per period
-// stated on the purchase screen itself, not only inside the store sheet.
-const DISCLOSURE = Object.fromEntries(OFFERS.map((o) => [
-  o.id,
-  `Grace Plus, ${o.type === 'annual' ? '1 year' : '1 month'}, ${o.displayPrice} per ${o.period}. `
-  + `${o.trialDays}-day free trial, then it renews automatically until cancelled. `
-  + 'Cancel any time in your App Store account settings.',
-]));
-
-// The one-line version that always shows: price, period and renewal in a glance.
+// Guideline 3.1.2 wants the subscription's length, price per period and renewal
+// stated on the purchase screen itself, not only inside the store sheet. One
+// always-visible line does that better than a longer paragraph behind a tap,
+// so this is the whole disclosure rather than a summary of one kept elsewhere.
 const SUMMARY = Object.fromEntries(OFFERS.map((o) => [
   o.id,
-  `${o.displayPrice}/${o.period} after a ${o.trialDays}-day free trial. Cancel anytime.`,
+  `${o.displayPrice}/${o.period} after a ${o.trialDays}-day free trial. Renews automatically until cancelled.`,
 ]));
 
 const openLegal = (url) => Linking.openURL(url).catch(() => {});
@@ -42,7 +36,6 @@ export default function PaywallScreen({ navigation }) {
   const [restoring, setRestoring] = useState(false);
   const [error, setError] = useState(null);
   const [notice, setNotice] = useState(null);
-  const [legalOpen, setLegalOpen] = useState(false);
   const veil = useRef(new Animated.Value(1)).current;   // light veil from Preparing → fades out
   const outro = useRef(new Animated.Value(0)).current;  // ivory bloom on the way out
   const dove = useRef(new Animated.Value(0)).current;   // Grace blooms in
@@ -203,22 +196,10 @@ export default function PaywallScreen({ navigation }) {
         {error && <Text style={styles.error}>{error}</Text>}
         {notice && <Text style={styles.notice}>{notice}</Text>}
         <PrimaryButton label={busy ? 'Preparing…' : 'Start 3-day free trial'} variant="gold" onPress={start} testID="paywall-start-trial" />
+        <Text style={styles.summary}>{SUMMARY[plan]}</Text>
         <Pressable onPress={restore} hitSlop={8} style={styles.restore} accessibilityRole="button" testID="paywall-restore">
           <Text style={styles.restoreText}>{restoring ? 'Checking…' : 'Restore purchase'}</Text>
         </Pressable>
-        {/* The "$69.99/year after a 3-day free trial. Cancel anytime." summary
-            line that used to sit here has been removed on request.
-
-            Guideline 3.1.2 still has to be satisfied, and it is: the plan cards
-            above carry the subscription name, period and price per period, and
-            the Today/Day 2/Day 3 timeline states the trial length and that it
-            ends. The full renewal wording remains one tap away under Details,
-            beside both required documents. If App Review pushes back, the line
-            to restore is SUMMARY[plan]. */}
-        <Pressable onPress={() => { Haptics.selectionAsync(); setLegalOpen((v) => !v); }} hitSlop={8} style={styles.legalToggle}>
-          <Text style={styles.legalMore}>{legalOpen ? 'Less' : 'Details'}</Text>
-        </Pressable>
-        {legalOpen ? <Text style={styles.disclosure}>{DISCLOSURE[plan]}</Text> : null}
         <View style={styles.legalRow}>
           <Pressable onPress={() => openLegal(LEGAL.termsUrl)} hitSlop={10}><Text style={styles.legalLink}>Terms</Text></Pressable>
           <Text style={styles.legalDot}>·</Text>
@@ -259,11 +240,9 @@ const styles = StyleSheet.create({
   tText: { fontFamily: fonts.sans, fontSize: 13, color: colors.textFaintOnDark },
   error: { fontFamily: fonts.sans, fontSize: 14, lineHeight: 20, color: '#E8A598', textAlign: 'center', marginBottom: 12 },
   notice: { fontFamily: fonts.sans, fontSize: 14, lineHeight: 20, color: colors.onDarkMuted, textAlign: 'center', marginBottom: 12 },
-  restore: { minHeight: 40, justifyContent: 'center', alignItems: 'center', marginTop: 6 },
+  summary: { fontFamily: fonts.sans, fontSize: 12, lineHeight: 17, color: 'rgba(203,185,143,0.8)', textAlign: 'center', marginTop: 10, paddingHorizontal: 8 },
+  restore: { minHeight: 40, justifyContent: 'center', alignItems: 'center', marginTop: 4 },
   restoreText: { fontFamily: fonts.sansMed, fontSize: 14, color: 'rgba(230,207,148,0.9)' },
-  legalToggle: { minHeight: 34, justifyContent: 'center', marginTop: 8 },
-  legalMore: { fontFamily: fonts.sansSemi, fontSize: 12, color: colors.gold, textAlign: 'center' },
-  disclosure: { fontFamily: fonts.sans, fontSize: 11.5, lineHeight: 17, color: 'rgba(203,185,143,0.72)', textAlign: 'center', marginTop: 6, paddingHorizontal: 6 },
   legalRow: { flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: 8, minHeight: 40 },
   legalLink: { fontFamily: fonts.sansMed, fontSize: 12, color: 'rgba(230,207,148,0.85)' },
   legalDot: { color: 'rgba(203,185,143,0.55)', fontSize: 12 },

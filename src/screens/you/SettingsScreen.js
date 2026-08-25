@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable, Alert, Linking } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
-import { AuthService, StorageService } from '../../services';
+import { AuthService, StorageService, SubscriptionService } from '../../services';
 import { useProfile } from '../../state/profile';
 import { LEGAL } from '../../legal';
 import { colors, fonts, radius } from '../../theme';
 
 const GROUPS = [
-  { group: 'Account', rows: ['Name & email', 'Sign-in method', 'Subscription'] },
+  // Restore sits here as well as on the paywall: 3.1.2 only requires it on the
+  // purchase screen, but Settings is where people actually go looking for it.
+  { group: 'Account', rows: ['Name & email', 'Sign-in method', 'Subscription', 'Restore purchases'] },
   { group: 'Experience', rows: ['Notifications', 'Reading preferences', 'Audio preferences', 'Appearance'] },
   { group: 'Privacy & help', rows: ['Privacy policy', 'Terms of service', 'Privacy & data', 'Help & support'] },
 ];
@@ -16,6 +18,7 @@ const GROUPS = [
 export default function SettingsScreen({ navigation }) {
   const { resetProfile } = useProfile();
   const [deleting, setDeleting] = useState(false);
+  const [restoring, setRestoring] = useState(false);
 
   // Clearing the profile no longer moves anyone on its own. The root navigator
   // used to be keyed on `profile.onboarded`, and that remount was supposed to
@@ -30,9 +33,26 @@ export default function SettingsScreen({ navigation }) {
     Alert.alert("Couldn't open that link", 'Please check your connection and try again.');
   });
 
+  // Says plainly what happened either way. A restore that finds nothing is not
+  // an error, so it gets a calm result rather than a failure alert.
+  const restorePurchases = async () => {
+    if (restoring) return;
+    setRestoring(true);
+    const res = await SubscriptionService.restore().catch(() => null);
+    setRestoring(false);
+    if (res && (res.status === 'trialing' || res.status === 'active')) {
+      Alert.alert('Restored', 'Your subscription is active again.');
+    } else if (res) {
+      Alert.alert('Nothing to restore', 'No previous subscription was found on this Apple Account.');
+    } else {
+      Alert.alert("Couldn't check just now", 'Please try again in a moment.');
+    }
+  };
+
   const tap = (row) => {
     Haptics.selectionAsync();
     if (row === 'Subscription') navigation.navigate('ManageSubscription');
+    else if (row === 'Restore purchases') restorePurchases();
     else if (row === 'Notifications') navigation.navigate('Reminders');
     else if (row === 'Reading preferences' || row === 'Audio preferences' || row === 'Appearance') navigation.navigate('Preferences');
     else if (row === 'Help & support') navigation.navigate('Support');
@@ -94,7 +114,8 @@ export default function SettingsScreen({ navigation }) {
             <View style={styles.card}>
               {g.rows.map((r, i) => (
                 <Pressable key={r} onPress={() => tap(r)} style={[styles.row, i < g.rows.length - 1 && styles.rowDivide]}>
-                  <Text style={styles.rowText}>{r}</Text><Text style={styles.chev}>›</Text>
+                  <Text style={styles.rowText}>{r}</Text>
+                  <Text style={styles.chev}>{restoring && r === 'Restore purchases' ? '…' : '›'}</Text>
                 </Pressable>
               ))}
             </View>
