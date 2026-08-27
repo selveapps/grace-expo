@@ -1,6 +1,6 @@
 # Grace — TestFlight QA checklist
 
-**Build 10** · staging API · ~20–30 minutes on a real iPhone.
+**Build 14** · staging API · ~20–30 minutes on a real iPhone. PR #38 story-audio cache fix.
 
 Work top to bottom; the order matters (onboarding must be first, offline last).
 Mark each row and add a note on anything that is not a clean pass.
@@ -33,7 +33,7 @@ Legend: **P** = pass · **F** = fail · put anything odd in Notes even if it pas
 | 2.6 | **Verse step** | A **multi-verse passage** relevant to your choices. **Not** a single line, **not** Psalm 23:1 | ☐ | |
 | 2.7 | Pick `Courage` earlier, check verse | Should be Psalm 27:1-3, not Psalm 23:1 | ☐ | |
 | 2.8 | Keep this verse | Advances; verse later appears on Home | ☐ | |
-| 2.9 | Stories preview | Sample plays, ~18–35s, not a full 3-minute story | ☐ | |
+| 2.9 | **Stories preview (Ruth)** | Tap play on **Ruth stays** — bundled preview plays (~17–35s), audio audible, not a full 3-minute part | ☐ | |
 | 2.10 | Review prompt | "Not right now" advances without a store prompt | ☐ | |
 
 ## 3. Authentication (the gate)
@@ -136,11 +136,11 @@ Legend: **P** = pass · **F** = fail · put anything odd in Notes even if it pas
 | 9.1 | Stories tab | Featured card with artwork, 6 collection chips, story list | ☐ | |
 | 9.2 | All 6 collections tappable | Each opens; back returns to Stories | ☐ | |
 | 9.3 | `Jesus' Parables` | Empty state (known limitation), not a crash | ☐ | |
-| 9.4 | Open a story | Detail shows hook, parts, narration preview | ☐ | |
-| 9.5 | Play | Audio starts | ☐ | |
-| 9.6 | **Remaining time** | Shows a real value, **not** `-0:00` | ☐ | |
-| 9.7 | **+15s / −15s** | Both move playback | ☐ | |
-| 9.8 | **Scrub the bar** | Seeks to that point | ☐ | |
+| 9.4 | Open **Ruth stays** | Detail shows hook, 4 parts, narration preview | ☐ | |
+| 9.5 | Play part 1 | Narration starts within ~2s (PR #38: not silent / cache error) | ☐ | |
+| 9.6 | **Remaining time** | Counts down from a real value, **not** `-0:00` | ☐ | |
+| 9.7 | **+15s / −15s** on Ruth part 1 | Both move playback audibly | ☐ | |
+| 9.8 | **Scrub the bar** on Ruth part 1 | Seeks to that point; audio resumes from there | ☐ | |
 | 9.9 | Speed control | Cycles 1× → 1.25× → 1.5× → 0.75× and audibly changes | ☐ | |
 | 9.10 | Transcript | Opens; tapping a line seeks there | ☐ | |
 | 9.11 | Close player, reopen | Resumes near where you left off | ☐ | |
@@ -260,7 +260,7 @@ Every one of these returned "No verses found" before this build.
 |---|---|
 | Tester | |
 | Device / iOS | |
-| Build | 10 |
+| Build | 14 |
 | Date | |
 | Blocking failures | |
 | Non-blocking notes | |
