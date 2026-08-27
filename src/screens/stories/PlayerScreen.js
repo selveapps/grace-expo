@@ -168,7 +168,7 @@ export default function PlayerScreen({ route, navigation }) {
 
   const retry = () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Soft);
-    AudioService.loadStory(id, st.part || 1).then(() => AudioService.play()).catch(() => {});
+    AudioService.loadStory(id, st.part || 1, { force: true }).then(() => AudioService.play()).catch(() => {});
   };
 
   const saveThis = () => {
