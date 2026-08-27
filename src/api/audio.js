@@ -1,5 +1,5 @@
 // Download story audio to device cache (auth required for TTS endpoint).
-import * as FileSystem from 'expo-file-system';
+import * as FileSystem from 'expo-file-system/legacy';
 import { getSession } from './session';
 import { getApiBase } from './client';
 
