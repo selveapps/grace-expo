@@ -86,7 +86,7 @@ function onPlaybackStatusUpdate(status) {
   emit();
 }
 
-async function resolveAudioUri(story, part) {
+async function resolveAudioUri(story, part, { force = false } = {}) {
   if (story?.audioUrl) {
     const path = story.audioUrl.replace('{part}', String(part));
     // Prefer the pre-rendered static file (real .mp3, else .m4a placeholder).
@@ -95,7 +95,7 @@ async function resolveAudioUri(story, part) {
   }
   // No static file — fall back to on-demand TTS (requires a key server-side).
   await AuthService.ensureGuest();
-  return getStoryAudioUri(story.id, part);
+  return getStoryAudioUri(story.id, part, { force });
 }
 
 export const AudioService = {
@@ -105,8 +105,8 @@ export const AudioService = {
     return () => listeners.delete(fn);
   },
 
-  async loadStory(storyId, part = 1) {
-    if (state.storyId === storyId && state.part === part && sound && state.status !== 'error') {
+  async loadStory(storyId, part = 1, { force = false } = {}) {
+    if (!force && state.storyId === storyId && state.part === part && sound && state.status !== 'error') {
       return StoryService.getStory(storyId);
     }
     state = {
@@ -141,7 +141,7 @@ export const AudioService = {
     // OPENAI_API_KEY on the server, returned a placeholder string that was never
     // shown. Removed. Duration comes from the audio file itself.
     try {
-      const uri = await resolveAudioUri(story, part);
+      const uri = await resolveAudioUri(story, part, { force });
       const { sound: created } = await Audio.Sound.createAsync(
         { uri },
         { shouldPlay: false, rate: state.rate, progressUpdateIntervalMillis: 500 },
