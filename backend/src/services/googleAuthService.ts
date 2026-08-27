@@ -64,7 +64,8 @@ export async function verifyGoogleIdToken(
   });
 
   if (!expectedNonce) throw new Error('Nonce required');
-  if (payload.nonce !== expectedNonce) throw new Error('Nonce mismatch');
+  const tokenNonce = String(payload.nonce ?? '');
+  if (tokenNonce.toLowerCase() !== expectedNonce.toLowerCase()) throw new Error('Nonce mismatch');
 
   if (!payload.sub) throw new Error('Google token missing sub');
 

@@ -9,6 +9,7 @@ import { Platform } from 'react-native';
 import Constants from 'expo-constants';
 import * as AppleAuthentication from 'expo-apple-authentication';
 import * as AuthSession from 'expo-auth-session';
+import { exchangeCodeAsync, ResponseType } from 'expo-auth-session';
 import * as WebBrowser from 'expo-web-browser';
 import * as Crypto from 'expo-crypto';
 import { api } from '../api/client';
@@ -23,9 +24,25 @@ const GOOGLE_DISCOVERY = {
 };
 
 const EXTRA = Constants.expoConfig?.extra ?? {};
-const GOOGLE_CLIENT_ID = (Platform.OS === 'ios'
-  ? EXTRA.googleIosClientId || EXTRA.googleWebClientId
-  : EXTRA.googleWebClientId) || null;
+const GOOGLE_IOS_CLIENT_ID = EXTRA.googleIosClientId || null;
+const GOOGLE_WEB_CLIENT_ID = EXTRA.googleWebClientId || null;
+
+/** iOS native Google OAuth uses the reversed client id as the redirect scheme. */
+function googleRedirectUri() {
+  if (Platform.OS === 'ios' && GOOGLE_IOS_CLIENT_ID) {
+    const prefix = GOOGLE_IOS_CLIENT_ID.replace(/\.apps\.googleusercontent\.com$/i, '');
+    return `com.googleusercontent.apps.${prefix}:/oauthredirect`;
+  }
+  if (Constants.appOwnership === 'expo') {
+    return AuthSession.makeRedirectUri({ useProxy: true });
+  }
+  return AuthSession.makeRedirectUri({ scheme: 'grace', path: 'redirect' });
+}
+
+function googleOAuthClientId() {
+  if (Platform.OS === 'ios') return GOOGLE_IOS_CLIENT_ID || GOOGLE_WEB_CLIENT_ID;
+  return GOOGLE_WEB_CLIENT_ID || GOOGLE_IOS_CLIENT_ID;
+}
 
 export const AuthService = {
   async getSession() {
@@ -72,12 +89,14 @@ export const AuthService = {
 
     let credential;
     try {
+      // Apple expects the SHA-256 hash here; the identity token's nonce claim
+      // matches this value. Passing the raw string makes verification fail.
       credential = await AppleAuthentication.signInAsync({
         requestedScopes: [
           AppleAuthentication.AppleAuthenticationScope.FULL_NAME,
           AppleAuthentication.AppleAuthenticationScope.EMAIL,
         ],
-        nonce: rawNonce,
+        nonce: hashedNonce,
       });
     } catch (e) {
       if (e?.code === 'ERR_REQUEST_CANCELED') return { ok: false, cancelled: true };
@@ -117,7 +136,7 @@ export const AuthService = {
   },
 
   async isGoogleAvailable() {
-    if (!GOOGLE_CLIENT_ID) return false;
+    if (!googleOAuthClientId()) return false;
     try {
       const res = await api.get('/auth/google/available', { auth: false });
       return !!res.data?.available;
@@ -127,20 +146,21 @@ export const AuthService = {
   },
 
   async signInWithGoogle() {
-    if (!GOOGLE_CLIENT_ID) return { ok: false, error: 'google_unavailable' };
+    const clientId = googleOAuthClientId();
+    if (!clientId) return { ok: false, error: 'google_unavailable' };
 
-    const rawNonce = Crypto.randomUUID();
     const hashedNonce = await Crypto.digestStringAsync(
       Crypto.CryptoDigestAlgorithm.SHA256,
-      rawNonce,
+      Crypto.randomUUID(),
     );
 
-    const redirectUri = AuthSession.makeRedirectUri({ scheme: 'grace' });
+    const redirectUri = googleRedirectUri();
     const request = new AuthSession.AuthRequest({
-      clientId: GOOGLE_CLIENT_ID,
+      clientId,
       redirectUri,
       scopes: ['openid', 'profile', 'email'],
-      responseType: 'id_token',
+      responseType: ResponseType.Code,
+      usePKCE: true,
       extraParams: { nonce: hashedNonce },
     });
 
@@ -154,8 +174,26 @@ export const AuthService = {
     if (result?.type === 'dismiss' || result?.type === 'cancel') {
       return { ok: false, cancelled: true };
     }
-    const idToken = result?.params?.id_token;
-    if (result?.type !== 'success' || !idToken) return { ok: false, error: 'google_failed' };
+    if (result?.type !== 'success' || !result.params?.code) {
+      return { ok: false, error: 'google_failed' };
+    }
+
+    let idToken;
+    try {
+      const tokens = await exchangeCodeAsync(
+        {
+          clientId,
+          code: result.params.code,
+          redirectUri,
+          extraParams: { code_verifier: request.codeVerifier ?? '' },
+        },
+        GOOGLE_DISCOVERY,
+      );
+      idToken = tokens.idToken;
+    } catch {
+      return { ok: false, error: 'google_failed' };
+    }
+    if (!idToken) return { ok: false, error: 'google_failed' };
 
     try {
       await this.ensureGuest().catch(() => {});
@@ -196,7 +234,7 @@ export const AuthService = {
       await StorageService.set(KEYS.auth, user);
       return { ok: true, user };
     } catch {
-      return { ok: false };
+      return { ok: false, error: 'network' };
     }
   },
 

@@ -2,8 +2,25 @@
 const realClientId = (v) =>
   (typeof v === 'string' && v.trim().endsWith('.apps.googleusercontent.com') ? v.trim() : null);
 
+const googleIosClientId = realClientId(process.env.EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID);
+const googleUrlScheme = googleIosClientId
+  ? `com.googleusercontent.apps.${googleIosClientId.replace(/\.apps\.googleusercontent\.com$/i, '')}`
+  : null;
+
 export default ({ config }) => ({
   ...config,
+  ios: {
+    ...config.ios,
+    ...(googleUrlScheme ? {
+      infoPlist: {
+        ...config.ios?.infoPlist,
+        CFBundleURLTypes: [
+          ...(config.ios?.infoPlist?.CFBundleURLTypes ?? []),
+          { CFBundleURLSchemes: [googleUrlScheme] },
+        ],
+      },
+    } : {}),
+  },
   extra: {
     ...config.extra,
     // App Store Connect listing name is "Grace: Bible BFF for Women"; the
@@ -21,5 +38,6 @@ export default ({ config }) => ({
     // would otherwise light up a Google button that cannot complete a sign-in.
     googleIosClientId: realClientId(process.env.EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID),
     googleWebClientId: realClientId(process.env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID),
+    googleIosUrlScheme: googleUrlScheme,
   },
 });

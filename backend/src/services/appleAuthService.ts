@@ -49,7 +49,8 @@ export async function verifyAppleIdentityToken(
   });
 
   if (!expectedNonce) throw new Error('Nonce required');
-  if (payload.nonce !== expectedNonce) throw new Error('Nonce mismatch');
+  const tokenNonce = String(payload.nonce ?? '');
+  if (tokenNonce.toLowerCase() !== expectedNonce.toLowerCase()) throw new Error('Nonce mismatch');
   if (!payload.sub) throw new Error('Apple token missing sub');
 
   const emailVerified = payload.email_verified;
