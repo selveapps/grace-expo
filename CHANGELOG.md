@@ -6,6 +6,9 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+### Changed
+- **M11 IAP product IDs** aligned to live ASC Grace Plus subscriptions: `grace.yearly`, `grace.monthly` (was `grace.plus.*`).
+
 ### Planned
 - M9 offline sync queue
 - M11 real OAuth + IAP

@@ -3,7 +3,7 @@ import type { RevenueCatWebhookEvent } from '../lib/revenuecatWebhook.js';
 
 /** Must match RevenueCat entitlement identifier and ASC product IDs in docs/IAP_REVENUECAT_SUPERWALL.md */
 export const GRACE_PLUS_ENTITLEMENT = 'grace_plus';
-export const GRACE_PRODUCT_IDS = new Set(['grace.plus.annual', 'grace.plus.monthly']);
+export const GRACE_PRODUCT_IDS = new Set(['grace.yearly', 'grace.monthly']);
 
 const GRANT_TYPES = new Set([
   'INITIAL_PURCHASE',

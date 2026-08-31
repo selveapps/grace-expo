@@ -7,7 +7,7 @@ Branch: `feat/m11-iap-revenuecat` · worktree: `../grace-expo-iap`
 
 | Layer | Role |
 |-------|------|
-| **App Store Connect** | Products `grace.plus.annual`, `grace.plus.monthly` (3-day trial) |
+| **App Store Connect** | Products `grace.yearly`, `grace.monthly` (3-day trial) |
 | **RevenueCat** | Receipt validation, entitlements, customer identity (`app_user_id` = Grace `user.id`) |
 | **Superwall** | Paywall UI / A-B tests; purchases delegate to RevenueCat |
 | **grace-api** | `POST /webhooks/revenuecat` → `subscription` table + `profile.subscribed` |
@@ -34,8 +34,8 @@ Direct StoreKit validate remains documented in `BACKEND.md` as optional fallback
 
    | Product ID | Price | Trial |
    |------------|-------|-------|
-   | `grace.plus.annual` | $69.99/year | 3 days |
-   | `grace.plus.monthly` | $12.99/month | 3 days |
+   | `grace.yearly` | $69.99/year | 3 days |
+   | `grace.monthly` | $12.99/month | 3 days |
 
 4. App bundle: `com.selveapps.grace` (matches `app.json`).
 
@@ -48,8 +48,8 @@ Direct StoreKit validate remains documented in `BACKEND.md` as optional fallback
 3. Link ASC shared secret / App Store Connect API key (StoreKit 2 recommended).
 4. Create **entitlement** `grace_plus` and attach both products.
 5. Create **offering** `default` with packages (identifiers used in app):
-   - `$rc_annual` → `grace.plus.annual`
-   - `$rc_monthly` → `grace.plus.monthly`
+   - `$rc_annual` → `grace.yearly`
+   - `$rc_monthly` → `grace.monthly`
 6. Copy **public SDK keys** (iOS / Android) for EAS secrets.
 7. **Integrations → Webhooks:**
    - URL: `https://<your-api>/webhooks/revenuecat`

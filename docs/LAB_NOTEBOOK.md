@@ -319,3 +319,13 @@ Ran `generate:audio` with a working key, then verified rather than assumed:
 - **Cleaned:** deleted the 10 stale `tea-01…tea-10.mp3` from the old id scheme (unreferenced by the new catalog, confirmed by grep). Replaced the bundled macOS `say` placeholder with the real 31.3s ElevenLabs cut; no `.m4a` files remain anywhere in the repo.
 - **Re-verified:** backend `typecheck` clean; `v3.unit.test.ts` 8/8; `expo export -p ios` 2.93 MB hbc with a new bundle hash (confirming the `require()` switch to `.mp3` took effect) and the 502 KB asset present in the export.
 - **Secret scan:** 137 changed/new files scanned against the 8 live `.env` values plus patterns for `sk_`/`sk-`/AWS/bearer/private-key material. No API key material anywhere. The only matches are public values that already existed in the repo at HEAD: the bundle id, the two ElevenLabs *premade* voice ids, the model name, and the `.env.example` dev placeholders (`JWT_SECRET=change-me-in-production`, the localhost Postgres URL).
+
+### RUN-013 | 2026-08-31 | ASC product IDs → code (M11)
+
+**Objective:** Align RevenueCat / webhook product IDs with live App Store Connect Grace Plus subscriptions.
+
+**Procedure:** User created ASC products `grace.monthly` and `grace.yearly` (group Grace Plus). Updated `RevenueCatService.js`, `revenueCatService.ts`, unit test, and `docs/IAP_REVENUECAT_SUPERWALL.md`.
+
+**Observations:** ASC product IDs are immutable after creation; scaffold had assumed `grace.plus.*`. Annual plan detection now accepts `yearly` or `annual` in the StoreKit product identifier.
+
+**Result:** `npm test -- test/revenuecat.unit.test.ts` pass (pending run in this session).
