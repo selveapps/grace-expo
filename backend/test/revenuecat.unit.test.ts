@@ -45,8 +45,8 @@ describe('RevenueCat webhook auth (GRACE-025)', () => {
 
 describe('RevenueCat product IDs', () => {
   it('includes Grace Plus ASC identifiers', () => {
-    assert.ok(GRACE_PRODUCT_IDS.has('grace.plus.annual'));
-    assert.ok(GRACE_PRODUCT_IDS.has('grace.plus.monthly'));
+    assert.ok(GRACE_PRODUCT_IDS.has('grace.yearly'));
+    assert.ok(GRACE_PRODUCT_IDS.has('grace.monthly'));
   });
 });
 

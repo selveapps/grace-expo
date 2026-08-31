@@ -15,8 +15,8 @@ export const IAP_ENABLED = process.env.EXPO_PUBLIC_IAP_ENABLED === 'true';
 export const GRACE_PLUS_ENTITLEMENT = 'grace_plus';
 
 const OFFERINGS = [
-  { id: 'annual', type: 'annual', price: 69.99, displayPrice: '$69.99', period: 'year', trialDays: 3, badge: 'Best value', platformProductId: 'grace.plus.annual', rcPackageId: '$rc_annual' },
-  { id: 'monthly', type: 'monthly', price: 12.99, displayPrice: '$12.99', period: 'month', trialDays: 3, badge: null, platformProductId: 'grace.plus.monthly', rcPackageId: '$rc_monthly' },
+  { id: 'annual', type: 'annual', price: 69.99, displayPrice: '$69.99', period: 'year', trialDays: 3, badge: 'Best value', platformProductId: 'grace.yearly', rcPackageId: '$rc_annual' },
+  { id: 'monthly', type: 'monthly', price: 12.99, displayPrice: '$12.99', period: 'month', trialDays: 3, badge: null, platformProductId: 'grace.monthly', rcPackageId: '$rc_monthly' },
 ];
 
 const IOS_API_KEY = process.env.EXPO_PUBLIC_REVENUECAT_IOS_API_KEY;
@@ -50,7 +50,7 @@ function normalizeFromEntitlement(customerInfo, planId) {
   const expiresMs = active.expirationDate ? new Date(active.expirationDate).getTime() : null;
   return {
     status: isTrial ? 'trialing' : 'active',
-    planId: planId ?? (active.productIdentifier?.includes('annual') ? 'annual' : 'monthly'),
+    planId: planId ?? (/(yearly|annual)/.test(active.productIdentifier ?? '') ? 'annual' : 'monthly'),
     trialEndsAt: isTrial ? expiresMs : null,
     renewsAt: expiresMs,
     platform: Platform.OS,
