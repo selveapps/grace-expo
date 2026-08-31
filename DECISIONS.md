@@ -486,7 +486,7 @@ that RevenueCat already provides. Superwall adds remote paywall UI and experimen
 5. **Expo Go** keeps beta redeem (`EXPO_PUBLIC_IAP_ENABLED` unset); EAS dev build required for IAP.
 
 ### Consequences
-- Product IDs locked to existing ASC plan: `grace.plus.annual`, `grace.plus.monthly`.
+- Product IDs locked to ASC Grace Plus group: `grace.yearly`, `grace.monthly`.
 - Entitlement identifier: `grace_plus`.
 - Setup guide: `docs/IAP_REVENUECAT_SUPERWALL.md`.
 - `react-native.config.js` may be required for RC autolinking on Expo SDK 54 + New Architecture.
