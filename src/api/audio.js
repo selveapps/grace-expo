@@ -1,5 +1,5 @@
 // Download story audio to device cache (auth required for TTS endpoint).
-import * as FileSystem from 'expo-file-system';
+import * as FileSystem from 'expo-file-system/legacy';
 import { getSession } from './session';
 import { getApiBase } from './client';
 
@@ -38,6 +38,9 @@ export async function getStoryAudioUri(storyId, part = 1, { force = false } = {}
   });
 
   if (result.status !== 200) {
+    // A 4xx/5xx body still lands on disk; without this, the size check below
+    // treats the error page as cached audio and retries never recover.
+    await FileSystem.deleteAsync(dest, { idempotent: true });
     throw new Error(`Audio download failed (${result.status})`);
   }
   return result.uri;

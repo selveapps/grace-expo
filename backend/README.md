@@ -1,6 +1,6 @@
 # grace-api
 
-Grace backend API (Node 20 + TypeScript + Fastify). Deployed on **Railway Hobby**.
+Grace backend API (Node 22 + TypeScript + Fastify). Deployed on **Railway Hobby**.
 
 ## Quick start
 

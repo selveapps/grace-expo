@@ -1,861 +1,856 @@
 {
-  "kind": "tea",
-  "teaId": "shunammite",
-  "mood": "dark",
-  "heat": 2,
-  "text": "Her son died on her lap and she still said “it shall be well”… … This wealthy woman notices the prophet Elisha keeps passing through and builds him a whole room, bed, table, chair, lamp. He wants to repay her. She says she’s fine. He gives her a son anyway. Years later the boy is out in the field, says “my head, my head,” and dies on her lap at noon. She carries him upstairs, lays him on the prophet’s bed, shuts the door, and calls for a donkey. Her husband asks why she’s going. She just says “it shall be well.” Doesn’t tell him the child is dead. Doesn’t ask permission. She rides to Elisha, blows past his servant, grabs the prophet by the feet and says “as the Lord lives and as your soul lives, I will not leave you.” He gets up and follows her. Her son died on her lap and she still said “it shall be well” and refused to let go. I’m in awe.",
-  "voice": "FGY2WhTYpPnrIDTdsKH5",
-  "words": [
-    {
-      "w": "Her",
-      "start": 0,
-      "end": 0.174
-    },
-    {
-      "w": "son",
-      "start": 0.221,
-      "end": 0.395
-    },
-    {
-      "w": "died",
-      "start": 0.453,
-      "end": 0.65
-    },
-    {
-      "w": "on",
-      "start": 0.685,
-      "end": 0.755
-    },
-    {
-      "w": "her",
-      "start": 0.789,
-      "end": 0.871
-    },
-    {
-      "w": "lap",
-      "start": 0.917,
-      "end": 1.196
-    },
-    {
-      "w": "and",
-      "start": 1.277,
-      "end": 1.463
-    },
-    {
-      "w": "she",
-      "start": 1.567,
-      "end": 1.695
-    },
-    {
-      "w": "still",
-      "start": 1.753,
-      "end": 1.962
-    },
-    {
-      "w": "said",
-      "start": 2.02,
-      "end": 2.264
-    },
-    {
-      "w": "“it",
-      "start": 2.415,
-      "end": 2.589
-    },
-    {
-      "w": "shall",
-      "start": 2.624,
-      "end": 2.786
-    },
-    {
-      "w": "be",
-      "start": 2.821,
-      "end": 2.891
-    },
-    {
-      "w": "well”…",
-      "start": 2.926,
-      "end": 3.483
-    },
-    {
-      "w": "…",
-      "start": 3.587,
-      "end": 3.692
-    },
-    {
-      "w": "This",
-      "start": 3.901,
-      "end": 4.063
-    },
-    {
-      "w": "wealthy",
-      "start": 4.122,
-      "end": 4.354
-    },
-    {
-      "w": "woman",
-      "start": 4.412,
-      "end": 4.644
-    },
-    {
-      "w": "notices",
-      "start": 4.69,
-      "end": 5.05
-    },
-    {
-      "w": "the",
-      "start": 5.108,
-      "end": 5.178
-    },
-    {
-      "w": "prophet",
-      "start": 5.213,
-      "end": 5.515
-    },
-    {
-      "w": "Elisha",
-      "start": 5.573,
-      "end": 5.968
-    },
-    {
-      "w": "keeps",
-      "start": 6.049,
-      "end": 6.281
-    },
-    {
-      "w": "passing",
-      "start": 6.327,
-      "end": 6.629
-    },
-    {
-      "w": "through",
-      "start": 6.664,
-      "end": 6.908
-    },
-    {
-      "w": "and",
-      "start": 6.954,
-      "end": 7.047
-    },
-    {
-      "w": "builds",
-      "start": 7.082,
-      "end": 7.303
-    },
-    {
-      "w": "him",
-      "start": 7.338,
-      "end": 7.43
-    },
-    {
-      "w": "a",
-      "start": 7.465,
-      "end": 7.5
-    },
-    {
-      "w": "whole",
-      "start": 7.546,
-      "end": 7.721
-    },
-    {
-      "w": "room,",
-      "start": 7.755,
-      "end": 7.964
-    },
-    {
-      "w": "bed,",
-      "start": 8.278,
-      "end": 8.568
-    },
-    {
-      "w": "table,",
-      "start": 8.615,
-      "end": 9.114
-    },
-    {
-      "w": "chair,",
-      "start": 9.149,
-      "end": 9.462
-    },
-    {
-      "w": "lamp.",
-      "start": 9.543,
-      "end": 9.938
-    },
-    {
-      "w": "He",
-      "start": 10.321,
-      "end": 10.414
-    },
-    {
-      "w": "wants",
-      "start": 10.449,
-      "end": 10.635
-    },
-    {
-      "w": "to",
-      "start": 10.67,
-      "end": 10.728
-    },
-    {
-      "w": "repay",
-      "start": 10.797,
-      "end": 11.053
-    },
-    {
-      "w": "her.",
-      "start": 11.111,
-      "end": 11.459
-    },
-    {
-      "w": "She",
-      "start": 11.842,
-      "end": 11.97
-    },
-    {
-      "w": "says",
-      "start": 12.028,
-      "end": 12.236
-    },
-    {
-      "w": "she’s",
-      "start": 12.283,
-      "end": 12.469
-    },
-    {
-      "w": "fine.",
-      "start": 12.515,
-      "end": 12.852
-    },
-    {
-      "w": "He",
-      "start": 12.979,
-      "end": 13.084
-    },
-    {
-      "w": "gives",
-      "start": 13.142,
-      "end": 13.316
-    },
-    {
-      "w": "her",
-      "start": 13.351,
-      "end": 13.444
-    },
-    {
-      "w": "a",
-      "start": 13.479,
-      "end": 13.502
-    },
-    {
-      "w": "son",
-      "start": 13.56,
-      "end": 13.769
-    },
-    {
-      "w": "anyway.",
-      "start": 13.827,
-      "end": 14.361
-    },
-    {
-      "w": "Years",
-      "start": 14.605,
-      "end": 14.849
-    },
-    {
-      "w": "later",
-      "start": 14.884,
-      "end": 15.092
-    },
-    {
-      "w": "the",
-      "start": 15.139,
-      "end": 15.209
-    },
-    {
-      "w": "boy",
-      "start": 15.243,
-      "end": 15.394
-    },
-    {
-      "w": "is",
-      "start": 15.429,
-      "end": 15.499
-    },
-    {
-      "w": "out",
-      "start": 15.545,
-      "end": 15.65
-    },
-    {
-      "w": "in",
-      "start": 15.685,
-      "end": 15.731
-    },
-    {
-      "w": "the",
-      "start": 15.754,
-      "end": 15.824
-    },
-    {
-      "w": "field,",
-      "start": 15.859,
-      "end": 16.23
-    },
-    {
-      "w": "says",
-      "start": 16.335,
-      "end": 16.648
-    },
-    {
-      "w": "“my",
-      "start": 16.776,
-      "end": 16.973
-    },
-    {
-      "w": "head,",
-      "start": 17.043,
-      "end": 17.252
-    },
-    {
-      "w": "my",
-      "start": 17.287,
-      "end": 17.414
-    },
-    {
-      "w": "head,”",
-      "start": 17.484,
-      "end": 17.728
-    },
-    {
-      "w": "and",
-      "start": 17.751,
-      "end": 17.89
-    },
-    {
-      "w": "dies",
-      "start": 17.96,
-      "end": 18.216
-    },
-    {
-      "w": "on",
-      "start": 18.262,
-      "end": 18.343
-    },
-    {
-      "w": "her",
-      "start": 18.401,
-      "end": 18.483
-    },
-    {
-      "w": "lap",
-      "start": 18.529,
-      "end": 18.703
-    },
-    {
-      "w": "at",
-      "start": 18.738,
-      "end": 18.808
-    },
-    {
-      "w": "noon.",
-      "start": 18.866,
-      "end": 19.237
-    },
-    {
-      "w": "She",
-      "start": 19.76,
-      "end": 19.864
-    },
-    {
-      "w": "carries",
-      "start": 19.911,
-      "end": 20.166
-    },
-    {
-      "w": "him",
-      "start": 20.189,
-      "end": 20.271
-    },
-    {
-      "w": "upstairs,",
-      "start": 20.305,
-      "end": 20.781
-    },
-    {
-      "w": "lays",
-      "start": 20.816,
-      "end": 20.979
-    },
-    {
-      "w": "him",
-      "start": 21.002,
-      "end": 21.083
-    },
-    {
-      "w": "on",
-      "start": 21.118,
-      "end": 21.176
-    },
-    {
-      "w": "the",
-      "start": 21.199,
-      "end": 21.269
-    },
-    {
-      "w": "prophet’s",
-      "start": 21.304,
-      "end": 21.629
-    },
-    {
-      "w": "bed,",
-      "start": 21.664,
-      "end": 21.896
-    },
-    {
-      "w": "shuts",
-      "start": 21.931,
-      "end": 22.151
-    },
-    {
-      "w": "the",
-      "start": 22.198,
-      "end": 22.267
-    },
-    {
-      "w": "door,",
-      "start": 22.302,
-      "end": 22.558
-    },
-    {
-      "w": "and",
-      "start": 22.581,
-      "end": 22.697
-    },
-    {
-      "w": "calls",
-      "start": 22.755,
-      "end": 22.999
-    },
-    {
-      "w": "for",
-      "start": 23.045,
-      "end": 23.15
-    },
-    {
-      "w": "a",
-      "start": 23.196,
-      "end": 23.219
-    },
-    {
-      "w": "donkey.",
-      "start": 23.254,
-      "end": 23.73
-    },
-    {
-      "w": "Her",
-      "start": 24.008,
-      "end": 24.125
-    },
-    {
-      "w": "husband",
-      "start": 24.159,
-      "end": 24.45
-    },
-    {
-      "w": "asks",
-      "start": 24.508,
-      "end": 24.775
-    },
-    {
-      "w": "why",
-      "start": 24.81,
-      "end": 24.937
-    },
-    {
-      "w": "she’s",
-      "start": 24.995,
-      "end": 25.158
-    },
-    {
-      "w": "going.",
-      "start": 25.193,
-      "end": 25.553
-    },
-    {
-      "w": "She",
-      "start": 25.634,
-      "end": 25.738
-    },
-    {
-      "w": "just",
-      "start": 25.796,
-      "end": 25.947
-    },
-    {
-      "w": "says",
-      "start": 25.982,
-      "end": 26.191
-    },
-    {
-      "w": "“it",
-      "start": 26.249,
-      "end": 26.4
-    },
-    {
-      "w": "shall",
-      "start": 26.435,
-      "end": 26.609
-    },
-    {
-      "w": "be",
-      "start": 26.656,
-      "end": 26.725
-    },
-    {
-      "w": "well.”",
-      "start": 26.76,
-      "end": 27.19
-    },
-    {
-      "w": "Doesn’t",
-      "start": 27.515,
-      "end": 27.759
-    },
-    {
-      "w": "tell",
-      "start": 27.782,
-      "end": 27.909
-    },
-    {
-      "w": "him",
-      "start": 27.944,
-      "end": 28.026
-    },
-    {
-      "w": "the",
-      "start": 28.049,
-      "end": 28.118
-    },
-    {
-      "w": "child",
-      "start": 28.153,
-      "end": 28.374
-    },
-    {
-      "w": "is",
-      "start": 28.42,
-      "end": 28.49
-    },
-    {
-      "w": "dead.",
-      "start": 28.536,
-      "end": 28.885
-    },
-    {
-      "w": "Doesn’t",
-      "start": 29.094,
-      "end": 29.372
-    },
-    {
-      "w": "ask",
-      "start": 29.407,
-      "end": 29.535
-    },
-    {
-      "w": "permission.",
-      "start": 29.581,
-      "end": 30.104
-    },
-    {
-      "w": "She",
-      "start": 30.382,
-      "end": 30.487
-    },
-    {
-      "w": "rides",
-      "start": 30.545,
-      "end": 30.731
-    },
-    {
-      "w": "to",
-      "start": 30.765,
-      "end": 30.835
-    },
-    {
-      "w": "Elisha,",
-      "start": 30.882,
-      "end": 31.3
-    },
-    {
-      "w": "blows",
-      "start": 31.334,
-      "end": 31.532
-    },
-    {
-      "w": "past",
-      "start": 31.578,
-      "end": 31.752
-    },
-    {
-      "w": "his",
-      "start": 31.787,
-      "end": 31.88
-    },
-    {
-      "w": "servant,",
-      "start": 31.903,
-      "end": 32.298
-    },
-    {
-      "w": "grabs",
-      "start": 32.333,
-      "end": 32.553
-    },
-    {
-      "w": "the",
-      "start": 32.588,
-      "end": 32.658
-    },
-    {
-      "w": "prophet",
-      "start": 32.693,
-      "end": 32.983
-    },
-    {
-      "w": "by",
-      "start": 33.018,
-      "end": 33.111
-    },
-    {
-      "w": "the",
-      "start": 33.157,
-      "end": 33.227
-    },
-    {
-      "w": "feet",
-      "start": 33.262,
-      "end": 33.459
-    },
-    {
-      "w": "and",
-      "start": 33.494,
-      "end": 33.587
-    },
-    {
-      "w": "says",
-      "start": 33.645,
-      "end": 33.935
-    },
-    {
-      "w": "“as",
-      "start": 34.26,
-      "end": 34.62
-    },
-    {
-      "w": "the",
-      "start": 34.678,
-      "end": 34.747
-    },
-    {
-      "w": "Lord",
-      "start": 34.794,
-      "end": 34.956
-    },
-    {
-      "w": "lives",
-      "start": 35.003,
-      "end": 35.2
-    },
-    {
-      "w": "and",
-      "start": 35.235,
-      "end": 35.316
-    },
-    {
-      "w": "as",
-      "start": 35.363,
-      "end": 35.49
-    },
-    {
-      "w": "your",
-      "start": 35.548,
-      "end": 35.676
-    },
-    {
-      "w": "soul",
-      "start": 35.711,
-      "end": 35.873
-    },
-    {
-      "w": "lives,",
-      "start": 35.908,
-      "end": 36.14
-    },
-    {
-      "w": "I",
-      "start": 36.175,
-      "end": 36.21
-    },
-    {
-      "w": "will",
-      "start": 36.28,
-      "end": 36.407
-    },
-    {
-      "w": "not",
-      "start": 36.442,
-      "end": 36.547
-    },
-    {
-      "w": "leave",
-      "start": 36.582,
-      "end": 36.756
-    },
-    {
-      "w": "you.”",
-      "start": 36.791,
-      "end": 37.081
-    },
-    {
-      "w": "He",
-      "start": 37.406,
-      "end": 37.499
-    },
-    {
-      "w": "gets",
-      "start": 37.545,
-      "end": 37.696
-    },
-    {
-      "w": "up",
-      "start": 37.743,
-      "end": 37.824
-    },
-    {
-      "w": "and",
-      "start": 37.859,
-      "end": 37.94
-    },
-    {
-      "w": "follows",
-      "start": 37.986,
-      "end": 38.253
-    },
-    {
-      "w": "her.",
-      "start": 38.3,
-      "end": 38.579
-    },
-    {
-      "w": "Her",
-      "start": 38.729,
-      "end": 38.846
-    },
-    {
-      "w": "son",
-      "start": 38.892,
-      "end": 39.043
-    },
-    {
-      "w": "died",
-      "start": 39.078,
-      "end": 39.252
-    },
-    {
-      "w": "on",
-      "start": 39.287,
-      "end": 39.345
-    },
-    {
-      "w": "her",
-      "start": 39.38,
-      "end": 39.449
-    },
-    {
-      "w": "lap",
-      "start": 39.496,
-      "end": 39.693
-    },
-    {
-      "w": "and",
-      "start": 39.763,
-      "end": 39.867
-    },
-    {
-      "w": "she",
-      "start": 39.914,
-      "end": 40.041
-    },
-    {
-      "w": "still",
-      "start": 40.099,
-      "end": 40.285
-    },
-    {
-      "w": "said",
-      "start": 40.332,
-      "end": 40.529
-    },
-    {
-      "w": "“it",
-      "start": 40.575,
-      "end": 40.738
-    },
-    {
-      "w": "shall",
-      "start": 40.773,
-      "end": 40.947
-    },
-    {
-      "w": "be",
-      "start": 40.982,
-      "end": 41.051
-    },
-    {
-      "w": "well”",
-      "start": 41.086,
-      "end": 41.342
-    },
-    {
-      "w": "and",
-      "start": 41.377,
-      "end": 41.481
-    },
-    {
-      "w": "refused",
-      "start": 41.527,
-      "end": 41.841
-    },
-    {
-      "w": "to",
-      "start": 41.864,
-      "end": 41.911
-    },
-    {
-      "w": "let",
-      "start": 41.957,
-      "end": 42.05
-    },
-    {
-      "w": "go.",
-      "start": 42.085,
-      "end": 42.375
-    },
-    {
-      "w": "I’m",
-      "start": 42.654,
-      "end": 42.793
-    },
-    {
-      "w": "in",
-      "start": 42.851,
-      "end": 42.932
-    },
-    {
-      "w": "awe.",
-      "start": 43.037,
-      "end": 43.431
-    }
-  ],
-  "renderedAt": 1785530365010
+ "kind": "tea",
+ "teaId": "shunammite",
+ "mood": "dark",
+ "heat": 2,
+ "text": "Her son died on her lap and she still said “it shall be well”… This wealthy woman notices the prophet Elisha keeps passing through and builds him a whole room, bed, table, chair, lamp. He wants to repay her. She says she’s fine. He gives her a son anyway. Years later the boy is out in the field, says “my head, my head,” and dies on her lap at noon. She carries him upstairs, lays him on the prophet’s bed, shuts the door, and calls for a donkey. Her husband asks why she’s going. She just says “it shall be well.” Doesn’t tell him the child is dead. Doesn’t ask permission. She rides to Elisha, blows past his servant, grabs the prophet by the feet and says “as the Lord lives and as your soul lives, I will not leave you.” He gets up and follows her. Her son died on her lap and she still said “it shall be well” and refused to let go. I’m in awe.",
+ "voice": "human",
+ "words": [
+  {
+   "w": "Her",
+   "start": 0.0,
+   "end": 0.24
+  },
+  {
+   "w": "son",
+   "start": 0.24,
+   "end": 0.42
+  },
+  {
+   "w": "died",
+   "start": 0.42,
+   "end": 0.72
+  },
+  {
+   "w": "on",
+   "start": 0.72,
+   "end": 0.86
+  },
+  {
+   "w": "her",
+   "start": 0.86,
+   "end": 1.0
+  },
+  {
+   "w": "lap",
+   "start": 1.0,
+   "end": 1.2
+  },
+  {
+   "w": "and",
+   "start": 1.2,
+   "end": 1.54
+  },
+  {
+   "w": "she",
+   "start": 1.54,
+   "end": 1.7
+  },
+  {
+   "w": "still",
+   "start": 1.7,
+   "end": 2.02
+  },
+  {
+   "w": "said",
+   "start": 2.02,
+   "end": 2.32
+  },
+  {
+   "w": "“it",
+   "start": 2.32,
+   "end": 2.64
+  },
+  {
+   "w": "shall",
+   "start": 2.64,
+   "end": 2.82
+  },
+  {
+   "w": "be",
+   "start": 2.82,
+   "end": 2.96
+  },
+  {
+   "w": "well”…",
+   "start": 2.96,
+   "end": 3.22
+  },
+  {
+   "w": "This",
+   "start": 4.02,
+   "end": 4.22
+  },
+  {
+   "w": "wealthy",
+   "start": 4.22,
+   "end": 4.62
+  },
+  {
+   "w": "woman",
+   "start": 4.62,
+   "end": 4.82
+  },
+  {
+   "w": "notices",
+   "start": 4.82,
+   "end": 5.2
+  },
+  {
+   "w": "the",
+   "start": 5.2,
+   "end": 5.42
+  },
+  {
+   "w": "prophet",
+   "start": 5.42,
+   "end": 5.66
+  },
+  {
+   "w": "Elisha",
+   "start": 5.66,
+   "end": 6.2
+  },
+  {
+   "w": "keeps",
+   "start": 6.4,
+   "end": 6.56
+  },
+  {
+   "w": "passing",
+   "start": 6.56,
+   "end": 6.92
+  },
+  {
+   "w": "through",
+   "start": 6.92,
+   "end": 7.2
+  },
+  {
+   "w": "and",
+   "start": 7.2,
+   "end": 7.64
+  },
+  {
+   "w": "builds",
+   "start": 7.64,
+   "end": 7.92
+  },
+  {
+   "w": "him",
+   "start": 7.92,
+   "end": 8.16
+  },
+  {
+   "w": "a",
+   "start": 8.16,
+   "end": 8.36
+  },
+  {
+   "w": "whole",
+   "start": 8.36,
+   "end": 8.66
+  },
+  {
+   "w": "room,",
+   "start": 8.66,
+   "end": 9.2
+  },
+  {
+   "w": "bed,",
+   "start": 9.68,
+   "end": 9.86
+  },
+  {
+   "w": "table,",
+   "start": 10.7,
+   "end": 10.7
+  },
+  {
+   "w": "chair,",
+   "start": 11.22,
+   "end": 11.38
+  },
+  {
+   "w": "lamp.",
+   "start": 11.9,
+   "end": 12.0
+  },
+  {
+   "w": "He",
+   "start": 12.6,
+   "end": 12.76
+  },
+  {
+   "w": "wants",
+   "start": 12.76,
+   "end": 12.88
+  },
+  {
+   "w": "to",
+   "start": 12.88,
+   "end": 13.06
+  },
+  {
+   "w": "repay",
+   "start": 13.16,
+   "end": 13.26
+  },
+  {
+   "w": "her.",
+   "start": 13.26,
+   "end": 13.68
+  },
+  {
+   "w": "She",
+   "start": 14.04,
+   "end": 14.22
+  },
+  {
+   "w": "says",
+   "start": 14.22,
+   "end": 14.36
+  },
+  {
+   "w": "she’s",
+   "start": 14.36,
+   "end": 14.56
+  },
+  {
+   "w": "fine.",
+   "start": 14.56,
+   "end": 14.76
+  },
+  {
+   "w": "He",
+   "start": 15.28,
+   "end": 15.4
+  },
+  {
+   "w": "gives",
+   "start": 15.4,
+   "end": 15.6
+  },
+  {
+   "w": "her",
+   "start": 15.6,
+   "end": 15.86
+  },
+  {
+   "w": "a",
+   "start": 15.86,
+   "end": 16.04
+  },
+  {
+   "w": "son",
+   "start": 16.04,
+   "end": 16.3
+  },
+  {
+   "w": "anyway.",
+   "start": 16.3,
+   "end": 16.62
+  },
+  {
+   "w": "Years",
+   "start": 17.32,
+   "end": 17.48
+  },
+  {
+   "w": "later",
+   "start": 17.48,
+   "end": 17.8
+  },
+  {
+   "w": "the",
+   "start": 18.04,
+   "end": 18.2
+  },
+  {
+   "w": "boy",
+   "start": 18.2,
+   "end": 18.42
+  },
+  {
+   "w": "is",
+   "start": 18.42,
+   "end": 18.64
+  },
+  {
+   "w": "out",
+   "start": 18.64,
+   "end": 18.9
+  },
+  {
+   "w": "in",
+   "start": 18.9,
+   "end": 19.1
+  },
+  {
+   "w": "the",
+   "start": 19.1,
+   "end": 19.22
+  },
+  {
+   "w": "field,",
+   "start": 19.22,
+   "end": 19.54
+  },
+  {
+   "w": "says",
+   "start": 19.92,
+   "end": 20.26
+  },
+  {
+   "w": "“my",
+   "start": 20.76,
+   "end": 20.84
+  },
+  {
+   "w": "head,",
+   "start": 20.84,
+   "end": 21.1
+  },
+  {
+   "w": "my",
+   "start": 21.46,
+   "end": 21.56
+  },
+  {
+   "w": "head,”",
+   "start": 21.56,
+   "end": 21.84
+  },
+  {
+   "w": "and",
+   "start": 22.4,
+   "end": 22.64
+  },
+  {
+   "w": "dies",
+   "start": 22.64,
+   "end": 22.92
+  },
+  {
+   "w": "on",
+   "start": 22.92,
+   "end": 23.08
+  },
+  {
+   "w": "her",
+   "start": 23.08,
+   "end": 23.24
+  },
+  {
+   "w": "lap",
+   "start": 23.24,
+   "end": 23.44
+  },
+  {
+   "w": "at",
+   "start": 23.44,
+   "end": 23.6
+  },
+  {
+   "w": "noon.",
+   "start": 23.6,
+   "end": 23.8
+  },
+  {
+   "w": "She",
+   "start": 24.52,
+   "end": 24.68
+  },
+  {
+   "w": "carries",
+   "start": 24.68,
+   "end": 24.92
+  },
+  {
+   "w": "him",
+   "start": 24.92,
+   "end": 25.08
+  },
+  {
+   "w": "upstairs,",
+   "start": 25.08,
+   "end": 25.36
+  },
+  {
+   "w": "lays",
+   "start": 25.74,
+   "end": 26.06
+  },
+  {
+   "w": "him",
+   "start": 26.06,
+   "end": 26.22
+  },
+  {
+   "w": "on",
+   "start": 26.22,
+   "end": 26.3
+  },
+  {
+   "w": "the",
+   "start": 26.3,
+   "end": 26.42
+  },
+  {
+   "w": "prophet’s",
+   "start": 26.42,
+   "end": 26.78
+  },
+  {
+   "w": "bed,",
+   "start": 26.78,
+   "end": 27.0
+  },
+  {
+   "w": "shuts",
+   "start": 27.38,
+   "end": 27.56
+  },
+  {
+   "w": "the",
+   "start": 27.56,
+   "end": 27.74
+  },
+  {
+   "w": "door,",
+   "start": 27.74,
+   "end": 27.92
+  },
+  {
+   "w": "and",
+   "start": 27.92,
+   "end": 28.28
+  },
+  {
+   "w": "calls",
+   "start": 28.28,
+   "end": 28.52
+  },
+  {
+   "w": "for",
+   "start": 28.52,
+   "end": 28.72
+  },
+  {
+   "w": "a",
+   "start": 28.72,
+   "end": 28.8
+  },
+  {
+   "w": "donkey.",
+   "start": 28.8,
+   "end": 29.04
+  },
+  {
+   "w": "Her",
+   "start": 29.82,
+   "end": 29.92
+  },
+  {
+   "w": "husband",
+   "start": 29.92,
+   "end": 30.16
+  },
+  {
+   "w": "asks",
+   "start": 30.16,
+   "end": 30.48
+  },
+  {
+   "w": "why",
+   "start": 30.48,
+   "end": 30.92
+  },
+  {
+   "w": "she’s",
+   "start": 30.92,
+   "end": 31.14
+  },
+  {
+   "w": "going.",
+   "start": 31.14,
+   "end": 31.4
+  },
+  {
+   "w": "She",
+   "start": 32.0,
+   "end": 32.18
+  },
+  {
+   "w": "just",
+   "start": 32.18,
+   "end": 32.32
+  },
+  {
+   "w": "says",
+   "start": 32.32,
+   "end": 32.66
+  },
+  {
+   "w": "“it",
+   "start": 33.02,
+   "end": 33.2
+  },
+  {
+   "w": "shall",
+   "start": 33.2,
+   "end": 33.38
+  },
+  {
+   "w": "be",
+   "start": 33.38,
+   "end": 33.54
+  },
+  {
+   "w": "well.”",
+   "start": 33.54,
+   "end": 33.76
+  },
+  {
+   "w": "Doesn’t",
+   "start": 34.36,
+   "end": 34.74
+  },
+  {
+   "w": "tell",
+   "start": 34.74,
+   "end": 34.92
+  },
+  {
+   "w": "him",
+   "start": 34.92,
+   "end": 35.16
+  },
+  {
+   "w": "the",
+   "start": 35.16,
+   "end": 35.4
+  },
+  {
+   "w": "child",
+   "start": 35.4,
+   "end": 35.6
+  },
+  {
+   "w": "is",
+   "start": 35.6,
+   "end": 35.74
+  },
+  {
+   "w": "dead.",
+   "start": 35.74,
+   "end": 35.96
+  },
+  {
+   "w": "Doesn’t",
+   "start": 36.3,
+   "end": 36.72
+  },
+  {
+   "w": "ask",
+   "start": 36.72,
+   "end": 36.86
+  },
+  {
+   "w": "permission.",
+   "start": 36.86,
+   "end": 37.22
+  },
+  {
+   "w": "She",
+   "start": 37.88,
+   "end": 37.94
+  },
+  {
+   "w": "rides",
+   "start": 37.94,
+   "end": 38.12
+  },
+  {
+   "w": "to",
+   "start": 38.12,
+   "end": 38.3
+  },
+  {
+   "w": "Elisha,",
+   "start": 38.3,
+   "end": 38.9
+  },
+  {
+   "w": "blows",
+   "start": 39.16,
+   "end": 39.48
+  },
+  {
+   "w": "past",
+   "start": 39.48,
+   "end": 39.78
+  },
+  {
+   "w": "his",
+   "start": 39.78,
+   "end": 39.98
+  },
+  {
+   "w": "servant,",
+   "start": 39.98,
+   "end": 40.3
+  },
+  {
+   "w": "grabs",
+   "start": 40.58,
+   "end": 41.02
+  },
+  {
+   "w": "the",
+   "start": 41.02,
+   "end": 41.22
+  },
+  {
+   "w": "prophet",
+   "start": 41.22,
+   "end": 41.46
+  },
+  {
+   "w": "by",
+   "start": 41.46,
+   "end": 41.74
+  },
+  {
+   "w": "the",
+   "start": 41.74,
+   "end": 42.04
+  },
+  {
+   "w": "feet",
+   "start": 42.04,
+   "end": 42.28
+  },
+  {
+   "w": "and",
+   "start": 42.46,
+   "end": 42.62
+  },
+  {
+   "w": "says",
+   "start": 42.62,
+   "end": 42.88
+  },
+  {
+   "w": "“as",
+   "start": 43.54,
+   "end": 43.62
+  },
+  {
+   "w": "the",
+   "start": 43.62,
+   "end": 43.78
+  },
+  {
+   "w": "Lord",
+   "start": 43.78,
+   "end": 43.96
+  },
+  {
+   "w": "lives",
+   "start": 43.96,
+   "end": 44.3
+  },
+  {
+   "w": "and",
+   "start": 44.3,
+   "end": 45.0
+  },
+  {
+   "w": "as",
+   "start": 45.0,
+   "end": 45.26
+  },
+  {
+   "w": "your",
+   "start": 45.26,
+   "end": 45.38
+  },
+  {
+   "w": "soul",
+   "start": 45.38,
+   "end": 45.68
+  },
+  {
+   "w": "lives,",
+   "start": 45.68,
+   "end": 46.02
+  },
+  {
+   "w": "I",
+   "start": 46.36,
+   "end": 46.72
+  },
+  {
+   "w": "will",
+   "start": 46.72,
+   "end": 47.0
+  },
+  {
+   "w": "not",
+   "start": 47.0,
+   "end": 47.18
+  },
+  {
+   "w": "leave",
+   "start": 47.18,
+   "end": 47.38
+  },
+  {
+   "w": "you.”",
+   "start": 47.38,
+   "end": 47.58
+  },
+  {
+   "w": "He",
+   "start": 48.16,
+   "end": 48.38
+  },
+  {
+   "w": "gets",
+   "start": 48.38,
+   "end": 48.52
+  },
+  {
+   "w": "up",
+   "start": 48.52,
+   "end": 48.7
+  },
+  {
+   "w": "and",
+   "start": 48.7,
+   "end": 48.94
+  },
+  {
+   "w": "follows",
+   "start": 48.94,
+   "end": 49.16
+  },
+  {
+   "w": "her.",
+   "start": 49.16,
+   "end": 49.4
+  },
+  {
+   "w": "Her",
+   "start": 49.84,
+   "end": 49.96
+  },
+  {
+   "w": "son",
+   "start": 49.96,
+   "end": 50.18
+  },
+  {
+   "w": "died",
+   "start": 50.18,
+   "end": 50.46
+  },
+  {
+   "w": "on",
+   "start": 50.46,
+   "end": 50.64
+  },
+  {
+   "w": "her",
+   "start": 50.64,
+   "end": 50.78
+  },
+  {
+   "w": "lap",
+   "start": 50.78,
+   "end": 50.98
+  },
+  {
+   "w": "and",
+   "start": 50.98,
+   "end": 51.44
+  },
+  {
+   "w": "she",
+   "start": 51.44,
+   "end": 51.62
+  },
+  {
+   "w": "still",
+   "start": 51.62,
+   "end": 51.82
+  },
+  {
+   "w": "said",
+   "start": 51.82,
+   "end": 52.12
+  },
+  {
+   "w": "“it",
+   "start": 52.38,
+   "end": 52.58
+  },
+  {
+   "w": "shall",
+   "start": 52.58,
+   "end": 52.74
+  },
+  {
+   "w": "be",
+   "start": 52.74,
+   "end": 52.88
+  },
+  {
+   "w": "well”",
+   "start": 52.88,
+   "end": 53.08
+  },
+  {
+   "w": "and",
+   "start": 53.4,
+   "end": 53.62
+  },
+  {
+   "w": "refused",
+   "start": 53.62,
+   "end": 53.92
+  },
+  {
+   "w": "to",
+   "start": 53.92,
+   "end": 54.14
+  },
+  {
+   "w": "let",
+   "start": 54.14,
+   "end": 54.22
+  },
+  {
+   "w": "go.",
+   "start": 54.34,
+   "end": 54.54
+  },
+  {
+   "w": "I’m",
+   "start": 54.54,
+   "end": 55.3
+  },
+  {
+   "w": "in",
+   "start": 55.3,
+   "end": 55.4
+  },
+  {
+   "w": "awe.",
+   "start": 55.4,
+   "end": 55.9
+  }
+ ],
+ "renderedAt": 1785530365010
 }

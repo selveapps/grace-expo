@@ -34,10 +34,13 @@ const withTimeout = (p) => Promise.race([
 
 const MESSAGES = {
   apple_unavailable: 'Sign in with Apple needs the App Store build. Use Google or your email below.',
+  apple_failed: "Sign in with Apple didn't complete. Please try again.",
   google_unavailable: 'Google sign-in is not available right now. Try Apple or your email.',
   google_failed: "Google didn't complete that sign-in. Please try again.",
+  server_verification_failed: "We couldn't verify that sign-in. Check your connection and try again, or use your email.",
   invalid_email: 'That email does not look right. Check it and try again.',
   timeout: 'That took too long. Check your connection and try again.',
+  network: 'That took too long. Check your connection and try again.',
   default: "That didn't go through. Please try again.",
 };
 

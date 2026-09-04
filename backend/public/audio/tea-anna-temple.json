@@ -1,696 +1,691 @@
 {
-  "kind": "tea",
-  "teaId": "anna-temple",
-  "mood": "dark",
-  "heat": 1,
-  "text": "Eighty-four years of showing up with zero proof… and she still got the scoop… … Anna. Prophetess. From the tribe of Asher, one of the northern tribes that got scattered centuries earlier. Most people had written her people off. Married seven years. Then her husband dies. Luke says she was a widow of about eighty-four years. Decades. She never left the temple. Fasting and praying night and day. Waiting for something she had no proof was coming. One ordinary morning a poor couple walks in with a newborn to do the legal requirement. Nothing about it looks special. She walks in at that exact instant, sees the baby, and then goes out and tells everyone in Jerusalem who’s been waiting for redemption. Eighty-four years of nothing… and she got the scoop. I’m soft for the long game.",
-  "voice": "FGY2WhTYpPnrIDTdsKH5",
-  "words": [
-    {
-      "w": "Eighty-four",
-      "start": 0,
-      "end": 0.453
-    },
-    {
-      "w": "years",
-      "start": 0.511,
-      "end": 0.72
-    },
-    {
-      "w": "of",
-      "start": 0.755,
-      "end": 0.801
-    },
-    {
-      "w": "showing",
-      "start": 0.836,
-      "end": 1.057
-    },
-    {
-      "w": "up",
-      "start": 1.091,
-      "end": 1.161
-    },
-    {
-      "w": "with",
-      "start": 1.196,
-      "end": 1.335
-    },
-    {
-      "w": "zero",
-      "start": 1.416,
-      "end": 1.73
-    },
-    {
-      "w": "proof…",
-      "start": 1.8,
-      "end": 2.368
-    },
-    {
-      "w": "and",
-      "start": 2.612,
-      "end": 2.728
-    },
-    {
-      "w": "she",
-      "start": 2.786,
-      "end": 2.891
-    },
-    {
-      "w": "still",
-      "start": 2.961,
-      "end": 3.158
-    },
-    {
-      "w": "got",
-      "start": 3.204,
-      "end": 3.355
-    },
-    {
-      "w": "the",
-      "start": 3.39,
-      "end": 3.471
-    },
-    {
-      "w": "scoop…",
-      "start": 3.506,
-      "end": 4.098
-    },
-    {
-      "w": "…",
-      "start": 4.203,
-      "end": 4.331
-    },
-    {
-      "w": "Anna.",
-      "start": 4.934,
-      "end": 5.538
-    },
-    {
-      "w": "Prophetess.",
-      "start": 5.979,
-      "end": 6.792
-    },
-    {
-      "w": "From",
-      "start": 6.896,
-      "end": 7.07
-    },
-    {
-      "w": "the",
-      "start": 7.105,
-      "end": 7.175
-    },
-    {
-      "w": "tribe",
-      "start": 7.21,
-      "end": 7.523
-    },
-    {
-      "w": "of",
-      "start": 7.546,
-      "end": 7.605
-    },
-    {
-      "w": "Asher,",
-      "start": 7.686,
-      "end": 8.011
-    },
-    {
-      "w": "one",
-      "start": 8.278,
-      "end": 8.394
-    },
-    {
-      "w": "of",
-      "start": 8.429,
-      "end": 8.475
-    },
-    {
-      "w": "the",
-      "start": 8.51,
-      "end": 8.58
-    },
-    {
-      "w": "northern",
-      "start": 8.626,
-      "end": 8.905
-    },
-    {
-      "w": "tribes",
-      "start": 8.94,
-      "end": 9.369
-    },
-    {
-      "w": "that",
-      "start": 9.439,
-      "end": 9.659
-    },
-    {
-      "w": "got",
-      "start": 9.718,
-      "end": 9.961
-    },
-    {
-      "w": "scattered",
-      "start": 10.066,
-      "end": 10.437
-    },
-    {
-      "w": "centuries",
-      "start": 10.495,
-      "end": 10.832
-    },
-    {
-      "w": "earlier.",
-      "start": 10.89,
-      "end": 11.413
-    },
-    {
-      "w": "Most",
-      "start": 11.691,
-      "end": 11.912
-    },
-    {
-      "w": "people",
-      "start": 11.947,
-      "end": 12.202
-    },
-    {
-      "w": "had",
-      "start": 12.249,
-      "end": 12.388
-    },
-    {
-      "w": "written",
-      "start": 12.434,
-      "end": 12.713
-    },
-    {
-      "w": "her",
-      "start": 12.771,
-      "end": 12.864
-    },
-    {
-      "w": "people",
-      "start": 12.91,
-      "end": 13.154
-    },
-    {
-      "w": "off.",
-      "start": 13.201,
-      "end": 13.723
-    },
-    {
-      "w": "Married",
-      "start": 13.909,
-      "end": 14.199
-    },
-    {
-      "w": "seven",
-      "start": 14.234,
-      "end": 14.455
-    },
-    {
-      "w": "years.",
-      "start": 14.489,
-      "end": 15.023
-    },
-    {
-      "w": "Then",
-      "start": 15.105,
-      "end": 15.279
-    },
-    {
-      "w": "her",
-      "start": 15.36,
-      "end": 15.453
-    },
-    {
-      "w": "husband",
-      "start": 15.511,
-      "end": 15.801
-    },
-    {
-      "w": "dies.",
-      "start": 15.848,
-      "end": 16.382
-    },
-    {
-      "w": "Luke",
-      "start": 16.765,
-      "end": 16.951
-    },
-    {
-      "w": "says",
-      "start": 16.986,
-      "end": 17.102
-    },
-    {
-      "w": "she",
-      "start": 17.136,
-      "end": 17.229
-    },
-    {
-      "w": "was",
-      "start": 17.276,
-      "end": 17.369
-    },
-    {
-      "w": "a",
-      "start": 17.404,
-      "end": 17.438
-    },
-    {
-      "w": "widow",
-      "start": 17.485,
-      "end": 17.775
-    },
-    {
-      "w": "of",
-      "start": 17.88,
-      "end": 17.972
-    },
-    {
-      "w": "about",
-      "start": 18.019,
-      "end": 18.367
-    },
-    {
-      "w": "eighty-four",
-      "start": 18.472,
-      "end": 18.924
-    },
-    {
-      "w": "years.",
-      "start": 18.982,
-      "end": 19.424
-    },
-    {
-      "w": "Decades.",
-      "start": 19.551,
-      "end": 20.178
-    },
-    {
-      "w": "She",
-      "start": 20.202,
-      "end": 20.329
-    },
-    {
-      "w": "never",
-      "start": 20.434,
-      "end": 20.619
-    },
-    {
-      "w": "left",
-      "start": 20.678,
-      "end": 20.817
-    },
-    {
-      "w": "the",
-      "start": 20.852,
-      "end": 20.921
-    },
-    {
-      "w": "temple.",
-      "start": 20.956,
-      "end": 21.374
-    },
-    {
-      "w": "Fasting",
-      "start": 21.618,
-      "end": 22.082
-    },
-    {
-      "w": "and",
-      "start": 22.129,
-      "end": 22.233
-    },
-    {
-      "w": "praying",
-      "start": 22.303,
-      "end": 22.628
-    },
-    {
-      "w": "night",
-      "start": 22.814,
-      "end": 23.034
-    },
-    {
-      "w": "and",
-      "start": 23.069,
-      "end": 23.139
-    },
-    {
-      "w": "day.",
-      "start": 23.174,
-      "end": 23.51
-    },
-    {
-      "w": "Waiting",
-      "start": 23.719,
-      "end": 23.963
-    },
-    {
-      "w": "for",
-      "start": 23.998,
-      "end": 24.091
-    },
-    {
-      "w": "something",
-      "start": 24.126,
-      "end": 24.416
-    },
-    {
-      "w": "she",
-      "start": 24.462,
-      "end": 24.555
-    },
-    {
-      "w": "had",
-      "start": 24.613,
-      "end": 24.799
-    },
-    {
-      "w": "no",
-      "start": 24.845,
-      "end": 24.938
-    },
-    {
-      "w": "proof",
-      "start": 25.02,
-      "end": 25.263
-    },
-    {
-      "w": "was",
-      "start": 25.322,
-      "end": 25.426
-    },
-    {
-      "w": "coming.",
-      "start": 25.472,
-      "end": 25.937
-    },
-    {
-      "w": "One",
-      "start": 27.237,
-      "end": 27.434
-    },
-    {
-      "w": "ordinary",
-      "start": 27.469,
-      "end": 27.806
-    },
-    {
-      "w": "morning",
-      "start": 27.864,
-      "end": 28.166
-    },
-    {
-      "w": "a",
-      "start": 28.27,
-      "end": 28.34
-    },
-    {
-      "w": "poor",
-      "start": 28.398,
-      "end": 28.561
-    },
-    {
-      "w": "couple",
-      "start": 28.607,
-      "end": 28.839
-    },
-    {
-      "w": "walks",
-      "start": 28.874,
-      "end": 29.118
-    },
-    {
-      "w": "in",
-      "start": 29.153,
-      "end": 29.222
-    },
-    {
-      "w": "with",
-      "start": 29.257,
-      "end": 29.385
-    },
-    {
-      "w": "a",
-      "start": 29.42,
-      "end": 29.443
-    },
-    {
-      "w": "newborn",
-      "start": 29.489,
-      "end": 29.803
-    },
-    {
-      "w": "to",
-      "start": 29.849,
-      "end": 29.907
-    },
-    {
-      "w": "do",
-      "start": 29.965,
-      "end": 30.047
-    },
-    {
-      "w": "the",
-      "start": 30.093,
-      "end": 30.163
-    },
-    {
-      "w": "legal",
-      "start": 30.232,
-      "end": 30.488
-    },
-    {
-      "w": "requirement.",
-      "start": 30.557,
-      "end": 31.254
-    },
-    {
-      "w": "Nothing",
-      "start": 31.858,
-      "end": 32.125
-    },
-    {
-      "w": "about",
-      "start": 32.16,
-      "end": 32.357
-    },
-    {
-      "w": "it",
-      "start": 32.392,
-      "end": 32.461
-    },
-    {
-      "w": "looks",
-      "start": 32.496,
-      "end": 32.67
-    },
-    {
-      "w": "special.",
-      "start": 32.694,
-      "end": 33.216
-    },
-    {
-      "w": "She",
-      "start": 33.402,
-      "end": 33.518
-    },
-    {
-      "w": "walks",
-      "start": 33.553,
-      "end": 33.797
-    },
-    {
-      "w": "in",
-      "start": 33.831,
-      "end": 33.924
-    },
-    {
-      "w": "at",
-      "start": 33.959,
-      "end": 34.029
-    },
-    {
-      "w": "that",
-      "start": 34.064,
-      "end": 34.249
-    },
-    {
-      "w": "exact",
-      "start": 34.319,
-      "end": 34.772
-    },
-    {
-      "w": "instant,",
-      "start": 34.83,
-      "end": 35.352
-    },
-    {
-      "w": "sees",
-      "start": 35.457,
-      "end": 35.712
-    },
-    {
-      "w": "the",
-      "start": 35.77,
-      "end": 35.84
-    },
-    {
-      "w": "baby,",
-      "start": 35.875,
-      "end": 36.316
-    },
-    {
-      "w": "and",
-      "start": 36.351,
-      "end": 36.467
-    },
-    {
-      "w": "then",
-      "start": 36.502,
-      "end": 36.618
-    },
-    {
-      "w": "goes",
-      "start": 36.676,
-      "end": 36.827
-    },
-    {
-      "w": "out",
-      "start": 36.862,
-      "end": 36.978
-    },
-    {
-      "w": "and",
-      "start": 37.013,
-      "end": 37.094
-    },
-    {
-      "w": "tells",
-      "start": 37.129,
-      "end": 37.338
-    },
-    {
-      "w": "everyone",
-      "start": 37.407,
-      "end": 37.918
-    },
-    {
-      "w": "in",
-      "start": 37.953,
-      "end": 38.023
-    },
-    {
-      "w": "Jerusalem",
-      "start": 38.069,
-      "end": 38.51
-    },
-    {
-      "w": "who’s",
-      "start": 38.545,
-      "end": 38.754
-    },
-    {
-      "w": "been",
-      "start": 38.788,
-      "end": 38.916
-    },
-    {
-      "w": "waiting",
-      "start": 38.951,
-      "end": 39.195
-    },
-    {
-      "w": "for",
-      "start": 39.253,
-      "end": 39.357
-    },
-    {
-      "w": "redemption.",
-      "start": 39.427,
-      "end": 39.949
-    },
-    {
-      "w": "Eighty-four",
-      "start": 40.333,
-      "end": 40.82
-    },
-    {
-      "w": "years",
-      "start": 40.878,
-      "end": 41.087
-    },
-    {
-      "w": "of",
-      "start": 41.134,
-      "end": 41.203
-    },
-    {
-      "w": "nothing…",
-      "start": 41.273,
-      "end": 41.726
-    },
-    {
-      "w": "and",
-      "start": 42.109,
-      "end": 42.237
-    },
-    {
-      "w": "she",
-      "start": 42.283,
-      "end": 42.376
-    },
-    {
-      "w": "got",
-      "start": 42.434,
-      "end": 42.597
-    },
-    {
-      "w": "the",
-      "start": 42.643,
-      "end": 42.713
-    },
-    {
-      "w": "scoop.",
-      "start": 42.747,
-      "end": 43.177
-    },
-    {
-      "w": "I’m",
-      "start": 43.502,
-      "end": 43.653
-    },
-    {
-      "w": "soft",
-      "start": 43.723,
-      "end": 43.955
-    },
-    {
-      "w": "for",
-      "start": 43.99,
-      "end": 44.083
-    },
-    {
-      "w": "the",
-      "start": 44.117,
-      "end": 44.187
-    },
-    {
-      "w": "long",
-      "start": 44.234,
-      "end": 44.396
-    },
-    {
-      "w": "game.",
-      "start": 44.443,
-      "end": 44.779
-    }
-  ],
-  "renderedAt": 1785530395341
+ "kind": "tea",
+ "teaId": "anna-temple",
+ "mood": "dark",
+ "heat": 1,
+ "text": "Eighty-four years of showing up with zero proof… and she still got the scoop… Anna. Prophetess. From the tribe of Asher, one of the northern tribes that got scattered centuries earlier. Most people had written her people off. Married seven years. Then her husband dies. Luke says she was a widow of about eighty-four years. Decades. She never left the temple. Fasting and praying night and day. Waiting for something she had no proof was coming. One ordinary morning a poor couple walks in with a newborn to do the legal requirement. Nothing about it looks special. She walks in at that exact instant, sees the baby, and then goes out and tells everyone in Jerusalem who’s been waiting for redemption. Eighty-four years of nothing… and she got the scoop. I’m soft for the long game.",
+ "voice": "human",
+ "words": [
+  {
+   "w": "Eighty-four",
+   "start": 0.0,
+   "end": 0.44
+  },
+  {
+   "w": "years",
+   "start": 0.44,
+   "end": 0.66
+  },
+  {
+   "w": "of",
+   "start": 0.66,
+   "end": 0.86
+  },
+  {
+   "w": "showing",
+   "start": 0.86,
+   "end": 1.06
+  },
+  {
+   "w": "up",
+   "start": 1.06,
+   "end": 1.28
+  },
+  {
+   "w": "with",
+   "start": 1.28,
+   "end": 1.44
+  },
+  {
+   "w": "zero",
+   "start": 1.44,
+   "end": 1.68
+  },
+  {
+   "w": "proof…",
+   "start": 1.68,
+   "end": 2.02
+  },
+  {
+   "w": "and",
+   "start": 2.3,
+   "end": 2.4
+  },
+  {
+   "w": "she",
+   "start": 2.4,
+   "end": 2.58
+  },
+  {
+   "w": "still",
+   "start": 2.58,
+   "end": 2.86
+  },
+  {
+   "w": "got",
+   "start": 2.86,
+   "end": 3.08
+  },
+  {
+   "w": "the",
+   "start": 3.08,
+   "end": 3.22
+  },
+  {
+   "w": "scoop…",
+   "start": 3.22,
+   "end": 3.48
+  },
+  {
+   "w": "Anna.",
+   "start": 4.34,
+   "end": 4.34
+  },
+  {
+   "w": "Prophetess.",
+   "start": 4.72,
+   "end": 5.34
+  },
+  {
+   "w": "From",
+   "start": 5.8,
+   "end": 5.88
+  },
+  {
+   "w": "the",
+   "start": 5.88,
+   "end": 6.04
+  },
+  {
+   "w": "tribe",
+   "start": 6.04,
+   "end": 6.22
+  },
+  {
+   "w": "of",
+   "start": 6.22,
+   "end": 6.44
+  },
+  {
+   "w": "Asher,",
+   "start": 6.44,
+   "end": 6.8
+  },
+  {
+   "w": "one",
+   "start": 7.24,
+   "end": 7.28
+  },
+  {
+   "w": "of",
+   "start": 7.28,
+   "end": 7.4
+  },
+  {
+   "w": "the",
+   "start": 7.4,
+   "end": 7.52
+  },
+  {
+   "w": "northern",
+   "start": 7.52,
+   "end": 7.76
+  },
+  {
+   "w": "tribes",
+   "start": 7.76,
+   "end": 8.08
+  },
+  {
+   "w": "that",
+   "start": 8.08,
+   "end": 8.24
+  },
+  {
+   "w": "got",
+   "start": 8.24,
+   "end": 8.36
+  },
+  {
+   "w": "scattered",
+   "start": 8.36,
+   "end": 8.72
+  },
+  {
+   "w": "centuries",
+   "start": 8.72,
+   "end": 9.1
+  },
+  {
+   "w": "earlier.",
+   "start": 9.1,
+   "end": 9.66
+  },
+  {
+   "w": "Most",
+   "start": 10.12,
+   "end": 10.3
+  },
+  {
+   "w": "people",
+   "start": 10.3,
+   "end": 10.56
+  },
+  {
+   "w": "had",
+   "start": 10.56,
+   "end": 10.78
+  },
+  {
+   "w": "written",
+   "start": 10.78,
+   "end": 11.02
+  },
+  {
+   "w": "her",
+   "start": 11.02,
+   "end": 11.24
+  },
+  {
+   "w": "people",
+   "start": 11.24,
+   "end": 11.5
+  },
+  {
+   "w": "off.",
+   "start": 11.5,
+   "end": 11.82
+  },
+  {
+   "w": "Married",
+   "start": 12.22,
+   "end": 12.46
+  },
+  {
+   "w": "seven",
+   "start": 12.46,
+   "end": 12.84
+  },
+  {
+   "w": "years.",
+   "start": 12.84,
+   "end": 13.2
+  },
+  {
+   "w": "Then",
+   "start": 13.52,
+   "end": 13.76
+  },
+  {
+   "w": "her",
+   "start": 13.76,
+   "end": 14.08
+  },
+  {
+   "w": "husband",
+   "start": 14.08,
+   "end": 14.36
+  },
+  {
+   "w": "dies.",
+   "start": 14.36,
+   "end": 14.64
+  },
+  {
+   "w": "Luke",
+   "start": 15.34,
+   "end": 15.48
+  },
+  {
+   "w": "says",
+   "start": 15.48,
+   "end": 15.82
+  },
+  {
+   "w": "she",
+   "start": 15.82,
+   "end": 16.2
+  },
+  {
+   "w": "was",
+   "start": 16.28,
+   "end": 16.36
+  },
+  {
+   "w": "a",
+   "start": 16.36,
+   "end": 16.5
+  },
+  {
+   "w": "widow",
+   "start": 16.5,
+   "end": 16.76
+  },
+  {
+   "w": "of",
+   "start": 16.76,
+   "end": 17.4
+  },
+  {
+   "w": "about",
+   "start": 17.4,
+   "end": 17.68
+  },
+  {
+   "w": "eighty-four",
+   "start": 18.14,
+   "end": 18.6
+  },
+  {
+   "w": "years.",
+   "start": 18.6,
+   "end": 19.2
+  },
+  {
+   "w": "Decades.",
+   "start": 20.4,
+   "end": 20.92
+  },
+  {
+   "w": "She",
+   "start": 21.36,
+   "end": 21.38
+  },
+  {
+   "w": "never",
+   "start": 21.38,
+   "end": 21.66
+  },
+  {
+   "w": "left",
+   "start": 21.66,
+   "end": 21.88
+  },
+  {
+   "w": "the",
+   "start": 21.88,
+   "end": 22.04
+  },
+  {
+   "w": "temple.",
+   "start": 22.04,
+   "end": 22.28
+  },
+  {
+   "w": "Fasting",
+   "start": 22.88,
+   "end": 23.1
+  },
+  {
+   "w": "and",
+   "start": 23.1,
+   "end": 23.48
+  },
+  {
+   "w": "praying",
+   "start": 23.48,
+   "end": 23.8
+  },
+  {
+   "w": "night",
+   "start": 23.8,
+   "end": 24.44
+  },
+  {
+   "w": "and",
+   "start": 24.44,
+   "end": 24.64
+  },
+  {
+   "w": "day.",
+   "start": 24.64,
+   "end": 24.92
+  },
+  {
+   "w": "Waiting",
+   "start": 25.4,
+   "end": 25.62
+  },
+  {
+   "w": "for",
+   "start": 25.62,
+   "end": 25.82
+  },
+  {
+   "w": "something",
+   "start": 25.82,
+   "end": 26.06
+  },
+  {
+   "w": "she",
+   "start": 26.06,
+   "end": 26.28
+  },
+  {
+   "w": "had",
+   "start": 26.28,
+   "end": 26.4
+  },
+  {
+   "w": "no",
+   "start": 26.4,
+   "end": 26.66
+  },
+  {
+   "w": "proof",
+   "start": 26.66,
+   "end": 26.88
+  },
+  {
+   "w": "was",
+   "start": 26.88,
+   "end": 27.04
+  },
+  {
+   "w": "coming.",
+   "start": 27.04,
+   "end": 27.34
+  },
+  {
+   "w": "One",
+   "start": 27.9,
+   "end": 28.22
+  },
+  {
+   "w": "ordinary",
+   "start": 28.22,
+   "end": 28.74
+  },
+  {
+   "w": "morning",
+   "start": 28.74,
+   "end": 29.14
+  },
+  {
+   "w": "a",
+   "start": 29.14,
+   "end": 29.44
+  },
+  {
+   "w": "poor",
+   "start": 29.44,
+   "end": 29.72
+  },
+  {
+   "w": "couple",
+   "start": 29.72,
+   "end": 29.98
+  },
+  {
+   "w": "walks",
+   "start": 29.98,
+   "end": 30.28
+  },
+  {
+   "w": "in",
+   "start": 30.28,
+   "end": 30.56
+  },
+  {
+   "w": "with",
+   "start": 30.56,
+   "end": 30.7
+  },
+  {
+   "w": "a",
+   "start": 30.7,
+   "end": 30.82
+  },
+  {
+   "w": "newborn",
+   "start": 30.82,
+   "end": 31.06
+  },
+  {
+   "w": "to",
+   "start": 31.06,
+   "end": 31.34
+  },
+  {
+   "w": "do",
+   "start": 31.34,
+   "end": 31.46
+  },
+  {
+   "w": "the",
+   "start": 31.46,
+   "end": 31.6
+  },
+  {
+   "w": "legal",
+   "start": 31.6,
+   "end": 31.82
+  },
+  {
+   "w": "requirement.",
+   "start": 31.82,
+   "end": 32.3
+  },
+  {
+   "w": "Nothing",
+   "start": 32.94,
+   "end": 33.14
+  },
+  {
+   "w": "about",
+   "start": 33.14,
+   "end": 33.38
+  },
+  {
+   "w": "it",
+   "start": 33.38,
+   "end": 33.52
+  },
+  {
+   "w": "looks",
+   "start": 33.52,
+   "end": 33.64
+  },
+  {
+   "w": "special.",
+   "start": 33.64,
+   "end": 34.04
+  },
+  {
+   "w": "She",
+   "start": 34.72,
+   "end": 34.9
+  },
+  {
+   "w": "walks",
+   "start": 34.9,
+   "end": 35.1
+  },
+  {
+   "w": "in",
+   "start": 35.1,
+   "end": 35.46
+  },
+  {
+   "w": "at",
+   "start": 35.46,
+   "end": 35.66
+  },
+  {
+   "w": "that",
+   "start": 35.73,
+   "end": 35.8
+  },
+  {
+   "w": "exact",
+   "start": 35.8,
+   "end": 36.18
+  },
+  {
+   "w": "instant,",
+   "start": 36.18,
+   "end": 36.76
+  },
+  {
+   "w": "sees",
+   "start": 37.14,
+   "end": 37.46
+  },
+  {
+   "w": "the",
+   "start": 37.46,
+   "end": 37.7
+  },
+  {
+   "w": "baby,",
+   "start": 37.7,
+   "end": 37.98
+  },
+  {
+   "w": "and",
+   "start": 38.48,
+   "end": 38.6
+  },
+  {
+   "w": "then",
+   "start": 38.6,
+   "end": 38.8
+  },
+  {
+   "w": "goes",
+   "start": 38.8,
+   "end": 39.16
+  },
+  {
+   "w": "out",
+   "start": 39.16,
+   "end": 39.36
+  },
+  {
+   "w": "and",
+   "start": 39.36,
+   "end": 39.52
+  },
+  {
+   "w": "tells",
+   "start": 39.52,
+   "end": 39.68
+  },
+  {
+   "w": "everyone",
+   "start": 39.68,
+   "end": 40.08
+  },
+  {
+   "w": "in",
+   "start": 40.08,
+   "end": 40.34
+  },
+  {
+   "w": "Jerusalem",
+   "start": 40.34,
+   "end": 40.76
+  },
+  {
+   "w": "who’s",
+   "start": 40.76,
+   "end": 41.5
+  },
+  {
+   "w": "been",
+   "start": 41.5,
+   "end": 41.66
+  },
+  {
+   "w": "waiting",
+   "start": 41.66,
+   "end": 41.96
+  },
+  {
+   "w": "for",
+   "start": 41.96,
+   "end": 42.22
+  },
+  {
+   "w": "redemption.",
+   "start": 42.22,
+   "end": 42.64
+  },
+  {
+   "w": "Eighty-four",
+   "start": 43.22,
+   "end": 43.8
+  },
+  {
+   "w": "years",
+   "start": 43.8,
+   "end": 44.14
+  },
+  {
+   "w": "of",
+   "start": 44.14,
+   "end": 44.34
+  },
+  {
+   "w": "nothing…",
+   "start": 44.34,
+   "end": 44.66
+  },
+  {
+   "w": "and",
+   "start": 45.06,
+   "end": 45.14
+  },
+  {
+   "w": "she",
+   "start": 45.14,
+   "end": 45.42
+  },
+  {
+   "w": "got",
+   "start": 45.42,
+   "end": 45.78
+  },
+  {
+   "w": "the",
+   "start": 45.78,
+   "end": 45.94
+  },
+  {
+   "w": "scoop.",
+   "start": 45.94,
+   "end": 46.18
+  },
+  {
+   "w": "I’m",
+   "start": 46.72,
+   "end": 46.96
+  },
+  {
+   "w": "soft",
+   "start": 46.96,
+   "end": 47.22
+  },
+  {
+   "w": "for",
+   "start": 47.22,
+   "end": 47.48
+  },
+  {
+   "w": "the",
+   "start": 47.48,
+   "end": 47.6
+  },
+  {
+   "w": "long",
+   "start": 47.6,
+   "end": 47.74
+  },
+  {
+   "w": "game.",
+   "start": 47.74,
+   "end": 48.0
+  }
+ ],
+ "renderedAt": 1785530395341
 }

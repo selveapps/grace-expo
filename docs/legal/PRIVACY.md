@@ -2,7 +2,7 @@
 
 **Grace: Bible BFF for Women**
 Operated by **Selve App Studio LLP** ("Selve", "we", "us")
-Last updated: 29 July 2026
+Last updated: 17 August 2026
 
 We built Grace to be a quiet place. We collect as little as possible, we never sell your data, and your reflections are private.
 
@@ -46,6 +46,8 @@ Only service providers who help us operate Grace, under contract and only for th
 | ElevenLabs | Text-to-speech narration generation |
 | OpenAI | Optional text generation and transcript alignment |
 
+We instruct these providers not to use your content to train their models, and we have configured our accounts accordingly.
+
 We also disclose information where required by law, or to protect the rights and safety of our users. We **never sell your personal data** and we do not share it for advertising.
 
 Some providers are located outside your country, including the United States and the EU. Where required, transfers rely on Standard Contractual Clauses or equivalent safeguards.
@@ -74,8 +76,12 @@ If we make a material change we will update the date above and notify you in the
 ## 10. Contact us
 
 **Selve App Studio LLP**
-Grievance Officer
-Email: **admin@selveapps.xyz**
-Phone: **+91 82849 00521**
+Email: **support@selveapps.xyz**
+Support: [selveapps.xyz/grace/support](https://selveapps.xyz/grace/support)
+
+**Grievance Officer (India)**
+Aditya Sankhyan
+Email: **support@selveapps.xyz**
+Phone: **+91 90560 72996**
 
 We aim to acknowledge every request within 48 hours.

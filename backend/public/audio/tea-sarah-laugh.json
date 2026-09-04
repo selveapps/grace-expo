@@ -1,1016 +1,471 @@
 {
-  "kind": "tea",
-  "teaId": "sarah-laugh",
-  "mood": "light",
-  "heat": 2,
-  "text": "Girl, the shade is biblical… she laughed at God from behind the tent and He clocked it… … Genesis eighteen. Three men show up at Abraham's tent, and one of them announces that Sarah is going to have a son. Sarah is ninety years old. She is listening from the tent door behind them. And she laughs. Not out loud. \"Therefore Sarah laughed within herself, saying, After I am waxed old shall I have pleasure, my lord being old also?\" Within herself. Nobody in that tent heard a thing. And the very next verse is the Lord turning to Abraham and asking, \"Wherefore did Sarah laugh, saying, Shall I of a surety bear a child, which am old?\" He heard it. So Sarah panics and lies straight to God. \"I laughed not.\" The text tells you why: she was afraid. And He does not let her have it. \"Nay; but thou didst laugh.\" Then comes the ending nobody plans for. She has the baby. They name him Isaac, which means he laughs. And she says, \"God hath made me to laugh, so that all that hear will laugh with me.\" She laughed because she doubted. He made her laugh for real.",
-  "voice": "cgSgspJ2msm6clMCkdW9",
-  "words": [
-    {
-      "w": "Girl,",
-      "start": 0,
-      "end": 1.126
-    },
-    {
-      "w": "the",
-      "start": 1.161,
-      "end": 1.265
-    },
-    {
-      "w": "shade",
-      "start": 1.3,
-      "end": 1.486
-    },
-    {
-      "w": "is",
-      "start": 1.521,
-      "end": 1.591
-    },
-    {
-      "w": "biblical…",
-      "start": 1.649,
-      "end": 2.276
-    },
-    {
-      "w": "she",
-      "start": 2.972,
-      "end": 3.065
-    },
-    {
-      "w": "laughed",
-      "start": 3.123,
-      "end": 3.355
-    },
-    {
-      "w": "at",
-      "start": 3.39,
-      "end": 3.448
-    },
-    {
-      "w": "God",
-      "start": 3.483,
-      "end": 3.68
-    },
-    {
-      "w": "from",
-      "start": 3.715,
-      "end": 3.831
-    },
-    {
-      "w": "behind",
-      "start": 3.866,
-      "end": 4.075
-    },
-    {
-      "w": "the",
-      "start": 4.11,
-      "end": 4.18
-    },
-    {
-      "w": "tent",
-      "start": 4.214,
-      "end": 4.458
-    },
-    {
-      "w": "and",
-      "start": 4.516,
-      "end": 4.598
-    },
-    {
-      "w": "He",
-      "start": 4.644,
-      "end": 4.69
-    },
-    {
-      "w": "clocked",
-      "start": 4.737,
-      "end": 5.039
-    },
-    {
-      "w": "it…",
-      "start": 5.074,
-      "end": 5.341
-    },
-    {
-      "w": "…",
-      "start": 5.526,
-      "end": 5.631
-    },
-    {
-      "w": "Genesis",
-      "start": 6.931,
-      "end": 7.303
-    },
-    {
-      "w": "eighteen.",
-      "start": 7.349,
-      "end": 7.976
-    },
-    {
-      "w": "Three",
-      "start": 8.301,
-      "end": 8.51
-    },
-    {
-      "w": "men",
-      "start": 8.545,
-      "end": 8.696
-    },
-    {
-      "w": "show",
-      "start": 8.754,
-      "end": 8.916
-    },
-    {
-      "w": "up",
-      "start": 8.975,
-      "end": 9.056
-    },
-    {
-      "w": "at",
-      "start": 9.091,
-      "end": 9.16
-    },
-    {
-      "w": "Abraham's",
-      "start": 9.195,
-      "end": 9.613
-    },
-    {
-      "w": "tent,",
-      "start": 9.648,
-      "end": 9.938
-    },
-    {
-      "w": "and",
-      "start": 9.961,
-      "end": 10.066
-    },
-    {
-      "w": "one",
-      "start": 10.124,
-      "end": 10.252
-    },
-    {
-      "w": "of",
-      "start": 10.286,
-      "end": 10.333
-    },
-    {
-      "w": "them",
-      "start": 10.368,
-      "end": 10.484
-    },
-    {
-      "w": "announces",
-      "start": 10.519,
-      "end": 10.89
-    },
-    {
-      "w": "that",
-      "start": 10.925,
-      "end": 11.053
-    },
-    {
-      "w": "Sarah",
-      "start": 11.099,
-      "end": 11.366
-    },
-    {
-      "w": "is",
-      "start": 11.401,
-      "end": 11.459
-    },
-    {
-      "w": "going",
-      "start": 11.517,
-      "end": 11.703
-    },
-    {
-      "w": "to",
-      "start": 11.738,
-      "end": 11.784
-    },
-    {
-      "w": "have",
-      "start": 11.819,
-      "end": 11.947
-    },
-    {
-      "w": "a",
-      "start": 11.97,
-      "end": 12.005
-    },
-    {
-      "w": "son.",
-      "start": 12.04,
-      "end": 12.458
-    },
-    {
-      "w": "Sarah",
-      "start": 12.899,
-      "end": 13.177
-    },
-    {
-      "w": "is",
-      "start": 13.212,
-      "end": 13.293
-    },
-    {
-      "w": "ninety",
-      "start": 13.363,
-      "end": 13.641
-    },
-    {
-      "w": "years",
-      "start": 13.676,
-      "end": 13.862
-    },
-    {
-      "w": "old.",
-      "start": 13.908,
-      "end": 14.21
-    },
-    {
-      "w": "She",
-      "start": 14.28,
-      "end": 14.384
-    },
-    {
-      "w": "is",
-      "start": 14.419,
-      "end": 14.489
-    },
-    {
-      "w": "listening",
-      "start": 14.524,
-      "end": 14.814
-    },
-    {
-      "w": "from",
-      "start": 14.849,
-      "end": 14.965
-    },
-    {
-      "w": "the",
-      "start": 15,
-      "end": 15.069
-    },
-    {
-      "w": "tent",
-      "start": 15.104,
-      "end": 15.278
-    },
-    {
-      "w": "door",
-      "start": 15.302,
-      "end": 15.429
-    },
-    {
-      "w": "behind",
-      "start": 15.476,
-      "end": 15.696
-    },
-    {
-      "w": "them.",
-      "start": 15.731,
-      "end": 16.114
-    },
-    {
-      "w": "And",
-      "start": 16.556,
-      "end": 16.73
-    },
-    {
-      "w": "she",
-      "start": 16.776,
-      "end": 16.869
-    },
-    {
-      "w": "laughs.",
-      "start": 16.939,
-      "end": 17.531
-    },
-    {
-      "w": "Not",
-      "start": 17.775,
-      "end": 17.914
-    },
-    {
-      "w": "out",
-      "start": 17.949,
-      "end": 18.042
-    },
-    {
-      "w": "loud.",
-      "start": 18.088,
-      "end": 18.529
-    },
-    {
-      "w": "\"Therefore",
-      "start": 19.226,
-      "end": 19.679
-    },
-    {
-      "w": "Sarah",
-      "start": 19.737,
-      "end": 19.992
-    },
-    {
-      "w": "laughed",
-      "start": 20.027,
-      "end": 20.259
-    },
-    {
-      "w": "within",
-      "start": 20.282,
-      "end": 20.491
-    },
-    {
-      "w": "herself,",
-      "start": 20.538,
-      "end": 20.991
-    },
-    {
-      "w": "saying,",
-      "start": 21.025,
-      "end": 21.548
-    },
-    {
-      "w": "After",
-      "start": 21.873,
-      "end": 22.117
-    },
-    {
-      "w": "I",
-      "start": 22.175,
-      "end": 22.21
-    },
-    {
-      "w": "am",
-      "start": 22.268,
-      "end": 22.337
-    },
-    {
-      "w": "waxed",
-      "start": 22.384,
-      "end": 22.72
-    },
-    {
-      "w": "old",
-      "start": 22.79,
-      "end": 23.092
-    },
-    {
-      "w": "shall",
-      "start": 23.138,
-      "end": 23.301
-    },
-    {
-      "w": "I",
-      "start": 23.336,
-      "end": 23.359
-    },
-    {
-      "w": "have",
-      "start": 23.394,
-      "end": 23.498
-    },
-    {
-      "w": "pleasure,",
-      "start": 23.533,
-      "end": 23.87
-    },
-    {
-      "w": "my",
-      "start": 23.905,
-      "end": 23.974
-    },
-    {
-      "w": "lord",
-      "start": 24.021,
-      "end": 24.183
-    },
-    {
-      "w": "being",
-      "start": 24.241,
-      "end": 24.427
-    },
-    {
-      "w": "old",
-      "start": 24.485,
-      "end": 24.636
-    },
-    {
-      "w": "also?\"",
-      "start": 24.671,
-      "end": 25.286
-    },
-    {
-      "w": "Within",
-      "start": 25.89,
-      "end": 26.134
-    },
-    {
-      "w": "herself.",
-      "start": 26.18,
-      "end": 26.9
-    },
-    {
-      "w": "Nobody",
-      "start": 27.423,
-      "end": 27.829
-    },
-    {
-      "w": "in",
-      "start": 27.864,
-      "end": 27.922
-    },
-    {
-      "w": "that",
-      "start": 27.957,
-      "end": 28.084
-    },
-    {
-      "w": "tent",
-      "start": 28.119,
-      "end": 28.282
-    },
-    {
-      "w": "heard",
-      "start": 28.316,
-      "end": 28.467
-    },
-    {
-      "w": "a",
-      "start": 28.502,
-      "end": 28.525
-    },
-    {
-      "w": "thing.",
-      "start": 28.572,
-      "end": 29.013
-    },
-    {
-      "w": "And",
-      "start": 29.617,
-      "end": 29.733
-    },
-    {
-      "w": "the",
-      "start": 29.768,
-      "end": 29.837
-    },
-    {
-      "w": "very",
-      "start": 29.872,
-      "end": 30.046
-    },
-    {
-      "w": "next",
-      "start": 30.116,
-      "end": 30.29
-    },
-    {
-      "w": "verse",
-      "start": 30.337,
-      "end": 30.592
-    },
-    {
-      "w": "is",
-      "start": 30.627,
-      "end": 30.708
-    },
-    {
-      "w": "the",
-      "start": 30.755,
-      "end": 30.824
-    },
-    {
-      "w": "Lord",
-      "start": 30.882,
-      "end": 31.115
-    },
-    {
-      "w": "turning",
-      "start": 31.149,
-      "end": 31.37
-    },
-    {
-      "w": "to",
-      "start": 31.405,
-      "end": 31.463
-    },
-    {
-      "w": "Abraham",
-      "start": 31.521,
-      "end": 31.881
-    },
-    {
-      "w": "and",
-      "start": 31.916,
-      "end": 31.985
-    },
-    {
-      "w": "asking,",
-      "start": 32.032,
-      "end": 32.612
-    },
-    {
-      "w": "\"Wherefore",
-      "start": 32.763,
-      "end": 33.251
-    },
-    {
-      "w": "did",
-      "start": 33.286,
-      "end": 33.39
-    },
-    {
-      "w": "Sarah",
-      "start": 33.436,
-      "end": 33.68
-    },
-    {
-      "w": "laugh,",
-      "start": 33.715,
-      "end": 34.005
-    },
-    {
-      "w": "saying,",
-      "start": 34.04,
-      "end": 34.586
-    },
-    {
-      "w": "Shall",
-      "start": 34.795,
-      "end": 34.969
-    },
-    {
-      "w": "I",
-      "start": 35.05,
-      "end": 35.12
-    },
-    {
-      "w": "of",
-      "start": 35.224,
-      "end": 35.294
-    },
-    {
-      "w": "a",
-      "start": 35.329,
-      "end": 35.352
-    },
-    {
-      "w": "surety",
-      "start": 35.399,
-      "end": 35.735
-    },
-    {
-      "w": "bear",
-      "start": 35.805,
-      "end": 35.967
-    },
-    {
-      "w": "a",
-      "start": 36.002,
-      "end": 36.026
-    },
-    {
-      "w": "child,",
-      "start": 36.072,
-      "end": 36.525
-    },
-    {
-      "w": "which",
-      "start": 36.56,
-      "end": 36.722
-    },
-    {
-      "w": "am",
-      "start": 36.757,
-      "end": 36.827
-    },
-    {
-      "w": "old?\"",
-      "start": 36.873,
-      "end": 37.256
-    },
-    {
-      "w": "He",
-      "start": 38.08,
-      "end": 38.185
-    },
-    {
-      "w": "heard",
-      "start": 38.231,
-      "end": 38.417
-    },
-    {
-      "w": "it.",
-      "start": 38.452,
-      "end": 38.719
-    },
-    {
-      "w": "So",
-      "start": 38.998,
-      "end": 39.114
-    },
-    {
-      "w": "Sarah",
-      "start": 39.172,
-      "end": 39.45
-    },
-    {
-      "w": "panics",
-      "start": 39.485,
-      "end": 39.834
-    },
-    {
-      "w": "and",
-      "start": 39.868,
-      "end": 39.973
-    },
-    {
-      "w": "lies",
-      "start": 40.019,
-      "end": 40.263
-    },
-    {
-      "w": "straight",
-      "start": 40.333,
-      "end": 40.669
-    },
-    {
-      "w": "to",
-      "start": 40.704,
-      "end": 40.762
-    },
-    {
-      "w": "God.",
-      "start": 40.809,
-      "end": 41.18
-    },
-    {
-      "w": "\"I",
-      "start": 41.505,
-      "end": 41.587
-    },
-    {
-      "w": "laughed",
-      "start": 41.668,
-      "end": 41.9
-    },
-    {
-      "w": "not.\"",
-      "start": 41.935,
-      "end": 42.388
-    },
-    {
-      "w": "The",
-      "start": 43.084,
-      "end": 43.189
-    },
-    {
-      "w": "text",
-      "start": 43.224,
-      "end": 43.456
-    },
-    {
-      "w": "tells",
-      "start": 43.479,
-      "end": 43.653
-    },
-    {
-      "w": "you",
-      "start": 43.688,
-      "end": 43.769
-    },
-    {
-      "w": "why:",
-      "start": 43.804,
-      "end": 44.257
-    },
-    {
-      "w": "she",
-      "start": 44.953,
-      "end": 45.046
-    },
-    {
-      "w": "was",
-      "start": 45.093,
-      "end": 45.197
-    },
-    {
-      "w": "afraid.",
-      "start": 45.232,
-      "end": 45.708
-    },
-    {
-      "w": "And",
-      "start": 45.952,
-      "end": 46.091
-    },
-    {
-      "w": "He",
-      "start": 46.126,
-      "end": 46.184
-    },
-    {
-      "w": "does",
-      "start": 46.219,
-      "end": 46.347
-    },
-    {
-      "w": "not",
-      "start": 46.381,
-      "end": 46.498
-    },
-    {
-      "w": "let",
-      "start": 46.532,
-      "end": 46.625
-    },
-    {
-      "w": "her",
-      "start": 46.66,
-      "end": 46.753
-    },
-    {
-      "w": "have",
-      "start": 46.788,
-      "end": 46.939
-    },
-    {
-      "w": "it.",
-      "start": 46.974,
-      "end": 47.241
-    },
-    {
-      "w": "\"Nay;",
-      "start": 47.937,
-      "end": 48.32
-    },
-    {
-      "w": "but",
-      "start": 48.355,
-      "end": 48.46
-    },
-    {
-      "w": "thou",
-      "start": 48.494,
-      "end": 48.657
-    },
-    {
-      "w": "didst",
-      "start": 48.715,
-      "end": 48.889
-    },
-    {
-      "w": "laugh.\"",
-      "start": 48.924,
-      "end": 49.412
-    },
-    {
-      "w": "Then",
-      "start": 50.108,
-      "end": 50.271
-    },
-    {
-      "w": "comes",
-      "start": 50.34,
-      "end": 50.515
-    },
-    {
-      "w": "the",
-      "start": 50.549,
-      "end": 50.619
-    },
-    {
-      "w": "ending",
-      "start": 50.666,
-      "end": 50.921
-    },
-    {
-      "w": "nobody",
-      "start": 51.025,
-      "end": 51.281
-    },
-    {
-      "w": "plans",
-      "start": 51.327,
-      "end": 51.56
-    },
-    {
-      "w": "for.",
-      "start": 51.594,
-      "end": 51.977
-    },
-    {
-      "w": "She",
-      "start": 52.5,
-      "end": 52.628
-    },
-    {
-      "w": "has",
-      "start": 52.686,
-      "end": 52.79
-    },
-    {
-      "w": "the",
-      "start": 52.825,
-      "end": 52.895
-    },
-    {
-      "w": "baby.",
-      "start": 52.929,
-      "end": 53.487
-    },
-    {
-      "w": "They",
-      "start": 53.673,
-      "end": 53.823
-    },
-    {
-      "w": "name",
-      "start": 53.858,
-      "end": 53.998
-    },
-    {
-      "w": "him",
-      "start": 54.032,
-      "end": 54.125
-    },
-    {
-      "w": "Isaac,",
-      "start": 54.183,
-      "end": 54.555
-    },
-    {
-      "w": "which",
-      "start": 54.578,
-      "end": 54.741
-    },
-    {
-      "w": "means",
-      "start": 54.799,
-      "end": 55.24
-    },
-    {
-      "w": "he",
-      "start": 56.064,
-      "end": 56.18
-    },
-    {
-      "w": "laughs.",
-      "start": 56.238,
-      "end": 56.726
-    },
-    {
-      "w": "And",
-      "start": 56.749,
-      "end": 56.854
-    },
-    {
-      "w": "she",
-      "start": 56.888,
-      "end": 56.97
-    },
-    {
-      "w": "says,",
-      "start": 57.004,
-      "end": 57.469
-    },
-    {
-      "w": "\"God",
-      "start": 58.165,
-      "end": 58.444
-    },
-    {
-      "w": "hath",
-      "start": 58.479,
-      "end": 58.607
-    },
-    {
-      "w": "made",
-      "start": 58.641,
-      "end": 58.792
-    },
-    {
-      "w": "me",
-      "start": 58.827,
-      "end": 58.897
-    },
-    {
-      "w": "to",
-      "start": 58.932,
-      "end": 58.99
-    },
-    {
-      "w": "laugh,",
-      "start": 59.036,
-      "end": 59.292
-    },
-    {
-      "w": "so",
-      "start": 59.315,
-      "end": 59.385
-    },
-    {
-      "w": "that",
-      "start": 59.431,
-      "end": 59.559
-    },
-    {
-      "w": "all",
-      "start": 59.605,
-      "end": 59.779
-    },
-    {
-      "w": "that",
-      "start": 59.837,
-      "end": 59.965
-    },
-    {
-      "w": "hear",
-      "start": 60.011,
-      "end": 60.139
-    },
-    {
-      "w": "will",
-      "start": 60.186,
-      "end": 60.313
-    },
-    {
-      "w": "laugh",
-      "start": 60.348,
-      "end": 60.534
-    },
-    {
-      "w": "with",
-      "start": 60.569,
-      "end": 60.696
-    },
-    {
-      "w": "me.\"",
-      "start": 60.731,
-      "end": 61.149
-    },
-    {
-      "w": "She",
-      "start": 62.275,
-      "end": 62.392
-    },
-    {
-      "w": "laughed",
-      "start": 62.45,
-      "end": 62.682
-    },
-    {
-      "w": "because",
-      "start": 62.717,
-      "end": 62.937
-    },
-    {
-      "w": "she",
-      "start": 62.96,
-      "end": 63.03
-    },
-    {
-      "w": "doubted.",
-      "start": 63.065,
-      "end": 63.506
-    },
-    {
-      "w": "He",
-      "start": 64.33,
-      "end": 64.423
-    },
-    {
-      "w": "made",
-      "start": 64.47,
-      "end": 64.621
-    },
-    {
-      "w": "her",
-      "start": 64.644,
-      "end": 64.725
-    },
-    {
-      "w": "laugh",
-      "start": 64.783,
-      "end": 64.981
-    },
-    {
-      "w": "for",
-      "start": 65.015,
-      "end": 65.12
-    },
-    {
-      "w": "real.",
-      "start": 65.166,
-      "end": 65.758
-    }
-  ],
-  "renderedAt": 1785789196495
+ "kind": "tea",
+ "teaId": "sarah-laugh",
+ "mood": "light",
+ "heat": 2,
+ "text": "Girl, the shade is biblical. God shows up at Abraham's tent with two angels and announces Sarah will have a son next year. She's ninety. Listening from inside the tent. She laughs. Not a soft giggle. The text says she laughed to herself. God still hears it and asks Abraham why she laughed. Sarah panics and lies: \"I did not laugh.\" God: \"No, but you did laugh.\" Nine months later she's holding Isaac (name literally means \"he laughs\"). God let her laugh in private, called her out, then made the joke land.",
+ "voice": "human",
+ "words": [
+  {
+   "w": "Girl,",
+   "start": 0.0,
+   "end": 0.36
+  },
+  {
+   "w": "the",
+   "start": 0.8,
+   "end": 0.82
+  },
+  {
+   "w": "shade",
+   "start": 0.82,
+   "end": 1.18
+  },
+  {
+   "w": "is",
+   "start": 1.18,
+   "end": 1.6
+  },
+  {
+   "w": "biblical.",
+   "start": 1.6,
+   "end": 2.1
+  },
+  {
+   "w": "God",
+   "start": 3.2,
+   "end": 3.3
+  },
+  {
+   "w": "shows",
+   "start": 3.3,
+   "end": 3.48
+  },
+  {
+   "w": "up",
+   "start": 3.48,
+   "end": 3.72
+  },
+  {
+   "w": "at",
+   "start": 3.72,
+   "end": 3.84
+  },
+  {
+   "w": "Abraham's",
+   "start": 3.84,
+   "end": 4.44
+  },
+  {
+   "w": "tent",
+   "start": 4.44,
+   "end": 4.6
+  },
+  {
+   "w": "with",
+   "start": 4.6,
+   "end": 4.86
+  },
+  {
+   "w": "two",
+   "start": 4.86,
+   "end": 5.14
+  },
+  {
+   "w": "angels",
+   "start": 5.14,
+   "end": 5.54
+  },
+  {
+   "w": "and",
+   "start": 5.54,
+   "end": 5.82
+  },
+  {
+   "w": "announces",
+   "start": 5.82,
+   "end": 6.3
+  },
+  {
+   "w": "Sarah",
+   "start": 6.3,
+   "end": 6.62
+  },
+  {
+   "w": "will",
+   "start": 6.62,
+   "end": 6.8
+  },
+  {
+   "w": "have",
+   "start": 6.8,
+   "end": 6.96
+  },
+  {
+   "w": "a",
+   "start": 6.96,
+   "end": 7.12
+  },
+  {
+   "w": "son",
+   "start": 7.12,
+   "end": 7.32
+  },
+  {
+   "w": "next",
+   "start": 7.32,
+   "end": 7.76
+  },
+  {
+   "w": "year.",
+   "start": 7.76,
+   "end": 8.14
+  },
+  {
+   "w": "She's",
+   "start": 8.76,
+   "end": 9.22
+  },
+  {
+   "w": "ninety.",
+   "start": 9.22,
+   "end": 9.6
+  },
+  {
+   "w": "Listening",
+   "start": 10.44,
+   "end": 10.86
+  },
+  {
+   "w": "from",
+   "start": 10.86,
+   "end": 11.14
+  },
+  {
+   "w": "inside",
+   "start": 11.14,
+   "end": 11.56
+  },
+  {
+   "w": "the",
+   "start": 11.56,
+   "end": 11.72
+  },
+  {
+   "w": "tent.",
+   "start": 11.72,
+   "end": 12.0
+  },
+  {
+   "w": "She",
+   "start": 12.34,
+   "end": 12.6
+  },
+  {
+   "w": "laughs.",
+   "start": 12.6,
+   "end": 12.88
+  },
+  {
+   "w": "Not",
+   "start": 13.38,
+   "end": 13.76
+  },
+  {
+   "w": "a",
+   "start": 13.76,
+   "end": 13.88
+  },
+  {
+   "w": "soft",
+   "start": 13.88,
+   "end": 14.12
+  },
+  {
+   "w": "giggle.",
+   "start": 14.12,
+   "end": 14.4
+  },
+  {
+   "w": "The",
+   "start": 14.88,
+   "end": 15.12
+  },
+  {
+   "w": "text",
+   "start": 15.12,
+   "end": 15.4
+  },
+  {
+   "w": "says",
+   "start": 15.4,
+   "end": 15.9
+  },
+  {
+   "w": "she",
+   "start": 15.9,
+   "end": 16.28
+  },
+  {
+   "w": "laughed",
+   "start": 16.28,
+   "end": 16.66
+  },
+  {
+   "w": "to",
+   "start": 16.66,
+   "end": 16.96
+  },
+  {
+   "w": "herself.",
+   "start": 16.96,
+   "end": 17.3
+  },
+  {
+   "w": "God",
+   "start": 18.02,
+   "end": 18.2
+  },
+  {
+   "w": "still",
+   "start": 18.2,
+   "end": 18.48
+  },
+  {
+   "w": "hears",
+   "start": 18.48,
+   "end": 18.8
+  },
+  {
+   "w": "it",
+   "start": 18.8,
+   "end": 19.08
+  },
+  {
+   "w": "and",
+   "start": 19.08,
+   "end": 19.26
+  },
+  {
+   "w": "asks",
+   "start": 19.26,
+   "end": 19.6
+  },
+  {
+   "w": "Abraham",
+   "start": 19.6,
+   "end": 20.04
+  },
+  {
+   "w": "why",
+   "start": 20.04,
+   "end": 20.5
+  },
+  {
+   "w": "she",
+   "start": 20.5,
+   "end": 20.72
+  },
+  {
+   "w": "laughed.",
+   "start": 20.72,
+   "end": 21.0
+  },
+  {
+   "w": "Sarah",
+   "start": 21.7,
+   "end": 21.92
+  },
+  {
+   "w": "panics",
+   "start": 21.92,
+   "end": 22.32
+  },
+  {
+   "w": "and",
+   "start": 22.32,
+   "end": 22.54
+  },
+  {
+   "w": "lies:",
+   "start": 22.54,
+   "end": 22.8
+  },
+  {
+   "w": "\"I",
+   "start": 23.28,
+   "end": 23.44
+  },
+  {
+   "w": "did",
+   "start": 23.44,
+   "end": 23.6
+  },
+  {
+   "w": "not",
+   "start": 23.6,
+   "end": 23.78
+  },
+  {
+   "w": "laugh.\"",
+   "start": 23.78,
+   "end": 24.04
+  },
+  {
+   "w": "God:",
+   "start": 24.48,
+   "end": 24.86
+  },
+  {
+   "w": "\"No,",
+   "start": 25.42,
+   "end": 25.68
+  },
+  {
+   "w": "but",
+   "start": 26.06,
+   "end": 26.22
+  },
+  {
+   "w": "you",
+   "start": 26.22,
+   "end": 26.4
+  },
+  {
+   "w": "did",
+   "start": 26.4,
+   "end": 26.56
+  },
+  {
+   "w": "laugh.\"",
+   "start": 26.56,
+   "end": 26.88
+  },
+  {
+   "w": "Nine",
+   "start": 26.88,
+   "end": 27.7
+  },
+  {
+   "w": "months",
+   "start": 27.7,
+   "end": 27.94
+  },
+  {
+   "w": "later",
+   "start": 27.94,
+   "end": 28.3
+  },
+  {
+   "w": "she's",
+   "start": 28.52,
+   "end": 28.72
+  },
+  {
+   "w": "holding",
+   "start": 28.72,
+   "end": 28.96
+  },
+  {
+   "w": "Isaac",
+   "start": 28.96,
+   "end": 29.4
+  },
+  {
+   "w": "(name",
+   "start": 30.3,
+   "end": 30.3
+  },
+  {
+   "w": "literally",
+   "start": 30.3,
+   "end": 30.82
+  },
+  {
+   "w": "means",
+   "start": 30.82,
+   "end": 31.4
+  },
+  {
+   "w": "\"he",
+   "start": 31.4,
+   "end": 32.02
+  },
+  {
+   "w": "laughs\").",
+   "start": 32.02,
+   "end": 32.64
+  },
+  {
+   "w": "God",
+   "start": 33.5,
+   "end": 33.78
+  },
+  {
+   "w": "let",
+   "start": 33.78,
+   "end": 33.98
+  },
+  {
+   "w": "her",
+   "start": 33.98,
+   "end": 34.12
+  },
+  {
+   "w": "laugh",
+   "start": 34.12,
+   "end": 34.32
+  },
+  {
+   "w": "in",
+   "start": 34.32,
+   "end": 34.48
+  },
+  {
+   "w": "private,",
+   "start": 34.48,
+   "end": 34.8
+  },
+  {
+   "w": "called",
+   "start": 35.1,
+   "end": 35.42
+  },
+  {
+   "w": "her",
+   "start": 35.42,
+   "end": 35.64
+  },
+  {
+   "w": "out,",
+   "start": 35.64,
+   "end": 35.92
+  },
+  {
+   "w": "then",
+   "start": 36.46,
+   "end": 36.54
+  },
+  {
+   "w": "made",
+   "start": 36.54,
+   "end": 36.76
+  },
+  {
+   "w": "the",
+   "start": 36.76,
+   "end": 36.92
+  },
+  {
+   "w": "joke",
+   "start": 36.92,
+   "end": 37.14
+  },
+  {
+   "w": "land.",
+   "start": 37.14,
+   "end": 37.44
+  }
+ ],
+ "renderedAt": 1785789196495
 }

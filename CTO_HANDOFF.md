@@ -161,8 +161,7 @@ Guideline 3.1.1 will reject this.
 Needed:
 1. Paid Apps agreement active in App Store Connect.
 2. Two auto-renewable subscriptions created:
-   `grace.plus.annual`, `grace.plus.monthly` (IDs already in
-   `SubscriptionService.OFFERINGS`), each with a 3-day free trial.
+   `grace.yearly`, `grace.monthly` (IDs in `RevenueCatService` offerings), each with a 3-day free trial.
 3. A maintained IAP module. `expo-in-app-purchases` is retired and absent from
    SDK 54 — use `expo-iap` or `react-native-iap`.
 4. Implement `storeKitPurchase` behind the existing seam. `purchase()` and
