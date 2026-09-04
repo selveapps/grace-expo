@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1290">
+  <title>Grace Paywall — App Store subscription review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 1290px;
+      height: 2796px;
+      overflow: hidden;
+      font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .screen {
+      width: 1290px;
+      height: 2796px;
+      padding: 34px 72px 48px;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(180deg, #5A4632 0%, #3A2C22 45%, #2B2015 100%);
+      color: #F7F3EC;
+      position: relative;
+    }
+    .dove-wrap {
+      position: relative;
+      height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+    .bloom {
+      position: absolute;
+      width: 650px;
+      height: 650px;
+      border-radius: 50%;
+      background: #E6CF94;
+      opacity: 0.22;
+    }
+    .dove svg { width: 390px; height: auto; display: block; }
+    .title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 95px;
+      line-height: 1.05;
+      text-align: center;
+      margin-top: 4px;
+    }
+    .sub {
+      font-size: 40px;
+      line-height: 1.45;
+      color: #D8CBB8;
+      text-align: center;
+      margin: 24px 0 50px;
+    }
+    .plan {
+      position: relative;
+      padding: 32px 36px;
+      border-radius: 44px;
+      margin-bottom: 24px;
+      border: 3px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.05);
+    }
+    .plan.selected {
+      border: 4px solid #E6CF94;
+      background: rgba(230,207,148,0.14);
+    }
+    .plan.quiet { border-width: 3px; }
+    .badge {
+      position: absolute;
+      top: -22px;
+      left: 48px;
+      background: #E6CF94;
+      color: #3A2C22;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding: 8px 24px;
+      border-radius: 999px;
+    }
+    .plan-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .plan-name {
+      font-size: 45px;
+      font-weight: 700;
+      color: #F7F3EC;
+    }
+    .plan-price {
+      font-size: 33px;
+      color: #D8CBB8;
+      margin-top: 6px;
+    }
+    .radio {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 4px solid rgba(255,255,255,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: 700;
+      color: #3A2C22;
+    }
+    .radio.on {
+      border-color: #E6CF94;
+      background: #E6CF94;
+    }
+    .timeline { margin: 36px 0 24px; }
+    .t-row {
+      display: flex;
+      gap: 28px;
+      align-items: flex-start;
+    }
+    .t-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 24px;
+    }
+    .t-dot {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      margin-top: 6px;
+      background: rgba(230,207,148,0.6);
+    }
+    .t-dot.first { background: #E6CF94; }
+    .t-line {
+      width: 4px;
+      flex: 1;
+      min-height: 48px;
+      background: rgba(230,207,148,0.4);
+    }
+    .t-when {
+      font-size: 35px;
+      font-weight: 700;
+      color: #F7F3EC;
+    }
+    .t-text {
+      font-size: 33px;
+      line-height: 1.35;
+      color: #CBB98F;
+      padding-bottom: 24px;
+    }
+    .spacer { flex: 1; min-height: 40px; }
+    .cta {
+      width: 100%;
+      border: none;
+      border-radius: 999px;
+      padding: 36px 24px;
+      font-family: inherit;
+      font-size: 42px;
+      font-weight: 600;
+      color: #3A2C22;
+      background: linear-gradient(180deg, #F0DEAA 0%, #E6CF94 100%);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.28);
+    }
+    .summary {
+      font-size: 30px;
+      line-height: 1.45;
+      color: rgba(203,185,143,0.8);
+      text-align: center;
+      margin: 28px 24px 0;
+    }
+    .restore {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 35px;
+      font-weight: 500;
+      color: rgba(230,207,148,0.9);
+      padding: 16px;
+    }
+    .legal-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin-top: 8px;
+      font-size: 30px;
+      font-weight: 500;
+      color: rgba(230,207,148,0.85);
+    }
+    .legal-dot { color: rgba(203,185,143,0.55); }
+    .status-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 94px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 12px;
+      font-size: 28px;
+      font-weight: 600;
+      color: rgba(247,243,236,0.85);
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="screen" id="screen">
+    <div class="status-bar">9:41</div>
+    <div class="dove-wrap">
+      <div class="bloom"></div>
+      <div class="dove">
+        <svg viewBox="0 0 440 430" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <radialGradient id="body" cx="42%" cy="30%" r="78%">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="66%" stop-color="#f6f2ea"/>
+              <stop offset="100%" stop-color="#e7ddcd"/>
+            </radialGradient>
+            <radialGradient id="head" cx="40%" cy="28%" r="76%">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="70%" stop-color="#f6f2ea"/>
+              <stop offset="100%" stop-color="#e7ddcd"/>
+            </radialGradient>
+            <linearGradient id="wing" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#fffdf9"/>
+              <stop offset="100%" stop-color="#efe7d8"/>
+            </linearGradient>
+            <linearGradient id="halo" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#e6cf94"/>
+              <stop offset="45%" stop-color="#b58a3f"/>
+              <stop offset="100%" stop-color="#e6cf94"/>
+            </linearGradient>
+          </defs>
+          <ellipse cx="220" cy="118" rx="80" ry="16" fill="none" stroke="url(#halo)" stroke-width="9"/>
+          <path d="M 172 245 C 118 218 52 214 28 236 C 6 256 8 316 36 344 C 66 372 132 366 176 336 Z" fill="url(#wing)"/>
+          <line x1="54" y1="290" x2="140" y2="256" stroke="#cbbfa8" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+          <line x1="58" y1="308" x2="140" y2="274" stroke="#cbbfa8" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+          <line x1="64" y1="326" x2="138" y2="296" stroke="#cbbfa8" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+          <path d="M 268 245 C 322 218 388 214 412 236 C 434 256 432 316 404 344 C 374 372 308 366 264 336 Z" fill="url(#wing)"/>
+          <line x1="386" y1="290" x2="300" y2="256" stroke="#cbbfa8" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+          <line x1="382" y1="308" x2="300" y2="274" stroke="#cbbfa8" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+          <line x1="376" y1="326" x2="302" y2="296" stroke="#cbbfa8" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+          <g>
+            <ellipse cx="220" cy="386" rx="7" ry="24" fill="url(#wing)" transform="rotate(-38 220 360)"/>
+            <ellipse cx="220" cy="386" rx="7" ry="24" fill="url(#wing)" transform="rotate(-28.5 220 360)"/>
+            <ellipse cx="220" cy="386" rx="7" ry="24" fill="url(#wing)" transform="rotate(-19 220 360)"/>
+            <ellipse cx="220" cy="386" rx="7" ry="24" fill="url(#wing)" transform="rotate(-9.5 220 360)"/>
+            <ellipse cx="220" cy="386" rx="7" ry="24" fill="url(#wing)" transform="rotate(0 220 360)"/>
+            <ellipse cx="220" cy="386" rx="7" ry="24" fill="url(#wing)" transform="rotate(9.5 220 360)"/>
+            <ellipse cx="220" cy="386" rx="7" ry="24" fill="url(#wing)" transform="rotate(19 220 360)"/>
+            <ellipse cx="220" cy="386" rx="7" ry="24" fill="url(#wing)" transform="rotate(28.5 220 360)"/>
+            <ellipse cx="220" cy="386" rx="7" ry="24" fill="url(#wing)" transform="rotate(38 220 360)"/>
+          </g>
+          <ellipse cx="220" cy="292" rx="64" ry="68" fill="url(#body)"/>
+          <circle cx="220" cy="185" r="64" fill="url(#head)"/>
+          <ellipse cx="194" cy="188" rx="10.5" ry="13.5" fill="#20211f"/>
+          <circle cx="191" cy="183" r="3.5" fill="#fff"/>
+          <ellipse cx="246" cy="188" rx="10.5" ry="13.5" fill="#20211f"/>
+          <circle cx="243" cy="183" r="3.5" fill="#fff"/>
+          <path d="M 220 205 C 210 205 206 214 212 221 C 216 225 224 225 228 221 C 234 214 230 205 220 205 Z" fill="#d99b4c"/>
+        </svg>
+      </div>
+    </div>
+
+    <h1 class="title">Begin your quiet<br>place with Grace.</h1>
+    <p class="sub">Three days free. Then continue if it feels right.</p>
+
+    <div class="plan" id="plan-annual">
+      <div class="badge" id="badge-annual">BEST VALUE</div>
+      <div class="plan-row">
+        <div>
+          <div class="plan-name">Annual</div>
+          <div class="plan-price">$69.99 / year</div>
+        </div>
+        <div class="radio" id="radio-annual">✓</div>
+      </div>
+    </div>
+
+    <div class="plan quiet" id="plan-monthly">
+      <div class="plan-row">
+        <div>
+          <div class="plan-name">Monthly</div>
+          <div class="plan-price">$12.99 / month</div>
+        </div>
+        <div class="radio" id="radio-monthly">✓</div>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="t-row">
+        <div class="t-col"><div class="t-dot first"></div><div class="t-line"></div></div>
+        <div><div class="t-when">Today</div><div class="t-text">Full access begins, free.</div></div>
+      </div>
+      <div class="t-row">
+        <div class="t-col"><div class="t-dot"></div><div class="t-line"></div></div>
+        <div><div class="t-when">Day 2</div><div class="t-text">We'll send a gentle reminder.</div></div>
+      </div>
+      <div class="t-row">
+        <div class="t-col"><div class="t-dot"></div></div>
+        <div><div class="t-when">Day 3</div><div class="t-text">Trial ends. Cancel anytime.</div></div>
+      </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <button class="cta" type="button">Start 3-day free trial</button>
+    <p class="summary" id="summary"></p>
+    <div class="restore">Restore purchase</div>
+    <div class="legal-row">
+      <span>Terms</span>
+      <span class="legal-dot">·</span>
+      <span>Privacy</span>
+    </div>
+  </div>
+
+  <script>
+    const plan = new URLSearchParams(location.search).get('plan') || 'annual';
+    const annual = document.getElementById('plan-annual');
+    const monthly = document.getElementById('plan-monthly');
+    const badgeAnnual = document.getElementById('badge-annual');
+    const radioAnnual = document.getElementById('radio-annual');
+    const radioMonthly = document.getElementById('radio-monthly');
+    const summary = document.getElementById('summary');
+
+    if (plan === 'monthly') {
+      annual.classList.remove('selected');
+      monthly.classList.add('selected');
+      badgeAnnual.style.display = 'none';
+      radioAnnual.classList.remove('on');
+      radioMonthly.classList.add('on');
+      summary.textContent = '$12.99/month after a 3-day free trial. Renews automatically until cancelled.';
+    } else {
+      annual.classList.add('selected');
+      monthly.classList.remove('selected');
+      badgeAnnual.style.display = 'block';
+      radioAnnual.classList.add('on');
+      radioMonthly.classList.remove('on');
+      summary.textContent = '$69.99/year after a 3-day free trial. Renews automatically until cancelled.';
+    }
+    document.title = 'Grace Paywall — ' + plan;
+  </script>
+</body>
+</html>

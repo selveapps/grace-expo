@@ -6,10 +6,33 @@ is reproducible rather than rebuilt from memory.
 - `LISTING.md` — the full listing spec: name, subtitle, keyword field, description,
   promotional text, categories, subscription metadata, App Review notes.
 - `01-hero.png` … `05-reading.png` — the five screenshots, in upload order.
+- `subscription-review-grace.yearly.png` — paywall with **Annual** selected, for ASC
+  **Review Information** on product `grace.yearly`.
+- `subscription-review-grace.monthly.png` — paywall with **Monthly** selected, for ASC
+  **Review Information** on product `grace.monthly`.
+- `paywall-review-mockup.html` + `render-paywall-review.sh` — source mockup (matches
+  `PaywallScreen.js`) and Chrome headless render script to regenerate both review PNGs.
 - `00-app-preview-plays-in-browser.html` — the animated preview mockup. **Not
   uploadable.** See "App preview video" below.
 
 ---
+
+## Subscription Review Information screenshots
+
+App Store Connect asks for a screenshot of the in-app purchase UI on each subscription
+product's **Review Information** tab (Guideline 3.1.2). Upload:
+
+| Product ID | File | What it shows |
+|---|---|---|
+| `grace.yearly` | `subscription-review-grace.yearly.png` | Annual plan selected; $69.99/year; 3-day trial disclosure; Restore; Terms · Privacy |
+| `grace.monthly` | `subscription-review-grace.monthly.png` | Monthly plan selected; $12.99/month; same disclosures |
+
+Both PNGs are **1290 × 2796** (same class as the listing screenshots). Regenerate:
+
+```bash
+./docs/app-store/render-paywall-review.sh
+```
+
 
 ## Upload order
 
