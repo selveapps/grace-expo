@@ -16,10 +16,10 @@ index b4d01e7..6308dc3 100644
    switch error.code {
    case .unknown:
 diff --git a/node_modules/expo-apple-authentication/ios/AppleAuthenticationRequest.swift b/node_modules/expo-apple-authentication/ios/AppleAuthenticationRequest.swift
-index d933f9c..d869fd9 100644
+index d933f9c..6124690 100644
 --- a/node_modules/expo-apple-authentication/ios/AppleAuthenticationRequest.swift
 +++ b/node_modules/expo-apple-authentication/ios/AppleAuthenticationRequest.swift
-@@ -11,6 +11,7 @@ final class AppleAuthenticationRequest: NSObject, ASAuthorizationControllerPrese
+@@ -11,15 +11,30 @@ final class AppleAuthenticationRequest: NSObject, ASAuthorizationControllerPrese
    let options: AppleAuthenticationRequestOptions
    var callback: AuthenticationRequestCallback?
    var authController: ASAuthorizationController?
@@ -27,11 +27,22 @@ index d933f9c..d869fd9 100644
  
    init(options: AppleAuthenticationRequestOptions) {
      self.options = options
-@@ -20,6 +21,11 @@ final class AppleAuthenticationRequest: NSObject, ASAuthorizationControllerPrese
+   }
+ 
++  /// Scene-aware window lookup. `UIApplication.shared.keyWindow` is nil on iPad
++  /// and iOS 26 scene-based apps, which used to fatalError in this module.
++  private func resolvePresentationWindow() -> UIWindow? {
++    let scenes = UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }
++    let foreground = scenes.filter { $0.activationState == .foregroundActive }
++    let windows = (foreground.isEmpty ? scenes : foreground).flatMap { $0.windows }
++    return windows.first(where: { $0.isKeyWindow }) ?? windows.first
++  }
++
+   func performRequest(callback: @escaping AuthenticationRequestCallback) {
      self.callback = callback
  
      do {
-+      guard let window = Utilities.keyWindow() else {
++      guard let window = resolvePresentationWindow() else {
 +        throw WindowUnavailableException()
 +      }
 +      presentationAnchorWindow = window
@@ -39,7 +50,7 @@ index d933f9c..d869fd9 100644
        let appleIdProvider = ASAuthorizationAppleIDProvider()
        let request = appleIdProvider.createRequest()
  
-@@ -81,9 +87,6 @@ final class AppleAuthenticationRequest: NSObject, ASAuthorizationControllerPrese
+@@ -81,9 +96,6 @@ final class AppleAuthenticationRequest: NSObject, ASAuthorizationControllerPrese
    // MARK: - ASAuthorizationControllerPresentationContextProviding
  
    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
