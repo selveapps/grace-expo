@@ -14,6 +14,11 @@ describe('appleAuthService nonce', () => {
     assert.equal(nonceMatches(hash, raw), true);
   });
 
+  it('accepts a case-insensitive hash match', () => {
+    const hash = sha256Hex('test-raw-nonce');
+    assert.equal(nonceMatches(hash.toUpperCase(), hash.toLowerCase()), true);
+  });
+
   it('rejects a mismatched nonce', () => {
     assert.equal(nonceMatches('aaaa', 'bbbb'), false);
   });
