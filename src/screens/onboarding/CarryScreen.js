@@ -27,39 +27,44 @@ export default function CarryScreen({ navigation }) {
   };
 
   return (
-    <Screen bg={colors.ivory} style={styles.wrap} ambient>
-      <View style={styles.progress}><View style={[styles.progressFill, { width: '30%' }]} /></View>
-      <View style={{ marginBottom: 4 }}><GraceDove size={78} crop="head" motion="peek" /></View>
-      <Text style={styles.title}>What are you carrying today?</Text>
-      <Text style={styles.sub}>Choose all that feel true. Grace listens.</Text>
-      <ScrollView contentContainerStyle={styles.chips} showsVerticalScrollIndicator={false}>
-        {CARRY_OPTIONS.map((opt) => {
-          const on = selected.includes(opt);
-          return (
-            <Pressable key={opt} onPress={() => toggle(opt)} style={[styles.chip, on && styles.chipOn]}>
-              {on && <View style={styles.dot} />}
-              <Text style={[styles.chipText, on && styles.chipTextOn]}>{opt}</Text>
-            </Pressable>
-          );
-        })}
-      </ScrollView>
-
-      {selected.length > 0 ? (
-        <View style={styles.carried}>
-          <Text style={styles.carriedLabel}>Carrying</Text>
-          <Text style={styles.carriedList} numberOfLines={1}>{selected.join(' · ')}</Text>
+    <Screen bg={colors.ivory} style={styles.fill} ambient>
+      <ScrollView style={styles.fill} contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false} bounces={false}>
+        <View style={styles.progress}><View style={[styles.progressFill, { width: '30%' }]} /></View>
+        <View style={{ marginBottom: 4 }}><GraceDove size={78} crop="head" motion="peek" /></View>
+        <Text style={styles.title}>What are you carrying today?</Text>
+        <Text style={styles.sub}>Choose all that feel true. Grace listens.</Text>
+        <View style={styles.chips}>
+          {CARRY_OPTIONS.map((opt) => {
+            const on = selected.includes(opt);
+            return (
+              <Pressable key={opt} onPress={() => toggle(opt)} style={[styles.chip, on && styles.chipOn]}>
+                {on && <View style={styles.dot} />}
+                <Text style={[styles.chipText, on && styles.chipTextOn]}>{opt}</Text>
+              </Pressable>
+            );
+          })}
         </View>
-      ) : error ? (
-        <Text style={styles.hint}>Choose one thing for Grace to carry with you.</Text>
-      ) : null}
 
-      <PrimaryButton label="Continue" onPress={onContinue} />
+        {selected.length > 0 ? (
+          <View style={styles.carried}>
+            <Text style={styles.carriedLabel}>Carrying</Text>
+            <Text style={styles.carriedList} numberOfLines={1}>{selected.join(' · ')}</Text>
+          </View>
+        ) : error ? (
+          <Text style={styles.hint}>Choose one thing for Grace to carry with you.</Text>
+        ) : null}
+
+        <View style={styles.spacer} />
+        <PrimaryButton label="Continue" onPress={onContinue} />
+      </ScrollView>
     </Screen>
   );
 }
 
 const styles = StyleSheet.create({
-  wrap: { paddingHorizontal: 26, paddingTop: 20, paddingBottom: 30 },
+  fill: { flex: 1 },
+  scroll: { flexGrow: 1, paddingHorizontal: 26, paddingTop: 20, paddingBottom: 30 },
+  spacer: { flexGrow: 1, minHeight: 16 },
   progress: { height: 4, borderRadius: 4, backgroundColor: colors.sand, overflow: 'hidden', marginBottom: 28 },
   progressFill: { height: '100%', backgroundColor: colors.brass },
   title: { fontFamily: fonts.serif, fontSize: 38, color: colors.ink, lineHeight: 42 },

@@ -1,5 +1,5 @@
 import React, { useCallback, useRef, useState } from 'react';
-import { View, Text, StyleSheet, Pressable } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Pressable } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { Audio } from 'expo-av';
 import * as Haptics from 'expo-haptics';
@@ -91,69 +91,73 @@ export default function StoriesPreviewScreen({ navigation }) {
   const toggle = () => play('hero', SAMPLE);
 
   return (
-    <Screen bg={colors.ivory} style={styles.wrap} ambient>
-      <View style={styles.head}>
-        <GraceDove size={62} wings="folded" motion={playing ? 'loading' : 'breathe'} />
-        <Text style={styles.title}>Want to hear a true story from the Bible?</Text>
-      </View>
-      <Text style={styles.sub}>Real people. Real struggle. Real faith.</Text>
-
-      <View style={styles.audio}>
-        <Text style={styles.audioTitle}>Esther walks in uninvited</Text>
-        <Text style={styles.audioSub}>And changes everything</Text>
-        <View style={styles.audioRow}>
-          <Pressable
-            onPress={toggle}
-            style={styles.play}
-            hitSlop={10}
-            accessibilityRole="button"
-            accessibilityLabel={playing ? 'Pause sample' : 'Play sample'}
-          >
-            <GIcon name={playing ? 'pause' : 'play'} size={18} color={colors.espresso} filled={!playing} />
-          </Pressable>
-          <Waveform width={200} color={colors.gold} animate={playing} />
+    <Screen bg={colors.ivory} style={styles.fill} ambient>
+      <ScrollView style={styles.fill} contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false} bounces={false}>
+        <View style={styles.head}>
+          <GraceDove size={62} wings="folded" motion={playing ? 'loading' : 'breathe'} />
+          <Text style={styles.title}>Want to hear a true story from the Bible?</Text>
         </View>
-        <Text style={styles.times}>{fmt(position)} / {fmt(duration)}</Text>
-      </View>
+        <Text style={styles.sub}>Real people. Real struggle. Real faith.</Text>
 
-      <View style={{ gap: 12, marginTop: 16 }}>
-        {PEEK.map((s) => {
-          const isOn = nowPlaying === s.title;
-          const Row = s.sample ? Pressable : View;
-          return (
-            <Row
-              key={s.title}
-              style={styles.peek}
-              {...(s.sample
-                ? {
-                    onPress: () => play(s.title, s.sample),
-                    accessibilityRole: 'button',
-                    accessibilityLabel: `${isOn ? 'Pause' : 'Play'} a short preview of ${s.title}`,
-                  }
-                : {})}
+        <View style={styles.audio}>
+          <Text style={styles.audioTitle}>Esther walks in uninvited</Text>
+          <Text style={styles.audioSub}>And changes everything</Text>
+          <View style={styles.audioRow}>
+            <Pressable
+              onPress={toggle}
+              style={styles.play}
+              hitSlop={10}
+              accessibilityRole="button"
+              accessibilityLabel={playing ? 'Pause sample' : 'Play sample'}
             >
-              {s.sample ? (
-                <View style={styles.peekPlay}>
-                  <GIcon name={isOn ? 'pause' : 'play'} size={14} color={colors.brass} filled={!isOn} />
-                </View>
-              ) : null}
-              <View style={{ flex: 1 }}>
-                <Text style={styles.peekTitle}>{s.title}</Text>
-                <Text style={styles.peekHook}>{s.hook}</Text>
-              </View>
-            </Row>
-          );
-        })}
-      </View>
+              <GIcon name={playing ? 'pause' : 'play'} size={18} color={colors.espresso} filled={!playing} />
+            </Pressable>
+            <Waveform width={200} color={colors.gold} animate={playing} />
+          </View>
+          <Text style={styles.times}>{fmt(position)} / {fmt(duration)}</Text>
+        </View>
 
-      <View style={{ flex: 1 }} />
-      <PrimaryButton label="Continue" onPress={() => navigation.navigate('Review')} />
+        <View style={{ gap: 12, marginTop: 16 }}>
+          {PEEK.map((s) => {
+            const isOn = nowPlaying === s.title;
+            const Row = s.sample ? Pressable : View;
+            return (
+              <Row
+                key={s.title}
+                style={styles.peek}
+                {...(s.sample
+                  ? {
+                      onPress: () => play(s.title, s.sample),
+                      accessibilityRole: 'button',
+                      accessibilityLabel: `${isOn ? 'Pause' : 'Play'} a short preview of ${s.title}`,
+                    }
+                  : {})}
+              >
+                {s.sample ? (
+                  <View style={styles.peekPlay}>
+                    <GIcon name={isOn ? 'pause' : 'play'} size={14} color={colors.brass} filled={!isOn} />
+                  </View>
+                ) : null}
+                <View style={{ flex: 1 }}>
+                  <Text style={styles.peekTitle}>{s.title}</Text>
+                  <Text style={styles.peekHook}>{s.hook}</Text>
+                </View>
+              </Row>
+            );
+          })}
+        </View>
+
+        <View style={styles.spacer} />
+        <PrimaryButton label="Continue" onPress={() => navigation.navigate('Review')} />
+      </ScrollView>
     </Screen>
   );
 }
 
 const styles = StyleSheet.create({
-  wrap: { paddingHorizontal: 24, paddingTop: 20, paddingBottom: 30 },
+  fill: { flex: 1 },
+  scroll: { flexGrow: 1, paddingHorizontal: 24, paddingTop: 20, paddingBottom: 30 },
+  spacer: { flexGrow: 1, minHeight: 16 },
   head: { flexDirection: 'row', alignItems: 'center', gap: 14 },
   title: { flex: 1, fontFamily: fonts.serif, fontSize: 30, color: colors.ink, lineHeight: 34 },
   sub: { fontFamily: fonts.sans, fontSize: 16, lineHeight: 24, color: colors.textMuted, marginTop: 14, marginBottom: 22 },

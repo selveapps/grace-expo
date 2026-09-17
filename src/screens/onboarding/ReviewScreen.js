@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { View, Text, StyleSheet, Animated, Easing, Pressable } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Animated, Easing, Pressable } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import * as StoreReview from 'expo-store-review';
 import Screen from '../../components/Screen';
@@ -43,35 +43,39 @@ export default function ReviewScreen({ navigation }) {
   };
 
   return (
-    <Screen gradient={['#FDF6E4', '#F7F3EC']} style={styles.wrap} ambient>
-      <View style={{ alignItems: 'center' }}>
-        <GraceDove size={132} wings="folded" motion="peek" />
-      </View>
-      <Text style={styles.title} adjustsFontSizeToFit numberOfLines={2}>
-        Would you tell others about Grace?
-      </Text>
-      <Text style={styles.sub}>
-        A word from you helps another woman find her quiet place. It takes a moment.
-      </Text>
-      <Animated.View
-        style={[styles.stars, {
-          opacity: stars,
-          transform: [{ scale: stars.interpolate({ inputRange: [0, 1], outputRange: [0.9, 1] }) }],
-        }]}
-      >
-        {[0, 1, 2, 3, 4].map((i) => <Text key={i} style={styles.star}>★</Text>)}
-      </Animated.View>
-      <View style={{ flex: 1 }} />
-      <PrimaryButton label="Leave a review" onPress={ask} />
-      <Pressable onPress={later} style={styles.laterHit} hitSlop={8}>
-        <Text style={styles.later}>Not right now</Text>
-      </Pressable>
+    <Screen gradient={['#FDF6E4', '#F7F3EC']} style={styles.fill} ambient>
+      <ScrollView style={styles.fill} contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false} bounces={false}>
+        <View style={{ alignItems: 'center' }}>
+          <GraceDove size={132} wings="folded" motion="peek" />
+        </View>
+        <Text style={styles.title} adjustsFontSizeToFit numberOfLines={2}>
+          Would you tell others about Grace?
+        </Text>
+        <Text style={styles.sub}>
+          A word from you helps another woman find her quiet place. It takes a moment.
+        </Text>
+        <Animated.View
+          style={[styles.stars, {
+            opacity: stars,
+            transform: [{ scale: stars.interpolate({ inputRange: [0, 1], outputRange: [0.9, 1] }) }],
+          }]}
+        >
+          {[0, 1, 2, 3, 4].map((i) => <Text key={i} style={styles.star}>★</Text>)}
+        </Animated.View>
+        <View style={styles.spacer} />
+        <PrimaryButton label="Leave a review" onPress={ask} />
+        <Pressable onPress={later} style={styles.laterHit} hitSlop={8}>
+          <Text style={styles.later}>Not right now</Text>
+        </Pressable>
+      </ScrollView>
     </Screen>
   );
 }
 
 const styles = StyleSheet.create({
-  wrap: { paddingHorizontal: 26, paddingTop: 24, paddingBottom: 30 },
+  fill: { flex: 1 },
+  scroll: { flexGrow: 1, paddingHorizontal: 26, paddingTop: 24, paddingBottom: 30 },
+  spacer: { flexGrow: 1, minHeight: 16 },
   title: { fontFamily: fonts.serif, fontSize: 38, lineHeight: 42, color: colors.ink, textAlign: 'center', marginTop: 18 },
   sub: { fontFamily: fonts.sans, fontSize: 16, lineHeight: 24, color: colors.textMuted, textAlign: 'center', marginTop: 12, paddingHorizontal: 10 },
   stars: { flexDirection: 'row', justifyContent: 'center', gap: 10, marginTop: 26 },

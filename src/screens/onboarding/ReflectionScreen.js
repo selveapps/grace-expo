@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Pressable, StyleSheet } from 'react-native';
+import { View, Text, Pressable, StyleSheet, ScrollView } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
 import PrimaryButton from '../../components/PrimaryButton';
@@ -18,30 +18,34 @@ export default function ReflectionScreen({ navigation }) {
     navigation.navigate('StoriesPreview');
   };
   return (
-    <Screen bg={colors.ivory} style={styles.wrap} ambient>
-      <Text style={styles.title}>One word to carry with you?</Text>
-      <Text style={styles.sub}>Just one. You can change it anytime.</Text>
-      <View style={{ gap: 12, marginTop: 30 }}>
-        {REFLECTION_WORDS.map((w) => {
-          const on = w === word;
-          return (
-            <Pressable key={w} onPress={() => pick(w)} style={[styles.opt, on && styles.optOn]}>
-              <Text style={[styles.optText, on && styles.optTextOn]}>{w}</Text>
-            </Pressable>
-          );
-        })}
-      </View>
-      <View style={{ flex: 1 }} />
-      <PrimaryButton label="Continue" onPress={keep} />
-      <Pressable onPress={() => navigation.navigate('StoriesPreview')} style={{ paddingVertical: 12 }}>
-        <Text style={styles.skip}>Skip for now</Text>
-      </Pressable>
+    <Screen bg={colors.ivory} style={styles.fill} ambient>
+      <ScrollView style={styles.fill} contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false} bounces={false}>
+        <Text style={styles.title}>One word to carry with you?</Text>
+        <Text style={styles.sub}>Just one. You can change it anytime.</Text>
+        <View style={{ gap: 12, marginTop: 30 }}>
+          {REFLECTION_WORDS.map((w) => {
+            const on = w === word;
+            return (
+              <Pressable key={w} onPress={() => pick(w)} style={[styles.opt, on && styles.optOn]}>
+                <Text style={[styles.optText, on && styles.optTextOn]}>{w}</Text>
+              </Pressable>
+            );
+          })}
+        </View>
+        <View style={styles.spacer} />
+        <PrimaryButton label="Continue" onPress={keep} />
+        <Pressable onPress={() => navigation.navigate('StoriesPreview')} style={{ paddingVertical: 12 }}>
+          <Text style={styles.skip}>Skip for now</Text>
+        </Pressable>
+      </ScrollView>
     </Screen>
   );
 }
 
 const styles = StyleSheet.create({
-  wrap: { paddingHorizontal: 28, paddingTop: 30, paddingBottom: 24 },
+  fill: { flex: 1 },
+  scroll: { flexGrow: 1, paddingHorizontal: 28, paddingTop: 30, paddingBottom: 24 },
+  spacer: { flexGrow: 1, minHeight: 16 },
   title: { fontFamily: fonts.serif, fontSize: 38, color: colors.ink, lineHeight: 42 },
   sub: { fontFamily: fonts.sans, fontSize: 16, lineHeight: 24, color: colors.textMuted, marginTop: 8 },
   opt: { paddingVertical: 18, paddingHorizontal: 24, borderRadius: radius.md, backgroundColor: colors.white, borderWidth: 1.5, borderColor: colors.sandLine, alignItems: 'center' },
