@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, ActivityIndicator } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, ActivityIndicator } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
 import VerseCard from '../../components/VerseCard';
@@ -32,30 +32,34 @@ export default function VerseScreen({ navigation }) {
   };
 
   return (
-    <Screen gradient={['#FDF6E4', '#F7F3EC']} style={styles.wrap} ambient>
-      <View style={{ alignItems: 'center' }}>
-        <GraceDove size={78} motion="halo" />
-        <Text style={styles.kicker}>A verse for today, {profile.name || 'friend'}.</Text>
-      </View>
-      {verse ? (
-        <VerseCard
-          size="hero"
-          verse={verse.text}
-          reference={verse.ref.toUpperCase()}
-          style={styles.cardSpacing}
-        />
-      ) : (
-        <View style={[styles.cardSpacing, styles.cardLoading]}><ActivityIndicator color={colors.brass} /></View>
-      )}
-      <View style={{ flex: 1 }} />
-      <PrimaryButton label="Keep this verse" onPress={keep} />
-      <Text style={styles.amen} onPress={() => navigation.navigate('Reflection')}>Amen, continue without keeping</Text>
+    <Screen gradient={['#FDF6E4', '#F7F3EC']} style={styles.fill} ambient>
+      <ScrollView style={styles.fill} contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false} bounces={false}>
+        <View style={{ alignItems: 'center' }}>
+          <GraceDove size={78} motion="halo" />
+          <Text style={styles.kicker}>A verse for today, {profile.name || 'friend'}.</Text>
+        </View>
+        {verse ? (
+          <VerseCard
+            size="hero"
+            verse={verse.text}
+            reference={verse.ref.toUpperCase()}
+            style={styles.cardSpacing}
+          />
+        ) : (
+          <View style={[styles.cardSpacing, styles.cardLoading]}><ActivityIndicator color={colors.brass} /></View>
+        )}
+        <View style={styles.spacer} />
+        <PrimaryButton label="Keep this verse" onPress={keep} />
+        <Text style={styles.amen} onPress={() => navigation.navigate('Reflection')}>Amen, continue without keeping</Text>
+      </ScrollView>
     </Screen>
   );
 }
 
 const styles = StyleSheet.create({
-  wrap: { paddingHorizontal: 26, paddingTop: 20, paddingBottom: 30 },
+  fill: { flex: 1 },
+  scroll: { flexGrow: 1, paddingHorizontal: 26, paddingTop: 20, paddingBottom: 30 },
+  spacer: { flexGrow: 1, minHeight: 16 },
   kicker: { fontFamily: fonts.serifItalic, fontSize: 22, color: colors.brass, marginTop: 10 },
   cardSpacing: { marginTop: 34, marginBottom: 20, maxHeight: '58%' },
   cardLoading: { width: '100%', alignItems: 'center', justifyContent: 'center', paddingVertical: 60 },

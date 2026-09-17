@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { View, Text, Pressable, StyleSheet, Animated, Easing, Linking } from 'react-native';
+import { View, Text, Pressable, StyleSheet, ScrollView, Animated, Easing, Linking } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
 import GraceDove from '../../components/GraceDove';
@@ -157,7 +157,8 @@ export default function PaywallScreen({ navigation }) {
           <GraceDove size={150} wings="open" motion="bless" />
         </Animated.View>
       </Animated.View>
-      <Animated.View style={{ opacity: body, transform: [{ translateY: body.interpolate({ inputRange: [0, 1], outputRange: [18, 0] }) }] }}>
+      <Animated.View style={[styles.body, { opacity: body, transform: [{ translateY: body.interpolate({ inputRange: [0, 1], outputRange: [18, 0] }) }] }]}>
+      <ScrollView style={styles.body} contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false} bounces={false}>
       <Text style={styles.title}>Begin your quiet{'\n'}place with Grace.</Text>
       <Text style={styles.sub}>Three days free. Then continue if it feels right.</Text>
 
@@ -189,7 +190,7 @@ export default function PaywallScreen({ navigation }) {
         ))}
       </View>
 
-      <View style={{ flex: 1 }} />
+      <View style={styles.spacer} />
       {/* CTA island — swallows taps so the soft-paywall exit never fires on the
           trial button, Restore, or the legal links. */}
       <View onStartShouldSetResponder={() => true}>
@@ -206,6 +207,7 @@ export default function PaywallScreen({ navigation }) {
           <Pressable onPress={() => openLegal(LEGAL.privacyUrl)} hitSlop={10}><Text style={styles.legalLink}>Privacy</Text></Pressable>
         </View>
       </View>
+      </ScrollView>
       </Animated.View>
 
       {/* light veil carried over from Preparing — fades to reveal the blessing */}
@@ -219,6 +221,9 @@ export default function PaywallScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   wrap: { paddingHorizontal: 24, paddingTop: 10, paddingBottom: 12 },
+  body: { flex: 1 },
+  scroll: { flexGrow: 1 },
+  spacer: { flexGrow: 1, minHeight: 16 },
   title: { fontFamily: fonts.serif, fontSize: 38, color: colors.onDark, textAlign: 'center', lineHeight: 42, marginTop: 2 },
   sub: { fontFamily: fonts.sans, fontSize: 16, lineHeight: 23, color: colors.onDarkMuted, textAlign: 'center', marginTop: 8, marginBottom: 20 },
   plan: { padding: 16, borderRadius: radius.lg, backgroundColor: 'rgba(230,207,148,0.14)', borderWidth: 2, borderColor: 'rgba(255,255,255,0.15)', marginBottom: 12 },

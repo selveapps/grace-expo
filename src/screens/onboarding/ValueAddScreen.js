@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { View, Text, StyleSheet, Animated, Easing } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Animated, Easing } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import Svg, { Path, Circle, Rect } from 'react-native-svg';
 import Screen from '../../components/Screen';
@@ -52,24 +52,28 @@ export default function ValueAddScreen({ navigation }) {
   }, []);
 
   return (
-    <Screen gradient={['#FDF6E4', '#F7F3EC']} style={styles.wrap} ambient>
-      <View style={styles.progress}><View style={[styles.progressFill, { width: '55%' }]} /></View>
-      <View style={{ alignItems: 'center' }}><GraceDove size={90} crop="head" motion="peek" /></View>
-      <Text style={styles.title}>Your Bible,{'\n'}made for you.</Text>
-      <Text style={styles.subhead}>A quiet, audio-first companion for women.</Text>
-      <View style={styles.list}>
-        {ITEMS.map((it, i) => <Row key={it.key} item={it} av={avs[i]} />)}
-      </View>
-      <View style={{ flex: 1 }} />
-      <Animated.View style={{ opacity: cta, transform: [{ translateY: cta.interpolate({ inputRange: [0, 1], outputRange: [20, 0] }) }] }}>
-        <PrimaryButton label="Continue" onPress={() => navigation.navigate('Verse')} />
-      </Animated.View>
+    <Screen gradient={['#FDF6E4', '#F7F3EC']} style={styles.fill} ambient>
+      <ScrollView style={styles.fill} contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false} bounces={false}>
+        <View style={styles.progress}><View style={[styles.progressFill, { width: '55%' }]} /></View>
+        <View style={{ alignItems: 'center' }}><GraceDove size={90} crop="head" motion="peek" /></View>
+        <Text style={styles.title}>Your Bible,{'\n'}made for you.</Text>
+        <Text style={styles.subhead}>A quiet, audio-first companion for women.</Text>
+        <View style={styles.list}>
+          {ITEMS.map((it, i) => <Row key={it.key} item={it} av={avs[i]} />)}
+        </View>
+        <View style={styles.spacer} />
+        <Animated.View style={{ opacity: cta, transform: [{ translateY: cta.interpolate({ inputRange: [0, 1], outputRange: [20, 0] }) }] }}>
+          <PrimaryButton label="Continue" onPress={() => navigation.navigate('Verse')} />
+        </Animated.View>
+      </ScrollView>
     </Screen>
   );
 }
 
 const styles = StyleSheet.create({
-  wrap: { paddingHorizontal: 26, paddingTop: 20, paddingBottom: 30 },
+  fill: { flex: 1 },
+  scroll: { flexGrow: 1, paddingHorizontal: 26, paddingTop: 20, paddingBottom: 30 },
+  spacer: { flexGrow: 1, minHeight: 16 },
   progress: { height: 4, borderRadius: 4, backgroundColor: colors.sand, overflow: 'hidden', marginBottom: 26 },
   progressFill: { height: '100%', backgroundColor: colors.brass },
   title: { fontFamily: fonts.serif, fontSize: 40, color: colors.ink, textAlign: 'center', marginTop: 14, lineHeight: 44 },
