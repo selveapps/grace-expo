@@ -4,7 +4,7 @@ import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
 import GraceDove from '../../components/GraceDove';
 import PrimaryButton from '../../components/PrimaryButton';
-import { SubscriptionService, TodayService } from '../../services';
+import { SubscriptionService } from '../../services';
 import { useProfile } from '../../state/profile';
 import { LEGAL } from '../../legal';
 import { colors, fonts, radius } from '../../theme';
@@ -30,7 +30,7 @@ const TRIAL = [
 ];
 
 export default function PaywallScreen({ navigation }) {
-  const { profile, setProfile } = useProfile();
+  const { setProfile } = useProfile();
   const [plan, setPlan] = useState('annual');
   const [busy, setBusy] = useState(false);
   const [restoring, setRestoring] = useState(false);
@@ -99,27 +99,6 @@ export default function PaywallScreen({ navigation }) {
     }
   };
 
-  // Soft paywall: a tap on empty space, meaning anywhere that is not a plan
-  // card, the CTA island or a legal link, enters the app. She is not a payer, so
-  // there is no celebration and `subscribed` stays false.
-  //
-  // Note how this differs from a FAILED purchase: that stays on this screen with
-  // a recoverable error and never falls through, because a charge that did not
-  // go through must not read as access granted. This path is someone choosing
-  // not to buy, which is a different thing and gets a graceful exit.
-  const enterHome = () => {
-    // Warm Home so the tab tree has nothing left to fetch when it mounts.
-    TodayService.prime(profile);
-    leave(() => {
-      // `onboarded` is what makes the NEXT cold start skip onboarding. It does
-      // not navigate: see RootNavigator on why the old key-remount silently
-      // restored this very screen instead of opening the app.
-      setProfile((p) => ({ ...p, onboarded: true }));
-      // The actual move, with onboarding dropped off the back stack.
-      navigation.reset({ index: 0, routes: [{ name: 'App' }] });
-    });
-  };
-
   // Restoring is the other legitimate way in, and the App Store expects it to be
   // reachable from the purchase screen rather than only from Settings.
   const restore = async () => {
@@ -139,7 +118,6 @@ export default function PaywallScreen({ navigation }) {
   };
 
   return (
-    <Pressable style={{ flex: 1 }} onPress={enterHome} accessibilityLabel="Continue without subscribing">
     <Screen gradient={['#5A4632', '#3A2C22', '#2B2015']} style={styles.wrap} ambient>
       <Animated.View style={{ alignItems: 'center', height: 168, justifyContent: 'center' }}>
         <Animated.View style={{
@@ -191,21 +169,17 @@ export default function PaywallScreen({ navigation }) {
       </View>
 
       <View style={styles.spacer} />
-      {/* CTA island — swallows taps so the soft-paywall exit never fires on the
-          trial button, Restore, or the legal links. */}
-      <View onStartShouldSetResponder={() => true}>
-        {error && <Text style={styles.error}>{error}</Text>}
-        {notice && <Text style={styles.notice}>{notice}</Text>}
-        <PrimaryButton label={busy ? 'Preparing…' : 'Start 3-day free trial'} variant="gold" onPress={start} testID="paywall-start-trial" />
-        <Text style={styles.summary}>{SUMMARY[plan]}</Text>
-        <Pressable onPress={restore} hitSlop={8} style={styles.restore} accessibilityRole="button" testID="paywall-restore">
-          <Text style={styles.restoreText}>{restoring ? 'Checking…' : 'Restore purchase'}</Text>
-        </Pressable>
-        <View style={styles.legalRow}>
-          <Pressable onPress={() => openLegal(LEGAL.termsUrl)} hitSlop={10}><Text style={styles.legalLink}>Terms</Text></Pressable>
-          <Text style={styles.legalDot}>·</Text>
-          <Pressable onPress={() => openLegal(LEGAL.privacyUrl)} hitSlop={10}><Text style={styles.legalLink}>Privacy</Text></Pressable>
-        </View>
+      {error && <Text style={styles.error}>{error}</Text>}
+      {notice && <Text style={styles.notice}>{notice}</Text>}
+      <PrimaryButton label={busy ? 'Preparing…' : 'Start 3-day free trial'} variant="gold" onPress={start} testID="paywall-start-trial" />
+      <Text style={styles.summary}>{SUMMARY[plan]}</Text>
+      <Pressable onPress={restore} hitSlop={8} style={styles.restore} accessibilityRole="button" testID="paywall-restore">
+        <Text style={styles.restoreText}>{restoring ? 'Checking…' : 'Restore purchase'}</Text>
+      </Pressable>
+      <View style={styles.legalRow}>
+        <Pressable onPress={() => openLegal(LEGAL.termsUrl)} hitSlop={10}><Text style={styles.legalLink}>Terms</Text></Pressable>
+        <Text style={styles.legalDot}>·</Text>
+        <Pressable onPress={() => openLegal(LEGAL.privacyUrl)} hitSlop={10}><Text style={styles.legalLink}>Privacy</Text></Pressable>
       </View>
       </ScrollView>
       </Animated.View>
@@ -215,7 +189,6 @@ export default function PaywallScreen({ navigation }) {
       {/* outro bloom — carries the eye out of the dark screen into ivory */}
       <Animated.View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: '#FDF6E4', opacity: outro }]} />
     </Screen>
-    </Pressable>
   );
 }
 

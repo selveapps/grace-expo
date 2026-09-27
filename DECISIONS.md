@@ -490,3 +490,19 @@ that RevenueCat already provides. Superwall adds remote paywall UI and experimen
 - Entitlement identifier: `grace_plus`.
 - Setup guide: `docs/IAP_REVENUECAT_SUPERWALL.md`.
 - `react-native.config.js` may be required for RC autolinking on Expo SDK 54 + New Architecture.
+
+---
+
+## DEC-017 — Hard paywall; server entitlement wins on hydrate (2026-09-26)
+
+**Tickets:** none (no matching GRACE/SEL ticket)
+**Status:** accepted
+
+### Context
+The paywall let a tap on empty space set `onboarded` and reset into the app with `subscribed: false`. A later cold start then skipped straight to the app. Local `subscribed` was also OR'd with the server flag, so an expired sub could stay true on device.
+
+### Decision
+No skip. Start trial or Restore are the only ways in. A cold start of an onboarded unpaid user lands on the paywall. Hydrate copies `subscribed` from the server. Google is shown only when both EAS production client IDs are set.
+
+### Verification
+`e2e/paywall-flow.spec.js`: empty-space tap stays on the paywall; onboarded + unpaid cold start shows `paywall-start-trial`.

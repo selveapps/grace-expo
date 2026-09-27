@@ -22,7 +22,8 @@ import Tabs from './Tabs';
 const Stack = createNativeStackNavigator();
 
 // The onboarding flow is a single stack that ends by navigating into the tab app.
-// Returning users (profile.onboarded persisted) skip straight to the app.
+// Returning users skip straight to the app only when they are both onboarded
+// AND subscribed (trialing counts). Onboarded-but-unpaid returns to the paywall.
 //
 // This used to carry `key={profile.onboarded ? 'app' : 'onboarding'}` and treat
 // that remount as the only way into the app. It does not work. React Navigation
@@ -33,9 +34,14 @@ const Stack = createNativeStackNavigator();
 // the screen they had just finished with: the "same screen pops up" report.
 //
 // `initialRouteName` now only decides where a COLD start begins. Moving into the
-// app mid-session is an explicit navigation.reset by the screen that earns it
-// (Paywall's soft exit, Confirmation's Enter Grace). Dropping the key also drops
-// a full remount of the tab tree, which is what made Enter Grace feel slow.
+// app mid-session is an explicit navigation.reset from Confirmation after a
+// real entitlement. Dropping the key also drops a full remount of the tab tree.
+function initialRouteName(profile) {
+  if (profile.onboarded && profile.subscribed) return 'App';
+  if (profile.onboarded) return 'Paywall';
+  return 'Splash';
+}
+
 export default function RootNavigator() {
   const { profile, hydrated } = useProfile();
   if (!hydrated) return null; // wait for AsyncStorage so we don't flash onboarding
@@ -45,7 +51,7 @@ export default function RootNavigator() {
       // reach the root to send the user back to onboarding after a sign-out.
       id="root"
       screenOptions={{ headerShown: false, animation: 'fade', contentStyle: { backgroundColor: '#F7F3EC' } }}
-      initialRouteName={profile.onboarded ? 'App' : 'Splash'}
+      initialRouteName={initialRouteName(profile)}
     >
       <Stack.Screen name="Splash" component={SplashScreen} />
       <Stack.Screen name="Welcome" component={WelcomeScreen} />

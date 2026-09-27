@@ -1,10 +1,7 @@
-// Paywall entry/exit contract. These guard a bug that shipped twice: flipping
-// `onboarded` was expected to move the user into the app, but React Navigation
-// restored the existing stack and left her on the paywall ("same screen pops up").
+// Paywall entry/exit contract.
 //
-// Covers the two behaviours that must not be confused with each other:
-//   1. tapping empty space on the paywall (declining to buy) enters Home
-//   2. a purchase that FAILS stays on the paywall with a recoverable error
+// The paywall is hard: the only ways in are a successful trial/purchase or
+// Restore. Tapping empty space used to skip it; that is gone.
 const { test, expect } = require('@playwright/test');
 const { mockAuth } = require('./helpers');
 
@@ -98,7 +95,7 @@ async function reachPaywall(page, name = 'Sam D.') {
 test.describe('v4 paywall flow', () => {
   test.use({ viewport: { width: 393, height: 852 } });
 
-  test('tapping empty space on the paywall enters Home', async ({ page }) => {
+  test('tapping empty space on the paywall does not enter the app', async ({ page }) => {
     const errs = [];
     page.on('pageerror', (e) => errs.push(e.message));
 
@@ -109,23 +106,37 @@ test.describe('v4 paywall flow', () => {
     await expect(page.getByText('Begin your quiet')).toBeVisible();
     await page.screenshot({ path: `${SHOTS}/10-paywall.png` });
 
-    // Restore must be reachable from the purchase screen.
     await expect(page.getByTestId('paywall-restore')).toBeVisible();
 
-    // Tap high on the screen, well clear of the plan cards and the CTA island.
     await page.mouse.click(196, 96);
+    await page.waitForTimeout(1200);
 
-    // Lands on Home, and is NOT celebrated as a subscriber.
-    await expect(page.getByText(/Good (morning|afternoon|evening)/))
-      .toBeVisible({ timeout: 20_000 });
+    await expect(page.getByTestId('paywall-start-trial').last()).toBeVisible();
+    await expect(page.getByText(/Good (morning|afternoon|evening)/)).toHaveCount(0);
     await expect(page.getByText('Your place is ready')).toHaveCount(0);
-    await page.screenshot({ path: `${SHOTS}/11-home-after-tapout.png` });
 
     const stored = await page.evaluate(() =>
       JSON.parse(localStorage.getItem('grace.profile.v1')));
-    expect(stored.onboarded, 'tap-out should finish onboarding').toBe(true);
-    expect(stored.subscribed, 'tap-out must NOT grant entitlement').toBe(false);
+    expect(stored.onboarded, 'a declined paywall must not finish onboarding').toBe(false);
+    expect(stored.subscribed, 'a declined paywall must not grant entitlement').toBe(false);
     expect(errs).toEqual([]);
+  });
+
+  test('an onboarded unpaid user cold-starts on the paywall', async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.setItem('grace.profile.v1', JSON.stringify({
+        name: 'Sam', carrying: ['Hope'], gentleness: 'Steadily', rhythm: 'morning',
+        subscribed: false, savedVerses: [], reflections: [], onboarded: true,
+        readingTheme: 'sepia', fontScale: 1, audioSpeed: 1, reducedMotion: false, email: '',
+      }));
+      localStorage.removeItem('grace.session.v1');
+      localStorage.removeItem('grace.deviceId');
+    });
+    await mockAuth(page);
+    await page.goto('/');
+
+    await expect(page.getByTestId('paywall-start-trial').last()).toBeVisible({ timeout: 20_000 });
+    await expect(page.getByText(/Good (morning|afternoon|evening)/)).toHaveCount(0);
   });
 
   test('a successful trial goes Confirmation -> Enter Grace -> Home', async ({ page }) => {

@@ -7,6 +7,8 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Changed
+- **Hard paywall:** no skip. Start trial or Restore are the only ways in. A cold start of an onboarded unpaid user lands on the paywall. Profile hydrate trusts the server `subscribed` flag.
+- **Google sign-in** shows only when both EAS production client IDs are set (`EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID` and `EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID`).
 - **M11 IAP product IDs** aligned to live ASC Grace Plus subscriptions: `grace.yearly`, `grace.monthly` (was `grace.plus.*`).
 
 ### Planned

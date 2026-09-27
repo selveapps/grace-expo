@@ -186,7 +186,7 @@ Password: [fill in]
 
 Notes for the reviewer:
 - Grace is a subscription Bible and devotional app. Three day free trial, then $12.99/month or $69.99/year.
-- The paywall appears at the end of onboarding. A "Maybe later" option is available.
+- The paywall appears at the end of onboarding. There is no skip; Start 3-day free trial or Restore purchase are the only ways in.
 - Restore Purchases is on the paywall and in Settings.
 - Terms of Use and Privacy Policy are linked directly on the paywall.
 - Account deletion is available in Settings > Account > Delete Account.

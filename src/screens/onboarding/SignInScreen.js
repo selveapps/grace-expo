@@ -55,9 +55,8 @@ const MESSAGES = {
  *    carried a "Skip for now" CTA straight past it. Nothing advances now unless
  *    the provider reports ok.
  *
- * 2. It does not overclaim. There is no "Continue with Google" button, because
- *    the code behind it never talked to Google: it linked a hardcoded gmail
- *    address to the guest account. Apple is genuine. Email is described as
+ * 2. It does not overclaim. Google is offered only when a real client id is
+ *    present and GET /auth/google/available is true. Email is described as
  *    remembering an address, which is all it does.
  */
 export default function SignInScreen({ navigation }) {

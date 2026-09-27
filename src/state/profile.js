@@ -93,7 +93,10 @@ export function ProfileProvider({ children, booted = true }) {
             gentleness: p?.gentleness ?? prev.gentleness,
             rhythm: p?.rhythm ?? prev.rhythm,
             onboarded: prev.onboarded || !!p?.onboarded,
-            subscribed: prev.subscribed || !!p?.subscribed,
+            // Server entitlement wins on hydrate so an expired sub cannot keep
+            // a stale local `true`. A purchase in this session writes local
+            // true after this first sync, so it is not overwritten here.
+            subscribed: !!p?.subscribed,
             savedVerses: saved.length ? saved : prev.savedVerses,
             reflections: reflections.length ? reflections : prev.reflections,
           };
