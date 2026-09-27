@@ -76,9 +76,8 @@ Default API (no `.env`): `https://grace-api-production.up.railway.app`
 
 Full playbook: [`docs/BETA_DISTRIBUTION.md`](docs/BETA_DISTRIBUTION.md)
 
-> Purchases & real auth need a dev build; here they're simulated (the paywall CTA advances
-> to the confirmation, "Maybe later" drops straight into the app). This matches the intended
-> Expo Go testing behaviour.
+> Purchases & real auth need a store/dev build. The paywall is hard: Start trial or Restore
+> are the only ways into the app. Expo Go falls back to beta redeem when IAP is off.
 
 Pinned to **Expo SDK 50 / RN 0.73 / iOS 13.4+**. To move to a newer SDK later, run
 `npx expo install expo@^51` (or latest) then `npx expo install --fix` to realign native deps —

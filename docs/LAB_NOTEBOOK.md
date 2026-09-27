@@ -329,3 +329,21 @@ Ran `generate:audio` with a working key, then verified rather than assumed:
 **Observations:** ASC product IDs are immutable after creation; scaffold had assumed `grace.plus.*`. Annual plan detection now accepts `yearly` or `annual` in the StoreKit product identifier.
 
 **Result:** `npm test -- test/revenuecat.unit.test.ts` pass (pending run in this session).
+
+---
+
+### RUN-014 | 2026-09-26 | Hard paywall + Google client IDs
+
+**Objective:** Stop unpaid users from entering the app, and show Google only when production client IDs exist.
+
+**Environment:** Branch `feat/hard-paywall-google`. iOS production build 20 (1.0.0) already uploaded to TestFlight from these edits; not submitted for App Review. Build 19 remains Waiting for Review.
+
+**Procedure:**
+1. Remove the paywall tap-out (`enterHome`). Start trial and Restore are the only exits.
+2. Cold start: `onboarded && subscribed` → App; `onboarded` only → Paywall; otherwise Splash.
+3. Profile hydrate sets `subscribed` from the server so a stale local `true` cannot outlive an expired sub.
+4. Document that the Google button stays hidden until both `EXPO_PUBLIC_GOOGLE_*_CLIENT_ID` values are real.
+
+**Observations:** `e2e/paywall-flow.spec.js` now expects a tap on empty space to stay on the paywall, and adds a cold-start case for an onboarded unpaid user.
+
+**Result:** Changes committed on `feat/hard-paywall-google`. No new EAS build in this run.
