@@ -33,6 +33,7 @@ export default function PaywallScreen({ navigation }) {
   const { profile, setProfile } = useProfile();
   const [plan, setPlan] = useState('annual');
   const [busy, setBusy] = useState(false);
+  const [leaving, setLeaving] = useState(false);
   const [restoring, setRestoring] = useState(false);
   const [error, setError] = useState(null);
   const [notice, setNotice] = useState(null);
@@ -60,10 +61,29 @@ export default function PaywallScreen({ navigation }) {
   // Hand off the light: bloom the dark paywall out to ivory before navigating, so
   // Confirmation/Home fade in from the same colour and it reads as one screen.
   const leave = (fn) => {
+    if (leaving) return;
+    setLeaving(true);
     Animated.timing(outro, {
       toValue: 1, duration: 420, easing: Easing.out(Easing.ease), useNativeDriver: true,
     }).start(fn);
   };
+
+  // Same trap as Confirmation: a fully opaque outro that never navigates is a
+  // blank screen. If we are still on the paywall after the handoff, go into
+  // the app instead of leaving the reviewer on an ivory sheet.
+  useEffect(() => {
+    if (!leaving) return undefined;
+    const t = setTimeout(() => {
+      const state = navigation.getState?.();
+      const route = state?.routes?.[state.index]?.name;
+      if (route && route !== 'Paywall') return;
+      outro.setValue(0);
+      setLeaving(false);
+      setProfile((p) => (p.onboarded ? p : { ...p, onboarded: true }));
+      navigation.reset({ index: 0, routes: [{ name: 'App' }] });
+    }, 2500);
+    return () => clearTimeout(t);
+  }, [leaving, navigation, outro, setProfile]);
 
   // The one route out of the paywall: a real entitlement. `celebrate` is passed
   // explicitly rather than left for Confirmation to infer from profile.subscribed,

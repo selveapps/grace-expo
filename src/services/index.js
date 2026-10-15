@@ -13,5 +13,5 @@ export { RevenueCatService, IAP_ENABLED } from './RevenueCatService';
 export { SuperwallService, PAYWALL_PLACEMENTS } from './SuperwallService';
 export { NotificationService } from './NotificationService';
 export { SupportService, SUPPORT_CATEGORIES } from './SupportService';
-export { TodayService } from './TodayService';
+export { TodayService, verseOf, storyOf } from './TodayService';
 export { ReviewService } from './ReviewService';

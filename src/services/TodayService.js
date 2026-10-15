@@ -1,9 +1,16 @@
-// TodayService — Today tab payload from Grace API with local fallback.
+// TodayService — Today tab payload from Grace API with a bundled fallback.
+//
+// The fallback used to be "local" in name only: a failed /today kicked off
+// another chain of /saved, /stories and bible-api calls. If those hung, Home
+// stayed on "Preparing…" because the screen swallowed the rejection. The
+// bundled payload is synchronous and always renderable, so a failed or empty
+// load still has a verse and a story. `degraded` tells the screen to show a
+// retry instead of pretending the live reading arrived.
 import { api } from '../api/client';
-import { VerseService } from './VerseService';
 import { StoryService } from './StoryService';
 import { TeaService } from './TeaService';
-import { ReadingService } from './ReadingService';
+import { StorageService, KEYS } from './StorageService';
+import { PSALM_23 } from '../data/content';
 
 // One in-flight payload, shared. Confirmation primes this while she is still
 // reading the blessing, so tapping Enter Grace mounts a Home that already has
@@ -19,35 +26,60 @@ function greetingFor(date = new Date()) {
   return 'Good evening';
 }
 
-const settled = (p, fallback) => Promise.resolve(p).then((v) => v, () => fallback);
+export function verseOf(v) {
+  if (!v || typeof v !== 'object') return null;
+  const text = typeof v.text === 'string' ? v.text.trim() : '';
+  if (!text) return null;
+  return { ref: v.ref == null ? '' : String(v.ref), text };
+}
 
-async function getTodayLocal(profile = {}) {
-  // allSettled semantics on purpose. With Promise.all, one rejected sub-fetch
-  // took the whole payload down, and Home then sat on "Preparing…" forever
-  // because its listen and continue cards had nothing to render.
-  const [saved, cont, prog] = await Promise.all([
-    settled(ReadingService.getSavedVerses(), []),
-    settled(StoryService.getContinue(), []),
-    settled(ReadingService.getReadingProgress(), {}),
-  ]);
-  const [dailyVerse, featured] = await Promise.all([
-    saved && saved[0] ? saved[0] : settled(VerseService.getDaily(), null),
-    settled(StoryService.getFeatured(), null),
-  ]);
-  const last = prog && prog.__last;
+export function storyOf(s) {
+  if (!s || typeof s !== 'object' || s.id == null) return null;
+  if (typeof s.title !== 'string' || !s.title.trim()) return null;
+  return s;
+}
+
+function bundledToday(profile = {}) {
+  const story = StoryService.bundledCatalog().featured;
   return {
     greeting: greetingFor(),
     name: profile.name || 'friend',
-    dailyVerse,
-    recommendedReading: last || { book: 'Psalms', chapter: 23 },
-    recommendedStory: (cont && cont[0]) || featured,
+    dailyVerse: {
+      ref: 'Psalm 23:1-4',
+      text: PSALM_23.slice(0, 4).map((v) => v.t).join(' '),
+    },
+    recommendedReading: { book: 'Psalms', chapter: 23 },
+    recommendedStory: story,
     reflectionPrompt: 'Where might you need Grace today?',
     userIntention: (profile.carrying && profile.carrying[0]) || profile.reflectionWord || 'Trust',
     rhythm: profile.rhythm || 'morning',
+    degraded: true,
+  };
+}
+
+async function getTodayLocal(profile = {}, baseline) {
+  // Storage only. Another network waterfall here is what left Home blank while
+  // every request timed out in sequence.
+  const base = baseline || bundledToday(profile);
+  let kept = null;
+  try {
+    const saved = await StorageService.get(KEYS.savedVerses, []);
+    kept = verseOf(Array.isArray(saved) ? saved[0] : null);
+  } catch { /* storage unavailable — bundled verse still renders */ }
+  const fromProfile = verseOf(profile.savedVerses && profile.savedVerses[0]);
+  return {
+    ...base,
+    dailyVerse: kept || fromProfile || base.dailyVerse,
+    degraded: true,
   };
 }
 
 export const TodayService = {
+  /** Synchronous content Home can paint before any request settles. */
+  bundled(profile = {}) {
+    return bundledToday(profile);
+  },
+
   async getToday(profile = {}, { force = false } = {}) {
     const key = profile.name || '';
     const fresh = cache && cache.key === key && Date.now() - cache.at < FRESH_MS;
@@ -81,21 +113,34 @@ export const TodayService = {
   },
 
   async fetchToday(profile = {}) {
+    const baseline = bundledToday(profile);
     try {
-      await StoryService.hydrateProgress();
+      // Progress sync must not sit in front of the payload. Home has its own
+      // continue fetch, and a stuck /stories/progress used to delay the verse
+      // until the reviewer had already called the screen blank.
+      StoryService.hydrateProgress().catch(() => {});
       const { data } = await api.get('/today');
+      const dailyVerse = verseOf(data?.dailyVerse);
+      const recommendedStory = storyOf(data?.recommendedStory);
+      const book = data?.recommendedReading?.book;
       return {
         greeting: greetingFor(),
-        name: profile.name || data.name || 'friend',
-        dailyVerse: data.dailyVerse,
-        recommendedReading: data.recommendedReading,
-        recommendedStory: data.recommendedStory,
-        reflectionPrompt: data.reflectionPrompt || 'Where might you need Grace today?',
-        userIntention: data.userIntention || 'Trust',
-        rhythm: data.rhythm || profile.rhythm || 'morning',
+        name: profile.name || (typeof data?.name === 'string' && data.name) || baseline.name,
+        dailyVerse: dailyVerse || baseline.dailyVerse,
+        recommendedReading: book
+          ? { book: String(book), chapter: Number(data.recommendedReading.chapter) || 1 }
+          : baseline.recommendedReading,
+        recommendedStory: recommendedStory || baseline.recommendedStory,
+        reflectionPrompt: (typeof data?.reflectionPrompt === 'string' && data.reflectionPrompt)
+          || baseline.reflectionPrompt,
+        userIntention: data?.userIntention || baseline.userIntention,
+        rhythm: data?.rhythm || profile.rhythm || baseline.rhythm,
+        // An empty 200 is the same stuck screen as a transport failure if we
+        // render "…" and wait. Fill the holes and say so.
+        degraded: !dailyVerse || !recommendedStory,
       };
     } catch {
-      return getTodayLocal(profile);
+      return getTodayLocal(profile, baseline);
     }
   },
 };

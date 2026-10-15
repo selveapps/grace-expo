@@ -53,6 +53,23 @@ export default function ConfirmationScreen({ navigation, route }) {
     });
   };
 
+  // The handoff veil is opaque and eats every tap. If the reset never leaves
+  // this screen, that veil is a blank stuck page. Drop it and try the reset
+  // again rather than waiting on a transition that did not happen.
+  useEffect(() => {
+    if (!leaving) return undefined;
+    const t = setTimeout(() => {
+      const state = navigation.getState?.();
+      const route = state?.routes?.[state.index]?.name;
+      if (route && route !== 'Confirmation') return;
+      handoff.setValue(0);
+      setLeaving(false);
+      setProfile((p) => (p.onboarded ? p : { ...p, onboarded: true }));
+      navigation.reset({ index: 0, routes: [{ name: 'App' }] });
+    }, 2500);
+    return () => clearTimeout(t);
+  }, [leaving, navigation, handoff, setProfile]);
+
   return (
     <Screen gradient={['#FDF6E4', '#F7F3EC', '#F1EBE0']} style={styles.fill} ambient>
       <StatusBar barStyle="dark-content" />

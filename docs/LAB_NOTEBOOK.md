@@ -339,3 +339,29 @@ Ran `generate:audio` with a working key, then verified rather than assumed:
 2. Move the paywall soft-exit `Pressable` inside the `ScrollView`, off the scroller's parent, and drop the translate wrapper around the scroller.
 
 **Observations:** Version 1.0 build 20 is the binary on the open rejection (`reviewSubmissions/d0299da5-6925-4441-9776-0a84e23d2bf1`, state `UNRESOLVED_ISSUES`). The App Store Connect API key can read that state and cannot read or post Resolution Center messages; those stay on the iris web session. Expo web at 390×320: Splash Begin starts at y 388–446 (viewport 320), scroller 454×320, and is in view after scroll; Welcome Continue starts below the fold and clicks through to the name field. At 390×480 the paywall trial button starts at y 660–718 with scroller 836×458 and reaches Confirmation after scroll; Enter Grace starts just below the fold and scrolls in. A tap at (196, 96) on the paywall dove still sets `onboarded: true`, `subscribed: false`, and lands on Home.
+
+### RUN-015 | 2026-10-15 | App Review 2.1(a) blank Home after onboarding
+
+**Objective:** After onboarding, a failed or empty content load must not look like a stuck blank screen on a phone or the short iPad compatibility window. Separately, replace the subscription promotional image that is identical to the app icon. No matching SEL/GRACE ticket in `docs/LINEAR_ISSUES.md`.
+
+**Environment:**
+- Branch: `cursor/review-blank-and-promo-41ec` off `origin/main` `30fcc50`
+- No iOS Simulator. Expo web on `:8091` against `https://grace-api-production.up.railway.app`
+- Production `/health` was `{"ok":true,"db":true}` and a fresh guest `GET /today` returned Psalm 23:1-4 plus Ruth stays
+
+**Procedure:**
+1. Trace Enter Grace / paywall soft-exit → `navigation.reset` to `App` → `TodayScreen`.
+2. Stop swallowing `getToday` failures. Paint a bundled passage immediately, and show a retry when the live payload fails, is empty, or is still pending after 8s.
+3. Wrap each tab scene in an error boundary and give the tab shell one `flex: 1` child.
+4. If the paywall or Confirmation veil is still the focused route after 2.5s, drop it and reset into the app again.
+5. `npx playwright test` the new Today cases plus the existing paywall flow, on Expo web.
+
+**Observations:**
+- The old "local" fallback still called `/saved`, `/stories`, and bible-api.com. A hung chain left the verse on "…" and the listen card on "Preparing…" because `TodayScreen` used `.catch(() => {})`.
+- A missing `progress` on a continue row throws during render. In a release build that unmounts the tree onto the ivory navigator background.
+- `grace.yearly` promotional image `9e64f3df-84ac-43ac-ba14-d5813cfdff2c` (IMG_0452.png, 1024×1024) is pixel-identical to `assets/GraceIconV4.png`. It sits on subscription version `90359d71-a9e0-49b1-92be-8d7b84e4272c`, state `READY_FOR_REVIEW`. `grace.monthly` version `f4a10f8e-f054-4115-a509-254f857f9b3e` has no promotional image.
+- Both versions are items on review submission `d0299da5-6925-4441-9776-0a84e23d2bf1` (`UNRESOLVED_ISSUES`). `POST /v2/subscriptionImages` and `DELETE` of the image return 409 `STATE_ERROR.SUBSCRIPTION_VERSION_UNMODIFIABLE`. `DELETE` of the review submission item returns 409 `Item was already submitted`. `POST /v1/subscriptionVersions` returns 409 `ALREADY_EXISTS` inflight version. The image was not changed. The local `.p8` was deleted after the calls.
+
+**Result:** Playwright 7/7 on Expo web (`today-load-failure.spec.js` 4, `paywall-flow.spec.js` 3), including 390×320 where Try again is in the viewport. Promotional image unchanged; a person has to replace it in App Store Connect.
+
+**Follow-up:** Human replaces the yearly promotional image (and adds one for monthly) on the inflight subscription versions, then resubmits. Do not treat this run as a Resolution Center reply.

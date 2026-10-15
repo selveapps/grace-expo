@@ -46,14 +46,52 @@ export default function StoriesScreen({ navigation }) {
   const [collections, setCollections] = useState([]);
   const [cont, setCont] = useState([]);
   const [all, setAll] = useState([]);
+  const [loadError, setLoadError] = useState(false);
+  const [attempt, setAttempt] = useState(0);
 
-  // Reload on focus so continue-listening reflects real progress.
+  // Reload on focus so continue-listening reflects real progress. A rejection
+  // used to leave this list empty with no way to try again.
   useFocusEffect(useCallback(() => {
     let alive = true;
+    let settled = false;
+    const applyBundled = () => {
+      const b = StoryService.bundledCatalog();
+      setFeatured((f) => f || b.featured);
+      setCollections((c) => (c.length ? c : b.collections));
+      setAll((a) => (a.length ? a : b.stories));
+      setLoadError(true);
+    };
+    const timer = setTimeout(() => {
+      if (alive && !settled) applyBundled();
+    }, 8000);
     Promise.all([StoryService.getFeatured(), StoryService.getCollections(), StoryService.getContinue(), StoryService.getStories()])
-      .then(([f, c, k, a]) => { if (!alive) return; setFeatured(f); setCollections(c); setCont(k); setAll(a); });
-    return () => { alive = false; };
-  }, []));
+      .then(([f, c, k, a]) => {
+        if (!alive) return;
+        settled = true;
+        const stories = Array.isArray(a) ? a : [];
+        const cols = Array.isArray(c) ? c : [];
+        if (!f && stories.length === 0) {
+          const b = StoryService.bundledCatalog();
+          setFeatured(b.featured);
+          setCollections(b.collections);
+          setAll(b.stories);
+          setCont([]);
+          setLoadError(true);
+          return;
+        }
+        setFeatured(f);
+        setCollections(cols);
+        setCont(Array.isArray(k) ? k : []);
+        setAll(stories);
+        setLoadError(false);
+      })
+      .catch(() => {
+        if (!alive) return;
+        settled = true;
+        applyBundled();
+      });
+    return () => { alive = false; clearTimeout(timer); };
+  }, [attempt]));
 
   const openCollection = (c) => {
     Haptics.selectionAsync();
@@ -83,6 +121,15 @@ export default function StoriesScreen({ navigation }) {
       <ScrollView contentContainerStyle={styles.body} showsVerticalScrollIndicator={false}>
         <Text style={styles.h1}>Stories</Text>
         <Text style={styles.sub}>Real people. Real struggle. Real faith.</Text>
+
+        {loadError && (
+          <View style={styles.notice} testID="stories-load-error">
+            <Text style={styles.noticeTitle}>I couldn't refresh stories.</Text>
+            <Pressable onPress={() => setAttempt((n) => n + 1)} style={styles.noticeBtn} testID="stories-retry" accessibilityRole="button">
+              <Text style={styles.noticeBtnText}>Try again</Text>
+            </Pressable>
+          </View>
+        )}
 
         {featured && (
           <Pressable
@@ -128,8 +175,9 @@ export default function StoriesScreen({ navigation }) {
             <Text style={styles.section}>CONTINUE LISTENING</Text>
             <View style={{ gap: 12 }}>
               {cont.map((s) => {
+                const seconds = s?.progress?.seconds || 0;
                 const pct = s.durationSeconds
-                  ? Math.min(99, Math.max(1, Math.round((s.progress.seconds / s.durationSeconds) * 100)))
+                  ? Math.min(99, Math.max(1, Math.round((seconds / s.durationSeconds) * 100)))
                   : 0;
                 return (
                   <Pressable
@@ -233,6 +281,10 @@ const styles = StyleSheet.create({
   segmentTextOn: { fontFamily: fonts.sansSemi, color: colors.ink },
   h1: { fontFamily: fonts.serif, fontSize: 38, color: colors.ink },
   sub: { fontFamily: fonts.sans, fontSize: 14, color: colors.textFaint, marginBottom: 20 },
+  notice: { flexDirection: 'row', alignItems: 'center', gap: 12, backgroundColor: colors.white, borderWidth: 1, borderColor: colors.sandLine, borderRadius: radius.md, padding: 14, marginBottom: 16 },
+  noticeTitle: { flex: 1, fontFamily: fonts.sansSemi, fontSize: 14, color: colors.ink },
+  noticeBtn: { backgroundColor: colors.espresso, borderRadius: radius.pill, paddingVertical: 10, paddingHorizontal: 16, minHeight: 44, justifyContent: 'center' },
+  noticeBtnText: { fontFamily: fonts.sansSemi, fontSize: 14, color: colors.onDark },
   pressed: { opacity: 0.9, transform: [{ scale: 0.995 }] },
 
   feature: { borderRadius: radius.xl, overflow: 'hidden', minHeight: 220, justifyContent: 'flex-end', ...shadow.lift },

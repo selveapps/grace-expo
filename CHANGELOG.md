@@ -7,6 +7,8 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Fixed
+- Home no longer looks like a stuck blank screen when today's content fails, comes back empty, or never arrives. A bundled passage and story stay on screen, a retry sits in the scroll (including a short frame), and a render error stays inside that tab so Reading is still reachable.
+- The paywall and Confirmation handoff veil drops and retries navigation if Enter Grace or the soft exit never leaves the screen, so an opaque ivory sheet cannot trap the tap.
 - Onboarding no longer traps the App Review path on a short iPad compatibility frame. Splash, Welcome, and Confirmation scroll so Begin / Continue / Enter Grace stay reachable, and the paywall scroller is no longer wrapped in a press handler that swallowed the drag.
 
 ### Changed

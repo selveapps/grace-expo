@@ -6,6 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import * as Haptics from 'expo-haptics';
 import Icon from '../components/Icon';
 import TeaMiniPlayer from '../components/TeaMiniPlayer';
+import ScreenErrorBoundary from '../components/ScreenErrorBoundary';
 import { colors, fonts } from '../theme';
 
 import TodayScreen from '../screens/tabs/TodayScreen';
@@ -15,6 +16,23 @@ import YouStack from './YouStack';
 
 const Tab = createBottomTabNavigator();
 const ICONS = { Today: 'today', Stories: 'stories', Reading: 'reading', You: 'you' };
+
+// One boundary per tab scene. A throw stays inside that scene, so the bar
+// remains and the reviewer can leave a broken Home for Reading.
+function guard(ScreenComponent) {
+  return function GuardedScreen(props) {
+    return (
+      <ScreenErrorBoundary>
+        <ScreenComponent {...props} />
+      </ScreenErrorBoundary>
+    );
+  };
+}
+
+const GuardedToday = guard(TodayScreen);
+const GuardedStories = guard(StoriesStack);
+const GuardedReading = guard(ReadingStack);
+const GuardedYou = guard(YouStack);
 
 /**
  * Tapping a tab always returns that tab to its own root.
@@ -45,10 +63,11 @@ const tabListeners = ({ navigation, route }) => ({
 // ink weight alone. Screens add paddingBottom so nothing hides underneath.
 export default function Tabs() {
   return (
-    <>
+    <View style={styles.fill}>
     <Tab.Navigator
       screenOptions={({ route }) => ({
         headerShown: false,
+        freezeOnBlur: false,
         tabBarActiveTintColor: colors.espresso,
         tabBarInactiveTintColor: '#A99A85',
         tabBarStyle: styles.bar,
@@ -72,18 +91,21 @@ export default function Tabs() {
         ),
       })}
     >
-      <Tab.Screen name="Today" component={TodayScreen} listeners={tabListeners} />
-      <Tab.Screen name="Stories" component={StoriesStack} listeners={tabListeners} />
-      <Tab.Screen name="Reading" component={ReadingStack} listeners={tabListeners} />
-      <Tab.Screen name="You" component={YouStack} listeners={tabListeners} />
+      <Tab.Screen name="Today" component={GuardedToday} listeners={tabListeners} />
+      <Tab.Screen name="Stories" component={GuardedStories} listeners={tabListeners} />
+      <Tab.Screen name="Reading" component={GuardedReading} listeners={tabListeners} />
+      <Tab.Screen name="You" component={GuardedYou} listeners={tabListeners} />
     </Tab.Navigator>
     {/* Above the tab navigator so a playing Tea can be stopped from any tab. */}
     <TeaMiniPlayer />
-    </>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  // A fragment as the native-stack scene can lay out at zero height, which is
+  // a blank screen after Enter Grace. One flex child fills the scene.
+  fill: { flex: 1, backgroundColor: colors.ivory },
   bar: {
     position: 'absolute',          // content scrolls under the blur
     left: 0,
