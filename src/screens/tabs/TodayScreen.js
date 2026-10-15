@@ -7,8 +7,12 @@ import VerseCard from '../../components/VerseCard';
 import GIcon from '../../components/GIcon';
 import GraceDove from '../../components/GraceDove';
 import { useProfile } from '../../state/profile';
-import { StoryService, TodayService } from '../../services';
+import { StoryService, TodayService, verseOf, storyOf } from '../../services';
 import { colors, fonts, radius } from '../../theme';
+
+// A hung request must not leave Home on "Preparing…" until the reviewer gives
+// up. Past this, we keep the bundled passage and say the live load failed.
+const LOAD_WAIT_MS = 8000;
 
 function greeting() {
   const h = new Date().getHours();
@@ -18,6 +22,13 @@ function greeting() {
 }
 
 const mins = (sec) => `${Math.max(1, Math.round((sec || 0) / 60))} min`;
+
+function continuePct(item) {
+  const seconds = item?.progress?.seconds;
+  const duration = item?.durationSeconds;
+  if (!duration || !seconds) return null;
+  return Math.min(99, Math.max(1, Math.round((seconds / duration) * 100)));
+}
 
 export default function TodayScreen({ navigation }) {
   const { profile } = useProfile();
@@ -29,26 +40,55 @@ export default function TodayScreen({ navigation }) {
   // Fetched independently of the aggregate payload so the listen card has
   // something real to point at even while /today is slow or unavailable.
   const [featured, setFeatured] = useState(null);
+  // loading | ready | error. `error` is a failed, empty, or timed-out load.
+  const [status, setStatus] = useState('loading');
+  const [attempt, setAttempt] = useState(0);
 
-  // Prefer the verse the user kept in onboarding; otherwise today's live verse.
-  const kept = profile.savedVerses && profile.savedVerses[0];
+  // Prefer the verse the user kept in onboarding; otherwise today's live verse,
+  // otherwise the bundled passage. The last one is synchronous, so the card is
+  // never an empty "…" on a failed load.
+  const kept = verseOf(profile.savedVerses && profile.savedVerses[0]);
+  const fallback = TodayService.bundled(profile);
+  const daily = kept || verseOf(today?.dailyVerse) || fallback.dailyVerse;
+  const listen = storyOf(today?.recommendedStory) || storyOf(featured) || storyOf(fallback.recommendedStory);
+
+  const retry = () => {
+    TodayService.invalidate();
+    setStatus('loading');
+    setAttempt((n) => n + 1);
+  };
 
   // Refetch on focus so Continue reflects progress made in the player. The
   // payload is cached in TodayService (and primed from Confirmation), so this is
-  // cheap and usually resolves in the same frame.
+  // cheap and usually resolves in the same frame. Failures are recorded: the
+  // old `.catch(() => {})` left the cards on "Preparing…" forever.
   useFocusEffect(useCallback(() => {
     let alive = true;
-    TodayService.getToday(profile).then((t) => { if (alive) setToday(t); }).catch(() => {});
-    StoryService.getContinue().then((c) => { if (alive) setCont(c?.[0] ?? null); }).catch(() => {});
-    StoryService.getFeatured().then((f) => { if (alive) setFeatured(f); }).catch(() => {});
-    return () => { alive = false; };
-  }, [profile.name]));
+    const timer = setTimeout(() => {
+      if (!alive) return;
+      setToday((current) => current || TodayService.bundled(profile));
+      setStatus((s) => (s === 'loading' ? 'error' : s));
+    }, LOAD_WAIT_MS);
 
-  const daily = kept || today?.dailyVerse || null;
-  // What the primary card actually plays. Previously this card was a static
-  // View with hardcoded copy ("6 min · Psalm 23") and no handler at all.
-  // The day's pick, falling back to featured so the card is never empty.
-  const listen = today?.recommendedStory || featured || null;
+    const todayP = TodayService.getToday(profile, { force: attempt > 0 });
+    todayP.then((t) => {
+      if (!alive) return;
+      setToday(t);
+      setStatus(t && t.degraded ? 'error' : 'ready');
+    }).catch(() => {
+      if (!alive) return;
+      setToday(TodayService.bundled(profile));
+      setStatus('error');
+    });
+    StoryService.getContinue().then((c) => {
+      if (!alive) return;
+      const first = Array.isArray(c) ? c[0] : null;
+      setCont(first && first.progress ? first : null);
+    }).catch(() => {});
+    StoryService.getFeatured().then((f) => { if (alive) setFeatured(storyOf(f)); }).catch(() => {});
+
+    return () => { alive = false; clearTimeout(timer); };
+  }, [profile.name, attempt]));
   const reading = today?.recommendedReading || null;
 
   const openStory = (id) => {
@@ -81,9 +121,10 @@ export default function TodayScreen({ navigation }) {
     });
   };
 
-  const contPct = cont && cont.durationSeconds
-    ? Math.min(99, Math.max(1, Math.round((cont.progress.seconds / cont.durationSeconds) * 100)))
-    : null;
+  const contPct = continuePct(cont);
+  const listenRange = listen && typeof listen.scriptureRange === 'string' && listen.scriptureRange
+    ? ` · ${listen.scriptureRange}`
+    : '';
 
   return (
     <Screen bg={colors.ivory} edges={['top']} style={{ paddingHorizontal: 0 }} ambient>
@@ -96,11 +137,23 @@ export default function TodayScreen({ navigation }) {
           <GraceDove size={72} crop="head" motion="peek" />
         </View>
 
+        {status === 'error' && (
+          <View style={styles.notice} testID="today-load-error">
+            <View style={{ flex: 1 }}>
+              <Text style={styles.noticeTitle}>I couldn't load today's reading.</Text>
+              <Text style={styles.noticeBody}>A passage is still here. You can try again.</Text>
+            </View>
+            <Pressable onPress={retry} style={styles.retry} testID="today-retry" accessibilityRole="button">
+              <Text style={styles.retryText}>Try again</Text>
+            </Pressable>
+          </View>
+        )}
+
         <VerseCard
           size="compact"
           kicker={kept ? 'Your verse' : "Today's verse"}
-          verse={daily ? daily.text : '…'}
-          reference={daily ? String(daily.ref).toUpperCase() : ''}
+          verse={daily.text}
+          reference={daily.ref ? daily.ref.toUpperCase() : ''}
           style={styles.verseSpacing}
         />
 
@@ -116,9 +169,9 @@ export default function TodayScreen({ navigation }) {
           <View style={styles.listenPlay}><GIcon name="play" size={17} color={colors.espresso} filled /></View>
           <View style={{ flex: 1 }}>
             <Text style={styles.listenKicker}>TODAY'S LISTEN</Text>
-            <Text style={styles.listenTitle} numberOfLines={1}>{listen ? listen.title : 'Preparing…'}</Text>
+            <Text style={styles.listenTitle} numberOfLines={1}>{listen ? listen.title : 'A story is ready'}</Text>
             <Text style={styles.listenSub} numberOfLines={1}>
-              {listen ? `${mins(listen.durationSeconds)} · ${listen.scriptureRange}` : 'One moment'}
+              {listen ? `${mins(listen.durationSeconds)}${listenRange}` : 'Open Stories'}
             </Text>
           </View>
         </Pressable>
@@ -175,6 +228,21 @@ const styles = StyleSheet.create({
   greeting: { fontFamily: fonts.serif, fontSize: 34, color: colors.ink, lineHeight: 38 },
   kept: { fontFamily: fonts.serifItalic, fontSize: 18, color: colors.brass, marginTop: 4 },
   verseSpacing: { marginTop: 22 },
+  notice: {
+    marginTop: 18,
+    backgroundColor: colors.white,
+    borderWidth: 1,
+    borderColor: colors.sandLine,
+    borderRadius: radius.md,
+    padding: 14,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
+  noticeTitle: { fontFamily: fonts.sansSemi, fontSize: 15, color: colors.ink },
+  noticeBody: { fontFamily: fonts.sans, fontSize: 13, lineHeight: 18, color: colors.textMuted, marginTop: 2 },
+  retry: { backgroundColor: colors.espresso, borderRadius: radius.pill, paddingVertical: 10, paddingHorizontal: 16, minHeight: 44, justifyContent: 'center' },
+  retryText: { fontFamily: fonts.sansSemi, fontSize: 14, color: colors.onDark },
   pressed: { opacity: 0.85, transform: [{ scale: 0.995 }] },
   waiting: { opacity: 0.7 },
   listen: { marginTop: 16, backgroundColor: colors.espressoSoft, borderRadius: radius.lg, padding: 20, flexDirection: 'row', alignItems: 'center', gap: 16, minHeight: 44 },

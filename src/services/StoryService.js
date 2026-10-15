@@ -27,9 +27,9 @@ async function loadCatalog() {
   try {
     const { data } = await api.get('/stories');
     catalogCache = {
-      featured: data.featured,
-      collections: data.collections,
-      stories: data.stories,
+      featured: data.featured || FALLBACK_STORIES[0],
+      collections: Array.isArray(data.collections) ? data.collections : FALLBACK_COLLECTIONS,
+      stories: Array.isArray(data.stories) && data.stories.length ? data.stories : FALLBACK_STORIES,
     };
     return catalogCache;
   } catch {
@@ -85,10 +85,19 @@ export const StoryService = {
     const c = await loadCatalog();
     return c.collections;
   },
+  /** Offline catalog. Home and Stories paint this when the network comes back empty. */
+  bundledCatalog() {
+    return {
+      featured: FALLBACK_STORIES[0],
+      collections: FALLBACK_COLLECTIONS,
+      stories: FALLBACK_STORIES,
+    };
+  },
   async getStories(collectionName) {
     const c = await loadCatalog();
-    if (!collectionName) return c.stories;
-    return c.stories.filter((s) => s.tags.includes(collectionName));
+    const stories = Array.isArray(c?.stories) ? c.stories : [];
+    if (!collectionName) return stories;
+    return stories.filter((s) => Array.isArray(s?.tags) && s.tags.includes(collectionName));
   },
   async getStory(id) {
     try {
@@ -132,10 +141,12 @@ export const StoryService = {
   async getContinue() {
     await hydrateProgressFromServer();
     const prog = await StorageService.get(KEYS.storyProgress, {});
+    const progress = prog && typeof prog === 'object' ? prog : {};
     const stories = (await loadCatalog()).stories;
+    if (!Array.isArray(stories)) return [];
     return stories
-      .filter((s) => prog[s.id] && prog[s.id].seconds > 0)
-      .map((s) => ({ ...s, progress: prog[s.id] }));
+      .filter((s) => s && progress[s.id] && progress[s.id].seconds > 0)
+      .map((s) => ({ ...s, progress: progress[s.id] }));
   },
   async getProgress(id) {
     await hydrateProgressFromServer();
