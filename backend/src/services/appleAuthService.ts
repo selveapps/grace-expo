@@ -5,6 +5,7 @@
 // remote JWKS fetching, caching, rotation and RS256 verification natively, so
 // there is no new dependency and no DER encoding to get wrong.
 
+import { createHash } from 'node:crypto';
 import * as jose from 'jose';
 
 const APPLE_ISS = 'https://appleid.apple.com';
@@ -31,9 +32,21 @@ export type AppleIdentity = {
   isPrivateEmail: boolean;
 };
 
+/** SHA-256 hex — same encoding as expo-crypto digestStringAsync. */
+export function sha256Hex(value: string): string {
+  return createHash('sha256').update(value).digest('hex');
+}
+
+/** Native iOS sends the hash to Apple; older builds may send raw by mistake. */
+export function nonceMatches(tokenNonce: unknown, expectedNonce: string): boolean {
+  if (typeof tokenNonce !== 'string' || !expectedNonce) return false;
+  if (tokenNonce.toLowerCase() === expectedNonce.toLowerCase()) return true;
+  return sha256Hex(expectedNonce).toLowerCase() === tokenNonce.toLowerCase();
+}
+
 /**
  * Verify an identityToken from expo-apple-authentication.
- * `expectedNonce` is the SHA-256 of the raw nonce the app sent to Apple.
+ * `expectedNonce` is the SHA-256 hex digest passed to Apple on the client.
  */
 export async function verifyAppleIdentityToken(
   identityToken: string,
@@ -49,8 +62,7 @@ export async function verifyAppleIdentityToken(
   });
 
   if (!expectedNonce) throw new Error('Nonce required');
-  const tokenNonce = String(payload.nonce ?? '');
-  if (tokenNonce.toLowerCase() !== expectedNonce.toLowerCase()) throw new Error('Nonce mismatch');
+  if (!nonceMatches(payload.nonce, expectedNonce)) throw new Error('Nonce mismatch');
   if (!payload.sub) throw new Error('Apple token missing sub');
 
   const emailVerified = payload.email_verified;
