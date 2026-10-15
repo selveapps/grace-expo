@@ -6,6 +6,9 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+### Fixed
+- Onboarding no longer traps the App Review path on a short iPad compatibility frame. Splash, Welcome, and Confirmation scroll so Begin / Continue / Enter Grace stay reachable, and the paywall scroller is no longer wrapped in a press handler that swallowed the drag.
+
 ### Changed
 - **M11 IAP product IDs** aligned to live ASC Grace Plus subscriptions: `grace.yearly`, `grace.monthly` (was `grace.plus.*`).
 

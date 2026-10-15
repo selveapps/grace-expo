@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { View, Text, StyleSheet, Animated, Easing, StatusBar } from 'react-native';
+import { View, Text, StyleSheet, Animated, Easing, StatusBar, ScrollView } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
 import GraceDove from '../../components/GraceDove';
@@ -54,8 +54,9 @@ export default function ConfirmationScreen({ navigation, route }) {
   };
 
   return (
-    <Screen gradient={['#FDF6E4', '#F7F3EC', '#F1EBE0']} style={styles.wrap} ambient>
+    <Screen gradient={['#FDF6E4', '#F7F3EC', '#F1EBE0']} style={styles.fill} ambient>
       <StatusBar barStyle="dark-content" />
+      <ScrollView style={styles.fill} contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false} bounces={false}>
       <View style={styles.center}>
         <GraceDove size={210} wings="open" motion="bless" />
         <Text style={styles.title} adjustsFontSizeToFit numberOfLines={2}>
@@ -72,6 +73,7 @@ export default function ConfirmationScreen({ navigation, route }) {
         </View>
       </View>
       <PrimaryButton label="Enter Grace" onPress={enter} testID="confirmation-enter" />
+      </ScrollView>
 
       {/* Handoff veil — held over the navigator remount that Enter Grace causes. */}
       <Animated.View
@@ -83,8 +85,9 @@ export default function ConfirmationScreen({ navigation, route }) {
 }
 
 const styles = StyleSheet.create({
-  wrap: { paddingHorizontal: 30, paddingBottom: 30, justifyContent: 'space-between' },
-  center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
+  fill: { flex: 1 },
+  scroll: { flexGrow: 1, paddingHorizontal: 30, paddingBottom: 30 },
+  center: { flexGrow: 1, alignItems: 'center', justifyContent: 'center' },
   title: { fontFamily: fonts.serif, fontSize: 42, color: colors.ink, textAlign: 'center', marginTop: 16, lineHeight: 46 },
   sub: { fontFamily: fonts.sans, fontSize: 16, color: colors.textMuted, textAlign: 'center', marginTop: 12, marginHorizontal: 24 },
   row: { flexDirection: 'row', gap: 22, marginTop: 30 },

@@ -329,3 +329,13 @@ Ran `generate:audio` with a working key, then verified rather than assumed:
 **Observations:** ASC product IDs are immutable after creation; scaffold had assumed `grace.plus.*`. Annual plan detection now accepts `yearly` or `annual` in the StoreKit product identifier.
 
 **Result:** `npm test -- test/revenuecat.unit.test.ts` pass (pending run in this session).
+
+### RUN-014 | 2026-10-15 | App Review 2.1(a) — onboarding CTA reachable on a short frame
+
+**Objective:** Finish the Guideline 2.1(a) fix. Build 20 (commit `1e003b7`) still left Splash, Welcome, and Confirmation unpinning their buttons with no `ScrollView`, and the paywall `ScrollView` sat inside a parent `Pressable` plus a transformed wrapper, so a drag never reached the scroller.
+
+**Procedure:**
+1. Wrap Splash, Welcome, and Confirmation content in a `ScrollView` with `contentContainerStyle.flexGrow: 1` so the button stays at the bottom when it fits and scrolls into view when it does not.
+2. Move the paywall soft-exit `Pressable` inside the `ScrollView`, off the scroller's parent, and drop the translate wrapper around the scroller.
+
+**Observations:** Version 1.0 build 20 is the binary on the open rejection (`reviewSubmissions/d0299da5-6925-4441-9776-0a84e23d2bf1`, state `UNRESOLVED_ISSUES`). The App Store Connect API key can read that state and cannot read or post Resolution Center messages; those stay on the iris web session. Expo web at 390×320: Splash Begin starts at y 388–446 (viewport 320), scroller 454×320, and is in view after scroll; Welcome Continue starts below the fold and clicks through to the name field. At 390×480 the paywall trial button starts at y 660–718 with scroller 836×458 and reaches Confirmation after scroll; Enter Grace starts just below the fold and scrolls in. A tap at (196, 96) on the paywall dove still sets `onboarded: true`, `subscribed: false`, and lands on Home.
