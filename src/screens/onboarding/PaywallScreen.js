@@ -139,8 +139,12 @@ export default function PaywallScreen({ navigation }) {
   };
 
   return (
-    <Pressable style={{ flex: 1 }} onPress={enterHome} accessibilityLabel="Continue without subscribing">
     <Screen gradient={['#5A4632', '#3A2C22', '#2B2015']} style={styles.wrap} ambient>
+      <ScrollView style={styles.body} contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false} bounces={false} keyboardShouldPersistTaps="handled">
+      {/* Soft exit lives inside the scroller. A Pressable *around* the ScrollView
+          steals the pan, which is what left reviewers unable to reach the trial
+          button on a short iPad compatibility frame. */}
+      <Pressable style={styles.softExit} onPress={enterHome} accessibilityLabel="Continue without subscribing">
       <Animated.View style={{ alignItems: 'center', height: 168, justifyContent: 'center' }}>
         <Animated.View style={{
           position: 'absolute', width: 260, height: 260, borderRadius: 260, backgroundColor: colors.gold,
@@ -157,8 +161,7 @@ export default function PaywallScreen({ navigation }) {
           <GraceDove size={150} wings="open" motion="bless" />
         </Animated.View>
       </Animated.View>
-      <Animated.View style={[styles.body, { opacity: body, transform: [{ translateY: body.interpolate({ inputRange: [0, 1], outputRange: [18, 0] }) }] }]}>
-      <ScrollView style={styles.body} contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false} bounces={false}>
+      <Animated.View style={[styles.softExit, { opacity: body, transform: [{ translateY: body.interpolate({ inputRange: [0, 1], outputRange: [18, 0] }) }] }]}>
       <Text style={styles.title}>Begin your quiet{'\n'}place with Grace.</Text>
       <Text style={styles.sub}>Three days free. Then continue if it feels right.</Text>
 
@@ -191,6 +194,8 @@ export default function PaywallScreen({ navigation }) {
       </View>
 
       <View style={styles.spacer} />
+      </Animated.View>
+      </Pressable>
       {/* CTA island — swallows taps so the soft-paywall exit never fires on the
           trial button, Restore, or the legal links. */}
       <View onStartShouldSetResponder={() => true}>
@@ -208,14 +213,12 @@ export default function PaywallScreen({ navigation }) {
         </View>
       </View>
       </ScrollView>
-      </Animated.View>
 
       {/* light veil carried over from Preparing — fades to reveal the blessing */}
       <Animated.View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: '#FDF6E4', opacity: veil }]} />
       {/* outro bloom — carries the eye out of the dark screen into ivory */}
       <Animated.View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: '#FDF6E4', opacity: outro }]} />
     </Screen>
-    </Pressable>
   );
 }
 
@@ -223,6 +226,7 @@ const styles = StyleSheet.create({
   wrap: { paddingHorizontal: 24, paddingTop: 10, paddingBottom: 12 },
   body: { flex: 1 },
   scroll: { flexGrow: 1 },
+  softExit: { flexGrow: 1 },
   spacer: { flexGrow: 1, minHeight: 16 },
   title: { fontFamily: fonts.serif, fontSize: 38, color: colors.onDark, textAlign: 'center', lineHeight: 42, marginTop: 2 },
   sub: { fontFamily: fonts.sans, fontSize: 16, lineHeight: 23, color: colors.onDarkMuted, textAlign: 'center', marginTop: 8, marginBottom: 20 },

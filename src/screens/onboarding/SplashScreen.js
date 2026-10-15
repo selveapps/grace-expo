@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { View, Text, StyleSheet, Animated, Easing } from 'react-native';
+import { View, Text, StyleSheet, Animated, Easing, ScrollView } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
 import GraceDove from '../../components/GraceDove';
@@ -60,7 +60,7 @@ export default function SplashScreen({ navigation }) {
   const rise = (v, from = 16) => ({ opacity: v, transform: [{ translateY: v.interpolate({ inputRange: [0, 1], outputRange: [from, 0] }) }] });
 
   return (
-    <Screen gradient={['#FFFDF9', '#FDF6E4', '#F4E8CE']} style={styles.wrap} ambient>
+    <Screen gradient={['#FFFDF9', '#FDF6E4', '#F4E8CE']} style={styles.fill} ambient>
       <Dust x={50} size={5} delay={0} drift={6200} />
       <Dust x={120} size={4} delay={1500} drift={7400} />
       <Dust x={210} size={7} delay={800} drift={6800} />
@@ -68,6 +68,7 @@ export default function SplashScreen({ navigation }) {
       <Dust x={330} size={5} delay={3200} drift={7000} />
       <Dust x={170} size={4} delay={4200} drift={7600} />
 
+      <ScrollView style={styles.fill} contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false} bounces={false}>
       <View style={styles.center}>
         {/* halo bloom behind Grace */}
         <Animated.View style={{
@@ -94,15 +95,17 @@ export default function SplashScreen({ navigation }) {
         <Animated.Text style={[styles.sub, rise(sub)]}>A quiet place for your soul to breathe.</Animated.Text>
       </View>
       <Animated.View style={rise(cta, 24)}>
-        <PrimaryButton label="Begin" variant="dark" onPress={() => navigation.navigate('Welcome')} />
+        <PrimaryButton label="Begin" variant="dark" onPress={() => navigation.navigate('Welcome')} testID="splash-begin" />
       </Animated.View>
+      </ScrollView>
     </Screen>
   );
 }
 
 const styles = StyleSheet.create({
-  wrap: { paddingHorizontal: 30, paddingBottom: 30, justifyContent: 'space-between' },
-  center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
+  fill: { flex: 1 },
+  scroll: { flexGrow: 1, paddingHorizontal: 30, paddingBottom: 30 },
+  center: { flexGrow: 1, alignItems: 'center', justifyContent: 'center' },
   title: { fontFamily: fonts.serif, fontSize: 46, color: colors.ink, marginTop: 20 },
   sub: { fontFamily: fonts.serifItalic, fontSize: 20, color: colors.textFaint, marginTop: 8, textAlign: 'center', maxWidth: 260 },
 });

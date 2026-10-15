@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Text, StyleSheet, Animated, Easing } from 'react-native';
+import { Text, StyleSheet, Animated, Easing, ScrollView } from 'react-native';
 import Screen from '../../components/Screen';
 import GraceDove from '../../components/GraceDove';
 import PrimaryButton from '../../components/PrimaryButton';
@@ -25,7 +25,8 @@ export default function WelcomeScreen({ navigation }) {
   const rise = (v, from = 16) => ({ opacity: v, transform: [{ translateY: v.interpolate({ inputRange: [0, 1], outputRange: [from, 0] }) }] });
 
   return (
-    <Screen bg={colors.ivory} style={styles.wrap} ambient>
+    <Screen bg={colors.ivory} style={styles.fill} ambient>
+      <ScrollView style={styles.fill} contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false} bounces={false}>
       <Animated.View style={[styles.center, { opacity: dove }]}>
         <Animated.View style={{ transform: [{ scale: dove.interpolate({ inputRange: [0, 1], outputRange: [1.12, 1] }) }] }}>
           <GraceDove size={150} wings="folded" motion="breathe" />
@@ -34,15 +35,17 @@ export default function WelcomeScreen({ navigation }) {
         <Animated.Text style={[styles.sub, rise(text, 12)]}>I'll keep your place, every day, right where you left it.</Animated.Text>
       </Animated.View>
       <Animated.View style={rise(cta, 22)}>
-        <PrimaryButton label="Continue" onPress={() => navigation.navigate('Name')} />
+        <PrimaryButton label="Continue" onPress={() => navigation.navigate('Name')} testID="welcome-continue" />
       </Animated.View>
+      </ScrollView>
     </Screen>
   );
 }
 
 const styles = StyleSheet.create({
-  wrap: { paddingHorizontal: 30, paddingBottom: 30, justifyContent: 'space-between' },
-  center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
+  fill: { flex: 1 },
+  scroll: { flexGrow: 1, paddingHorizontal: 30, paddingBottom: 30 },
+  center: { flexGrow: 1, alignItems: 'center', justifyContent: 'center' },
   title: { fontFamily: fonts.serif, fontSize: 40, color: colors.ink, marginTop: 22, textAlign: 'center', lineHeight: 44 },
   sub: { fontFamily: fonts.serifItalic, fontSize: 20, color: colors.textMuted, marginTop: 12, textAlign: 'center', maxWidth: 290, lineHeight: 27 },
 });
