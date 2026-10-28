@@ -386,10 +386,10 @@ Ran `generate:audio` with a working key, then verified rather than assumed:
 6. Gate, not executed as a recorded pass here: `cd web && npm test`, `npm run typecheck`, `npm run build`. Dev server: `npm run dev` on port 3100.
 
 **Observations:**
-- Tests and build are the gate and may still be in progress. No passing build result is recorded here.
-- SEL-72 is docs only. Route slices SEL-63 through SEL-71 are separate. This entry does not claim those routes are built.
+- Gate on this branch, 2026-10-28 15:53 PT: `cd web && npm test` passed (Vitest 3.2.7, 5 files, 13 tests). `npm run typecheck` passed. `npm run build` passed on Next.js 15.5.28 (12 static pages plus the dynamic routes). Vitest warned that the parent `tsconfig.json` cannot find `expo/tsconfig.base`. Next warned that it inferred the workspace root from `/workspace/package-lock.json` because `web/package-lock.json` also exists.
+- SEL-62 through SEL-71 are Done. Merge commits on `main`: #80 `a53b55e` (SEL-62), #73 `e05718b` (SEL-63, SEL-64), #78 `8d03717` (SEL-65), #77 `bfbcf80` (SEL-66, SEL-67), #74 `cc55118` (SEL-68), #75 `6ed03c9` (SEL-69), #76 `6b509fc` (SEL-70, SEL-71).
 - Native IAP and Sign in with Apple stay on iOS (DEC-016). Web uses guest session, beta redeem, and `profile.subscribed` (DEC-017).
 
-**Result:** Docs written for SEL-72. Tests and build are not recorded as pass or fail.
+**Result:** Gate passed. SEL-72 records that pass with the agent docs.
 
-**Follow-up:** Run `cd web && npm test`, `npm run typecheck`, and `npm run build` when the route slices are in place. Do not treat this run as a green build.
+**Follow-up:** SEL-26, SEL-27, the SEL-22 offline queue, and SEL-29 stay open. They sit outside this web client.
