@@ -18,3 +18,18 @@ GitHub issues were not opened. The `gh` credential on this agent is read-only, a
 | Today load failure | App Review 2.1(a), fixed on mobile in #47 | `/today` still shows Psalm 23 and a retry when `GET /today` fails. |
 
 Not claimed by this slice: Apple and Google sign-in ([SEL-26](https://linear.app/selve-apps/issue/SEL-26), [SEL-27](https://linear.app/selve-apps/issue/SEL-27)), the offline write queue ([SEL-22](https://linear.app/selve-apps/issue/SEL-22)), and a dev-client IAP build ([SEL-29](https://linear.app/selve-apps/issue/SEL-29)).
+
+## WEB implementation slices
+
+These are the implementation tickets for the Next.js client. Each is Done on Linear once its pull request is on `main`.
+
+| Issue | Pull request | Merge |
+|---|---|---|
+| [SEL-62](https://linear.app/selve-apps/issue/SEL-62) | [#80](https://github.com/selveapps/grace-expo/pull/80) | `a53b55e` |
+| [SEL-63](https://linear.app/selve-apps/issue/SEL-63), [SEL-64](https://linear.app/selve-apps/issue/SEL-64) | [#73](https://github.com/selveapps/grace-expo/pull/73) | `e05718b` |
+| [SEL-65](https://linear.app/selve-apps/issue/SEL-65) | [#78](https://github.com/selveapps/grace-expo/pull/78) | `8d03717` |
+| [SEL-66](https://linear.app/selve-apps/issue/SEL-66), [SEL-67](https://linear.app/selve-apps/issue/SEL-67) | [#77](https://github.com/selveapps/grace-expo/pull/77) | `bfbcf80` |
+| [SEL-68](https://linear.app/selve-apps/issue/SEL-68) | [#74](https://github.com/selveapps/grace-expo/pull/74) | `cc55118` |
+| [SEL-69](https://linear.app/selve-apps/issue/SEL-69) | [#75](https://github.com/selveapps/grace-expo/pull/75) | `6ed03c9` |
+| [SEL-70](https://linear.app/selve-apps/issue/SEL-70), [SEL-71](https://linear.app/selve-apps/issue/SEL-71) | [#76](https://github.com/selveapps/grace-expo/pull/76) | `6b509fc` |
+| [SEL-72](https://linear.app/selve-apps/issue/SEL-72) | [#79](https://github.com/selveapps/grace-expo/pull/79) | docs, DEC-017, RUN-016 |

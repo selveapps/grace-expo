@@ -6,6 +6,9 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+### Added
+- Next.js Grace web client in `web/` on the shared API. Gate: `npm test` (13), `npm run typecheck`, and `npm run build` (Next.js 15.5.28). Slices SEL-62 through SEL-71 merged in #80, #73, #78, #77, #74, #75, and #76.
+
 ### Fixed
 - Home no longer looks like a stuck blank screen when today's content fails, comes back empty, or never arrives. A bundled passage and story stay on screen, a retry sits in the scroll (including a short frame), and a render error stays inside that tab so Reading is still reachable.
 - The paywall and Confirmation handoff veil drops and retries navigation if Enter Grace or the soft exit never leaves the screen, so an opaque ivory sheet cannot trap the tap.
