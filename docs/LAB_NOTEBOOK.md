@@ -365,3 +365,31 @@ Ran `generate:audio` with a working key, then verified rather than assumed:
 **Result:** Playwright 7/7 on Expo web (`today-load-failure.spec.js` 4, `paywall-flow.spec.js` 3), including 390×320 where Try again is in the viewport. Promotional image unchanged; a person has to replace it in App Store Connect.
 
 **Follow-up:** Human replaces the yearly promotional image (and adds one for monthly) on the inflight subscription versions, then resubmits. Do not treat this run as a Resolution Center reply.
+
+---
+
+### RUN-016 | 2026-10-28 | Grace web client slices SEL-62 through SEL-72
+
+**Objective:** Grace web client slices SEL-62 through SEL-72. Record the Next.js client in `web/` on the shared grace-api (DEC-017), the Linear WEB issues, and the agent docs. This is the planning and documentation session. It does not claim the routes are built.
+
+**Environment:**
+- Branch: `cursor/grace-web-next-41ec` at `4d5f598` (baseline before this docs slice)
+- API target: existing grace-api. `GRACE_API_BASE` default `https://grace-api-production.up.railway.app`
+- No new database
+
+**Procedure:**
+1. Read `docs/web/PLAN.md`, `docs/web/TASKS.md`, `docs/web/TICKETS.md`, and `docs/web/RESEARCH.md`.
+2. Add `web/README.md` and `web/AGENTS.md`.
+3. Add one `web/` row to the root `AGENTS.md` layout table, pointing at `web/AGENTS.md`.
+4. Append DEC-017 (2026-10-28) and this RUN-016. RUN-015 stays the 2026-10-15 blank-Home entry.
+5. Add one Unreleased → Added note in `CHANGELOG.md`.
+6. Gate, not executed as a recorded pass here: `cd web && npm test`, `npm run typecheck`, `npm run build`. Dev server: `npm run dev` on port 3100.
+
+**Observations:**
+- Tests and build are the gate and may still be in progress. No passing build result is recorded here.
+- SEL-72 is docs only. Route slices SEL-63 through SEL-71 are separate. This entry does not claim those routes are built.
+- Native IAP and Sign in with Apple stay on iOS (DEC-016). Web uses guest session, beta redeem, and `profile.subscribed` (DEC-017).
+
+**Result:** Docs written for SEL-72. Tests and build are not recorded as pass or fail.
+
+**Follow-up:** Run `cd web && npm test`, `npm run typecheck`, and `npm run build` when the route slices are in place. Do not treat this run as a green build.

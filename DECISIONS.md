@@ -490,3 +490,34 @@ that RevenueCat already provides. Superwall adds remote paywall UI and experimen
 - Entitlement identifier: `grace_plus`.
 - Setup guide: `docs/IAP_REVENUECAT_SUPERWALL.md`.
 - `react-native.config.js` may be required for RC autolinking on Expo SDK 54 + New Architecture.
+
+---
+
+## DEC-017 — Next.js web client shares grace-api (2026-10-28)
+
+**Tickets:** SEL-72 (web slices SEL-62–SEL-71)  
+**Status:** accepted
+
+### Context
+The Expo app already talks to grace-api for guest auth, scripture, stories, Tea, beta redeem, and `profile.subscribed`. A browser client needs that same API. DEC-014 keeps Tea on the shared catalog. DEC-016 keeps RevenueCat and Superwall, and therefore native IAP, on iOS.
+
+### Options considered
+| Option | Pros | Cons |
+|--------|------|------|
+| React Native Web of `src/` | One UI tree | Native modules and Expo Go do not map to a public site |
+| A second API for the browser | Isolated deploys | Forks scripture, auth, and Tea |
+| **Next.js app in `web/` on grace-api** | Same contract as the mobile client; public pages can render on the server | StoreKit and Sign in with Apple are not available in the browser |
+
+### Decision
+Next.js app in `web/` shares grace-api. Native IAP and Sign in with Apple stay on iOS. Web uses guest session, beta redeem, and `profile.subscribed`.
+
+### Rationale
+One scripture store and one auth issuer. Purchases stay on the App Store products named in DEC-016 (`grace.monthly`, `grace.yearly`). The web beta path is the guest session already used by Expo Go, plus `POST /beta/redeem`, with `profile.subscribed` as the gate.
+
+### Consequences
+- Agents working in `web/` follow `web/AGENTS.md`. Web must not fork grace-api.
+- Public scripture, stories, and Tea render on the server. Client JavaScript is limited to onboarding, audio, and forms.
+- No web StoreKit, no card checkout, and no Sign in with Apple sheet.
+
+### Verification
+From `web/`: `npm test`, `npm run typecheck`, and `npm run build` are the gate. `npm run dev` serves port 3100. This entry does not record a passing run. Those commands may still be in progress.

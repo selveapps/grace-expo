@@ -13,6 +13,7 @@ Beta target: Expo Go + guest auth + KJV scripture from own API.
 |------|---------|
 | `src/` | Expo app; screens import only from `src/services/` |
 | `backend/` | `grace-api` — Fastify server, Prisma, seed scripts |
+| `web/` | Next.js Grace client; see `web/AGENTS.md` |
 | `docs/BACKEND_ARCHITECTURE.md` | Milestones M0–M11 + verify matrix |
 | `docs/LINEAR_ISSUES.md` | GRACE-XXX ↔ SEL-XXX tickets |
 | `BACKEND.md` | HTTP API contract |
