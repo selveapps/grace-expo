@@ -45,4 +45,5 @@ export const KEYS = {
   auth: 'auth',
   session: 'session.v1',
   deviceId: 'deviceId',
+  writeQueue: 'writeQueue',
 };

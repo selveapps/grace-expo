@@ -393,3 +393,30 @@ Ran `generate:audio` with a working key, then verified rather than assumed:
 **Result:** Gate passed. SEL-72 records that pass with the agent docs.
 
 **Follow-up:** SEL-26, SEL-27, the SEL-22 offline queue, and SEL-29 stay open. They sit outside this web client.
+
+---
+
+### RUN-019 | 2026-10-28 18:25 PT | Offline write queue
+
+**Objective:** SEL-22 / GRACE-018. Queue profile, saved-verse, and reflection writes when the API call fails. Replay them before hydrate. Server wins, without a duplicate saved reference.
+
+**Environment:**
+- Branch: `cursor/grace-offline-queue-41ec` off `origin/main` `57ddf3f`
+- No device and no airplane mode. Node 22 unit tests only.
+
+**Procedure:**
+1. Add a pure queue in `src/services/offlineQueue.js` and persistence plus HTTP in `src/services/offlineSync.js`.
+2. `ReadingService.saveVerse` and `unsaveVerse` enqueue on failure and drop that reference from the queue on success.
+3. Profile patch and reflection post enqueue on failure. Hydrate calls `replayOfflineQueue` first, then applies `hydrateSaved`, `hydrateReflections`, `hydrateName`, and `hydrateField`.
+4. `npm run test:offline`.
+
+**Observations:**
+- 6 tests passed. Node warned that the package.json has no `"type"` field and reparsed the test as an ES module. The Expo package stays CommonJS; Metro already compiles the `import` syntax.
+- A failed write stops the replay. Later writes stay in order.
+- A second save of the same reference replaces the first. An unsave replaces a pending save of that reference.
+- Hydrate keeps one row per reference. The server text wins when both sides have the verse. A pending save that the server does not have yet is kept.
+- An empty server name does not erase a local name. A pending profile field wins over the server value. A successful live patch drops those fields from the queue so an older offline name cannot overwrite a newer one.
+
+**Result:** Unit gate passed. The airplane-mode check in GRACE-018 is still open, so SEL-22 stays In Progress.
+
+**Follow-up:** On a phone, airplane on, save a verse, airplane off, `GET /saved` contains that verse once.

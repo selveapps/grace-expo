@@ -10,6 +10,7 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
+    "test:offline": "node --test src/services/offlineQueue.test.js",
     "e2e": "playwright test",
     "e2e:headed": "playwright test --headed",
     "e2e:install": "playwright install chromium",
