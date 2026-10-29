@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { SignOutButton } from '@/components/Pieces';
+import { DeleteAccountButton, SignOutButton } from '@/components/Pieces';
 import { grace } from '@/lib/grace';
 import { PRIVATE_PAGE } from '@/lib/site';
 
@@ -57,6 +57,7 @@ export default async function SettingsPage() {
         <a href="https://www.selveapps.xyz/grace/terms">Terms</a>
       </p>
       <SignOutButton />
+      {missing ? null : <DeleteAccountButton />}
     </main>
   );
 }

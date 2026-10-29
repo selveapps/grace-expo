@@ -686,6 +686,18 @@ GRACE-001
 
 `backend` · `mobile` · `ops` · `data` · `p0-beta` · `p1-polish` · `p2-post-beta` · `expo-go`
 
+## Web client slices (2026-10-28)
+
+Linear is the tracker. These rows are the acceptance notes for the Next.js client. Status on the board can move ahead of this file; the board wins.
+
+| Linear | Title | Acceptance |
+|---|---|---|
+| [SEL-74](https://linear.app/selve-apps/issue/SEL-74) | Saved Tea | `/you/tea` joins `GET /tea/saved` to `GET /tea`. Empty copy links to `/tea`. Missing session links home. |
+| [SEL-75](https://linear.app/selve-apps/issue/SEL-75) | Continue reading | `/you` links the newest `GET /progress` row. No rows links to `/reading`. |
+| [SEL-76](https://linear.app/selve-apps/issue/SEL-76) | Delete account | Settings confirms, then `DELETE /me`, clears cookies, and returns to `/`. |
+| [SEL-77](https://linear.app/selve-apps/issue/SEL-77) | Branded not-found | Unknown URLs show Grace plus links to scripture, stories, and Tea. No guest is created. |
+| [SEL-78](https://linear.app/selve-apps/issue/SEL-78) | Full KJV search index | Backlog. Production search stays on the seeded sample until the index is loaded. The web client does not invent verses. |
+
 ## GitHub sync
 
 Issues also mirrored on GitHub: https://github.com/selveapps/grace-expo/issues

@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { SignOutButton } from '@/components/Pieces';
+import { chapterHref } from '@/lib/books';
 import { grace } from '@/lib/grace';
+import { latestReading, progressRows, readingLabel, type ProgressRow } from '@/lib/library';
 import { PRIVATE_PAGE } from '@/lib/site';
 
 export const metadata = PRIVATE_PAGE;
@@ -20,6 +22,7 @@ type Me = {
 
 const LINKS = [
   { href: '/you/saved', label: 'Saved verses' },
+  { href: '/you/tea', label: 'Saved tea' },
   { href: '/you/reflections', label: 'Reflections' },
   { href: '/you/reminders', label: 'Reminders' },
   { href: '/you/support', label: 'Help & support' },
@@ -60,12 +63,26 @@ export default async function YouPage() {
 
   const profile = me.profile;
   const carrying = (profile?.carrying ?? []).map((item) => item.trim()).filter(Boolean);
+  let latest: ProgressRow | null = null;
+  try {
+    latest = latestReading(progressRows(await grace<unknown>('/progress', { cache: 'no-store' })));
+  } catch {
+    latest = null;
+  }
 
   return (
     <main className="page">
       <p className="kicker">You</p>
       <h1>{textOr(me.user?.name, 'friend')}</h1>
       <p className="lede">{profile?.subscribed ? 'Subscribed' : 'Not subscribed'}</p>
+      <section className="card">
+        <p className="meta">Continue reading</p>
+        {latest ? (
+          <p><Link href={chapterHref(latest.book, latest.chapter)}>{readingLabel(latest)}</Link></p>
+        ) : (
+          <p><Link href="/reading">Open the library</Link></p>
+        )}
+      </section>
       <section className="card">
         <p><span className="meta">Carrying</span><br />{carrying.length ? carrying.join(', ') : 'Nothing noted yet'}</p>
         <p><span className="meta">Gentleness</span><br />{textOr(profile?.gentleness, 'Not set')}</p>
