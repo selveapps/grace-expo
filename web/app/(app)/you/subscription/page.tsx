@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { RedeemForm } from '@/components/Pieces';
 import { grace } from '@/lib/grace';
 import { PLANS } from '@/lib/onboarding';
+import { PRIVATE_PAGE } from '@/lib/site';
+
+export const metadata = PRIVATE_PAGE;
 
 export const dynamic = 'force-dynamic';
 

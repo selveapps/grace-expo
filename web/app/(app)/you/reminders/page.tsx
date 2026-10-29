@@ -1,5 +1,8 @@
 import Link from 'next/link';
 import { ReminderForm } from '@/components/Pieces';
+import { PRIVATE_PAGE } from '@/lib/site';
+
+export const metadata = PRIVATE_PAGE;
 
 export default function RemindersPage() {
   return (

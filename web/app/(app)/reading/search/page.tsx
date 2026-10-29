@@ -1,4 +1,25 @@
+import type { Metadata } from 'next';
 import { publicGrace } from '@/lib/grace';
+
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ q?: string }>;
+}): Promise<Metadata> {
+  const { q } = await searchParams;
+  const query = q?.trim();
+  if (query) {
+    return {
+      title: `Search “${query}”`,
+      robots: { index: false, follow: true },
+    };
+  }
+  return {
+    title: 'Search scripture',
+    description: 'Search the King James Version by phrase or reference, such as peace or John 3:16.',
+    alternates: { canonical: '/reading/search' },
+  };
+}
 
 type Hit = { ref?: string; text?: string; reference?: string };
 

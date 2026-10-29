@@ -1,5 +1,12 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { publicGrace } from '@/lib/grace';
+
+export const metadata: Metadata = {
+  title: 'Stories',
+  description: 'Scripture told in short episodes. Ruth, Esther, David, Hannah, and Mary, with audio and a transcript.',
+  alternates: { canonical: '/stories' },
+};
 
 type Collection = { id: string; name: string };
 

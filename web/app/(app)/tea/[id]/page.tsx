@@ -1,8 +1,27 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { AudioPlayer, SaveTeaButton } from '@/components/Pieces';
 import { GraceError, publicGrace } from '@/lib/grace';
 import { resolveAudioUrl } from '@/lib/media';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  try {
+    const tea = await publicGrace<Tea>('/tea/' + encodeURIComponent(id), 300);
+    return {
+      title: tea.cardTitle,
+      description: tea.hook,
+      alternates: { canonical: `/tea/${encodeURIComponent(id)}` },
+    };
+  } catch {
+    return { title: 'Tea' };
+  }
+}
 
 type Tea = {
   id: string;

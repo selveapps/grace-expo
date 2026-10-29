@@ -16,3 +16,5 @@ npm run dev
 `npm run dev` listens on port 3100.
 
 `GRACE_API_BASE` defaults to `https://grace-api-production.up.railway.app`.
+
+`NEXT_PUBLIC_SITE_URL` is the canonical origin for metadata, Open Graph, `robots.txt`, and `sitemap.xml`. It defaults to `https://grace.selveapps.xyz`. Set it to the deployed origin before a public crawl.

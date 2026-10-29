@@ -10,6 +10,7 @@ export const FEATURES = [
   { id: 'stories', path: '/stories', tickets: ['SEL-31'] },
   { id: 'story', path: '/stories/[id]', tickets: ['SEL-31'] },
   { id: 'tea', path: '/tea', tickets: ['DEC-014'] },
+  { id: 'tea-today', path: '/tea/today', tickets: ['DEC-014'] },
   { id: 'tea-detail', path: '/tea/[id]', tickets: ['DEC-014'] },
   { id: 'you', path: '/you', tickets: ['SEL-14'] },
   { id: 'saved', path: '/you/saved', tickets: ['SEL-14'] },
