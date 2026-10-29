@@ -1,0 +1,154 @@
+diff --git a/web/app/(app)/you/settings/page.tsx b/web/app/(app)/you/settings/page.tsx
+index 8850e0e..45c78ed 100644
+--- a/web/app/(app)/you/settings/page.tsx
++++ b/web/app/(app)/you/settings/page.tsx
+@@ -1,5 +1,6 @@
+ import Link from 'next/link';
+ import { DeleteAccountButton, SignOutButton } from '@/components/Pieces';
++import { TypeSizePicker } from '@/components/TypeSizePicker';
+ import { grace } from '@/lib/grace';
+ import { PRIVATE_PAGE } from '@/lib/site';
+ 
+@@ -50,6 +51,10 @@ export default async function SettingsPage() {
+           <p>Onboarded: {me?.profile?.onboarded ? 'Yes' : 'No'}</p>
+         </article>
+       )}
++      <section className="card">
++        <h2>Type size</h2>
++        <TypeSizePicker />
++      </section>
+       <p>Scripture quotations are from the King James Version (KJV), which is in the public domain.</p>
+       <p className="meta">
+         <a href="https://www.selveapps.xyz/grace/privacy">Privacy</a>
+diff --git a/web/app/globals.css b/web/app/globals.css
+index c7be579..17a1f1a 100644
+--- a/web/app/globals.css
++++ b/web/app/globals.css
+@@ -82,7 +82,7 @@ textarea { min-height: 120px; }
+   display: block; text-decoration: none; padding: 12px 14px;
+   border: 1px solid var(--line); border-radius: 16px; background: var(--white);
+ }
+-.verse-line { display: grid; grid-template-columns: 2.2rem 1fr; gap: 8px; margin: 0 0 10px; }
++.verse-line { display: grid; grid-template-columns: 2.2rem 1fr; gap: 8px; margin: 0 0 10px; font-size: var(--verse-size, 17px); }
+ .verse-line span { color: var(--brass); font-variant-numeric: tabular-nums; }
+ .splash { min-height: 100vh; display: grid; place-items: center; text-align: center; padding: 32px 20px; }
+ .splash h1 { font-size: clamp(56px, 10vw, 92px); }
+diff --git a/web/app/layout.tsx b/web/app/layout.tsx
+index 12672a7..3ed9677 100644
+--- a/web/app/layout.tsx
++++ b/web/app/layout.tsx
+@@ -1,6 +1,8 @@
+ import type { Metadata } from 'next';
+ import { Cormorant_Garamond, Hanken_Grotesk } from 'next/font/google';
++import Script from 'next/script';
+ import { SITE_DESCRIPTION, SITE_NAME, siteUrl } from '@/lib/site';
++import { typeSizeBootScript } from '@/lib/typeSize';
+ import './globals.css';
+ 
+ const serif = Cormorant_Garamond({
+@@ -46,6 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode })
+   return (
+     <html lang="en" className={`${serif.variable} ${sans.variable}`}>
+       <body style={{ fontFamily: 'var(--font-sans), "Hanken Grotesk", sans-serif' }}>
++        <Script id="grace-type-size" strategy="beforeInteractive">{typeSizeBootScript()}</Script>
+         <style>{`:root { --serif: var(--font-serif), Georgia, serif; --sans: var(--font-sans), sans-serif; }`}</style>
+         {children}
+       </body>
+diff --git a/web/components/TypeSizePicker.tsx b/web/components/TypeSizePicker.tsx
+new file mode 100644
+index 0000000..88ee6fb
+--- /dev/null
++++ b/web/components/TypeSizePicker.tsx
+@@ -0,0 +1,33 @@
++'use client';
++
++import { useEffect, useState } from 'react';
++import { TYPE_SIZES, applyTypeSize, readTypeSize, type TypeSizeId } from '@/lib/typeSize';
++
++export function TypeSizePicker() {
++  const [id, setId] = useState<TypeSizeId>('m');
++
++  useEffect(() => {
++    const current = readTypeSize();
++    setId(current);
++    applyTypeSize(current);
++  }, []);
++
++  return (
++    <div className="row" role="group" aria-label="Type size">
++      {TYPE_SIZES.map((size) => (
++        <button
++          key={size.id}
++          type="button"
++          className="chip"
++          aria-pressed={id === size.id}
++          onClick={() => {
++            applyTypeSize(size.id);
++            setId(size.id);
++          }}
++        >
++          {size.label}
++        </button>
++      ))}
++    </div>
++  );
++}
+diff --git a/web/lib/features.ts b/web/lib/features.ts
+index c93f528..4d823b2 100644
+--- a/web/lib/features.ts
++++ b/web/lib/features.ts
+@@ -19,7 +19,7 @@ export const FEATURES = [
+   { id: 'reminders', path: '/you/reminders', tickets: ['SEL-31'] },
+   { id: 'support', path: '/you/support', tickets: ['SEL-31'] },
+   { id: 'subscription', path: '/you/subscription', tickets: ['SEL-16', 'SEL-23'] },
+-  { id: 'settings', path: '/you/settings', tickets: ['SEL-14', 'SEL-76'] },
++  { id: 'settings', path: '/you/settings', tickets: ['SEL-14', 'SEL-76', 'SEL-79'] },
+ ] as const;
+ 
+ export function featureGaps(): string[] {
+diff --git a/web/lib/typeSize.ts b/web/lib/typeSize.ts
+new file mode 100644
+index 0000000..2a0bc47
+--- /dev/null
++++ b/web/lib/typeSize.ts
+@@ -0,0 +1,40 @@
++export const TYPE_SIZES = [
++  { id: 's', label: 'S', scale: 0.9 },
++  { id: 'm', label: 'M', scale: 1 },
++  { id: 'l', label: 'L', scale: 1.15 },
++  { id: 'xl', label: 'XL', scale: 1.3 },
++] as const;
++
++export type TypeSizeId = (typeof TYPE_SIZES)[number]['id'];
++
++export const TYPE_SIZE_KEY = 'grace.typeSize';
++
++export const BASE_VERSE_PX = 17;
++
++export function normalizeTypeSize(id: string | null | undefined): TypeSizeId {
++  return TYPE_SIZES.some((size) => size.id === id) ? id as TypeSizeId : 'm';
++}
++
++export function verseFontSize(id: string | null | undefined): string {
++  const scale = TYPE_SIZES.find((size) => size.id === normalizeTypeSize(id))!.scale;
++  return `${BASE_VERSE_PX * scale}px`;
++}
++
++export function typeSizeBootScript(): string {
++  const scales = Object.fromEntries(TYPE_SIZES.map((size) => [size.id, size.scale]));
++  return `try{var id=localStorage.getItem(${JSON.stringify(TYPE_SIZE_KEY)});var scale=${JSON.stringify(scales)}[id]||1;document.documentElement.style.setProperty("--verse-size",${BASE_VERSE_PX}*scale+"px");}catch(e){}`;
++}
++
++export function applyTypeSize(id: string) {
++  const next = normalizeTypeSize(id);
++  window.localStorage.setItem(TYPE_SIZE_KEY, next);
++  document.documentElement.style.setProperty('--verse-size', verseFontSize(next));
++}
++
++export function readTypeSize(): TypeSizeId {
++  try {
++    return normalizeTypeSize(window.localStorage.getItem(TYPE_SIZE_KEY));
++  } catch {
++    return 'm';
++  }
++}

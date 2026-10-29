@@ -1,0 +1,37 @@
+{
+  "fail_to_pass": [
+    "adds a task to wait for from the sheet",
+    "never offers a task that would close a loop, or the task itself",
+    "searches the tasks on offer",
+    "shows done prerequisites as done and stops waiting on request",
+    "lists what waits for this task and opens it",
+    "says how many tasks it waits for, until it is done",
+    "lists the prerequisites that still exist",
+    "is blocked only by prerequisites still to do",
+    "a finished task is never waiting, whatever it waited for",
+    "accepts a Map as well as a list",
+    "allows a new link",
+    "refuses itself, repeats and missing tasks",
+    "refuses a loop, direct or through other tasks",
+    "copes with a loop that arrived through sync",
+    "drops links to deleted tasks and reports only what changed",
+    "links only tasks that exist in the template",
+    "never asks a task to wait for something normally done later",
+    "has no loops",
+    "links a generated plan, and leaves out tasks a short plan dropped",
+    "leaves out tasks still waiting, even overdue ones",
+    "brings a task in once what it waits for is done",
+    "plans the waiting task for the day after its prerequisite",
+    "adds and removes a prerequisite",
+    "refuses a loop and leaves the tasks as they were",
+    "deleting a task frees the tasks that waited for it",
+    "a task can still be ticked off while it waits"
+  ],
+  "pass_to_pass": [],
+  "selected_test_files_to_run": [
+    "src/models/__tests__/dependencies.test.js",
+    "src/store/__tests__/planningDependencies.test.js",
+    "src/features/planning/__tests__/TaskDependencies.test.jsx"
+  ],
+  "repo_language": "js"
+}

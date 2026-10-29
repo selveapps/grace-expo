@@ -1,0 +1,12 @@
+{
+  "fail_to_pass": [
+    "uses the newest progress row and ignores a blank one",
+    "labels a psalm as Psalm",
+    "joins saved tea to catalog titles and drops unknown ids"
+  ],
+  "pass_to_pass": [],
+  "selected_test_files_to_run": [
+    "lib/library.test.ts"
+  ],
+  "repo_language": "ts"
+}

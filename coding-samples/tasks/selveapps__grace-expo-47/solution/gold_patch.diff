@@ -1,0 +1,690 @@
+diff --git a/src/components/ScreenErrorBoundary.js b/src/components/ScreenErrorBoundary.js
+new file mode 100644
+index 0000000..2a7f745
+--- /dev/null
++++ b/src/components/ScreenErrorBoundary.js
+@@ -0,0 +1,49 @@
++import React from 'react';
++import { View, Text, Pressable, StyleSheet } from 'react-native';
++import { colors, fonts, radius } from '../theme';
++
++/**
++ * A render error in a release build unmounts the tree and leaves the ivory
++ * navigator background with nothing on it — the blank screen App Review hits
++ * and cannot tap past. This keeps the failed screen's slot filled with a
++ * retry, and because it wraps one tab's scene the tab bar outside it still
++ * works.
++ */
++export default class ScreenErrorBoundary extends React.Component {
++  constructor(props) {
++    super(props);
++    this.state = { error: null, nonce: 0 };
++  }
++
++  static getDerivedStateFromError(error) {
++    return { error };
++  }
++
++  retry = () => {
++    this.setState((s) => ({ error: null, nonce: s.nonce + 1 }));
++  };
++
++  render() {
++    if (this.state.error) {
++      return (
++        <View style={styles.error} testID="screen-error">
++          <Text style={styles.title}>This screen didn't load.</Text>
++          <Text style={styles.body}>You can try it again, or use another tab.</Text>
++          <Pressable onPress={this.retry} style={styles.btn} testID="screen-error-retry" accessibilityRole="button">
++            <Text style={styles.btnText}>Try again</Text>
++          </Pressable>
++        </View>
++      );
++    }
++    return <View key={this.state.nonce} style={styles.shell}>{this.props.children}</View>;
++  }
++}
++
++const styles = StyleSheet.create({
++  shell: { flex: 1 },
++  error: { flex: 1, backgroundColor: colors.ivory, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 28 },
++  title: { fontFamily: fonts.serif, fontSize: 28, color: colors.ink, textAlign: 'center' },
++  body: { fontFamily: fonts.sans, fontSize: 15, lineHeight: 22, color: colors.textMuted, textAlign: 'center', marginTop: 10 },
++  btn: { marginTop: 18, backgroundColor: colors.espresso, borderRadius: radius.pill, paddingVertical: 12, paddingHorizontal: 26, minHeight: 44, justifyContent: 'center' },
++  btnText: { fontFamily: fonts.sansSemi, fontSize: 15, color: colors.onDark },
++});
+diff --git a/src/navigation/Tabs.js b/src/navigation/Tabs.js
+index 09a7805..9f7c5fd 100644
+--- a/src/navigation/Tabs.js
++++ b/src/navigation/Tabs.js
+@@ -6,6 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient';
+ import * as Haptics from 'expo-haptics';
+ import Icon from '../components/Icon';
+ import TeaMiniPlayer from '../components/TeaMiniPlayer';
++import ScreenErrorBoundary from '../components/ScreenErrorBoundary';
+ import { colors, fonts } from '../theme';
+ 
+ import TodayScreen from '../screens/tabs/TodayScreen';
+@@ -16,6 +17,23 @@ import YouStack from './YouStack';
+ const Tab = createBottomTabNavigator();
+ const ICONS = { Today: 'today', Stories: 'stories', Reading: 'reading', You: 'you' };
+ 
++// One boundary per tab scene. A throw stays inside that scene, so the bar
++// remains and the reviewer can leave a broken Home for Reading.
++function guard(ScreenComponent) {
++  return function GuardedScreen(props) {
++    return (
++      <ScreenErrorBoundary>
++        <ScreenComponent {...props} />
++      </ScreenErrorBoundary>
++    );
++  };
++}
++
++const GuardedToday = guard(TodayScreen);
++const GuardedStories = guard(StoriesStack);
++const GuardedReading = guard(ReadingStack);
++const GuardedYou = guard(YouStack);
++
+ /**
+  * Tapping a tab always returns that tab to its own root.
+  *
+@@ -45,10 +63,11 @@ const tabListeners = ({ navigation, route }) => ({
+ // ink weight alone. Screens add paddingBottom so nothing hides underneath.
+ export default function Tabs() {
+   return (
+-    <>
++    <View style={styles.fill}>
+     <Tab.Navigator
+       screenOptions={({ route }) => ({
+         headerShown: false,
++        freezeOnBlur: false,
+         tabBarActiveTintColor: colors.espresso,
+         tabBarInactiveTintColor: '#A99A85',
+         tabBarStyle: styles.bar,
+@@ -72,18 +91,21 @@ export default function Tabs() {
+         ),
+       })}
+     >
+-      <Tab.Screen name="Today" component={TodayScreen} listeners={tabListeners} />
+-      <Tab.Screen name="Stories" component={StoriesStack} listeners={tabListeners} />
+-      <Tab.Screen name="Reading" component={ReadingStack} listeners={tabListeners} />
+-      <Tab.Screen name="You" component={YouStack} listeners={tabListeners} />
++      <Tab.Screen name="Today" component={GuardedToday} listeners={tabListeners} />
++      <Tab.Screen name="Stories" component={GuardedStories} listeners={tabListeners} />
++      <Tab.Screen name="Reading" component={GuardedReading} listeners={tabListeners} />
++      <Tab.Screen name="You" component={GuardedYou} listeners={tabListeners} />
+     </Tab.Navigator>
+     {/* Above the tab navigator so a playing Tea can be stopped from any tab. */}
+     <TeaMiniPlayer />
+-    </>
++    </View>
+   );
+ }
+ 
+ const styles = StyleSheet.create({
++  // A fragment as the native-stack scene can lay out at zero height, which is
++  // a blank screen after Enter Grace. One flex child fills the scene.
++  fill: { flex: 1, backgroundColor: colors.ivory },
+   bar: {
+     position: 'absolute',          // content scrolls under the blur
+     left: 0,
+diff --git a/src/screens/onboarding/ConfirmationScreen.js b/src/screens/onboarding/ConfirmationScreen.js
+index de19f9d..b714385 100644
+--- a/src/screens/onboarding/ConfirmationScreen.js
++++ b/src/screens/onboarding/ConfirmationScreen.js
+@@ -53,6 +53,23 @@ export default function ConfirmationScreen({ navigation, route }) {
+     });
+   };
+ 
++  // The handoff veil is opaque and eats every tap. If the reset never leaves
++  // this screen, that veil is a blank stuck page. Drop it and try the reset
++  // again rather than waiting on a transition that did not happen.
++  useEffect(() => {
++    if (!leaving) return undefined;
++    const t = setTimeout(() => {
++      const state = navigation.getState?.();
++      const route = state?.routes?.[state.index]?.name;
++      if (route && route !== 'Confirmation') return;
++      handoff.setValue(0);
++      setLeaving(false);
++      setProfile((p) => (p.onboarded ? p : { ...p, onboarded: true }));
++      navigation.reset({ index: 0, routes: [{ name: 'App' }] });
++    }, 2500);
++    return () => clearTimeout(t);
++  }, [leaving, navigation, handoff, setProfile]);
++
+   return (
+     <Screen gradient={['#FDF6E4', '#F7F3EC', '#F1EBE0']} style={styles.fill} ambient>
+       <StatusBar barStyle="dark-content" />
+diff --git a/src/screens/onboarding/PaywallScreen.js b/src/screens/onboarding/PaywallScreen.js
+index 5feca97..bff832e 100644
+--- a/src/screens/onboarding/PaywallScreen.js
++++ b/src/screens/onboarding/PaywallScreen.js
+@@ -33,6 +33,7 @@ export default function PaywallScreen({ navigation }) {
+   const { profile, setProfile } = useProfile();
+   const [plan, setPlan] = useState('annual');
+   const [busy, setBusy] = useState(false);
++  const [leaving, setLeaving] = useState(false);
+   const [restoring, setRestoring] = useState(false);
+   const [error, setError] = useState(null);
+   const [notice, setNotice] = useState(null);
+@@ -60,11 +61,30 @@ export default function PaywallScreen({ navigation }) {
+   // Hand off the light: bloom the dark paywall out to ivory before navigating, so
+   // Confirmation/Home fade in from the same colour and it reads as one screen.
+   const leave = (fn) => {
++    if (leaving) return;
++    setLeaving(true);
+     Animated.timing(outro, {
+       toValue: 1, duration: 420, easing: Easing.out(Easing.ease), useNativeDriver: true,
+     }).start(fn);
+   };
+ 
++  // Same trap as Confirmation: a fully opaque outro that never navigates is a
++  // blank screen. If we are still on the paywall after the handoff, go into
++  // the app instead of leaving the reviewer on an ivory sheet.
++  useEffect(() => {
++    if (!leaving) return undefined;
++    const t = setTimeout(() => {
++      const state = navigation.getState?.();
++      const route = state?.routes?.[state.index]?.name;
++      if (route && route !== 'Paywall') return;
++      outro.setValue(0);
++      setLeaving(false);
++      setProfile((p) => (p.onboarded ? p : { ...p, onboarded: true }));
++      navigation.reset({ index: 0, routes: [{ name: 'App' }] });
++    }, 2500);
++    return () => clearTimeout(t);
++  }, [leaving, navigation, outro, setProfile]);
++
+   // The one route out of the paywall: a real entitlement. `celebrate` is passed
+   // explicitly rather than left for Confirmation to infer from profile.subscribed,
+   // because the context write below has not necessarily re-rendered by the time
+diff --git a/src/screens/tabs/StoriesScreen.js b/src/screens/tabs/StoriesScreen.js
+index aae3b35..09e60b5 100644
+--- a/src/screens/tabs/StoriesScreen.js
++++ b/src/screens/tabs/StoriesScreen.js
+@@ -46,14 +46,52 @@ export default function StoriesScreen({ navigation }) {
+   const [collections, setCollections] = useState([]);
+   const [cont, setCont] = useState([]);
+   const [all, setAll] = useState([]);
++  const [loadError, setLoadError] = useState(false);
++  const [attempt, setAttempt] = useState(0);
+ 
+-  // Reload on focus so continue-listening reflects real progress.
++  // Reload on focus so continue-listening reflects real progress. A rejection
++  // used to leave this list empty with no way to try again.
+   useFocusEffect(useCallback(() => {
+     let alive = true;
++    let settled = false;
++    const applyBundled = () => {
++      const b = StoryService.bundledCatalog();
++      setFeatured((f) => f || b.featured);
++      setCollections((c) => (c.length ? c : b.collections));
++      setAll((a) => (a.length ? a : b.stories));
++      setLoadError(true);
++    };
++    const timer = setTimeout(() => {
++      if (alive && !settled) applyBundled();
++    }, 8000);
+     Promise.all([StoryService.getFeatured(), StoryService.getCollections(), StoryService.getContinue(), StoryService.getStories()])
+-      .then(([f, c, k, a]) => { if (!alive) return; setFeatured(f); setCollections(c); setCont(k); setAll(a); });
+-    return () => { alive = false; };
+-  }, []));
++      .then(([f, c, k, a]) => {
++        if (!alive) return;
++        settled = true;
++        const stories = Array.isArray(a) ? a : [];
++        const cols = Array.isArray(c) ? c : [];
++        if (!f && stories.length === 0) {
++          const b = StoryService.bundledCatalog();
++          setFeatured(b.featured);
++          setCollections(b.collections);
++          setAll(b.stories);
++          setCont([]);
++          setLoadError(true);
++          return;
++        }
++        setFeatured(f);
++        setCollections(cols);
++        setCont(Array.isArray(k) ? k : []);
++        setAll(stories);
++        setLoadError(false);
++      })
++      .catch(() => {
++        if (!alive) return;
++        settled = true;
++        applyBundled();
++      });
++    return () => { alive = false; clearTimeout(timer); };
++  }, [attempt]));
+ 
+   const openCollection = (c) => {
+     Haptics.selectionAsync();
+@@ -84,6 +122,15 @@ export default function StoriesScreen({ navigation }) {
+         <Text style={styles.h1}>Stories</Text>
+         <Text style={styles.sub}>Real people. Real struggle. Real faith.</Text>
+ 
++        {loadError && (
++          <View style={styles.notice} testID="stories-load-error">
++            <Text style={styles.noticeTitle}>I couldn't refresh stories.</Text>
++            <Pressable onPress={() => setAttempt((n) => n + 1)} style={styles.noticeBtn} testID="stories-retry" accessibilityRole="button">
++              <Text style={styles.noticeBtnText}>Try again</Text>
++            </Pressable>
++          </View>
++        )}
++
+         {featured && (
+           <Pressable
+             style={({ pressed }) => [styles.feature, pressed && styles.pressed]}
+@@ -128,8 +175,9 @@ export default function StoriesScreen({ navigation }) {
+             <Text style={styles.section}>CONTINUE LISTENING</Text>
+             <View style={{ gap: 12 }}>
+               {cont.map((s) => {
++                const seconds = s?.progress?.seconds || 0;
+                 const pct = s.durationSeconds
+-                  ? Math.min(99, Math.max(1, Math.round((s.progress.seconds / s.durationSeconds) * 100)))
++                  ? Math.min(99, Math.max(1, Math.round((seconds / s.durationSeconds) * 100)))
+                   : 0;
+                 return (
+                   <Pressable
+@@ -233,6 +281,10 @@ const styles = StyleSheet.create({
+   segmentTextOn: { fontFamily: fonts.sansSemi, color: colors.ink },
+   h1: { fontFamily: fonts.serif, fontSize: 38, color: colors.ink },
+   sub: { fontFamily: fonts.sans, fontSize: 14, color: colors.textFaint, marginBottom: 20 },
++  notice: { flexDirection: 'row', alignItems: 'center', gap: 12, backgroundColor: colors.white, borderWidth: 1, borderColor: colors.sandLine, borderRadius: radius.md, padding: 14, marginBottom: 16 },
++  noticeTitle: { flex: 1, fontFamily: fonts.sansSemi, fontSize: 14, color: colors.ink },
++  noticeBtn: { backgroundColor: colors.espresso, borderRadius: radius.pill, paddingVertical: 10, paddingHorizontal: 16, minHeight: 44, justifyContent: 'center' },
++  noticeBtnText: { fontFamily: fonts.sansSemi, fontSize: 14, color: colors.onDark },
+   pressed: { opacity: 0.9, transform: [{ scale: 0.995 }] },
+ 
+   feature: { borderRadius: radius.xl, overflow: 'hidden', minHeight: 220, justifyContent: 'flex-end', ...shadow.lift },
+diff --git a/src/screens/tabs/TodayScreen.js b/src/screens/tabs/TodayScreen.js
+index 77507f7..b253398 100644
+--- a/src/screens/tabs/TodayScreen.js
++++ b/src/screens/tabs/TodayScreen.js
+@@ -7,9 +7,13 @@ import VerseCard from '../../components/VerseCard';
+ import GIcon from '../../components/GIcon';
+ import GraceDove from '../../components/GraceDove';
+ import { useProfile } from '../../state/profile';
+-import { StoryService, TodayService } from '../../services';
++import { StoryService, TodayService, verseOf, storyOf } from '../../services';
+ import { colors, fonts, radius } from '../../theme';
+ 
++// A hung request must not leave Home on "Preparing…" until the reviewer gives
++// up. Past this, we keep the bundled passage and say the live load failed.
++const LOAD_WAIT_MS = 8000;
++
+ function greeting() {
+   const h = new Date().getHours();
+   if (h < 12) return 'Good morning';
+@@ -19,6 +23,13 @@ function greeting() {
+ 
+ const mins = (sec) => `${Math.max(1, Math.round((sec || 0) / 60))} min`;
+ 
++function continuePct(item) {
++  const seconds = item?.progress?.seconds;
++  const duration = item?.durationSeconds;
++  if (!duration || !seconds) return null;
++  return Math.min(99, Math.max(1, Math.round((seconds / duration) * 100)));
++}
++
+ export default function TodayScreen({ navigation }) {
+   const { profile } = useProfile();
+   const name = profile.name || 'friend';
+@@ -29,26 +40,55 @@ export default function TodayScreen({ navigation }) {
+   // Fetched independently of the aggregate payload so the listen card has
+   // something real to point at even while /today is slow or unavailable.
+   const [featured, setFeatured] = useState(null);
++  // loading | ready | error. `error` is a failed, empty, or timed-out load.
++  const [status, setStatus] = useState('loading');
++  const [attempt, setAttempt] = useState(0);
+ 
+-  // Prefer the verse the user kept in onboarding; otherwise today's live verse.
+-  const kept = profile.savedVerses && profile.savedVerses[0];
++  // Prefer the verse the user kept in onboarding; otherwise today's live verse,
++  // otherwise the bundled passage. The last one is synchronous, so the card is
++  // never an empty "…" on a failed load.
++  const kept = verseOf(profile.savedVerses && profile.savedVerses[0]);
++  const fallback = TodayService.bundled(profile);
++  const daily = kept || verseOf(today?.dailyVerse) || fallback.dailyVerse;
++  const listen = storyOf(today?.recommendedStory) || storyOf(featured) || storyOf(fallback.recommendedStory);
++
++  const retry = () => {
++    TodayService.invalidate();
++    setStatus('loading');
++    setAttempt((n) => n + 1);
++  };
+ 
+   // Refetch on focus so Continue reflects progress made in the player. The
+   // payload is cached in TodayService (and primed from Confirmation), so this is
+-  // cheap and usually resolves in the same frame.
++  // cheap and usually resolves in the same frame. Failures are recorded: the
++  // old `.catch(() => {})` left the cards on "Preparing…" forever.
+   useFocusEffect(useCallback(() => {
+     let alive = true;
+-    TodayService.getToday(profile).then((t) => { if (alive) setToday(t); }).catch(() => {});
+-    StoryService.getContinue().then((c) => { if (alive) setCont(c?.[0] ?? null); }).catch(() => {});
+-    StoryService.getFeatured().then((f) => { if (alive) setFeatured(f); }).catch(() => {});
+-    return () => { alive = false; };
+-  }, [profile.name]));
+-
+-  const daily = kept || today?.dailyVerse || null;
+-  // What the primary card actually plays. Previously this card was a static
+-  // View with hardcoded copy ("6 min · Psalm 23") and no handler at all.
+-  // The day's pick, falling back to featured so the card is never empty.
+-  const listen = today?.recommendedStory || featured || null;
++    const timer = setTimeout(() => {
++      if (!alive) return;
++      setToday((current) => current || TodayService.bundled(profile));
++      setStatus((s) => (s === 'loading' ? 'error' : s));
++    }, LOAD_WAIT_MS);
++
++    const todayP = TodayService.getToday(profile, { force: attempt > 0 });
++    todayP.then((t) => {
++      if (!alive) return;
++      setToday(t);
++      setStatus(t && t.degraded ? 'error' : 'ready');
++    }).catch(() => {
++      if (!alive) return;
++      setToday(TodayService.bundled(profile));
++      setStatus('error');
++    });
++    StoryService.getContinue().then((c) => {
++      if (!alive) return;
++      const first = Array.isArray(c) ? c[0] : null;
++      setCont(first && first.progress ? first : null);
++    }).catch(() => {});
++    StoryService.getFeatured().then((f) => { if (alive) setFeatured(storyOf(f)); }).catch(() => {});
++
++    return () => { alive = false; clearTimeout(timer); };
++  }, [profile.name, attempt]));
+   const reading = today?.recommendedReading || null;
+ 
+   const openStory = (id) => {
+@@ -81,9 +121,10 @@ export default function TodayScreen({ navigation }) {
+     });
+   };
+ 
+-  const contPct = cont && cont.durationSeconds
+-    ? Math.min(99, Math.max(1, Math.round((cont.progress.seconds / cont.durationSeconds) * 100)))
+-    : null;
++  const contPct = continuePct(cont);
++  const listenRange = listen && typeof listen.scriptureRange === 'string' && listen.scriptureRange
++    ? ` · ${listen.scriptureRange}`
++    : '';
+ 
+   return (
+     <Screen bg={colors.ivory} edges={['top']} style={{ paddingHorizontal: 0 }} ambient>
+@@ -96,11 +137,23 @@ export default function TodayScreen({ navigation }) {
+           <GraceDove size={72} crop="head" motion="peek" />
+         </View>
+ 
++        {status === 'error' && (
++          <View style={styles.notice} testID="today-load-error">
++            <View style={{ flex: 1 }}>
++              <Text style={styles.noticeTitle}>I couldn't load today's reading.</Text>
++              <Text style={styles.noticeBody}>A passage is still here. You can try again.</Text>
++            </View>
++            <Pressable onPress={retry} style={styles.retry} testID="today-retry" accessibilityRole="button">
++              <Text style={styles.retryText}>Try again</Text>
++            </Pressable>
++          </View>
++        )}
++
+         <VerseCard
+           size="compact"
+           kicker={kept ? 'Your verse' : "Today's verse"}
+-          verse={daily ? daily.text : '…'}
+-          reference={daily ? String(daily.ref).toUpperCase() : ''}
++          verse={daily.text}
++          reference={daily.ref ? daily.ref.toUpperCase() : ''}
+           style={styles.verseSpacing}
+         />
+ 
+@@ -116,9 +169,9 @@ export default function TodayScreen({ navigation }) {
+           <View style={styles.listenPlay}><GIcon name="play" size={17} color={colors.espresso} filled /></View>
+           <View style={{ flex: 1 }}>
+             <Text style={styles.listenKicker}>TODAY'S LISTEN</Text>
+-            <Text style={styles.listenTitle} numberOfLines={1}>{listen ? listen.title : 'Preparing…'}</Text>
++            <Text style={styles.listenTitle} numberOfLines={1}>{listen ? listen.title : 'A story is ready'}</Text>
+             <Text style={styles.listenSub} numberOfLines={1}>
+-              {listen ? `${mins(listen.durationSeconds)} · ${listen.scriptureRange}` : 'One moment'}
++              {listen ? `${mins(listen.durationSeconds)}${listenRange}` : 'Open Stories'}
+             </Text>
+           </View>
+         </Pressable>
+@@ -175,6 +228,21 @@ const styles = StyleSheet.create({
+   greeting: { fontFamily: fonts.serif, fontSize: 34, color: colors.ink, lineHeight: 38 },
+   kept: { fontFamily: fonts.serifItalic, fontSize: 18, color: colors.brass, marginTop: 4 },
+   verseSpacing: { marginTop: 22 },
++  notice: {
++    marginTop: 18,
++    backgroundColor: colors.white,
++    borderWidth: 1,
++    borderColor: colors.sandLine,
++    borderRadius: radius.md,
++    padding: 14,
++    flexDirection: 'row',
++    alignItems: 'center',
++    gap: 12,
++  },
++  noticeTitle: { fontFamily: fonts.sansSemi, fontSize: 15, color: colors.ink },
++  noticeBody: { fontFamily: fonts.sans, fontSize: 13, lineHeight: 18, color: colors.textMuted, marginTop: 2 },
++  retry: { backgroundColor: colors.espresso, borderRadius: radius.pill, paddingVertical: 10, paddingHorizontal: 16, minHeight: 44, justifyContent: 'center' },
++  retryText: { fontFamily: fonts.sansSemi, fontSize: 14, color: colors.onDark },
+   pressed: { opacity: 0.85, transform: [{ scale: 0.995 }] },
+   waiting: { opacity: 0.7 },
+   listen: { marginTop: 16, backgroundColor: colors.espressoSoft, borderRadius: radius.lg, padding: 20, flexDirection: 'row', alignItems: 'center', gap: 16, minHeight: 44 },
+diff --git a/src/services/StoryService.js b/src/services/StoryService.js
+index 7ab13be..f26ee6c 100644
+--- a/src/services/StoryService.js
++++ b/src/services/StoryService.js
+@@ -27,9 +27,9 @@ async function loadCatalog() {
+   try {
+     const { data } = await api.get('/stories');
+     catalogCache = {
+-      featured: data.featured,
+-      collections: data.collections,
+-      stories: data.stories,
++      featured: data.featured || FALLBACK_STORIES[0],
++      collections: Array.isArray(data.collections) ? data.collections : FALLBACK_COLLECTIONS,
++      stories: Array.isArray(data.stories) && data.stories.length ? data.stories : FALLBACK_STORIES,
+     };
+     return catalogCache;
+   } catch {
+@@ -85,10 +85,19 @@ export const StoryService = {
+     const c = await loadCatalog();
+     return c.collections;
+   },
++  /** Offline catalog. Home and Stories paint this when the network comes back empty. */
++  bundledCatalog() {
++    return {
++      featured: FALLBACK_STORIES[0],
++      collections: FALLBACK_COLLECTIONS,
++      stories: FALLBACK_STORIES,
++    };
++  },
+   async getStories(collectionName) {
+     const c = await loadCatalog();
+-    if (!collectionName) return c.stories;
+-    return c.stories.filter((s) => s.tags.includes(collectionName));
++    const stories = Array.isArray(c?.stories) ? c.stories : [];
++    if (!collectionName) return stories;
++    return stories.filter((s) => Array.isArray(s?.tags) && s.tags.includes(collectionName));
+   },
+   async getStory(id) {
+     try {
+@@ -132,10 +141,12 @@ export const StoryService = {
+   async getContinue() {
+     await hydrateProgressFromServer();
+     const prog = await StorageService.get(KEYS.storyProgress, {});
++    const progress = prog && typeof prog === 'object' ? prog : {};
+     const stories = (await loadCatalog()).stories;
++    if (!Array.isArray(stories)) return [];
+     return stories
+-      .filter((s) => prog[s.id] && prog[s.id].seconds > 0)
+-      .map((s) => ({ ...s, progress: prog[s.id] }));
++      .filter((s) => s && progress[s.id] && progress[s.id].seconds > 0)
++      .map((s) => ({ ...s, progress: progress[s.id] }));
+   },
+   async getProgress(id) {
+     await hydrateProgressFromServer();
+diff --git a/src/services/TodayService.js b/src/services/TodayService.js
+index 0995960..3e4aa42 100644
+--- a/src/services/TodayService.js
++++ b/src/services/TodayService.js
+@@ -1,9 +1,16 @@
+-// TodayService — Today tab payload from Grace API with local fallback.
++// TodayService — Today tab payload from Grace API with a bundled fallback.
++//
++// The fallback used to be "local" in name only: a failed /today kicked off
++// another chain of /saved, /stories and bible-api calls. If those hung, Home
++// stayed on "Preparing…" because the screen swallowed the rejection. The
++// bundled payload is synchronous and always renderable, so a failed or empty
++// load still has a verse and a story. `degraded` tells the screen to show a
++// retry instead of pretending the live reading arrived.
+ import { api } from '../api/client';
+-import { VerseService } from './VerseService';
+ import { StoryService } from './StoryService';
+ import { TeaService } from './TeaService';
+-import { ReadingService } from './ReadingService';
++import { StorageService, KEYS } from './StorageService';
++import { PSALM_23 } from '../data/content';
+ 
+ // One in-flight payload, shared. Confirmation primes this while she is still
+ // reading the blessing, so tapping Enter Grace mounts a Home that already has
+@@ -19,35 +26,60 @@ function greetingFor(date = new Date()) {
+   return 'Good evening';
+ }
+ 
+-const settled = (p, fallback) => Promise.resolve(p).then((v) => v, () => fallback);
++export function verseOf(v) {
++  if (!v || typeof v !== 'object') return null;
++  const text = typeof v.text === 'string' ? v.text.trim() : '';
++  if (!text) return null;
++  return { ref: v.ref == null ? '' : String(v.ref), text };
++}
++
++export function storyOf(s) {
++  if (!s || typeof s !== 'object' || s.id == null) return null;
++  if (typeof s.title !== 'string' || !s.title.trim()) return null;
++  return s;
++}
+ 
+-async function getTodayLocal(profile = {}) {
+-  // allSettled semantics on purpose. With Promise.all, one rejected sub-fetch
+-  // took the whole payload down, and Home then sat on "Preparing…" forever
+-  // because its listen and continue cards had nothing to render.
+-  const [saved, cont, prog] = await Promise.all([
+-    settled(ReadingService.getSavedVerses(), []),
+-    settled(StoryService.getContinue(), []),
+-    settled(ReadingService.getReadingProgress(), {}),
+-  ]);
+-  const [dailyVerse, featured] = await Promise.all([
+-    saved && saved[0] ? saved[0] : settled(VerseService.getDaily(), null),
+-    settled(StoryService.getFeatured(), null),
+-  ]);
+-  const last = prog && prog.__last;
++function bundledToday(profile = {}) {
++  const story = StoryService.bundledCatalog().featured;
+   return {
+     greeting: greetingFor(),
+     name: profile.name || 'friend',
+-    dailyVerse,
+-    recommendedReading: last || { book: 'Psalms', chapter: 23 },
+-    recommendedStory: (cont && cont[0]) || featured,
++    dailyVerse: {
++      ref: 'Psalm 23:1-4',
++      text: PSALM_23.slice(0, 4).map((v) => v.t).join(' '),
++    },
++    recommendedReading: { book: 'Psalms', chapter: 23 },
++    recommendedStory: story,
+     reflectionPrompt: 'Where might you need Grace today?',
+     userIntention: (profile.carrying && profile.carrying[0]) || profile.reflectionWord || 'Trust',
+     rhythm: profile.rhythm || 'morning',
++    degraded: true,
++  };
++}
++
++async function getTodayLocal(profile = {}, baseline) {
++  // Storage only. Another network waterfall here is what left Home blank while
++  // every request timed out in sequence.
++  const base = baseline || bundledToday(profile);
++  let kept = null;
++  try {
++    const saved = await StorageService.get(KEYS.savedVerses, []);
++    kept = verseOf(Array.isArray(saved) ? saved[0] : null);
++  } catch { /* storage unavailable — bundled verse still renders */ }
++  const fromProfile = verseOf(profile.savedVerses && profile.savedVerses[0]);
++  return {
++    ...base,
++    dailyVerse: kept || fromProfile || base.dailyVerse,
++    degraded: true,
+   };
+ }
+ 
+ export const TodayService = {
++  /** Synchronous content Home can paint before any request settles. */
++  bundled(profile = {}) {
++    return bundledToday(profile);
++  },
++
+   async getToday(profile = {}, { force = false } = {}) {
+     const key = profile.name || '';
+     const fresh = cache && cache.key === key && Date.now() - cache.at < FRESH_MS;
+@@ -81,21 +113,34 @@ export const TodayService = {
+   },
+ 
+   async fetchToday(profile = {}) {
++    const baseline = bundledToday(profile);
+     try {
+-      await StoryService.hydrateProgress();
++      // Progress sync must not sit in front of the payload. Home has its own
++      // continue fetch, and a stuck /stories/progress used to delay the verse
++      // until the reviewer had already called the screen blank.
++      StoryService.hydrateProgress().catch(() => {});
+       const { data } = await api.get('/today');
++      const dailyVerse = verseOf(data?.dailyVerse);
++      const recommendedStory = storyOf(data?.recommendedStory);
++      const book = data?.recommendedReading?.book;
+       return {
+         greeting: greetingFor(),
+-        name: profile.name || data.name || 'friend',
+-        dailyVerse: data.dailyVerse,
+-        recommendedReading: data.recommendedReading,
+-        recommendedStory: data.recommendedStory,
+-        reflectionPrompt: data.reflectionPrompt || 'Where might you need Grace today?',
+-        userIntention: data.userIntention || 'Trust',
+-        rhythm: data.rhythm || profile.rhythm || 'morning',
++        name: profile.name || (typeof data?.name === 'string' && data.name) || baseline.name,
++        dailyVerse: dailyVerse || baseline.dailyVerse,
++        recommendedReading: book
++          ? { book: String(book), chapter: Number(data.recommendedReading.chapter) || 1 }
++          : baseline.recommendedReading,
++        recommendedStory: recommendedStory || baseline.recommendedStory,
++        reflectionPrompt: (typeof data?.reflectionPrompt === 'string' && data.reflectionPrompt)
++          || baseline.reflectionPrompt,
++        userIntention: data?.userIntention || baseline.userIntention,
++        rhythm: data?.rhythm || profile.rhythm || baseline.rhythm,
++        // An empty 200 is the same stuck screen as a transport failure if we
++        // render "…" and wait. Fill the holes and say so.
++        degraded: !dailyVerse || !recommendedStory,
+       };
+     } catch {
+-      return getTodayLocal(profile);
++      return getTodayLocal(profile, baseline);
+     }
+   },
+ };
+diff --git a/src/services/index.js b/src/services/index.js
+index 7d5f7c8..7fdb966 100644
+--- a/src/services/index.js
++++ b/src/services/index.js
+@@ -13,5 +13,5 @@ export { RevenueCatService, IAP_ENABLED } from './RevenueCatService';
+ export { SuperwallService, PAYWALL_PLACEMENTS } from './SuperwallService';
+ export { NotificationService } from './NotificationService';
+ export { SupportService, SUPPORT_CATEGORIES } from './SupportService';
+-export { TodayService } from './TodayService';
++export { TodayService, verseOf, storyOf } from './TodayService';
+ export { ReviewService } from './ReviewService';

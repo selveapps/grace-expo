@@ -1,0 +1,11 @@
+{
+  "fail_to_pass": [
+    "keeps the four mobile scales and falls back to medium",
+    "boots from local storage and does not call the API"
+  ],
+  "pass_to_pass": [],
+  "selected_test_files_to_run": [
+    "lib/typeSize.test.ts"
+  ],
+  "repo_language": "ts"
+}
