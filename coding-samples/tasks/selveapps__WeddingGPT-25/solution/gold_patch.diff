@@ -1,0 +1,647 @@
+diff --git a/app/(tabs)/planning.jsx b/app/(tabs)/planning.jsx
+index b27cc6d..43097b6 100644
+--- a/app/(tabs)/planning.jsx
++++ b/app/(tabs)/planning.jsx
+@@ -38,6 +38,7 @@ import {
+   isSnoozeActive,
+   eventName,
+   sortEvents,
++  openPrerequisites,
+ } from '@/models';
+ import { daysUntil } from '@/lib/date';
+ import { TaskRow } from '@/features/planning/TaskRow';
+@@ -114,6 +115,8 @@ export default function PlanningScreen() {
+     [categories]
+   );
+ 
++  const tasksById = useMemo(() => new Map(tasks.map((task) => [task.id, task])), [tasks]);
++
+   const progress = useMemo(() => calculateProgress(tasks), [tasks]);
+   const openCount = useMemo(() => tasks.filter(isTaskOpen).length, [tasks]);
+   const overdueCount = useMemo(() => tasks.filter((t) => isTaskOverdue(t)).length, [tasks]);
+@@ -329,6 +332,7 @@ export default function PlanningScreen() {
+                     key={task.id}
+                     task={task}
+                     categoryName={categoryNameById.get(task.categoryId)}
++                    waitingFor={openPrerequisites(task, tasksById).length}
+                     onToggle={handleToggle}
+                     onPress={() => router.push(Routes.taskDetail(task.id))}
+                   />
+diff --git a/app/planning/category/[id].jsx b/app/planning/category/[id].jsx
+index 1b4fdce..5c211e8 100644
+--- a/app/planning/category/[id].jsx
++++ b/app/planning/category/[id].jsx
+@@ -16,7 +16,7 @@ import {
+ import { useTheme } from '@/design-system/theme';
+ import { Routes } from '@/navigation/routes';
+ import { usePlanningStore, selectAllTasks, selectCategoryById } from '@/store';
+-import { TaskStatus, calculateProgress, isTaskOpen } from '@/models';
++import { TaskStatus, calculateProgress, isTaskOpen, openPrerequisites } from '@/models';
+ import { TaskRow } from '@/features/planning/TaskRow';
+ 
+ /**
+@@ -35,6 +35,8 @@ export default function TaskCategoryScreen() {
+   const categoryId = String(id);
+   const category = usePlanningStore(selectCategoryById(categoryId));
+   const allTasks = usePlanningStore(selectAllTasks);
++  // Prerequisites can sit in other categories, so look them up across all tasks.
++  const tasksById = useMemo(() => new Map(allTasks.map((task) => [task.id, task])), [allTasks]);
+   const toggleTask = usePlanningStore((state) => state.toggleTask);
+ 
+   const { open, done, progress } = useMemo(() => {
+@@ -130,6 +132,7 @@ export default function TaskCategoryScreen() {
+               <TaskRow
+                 key={task.id}
+                 task={task}
++                waitingFor={openPrerequisites(task, tasksById).length}
+                 onToggle={handleToggle}
+                 onPress={() => router.push(Routes.taskDetail(task.id))}
+               />
+diff --git a/app/planning/task/[id]/index.jsx b/app/planning/task/[id]/index.jsx
+index 4576fe3..bc57d73 100644
+--- a/app/planning/task/[id]/index.jsx
++++ b/app/planning/task/[id]/index.jsx
+@@ -30,6 +30,7 @@ import {
+   isSnoozeActive,
+ } from '@/models';
+ import { formatLongDate, formatRelativeDay } from '@/lib/date';
++import { TaskDependencies } from '@/features/planning/TaskDependencies';
+ 
+ /** Snooze lengths offered on the sheet. Anything longer is really a new date. */
+ const SNOOZE_OPTIONS = [
+@@ -244,6 +245,8 @@ export default function TaskDetailScreen() {
+           ) : null}
+         </Card>
+ 
++        <TaskDependencies task={task} />
++
+         {/* --- Notes -------------------------------------------------------- */}
+         <Stack gap="xs">
+           <Row justify="space-between" align="baseline">
+diff --git a/src/features/planning/TaskDependencies.jsx b/src/features/planning/TaskDependencies.jsx
+new file mode 100644
+index 0000000..336ba48
+--- /dev/null
++++ b/src/features/planning/TaskDependencies.jsx
+@@ -0,0 +1,187 @@
++import React, { useMemo, useState } from 'react';
++import { useRouter } from 'expo-router';
++
++import {
++  Badge,
++  BottomSheet,
++  Button,
++  Card,
++  Icon,
++  ListRow,
++  Row,
++  SectionHeader,
++  Stack,
++  Text,
++  TextField,
++  Touchable,
++  useToast,
++} from '@/design-system/components';
++import { Routes } from '@/navigation/routes';
++import { usePlanningStore, selectAllTasks } from '@/store';
++import {
++  DEPENDENCY_LIMITS,
++  TaskStatus,
++  dependencyError,
++  dependentsOf,
++  isTaskOpen,
++  openPrerequisites,
++  prerequisitesOf,
++} from '@/models';
++
++const statusBadge = (task) =>
++  task.status === TaskStatus.DONE ? (
++    <Badge label="Done" tone="success" />
++  ) : task.status === TaskStatus.SKIPPED ? (
++    <Badge label="Skipped" />
++  ) : (
++    <Badge label="To do" tone="warning" />
++  );
++
++/**
++ * What a task waits for, and what waits for it (slice C2). Waiting is advice:
++ * the task can still be ticked off, it just stays off the daily checklist
++ * until what it waits for is done.
++ */
++export function TaskDependencies({ task }) {
++  const router = useRouter();
++  const toast = useToast();
++  const tasks = usePlanningStore(selectAllTasks);
++  const { addPrerequisite, removePrerequisite } = usePlanningStore.getState();
++  const [picking, setPicking] = useState(false);
++  const [query, setQuery] = useState('');
++
++  const byId = useMemo(() => new Map(tasks.map((entry) => [entry.id, entry])), [tasks]);
++  const prerequisites = prerequisitesOf(task, byId);
++  const open = openPrerequisites(task, byId);
++  const dependents = dependentsOf(task.id, tasks);
++  const full = (task.waitsFor ?? []).length >= DEPENDENCY_LIMITS.perTask;
++
++  // Only tasks it could wait for: not itself, not already linked, not a loop.
++  const choices = useMemo(() => {
++    if (!picking) return [];
++    const needle = query.trim().toLowerCase();
++    return tasks
++      .filter((entry) => !dependencyError(task.id, entry.id, byId))
++      .filter((entry) => !needle || entry.title.toLowerCase().includes(needle))
++      .sort((a, b) => Number(!isTaskOpen(a)) - Number(!isTaskOpen(b)) || a.title.localeCompare(b.title));
++  }, [picking, query, tasks, task.id, byId]);
++
++  const choose = (prerequisite) => {
++    const result = addPrerequisite(task.id, prerequisite.id);
++    if (!result.ok) {
++      toast.error(result.error);
++      return;
++    }
++    setPicking(false);
++    setQuery('');
++    toast.success(`Now waits for ${prerequisite.title}`);
++  };
++
++  return (
++    <Stack gap="sm">
++      <SectionHeader
++        eyebrow="Order"
++        title="Waits for"
++        subtitle={
++          prerequisites.length
++            ? undefined
++            : 'Tasks that need to happen first, like the guest list before invitations.'
++        }
++      />
++
++      {open.length && isTaskOpen(task) ? (
++        <Card tone="accent">
++          <Row gap="sm" align="flex-start">
++            <Icon name="clock" size="md" color="warning" />
++            <Text variant="bodySm" style={{ flex: 1 }}>
++              {`Waiting for ${open.length} ${open.length === 1 ? 'task' : 'tasks'}. It stays off your daily list until ${
++                open.length === 1 ? 'that is' : 'they are'
++              } done, but you can still tick it off.`}
++            </Text>
++          </Row>
++        </Card>
++      ) : null}
++
++      {prerequisites.length ? (
++        <Card padding="none">
++          {prerequisites.map((prerequisite) => (
++            <ListRow
++              key={prerequisite.id}
++              title={prerequisite.title}
++              onPress={() => router.push(Routes.taskDetail(prerequisite.id))}
++              trailing={
++                <Row gap="xs" align="center">
++                  {statusBadge(prerequisite)}
++                  <Touchable
++                    onPress={() => removePrerequisite(task.id, prerequisite.id)}
++                    accessibilityLabel={`Stop waiting for ${prerequisite.title}`}
++                  >
++                    <Icon name="close" size="sm" color="muted" />
++                  </Touchable>
++                </Row>
++              }
++              showChevron={false}
++            />
++          ))}
++        </Card>
++      ) : null}
++
++      <Button
++        label={full ? `Waits for the most it can (${DEPENDENCY_LIMITS.perTask})` : 'Wait for another task'}
++        variant="secondary"
++        iconLeft="plus"
++        disabled={full}
++        onPress={() => setPicking(true)}
++      />
++
++      {dependents.length ? (
++        <Stack gap="xs">
++          <Text variant="eyebrow" color="subtle">
++            Waiting for this
++          </Text>
++          <Card padding="none">
++            {dependents.map((dependent) => (
++              <ListRow
++                key={dependent.id}
++                title={dependent.title}
++                trailing={statusBadge(dependent)}
++                onPress={() => router.push(Routes.taskDetail(dependent.id))}
++              />
++            ))}
++          </Card>
++        </Stack>
++      ) : null}
++
++      <BottomSheet
++        visible={picking}
++        onClose={() => setPicking(false)}
++        title="Wait for which task?"
++        subtitle="Tasks that already wait for this one are left out, so the plan never goes round in a circle."
++      >
++        <Stack gap="sm">
++          <TextField label="Search tasks" value={query} onChangeText={setQuery} placeholder="Guest list" />
++          {choices.length ? (
++            <Stack gap="none">
++              {choices.map((choice) => (
++                <ListRow
++                  key={choice.id}
++                  inset={false}
++                  title={choice.title}
++                  trailing={choice.status === TaskStatus.DONE ? <Badge label="Done" tone="success" /> : null}
++                  showChevron={false}
++                  onPress={() => choose(choice)}
++                />
++              ))}
++            </Stack>
++          ) : (
++            <Text variant="bodySm" color="muted">
++              No task matches.
++            </Text>
++          )}
++        </Stack>
++      </BottomSheet>
++    </Stack>
++  );
++}
++
++export default TaskDependencies;
+diff --git a/src/features/planning/TaskRow.jsx b/src/features/planning/TaskRow.jsx
+index 14a96ac..5187838 100644
+--- a/src/features/planning/TaskRow.jsx
++++ b/src/features/planning/TaskRow.jsx
+@@ -16,7 +16,7 @@ import { formatRelativeDay } from '@/lib/date';
+  * Overdue is computed here rather than stored, so a row that was fine last
+  * night is red this morning without anything having to run in between.
+  */
+-export function TaskRow({ task, categoryName, onToggle, onPress }) {
++export function TaskRow({ task, categoryName, waitingFor = 0, onToggle, onPress }) {
+   const { colors, spacing, borderWidths } = useTheme();
+ 
+   const done = task.status === TaskStatus.DONE;
+@@ -69,9 +69,16 @@ export function TaskRow({ task, categoryName, onToggle, onPress }) {
+                 </Text>
+               ) : null}
+ 
++              {waitingFor && !done ? (
++                <Text variant="caption" color="subtle">
++                  {task.dueDate ? '· ' : ''}
++                  {`Waits for ${waitingFor}`}
++                </Text>
++              ) : null}
++
+               {categoryName ? (
+                 <Text variant="caption" color="subtle">
+-                  {task.dueDate && !done ? '· ' : ''}
++                  {(task.dueDate || waitingFor) && !done ? '· ' : ''}
+                   {categoryName}
+                 </Text>
+               ) : null}
+diff --git a/src/models/daily.js b/src/models/daily.js
+index 015ab08..336ffa9 100644
+--- a/src/models/daily.js
++++ b/src/models/daily.js
+@@ -1,5 +1,6 @@
+ import { TaskPriority } from './enums';
+ import { isTaskOpen, isSnoozeActive } from './planning';
++import { isTaskWaiting } from './dependencies';
+ import { daysUntil } from '../lib/date';
+ 
+ /**
+@@ -12,7 +13,8 @@ import { daysUntil } from '../lib/date';
+  *
+  * Picking order: anything overdue (oldest first), then what is due in the next
+  * two weeks (soonest first), then high priority, then everything else by due
+- * date, with undated tasks last. Snoozed tasks wait until their snooze ends.
++ * date, with undated tasks last. Snoozed tasks wait until their snooze ends,
++ * and tasks waiting for others until those are done.
+  */
+ 
+ export const DAILY_CHECKLIST_SIZE = 3;
+@@ -27,11 +29,25 @@ function rank(task, from) {
+   return [4, -(task.monthsBefore ?? 0)];
+ }
+ 
+-/** Today's tasks, most pressing first. `exclude` is a list of task ids to skip. */
+-export function pickDailyTasks(tasks = [], { from = new Date(), size = DAILY_CHECKLIST_SIZE, exclude = [] } = {}) {
++/**
++ * Today's tasks, most pressing first. `exclude` is a list of task ids to skip;
++ * `assumeDone` ids count as finished when deciding what is still waiting.
++ */
++export function pickDailyTasks(
++  tasks = [],
++  { from = new Date(), size = DAILY_CHECKLIST_SIZE, exclude = [], assumeDone = [] } = {}
++) {
+   const skip = new Set(exclude);
++  const byId = new Map(tasks.map((task) => [task.id, task]));
++  const finished = new Set(assumeDone);
+   return tasks
+-    .filter((task) => isTaskOpen(task) && !isSnoozeActive(task, from) && !skip.has(task.id))
++    .filter(
++      (task) =>
++        isTaskOpen(task) &&
++        !isSnoozeActive(task, from) &&
++        !skip.has(task.id) &&
++        !isTaskWaiting(task, byId, finished)
++    )
+     .map((task) => ({ task, key: rank(task, from) }))
+     .sort((a, b) => a.key[0] - b.key[0] || a.key[1] - b.key[1])
+     .slice(0, size)
+@@ -56,7 +72,7 @@ export function planDailyChecklists(tasks = [], { from = new Date(), days = 14,
+     const picked =
+       offset === 0 && firstDay
+         ? firstDay.filter((task) => isTaskOpen(task))
+-        : pickDailyTasks(tasks, { from: date, exclude: used });
++        : pickDailyTasks(tasks, { from: date, exclude: used, assumeDone: used });
+     if (picked.length === 0) continue;
+     used.push(...picked.map((task) => task.id));
+     plan.push({ date, tasks: picked });
+diff --git a/src/models/dependencies.js b/src/models/dependencies.js
+new file mode 100644
+index 0000000..9a29fc0
+--- /dev/null
++++ b/src/models/dependencies.js
+@@ -0,0 +1,129 @@
++import { TaskStatus } from './enums';
++
++/**
++ * Task dependencies (workstream C, slice C2): "Send the invitations" waits for
++ * "Build the full guest list".
++ *
++ * A task lists the tasks it waits for in `waitsFor` (task ids). Waiting is
++ * advice, not a lock: a couple can still tick a waiting task off - real life
++ * does not always follow the plan - but the task says what it waits for, and
++ * the daily checklist leaves it out until its prerequisites are done.
++ *
++ * Cycles are refused when a link is added. Two partners editing at once can
++ * still create one through sync, so everything here also copes with cycles
++ * rather than looping forever.
++ */
++
++export const DEPENDENCY_LIMITS = {
++  /** Prerequisites per task. More than this is a project plan, not a checklist. */
++  perTask: 10,
++};
++
++const isTaskOpen = (task) => task?.status !== TaskStatus.DONE && task?.status !== TaskStatus.SKIPPED;
++
++const byIdOf = (tasks) => (tasks instanceof Map ? tasks : new Map(tasks.map((task) => [task.id, task])));
++
++/** The prerequisites of a task that still exist, open or not. */
++export function prerequisitesOf(task, tasks = []) {
++  const byId = byIdOf(tasks);
++  return (task?.waitsFor ?? []).map((id) => byId.get(id)).filter(Boolean);
++}
++
++/**
++ * The prerequisites still to do. A deleted prerequisite no longer blocks, and
++ * nor does a skipped one: the couple decided it is not happening.
++ * `assumeDone` is a set of ids to treat as finished (for planning ahead).
++ */
++export function openPrerequisites(task, tasks = [], assumeDone = null) {
++  return prerequisitesOf(task, tasks).filter((prereq) => isTaskOpen(prereq) && !assumeDone?.has(prereq.id));
++}
++
++export function isTaskWaiting(task, tasks = [], assumeDone = null) {
++  return isTaskOpen(task) && openPrerequisites(task, tasks, assumeDone).length > 0;
++}
++
++/** Tasks that wait for this one. */
++export function dependentsOf(taskId, tasks = []) {
++  const list = tasks instanceof Map ? [...tasks.values()] : tasks;
++  return list.filter((task) => (task.waitsFor ?? []).includes(taskId));
++}
++
++/** True if `fromId` reaches `toId` by following `waitsFor` links. */
++function reaches(fromId, toId, byId) {
++  const seen = new Set();
++  const stack = [fromId];
++  while (stack.length) {
++    const id = stack.pop();
++    if (id === toId) return true;
++    if (seen.has(id)) continue;
++    seen.add(id);
++    for (const next of byId.get(id)?.waitsFor ?? []) stack.push(next);
++  }
++  return false;
++}
++
++/**
++ * Why `taskId` cannot wait for `prerequisiteId`, or null if it can. A link
++ * that would close a loop is refused: two tasks each waiting for the other
++ * would never be ready.
++ */
++export function dependencyError(taskId, prerequisiteId, tasks = []) {
++  const byId = byIdOf(tasks);
++  const task = byId.get(taskId);
++  if (!task || !byId.has(prerequisiteId)) return 'That task no longer exists.';
++  if (taskId === prerequisiteId) return 'A task cannot wait for itself.';
++  if ((task.waitsFor ?? []).includes(prerequisiteId)) return 'It already waits for that.';
++  if ((task.waitsFor ?? []).length >= DEPENDENCY_LIMITS.perTask)
++    return `A task can wait for up to ${DEPENDENCY_LIMITS.perTask} others.`;
++  if (reaches(prerequisiteId, taskId, byId)) return 'That task already waits for this one.';
++  return null;
++}
++
++/** Remove links to tasks that are gone. Returns the tasks that changed, as `{ id, waitsFor }`. */
++export function pruneDependencies(tasks = [], removedIds = []) {
++  const removed = new Set(removedIds);
++  return tasks
++    .filter((task) => (task.waitsFor ?? []).some((id) => removed.has(id)))
++    .map((task) => ({ id: task.id, waitsFor: task.waitsFor.filter((id) => !removed.has(id)) }));
++}
++
++/**
++ * The obvious dependencies in the generated plan, by template title. Only
++ * links where both tasks are in the plan are made, so a short plan that
++ * dropped "Shortlist venues" does not leave "Book the reception venue" waiting
++ * for nothing.
++ */
++export const TEMPLATE_DEPENDENCIES = {
++  'Visit your shortlist': ['Shortlist venues'],
++  'Book the ceremony venue': ['Visit your shortlist', 'Choose your date or window'],
++  'Book the reception venue': ['Visit your shortlist', 'Choose your date or window'],
++  'Confirm the venue timeline': ['Book the reception venue'],
++  'Send the venue your final numbers': ['Chase outstanding RSVPs'],
++  'Book catering': ['Book the reception venue', 'Draft a rough guest count'],
++  'Confirm every vendor in writing': ['Book your photographer', 'Book catering'],
++  'Share the running order with all vendors': ['Agree the day-of running order'],
++  'Collect addresses and contact details': ['Build the full guest list'],
++  'Send save the dates': ['Choose your date or window', 'Collect addresses and contact details'],
++  'Send the invitations': ['Build the full guest list', 'Book the ceremony venue'],
++  'Chase outstanding RSVPs': ['Send the invitations'],
++  'Finalise the seating plan': ['Chase outstanding RSVPs'],
++  'Order your outfits': ['Start looking at outfits'],
++  'Book your fittings': ['Order your outfits'],
++  'Final fitting': ['Book your fittings'],
++  'Split the budget across categories': ['Set a realistic total budget'],
++  'Set up a payment schedule': ['Split the budget across categories'],
++  'Settle the final balances': ['Set up a payment schedule'],
++  'Give notice or file the paperwork': ['Check the legal requirements'],
++  'Gather the documents for the day': ['Give notice or file the paperwork'],
++};
++
++/** Fill `waitsFor` on freshly generated plan tasks from `TEMPLATE_DEPENDENCIES`. */
++export function linkTemplateDependencies(tasks = []) {
++  const idByTitle = new Map(tasks.map((task) => [task.title, task.id]));
++  return tasks.map((task) => {
++    const waitsFor = (TEMPLATE_DEPENDENCIES[task.title] ?? [])
++      .map((title) => idByTitle.get(title))
++      .filter(Boolean);
++    return waitsFor.length ? { ...task, waitsFor } : task;
++  });
++}
+diff --git a/src/models/index.js b/src/models/index.js
+index d00f2ce..99c1e40 100644
+--- a/src/models/index.js
++++ b/src/models/index.js
+@@ -120,6 +120,17 @@ export {
+   planDailyChecklists,
+   summariseDailyTasks,
+ } from './daily';
++export {
++  DEPENDENCY_LIMITS,
++  TEMPLATE_DEPENDENCIES,
++  prerequisitesOf,
++  openPrerequisites,
++  isTaskWaiting,
++  dependentsOf,
++  dependencyError,
++  pruneDependencies,
++  linkTemplateDependencies,
++} from './dependencies';
+ export {
+   VENUE_STYLES,
+   findMetro,
+diff --git a/src/models/planGeneration.js b/src/models/planGeneration.js
+index aed2765..4e87e18 100644
+--- a/src/models/planGeneration.js
++++ b/src/models/planGeneration.js
+@@ -1,4 +1,5 @@
+ import { createTask } from './planning';
++import { linkTemplateDependencies } from './dependencies';
+ import { TaskPriority, DateType, PlanningStage } from './enums';
+ import { addDays, addMonths, daysUntil, toISODate } from '../lib/date';
+ 
+@@ -479,7 +480,7 @@ export function generatePersonalisedPlan({ wedding, categories = [], from = new
+     });
+   });
+ 
+-  return { tasks, horizonMonths };
++  return { tasks: linkTemplateDependencies(tasks), horizonMonths };
+ }
+ 
+ /**
+diff --git a/src/models/planning.js b/src/models/planning.js
+index 2daee2c..2b51ca6 100644
+--- a/src/models/planning.js
++++ b/src/models/planning.js
+@@ -1,6 +1,7 @@
+ import { createEntity } from './base';
+ import { TaskStatus, TaskPriority, Assignee } from './enums';
+ import { daysUntil } from '../lib/date';
++import { isTaskWaiting } from './dependencies';
+ 
+ /**
+  * Tasks and task categories.
+@@ -47,6 +48,8 @@ export function createTask({
+   monthsBefore = null,
+   /** The event this task is for, or null for the wedding as a whole. */
+   eventId = null,
++  /** Ids of the tasks this one waits for (slice C2). */
++  waitsFor = [],
+ } = {}) {
+   return createEntity('task', {
+     weddingId,
+@@ -60,6 +63,7 @@ export function createTask({
+     notes,
+     isSystemGenerated,
+     eventId,
++    waitsFor,
+     monthsBefore,
+     completedAt: null,
+     snoozedUntil: null,
+@@ -107,9 +111,13 @@ export function calculateProgress(tasks = []) {
+  * Ordering intent, highest first: overdue work, then high-priority work due
+  * soon, then whatever is due soonest. Tasks with no due date sort last - they
+  * are real, but they are never the most urgent thing on a given morning.
++ * Tasks still waiting for others are never the next thing to do.
+  */
+ export function selectNextBestAction(tasks = [], from = new Date()) {
+-  const candidates = tasks.filter((t) => isTaskOpen(t) && !isSnoozeActive(t, from));
++  const byId = new Map(tasks.map((task) => [task.id, task]));
++  const candidates = tasks.filter(
++    (t) => isTaskOpen(t) && !isSnoozeActive(t, from) && !isTaskWaiting(t, byId)
++  );
+   if (candidates.length === 0) return null;
+ 
+   const score = (task) => {
+diff --git a/src/services/analytics/events.js b/src/services/analytics/events.js
+index 4d515ff..c76c164 100644
+--- a/src/services/analytics/events.js
++++ b/src/services/analytics/events.js
+@@ -35,6 +35,7 @@ export const AnalyticsEvents = {
+   TASK_DELETED: 'task_deleted',
+   TASK_SNOOZED: 'task_snoozed',
+   TASK_REASSIGNED: 'task_reassigned',
++  TASK_DEPENDENCY_ADDED: 'task_dependency_added',
+   TASKS_FILTERED: 'tasks_filtered',
+ 
+   // --- Budget --------------------------------------------------------------
+diff --git a/src/store/planningStore.js b/src/store/planningStore.js
+index fcf72d0..9adef91 100644
+--- a/src/store/planningStore.js
++++ b/src/store/planningStore.js
+@@ -15,6 +15,8 @@ import {
+   deriveFromCollection,
+   TaskStatus,
+   DEFAULT_TASK_CATEGORIES,
++  dependencyError,
++  pruneDependencies,
+ } from '../models';
+ import { addDays, todayISO } from '../lib/date';
+ 
+@@ -157,10 +159,37 @@ export const usePlanningStore = create()(
+       },
+ 
+       deleteTask(id) {
+-        set((state) => ({ tasks: removeById(state.tasks, id) }));
++        // Tasks that waited for this one stop waiting rather than point at nothing.
++        const unlinked = pruneDependencies(denormalise(get().tasks), [id]).map(({ id: taskId, waitsFor }) =>
++          touchEntity(get().tasks.byId[taskId], { waitsFor })
++        );
++        set((state) => ({ tasks: upsertMany(removeById(state.tasks, id), unlinked) }));
+         analytics.track(AnalyticsEvents.TASK_DELETED, { taskId: id });
+       },
+ 
++      // --- Dependencies (slice C2) --------------------------------------------
++      /**
++       * Make `taskId` wait for `prerequisiteId`. Returns `{ ok: true }`, or
++       * `{ ok: false, error }` when the link is refused (a loop, a repeat, too many).
++       */
++      addPrerequisite(taskId, prerequisiteId) {
++        const error = dependencyError(taskId, prerequisiteId, denormalise(get().tasks));
++        if (error) return { ok: false, error };
++        const task = get().tasks.byId[taskId];
++        const updated = touchEntity(task, { waitsFor: [...(task.waitsFor ?? []), prerequisiteId] });
++        set((state) => ({ tasks: upsert(state.tasks, updated) }));
++        analytics.track(AnalyticsEvents.TASK_DEPENDENCY_ADDED, { taskId });
++        return { ok: true };
++      },
++
++      removePrerequisite(taskId, prerequisiteId) {
++        const task = get().tasks.byId[taskId];
++        if (!task || !(task.waitsFor ?? []).includes(prerequisiteId)) return false;
++        const updated = touchEntity(task, { waitsFor: task.waitsFor.filter((id) => id !== prerequisiteId) });
++        set((state) => ({ tasks: upsert(state.tasks, updated) }));
++        return true;
++      },
++
+       // --- Categories -------------------------------------------------------
+       addCategory(input) {
+         const category = createTaskCategory(input);

@@ -1,0 +1,15 @@
+{
+  "fail_to_pass": [
+    "profile patches collapse into one write",
+    "a saved verse is queued once, and an unsave removes that save",
+    "replay stops at the first failure and keeps order",
+    "server wins on hydrate, and a pending save is not dropped or duplicated",
+    "a pending profile field wins, and an empty server name does not erase a local name",
+    "pending reflections stay in front of the server list"
+  ],
+  "pass_to_pass": [],
+  "selected_test_files_to_run": [
+    "src/services/offlineQueue.test.js"
+  ],
+  "repo_language": "js"
+}

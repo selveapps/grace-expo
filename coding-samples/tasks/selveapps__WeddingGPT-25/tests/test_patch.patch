@@ -1,0 +1,339 @@
+diff --git a/src/features/planning/__tests__/TaskDependencies.test.jsx b/src/features/planning/__tests__/TaskDependencies.test.jsx
+new file mode 100644
+index 0000000..16dd828
+--- /dev/null
++++ b/src/features/planning/__tests__/TaskDependencies.test.jsx
+@@ -0,0 +1,98 @@
++import React from 'react';
++
++import { usePlanningStore } from '@/store';
++import { TaskStatus } from '@/models';
++import { act, press, pressables, renderWithProviders, shownTexts } from '@/test/render';
++
++import { TaskDependencies } from '../TaskDependencies';
++import { TaskRow } from '../TaskRow';
++
++const mockRouter = { push: jest.fn(), replace: jest.fn(), back: jest.fn() };
++jest.mock('expo-router', () => ({ useRouter: () => mockRouter }));
++
++const store = () => usePlanningStore.getState();
++const get = (id) => store().tasks.byId[id];
++
++/** Re-reads the task from the store and, like the detail screen, renders nothing once it is gone. */
++function Section({ id }) {
++  const task = usePlanningStore((state) => state.tasks.byId[id]);
++  return task ? <TaskDependencies task={task} /> : null;
++}
++
++let list;
++let venue;
++let invites;
++beforeEach(() => {
++  jest.clearAllMocks();
++  store().reset();
++  list = store().addTask({ title: 'Build the full guest list' });
++  venue = store().addTask({ title: 'Book the ceremony venue' });
++  invites = store().addTask({ title: 'Send the invitations' });
++});
++
++describe('TaskDependencies', () => {
++  it('adds a task to wait for from the sheet', async () => {
++    const tree = await renderWithProviders(<Section id={invites.id} />);
++    await press(tree, 'Wait for another task');
++    await press(tree, 'Build the full guest list');
++    expect(get(invites.id).waitsFor).toEqual([list.id]);
++    expect(shownTexts(tree)).toContain(
++      'Waiting for 1 task. It stays off your daily list until that is done, but you can still tick it off.'
++    );
++  });
++
++  it('never offers a task that would close a loop, or the task itself', async () => {
++    store().addPrerequisite(invites.id, list.id);
++    const tree = await renderWithProviders(<Section id={list.id} />);
++    await press(tree, 'Wait for another task');
++    // Only the venue is on offer: the invitations already wait for the list.
++    expect(pressables(tree, 'Book the ceremony venue')).toHaveLength(1);
++    expect(pressables(tree, 'Send the invitations')).toHaveLength(1); // the "Waiting for this" row
++    expect(pressables(tree, 'Build the full guest list')).toHaveLength(0);
++  });
++
++  it('searches the tasks on offer', async () => {
++    const tree = await renderWithProviders(<Section id={invites.id} />);
++    await press(tree, 'Wait for another task');
++    const search = tree.root.find((n) => n.props.label === 'Search tasks' && n.props.onChangeText);
++    await act(async () => search.props.onChangeText('venue'));
++    expect(pressables(tree, 'Book the ceremony venue')).toHaveLength(1);
++    expect(pressables(tree, 'Build the full guest list')).toHaveLength(0);
++  });
++
++  it('shows done prerequisites as done and stops waiting on request', async () => {
++    store().addPrerequisite(invites.id, list.id);
++    store().addPrerequisite(invites.id, venue.id);
++    store().toggleTask(list.id);
++    const tree = await renderWithProviders(<Section id={invites.id} />);
++    expect(shownTexts(tree)).toEqual(expect.arrayContaining(['Done', 'To do']));
++    expect(shownTexts(tree).some((t) => t.startsWith('Waiting for 1 task.'))).toBe(true);
++
++    await press(tree, 'Stop waiting for Book the ceremony venue');
++    expect(get(invites.id).waitsFor).toEqual([list.id]);
++    expect(shownTexts(tree).some((t) => t.startsWith('Waiting for'))).toBe(false);
++  });
++
++  it('lists what waits for this task and opens it', async () => {
++    store().addPrerequisite(invites.id, list.id);
++    const tree = await renderWithProviders(<Section id={list.id} />);
++    expect(shownTexts(tree)).toContain('Waiting for this');
++    await press(tree, 'Send the invitations');
++    expect(mockRouter.push).toHaveBeenCalledWith(`/planning/task/${invites.id}`);
++  });
++});
++
++describe('TaskRow', () => {
++  it('says how many tasks it waits for, until it is done', async () => {
++    const tree = await renderWithProviders(<TaskRow task={invites} waitingFor={2} />);
++    expect(shownTexts(tree)).toContain('Waits for 2');
++
++    const done = await renderWithProviders(
++      <TaskRow task={{ ...invites, status: TaskStatus.DONE }} waitingFor={2} />
++    );
++    expect(shownTexts(done)).not.toContain('Waits for 2');
++
++    const free = await renderWithProviders(<TaskRow task={invites} />);
++    expect(shownTexts(free).join(' ')).not.toMatch(/Waits for|^0$/);
++  });
++});
+diff --git a/src/models/__tests__/dependencies.test.js b/src/models/__tests__/dependencies.test.js
+new file mode 100644
+index 0000000..ec86957
+--- /dev/null
++++ b/src/models/__tests__/dependencies.test.js
+@@ -0,0 +1,172 @@
++import {
++  CHECKLIST_TEMPLATE,
++  DEPENDENCY_LIMITS,
++  TEMPLATE_DEPENDENCIES,
++  TaskStatus,
++  createTask,
++  createWedding,
++  dependencyError,
++  dependentsOf,
++  generatePersonalisedPlan,
++  isTaskWaiting,
++  linkTemplateDependencies,
++  openPrerequisites,
++  pickDailyTasks,
++  planDailyChecklists,
++  prerequisitesOf,
++  pruneDependencies,
++  selectNextBestAction,
++} from '@/models';
++
++const task = (id, fields = {}) => ({ ...createTask({ title: id, ...fields }), id });
++
++describe('waiting', () => {
++  const list = task('list', { status: TaskStatus.DONE });
++  const venue = task('venue');
++  const skipped = task('skipped', { status: TaskStatus.SKIPPED });
++  const invites = task('invites', { waitsFor: ['list', 'venue', 'skipped', 'deleted'] });
++  const tasks = [list, venue, skipped, invites];
++
++  it('lists the prerequisites that still exist', () => {
++    expect(prerequisitesOf(invites, tasks).map((t) => t.id)).toEqual(['list', 'venue', 'skipped']);
++  });
++
++  it('is blocked only by prerequisites still to do', () => {
++    expect(openPrerequisites(invites, tasks).map((t) => t.id)).toEqual(['venue']);
++    expect(isTaskWaiting(invites, tasks)).toBe(true);
++    expect(isTaskWaiting(invites, tasks, new Set(['venue']))).toBe(false);
++    expect(isTaskWaiting(venue, tasks)).toBe(false);
++  });
++
++  it('a finished task is never waiting, whatever it waited for', () => {
++    expect(isTaskWaiting({ ...invites, status: TaskStatus.DONE }, tasks)).toBe(false);
++  });
++
++  it('accepts a Map as well as a list', () => {
++    const byId = new Map(tasks.map((t) => [t.id, t]));
++    expect(isTaskWaiting(invites, byId)).toBe(true);
++    expect(dependentsOf('venue', byId).map((t) => t.id)).toEqual(['invites']);
++  });
++});
++
++describe('dependencyError', () => {
++  const a = task('a');
++  const b = task('b', { waitsFor: ['a'] });
++  const c = task('c', { waitsFor: ['b'] });
++  const tasks = [a, b, c];
++
++  it('allows a new link', () => {
++    expect(dependencyError('c', 'a', tasks)).toBeNull();
++  });
++
++  it('refuses itself, repeats and missing tasks', () => {
++    expect(dependencyError('a', 'a', tasks)).toMatch(/itself/);
++    expect(dependencyError('b', 'a', tasks)).toMatch(/already waits/);
++    expect(dependencyError('a', 'gone', tasks)).toMatch(/no longer exists/);
++    expect(dependencyError('gone', 'a', tasks)).toMatch(/no longer exists/);
++  });
++
++  it('refuses a loop, direct or through other tasks', () => {
++    expect(dependencyError('a', 'b', tasks)).toMatch(/waits for this one/);
++    expect(dependencyError('a', 'c', tasks)).toMatch(/waits for this one/);
++  });
++
++  it('copes with a loop that arrived through sync', () => {
++    const x = task('x', { waitsFor: ['y'] });
++    const y = task('y', { waitsFor: ['x'] });
++    const z = task('z');
++    expect(dependencyError('z', 'x', [x, y, z])).toBeNull();
++    expect(dependencyError('x', 'z', [x, y, z])).toBeNull();
++    expect(isTaskWaiting(x, [x, y])).toBe(true);
++  });
++
++  it(`stops at ${DEPENDENCY_LIMITS.perTask} prerequisites`, () => {
++    const many = Array.from({ length: DEPENDENCY_LIMITS.perTask + 1 }, (_, i) => task(`p${i}`));
++    const busy = task('busy', { waitsFor: many.slice(0, DEPENDENCY_LIMITS.perTask).map((t) => t.id) });
++    expect(dependencyError('busy', many.at(-1).id, [...many, busy])).toMatch(/up to/);
++  });
++});
++
++describe('pruneDependencies', () => {
++  it('drops links to deleted tasks and reports only what changed', () => {
++    const tasks = [task('a', { waitsFor: ['gone', 'b'] }), task('b'), task('c', { waitsFor: ['b'] })];
++    expect(pruneDependencies(tasks, ['gone'])).toEqual([{ id: 'a', waitsFor: ['b'] }]);
++    expect(pruneDependencies(tasks, [])).toEqual([]);
++  });
++});
++
++describe('the plan template', () => {
++  const titles = new Map(CHECKLIST_TEMPLATE.map((entry) => [entry.title, entry]));
++
++  it('links only tasks that exist in the template', () => {
++    for (const [title, prerequisites] of Object.entries(TEMPLATE_DEPENDENCIES)) {
++      expect(titles.has(title)).toBe(true);
++      for (const prerequisite of prerequisites) expect(titles.has(prerequisite)).toBe(true);
++    }
++  });
++
++  it('never asks a task to wait for something normally done later', () => {
++    for (const [title, prerequisites] of Object.entries(TEMPLATE_DEPENDENCIES)) {
++      for (const prerequisite of prerequisites) {
++        expect(titles.get(prerequisite).monthsBefore).toBeGreaterThanOrEqual(titles.get(title).monthsBefore);
++      }
++    }
++  });
++
++  it('has no loops', () => {
++    const tasks = linkTemplateDependencies(CHECKLIST_TEMPLATE.map((entry) => task(entry.title)));
++    const byId = new Map(tasks.map((t) => [t.id, t]));
++    const reachesItself = (start) => {
++      const seen = new Set();
++      const stack = [...start.waitsFor];
++      while (stack.length) {
++        const id = stack.pop();
++        if (id === start.id) return true;
++        if (seen.has(id)) continue;
++        seen.add(id);
++        stack.push(...(byId.get(id)?.waitsFor ?? []));
++      }
++      return false;
++    };
++    expect(tasks.filter(reachesItself).map((t) => t.title)).toEqual([]);
++    expect(tasks.filter((t) => t.waitsFor.length).length).toBe(Object.keys(TEMPLATE_DEPENDENCIES).length);
++  });
++
++  it('links a generated plan, and leaves out tasks a short plan dropped', () => {
++    const wedding = createWedding({ date: '2027-10-01', dateType: 'exact' });
++    const { tasks } = generatePersonalisedPlan({ wedding, from: new Date(2026, 9, 1) });
++    const byTitle = new Map(tasks.map((t) => [t.title, t]));
++    expect(byTitle.get('Send the invitations').waitsFor).toEqual([
++      byTitle.get('Build the full guest list').id,
++      byTitle.get('Book the ceremony venue').id,
++    ]);
++
++    const linked = linkTemplateDependencies([
++      task('Book the ceremony venue'),
++      task('Choose your date or window'),
++    ]);
++    expect(linked[0].waitsFor).toEqual(['Choose your date or window']);
++  });
++});
++
++describe('daily checklist and next action', () => {
++  const from = new Date(2027, 0, 10);
++  const list = task('list', { dueDate: '2027-01-20' });
++  const invites = task('invites', { dueDate: '2027-01-05', waitsFor: ['list'] });
++  const rings = task('rings', { dueDate: '2027-03-01' });
++
++  it('leaves out tasks still waiting, even overdue ones', () => {
++    expect(pickDailyTasks([list, invites, rings], { from }).map((t) => t.id)).toEqual(['list', 'rings']);
++    expect(selectNextBestAction([list, invites, rings], from).id).toBe('list');
++  });
++
++  it('brings a task in once what it waits for is done', () => {
++    const done = { ...list, status: TaskStatus.DONE };
++    expect(pickDailyTasks([done, invites, rings], { from }).map((t) => t.id)).toEqual(['invites', 'rings']);
++  });
++
++  it('plans the waiting task for the day after its prerequisite', () => {
++    const days = planDailyChecklists([list, invites], { from, days: 3 });
++    expect(days.map((day) => day.tasks.map((t) => t.id))).toEqual([['list'], ['invites']]);
++  });
++});
+diff --git a/src/store/__tests__/planningDependencies.test.js b/src/store/__tests__/planningDependencies.test.js
+new file mode 100644
+index 0000000..1d47f5b
+--- /dev/null
++++ b/src/store/__tests__/planningDependencies.test.js
+@@ -0,0 +1,51 @@
++import { usePlanningStore } from '@/store';
++
++const store = () => usePlanningStore.getState();
++const get = (id) => store().tasks.byId[id];
++
++let list;
++let invites;
++let rsvps;
++beforeEach(() => {
++  store().reset();
++  list = store().addTask({ title: 'Build the full guest list' });
++  invites = store().addTask({ title: 'Send the invitations' });
++  rsvps = store().addTask({ title: 'Chase outstanding RSVPs' });
++});
++
++describe('planningStore dependencies', () => {
++  it('adds and removes a prerequisite', () => {
++    expect(store().addPrerequisite(invites.id, list.id)).toEqual({ ok: true });
++    expect(get(invites.id).waitsFor).toEqual([list.id]);
++    expect(store().removePrerequisite(invites.id, list.id)).toBe(true);
++    expect(get(invites.id).waitsFor).toEqual([]);
++    expect(store().removePrerequisite(invites.id, list.id)).toBe(false);
++  });
++
++  it('refuses a loop and leaves the tasks as they were', () => {
++    store().addPrerequisite(invites.id, list.id);
++    store().addPrerequisite(rsvps.id, invites.id);
++    const before = get(list.id);
++
++    const result = store().addPrerequisite(list.id, rsvps.id);
++    expect(result.ok).toBe(false);
++    expect(result.error).toMatch(/waits for this one/);
++    expect(get(list.id)).toBe(before);
++  });
++
++  it('deleting a task frees the tasks that waited for it', () => {
++    store().addPrerequisite(invites.id, list.id);
++    store().addPrerequisite(rsvps.id, list.id);
++    store().addPrerequisite(rsvps.id, invites.id);
++
++    store().deleteTask(list.id);
++    expect(get(list.id)).toBeUndefined();
++    expect(get(invites.id).waitsFor).toEqual([]);
++    expect(get(rsvps.id).waitsFor).toEqual([invites.id]);
++  });
++
++  it('a task can still be ticked off while it waits', () => {
++    store().addPrerequisite(invites.id, list.id);
++    expect(store().toggleTask(invites.id).status).toBe('done');
++  });
++});

@@ -1,0 +1,14 @@
+{
+  "fail_to_pass": [
+    "a failed /today shows a retry and a real passage, and Reading still opens",
+    "an empty /today payload is the same visible failure, and retry can recover",
+    "a request that never returns still surfaces retry on a short frame"
+  ],
+  "pass_to_pass": [
+    "a successful /today does not show the failure banner"
+  ],
+  "selected_test_files_to_run": [
+    "e2e/today-load-failure.spec.js"
+  ],
+  "repo_language": "js"
+}

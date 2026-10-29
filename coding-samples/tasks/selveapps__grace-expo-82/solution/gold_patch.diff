@@ -1,0 +1,173 @@
+diff --git a/web/app/(app)/you/page.tsx b/web/app/(app)/you/page.tsx
+index 75de216..324d69d 100644
+--- a/web/app/(app)/you/page.tsx
++++ b/web/app/(app)/you/page.tsx
+@@ -1,6 +1,8 @@
+ import Link from 'next/link';
+ import { SignOutButton } from '@/components/Pieces';
++import { chapterHref } from '@/lib/books';
+ import { grace } from '@/lib/grace';
++import { latestReading, progressRows, readingLabel, type ProgressRow } from '@/lib/library';
+ import { PRIVATE_PAGE } from '@/lib/site';
+ 
+ export const metadata = PRIVATE_PAGE;
+@@ -20,6 +22,7 @@ type Me = {
+ 
+ const LINKS = [
+   { href: '/you/saved', label: 'Saved verses' },
++  { href: '/you/tea', label: 'Saved tea' },
+   { href: '/you/reflections', label: 'Reflections' },
+   { href: '/you/reminders', label: 'Reminders' },
+   { href: '/you/support', label: 'Help & support' },
+@@ -60,12 +63,26 @@ export default async function YouPage() {
+ 
+   const profile = me.profile;
+   const carrying = (profile?.carrying ?? []).map((item) => item.trim()).filter(Boolean);
++  let latest: ProgressRow | null = null;
++  try {
++    latest = latestReading(progressRows(await grace<unknown>('/progress', { cache: 'no-store' })));
++  } catch {
++    latest = null;
++  }
+ 
+   return (
+     <main className="page">
+       <p className="kicker">You</p>
+       <h1>{textOr(me.user?.name, 'friend')}</h1>
+       <p className="lede">{profile?.subscribed ? 'Subscribed' : 'Not subscribed'}</p>
++      <section className="card">
++        <p className="meta">Continue reading</p>
++        {latest ? (
++          <p><Link href={chapterHref(latest.book, latest.chapter)}>{readingLabel(latest)}</Link></p>
++        ) : (
++          <p><Link href="/reading">Open the library</Link></p>
++        )}
++      </section>
+       <section className="card">
+         <p><span className="meta">Carrying</span><br />{carrying.length ? carrying.join(', ') : 'Nothing noted yet'}</p>
+         <p><span className="meta">Gentleness</span><br />{textOr(profile?.gentleness, 'Not set')}</p>
+diff --git a/web/app/(app)/you/tea/page.tsx b/web/app/(app)/you/tea/page.tsx
+new file mode 100644
+index 0000000..0375328
+--- /dev/null
++++ b/web/app/(app)/you/tea/page.tsx
+@@ -0,0 +1,51 @@
++import Link from 'next/link';
++import { grace, publicGrace } from '@/lib/grace';
++import { savedTeaList, savedTeaRows, type TeaCard } from '@/lib/library';
++import { PRIVATE_PAGE } from '@/lib/site';
++
++export const metadata = { ...PRIVATE_PAGE, title: 'Saved tea' };
++
++export const dynamic = 'force-dynamic';
++
++export default async function SavedTeaPage() {
++  let saved;
++  try {
++    saved = savedTeaRows(await grace<unknown>('/tea/saved', { cache: 'no-store' }));
++  } catch {
++    return (
++      <main className="page">
++        <p>We could not open this page.</p>
++        <p><Link href="/">Home</Link></p>
++      </main>
++    );
++  }
++
++  let catalog: TeaCard[] = [];
++  try {
++    const body = await publicGrace<{ tea?: TeaCard[] }>('/tea', 300);
++    catalog = body.tea ?? [];
++  } catch {
++    catalog = [];
++  }
++
++  const items = savedTeaList(catalog, saved);
++
++  return (
++    <main className="page">
++      <p className="kicker"><Link href="/you">You</Link></p>
++      <h1>Saved tea</h1>
++      {items.length === 0 ? (
++        <p className="lede">Nothing saved yet. <Link href="/tea">Browse Tea</Link>.</p>
++      ) : (
++        <div className="list">
++          {items.map((item) => (
++            <Link key={item.id} href={`/tea/${item.id}`} className="item">
++              <h2>{item.cardTitle}</h2>
++              {item.ref ? <p className="meta">{item.ref}</p> : null}
++            </Link>
++          ))}
++        </div>
++      )}
++    </main>
++  );
++}
+diff --git a/web/lib/library.ts b/web/lib/library.ts
+new file mode 100644
+index 0000000..824cfe6
+--- /dev/null
++++ b/web/lib/library.ts
+@@ -0,0 +1,62 @@
++export type ProgressRow = { book: string; chapter: number; position?: number };
++
++export type TeaCard = { id: string; cardTitle: string; ref?: string };
++
++export type SavedTeaRow = { teaId: string };
++
++export function latestReading(rows: ProgressRow[] | null | undefined): ProgressRow | null {
++  const row = rows?.[0];
++  if (!row || typeof row.book !== 'string' || !row.book.trim()) return null;
++  if (typeof row.chapter !== 'number' || !Number.isInteger(row.chapter) || row.chapter < 1) return null;
++  return { book: row.book.trim(), chapter: row.chapter, position: row.position };
++}
++
++export function readingLabel(row: ProgressRow): string {
++  const name = row.book === 'Psalms' ? 'Psalm' : row.book;
++  return `${name} ${row.chapter}`;
++}
++
++export function progressRows(body: unknown): ProgressRow[] {
++  const list = Array.isArray(body)
++    ? body
++    : body && typeof body === 'object' && Array.isArray((body as { progress?: unknown }).progress)
++      ? (body as { progress: unknown[] }).progress
++      : [];
++  return list.flatMap((item) => {
++    if (!item || typeof item !== 'object') return [];
++    const row = item as ProgressRow;
++    const latest = latestReading([row]);
++    return latest ? [latest] : [];
++  });
++}
++
++export function savedTeaRows(body: unknown): SavedTeaRow[] {
++  const list = Array.isArray(body)
++    ? body
++    : body && typeof body === 'object' && Array.isArray((body as { saved?: unknown }).saved)
++      ? (body as { saved: unknown[] }).saved
++      : [];
++  return list.flatMap((item) => {
++    if (!item || typeof item !== 'object') return [];
++    const teaId = (item as { teaId?: unknown }).teaId;
++    if (typeof teaId !== 'string' || !teaId.trim()) return [];
++    return [{ teaId }];
++  });
++}
++
++export function savedTeaList(
++  catalog: TeaCard[] | null | undefined,
++  saved: SavedTeaRow[] | null | undefined,
++): TeaCard[] {
++  const byId = new Map((catalog ?? []).filter((card) => card?.id).map((card) => [card.id, card]));
++  const seen = new Set<string>();
++  const out: TeaCard[] = [];
++  for (const row of saved ?? []) {
++    if (!row?.teaId || seen.has(row.teaId)) continue;
++    const card = byId.get(row.teaId);
++    if (!card?.cardTitle) continue;
++    seen.add(row.teaId);
++    out.push({ id: card.id, cardTitle: card.cardTitle, ref: card.ref });
++  }
++  return out;
++}

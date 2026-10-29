@@ -1,0 +1,115 @@
+{
+  "format": "SWE-bench Pro v2 task directory, plus a JSONL row with the SWE-bench columns",
+  "tasks": [
+    {
+      "id": "selveapps__grace-expo-83",
+      "fail_to_pass": 6,
+      "install": "none"
+    },
+    {
+      "id": "selveapps__grace-expo-84",
+      "fail_to_pass": 2,
+      "install": "web"
+    },
+    {
+      "id": "selveapps__grace-expo-82",
+      "fail_to_pass": 3,
+      "install": "web"
+    },
+    {
+      "id": "selveapps__WeddingGPT-25",
+      "fail_to_pass": 26,
+      "install": "root"
+    },
+    {
+      "id": "selveapps__WeddingGPT-32",
+      "fail_to_pass": 12,
+      "install": "none"
+    },
+    {
+      "id": "selveapps__WeddingGPT-20",
+      "fail_to_pass": 25,
+      "install": "none"
+    },
+    {
+      "id": "selveapps__grace-expo-47",
+      "fail_to_pass": 4,
+      "install": "playwright"
+    }
+  ],
+  "holdouts": [
+    "selveapps__WeddingGPT-SEL-82",
+    "selveapps__WeddingGPT-SEL-85"
+  ],
+  "pass_to_pass": "grace-expo-47 records the one test that passed before the fix. The other tasks still have an empty list.",
+  "images_built": ["local/coding-samples:selveapps__WeddingGPT-25"],
+  "image_reason": "The WeddingGPT-25 image was built and graded on this Mac. The Playwright task was graded on the host because its webServer starts Postgres with docker compose, which the image does not contain.",
+  "secret_needles": [],
+  "grades": [
+    {
+      "id": "selveapps__grace-expo-83",
+      "graded": true,
+      "empty_patch_exit": 1,
+      "gold_patch_exit": 0,
+      "gold_tail": "ofile field wins, and an empty server name does not erase a local name\n  ---\n  duration_ms: 1.632501\n  type: 'test'\n  ...\n# Subtest: pending reflections stay in front of the server list\nok 6 - pending reflections stay in front of the server list\n  ---\n  duration_ms: 0.354839\n  type: 'test'\n  ...\n1..6\n# tests 6\n# suites 0\n# pass 6\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 66.493165\n",
+      "empty_failed": true,
+      "gold_passed": true
+    },
+    {
+      "id": "selveapps__grace-expo-84",
+      "graded": true,
+      "reason": "vitest image not executed here; Dockerfile is in the task",
+      "empty_patch_exit": 1,
+      "gold_patch_exit": 0,
+      "empty_failed": true,
+      "gold_passed": true,
+      "note": "vitest 2 passed after the gold patch; the test file failed to load before it"
+    },
+    {
+      "id": "selveapps__grace-expo-82",
+      "graded": true,
+      "reason": "vitest image not executed here; Dockerfile is in the task",
+      "empty_patch_exit": 1,
+      "gold_patch_exit": 0,
+      "empty_failed": true,
+      "gold_passed": true,
+      "note": "vitest 3 passed after the gold patch; the test file failed to load before it"
+    },
+    {
+      "id": "selveapps__WeddingGPT-25",
+      "graded": true,
+      "empty_patch_exit": 1,
+      "gold_patch_exit": 0,
+      "empty_failed": true,
+      "gold_passed": true,
+      "note": "Image local/coding-samples:selveapps__WeddingGPT-25. Empty patch: 3 suites failed. Gold patch: 27 Jest tests passed, and all 26 named fail_to_pass tests passed."
+    },
+    {
+      "id": "selveapps__WeddingGPT-32",
+      "graded": true,
+      "empty_patch_exit": 1,
+      "gold_patch_exit": 0,
+      "gold_tail": "      ---\n          duration_ms: 599.58365\n          type: 'test'\n          ...\n        1..9\n    ok 2 - deletion\n      ---\n      duration_ms: 4018.979892\n      type: 'suite'\n      ...\n    1..2\nok 1 - account export and deletion (A7, T13)\n  ---\n  duration_ms: 4940.950623\n  type: 'suite'\n  ...\n1..1\n# tests 12\n# suites 3\n# pass 12\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 5006.660575\n",
+      "empty_failed": true,
+      "gold_passed": true
+    },
+    {
+      "id": "selveapps__WeddingGPT-20",
+      "graded": true,
+      "empty_patch_exit": 1,
+      "gold_patch_exit": 0,
+      "gold_tail": "app token, the API does not\n          ---\n          duration_ms: 2.755754\n          type: 'test'\n          ...\n        1..2\n    ok 5 - boundaries\n      ---\n      duration_ms: 4.251425\n      type: 'suite'\n      ...\n    1..5\nok 3 - RSVP site\n  ---\n  duration_ms: 175.852781\n  type: 'suite'\n  ...\n1..3\n# tests 25\n# suites 8\n# pass 25\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 242.142465\n",
+      "empty_failed": true,
+      "gold_passed": true
+    },
+    {
+      "id": "selveapps__grace-expo-47",
+      "graded": true,
+      "empty_patch_exit": 1,
+      "gold_patch_exit": 0,
+      "empty_failed": true,
+      "gold_passed": true,
+      "note": "Host grade at 30fcc50. Empty patch: 3 failed, 1 passed (successful /today). Gold patch: 4 passed. That passing test is pass_to_pass."
+    }
+  ]
+}

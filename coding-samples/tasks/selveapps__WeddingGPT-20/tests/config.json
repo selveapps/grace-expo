@@ -1,0 +1,34 @@
+{
+  "fail_to_pass": [
+    "escapes every interpolated value (W3)",
+    "nests safe fragments and lists, and skips empty values",
+    "validates settings",
+    "reads codes the way people type them",
+    "closes replies after the deadline day",
+    "saves settings and refuses a taken slug",
+    "is members only",
+    "returns a link on the public domain and a readable code, once",
+    "rejects bad target lists",
+    "reissuing or revoking turns the old link off",
+    "shows only the invitation\u2019s own guests, by first name (W2)",
+    "escapes names that look like markup (W3)",
+    "sends protective headers on every page (W6, W7)",
+    "records a reply without touching the guest records (W10), and accepts changes",
+    "rejects meals not on the list",
+    "stops accepting replies after the deadline",
+    "turns links off 30 days after the deadline",
+    "refuses made-up tokens",
+    "a code works only on its own wedding\u2019s page",
+    "a guest can reply through the code page",
+    "slows code guessing per address",
+    "slows code guessing per wedding, across addresses",
+    "an unknown wedding page is a 404",
+    "devices cannot write replies through sync",
+    "guest pages work without the app token, the API does not"
+  ],
+  "pass_to_pass": [],
+  "selected_test_files_to_run": [
+    "server/auth/rsvp/rsvp.test.mjs"
+  ],
+  "repo_language": "js"
+}

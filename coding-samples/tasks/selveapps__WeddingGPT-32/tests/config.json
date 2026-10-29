@@ -1,0 +1,21 @@
+{
+  "fail_to_pass": [
+    "needs a session",
+    "returns the account and every wedding it belongs to, with records",
+    "holds nothing secret and nothing from weddings they are not in",
+    "needs a session and the password, and refuses anything else",
+    "only ever deletes the caller: another person\u2019s password does nothing",
+    "hands a shared wedding to the partner and deletes a solo one with everything in it",
+    "leaves nothing anywhere that points to them (T13)",
+    "ends every session and frees the email",
+    "stops the invites they sent from working",
+    "a partner leaving deletes only their part",
+    "limits password guesses per account, even from a new address each time",
+    "is rate limited, so a stolen session cannot guess the password"
+  ],
+  "pass_to_pass": [],
+  "selected_test_files_to_run": [
+    "server/auth/account.test.mjs"
+  ],
+  "repo_language": "js"
+}

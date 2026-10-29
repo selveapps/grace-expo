@@ -1,0 +1,349 @@
+diff --git a/package.json b/package.json
+index 8789ef6..39ef6b2 100644
+--- a/package.json
++++ b/package.json
+@@ -10,6 +10,7 @@
+     "android": "expo start --android",
+     "ios": "expo start --ios",
+     "web": "expo start --web",
++    "test:offline": "node --test src/services/offlineQueue.test.js",
+     "e2e": "playwright test",
+     "e2e:headed": "playwright test --headed",
+     "e2e:install": "playwright install chromium",
+diff --git a/src/services/ReadingService.js b/src/services/ReadingService.js
+index 7ac3478..239ea6f 100644
+--- a/src/services/ReadingService.js
++++ b/src/services/ReadingService.js
+@@ -2,6 +2,7 @@
+ import { BOOKS, BOOK_BY_NAME, BOOK_INTROS, chapterCount } from '../data/bookMeta';
+ import { getChapter as fetchChapter, getPassage, searchScripture } from '../api/bible';
+ import { api } from '../api/client';
++import { acknowledgeVerseWrite, enqueueWrite } from './offlineSync';
+ import { StorageService, KEYS } from './StorageService';
+ 
+ export const ReadingService = {
+@@ -53,7 +54,10 @@ export const ReadingService = {
+   async saveVerse(v) {
+     try {
+       await api.post('/saved', { ref: v.ref, text: v.text });
+-    } catch { /* offline — local cache updated by profile */ }
++      await acknowledgeVerseWrite(v.ref);
++    } catch {
++      await enqueueWrite({ kind: 'saved', body: { ref: v.ref, text: v.text } });
++    }
+     const list = await StorageService.get(KEYS.savedVerses, []);
+     if (list.some((x) => x.ref === v.ref)) return list;
+     const next = [v, ...list];
+@@ -64,7 +68,10 @@ export const ReadingService = {
+   async unsaveVerse(ref) {
+     try {
+       await api.delete(`/saved/${encodeURIComponent(ref)}`);
+-    } catch { /* offline */ }
++      await acknowledgeVerseWrite(ref);
++    } catch {
++      await enqueueWrite({ kind: 'unsave', body: { ref } });
++    }
+     const list = await StorageService.get(KEYS.savedVerses, []);
+     const next = list.filter((x) => x.ref !== ref);
+     await StorageService.set(KEYS.savedVerses, next);
+diff --git a/src/services/StorageService.js b/src/services/StorageService.js
+index 0f8ad36..161c0ef 100644
+--- a/src/services/StorageService.js
++++ b/src/services/StorageService.js
+@@ -45,4 +45,5 @@ export const KEYS = {
+   auth: 'auth',
+   session: 'session.v1',
+   deviceId: 'deviceId',
++  writeQueue: 'writeQueue',
+ };
+diff --git a/src/services/offlineQueue.js b/src/services/offlineQueue.js
+new file mode 100644
+index 0000000..00c0a69
+--- /dev/null
++++ b/src/services/offlineQueue.js
+@@ -0,0 +1,160 @@
++// Pure offline write queue. Persistence and HTTP live in offlineSync.js.
++
++export function enqueue(queue, item) {
++  const list = Array.isArray(queue) ? queue.slice() : [];
++  const at = item?.at || Date.now();
++  if (!item?.kind) return list;
++
++  if (item.kind === 'profile') {
++    const previous = list.filter((row) => row.kind === 'profile');
++    const rest = list.filter((row) => row.kind !== 'profile');
++    const body = Object.assign({}, ...previous.map((row) => row.body), item.body || {});
++    if (!Object.keys(body).length) return rest;
++    rest.push({ id: 'profile', kind: 'profile', body, at });
++    return rest;
++  }
++
++  if (item.kind === 'saved' || item.kind === 'unsave') {
++    const ref = item.body?.ref;
++    if (!ref) return list;
++    const rest = list.filter((row) => !(
++      (row.kind === 'saved' || row.kind === 'unsave') && row.body?.ref === ref
++    ));
++    if (item.kind === 'saved') {
++      rest.push({
++        id: `saved:${ref}`,
++        kind: 'saved',
++        body: { ref, text: typeof item.body.text === 'string' ? item.body.text : '' },
++        at,
++      });
++    } else {
++      rest.push({ id: `unsave:${ref}`, kind: 'unsave', body: { ref }, at });
++    }
++    return rest;
++  }
++
++  if (item.kind === 'reflection') {
++    const body = item.body || {};
++    if (!body.word) return list;
++    list.push({
++      id: item.id || `reflection:${at}`,
++      kind: 'reflection',
++      body: { word: body.word, note: body.note || '', ref: body.ref || '' },
++      at,
++    });
++    return list;
++  }
++
++  return list;
++}
++
++export function acknowledgeProfile(queue, fields) {
++  const keys = Object.keys(fields || {});
++  if (!keys.length) return Array.isArray(queue) ? queue.slice() : [];
++  return (queue || []).flatMap((item) => {
++    if (item.kind !== 'profile') return [item];
++    const body = { ...item.body };
++    for (const key of keys) delete body[key];
++    if (!Object.keys(body).length) return [];
++    return [{ ...item, body }];
++  });
++}
++
++export function acknowledgeVerse(queue, ref) {
++  if (!ref) return Array.isArray(queue) ? queue.slice() : [];
++  return (queue || []).filter((item) => !(
++    (item.kind === 'saved' || item.kind === 'unsave') && item.body?.ref === ref
++  ));
++}
++
++export function requestFor(item) {
++  if (!item) return null;
++  if (item.kind === 'profile') return { method: 'PATCH', path: '/me', body: item.body };
++  if (item.kind === 'saved') return { method: 'POST', path: '/saved', body: item.body };
++  if (item.kind === 'unsave') return { method: 'DELETE', path: `/saved/${encodeURIComponent(item.body.ref)}` };
++  if (item.kind === 'reflection') return { method: 'POST', path: '/reflections', body: item.body };
++  return null;
++}
++
++export async function replayQueue(queue, send) {
++  const remaining = [];
++  let failed = false;
++  for (const item of queue || []) {
++    if (failed) {
++      remaining.push(item);
++      continue;
++    }
++    try {
++      await send(item);
++    } catch {
++      failed = true;
++      remaining.push(item);
++    }
++  }
++  return remaining;
++}
++
++export function hydrateSaved(server, local, queue) {
++  const pendingSaves = [];
++  const unsaved = new Set();
++  for (const item of queue || []) {
++    if (item.kind === 'unsave' && item.body?.ref) {
++      unsaved.add(item.body.ref);
++      const index = pendingSaves.findIndex((row) => row.ref === item.body.ref);
++      if (index >= 0) pendingSaves.splice(index, 1);
++    }
++    if (item.kind === 'saved' && item.body?.ref) {
++      unsaved.delete(item.body.ref);
++      const index = pendingSaves.findIndex((row) => row.ref === item.body.ref);
++      if (index >= 0) pendingSaves.splice(index, 1);
++      pendingSaves.push({ ref: item.body.ref, text: item.body.text || '' });
++    }
++  }
++  const base = Array.isArray(server) && server.length ? server : (Array.isArray(local) ? local : []);
++  const out = [];
++  const seen = new Set();
++  for (const verse of pendingSaves) {
++    if (!verse.ref || unsaved.has(verse.ref) || seen.has(verse.ref)) continue;
++    seen.add(verse.ref);
++    out.push(verse);
++  }
++  for (const verse of base) {
++    if (!verse?.ref || unsaved.has(verse.ref) || seen.has(verse.ref)) continue;
++    seen.add(verse.ref);
++    out.push(verse);
++  }
++  return out;
++}
++
++export function hydrateReflections(server, local, queue) {
++  const pending = (queue || []).filter((item) => item.kind === 'reflection').map((item) => ({
++    id: item.id,
++    word: item.body.word,
++    note: item.body.note || '',
++    ref: item.body.ref || '',
++    date: 'Today',
++  }));
++  const base = Array.isArray(server) && server.length ? server : (Array.isArray(local) ? local : []);
++  return [...pending, ...base];
++}
++
++function pendingProfile(queue) {
++  return Object.assign({}, ...(queue || []).filter((item) => item.kind === 'profile').map((item) => item.body));
++}
++
++export function hydrateName(serverName, localName, queue) {
++  const patch = pendingProfile(queue);
++  if (Object.prototype.hasOwnProperty.call(patch, 'name')) return patch.name || '';
++  const server = typeof serverName === 'string' ? serverName.trim() : '';
++  if (server) return server;
++  return typeof localName === 'string' ? localName : '';
++}
++
++export function hydrateField(serverValue, localValue, queue, key) {
++  const patch = pendingProfile(queue);
++  if (Object.prototype.hasOwnProperty.call(patch, key)) return patch[key];
++  if (Array.isArray(serverValue) && serverValue.length) return serverValue;
++  if (typeof serverValue === 'string' && serverValue.trim()) return serverValue;
++  if (typeof serverValue === 'boolean') return serverValue;
++  return localValue;
++}
+diff --git a/src/services/offlineSync.js b/src/services/offlineSync.js
+new file mode 100644
+index 0000000..44089dc
+--- /dev/null
++++ b/src/services/offlineSync.js
+@@ -0,0 +1,46 @@
++import { api } from '../api/client';
++import { StorageService, KEYS } from './StorageService';
++import { acknowledgeProfile, acknowledgeVerse, enqueue, replayQueue, requestFor } from './offlineQueue';
++
++async function readQueue() {
++  const queue = await StorageService.get(KEYS.writeQueue, []);
++  return Array.isArray(queue) ? queue : [];
++}
++
++async function writeQueue(queue) {
++  await StorageService.set(KEYS.writeQueue, queue);
++}
++
++export async function enqueueWrite(item) {
++  const queue = await readQueue();
++  await writeQueue(enqueue(queue, item));
++}
++
++export async function acknowledgeProfileWrite(fields) {
++  const queue = await readQueue();
++  await writeQueue(acknowledgeProfile(queue, fields));
++}
++
++export async function acknowledgeVerseWrite(ref) {
++  const queue = await readQueue();
++  await writeQueue(acknowledgeVerse(queue, ref));
++}
++
++export async function loadWriteQueue() {
++  return readQueue();
++}
++
++export async function replayOfflineQueue() {
++  const queue = await readQueue();
++  if (!queue.length) return [];
++  const remaining = await replayQueue(queue, async (item) => {
++    const req = requestFor(item);
++    if (!req) return;
++    if (req.method === 'PATCH') await api.patch(req.path, req.body);
++    else if (req.method === 'POST') await api.post(req.path, req.body);
++    else if (req.method === 'DELETE') await api.delete(req.path);
++    else throw new Error('Unsupported offline write');
++  });
++  await writeQueue(remaining);
++  return remaining;
++}
+diff --git a/src/state/profile.js b/src/state/profile.js
+index fc9de35..1d4a1f3 100644
+--- a/src/state/profile.js
++++ b/src/state/profile.js
+@@ -4,6 +4,8 @@ import { api } from '../api/client';
+ import { AuthService } from '../services/AuthService';
+ import { ReadingService } from '../services/ReadingService';
+ import { StoryService } from '../services/StoryService';
++import { acknowledgeProfileWrite, enqueueWrite, loadWriteQueue, replayOfflineQueue } from '../services/offlineSync';
++import { hydrateField, hydrateName, hydrateReflections, hydrateSaved } from '../services/offlineQueue';
+ 
+ const KEY = 'grace.profile.v1';
+ 
+@@ -65,7 +67,10 @@ export function ProfileProvider({ children, booted = true }) {
+       try {
+         await AuthService.ensureGuest();
+         await api.patch('/me', fields);
+-      } catch { /* offline — local profile kept */ }
++        await acknowledgeProfileWrite(fields);
++      } catch {
++        await enqueueWrite({ kind: 'profile', body: fields });
++      }
+     }, 400);
+   }, []);
+ 
+@@ -74,6 +79,7 @@ export function ProfileProvider({ children, booted = true }) {
+     (async () => {
+       try {
+         await AuthService.ensureGuest();
++        await replayOfflineQueue();
+         await StoryService.hydrateProgress();
+         const me = await api.get('/me');
+         const saved = await ReadingService.getSavedVerses();
+@@ -82,20 +88,21 @@ export function ProfileProvider({ children, booted = true }) {
+           const r = await api.get('/reflections');
+           reflections = (r.data || []).map(mapReflection);
+         } catch { /* offline */ }
++        const queue = await loadWriteQueue();
+ 
+         const { user, profile: p } = me.data;
+         setProfileState((prev) => {
+           const next = {
+             ...prev,
+-            name: (prev.name && prev.name.trim()) ? prev.name : (user.name || ''),
++            name: hydrateName(user?.name, prev.name, queue),
+             email: user.email ?? prev.email,
+-            carrying: p?.carrying?.length ? p.carrying : prev.carrying,
+-            gentleness: p?.gentleness ?? prev.gentleness,
+-            rhythm: p?.rhythm ?? prev.rhythm,
+-            onboarded: prev.onboarded || !!p?.onboarded,
++            carrying: hydrateField(p?.carrying, prev.carrying, queue, 'carrying'),
++            gentleness: hydrateField(p?.gentleness, prev.gentleness, queue, 'gentleness'),
++            rhythm: hydrateField(p?.rhythm, prev.rhythm, queue, 'rhythm'),
++            onboarded: hydrateField(p?.onboarded, prev.onboarded, queue, 'onboarded') || prev.onboarded,
+             subscribed: prev.subscribed || !!p?.subscribed,
+-            savedVerses: saved.length ? saved : prev.savedVerses,
+-            reflections: reflections.length ? reflections : prev.reflections,
++            savedVerses: hydrateSaved(saved, prev.savedVerses, queue),
++            reflections: hydrateReflections(reflections, prev.reflections, queue),
+           };
+           AsyncStorage.setItem(KEY, JSON.stringify(next)).catch(() => {});
+           return next;
+@@ -142,7 +149,9 @@ export function ProfileProvider({ children, booted = true }) {
+   const isSaved = useCallback((ref) => profile.savedVerses.some((x) => x.ref === ref), [profile.savedVerses]);
+ 
+   const addReflection = useCallback((r) => {
+-    api.post('/reflections', { word: r.word, note: r.note, ref: r.ref }).catch(() => {});
++    api.post('/reflections', { word: r.word, note: r.note, ref: r.ref }).catch(() => {
++      enqueueWrite({ kind: 'reflection', body: { word: r.word, note: r.note, ref: r.ref } });
++    });
+     setProfile((p) => (
+       { ...p, reflections: [{ id: Date.now(), date: 'Today', ...r }, ...p.reflections] }
+     ));
