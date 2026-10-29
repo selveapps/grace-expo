@@ -2,6 +2,7 @@
 import { BOOKS, BOOK_BY_NAME, BOOK_INTROS, chapterCount } from '../data/bookMeta';
 import { getChapter as fetchChapter, getPassage, searchScripture } from '../api/bible';
 import { api } from '../api/client';
+import { acknowledgeVerseWrite, enqueueWrite } from './offlineSync';
 import { StorageService, KEYS } from './StorageService';
 
 export const ReadingService = {
@@ -53,7 +54,10 @@ export const ReadingService = {
   async saveVerse(v) {
     try {
       await api.post('/saved', { ref: v.ref, text: v.text });
-    } catch { /* offline — local cache updated by profile */ }
+      await acknowledgeVerseWrite(v.ref);
+    } catch {
+      await enqueueWrite({ kind: 'saved', body: { ref: v.ref, text: v.text } });
+    }
     const list = await StorageService.get(KEYS.savedVerses, []);
     if (list.some((x) => x.ref === v.ref)) return list;
     const next = [v, ...list];
@@ -64,7 +68,10 @@ export const ReadingService = {
   async unsaveVerse(ref) {
     try {
       await api.delete(`/saved/${encodeURIComponent(ref)}`);
-    } catch { /* offline */ }
+      await acknowledgeVerseWrite(ref);
+    } catch {
+      await enqueueWrite({ kind: 'unsave', body: { ref } });
+    }
     const list = await StorageService.get(KEYS.savedVerses, []);
     const next = list.filter((x) => x.ref !== ref);
     await StorageService.set(KEYS.savedVerses, next);

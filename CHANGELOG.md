@@ -7,6 +7,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- Offline write queue for `PATCH /me`, `POST /saved`, `POST /reflections`, and a matching unsave (SEL-22). Replay runs before hydrate. Server lists win, and a write still in the queue is kept without a duplicate reference. Policy: `docs/OFFLINE_SYNC.md`. Unit gate: `npm run test:offline` (6). A device airplane-mode check is still open.
 - Next.js Grace web client in `web/` on the shared API. Gate: `npm test` (13), `npm run typecheck`, and `npm run build` (Next.js 15.5.28). Slices SEL-62 through SEL-71 merged in #80, #73, #78, #77, #74, #75, and #76.
 
 ### Fixed
@@ -18,7 +19,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 - **M11 IAP product IDs** aligned to live ASC Grace Plus subscriptions: `grace.yearly`, `grace.monthly` (was `grace.plus.*`).
 
 ### Planned
-- M9 offline sync queue
+- M9 device check: airplane mode, save a verse, reconnect, `GET /saved` matches once
 - M11 real OAuth + IAP
 
 ---

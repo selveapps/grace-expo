@@ -4,6 +4,8 @@ import { api } from '../api/client';
 import { AuthService } from '../services/AuthService';
 import { ReadingService } from '../services/ReadingService';
 import { StoryService } from '../services/StoryService';
+import { acknowledgeProfileWrite, enqueueWrite, loadWriteQueue, replayOfflineQueue } from '../services/offlineSync';
+import { hydrateField, hydrateName, hydrateReflections, hydrateSaved } from '../services/offlineQueue';
 
 const KEY = 'grace.profile.v1';
 
@@ -65,7 +67,10 @@ export function ProfileProvider({ children, booted = true }) {
       try {
         await AuthService.ensureGuest();
         await api.patch('/me', fields);
-      } catch { /* offline — local profile kept */ }
+        await acknowledgeProfileWrite(fields);
+      } catch {
+        await enqueueWrite({ kind: 'profile', body: fields });
+      }
     }, 400);
   }, []);
 
@@ -74,6 +79,7 @@ export function ProfileProvider({ children, booted = true }) {
     (async () => {
       try {
         await AuthService.ensureGuest();
+        await replayOfflineQueue();
         await StoryService.hydrateProgress();
         const me = await api.get('/me');
         const saved = await ReadingService.getSavedVerses();
@@ -82,20 +88,21 @@ export function ProfileProvider({ children, booted = true }) {
           const r = await api.get('/reflections');
           reflections = (r.data || []).map(mapReflection);
         } catch { /* offline */ }
+        const queue = await loadWriteQueue();
 
         const { user, profile: p } = me.data;
         setProfileState((prev) => {
           const next = {
             ...prev,
-            name: (prev.name && prev.name.trim()) ? prev.name : (user.name || ''),
+            name: hydrateName(user?.name, prev.name, queue),
             email: user.email ?? prev.email,
-            carrying: p?.carrying?.length ? p.carrying : prev.carrying,
-            gentleness: p?.gentleness ?? prev.gentleness,
-            rhythm: p?.rhythm ?? prev.rhythm,
-            onboarded: prev.onboarded || !!p?.onboarded,
+            carrying: hydrateField(p?.carrying, prev.carrying, queue, 'carrying'),
+            gentleness: hydrateField(p?.gentleness, prev.gentleness, queue, 'gentleness'),
+            rhythm: hydrateField(p?.rhythm, prev.rhythm, queue, 'rhythm'),
+            onboarded: hydrateField(p?.onboarded, prev.onboarded, queue, 'onboarded') || prev.onboarded,
             subscribed: prev.subscribed || !!p?.subscribed,
-            savedVerses: saved.length ? saved : prev.savedVerses,
-            reflections: reflections.length ? reflections : prev.reflections,
+            savedVerses: hydrateSaved(saved, prev.savedVerses, queue),
+            reflections: hydrateReflections(reflections, prev.reflections, queue),
           };
           AsyncStorage.setItem(KEY, JSON.stringify(next)).catch(() => {});
           return next;
@@ -142,7 +149,9 @@ export function ProfileProvider({ children, booted = true }) {
   const isSaved = useCallback((ref) => profile.savedVerses.some((x) => x.ref === ref), [profile.savedVerses]);
 
   const addReflection = useCallback((r) => {
-    api.post('/reflections', { word: r.word, note: r.note, ref: r.ref }).catch(() => {});
+    api.post('/reflections', { word: r.word, note: r.note, ref: r.ref }).catch(() => {
+      enqueueWrite({ kind: 'reflection', body: { word: r.word, note: r.note, ref: r.ref } });
+    });
     setProfile((p) => (
       { ...p, reflections: [{ id: Date.now(), date: 'Today', ...r }, ...p.reflections] }
     ));

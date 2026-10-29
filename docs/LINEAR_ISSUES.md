@@ -486,10 +486,10 @@ Replace client-side search stub with `GET /bible/search`.
 Queue `PATCH /me`, `POST /saved`, `POST /reflections` when offline. Replay on reconnect. Document conflict policy: server wins on hydrate.
 
 **Acceptance criteria**
-- [ ] Airplane mode: save verse locally, shows in UI
-- [ ] Reconnect: verse appears on server
-- [ ] `docs/OFFLINE_SYNC.md` documents policy
-- [ ] No duplicate saved verses on replay
+- [ ] Airplane mode: save verse locally, shows in UI (not run on a device in RUN-019)
+- [ ] Reconnect: verse appears on server (replay is unit-tested; not run on a device)
+- [x] `docs/OFFLINE_SYNC.md` documents policy
+- [x] No duplicate saved verses on replay (`npm run test:offline`)
 
 **Verify**  
 Airplane on → save verse → airplane off → `GET /saved` matches
