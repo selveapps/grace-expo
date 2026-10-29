@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { DeleteAccountButton, SignOutButton } from '@/components/Pieces';
+import { TypeSizePicker } from '@/components/TypeSizePicker';
 import { grace } from '@/lib/grace';
 import { PRIVATE_PAGE } from '@/lib/site';
 
@@ -50,6 +51,10 @@ export default async function SettingsPage() {
           <p>Onboarded: {me?.profile?.onboarded ? 'Yes' : 'No'}</p>
         </article>
       )}
+      <section className="card">
+        <h2>Type size</h2>
+        <TypeSizePicker />
+      </section>
       <p>Scripture quotations are from the King James Version (KJV), which is in the public domain.</p>
       <p className="meta">
         <a href="https://www.selveapps.xyz/grace/privacy">Privacy</a>

@@ -697,6 +697,9 @@ Linear is the tracker. These rows are the acceptance notes for the Next.js clien
 | [SEL-76](https://linear.app/selve-apps/issue/SEL-76) | Delete account | Settings confirms, then `DELETE /me`, clears cookies, and returns to `/`. |
 | [SEL-77](https://linear.app/selve-apps/issue/SEL-77) | Branded not-found | Unknown URLs show Grace plus links to scripture, stories, and Tea. No guest is created. |
 | [SEL-78](https://linear.app/selve-apps/issue/SEL-78) | Full KJV search index | Backlog. Production search stays on the seeded sample until the index is loaded. The web client does not invent verses. |
+| [SEL-79](https://linear.app/selve-apps/issue/SEL-79) | Reading type size | Settings offers S, M, L, XL. The choice stays in the browser and sizes chapter verses. It is not sent to the API. |
+| [SEL-80](https://linear.app/selve-apps/issue/SEL-80) | Continue a story | Backlog. `/you` links the newest `GET /stories/progress` row, titled from `GET /stories`. |
+| [SEL-81](https://linear.app/selve-apps/issue/SEL-81) | Publish the site | Backlog. Serve `web/` on the public origin and set `NEXT_PUBLIC_SITE_URL` to that origin. |
 
 ## GitHub sync
 

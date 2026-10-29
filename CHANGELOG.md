@@ -7,6 +7,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- Grace web reading type size on Settings (SEL-79). S, M, L, and XL stay in the browser and set the chapter verse size. Nothing is sent to the API.
 - Grace web library: saved Tea at `/you/tea` (SEL-74), continue-reading from the newest progress row (SEL-75), a two-step account delete on Settings (SEL-76), and a branded not-found page (SEL-77).
 - Grace web landing page at `/` with the daily verse, story previews, and today's Tea, plus crawlable links into scripture, stories, and Tea. Titles, Open Graph, `robots.txt`, and a sitemap of the public canon. Private routes (`/today`, `/onboarding`, `/you`) are `noindex`.
 - Next.js Grace web client in `web/` on the shared API. Gate: `npm test` (13), `npm run typecheck`, and `npm run build` (Next.js 15.5.28). Slices SEL-62 through SEL-71 merged in #80, #73, #78, #77, #74, #75, and #76.

@@ -438,3 +438,18 @@ Ran `generate:audio` with a working key, then verified rather than assumed:
 **Result:** Pass for SEL-74 through SEL-77 on this branch. Not merged.
 
 **Follow-up:** SEL-78 stays backlog. SEL-22 offline queue is a separate branch. SEL-26, SEL-27, SEL-28, and SEL-29 stay open.
+
+---
+
+### RUN-020 | 2026-10-28 18:30 PT | Reading type size
+
+**Objective:** SEL-79. Four type sizes on web Settings, kept in the browser, applied to chapter verses.
+
+**Procedure:**
+1. `web/lib/typeSize.ts` maps S 0.9, M 1, L 1.15, XL 1.3. A missing or unknown value is M.
+2. Settings renders the four chips. A beforeInteractive script sets `--verse-size` from `localStorage` key `grace.typeSize`. Chapter lines use that variable.
+3. `cd web && npm test`.
+
+**Observations:** `npm test` 20 passed (7 files). `npm run typecheck` passed. The boot script names `grace.typeSize` and the four scales. It does not call `/me` or `fetch`.
+
+**Result:** Pass. No profile field was added. Browser check is in the same session: XL sets the chapter line to 22.1px, and the network log for that click does not include grace-api.
