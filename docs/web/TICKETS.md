@@ -33,3 +33,15 @@ These are the implementation tickets for the Next.js client. Each is Done on Lin
 | [SEL-69](https://linear.app/selve-apps/issue/SEL-69) | [#75](https://github.com/selveapps/grace-expo/pull/75) | `6ed03c9` |
 | [SEL-70](https://linear.app/selve-apps/issue/SEL-70), [SEL-71](https://linear.app/selve-apps/issue/SEL-71) | [#76](https://github.com/selveapps/grace-expo/pull/76) | `6b509fc` |
 | [SEL-72](https://linear.app/selve-apps/issue/SEL-72) | [#79](https://github.com/selveapps/grace-expo/pull/79) | docs, DEC-017, RUN-016 |
+
+## Library slice
+
+These stay In Progress until the pull request is on `main`.
+
+| Issue | Route | Acceptance |
+|---|---|---|
+| [SEL-74](https://linear.app/selve-apps/issue/SEL-74) | `/you/tea` | `GET /tea/saved` joined to `GET /tea` titles. Empty state links to `/tea`. A missing session links home. |
+| [SEL-75](https://linear.app/selve-apps/issue/SEL-75) | `/you` | Newest `GET /progress` row links to that chapter. No rows links to `/reading`. |
+| [SEL-76](https://linear.app/selve-apps/issue/SEL-76) | `/you/settings` | Two-step control calls `DELETE /me`, clears the session, and returns to `/`. |
+| [SEL-77](https://linear.app/selve-apps/issue/SEL-77) | not-found | Branded page with links to scripture, stories, and Tea. It does not create a guest. |
+| [SEL-78](https://linear.app/selve-apps/issue/SEL-78) | search | Backlog. Full KJV index on production. The web client does not invent verses. |

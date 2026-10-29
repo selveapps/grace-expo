@@ -12,13 +12,14 @@ export const FEATURES = [
   { id: 'tea', path: '/tea', tickets: ['DEC-014'] },
   { id: 'tea-today', path: '/tea/today', tickets: ['DEC-014'] },
   { id: 'tea-detail', path: '/tea/[id]', tickets: ['DEC-014'] },
-  { id: 'you', path: '/you', tickets: ['SEL-14'] },
+  { id: 'you', path: '/you', tickets: ['SEL-14', 'SEL-75'] },
   { id: 'saved', path: '/you/saved', tickets: ['SEL-14'] },
+  { id: 'saved-tea', path: '/you/tea', tickets: ['SEL-74'] },
   { id: 'reflections', path: '/you/reflections', tickets: ['SEL-14'] },
   { id: 'reminders', path: '/you/reminders', tickets: ['SEL-31'] },
   { id: 'support', path: '/you/support', tickets: ['SEL-31'] },
   { id: 'subscription', path: '/you/subscription', tickets: ['SEL-16', 'SEL-23'] },
-  { id: 'settings', path: '/you/settings', tickets: ['SEL-14'] },
+  { id: 'settings', path: '/you/settings', tickets: ['SEL-14', 'SEL-76'] },
 ] as const;
 
 export function featureGaps(): string[] {

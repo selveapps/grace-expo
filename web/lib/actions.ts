@@ -38,6 +38,12 @@ export async function signOut() {
   redirect('/');
 }
 
+export async function deleteAccount() {
+  await grace('/me', { method: 'DELETE', cache: 'no-store' });
+  await clearSession();
+  redirect('/');
+}
+
 export async function saveVerse(ref: string, text: string) {
   await grace('/saved', { method: 'POST', body: JSON.stringify({ ref, text }), cache: 'no-store' });
   revalidatePath('/you/saved');
@@ -84,6 +90,7 @@ export async function rememberStory(storyId: string) {
 export async function saveTea(id: string) {
   await grace(`/tea/${id}/save`, { method: 'POST', cache: 'no-store' });
   revalidatePath('/tea');
+  revalidatePath('/you/tea');
 }
 
 export async function redeemCode(code: string): Promise<string> {

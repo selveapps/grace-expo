@@ -66,6 +66,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.02e
 .chip[aria-pressed="true"], .btn { background: var(--espresso); color: var(--ivory); border-color: var(--espresso); }
 .btn.secondary { background: transparent; color: var(--espresso); }
 .text-btn { border: 0; padding: 0; color: var(--brass-deep); }
+.text-btn.danger { color: var(--danger); }
 .banner {
   background: #f3e9d6; border-radius: 16px; padding: 12px 14px; color: var(--espresso);
 }

@@ -1,0 +1,32 @@
+import { describe, expect, it } from 'vitest';
+import { latestReading, progressRows, readingLabel, savedTeaList, savedTeaRows } from './library';
+
+describe('library', () => {
+  it('uses the newest progress row and ignores a blank one', () => {
+    expect(latestReading([
+      { book: 'John', chapter: 3, position: 16 },
+      { book: 'Psalms', chapter: 23 },
+    ])).toEqual({ book: 'John', chapter: 3, position: 16 });
+    expect(latestReading([])).toBeNull();
+    expect(latestReading([{ book: ' ', chapter: 1 }])).toBeNull();
+    expect(latestReading([{ book: 'John', chapter: 0 }])).toBeNull();
+    expect(progressRows({ progress: [{ book: 'Ruth', chapter: 1 }] })).toEqual([{ book: 'Ruth', chapter: 1 }]);
+  });
+
+  it('labels a psalm as Psalm', () => {
+    expect(readingLabel({ book: 'Psalms', chapter: 23 })).toBe('Psalm 23');
+    expect(readingLabel({ book: 'John', chapter: 1 })).toBe('John 1');
+  });
+
+  it('joins saved tea to catalog titles and drops unknown ids', () => {
+    const catalog = [
+      { id: 'ruth', cardTitle: 'Ruth stays', ref: 'Ruth 1' },
+      { id: 'esther', cardTitle: 'Esther', ref: 'Esther 4' },
+    ];
+    expect(savedTeaList(catalog, [{ teaId: 'esther' }, { teaId: 'missing' }, { teaId: 'esther' }])).toEqual([
+      { id: 'esther', cardTitle: 'Esther', ref: 'Esther 4' },
+    ]);
+    expect(savedTeaList(catalog, [])).toEqual([]);
+    expect(savedTeaRows([{ teaId: 'ruth', liked: true }, { teaId: '' }])).toEqual([{ teaId: 'ruth' }]);
+  });
+});

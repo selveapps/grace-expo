@@ -409,3 +409,32 @@ Ran `generate:audio` with a working key, then verified rather than assumed:
 **Observations:** Canonical origin is `NEXT_PUBLIC_SITE_URL`, default `https://grace.selveapps.xyz`. Search result URLs stay `noindex`. The sitemap lists every chapter plus live story and Tea ids when the API answers.
 
 **Result:** Pass. `npm test` 15, `npm run typecheck`, and `npm run build` (Next.js 15.5.28). Sitemap listed 1,238 URLs. Obadiah 1 has no next chapter. A broken book slug returns 404 or 400, not a crash.
+
+---
+
+### RUN-018 | 2026-10-28 18:19 PT | Grace web library
+
+**Objective:** SEL-74 saved Tea, SEL-75 continue reading, SEL-76 delete account, SEL-77 branded not-found.
+
+**Environment:**
+- Branch: `cursor/grace-web-library-41ec` off `cursor/grace-web-landing-seo-41ec` `1f93ba6`
+- API: `https://grace-api-production.up.railway.app`
+- Web: `next start` on port 3100 after `npm run build` (Next.js 15.5.28)
+
+**Procedure:**
+1. `web/lib/library.ts` picks the newest progress row and joins saved tea ids to catalog titles.
+2. `/you` shows that chapter. `/you/tea` lists saved tea. Settings deletes via `DELETE /me` after a confirm step. `app/not-found.tsx` does not call `ensureGuest`.
+3. `cd web && npm test && npm run typecheck && npm run build`.
+4. Browser: signed-out `/this-page-is-missing`, guest onboarding, continue-reading after `PUT /progress`, empty `/you/tea`, delete confirm then cancel, then delete.
+
+**Observations:**
+- `npm test` 18 passed (6 files). Typecheck passed. Build listed `/you/tea` as dynamic and `/_not-found` as static.
+- Signed out, `/you/tea` says the page could not be opened and links home. Settings omits Delete account when the session is missing.
+- A throwaway guest named Ada reached You. After `PUT /progress` for Psalms 23, the continue link was `/reading/psalms/23` labeled Psalm 23. Empty saved tea said "Nothing saved yet" and linked to `/tea`.
+- A separate guest saved tea `vashti-no`; `/you/tea` rendered "She Would Not Come" and Esther 1:12. That account was deleted with `DELETE /me` → `{ deleted: true }`.
+- In the browser, Keep my account returns to the single Delete account control. Delete clears the session and lands on `/` with no name in the greeting.
+- A missing URL returns 404 with Scripture, Stories, and Tea links.
+
+**Result:** Pass for SEL-74 through SEL-77 on this branch. Not merged.
+
+**Follow-up:** SEL-78 stays backlog. SEL-22 offline queue is a separate branch. SEL-26, SEL-27, SEL-28, and SEL-29 stay open.

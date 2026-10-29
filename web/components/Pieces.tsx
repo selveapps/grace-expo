@@ -1,7 +1,11 @@
 'use client';
 
 import { useEffect, useState, useTransition } from 'react';
-import { addReflection, askReminder, askSupport, redeemCode, rememberChapter, rememberStory, removeVerse, saveTea, saveVerse, signOut } from '@/lib/actions';
+import { addReflection, askReminder, askSupport, deleteAccount, redeemCode, rememberChapter, rememberStory, removeVerse, saveTea, saveVerse, signOut } from '@/lib/actions';
+
+function isRedirect(err: unknown) {
+  return typeof err === 'object' && err !== null && 'digest' in err && String((err as { digest?: string }).digest).startsWith('NEXT_REDIRECT');
+}
 
 export function RememberChapter({ book, chapter }: { book: string; chapter: number }) {
   useEffect(() => { void rememberChapter(book, chapter); }, [book, chapter]);
@@ -119,4 +123,42 @@ export function RedeemForm() {
 export function SignOutButton() {
   const [pending, start] = useTransition();
   return <button type="button" className="btn secondary" disabled={pending} onClick={() => start(() => signOut())}>Sign out</button>;
+}
+
+export function DeleteAccountButton() {
+  const [armed, setArmed] = useState(false);
+  const [error, setError] = useState('');
+  const [pending, start] = useTransition();
+  if (!armed) {
+    return (
+      <button type="button" className="text-btn danger" onClick={() => setArmed(true)}>
+        Delete account
+      </button>
+    );
+  }
+  return (
+    <div>
+      <p>This removes your saved verses, reflections, and progress. A subscription is cancelled in the App Store, separately.</p>
+      <p className="row">
+        <button type="button" className="btn secondary" disabled={pending} onClick={() => setArmed(false)}>Keep my account</button>
+        <button
+          type="button"
+          className="text-btn danger"
+          disabled={pending}
+          onClick={() => start(async () => {
+            setError('');
+            try {
+              await deleteAccount();
+            } catch (err) {
+              if (isRedirect(err)) throw err;
+              setError(err instanceof Error ? err.message : 'Could not delete account');
+            }
+          })}
+        >
+          {pending ? 'Deleting…' : 'Delete'}
+        </button>
+      </p>
+      {error ? <p className="error">{error}</p> : null}
+    </div>
+  );
 }
