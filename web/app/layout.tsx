@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Cormorant_Garamond, Hanken_Grotesk } from 'next/font/google';
+import Script from 'next/script';
 import { SITE_DESCRIPTION, SITE_NAME, siteUrl } from '@/lib/site';
+import { typeSizeBootScript } from '@/lib/typeSize';
 import './globals.css';
 
 const serif = Cormorant_Garamond({
@@ -46,6 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${serif.variable} ${sans.variable}`}>
       <body style={{ fontFamily: 'var(--font-sans), "Hanken Grotesk", sans-serif' }}>
+        <Script id="grace-type-size" strategy="beforeInteractive">{typeSizeBootScript()}</Script>
         <style>{`:root { --serif: var(--font-serif), Georgia, serif; --sans: var(--font-sans), sans-serif; }`}</style>
         {children}
       </body>

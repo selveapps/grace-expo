@@ -45,3 +45,6 @@ These stay In Progress until the pull request is on `main`.
 | [SEL-76](https://linear.app/selve-apps/issue/SEL-76) | `/you/settings` | Two-step control calls `DELETE /me`, clears the session, and returns to `/`. |
 | [SEL-77](https://linear.app/selve-apps/issue/SEL-77) | not-found | Branded page with links to scripture, stories, and Tea. It does not create a guest. |
 | [SEL-78](https://linear.app/selve-apps/issue/SEL-78) | search | Backlog. Full KJV index on production. The web client does not invent verses. |
+| [SEL-79](https://linear.app/selve-apps/issue/SEL-79) | `/you/settings` | S, M, L, XL type size kept in the browser and applied to chapter verses. Not sent to the API. |
+| [SEL-80](https://linear.app/selve-apps/issue/SEL-80) | `/you` | Backlog. Newest story progress, titled from `GET /stories`. |
+| [SEL-81](https://linear.app/selve-apps/issue/SEL-81) | deploy | Backlog. Serve the Next app on the public origin and set `NEXT_PUBLIC_SITE_URL`. |

@@ -19,7 +19,7 @@ export const FEATURES = [
   { id: 'reminders', path: '/you/reminders', tickets: ['SEL-31'] },
   { id: 'support', path: '/you/support', tickets: ['SEL-31'] },
   { id: 'subscription', path: '/you/subscription', tickets: ['SEL-16', 'SEL-23'] },
-  { id: 'settings', path: '/you/settings', tickets: ['SEL-14', 'SEL-76'] },
+  { id: 'settings', path: '/you/settings', tickets: ['SEL-14', 'SEL-76', 'SEL-79'] },
 ] as const;
 
 export function featureGaps(): string[] {
