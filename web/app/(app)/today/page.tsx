@@ -1,6 +1,9 @@
 import { chapterHref } from '@/lib/books';
 import { grace } from '@/lib/grace';
+import { PRIVATE_PAGE } from '@/lib/site';
 import { todayView, type TodayPayload } from '@/lib/today';
+
+export const metadata = PRIVATE_PAGE;
 
 export const dynamic = 'force-dynamic';
 

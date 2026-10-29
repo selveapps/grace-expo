@@ -1,8 +1,27 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { AudioPlayer } from '@/components/Pieces';
 import { GraceError, publicGrace } from '@/lib/grace';
 import { resolveAudioUrl } from '@/lib/media';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  try {
+    const story = await publicGrace<Story>('/stories/' + encodeURIComponent(id), 300);
+    return {
+      title: story.title,
+      description: story.hook || story.subtitle || `Listen to ${story.title} on Grace.`,
+      alternates: { canonical: `/stories/${encodeURIComponent(id)}` },
+    };
+  } catch {
+    return { title: 'Story' };
+  }
+}
 
 type Story = {
   id: string;

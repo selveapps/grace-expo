@@ -1,6 +1,28 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { publicGrace } from '@/lib/grace';
 import { THEME_BLURB, THEME_PASSAGES } from '@/lib/themes';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ theme: string }>;
+}): Promise<Metadata> {
+  const { theme: raw } = await params;
+  let theme = raw;
+  try {
+    theme = decodeURIComponent(raw);
+  } catch {
+    return { title: 'Theme' };
+  }
+  const blurb = THEME_BLURB[theme];
+  if (!blurb) return { title: 'Theme' };
+  return {
+    title: theme,
+    description: blurb,
+    alternates: { canonical: `/reading/themes/${encodeURIComponent(theme)}` },
+  };
+}
 
 type PassageResponse = { ref: string; text: string };
 

@@ -1,13 +1,37 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { RememberChapter, SaveVerseButton } from '@/components/Pieces';
-import { bookToSlug, slugToBook } from '@/lib/books';
+import { bookToSlug, chapterCount, chapterHref, slugToBook } from '@/lib/books';
 import { GraceError, publicGrace } from '@/lib/grace';
 
 type ChapterResponse = {
   reference: string;
   verses: { n: number; t: string }[];
 };
+
+function chapterTitle(bookName: string, n: number): string {
+  return bookName === 'Psalms' ? `Psalm ${n}` : `${bookName} ${n}`;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ book: string; chapter: string }>;
+}): Promise<Metadata> {
+  const { book, chapter } = await params;
+  const bookName = slugToBook(book);
+  const n = Number(chapter);
+  if (!bookName || !Number.isInteger(n) || n < 1 || n > chapterCount(bookName)) {
+    return { title: 'Chapter' };
+  }
+  const title = chapterTitle(bookName, n);
+  return {
+    title,
+    description: `Read ${title} in the King James Version. Scripture on Grace, the public-domain KJV.`,
+    alternates: { canonical: chapterHref(bookName, n) },
+  };
+}
 
 export default async function ChapterPage({
   params,
@@ -17,7 +41,8 @@ export default async function ChapterPage({
   const { book, chapter } = await params;
   const bookName = slugToBook(book);
   const n = Number(chapter);
-  if (!bookName || !Number.isInteger(n) || n < 1) notFound();
+  const last = bookName ? chapterCount(bookName) : 0;
+  if (!bookName || !Number.isInteger(n) || n < 1 || n > last) notFound();
 
   let data: ChapterResponse;
   try {
@@ -54,9 +79,11 @@ export default async function ChapterPage({
             Previous chapter
           </Link>
         ) : null}
-        <Link className="chip" href={`/reading/${bookToSlug(bookName)}/${n + 1}`}>
-          Next chapter
-        </Link>
+        {n < last ? (
+          <Link className="chip" href={`/reading/${bookToSlug(bookName)}/${n + 1}`}>
+            Next chapter
+          </Link>
+        ) : null}
       </nav>
     </main>
   );

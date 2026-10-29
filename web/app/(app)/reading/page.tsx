@@ -1,6 +1,13 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { NT_BOOKS, OT_BOOKS, bookToSlug } from '@/lib/books';
 import { themeNames } from '@/lib/themes';
+
+export const metadata: Metadata = {
+  title: 'Read the Bible',
+  description: 'The King James Version, book by book. Search a phrase or open a theme. Public-domain scripture on Grace.',
+  alternates: { canonical: '/reading' },
+};
 
 export default function ReadingPage() {
   return (

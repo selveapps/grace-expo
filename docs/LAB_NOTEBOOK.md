@@ -393,3 +393,19 @@ Ran `generate:audio` with a working key, then verified rather than assumed:
 **Result:** Gate passed. SEL-72 records that pass with the agent docs.
 
 **Follow-up:** SEL-26, SEL-27, the SEL-22 offline queue, and SEL-29 stay open. They sit outside this web client.
+
+---
+
+### RUN-017 | 2026-10-28 | Grace web landing page and SEO
+
+**Objective:** Give the public web client a landing page and indexable metadata. Fix the chapter pager so it stops at the last chapter, and stop a broken percent-encoded book slug from throwing.
+
+**Procedure:**
+1. Add chapter counts (1,189) and a safe `slugToBook`.
+2. Replace the splash-only `/` with a server-rendered landing page: hero, daily verse, stories, today's Tea, and Begin.
+3. Add `metadataBase`, per-route titles, `robots.ts`, `sitemap.ts`, an icon, and an Open Graph image. `noindex` on `/today`, `/onboarding`, and `/you`.
+4. Gate: `cd web && npm test`, `npm run typecheck`, `npm run build`.
+
+**Observations:** Canonical origin is `NEXT_PUBLIC_SITE_URL`, default `https://grace.selveapps.xyz`. Search result URLs stay `noindex`. The sitemap lists every chapter plus live story and Tea ids when the API answers.
+
+**Result:** Pass. `npm test` 15, `npm run typecheck`, and `npm run build` (Next.js 15.5.28). Sitemap listed 1,238 URLs. Obadiah 1 has no next chapter. A broken book slug returns 404 or 400, not a crash.

@@ -1,5 +1,12 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { publicGrace } from '@/lib/grace';
+
+export const metadata: Metadata = {
+  title: 'Tea',
+  description: 'A daily sermon with a point of view. The Grace Tea archive, one short reading at a time.',
+  alternates: { canonical: '/tea' },
+};
 
 type Tea = {
   id: string;

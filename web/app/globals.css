@@ -89,6 +89,15 @@ textarea { min-height: 120px; }
 .meta { color: var(--muted); font-size: 14px; }
 hr { border: 0; border-top: 1px solid var(--line); margin: 20px 0; }
 
+.landing { padding-bottom: 48px; }
+.hero {
+  width: min(760px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 72px 0 12px;
+}
+.hero h1 { font-size: clamp(64px, 12vw, 104px); line-height: 0.9; }
+.feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+
 @media (min-width: 880px) {
   .shell { padding-bottom: 0; padding-top: 64px; }
   .nav { top: 0; bottom: auto; justify-content: center; gap: 18px; border-top: 0; border-bottom: 1px solid var(--line); }

@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import { RemoveVerseButton } from '@/components/Pieces';
 import { grace } from '@/lib/grace';
+import { PRIVATE_PAGE } from '@/lib/site';
+
+export const metadata = PRIVATE_PAGE;
 
 export const dynamic = 'force-dynamic';
 
