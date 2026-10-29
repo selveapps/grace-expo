@@ -41,7 +41,7 @@ docker build \
   tasks/selveapps__grace-expo-83/environment
 ```
 
-Images were not built in the environment that produced this pack. Docker was not installed there. Five tasks were graded on a checkout of `base_commit` instead, which is the same apply-and-test sequence the container runs.
+`local/coding-samples:selveapps__WeddingGPT-25` was built on this Mac and graded inside that image. The other Node and Vitest tasks were graded on a checkout of `base_commit`. The Playwright task was graded on the host: its config starts Postgres with `docker compose`, and this Mac's Node 25 cannot run the backend's `tsx watch` command.
 
 ## Grade sequence
 
@@ -51,7 +51,7 @@ Images were not built in the environment that produced this pack. Docker was not
 4. Apply a candidate diff.
 5. `fail_to_pass` must pass. `pass_to_pass` must still pass.
 
-`pass_to_pass` is an empty list in this sample. The new tests were collected. A before/after run of the rest of each suite was not. A buyer will ask for that list before they pay for an eval set.
+`pass_to_pass` is filled for the Home task only. "a successful /today does not show the failure banner" passed before the fix and after it. The other tasks still need a before/after run of the rest of their suites.
 
 ## What was graded here
 
@@ -62,8 +62,8 @@ Images were not built in the environment that produced this pack. Docker was not
 | `selveapps__grace-expo-82` | fails to load | 3/3 vitest pass |
 | `selveapps__WeddingGPT-32` | fails | 12/12 node tests pass |
 | `selveapps__WeddingGPT-20` | fails | 25/25 node tests pass |
-
-`selveapps__WeddingGPT-25` (Jest) and `selveapps__grace-expo-47` (Playwright) have Dockerfiles and patches. Those two images were not executed here.
+| `selveapps__WeddingGPT-25` | 3 Jest suites fail | 27 Jest tests pass, in the Docker image |
+| `selveapps__grace-expo-47` | 3 fail, 1 already passes | 4/4 Playwright tests pass |
 
 Details are in `grade_report.json`.
 

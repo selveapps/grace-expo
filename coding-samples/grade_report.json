@@ -41,9 +41,9 @@
     "selveapps__WeddingGPT-SEL-82",
     "selveapps__WeddingGPT-SEL-85"
   ],
-  "pass_to_pass": "empty in this sample; a before/after run of the rest of the suite was not collected",
-  "images_built": false,
-  "image_reason": "Docker is not installed in this environment. Dockerfiles check out the base commit and drop git history.",
+  "pass_to_pass": "grace-expo-47 records the one test that passed before the fix. The other tasks still have an empty list.",
+  "images_built": ["local/coding-samples:selveapps__WeddingGPT-25"],
+  "image_reason": "The WeddingGPT-25 image was built and graded on this Mac. The Playwright task was graded on the host because its webServer starts Postgres with docker compose, which the image does not contain.",
   "secret_needles": [],
   "grades": [
     {
@@ -77,8 +77,12 @@
     },
     {
       "id": "selveapps__WeddingGPT-25",
-      "graded": false,
-      "reason": "jest image not executed here; Dockerfile is in the task"
+      "graded": true,
+      "empty_patch_exit": 1,
+      "gold_patch_exit": 0,
+      "empty_failed": true,
+      "gold_passed": true,
+      "note": "Image local/coding-samples:selveapps__WeddingGPT-25. Empty patch: 3 suites failed. Gold patch: 27 Jest tests passed, and all 26 named fail_to_pass tests passed."
     },
     {
       "id": "selveapps__WeddingGPT-32",
@@ -100,8 +104,12 @@
     },
     {
       "id": "selveapps__grace-expo-47",
-      "graded": false,
-      "reason": "playwright image not executed here; Dockerfile is in the task"
+      "graded": true,
+      "empty_patch_exit": 1,
+      "gold_patch_exit": 0,
+      "empty_failed": true,
+      "gold_passed": true,
+      "note": "Host grade at 30fcc50. Empty patch: 3 failed, 1 passed (successful /today). Gold patch: 4 passed. That passing test is pass_to_pass."
     }
   ]
 }
