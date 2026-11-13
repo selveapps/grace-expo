@@ -83,8 +83,8 @@ export default function App() {
   if (!fontsDone) return <BootView />;
 
   return (
-    <SafeAreaProvider>
-      <AppErrorBoundary>
+    <AppErrorBoundary>
+      <SafeAreaProvider>
         <IAPProviders>
           <ProfileProvider booted={guestReady}>
             <NavigationContainer onReady={hideSplash}>
@@ -93,7 +93,7 @@ export default function App() {
             </NavigationContainer>
           </ProfileProvider>
         </IAPProviders>
-      </AppErrorBoundary>
-    </SafeAreaProvider>
+      </SafeAreaProvider>
+    </AppErrorBoundary>
   );
 }

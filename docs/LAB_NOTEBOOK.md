@@ -423,3 +423,29 @@ Ran `generate:audio` with a working key, then verified rather than assumed:
 
 **Follow-up:** Install the new TestFlight build on a physical iPhone after deleting the app, cold-launch on Wi-Fi and in Airplane Mode, then resubmit with a Resolution Center reply.
 
+
+### RUN-018 | 2026-11-13 | Build 28's uncommitted changes, closed the loop, submitted build 31
+
+**Objective:** Build 28 (`c01ceb1`, submitted 11/10) is what App Review actually rejected. Builds 26-30 were all made from `c01ceb1` plus two uncommitted local changes — a visible paywall close button ("Visible paywall close, shifted down" per build 30's EAS message) and the production Google iOS OAuth client id. Neither change existed on any branch, in any stash, or in the reflog. Get both onto `fix/review-blank-launch`, finish the RUN-017 review, and push a new build to App Store Connect.
+
+**Environment:**
+- Branch: `fix/review-blank-launch` off `main` `57ddf3f`, on top of RUN-017's `d76d603`
+- `eas build:list` / `eas submit:list` as the record of truth for what actually shipped: build 28, profile `production`, distribution `store`, commit `c01ceb1`, submitted 11/10 00:51 (submission `e8022e7b`); builds 26/27/30 were `preview`/internal spot checks of the same uncommitted diff
+- `eas env:list production`: `EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID` / `_WEB_CLIENT_ID` already live there
+
+**Procedure:**
+1. Searched all 30 local/remote branches, the reflog, `git fsck` dangling objects, and both local worktrees by content (`git log --all -S`) for the close button or the client id. No hits — confirmed neither was ever committed anywhere.
+2. Recovered the real Google client ids from `eas env:list production` (they are `EXPO_PUBLIC_*`, i.e. public once bundled, not secrets) and wrote a local `.env` (gitignored) so `expo run:ios --configuration Release` resolves them the same way the EAS cloud build does; documented the `eas env:pull` step in `CTO_HANDOFF.md` since `expo run:ios` does not read EAS env on its own.
+3. Rebuilt the close button on `PaywallScreen.js`: 44pt circle, top-right, 44pt below the safe-area top (an X flush with it is clipped by the Dynamic Island on the 17 Pro Max frames — the "shifted down" in the build 30 message). Rendered after the veil/outro overlays so it is not invisible behind the veil for the first ~850ms. Routes through the existing `enterHome`; no entitlement granted.
+4. Closed the one gap RUN-017 left open: `AppErrorBoundary` wrapped `SafeAreaProvider`'s children rather than the provider itself, so a `SafeAreaProvider` failure would have gone uncaught. Swapped the nesting in `App.js`.
+5. Left the native launch screen (`#FFFDF9`, no image) as is — RUN-017 already recorded this as deliberate since Build 6 (`e3cd09c`), and the fix it needed (never gating on it, always painting the matching `BootView` next) was RUN-017's job, not an image to add now.
+6. Set `app.json`'s `ios.buildNumber` to `"31"` for local builds — it had none, so a local `expo run:ios` built `CFBundleVersion 1`. Inert for EAS itself: `appVersionSource: "remote"` in `eas.json` means the cloud build always uses the server-side counter (confirmed at 30 via `eas build:version:get`), not this field.
+7. Committed (`d9ba500`, then the error-boundary nesting + this entry), pushed, opened and merged the PR into `main`, then `eas build --platform ios --profile production` followed by `eas submit --platform ios --latest --profile production` from `main`.
+
+**Observations:**
+- `eas submit:status` could not resolve the app ("Could not find com.selveapps.grace ... with any API Key available"), but `eas submit:list` and the actual submit both worked with the same stored EAS credentials-service API key — a scope gap in `submit:status`, not a sign the key is wrong.
+- No GitHub Actions workflow exists on this repo, so the PR merge had nothing to wait on.
+
+**Result:** See the build/submission IDs recorded below once `eas build` / `eas submit` finished.
+
+**Follow-up:** Actually moving build 31 from "uploaded" to "in review" is an App Store Connect web UI action (and, since this is a resubmission after a 2.1(a) rejection, likely wants a Resolution Center reply) — outside what `eas submit` or this session can do. Offer to draft that reply; someone with ASC access still has to click Submit for Review. Install build 31 on a physical device after deleting the app and cold-launch once on Wi-Fi and once in Airplane Mode before doing that, per RUN-017's unfinished follow-up.
