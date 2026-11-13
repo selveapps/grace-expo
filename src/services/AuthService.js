@@ -44,26 +44,37 @@ function googleOAuthClientId() {
   return GOOGLE_WEB_CLIENT_ID || GOOGLE_IOS_CLIENT_ID;
 }
 
+let guestInFlight = null;
+
+async function createGuestIfNeeded() {
+  let session = await getSession();
+  if (session?.accessToken) return session;
+
+  const deviceId = await getDeviceId();
+  const res = await api.post('/auth/guest', { deviceId }, { auth: false });
+  session = {
+    accessToken: res.data.session.accessToken,
+    refreshToken: res.data.session.refreshToken,
+    expiresIn: res.data.session.expiresIn,
+    userId: res.data.user.id,
+  };
+  await setSession(session);
+  await StorageService.set(KEYS.auth, res.data.user);
+  return session;
+}
+
 export const AuthService = {
   async getSession() {
     return getSession();
   },
 
-  async ensureGuest() {
-    let session = await getSession();
-    if (session?.accessToken) return session;
-
-    const deviceId = await getDeviceId();
-    const res = await api.post('/auth/guest', { deviceId }, { auth: false });
-    session = {
-      accessToken: res.data.session.accessToken,
-      refreshToken: res.data.session.refreshToken,
-      expiresIn: res.data.session.expiresIn,
-      userId: res.data.user.id,
-    };
-    await setSession(session);
-    await StorageService.set(KEYS.auth, res.data.user);
-    return session;
+  // Single-flight: App boot, IAPProviders, and the first screens can all ask
+  // for a guest at once on a fresh install. They share one POST /auth/guest.
+  ensureGuest() {
+    if (!guestInFlight) {
+      guestInFlight = createGuestIfNeeded().finally(() => { guestInFlight = null; });
+    }
+    return guestInFlight;
   },
 
   async getCurrentUser() {

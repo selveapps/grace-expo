@@ -23,6 +23,7 @@
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.selveapps.grace",
+      "buildNumber": "31",
       "icon": "./assets/GraceIconV4.png",
       "usesAppleSignIn": true,
       "infoPlist": {

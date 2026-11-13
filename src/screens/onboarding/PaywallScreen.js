@@ -23,6 +23,11 @@ const SUMMARY = Object.fromEntries(OFFERS.map((o) => [
 
 const openLegal = (url) => Linking.openURL(url).catch(() => {});
 
+// A visible way out of the purchase screen. App Review could not find the
+// invisible soft-exit Pressable below, and an X flush with the safe-area top is
+// clipped by the Dynamic Island on the Pro Max frames, so it sits 44pt lower.
+const CLOSE_TOP = 44;
+
 const TRIAL = [
   { when: 'Today', text: 'Full access begins, free.' },
   { when: 'Day 2', text: "We'll send a gentle reminder." },
@@ -238,6 +243,27 @@ export default function PaywallScreen({ navigation }) {
       <Animated.View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: '#FDF6E4', opacity: veil }]} />
       {/* outro bloom — carries the eye out of the dark screen into ivory */}
       <Animated.View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: '#FDF6E4', opacity: outro }]} />
+
+      {/* Close. Rendered after both overlays on purpose: behind the veil it
+          would be invisible for the first ~850ms of the screen, which is
+          exactly the window a reviewer is looking for it in. It fades with the
+          outro so it does not float over the ivory hand-off. */}
+      <Animated.View
+        pointerEvents={leaving ? 'none' : 'auto'}
+        style={[styles.closeWrap, { opacity: outro.interpolate({ inputRange: [0, 1], outputRange: [1, 0] }) }]}
+      >
+        <Pressable
+          onPress={enterHome}
+          hitSlop={12}
+          style={styles.closeBtn}
+          accessibilityRole="button"
+          accessibilityLabel="Close"
+          accessibilityHint="Continue without subscribing"
+          testID="paywall-close"
+        >
+          <Text style={styles.closeGlyph}>✕</Text>
+        </Pressable>
+      </Animated.View>
     </Screen>
   );
 }
@@ -275,4 +301,10 @@ const styles = StyleSheet.create({
   legalRow: { flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: 8, minHeight: 40 },
   legalLink: { fontFamily: fonts.sansMed, fontSize: 12, color: 'rgba(230,207,148,0.85)' },
   legalDot: { color: 'rgba(203,185,143,0.55)', fontSize: 12 },
+  closeWrap: { position: 'absolute', top: CLOSE_TOP, right: 20 },
+  closeBtn: {
+    width: 44, height: 44, borderRadius: 22, alignItems: 'center', justifyContent: 'center',
+    backgroundColor: 'rgba(247,243,236,0.18)', borderWidth: 1, borderColor: 'rgba(247,243,236,0.42)',
+  },
+  closeGlyph: { fontFamily: fonts.sansMed, fontSize: 17, lineHeight: 20, color: colors.onDark },
 });

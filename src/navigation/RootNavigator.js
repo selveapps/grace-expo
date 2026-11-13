@@ -18,6 +18,7 @@ import PreparingScreen from '../screens/onboarding/PreparingScreen';
 import PaywallScreen from '../screens/onboarding/PaywallScreen';
 import ConfirmationScreen from '../screens/onboarding/ConfirmationScreen';
 import Tabs from './Tabs';
+import BootView from '../components/BootView';
 
 const Stack = createNativeStackNavigator();
 
@@ -38,7 +39,9 @@ const Stack = createNativeStackNavigator();
 // a full remount of the tab tree, which is what made Enter Grace feel slow.
 export default function RootNavigator() {
   const { profile, hydrated } = useProfile();
-  if (!hydrated) return null; // wait for AsyncStorage so we don't flash onboarding
+  // Wait for AsyncStorage so we don't flash onboarding, but never render an
+  // empty page while we do (App Review 2.1(a) blank-on-launch).
+  if (!hydrated) return <BootView />;
   return (
     <Stack.Navigator
       // Named so a deeply nested screen (Settings, inside You, inside Tabs) can
