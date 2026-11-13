@@ -393,3 +393,33 @@ Ran `generate:audio` with a working key, then verified rather than assumed:
 **Result:** Gate passed. SEL-72 records that pass with the agent docs.
 
 **Follow-up:** SEL-26, SEL-27, the SEL-22 offline queue, and SEL-29 stay open. They sit outside this web client.
+
+---
+
+### RUN-017 | 2026-11-13 | App Review 2.1(a) blank page on initial launch
+
+**Objective:** App Review (iPhone 17 Pro Max, iOS 27.2, network active) reported "a blank page upon initial launch". A fresh install must paint a visible first screen with a reachable Begin button, whatever the network, fonts, or animation driver do. No matching SEL/GRACE ticket in `docs/LINEAR_ISSUES.md`.
+
+**Environment:**
+- Branch: `fix/review-blank-launch` off `main` `57ddf3f`
+- No iOS Simulator (Windows). `npx expo export --platform ios` for the release Hermes bundle; Expo web on `:8093` against `https://grace-api-production.up.railway.app` for runtime checks
+- Production `/health` `{"ok":true,"db":true}`; fresh `POST /auth/guest` 200 in ~0.5s
+
+**Procedure:**
+1. Trace cold start: native splash (`#FFFDF9`, no image by design since build 6) → `useFonts` → splash hidden → `RootNavigator` → onboarding `SplashScreen`.
+2. Remove every `return null` and uncapped wait on that path; hide the native splash on `NavigationContainer.onReady` with a 5s failsafe.
+3. Bring the onboarding Splash title, line, and Begin in during the dove's flight, add a Reduce Motion path and a 2.5s land-now failsafe.
+4. Root error boundary above the navigator; single-flight `ensureGuest`.
+
+**Observations:**
+- `App.js` returned `null` until fonts loaded and had no font-error branch, so a font failure meant a permanent empty view.
+- `RootNavigator` returned `null` until local hydration **and** the guest `POST /auth/guest` finished (capped at 3s). That network wait did not feed `initialRouteName` (the server sync only starts after it), so it was pure empty screen on a fresh install.
+- On the onboarding Splash everything starts at opacity 0 and the words waited for the 1.5s flight. Screenshot at mount + 2.8s (old timing, guest auth hung) was a cream gradient with a faint dove in the corner and no text or button: what a reviewer would call blank.
+- Only `ScreenErrorBoundary` existed, inside Tabs. A render error in onboarding unmounted the whole tree.
+- `IAPProviders` and `App` both called `ensureGuest` at mount; on a fresh install that could race two guest creations.
+- Metro on `:8093` kept serving the old Splash transform after edits; `--clear` was needed before timings were trustworthy.
+
+**Result:** iOS export OK (`AppEntry-*.hbc`, 4.55 MB). Expo web, 440×956, fresh context: first screen mounts in ~0.7s with `/auth/guest` hung forever; title opacity 0.03 at 0.3s and 1.00 by 0.77s; with `reducedMotion: 'reduce'` title opacity 1.00 at 0.15s; Begin navigates on. Not run here: the docker-backed Playwright suite and an on-device check.
+
+**Follow-up:** Install the new TestFlight build on a physical iPhone after deleting the app, cold-launch on Wi-Fi and in Airplane Mode, then resubmit with a Resolution Center reply.
+

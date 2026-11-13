@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
@@ -19,14 +19,24 @@ import RootNavigator from './src/navigation/RootNavigator';
 import { ProfileProvider } from './src/state/profile';
 import { AuthService } from './src/services/AuthService';
 import { IAPProviders } from './src/iap/IAPProviders';
-import { colors } from './src/theme';
+import AppErrorBoundary from './src/components/AppErrorBoundary';
+import BootView from './src/components/BootView';
 
 SplashScreen.preventAutoHideAsync().catch(() => {});
 
+// App Review 2.1(a), "blank page upon initial launch". Every wait on the way to
+// the first screen is now capped, and nothing in the chain renders `null`:
+// - fonts that error or stall fall back to system fonts after FONT_WAIT_MS;
+// - the guest session is created in the background and never gates the
+//   navigator (it never decided the initial route anyway, see profile.js);
+// - the native splash hides once the navigator has mounted its first screen,
+//   or after SPLASH_FAILSAFE_MS, whichever comes first.
+const FONT_WAIT_MS = 2500;
 const GUEST_BOOT_TIMEOUT_MS = 3000;
+const SPLASH_FAILSAFE_MS = 5000;
 
 export default function App() {
-  const [loaded] = useFonts({
+  const [fontsLoaded, fontError] = useFonts({
     CormorantGaramond_500Medium,
     CormorantGaramond_600SemiBold,
     CormorantGaramond_500Medium_Italic,
@@ -35,10 +45,16 @@ export default function App() {
     HankenGrotesk_600SemiBold,
     HankenGrotesk_700Bold,
   });
+  const [fontWaitOver, setFontWaitOver] = useState(false);
   const [guestReady, setGuestReady] = useState(false);
+  const fontsDone = fontsLoaded || !!fontError || fontWaitOver;
 
   useEffect(() => {
-    if (!loaded) return undefined;
+    const t = setTimeout(() => setFontWaitOver(true), FONT_WAIT_MS);
+    return () => clearTimeout(t);
+  }, []);
+
+  useEffect(() => {
     let cancelled = false;
     const timeout = setTimeout(() => {
       if (!cancelled) setGuestReady(true);
@@ -53,24 +69,31 @@ export default function App() {
       cancelled = true;
       clearTimeout(timeout);
     };
-  }, [loaded]);
+  }, []);
+
+  const hideSplash = useCallback(() => {
+    SplashScreen.hideAsync().catch(() => {});
+  }, []);
 
   useEffect(() => {
-    if (loaded) SplashScreen.hideAsync().catch(() => {});
-  }, [loaded]);
+    const t = setTimeout(hideSplash, SPLASH_FAILSAFE_MS);
+    return () => clearTimeout(t);
+  }, [hideSplash]);
 
-  if (!loaded) return null;
+  if (!fontsDone) return <BootView />;
 
   return (
     <SafeAreaProvider>
-      <IAPProviders>
-        <ProfileProvider booted={guestReady}>
-          <NavigationContainer>
-            <StatusBar style="dark" />
-            <RootNavigator />
-          </NavigationContainer>
-        </ProfileProvider>
-      </IAPProviders>
+      <AppErrorBoundary>
+        <IAPProviders>
+          <ProfileProvider booted={guestReady}>
+            <NavigationContainer onReady={hideSplash}>
+              <StatusBar style="dark" />
+              <RootNavigator />
+            </NavigationContainer>
+          </ProfileProvider>
+        </IAPProviders>
+      </AppErrorBoundary>
     </SafeAreaProvider>
   );
 }

@@ -1,10 +1,15 @@
 import React, { useEffect, useRef } from 'react';
-import { View, Text, StyleSheet, Animated, Easing, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, Animated, Easing, ScrollView, AccessibilityInfo } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import Screen from '../../components/Screen';
 import GraceDove from '../../components/GraceDove';
 import PrimaryButton from '../../components/PrimaryButton';
 import { colors, fonts } from '../../theme';
+
+// Entrance runs ~1.5s: flight + halo 1.5s, with the title, line, and Begin
+// rising from 0.25s (staggered 0.2s, 0.5s each) so all are in by ~1.15s.
+const TEXT_DELAY_MS = 250;
+const ENTRANCE_FAILSAFE_MS = 2500;
 
 // Splash / Alight — Grace flies in on an arc, banks level, the halo blooms, then
 // she settles into a living bob. Warm dawn field with drifting light.
@@ -33,18 +38,40 @@ export default function SplashScreen({ navigation }) {
   const cta = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    Animated.sequence([
-      Animated.parallel([
-        // Grace flies in — a touch of overshoot so she "lands"
-        Animated.timing(intro, { toValue: 1, duration: 1300, easing: Easing.out(Easing.back(1.4)), useNativeDriver: true }),
-        Animated.timing(halo, { toValue: 1, duration: 1500, easing: Easing.out(Easing.ease), useNativeDriver: true }),
-      ]),
-      Animated.stagger(300, [
-        Animated.timing(title, { toValue: 1, duration: 600, useNativeDriver: true }),
-        Animated.timing(sub, { toValue: 1, duration: 600, useNativeDriver: true }),
-        Animated.timing(cta, { toValue: 1, duration: 600, useNativeDriver: true }),
+    // Everything on this screen starts at opacity 0. If the entrance never runs
+    // (Reduce Motion, a stalled native animation, a slow first frame), the
+    // page would be an empty cream gradient: App Review's "blank page upon
+    // initial launch". Snap to the landed state in those cases.
+    let landed = false;
+    const land = () => {
+      if (landed) return;
+      landed = true;
+      [intro, halo, title, sub, cta].forEach((v) => { v.stopAnimation(); v.setValue(1); });
+    };
+    const failsafe = setTimeout(land, ENTRANCE_FAILSAFE_MS);
+    AccessibilityInfo.isReduceMotionEnabled()
+      .then((reduce) => { if (reduce) land(); })
+      .catch(() => {});
+
+    // The words rise while Grace is still flying in, not after she lands. When
+    // they waited for the landing, the first ~1.5s was an empty cream field
+    // with a faint dove in the corner, which is what App Review called blank.
+    Animated.parallel([
+      // Grace flies in — a touch of overshoot so she "lands"
+      Animated.timing(intro, { toValue: 1, duration: 1300, easing: Easing.out(Easing.back(1.4)), useNativeDriver: true }),
+      Animated.timing(halo, { toValue: 1, duration: 1500, easing: Easing.out(Easing.ease), useNativeDriver: true }),
+      Animated.sequence([
+        Animated.delay(TEXT_DELAY_MS),
+        Animated.stagger(200, [
+          Animated.timing(title, { toValue: 1, duration: 500, useNativeDriver: true }),
+          Animated.timing(sub, { toValue: 1, duration: 500, useNativeDriver: true }),
+          Animated.timing(cta, { toValue: 1, duration: 500, useNativeDriver: true }),
+        ]),
       ]),
     ]).start(() => {
+      clearTimeout(failsafe);
+      if (landed) return;
+      landed = true;
       // settle into a gentle, living bob once she's landed
       Animated.loop(
         Animated.sequence([
@@ -54,7 +81,7 @@ export default function SplashScreen({ navigation }) {
       ).start();
     });
     const t = setTimeout(() => Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Soft), 1250); // arrival pulse on landing
-    return () => clearTimeout(t);
+    return () => { clearTimeout(t); clearTimeout(failsafe); };
   }, []);
 
   const rise = (v, from = 16) => ({ opacity: v, transform: [{ translateY: v.interpolate({ inputRange: [0, 1], outputRange: [from, 0] }) }] });

@@ -6,6 +6,7 @@ import { ReadingService } from '../services/ReadingService';
 import { StoryService } from '../services/StoryService';
 
 const KEY = 'grace.profile.v1';
+const HYDRATE_TIMEOUT_MS = 2000;
 
 const DEFAULT = {
   name: '',
@@ -42,16 +43,21 @@ export function ProfileProvider({ children, booted = true }) {
   const syncTimer = useRef(null);
 
   useEffect(() => {
+    let done = false;
+    // Never let a stalled storage read hold the first screen back.
+    const failsafe = setTimeout(() => { if (!done) { done = true; setHydrated(true); } }, HYDRATE_TIMEOUT_MS);
     (async () => {
       try {
         const raw = await AsyncStorage.getItem(KEY);
-        if (raw) setProfileState({ ...DEFAULT, ...JSON.parse(raw) });
+        if (raw && !done) setProfileState({ ...DEFAULT, ...JSON.parse(raw) });
       } catch {
         // corrupt storage — start fresh
       } finally {
-        setHydrated(true);
+        clearTimeout(failsafe);
+        if (!done) { done = true; setHydrated(true); }
       }
     })();
+    return () => clearTimeout(failsafe);
   }, []);
 
   const persist = useCallback((next) => {
@@ -150,10 +156,13 @@ export function ProfileProvider({ children, booted = true }) {
 
   const resetProfile = useCallback(() => persist(DEFAULT), [persist]);
 
-  const ready = hydrated && booted;
-
+  // The navigator waits on local hydration only. It used to also wait on the
+  // guest session (`booted`), which put a network round trip of up to 3s of
+  // empty screen between the native splash and the first frame on a fresh
+  // install. The server sync below only starts once `booted` is true, so the
+  // guest session never fed `initialRouteName` anyway.
   return (
-    <ProfileContext.Provider value={{ profile, hydrated: ready, synced, setProfile, saveVerse, removeVerse, isSaved, addReflection, resetProfile }}>
+    <ProfileContext.Provider value={{ profile, hydrated, synced, setProfile, saveVerse, removeVerse, isSaved, addReflection, resetProfile }}>
       {children}
     </ProfileContext.Provider>
   );

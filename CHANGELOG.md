@@ -10,6 +10,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 - Next.js Grace web client in `web/` on the shared API. Gate: `npm test` (13), `npm run typecheck`, and `npm run build` (Next.js 15.5.28). Slices SEL-62 through SEL-71 merged in #80, #73, #78, #77, #74, #75, and #76.
 
 ### Fixed
+- First launch no longer shows a blank page (App Review 2.1(a), iOS 27.2). The navigator no longer waits on the guest sign-up network call, fonts and local storage are capped, the boot view shows a spinner instead of nothing, a root error boundary offers Try again, and the Splash title and Begin rise during the dove's flight (in by ~0.8s) with a Reduce Motion path and a failsafe. Evidence: RUN-017.
 - Home no longer looks like a stuck blank screen when today's content fails, comes back empty, or never arrives. A bundled passage and story stay on screen, a retry sits in the scroll (including a short frame), and a render error stays inside that tab so Reading is still reachable.
 - The paywall and Confirmation handoff veil drops and retries navigation if Enter Grace or the soft exit never leaves the screen, so an opaque ivory sheet cannot trap the tap.
 - Onboarding no longer traps the App Review path on a short iPad compatibility frame. Splash, Welcome, and Confirmation scroll so Begin / Continue / Enter Grace stay reachable, and the paywall scroller is no longer wrapped in a press handler that swallowed the drag.
