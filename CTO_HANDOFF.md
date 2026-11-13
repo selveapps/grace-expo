@@ -58,6 +58,22 @@ Comma separated, no spaces. This is the audience allow-list.
 
 No code changes required. Rebuild and the button appears.
 
+### Local release builds read `.env`, not EAS
+
+`npx expo run:ios --configuration Release` does **not** see the EAS environment,
+so a local build made without a `.env` silently ships with the Google button
+hidden and no `CFBundleURLTypes` entry. That is how builds 26-30 came to depend
+on uncommitted local state. Before any local release build:
+
+```
+eas env:pull production   # writes .env.local
+cp .env.local .env        # expo run:ios reads .env
+```
+
+The live values stay in the EAS `production` and `preview` environments, which
+are the source of truth. They are `EXPO_PUBLIC_*`, so they ship inside the
+binary and are not secrets — but they still do not belong in git.
+
 ---
 
 ## 2. Production Railway deployment
